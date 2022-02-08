@@ -1,0 +1,879 @@
+// Settings
+$gapForPaymentGroup: 20px;
+body.loading-priv{
+    .payment-submit-wrap *{
+        opacity: .5!important;
+        pointer-events: none!important;
+    }
+}
+
+#payment-data{
+    @include mediaFrom(xl){
+        &.active{
+            padding-left: 0;
+        }
+    }
+    .accordion-heading{
+        span[data-i18n="paymentData.payment"]{
+            font-size: 0;
+            line-height: 0;
+            &:before{
+                content: 'Método de pago';
+                font-size: 1.1rem;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.icon-credit-card{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(-1px);
+    @extend .bg-icon-pago;
+    &:before{
+        display: none;
+    }
+}
+
+.payment-group{
+    width: 30%;
+    margin-top: 5px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    clear: both;
+    .payment-group-list-btn{
+        width: 100%;
+        @include flexbox($fd: column);
+        box-sizing: border-box;
+    }
+    .payment-group-item{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        margin-bottom: 5px;
+        color: lighten($c-text,10);
+        background-color: white;
+        transition: all .3s;
+        order: 20;
+        &#payment-group-creditCardPaymentGroup{
+            order: 1;
+        }
+        &#payment-group-debitCardPaymentGroup{
+            order: 2;
+        }
+        &#payment-group-MercadoPagoPaymentGroup{
+            order: 3;
+        }
+        &#payment-group-payPalPaymentGroup{
+            order: 4;
+        }
+        &#payment-group-custom205PaymentGroupPaymentGroup{
+            order: 5;
+        }
+        &#payment-group-custom202PaymentGroupPaymentGroup{
+            order: 6;
+        }
+        &#payment-group-custom203PaymentGroupPaymentGroup{
+            order: 7;
+        }
+        &#payment-group-custom204PaymentGroupPaymentGroup{
+            order: 8;
+        }
+        &#payment-group-custom201PaymentGroupPaymentGroup{
+            order: 9;
+        }
+        &#payment-group-promissoryPaymentGroup{
+            order: 21;
+        }
+        &.active{
+            border: 1px solid $c-secondary;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            margin-right: 0;
+            position: relative;
+            font-weight: $font-bold;
+            background-color: white;
+            color: $c-text;
+            @include mediaFrom(md){
+                &:before{
+                    content: '';
+                    border-top: 1px solid $c-secondary;
+                    border-bottom: 1px solid $c-secondary;
+                    background: white;
+                    position: absolute;
+                    width: 25px;
+                    height: calc(100% + 2px);
+                    left: 99%;
+                    top: -1px;
+                }
+            }
+            @include mediaTo(sm){
+                margin-bottom: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                color: $c-text;
+                background: $c-secondary;
+            }
+        }
+        &:hover,
+        &:focus{
+            text-decoration: none;
+        }
+        &#payment-group-creditCardPaymentGroup,
+        &#payment-group-debitCardPaymentGroup,
+        &#payment-group-payPalPaymentGroup,
+        &#payment-group-MercadoPagoPaymentGroup,
+        &#payment-group-bankInvoicePaymentGroup,
+        &#payment-group-SPEIPaymentGroup,
+        &#payment-group-promissoryPaymentGroup,
+        &#payment-group-custom201PaymentGroupPaymentGroup,
+        &#payment-group-custom202PaymentGroupPaymentGroup,
+        &#payment-group-custom203PaymentGroupPaymentGroup,
+        &#payment-group-custom204PaymentGroupPaymentGroup,
+        &#payment-group-custom203PaymentGroupPaymentGroup,
+        &#payment-group-custom205PaymentGroupPaymentGroup{
+            span{
+                @include flexbox($ai: center);
+                font-size: 0;
+                background-image: none;
+                background-size: auto 19px;
+                &:before{
+                    order: 1;
+                    @include font-size(0.9);
+                }
+                &:after{
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    flex-shrink: 0;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    background-color: white;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        .callcenter &#payment-group-promissoryPaymentGroup,
+        .callcenter &#payment-group-custom201PaymentGroupPaymentGroup{
+            display: block;
+        }
+        // Custom messages & icons
+        &#payment-group-creditCardPaymentGroup{
+            span{
+                &:before{
+                    content: 'Tarjeta de crédito o débito';
+                }
+                &:after{
+                    @extend .bg-icon-tarjetas;
+                }
+            }
+        }
+        &#payment-group-debitCardPaymentGroup{
+            span{
+                &:before{
+                    content: 'Tarjeta de débito';
+                }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_payment-card.png');
+                }
+            }
+        }
+        &#payment-group-payPalPaymentGroup{
+            span{
+                &:before{
+                    content: 'PayPal';
+                }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_payment-paypal.png');
+                }
+            }
+        }
+        &#payment-group-MercadoPagoPaymentGroup{
+            span{
+                line-height: 1;
+                &:before{
+                    content: 'Mercado Pago';
+                }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_payment-mercadopago.png');
+                }
+            }
+        }
+        &#payment-group-bankInvoicePaymentGroup{
+            span{
+                &:before{
+                    content: 'Depósito en efectivo';
+                }
+            }
+        }
+        &#payment-group-promissoryPaymentGroup{
+            span{
+                &:before{
+                    content: 'Depósito Banrural';
+                }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_Payment-banrural.jpg');
+                }
+            }
+        }
+        &#payment-group-SPEIPaymentGroup{
+            span{
+                &:before{
+                    content: 'SPEI';
+                }
+            }
+        }
+        &#payment-group-custom201PaymentGroupPaymentGroup{
+            span{
+                &:before{
+                    content: 'Depósito G&T Continental';
+                }
+                &:after{
+                    @extend .bg-icon-gt-continental;
+                }
+            }
+        }
+        &#payment-group-custom202PaymentGroupPaymentGroup{
+            span{
+                &:before{
+                    content: 'Depósito Banco Industrial';
+                }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_Payment-bi.png');
+                }
+            }
+        }
+        &#payment-group-custom203PaymentGroupPaymentGroup{
+            span{
+                &:before{
+                    content: 'Depósito Bantrab';
+                }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_Payment-bantrab.png');
+                }
+            }
+        }
+        &#payment-group-custom204PaymentGroupPaymentGroup{
+            span{
+                &:before{
+                    content: 'Depósito BAM';
+                }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_Payment-bam.png');
+                }
+            }
+        }
+        &#payment-group-custom205PaymentGroupPaymentGroup{
+            span{
+                &:before{
+                    content: 'Cuotas';
+                }
+                // &:after{
+                //     @extend .bg-icon-pago-contra-entrega;
+                // }
+                &:after{
+                    background-image: url('#{$image-path}images-checkout_payment-card.png');
+                }
+            }
+        }
+    }
+    .payment-group-item-text{
+        padding-right: 70px;
+        line-height: 1.2;
+    }
+}
+form.form-step.box-new{
+    @include mediaBetween(768px, 979px){
+        display: flex;
+        position: relative;
+        padding-top: 65px;
+        flex-wrap: wrap;
+    }
+}
+.steps-view{
+    width: 55%;
+    width: calc(65% - 22px);
+    @include mediaBetween(md, md){
+        width: calc(65% - 20px)!important;
+    }
+    @include mediaFrom(lg){
+        min-height: 490px;
+    }
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid $c-secondary;
+    background: white;
+    float: left;
+    @include mediaFrom(md){
+        // max-width: 525px;
+        margin-left: $gapForPaymentGroup;
+    }
+    @include mediaTo(sm){
+        margin-bottom: 6px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    > div > fieldset{
+        font-family: $font-body;
+        font-size: 0.825rem;
+        color: lighten($c-text,30);
+    }
+}
+@media (max-width: 767px){
+    .payment-group,
+    .steps-view{
+        width: 100%;
+    }
+}
+
+.CountrySelector--all-countries{
+    display: block !important;
+    margin-bottom: 20px;
+}
+
+.CardForm{
+    padding-top:30px;
+    background-color: white;
+    color: $c-dark;
+    > div{
+        margin-bottom: 10px;
+    }
+    label.FormFieldLabel{
+        color: $c-dark;
+    }
+    .input-medium,
+    .input-mini,
+    .input-small,
+    .input-xlarge,
+    .input-large{
+        width:80%;
+        box-sizing: border-box;
+        border-radius: 30px;
+        height:36px;
+    }
+    .input-mini{
+        width: 30%;
+        &.card-value{
+            width:40%;
+        }
+    }
+    .input-small{
+        width: 30%;
+    }
+    .add-on{
+        height:36px;
+        box-sizing: border-box;
+    }
+    .PaymentCardHolderName{
+        margin-bottom: 10px;
+    }
+    .PaymentCardDueDate{
+        .payment-card-due-month,
+        .payment-card-due-year{
+            width: 80px;
+            margin-left: 0;
+            .input-mini{
+                width: 100%;
+            }
+        }
+    }
+    .BillingAddress{
+        // display:none;
+        h5:first-child{
+            display: none;
+        }
+        h5:first-child::before{
+            content: 'Dirección de cobro';
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    span.error{
+        font-size: .65rem;
+    }
+    .card-flags{
+        margin-top: 5px;
+        .radio{
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            .card-flag-radio{
+                display: none;
+            }
+            .card-flag{
+                width: 35px;
+                height: 35px;
+                border: 1px solid $c-pastel-gray;
+                display: block;
+                background-size: 90% auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+                opacity: 0.5;
+                transition: all 0.3s;
+                &.Visa{
+                    background-image:url('#{$image-path}images-checkout_payment-visa.png');
+                }
+                &.Mastercard{
+                    background-image:url('#{$image-path}images-checkout_payment-mastercard.png');
+                }
+                &.American.Express{
+                    background-image:url('#{$image-path}images-checkout_payment-amex.png');
+                }
+                &:hover{
+                    opacity: 0.75;
+                }
+                &.card-selected{
+                    border-color: $c-cta;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .PaymentCardCVV{
+        input{
+            text-align: left;
+        }
+    }
+    @media (max-width: 480px){
+        .input-medium,
+        .input-mini,
+        .input-small,
+        .input-xlarge{
+            width: 100%;
+        }
+    }
+}
+.PaymentCardDueDate{
+    label{
+        width: 100%;
+    }
+    select{
+        border-radius: 10px!important;
+    }
+    span.error{
+        white-space: nowrap;
+    }
+}
+.PaymentCardCVV{
+    label{
+        width: 100%;
+    }
+}
+#creditCardpayment-card-0Code{
+    display: block;
+    width:  30%;
+    clear: both;
+}
+.ChangeNumberOfPayments{
+    display: none;
+    background-color: white;
+    a{
+        @include text-link($c-dark-gray);
+        display: inline-block;
+        margin-top: 1em;
+    }
+}
+
+// Gift card - Vale
+.link-gift-card{
+    position: relative;
+    left: 0;
+    display: block!important;
+    margin-top: 10px;
+    @include mediaTo(xs){
+        &.active{
+            margin-bottom: 0!important;
+        }
+    }
+    @include mediaFrom(lg){
+        width: 30%;
+        float: left;
+        &.active{
+            &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: calc(100% + 22px);
+                height: 100%;
+                border-left: 1px solid $c-secondary;
+                border-top: 1px solid $c-secondary;
+                border-bottom: 1px solid $c-secondary;
+                border-right: 3px solid white;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+                z-index: 1;
+                pointer-events: none;
+            }
+        }
+    }
+    @include mediaBetween(768px, 979px){
+        position: absolute;
+        top: 0;
+    }
+}
+.gift-card-section{
+    width: 100%;
+    @include mediaBetween(768px, 979px){
+        // position: absolute;
+        // top: 0;
+    }
+}
+#show-gift-card-group{
+    display: flex;
+    align-items: center;
+    background: white;
+    color: lighten($c-text, 20);
+    width: 100%;
+    padding: 5px 10px;
+    text-align: left;
+    text-decoration: none!important;
+    font-size: 0;
+    line-height: 0;
+    transition: all .3s;
+    position: relative;
+    &:before{
+        content: 'Certificado de regalo';
+        @include font-size(0.9);
+        line-height: 40px;
+        order: 1;
+    }
+    &:after{
+        content: '';
+        width: 30px;
+        height: 30px;
+        display: block;
+        flex-shrink: 0;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-color: white;
+        @extend .bg-icon-certificado-de-regalo;
+    }
+    &:hover,
+    &:focus{
+        color: $c-text;
+    }
+}
+.payment-discounts-options{
+    label{
+        @include mediaTo(580px){
+            width: 100%;
+        }
+    }
+}
+#payment-discounts-code{
+    border-radius: 30px;
+}
+#btn-add-gift-card{
+    font-size: 0;
+    line-height: 0;
+    //background: $c-primary;
+    background-color: $c-dusty-gray;
+    border: 0;
+    border-radius: 30px;
+    text-shadow: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include mediaTo(xs){
+        margin-top: 10px;
+    }
+    &:before{
+        content: 'Aplicar';
+        font-size: .85rem;
+        line-height: 24px;
+    }
+}
+
+#payment-data{
+    .gift-card-section, .payment-discounts-alert{
+        width: 100%;
+        margin: 5px auto;
+        text-align: center;
+        color: $c-primary;
+        font-weight: bold
+    }
+    .form-step > .gift-card-section{
+        background: white;
+        padding: 0;
+    }
+    .link-gift-card +
+    .gift-card-section{
+        background: white;
+        padding: 30px 15px;
+        border: 1px solid $c-secondary;
+        margin: 0 0 15px 0;
+        @include mediaFrom(lg){
+            width: calc(70% - 20px);
+            float: left;
+            margin-left: 20px;
+        }
+        .gift-card-provider-default{
+            border-radius: 10px;
+            margin: 0;
+            @include padding-h();
+            &:before{
+                content: '¡Muy pronto podrás utilizar certificados de regalo! No disponible en este momento';
+                display: block;
+                max-width: 300px;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 14px;
+                color: $c-accent;
+            }
+        }
+        .payment-discounts-list{
+            text-align: center;
+            & > h5{
+                font-size: 1rem;
+                @include mediaTo(xs){
+                    margin-bottom: 0;
+                }
+            }
+            table{
+                text-align: center;
+                margin: auto;
+                @include mediaTo(xs){
+                    tr{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .code,
+                    .number{
+                        font-size: .85rem;
+                        margin-bottom: 5px;
+                    }
+                }
+                .remove{
+                    a{
+                        margin-left: 5px;
+                        padding: 5px 15px;
+                        border-radius: 30px;
+                        font-size: .85rem;
+                        @extend .button-flat;
+                    }
+                }
+            }
+        }
+    }
+    .gift-card-provider-group-descuento-por-fidelidad{
+        display: flex;
+        flex-wrap: wrap;
+        h5.gift-card-provider{
+            font-size: 0;
+            line-height: 0;
+            font-weight: $font-regular;
+            color: $c-text;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px 5px 50px;
+            height: 54px;
+            align-self: flex-end;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: relative;
+            @include mediaTo(sm){
+                width: 100%;
+            }
+            @extend .bg-icon-credito-en-linea;
+            @include mediaBetween(md, md){
+                width: calc(30% + 20px);
+                border: 1px solid $c-secondary;
+            }
+            @include mediaFrom(lg){
+                width: calc(30% + 20px);
+                border: 1px solid $c-secondary;
+            }
+            &:before{
+                content: 'Crédito en línea';
+                @include font-size(0.9);
+                line-height: 40px;
+                order: 1;
+            }
+            &:after{
+                content: '';
+                width: 2px;
+                height: 100%;
+                display: block;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                background-color: white;
+            }
+        }
+        & > div{
+            padding: 15px;
+            border: 1px solid $c-secondary;
+            border-radius: 10px;
+            @include mediaTo(sm){
+                width: 100%;
+                td.action{
+                    width: 70px;
+                }
+            }
+            @include mediaBetween(md, md){
+                width: calc(70% - 20px);
+            }
+            @include mediaFrom(lg){
+                width: calc(70% - 20px);
+            }
+        }
+        table{
+            tr{
+                border: 1px solid $c-pastel-gray;
+                border-radius: 10px;
+                &:last-child{
+                    border: 0;
+                }
+            }
+            td{
+                font-size: .65rem;
+                color: $c-text;
+                padding: 3px;
+            }
+            td.code{
+                width: 40%;
+                font-size: .65rem;
+                text-transform: none;
+            }
+            td.number.flex{
+                flex-direction: row;
+                span{
+                    margin-left: 4px;
+                    color: $c-text;
+                }
+            }
+            label.valueTitle{
+                font-size: 0;
+                line-height: 0;
+                padding-top: 15px;
+                &:before{
+                    content: 'Monto a usar';
+                    font-size: .85rem;
+                    line-height: 1.5;
+                    color: $c-text;
+                }
+            }
+            .input-prepend{
+                position: relative;
+                span.add-on{
+                    background: none;
+                    border: 0;
+                    position: absolute;
+                    left: 5px;
+                    top: 8px;
+                    padding: 0;
+                    z-index: 4;
+                    pointer-events: none;
+                }
+                input{
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    width: 120px;
+                    box-shadow: none;
+                    border-radius: 30px;
+                    background-position: 96% 50%
+                }
+            }
+        }
+    }
+}
+
+.box-payment-option{
+    &.promissoryPaymentGroup,
+    &.custom201PaymentGroupPaymentGroup,
+    &.custom202PaymentGroupPaymentGroup,
+    &.custom203PaymentGroupPaymentGroup,
+    &.custom204PaymentGroupPaymentGroup,
+    &.custom205PaymentGroupPaymentGroup {
+        /* div.payment-desc {
+            &.visacuotas {
+                font-size: rem(12);
+                ul, ol {
+                    list-style: initial;
+                    li {
+                        list-style: initial;
+                    }
+                }
+            }
+        } */
+        p.payment-description{
+            display: none;
+        }
+        ul,
+        ol{
+            margin-bottom: 15px;
+        }
+        ol{
+            li{
+                padding-left: 20px;
+                position: relative;
+                &:before{
+                    content: '';
+                    margin-right: 5px;
+                    color: $c-primary;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                }
+                @for $i from 1 through 10 {
+                    &:nth-child(#{$i}){
+                        &:before{
+                            content: '#{$i}.';
+                        }
+                    }
+                }
+            }
+        }
+        p.sight{
+            margin-top: 20px;
+            padding: 0 40px;
+            border-radius: 30px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            border: 1px solid $c-pastel-gray;
+        }
+    }
+}
+.payment-discounts-alert-wrap{
+    width: 100%;
+    .payment-discounts-alert{
+        font-size: 0;
+        text-decoration: none;
+        &:after{
+            content: 'Tienes crédito en línea, para utilizarlo haz clic aquí';
+            font-size: 15px;
+            text-decoration: underline;
+        }
+    }
+}
+
+.BillingAddress{
+    label[for="address-toggle-0"]{
+        font-size: 0;
+        line-height: 0;
+        &:before{
+            content: 'La dirección de cobro de la tarjeta es ';
+            font-size: 13px;
+            line-height: 20px;
+        }
+        strong{
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+}

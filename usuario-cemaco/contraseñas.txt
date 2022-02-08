@@ -1,0 +1,46 @@
+Adobe creative
+usuario: vlopezd@cemaco.com
+contraseña: Burbuja.192
+
+Teams
+usuario: vlopezd@cemaco.com
+contraseña: Octubre$212
+
+AWS
+ID: 930348937554
+Usuario: Vania
+contraseña: Burbuja.192
+
+Google
+usuario: vaniacemaco@gmail.com
+contraseña: Octubre$212
+
+LastPass
+usuario: vania.lopez@cemaco.com
+contraseña: Burbuja.192vanmar
+
+Vtex
+usuario: vania.lopez@cemaco.com
+contraseña: Burbuja.192
+
+Github
+usuario: VaniaLopez
+correo: vlopezd@cemaco.com
+contraseña: Burbuja.192vanmar
+
+Bitbucket
+usuario: VaniaLopez
+correo: vlopezd@cemaco.com
+contraseña: Burbuja.192vanmar
+
+Acceso a digital ocean cyberduck
+EndPoint:
+sfo2.digitaloceanspaces.com
+key:
+3NGD2POWNZZX7UGRDVF7
+secret key:
+Knj65PAk/bt6dGs5EtlJB31CYI/h4FBWrwj9xUtg4lM
+
+Datatrics
+usuario:web@cemaco.com
+contraseña: Cemaco2014

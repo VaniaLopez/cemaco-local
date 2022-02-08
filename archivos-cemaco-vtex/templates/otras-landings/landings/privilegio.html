@@ -1,0 +1,2181 @@
+<!-- <link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_ale.css?2016-12-3:10 13 30"> -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+
+<!-- Css Personalizado -->
+<style>
+    .desktop {
+        display: none;
+    }
+    
+    .privilegio {
+        scroll-behavior: smooth !important;
+    }
+    
+    .tag-subtitle {
+        /* padding-bottom: 0px; */
+        font-size: 1.2rem;
+        padding-bottom: 0px;
+    }
+    
+    .fix-anchor {
+        top: -150px;
+        display: block;
+        position: relative;
+        visibility: hidden;
+    }
+    
+    .carrousel-flex {
+        /* display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto; */
+        width: 100%;
+        /* height: 100%; */
+    }
+    
+    .carrousel-flex p {
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .carrousel-border {
+        border: gray 0.9px solid;
+    }
+    
+    .carrousel-title {
+        font-size: 1.2rem;
+    }
+    
+    .carrousel-description {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        width: 100%;
+    }
+    
+    .grid-item {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5%;
+    }
+    
+    .grid-item img {
+        width: 50%;
+    }
+    
+    .grid-item p {
+        text-align: center;
+        font-size: 0.8rem;
+        padding-bottom: 10px;
+    }
+    
+    .grid-item-title {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .swiper-container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        /* height: 100%; */
+        padding-bottom: 4%;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-basis: 1;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    #privilegioesparati {
+        font-size: 2rem;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .preFooterPrivilegio .button-flat {
+        font-size: 1.1rem;
+    }
+    
+    #beneficios-cumpleanios {
+        scroll-behavior: smooth;
+        padding: 0;
+    }
+    #beneficios-empresas{
+        padding: 0;
+    }
+    /* #beneficios-cumpleanios .swiper-slide {
+        align-self: stretch;
+        border: #BFBFBF solid 1px;
+        height: auto;
+    } */
+    
+    /* #beneficios-cumpleanios .swiper-button-next,
+    #beneficios-cumpleanios .swiper-button-prev {
+        color: #101E8E;
+    } */
+    
+    #portada-beneficioscumpleanios {
+        background-color: #93D500;
+    }
+    
+    .privilegio .ui-datepicker-title {
+        justify-content: center;
+    }
+    
+    .privilegio select {
+        background-position: 80% 50%;
+    }
+    
+    .txt-cumpleanios {
+        font-size: 0.875em;
+    }
+    .control-wrapper_large{
+        position: relative;
+    }
+    .balanceCard_question-icon{
+        position: absolute;
+        display: none;
+    }
+    .board-benefits-b{
+        position: relative;
+    }
+    /* .board-benefits-b h3 {
+            font-size: 1rem;
+    } */
+    .product-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        h2.tag-title--level-1 {
+            font-size: 2.4rem;
+        }
+        h3.tag-title--level-1 {
+            font-size: 2rem !important;
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        .desktop {
+            display: block;
+        }
+        .mobile {
+            display: none;
+        }
+        .grid-item {
+            width: 70%;
+            justify-content: unset;
+        }
+        .grid-item p {
+            font-size: 0.7rem;
+            width: 150%;
+        }
+        .grid-item-title {
+            width: 150%;
+            font-size: 1rem;
+        }
+    }
+    
+    @media screen and (min-width: 576px) {
+        .grid-item {
+            width: 90%;
+            justify-content: unset;
+        }
+        .grid-item p {
+            font-size: 0.6rem;
+            width: 150%;
+        }
+        .grid-item-title {
+            width: 150%;
+            font-size: 0.8rem;
+        }
+        h3.tag-title--level-1 {
+            font-size: 2rem;
+        }
+    }
+    /* @media screen and (min-width: 480px) {} */
+    
+    @media only screen and (max-width: 360px) {
+        .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+            font-size: 13px;
+            margin-left: -5%;
+        }
+        h3.tag-title--level-1 {
+            font-size: 1.7rem;
+        }
+    }
+    
+    @media screen and (min-width: 480px) {
+        h3.tag-title--level-1 {
+            font-size: 1.7rem;
+        }
+    }
+    
+    @media screen and (max-width: 575.99px) {
+        h2.tag-title--level-1 {
+            font-size: 2rem;
+        }
+        .grid-container {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+        .grid-item-title {
+            width: 150%;
+        }
+        .carrousel-flex p {
+            font-size: 1rem;
+        }
+        /* .board-benefits-b h3 {
+            font-size: 1.7rem;
+        } */
+        .carrousel-flex {
+            width: 75%;
+        }
+        #privilegioesparati {
+            font-size: 1.7rem;
+        }
+        .carrousel-title {
+            font-size: 1.1rem;
+        }
+        .carrousel-description {
+            /* font-size: 0.8rem; */
+            /* font-size: 1.2rem; */
+        }
+    }
+    
+    @media screen and (max-width: 375.99px) {
+        h2.tag-title--level-1 {
+            font-size: 1.7rem;
+        }
+        .carrousel-flex p {
+            font-size: 0.8rem;
+        }
+        .carrousel-description {
+            font-size: 0.8rem;
+        }
+    }
+    
+    @media screen and (max-width: 325.99px) {
+        h2.tag-title--level-1 {
+            font-size: 1.5rem;
+        }
+        .carrousel-title {
+            font-size: 1rem;
+        }
+        .carrousel-flex p {
+            font-size: 0.7rem;
+        }
+        /* .board-benefits-b h3 {
+            font-size: 1rem;
+        } */
+    }
+    
+    @media screen and (min-width: 900px) and (max-width: 1279px) {
+        .grid-item-title {
+            font-size: 1rem;
+        }
+        .grid-item p {
+            font-size: 0.85rem;
+        }
+        h3.tag-title--level-1 {
+            font-size: 2.7rem;
+        }
+    }
+    
+    @media screen and (min-width: 1279.99px) {
+        h2.tag-title--level-1 {
+            font-size: 3.2rem;
+        }
+        .grid-item-title {
+            font-size: 1.3rem;
+        }
+        .grid-item p {
+            font-size: 1rem;
+        }
+        h3.tag-title--level-1 {
+            font-size: 2.7rem;
+        }
+    }
+    
+    @media screen and (min-width: 1920px) {
+        h3.tag-title--level-1 {
+            font-size: 2.7rem;
+        }
+    }
+</style>
+
+<!-- Contenido -->
+<div class="space_info-card">
+    <div class="container__img-question-card">
+        <img class="question-card_close" src="/arquivos/2021_cemacoPrivilegio_icon_close.png" alt="">
+        <img class="information-card_img" src="/arquivos/2021_cemacoPrivilegio_numeroPrivi.png" alt="">
+    </div>
+</div>
+<div class="static-layout__content">
+    <div class="re-cien static-layout board-landing-mesa board-privilegio">
+        <div class="re-central board-landing-mesa__bebe-h titularp">
+            <h2 class="tag-title--level-1"> Déjate sorprender con Privilegio</h2>
+            <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/privi/home/logo_privi.jpg" alt="">
+        </div>
+
+        <!-- Beneficios -->
+        <!--div class="re-central board-benefits-m">
+                                <div class="triplets-board beneficiosprivi grid-container">
+                                        <div class=" grid-item">
+                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/privilegio-acumula.png" alt="" class="">
+                                                <h3 class="grid-item-title">Acumula 1 punto por<br>cada Q1 de compra</h3>
+                                                <p>en nuestras tiendas y en línea<br>todos los días</p>
+                                        </div>
+                                        <div class=" grid-item">
+                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/privilegio-canjea.png"
+                                                        alt="" class="">
+                                                <h3 class="grid-item-title">
+                                                        Canjea puntos <br>cuando quieras
+                                                </h3>
+                                                <p>
+                                                        Puedes canjearlos hasta por el 50%<br>
+                                                        del total de tu factura
+                                                </p>
+                                        </div>
+                                        <div class="grid-item">
+                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/privilegio-cumple.png"
+                                                        alt="" class="">
+                                                <h3 class="grid-item-title">
+                                                        En tu cumpleaños recibe<br>
+                                                        el 10% de descuento en<br>
+                                                        una compra durante ese mes
+                                                </h3>
+                                                <p>
+                                                        y cupones exclusivos en comercios afiliados
+                                                </p>
+                                        </div>
+                                        <div class="grid-item">
+                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/privilegio-cupones.png"
+                                                        alt="">
+                                                <h3 class="grid-item-title">
+                                                        Cupones y comunicación<br>
+                                                        personalizada a tu<br>
+                                                        correo electrónico
+                                                </h3>
+                                        </div>
+                                        <div class="grid-item">
+                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/privilegio-beneficios.png"
+                                                        alt="">
+                                                <h3 class="grid-item-title">
+                                                        Beneficios y descuentos<br>
+                                                        en empresas aliadas
+                                                </h3>
+                                        </div>
+                                        <div class="grid-item">
+                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/privilegio-info.png"
+                                                        alt="">
+                                                <h3 class="grid-item-title">
+                                                        Información de<br>
+                                                        las actividades y ofertas<br>
+                                                        especiales de tiendas
+                                                </h3>
+                                        </div>
+                                </div>
+                        </div-->
+        <!-- Beneficios -->
+
+        <!-- Formulario Creación Privilegio -->
+        <div class="priv__state formprivi_crea" id="priv__create" style="display:none;">
+            <a class="priv__state-back regresa_crear-privi"><svg class="svg-icon">
+                    <use href="#svg-icon-chevron-left"></use>
+                </svg> Regresar</a>
+            <h3 class="priv__state-subtitle-gray">¡Aún no tienes tarjeta Privilegio!</h3>
+            <p class="priv__state-desc">Crea tu tarjeta Privilegio para acumular puntos y obtener muchos beneficios
+            </p>
+            <form id="form-create-priv" _lpchecked="1">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" placeholder="Nombre(s)" id="name" name="name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" placeholder="Apellido(s)" id="lastname" name="lastname">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <select name="civil" id="civil">
+                                <option value="">Estado civil</option>
+                                <option value="S">Soltero/a</option>
+                                <option value="C">Casado/a</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" placeholder="Fecha de nacimiento DD/MM/AAAA" id="birthdate" name="birthdate">
+                            <input type="hidden" id="birthdate-alt">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <select name="gender" id="gender">
+                                <option value="">Género</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" placeholder="Número de teléfono" id="phone" name="phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" placeholder="Correo electrónico" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" placeholder="Nombre en tarjeta" id="nameCard" name="nameCard">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" placeholder="Dirección" id="address" name="address">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="priv__identity--wrapper">
+                            <select name="TipoID" id="TipoID">
+                                <option value="2">DPI</option>
+                                <option value="3">Pasaporte</option>
+                            </select>
+                            <input type="text" name="Identificacion" id="Identificacion" placeholder="Número de identificación">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <select name="depto" id="depto">
+                                <option value="">Selecciona tu departamento</option>
+                                <option value="501">ALTA VERAPAZ</option>
+                                <option value="500">BAJA VERAPAZ</option>
+                                <option value="489">CHIMALTENANGO</option>
+                                <option value="505">CHIQUIMULA</option>
+                                <option value="487">EL PROGRESO</option>
+                                <option value="499">EL QUICHÉ</option>
+                                <option value="490">ESCUINTLA</option>
+                                <option value="486">GUATEMALA</option>
+                                <option value="498">HUEHUETENANGO</option>
+                                <option value="503">IZABAL</option>
+                                <option value="506">JALAPA</option>
+                                <option value="507">JUTIAPA</option>
+                                <option value="502">PETÉN</option>
+                                <option value="494">QUETZALTENANGO</option>
+                                <option value="496">RETALHULEU</option>
+                                <option value="488">SACATEPÉQUEZ</option>
+                                <option value="497">SAN MARCOS</option>
+                                <option value="491">SANTA ROSA</option>
+                                <option value="492">SOLOLÁ</option>
+                                <option value="495">SUCHITEPÉQUEZ</option>
+                                <option value="493">TOTONICAPÁN</option>
+                                <option value="504">ZACAPA</option>
+                            </select>
+                            <input type="hidden" id="depto-input">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper">
+                            <input type="text" name="NIT" id="NIT" placeholder="NIT (Número de Identificación Tributaría)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="priv__state-input--wrapper" id="municipality-container">
+                            <select name="municipality" id="municipality">
+                                <option value="">Selecciona el municipio</option>
+                            </select>
+                            <input type="hidden" id="municipality-input">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="priv__zone-input--wrapper" id="zone-container">
+                            <select id="zone" title="Zona">
+                                <option value="">Elige una zona</option>
+                            </select>
+                            <input type="hidden" id="zone-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-6">
+                        <div class="priv__state-input--wrapper text-right">
+                            <button class="button-flat secondary">Crear</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Fin Formulario Creación Privilegio -->
+
+        <!-- Formulario Enlace Privilegio -->
+        <div class="priv__state formprivi_enlaza" id="priv__link" style="overflow: hidden; display: none;">
+            <a class="priv__state-back regresa_enlaza-privi"><svg class="svg-icon">
+                    <use href="#svg-icon-chevron-left"></use>
+                </svg> Regresar</a>
+            <h2 class="priv__state-subtitle-black regresa_enlaza-privi">Enlaza tu tarjeta</h2>
+            <div class="row">
+                <div class="col-lg-5">
+                    <input placeholder="Número de tarjeta privilegio" type="text" id="cardNumber" name="cardNumber">
+                </div>
+                <div class="col-lg-5">
+                    <input placeholder="Fecha de nacimiento" type="text" id="cardBirthday" name="cardBirthday">
+                    <input type="hidden" id="cardBirthday-alt">
+                </div>
+                <div class="col-lg-2 text-right">
+                    <a href="#" id="priv__state-btn-link" class="button-flat secondary">Enlaza</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Formulario Enlace Privilegio -->
+
+        <div class="board-landing-mesa__banner">
+            <div class="double-board">
+                <div class="double-board__item bg-privilegios-02 col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+                    <div id="privilegio-actions" style="padding-left: 2%;">
+                        <p class="font-primary">
+                            <span>Crea tu tarjeta Privilegio para acumular <br class="mobile">
+                            puntos y obtener muchos beneficios</span>
+                        </p>
+                        <p><a class="button-flat large bg-secondary font-white expandircrea">Crea</a></p>
+                        <a class="button-flat large bg-secondary font-white scrollCrea" style="display:none;">Crea</a>
+                        <p class="font-primary">
+                            <span>Enlaza tu tarjeta para acumular<br class="mobile"> puntos en tus compras en línea</span>
+                        </p>
+                        <p><a class="button-flat large bg-secondary font-white expandeEnlaza">Enlaza</a></p>
+                        <a class="button-flat large bg-secondary font-white scrollEnlaza" style="display:none;">Enlaza</a>
+                    </div>
+                </div>
+                <div class="double-board__item bg-primary col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
+                    <h3 class="tag-title--level-2">
+                        Consulta los puntos Privilegio <br class="desktop">que has acumulado
+                    </h3>
+                    <form id="priv__state-form-balance" class="internal-form">
+                        <div class="control-wrapper_large">
+                            <input type="text" id="balanceCard" name="balanceCard" placeholder="Número de tarjeta privilegio" class="">
+                            <img id="balanceCard_question-icon" class="balanceCard_question-icon" src="/arquivos/2021_cemacoPrivilegio_icon_numPrivi.png" alt="">
+                        </div>
+                        <div class="control-wrapper_large">
+                            <input type="text" id="cardBirthdate" name="cardBirthdate" placeholder="Fecha de Nacimiento DD/MM/AA" class="datepick" autocomplete="off">
+                        </div>
+                        <div class="control-wrapper_large control-wrapper--send">
+                            <button class="button-flat secondary">Consultar</button>
+                        </div>
+                       <!-- 
+                       <p><a href="/olvide-mi-privi" class="olvidaste">¿Olvidaste tu número de tarjeta Privilegio?</a>
+                       -->
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Header -->
+        <!-- Area de cuadros -->
+        <div class="row re-central cuadrados-area uno">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="/arquivos/2021_cemco_privilegio_cuadro1_desk.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h2>Acumula 1 punto por cada Q1 de <br>compra en nuestras tiendas y en <br>línea todos los días</h2>
+            </div>
+        </div>
+        <div class="row re-central cuadrados-area dos">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h2>Canjea tus puntos cuando quieras</h2>
+                <p>Por cada 100 Puntos acumulados, tienes Q1 a tu favor.<br class="desktop"> Puedes canjear tus puntos hasta por el 50% del total <br class="desktop">de tu factura. </p>
+                <p class="restricciones">El canje no aplica en cemaco.com</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="/arquivos/2021_cemco_privilegio_cuadro2_desk.png" alt="">
+            </div>
+        </div>
+        <div class="row re-central cuadrados-area tres">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="/arquivos/2021_cemco_privilegio_cuadro3_desk.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h2>En tu cumpleaños recibe el<br>10% de descuento </h2>
+                <p>en una compra durante ese mes y cupones exclusivos en <br class="desktop">comercios afiliados</p>
+                <p><a href="#beneficios-cumpleanios">ver más</a></p>
+            </div>
+        </div>
+        <div class="row re-central cuadrados-area cuatro">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h2>Recibe cupones e información <br>personalizada</h2>
+                <p>Te enviamos información valiosa a tu correo electrónico <br class="desktop">acerca de las ofertas especiales y las actividades en <br class="desktop">tiendas.</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="/arquivos/2021_cemco_privilegio_cuadro4_desk.png" alt="">
+            </div>
+        </div>
+
+        <div class="row re-central pregunta">
+            <h2>¿Aún no tienes tu tarjeta Privilegio?</h2>
+            <p><a href="/_secure/account/puntos-privilegio">Crear</a></p>
+        </div>
+
+        <div class="row re-central banner-medio">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h3 class="banner-medio_text1">¡Eres muy importante para nosotros <br class="desktop">y nos encanta consentirte!</h3>
+                <p>Ayúdanos a mantener tus datos actualizados para poder localizarte. <br class="show-br">Por actualizar tus datos recibe <br class="desk-show"/><strong>100 puntos Privilegio</strong></p>
+                <p><a href="https://survey.alchemer.com/s3/6217032/Encuesta">Actualizar datos</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 banner-medio_img">
+                <img src="/arquivos/2021_cemco_privilegio_bannereresimportante_desk.png" alt="">
+            </div>
+        </div>
+<!--beneficio cumpleaños -->
+<div class="re-central board-benefits-b" id ="beneficios-cumpleanios">
+    <div class="text-center">
+        <h3 class="tag-title-level--1 font-boda-primary">
+            Beneficios en el mes de tu cumpleaños
+        </h3>
+        <p class = "txt-cumpleanios">Recibirás un correo electrónico con los cupones que debes presentar para obtener los descuentos.</p>
+    </div>
+    <div id="carruselbeneficiosBoda003" >
+        <div id="marca01" class="swiper marcas-slider quinary-board">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemco_privilegio_BEEMDTC.png" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemco_privilegio_BEEMDTC.png" alt="" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_cumpleaños_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_cumpleaños_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logocemaco_carrusel.png" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">10% de descuento</h3>
+                        <p>En una compra durante ese <br/>mes</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_cocina_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_cocina_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logocemaco_carrusel.png" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">Q50 de descuento</h3>
+                        <p>En la compra de Q400 o más<br/> en el departamento de cocina</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_electrodomestico_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_electrodomestico_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logocemaco_carrusel.png" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">Q50 de descuento</h3>
+                        <p>En la compra de Q400 o más<br/> en el departamento de<br/> electrodomésticos</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_toscana_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_toscana_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logocemaco_carrusel.png" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">10% descuento</h3>
+                        <p>En productos Toscana</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_herramienta_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_herramienta_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logocemaco_carrusel.png" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">Q200 de<br/> descuento</h3>
+                        <p>En la compra de Q2,000 o más<br/> en herramientas</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_ PricePfister_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_ PricePfister_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logocemaco_carrusel.png" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">10% descuento</h3>
+                        <p>En productos Price Pfister</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_Kwikset_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_Kwikset_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logocemaco_carrusel.png" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">10% descuento</h3>
+                        <p>En productos Kwikset</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_panda_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_panda_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logopanda_carrusel.png" class="board-benefits-b__brand logo-panda" />
+                        <h3 class="tag-subtitle">Combo celebración</h3>
+                        <p>Plato de especialidad   <br/> complemento   bebida de 22 oz<br/> y te regalamos bowl de Oragen<br/> chicken y arroz frito por Q60.00</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_monoloco_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_monoloco_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logomonoloco_carrusel.png" class="board-benefits-b__brand logo-monoloco" />
+                        <h3 class="tag-subtitle">Nachos   aros  <br/> papas y 4 sodas por<br/> Q195.50</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_brassica_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_brassica_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logobrassica_carrusel.png" class="board-benefits-b__brand logo-brassica" />
+                        <h3 class="tag-subtitle">15% descuento</h3>
+                        <p>Sobre el total de<br/> la factura</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_subway_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_subway_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logosubway_carrusel.png" class="board-benefits-b__brand logo-subway" />
+                        <h3 class="tag-subtitle">5 galletas gratis</h3>
+                        <p>al comprar una bandeja</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_gitano_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_gitano_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logogitano_carrusel.png" class="board-benefits-b__brand logo-gitano" />
+                        <h3 class="tag-subtitle">2 x Q26</h3>
+                        <p> en Té Chai o Caramel Latte de<br/> 12 onzas</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_baviera_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_baviera_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logobaviera_carrusel.png" class="board-benefits-b__brand logo-baviera" />
+                        <h3 class="tag-subtitle">10% de descuento</h3>
+                        <p> en consumo</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_pops_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_pops_carrusel.jpg" alt="" />
+                        </picture> 
+                        <img src="/arquivos/2021_cemacoPrivilegio_logopops_carrusel.png" class="board-benefits-b__brand logo-pops" />
+                        <h3 class="tag-subtitle">20% de descuento</h3>
+                        <p>en tu compra</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_donuts_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_donuts_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logodonuts_carrusel.png" class="board-benefits-b__brand logo-donuts" />
+                        <h3 class="tag-subtitle">6 donas x Q48</h3>
+                        <p> aplica en 2 rellenas<br/> y 4 de anillo</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_cocolat_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_cocolat_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logococolat_carrusel.png" alt="" class="board-benefits-b__brand logo-cocolat" />
+                        <h3 class="tag-subtitle">15% de descuento<br/> en tu compra</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_tulipanes_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_tulipanes_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logotulipanes_carrusel.png" alt="" class="board-benefits-b__brand logo-tulipanes" />
+                        <h3 class="tag-subtitle">10% de descuento<br/> en tu compra</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_mariaa1_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/22021_cemacoPrivilegio_mariaa1_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logomariaandre_carrusel.png" alt="" class="board-benefits-b__brand logo-mariaandre" />
+                        <h3 class="tag-subtitle">2x1 en tu cupcake<br/> favorito</h3>
+                        <p>Válido únicamente en<br/>La Noria, zona 14</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item bodas-joyas">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_mariaa2_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_mariaa2_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logomariaandre_carrusel.png" alt="" class="board-benefits-b__brand logo-mariaandre" />
+                        <h3 class="tag-subtitle">2x1 en tu brownie<br/> favorito</h3>
+                        <p>Válido únicamente en<br/> El Pedregal, zona 10</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_prensa_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_prensa_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logoprensa_carrusel.png" class="board-benefits-b__brand logo-prensa" />
+                        <h3 class="tag-subtitle">Suscripción anual<br/> por Q449</h3>
+                        <p>precio regular Q865</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_fujifilm_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_fujifilm_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logofujifilm_carrusel.png" class="board-benefits-b__brand logo-fujifilm" />
+                        <h3 class="tag-subtitle">2x1 en impresión<br/> tamaño postal</h3>
+                        <p>gratis ampliación 8”x10”</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_piemont_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_piemont_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logopiemont_carrusel.png" class="board-benefits-b__brand logo-piemont" />
+                        <h3 class="tag-subtitle">10% de descuento</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_porta1_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_porta1_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logoporta2_carrusel.png" class="board-benefits-b__brand other-brand logo-porta2" />
+                        <h3 class="tag-subtitle">Q100 descuento</h3>
+                        <p>Sobre tarifa publicada en la<br/> página web Porta hotel del<br/> Lago</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_porta2_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_porta_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logoporta_carrusel.png" class="board-benefits-b__brand other-brand logo-porta" />
+                        <h3 class="tag-subtitle">Q100 descuento</h3>
+                        <p>Sobre tarifa publicada en la<br/> página web Porta hotel<br/> Antigua Guatemala</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_pensativo_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_pensativo_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logopensativo_carrusel.png" class="board-benefits-b__brand other-brand logo-pensativo" />
+                        <h3 class="tag-subtitle">Q150 descuento</h3>
+                        <p>Sobre tarifa publicada en la<br/> página web Pensativo Huse<br/> hotel Antigua Guatemala</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_dentista_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_dentista_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logoassitstdent_carrusel.png" class="board-benefits-b__brand other-brand logo-assitstdent" />
+                        <h3 class="tag-subtitle">Hasta Q1,000<br/> descuento</h3>
+                        <p>Al activar tu plan asistencial<br/> dental básico</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_rebecana_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_rebecana_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logorebecana_carrusel.png" class="board-benefits-b__brand logo-rebecana" />
+                        <h3 class="tag-subtitle">20% descuento</h3>
+                        <p>En tratamiento lifting</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_barons_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_barons_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logobarons_carrusel.png" class="board-benefits-b__brand logo-barons" />
+                        <h3 class="tag-subtitle">50% de descuento</h3>
+                        <p>en servicio de barba</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_futeca_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_futeca_carrusel.jpg" alt="" />
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logofuteca_carrusel.png" class="board-benefits-b__brand logo-futeca" />
+                        <h3 class="tag-subtitle">Inscripción  <br/> 1 mes gratis</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_sky_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_sky_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logoskyzone_carrusel.png" class="board-benefits-b__brand logo-skyzone" />
+                        <h3 class="tag-subtitle">20% de descuento</h3>
+                        <p>En paquete de cumpleaños<br/> WOW de 15 personas en<br/> adelante</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_sporta_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_sporta_carrusel.jpg" alt="" />
+                        </picture>
+                        <img   src="/arquivos/2021_cemacoPrivilegio_logosporta_carrusel.png" class="board-benefits-b__brand logo-sporta" />
+                        <h3 class="tag-subtitle">Q400 en tu primer<br/> mes</h3>
+                        <p>E inscripción gratis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="swiper-button-prev-marca01" class="swiper-button-prev"></div>
+        <div id="swiper-button-next-marca01"  class="swiper-button-next"></div>
+    </div>
+</div>
+<!--beneficio con empresas -->
+<div class="re-central board-benefits-b" id="beneficios-empresas">
+    <div class="text-center">
+            <h3 class="tag-title-level--1 font-boda-primary">
+                Beneficios con nuestras empresas aliadas
+            </h3>
+    </div>
+    <div id="carruselbeneficiosBoda002">
+        <div  id="marca02"class="swiper marcas-slider quinary-board">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA.png" alt="" />
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_mariaa1_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/22021_cemacoPrivilegio_mariaa1_carrusel.jpg" alt="">
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logomariaandre_carrusel.png" alt="" class="board-benefits-b__brand logo-mariaandre" />
+                        <h3 class="tag-subtitle">2 cupcakes por Q32</h3>
+                        <p>Válido únicamente en<br/> La Noria, zona 14</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_mariaa3_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_mariaa3_carrusel.jpg" alt="">
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logomariaandre_carrusel.png" alt="" class="board-benefits-b__brand logo-mariaandre" />
+                        <h3 class="tag-subtitle">10% de descuento<br/> en pastel de<br/> 15 porciones</h3>
+                        <p> Válido únicamente en<br/> El Pedregal, zona 10</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_sky_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_sky_carrusel.jpg" alt="" />
+                        </picture>
+                        <img  src="/arquivos/2021_cemacoPrivilegio_logoskyzone_carrusel.png" class="board-benefits-b__brand logo-skyzone" />
+                        <h3 class="tag-subtitle">2 horas de salto<br/> para 2 personas</h3>
+                        <p>Más dos menús a tu elección<br/>   helados por Q225</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="/arquivos/2021_cemacoPrivilegio_baviera1_carrusel.jpg" type="image/webp" class="img-responsive">
+                            <img src="/arquivos/2021_cemacoPrivilegio_baviera1_carrusel.jpg" alt="">
+                        </picture>
+                        <img src="/arquivos/2021_cemacoPrivilegio_logobaviera_carrusel.png" class="board-benefits-b__brand logo-baviera">
+                        <h3 class="tag-subtitle">2x1 en desayunos</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <!-- <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA12.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo10.jpg" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">2x1 en desayunos</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA2.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo2.jpg" alt="" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">2 Big Bell Box a Q59</h3>
+                            <p>Incluye 2 Burritos Supreme   2 Gorditas Supreme   2 Tacos Supreme  2 cinnamon twist   2 Bebidas grandes</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item bodas-joyas">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA3.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo3.jpg" alt="" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">20% de descuento</h3>
+                        <p>en repuestos mecánicos Premium y OEM para linea Europea y Coreana</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA6.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo5.jpg" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">2 granitas de 12 onzas por Q25</h3>
+                        <p>aplica en granita de mora y granita de maracuyá</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA7.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo5.jpg" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">Chicken quesadilla   bebida natural por Q25</h3>
+                        <p>en el catering de tu boda.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item auturo-weddings">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA8.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo6.jpg" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">20% de descuento</h3>
+                        <p>en Pita Minis</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA10.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo8.jpg" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">50% de descuento </h3>
+                        <p>en limpieza dental y asistencia de emergencia 24/7 al activar tu plan de asistencia dental básico</p>
+                    </div>
+                </div>
+                <div class="swiper-slide quinary-board__item">
+                    <div class="product-item">
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEA11.png" alt="" />
+                        <img src="/arquivos/2021_cemco_privilegio_BCNEAlogo9.jpg" class="board-benefits-b__brand" />
+                        <h3 class="tag-subtitle">10% de descuento</h3>
+                        <p>en tu compra</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div id="swiper-button-prev-marca02" class="swiper-button-prev"></div>
+        <div id="swiper-button-next-marca02" class="swiper-button-next"></div>
+    </div>
+</div>
+                        
+                        <!--Fin Area de cuadros -->
+                        
+        
+        
+                        <!-- <div class="re-central board-benefits-b">
+                                <div class="text-center">
+                                        <h3 class="tag-title-level--1 text-black">Beneficios de nuestras empresas aliadas</h3>
+                                </div>
+                        </div>
+        
+                        <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                                <div>
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/banner-beneficiosepeciales.png"
+                                                                alt="">
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="carrousel-flex">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane.jpg"
+                                                                alt="">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane1.png"
+                                                                alt="">
+                                                        <h3 class="tag-subtitle">
+                                                                Americano Zepellin
+                                                        </h3>
+                                                        <p>
+                                                                con o sin leche 8 oz = Q20
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="carrousel-flex">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane.jpg"
+                                                                alt="">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane1.png"
+                                                                alt="">
+                                                        <h3 class="tag-subtitle">
+                                                                2 Mocha Dream
+                                                        </h3>
+                                                        <p>
+                                                                10 oz = Q20
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="carrousel-flex">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane.jpg"
+                                                                alt="">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane1.png"
+                                                                alt="">
+                                                        <h3 class="tag-subtitle">
+                                                                2 Cappuccino
+                                                        </h3>
+                                                        <p>
+                                                                8 oz = Q20
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="carrousel-flex">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane.jpg"
+                                                                alt="">
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane1.png"
+                                                                alt="">
+                                                        <h3 class="tag-subtitle">
+                                                                15% de descuento
+                                                        </h3>
+                                                        <p>
+                                                                en invitaciones
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                        </div> --> 
+        <!-- Slider Beneficios de empresas aliadas -->
+
+
+        <!-- Slider Beneficios en el me de tu cumpleaños -->
+                        <!-- <div class="re-central board-benefits-b">
+                                <div class="text-center">
+                                        <h3 class="tag-title-level--1 text-black">Beneficios en el mes de tu cumpleaños</h3>
+                                </div>
+                        </div>
+        
+                        <div class="swiper-container" id="beneficios-cumpleanios">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide" id="portada-beneficioscumpleanios">
+                                                <div>
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/banner-beneficioscumpleanos.png"
+                                                                alt="">
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div>
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/pandaexpress.png"
+                                                                alt="">
+                                                        <h3 class="carrousel-title">
+                                                                Te obsequiamos un<br>
+                                                                bowl en la compra<br>
+                                                                de un plato
+                                                        </h3>
+                                                        <p class="text-center carrousel-description">
+                                                                Válido al presentar el cúpon<br>
+                                                                que te enviaremos en el mes<br>
+                                                                de tu cumpleaños y tu tarjeta<br>
+                                                                Privilegio<br>
+                                                                Aplican Restricciones
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div>
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/cafegitane.png"
+                                                                alt="">
+                                                        <h3 class="carrousel-title">
+                                                                20% descuento en<br>
+                                                                cualquier producto<br>
+                                                                de Café Gitane
+                                                        </h3>
+                                                        <p class="text-center carrousel-description">
+                                                                Válido al presentar el cúpon<br>
+                                                                que te enviaremos en el mes<br>
+                                                                de tu cumpleaños y tu tarjeta<br>
+                                                                Privilegio<br>
+                                                                Aplican Restricciones
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div>
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/subway.png"
+                                                                alt="">
+                                                        <h3 class="carrousel-title">
+                                                                3x2 en subs de<br>
+                                                                15 centimetros
+                                                        </h3>
+                                                        <p class="text-center carrousel-description">
+                                                                Válido al presentar el cúpon<br>
+                                                                que te enviaremos en el mes<br>
+                                                                de tu cumpleaños y tu tarjeta<br>
+                                                                Privilegio<br>
+                                                                Aplican Restricciones
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div>
+                                                        <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/privilegio/beneficios/americandoughnuts.png"
+                                                                alt="">
+                                                        <h3 class="carrousel-title">
+                                                                Paga 4 y lleva 6<br>
+                                                                donas de anillo
+                                                        </h3>
+                                                        <p class="text-center carrousel-description">
+                                                                Válido al presentar el cúpon<br>
+                                                                que te enviaremos en el mes<br>
+                                                                de tu cumpleaños y tu tarjeta<br>
+                                                                Privilegio<br>
+                                                                Aplican Restricciones
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                        </div>
+
+
+        <div class="re-central">
+            <div class="text-center">
+                <h3 class="tag-title-level--1 text-black" id="privilegioesparati">¡Privilegio es para ti!</h3>
+            </div>
+            <div class="video-responsive--custom videocontainer">
+                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/privilegio/privi-video.png" data-video="https://www.youtube.com/embed/DG5H3D6m7JE?&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&playlist=DG5H3D6m7JE&autoplay=true" width="600"
+                    alt="Privilegio" />
+            </div>
+        </div>
+
+        <!--div class="preFooterPrivilegio">
+                                <div class="text-center titularNoTienesPrivi">
+                                        <h3 class="tag-title--level-1">¿Aún no tienes tu tarjeta Privilegio?</h3>
+                                        <a href="" class="button-flat large bg-secondary font-white expandircrea">¡Crear!</a>
+                                </div>
+                                <div class="titularCategorias">
+                                        <h3 class="tag-title--level-1">Categorías que te pueden interesar</h3>
+                                </div>
+        
+                                <div class="re-central generalinternal-slider__wraper">
+                                        <div id="internaSlider" class="generalinternal-slider">
+                                                <div class="generalinternal-slider__item">
+                                                        <a href="/segundonivel/bebe#panales">
+                                                                <img src="/arquivos/images-mesa_bebe-banner_01.jpg"
+                                                                        alt="Pañales y accesorios | Cemaco" />
+                                                                <h3>Pañales y accesorios</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="generalinternal-slider__item">
+                                                        <a href="/segundonivel/cocinaymesa#mesa">
+                                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/PrivilegioVtex/images-generalcarrusel_02.jpg"
+                                                                        alt="" />
+                                                                <h3>Mesa</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="generalinternal-slider__item">
+                                                        <a href="/c-decoracion">
+                                                                <img src="/arquivos/images-generalcarrusel_03.jpg"
+                                                                        alt="Decoración | Cemaco" />
+                                                                <h3>Decoración</h3>
+                                                        </a>
+                                                </div>
+                                                <div class="generalinternal-slider__item">
+                                                        <a href="/c-mascotas">
+                                                                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/privi/banner-mascotas.png"
+                                                                        alt="" />
+                                                                <h3>Mascotas</h3>
+                                                        </a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div-->
+    </div>
+</div>
+<!-- Contenido -->
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+
+<script>
+    $(".datepick, #birthdate").datepicker({
+        dateFormat: "dd/mm/yy",
+        altField: "#birthdate-alt",
+        altFormat: "yymmdd",
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "1925:2010"
+
+    });
+
+    $(".datepick, #cardBirthday").datepicker({
+        dateFormat: "dd/mm/yy",
+        altField: "#cardBirthday-alt",
+        altFormat: "yymmdd",
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "1925:2010"
+
+    });
+</script>
+
+
+<!-- Initialize Swiper -->
+<script>
+    const setSwiper = (id)=>{
+        return new Swiper('#'    id, {
+            slidesPerView: 4,
+            centeredSlides: false,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '#swiper-button-next-'    id,
+                prevEl: '#swiper-button-prev-'    id,
+            },
+            breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    },
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 10,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 10,
+                    }
+                }
+        });
+    }
+
+    setSwiper('marca01');
+    setSwiper('marca02');
+</script>
+<!-- Script -->
+<script>
+    //var embedVideo = <iframe width="560" height="315"  src="https://www.youtube.com/embed/DG5H3D6m7JE?&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&playlist=DG5H3D6m7JE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    //var embedVideo = '<object data="https://www.youtube.com/embed/DG5H3D6m7JE?&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&playlist=DG5H3D6m7JE" type="video/mp4" height="500" width="600"><param name="src" value="https://www.youtube.com/embed/DG5H3D6m7JE?&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&playlist=DG5H3D6m7JE"><param name="allowfullscreen" value="true"></object>'
+    $('.videocontainer img').click(function() {
+        const datavideo = $(this).attr('data-video')
+        // console.log(datavideo);
+        const video = `<iframe src="${datavideo}"></iframe>`;
+        $(this).replaceWith(video);
+    });
+
+// mostrar modal numero de tarjeta privilegio
+    const scrollNone = document.querySelector('html');
+    const questionButton = document.querySelector('.balanceCard_question-icon');
+    const closeButton = document.querySelector('.question-card_close');
+    const spaceInfoCard = document.querySelector('.space_info-card');
+    const containerHeader = document.querySelector('.site-header')
+    const createContainer = document.createElement('div');
+
+    questionButton.addEventListener('click',()=>{
+        spaceInfoCard.classList.add('active');
+        scrollNone.classList.add('scrolling-none');
+
+        containerHeader.prepend(createContainer);
+        createContainer.className = "space_info-card active";
+
+    })
+    closeButton.addEventListener('click',()=>{
+        spaceInfoCard.classList.remove("active");
+        scrollNone.classList.remove('scrolling-none');
+        containerHeader.removeChild(createContainer);
+    })
+
+</script>
+<!-- Style -->
+<style>
+        .board-benefits-b__brand{
+        margin: 5px auto;
+        width: 50%;
+    }
+    .scrolling-none{
+        overflow: hidden;
+    }
+    .space_info-card.active{
+        background-color:rgba(0,0,0,0.8);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+        display: block;
+    }
+    .space_info-card{
+        display: none;
+    }
+    .container__img-question-card{
+        background-color: #fff;
+        margin: 6% 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .information-card_img{
+        width: 100%;
+        padding: 3%;
+    }
+    .question-card_close{
+        width: 5%;
+        text-align: end;
+        padding: 1px 1px 0 0;
+        
+    }
+    .privilegio .board-landing-mesa__banner .double-board__item:first-child {
+        overflow: hidden;
+        background-image: url(/arquivos/2021_cemco_privilegio_bannerform_desk.png);
+        background-position: 78% 0;
+        background-size: contain;
+    }
+    #carruselbeneficiosBoda003{
+        position: relative;
+    }
+    #carruselbeneficiosBoda002{
+        position: relative;
+    }
+    #privilegio-actions {
+        padding-left: 0 !important;
+        padding-top: 55%;
+        padding-bottom: 20px;
+    }
+    
+    .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 0;
+    }
+    .double-board__item:first-child{
+            padding: 0 15px 20px;
+            
+        }
+    .button-flat.large {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+    .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) .button-flat {
+        display: block;
+        margin: 0 auto;
+        width: 37%;
+    }
+    
+    .font-primary {
+        color: #000 !important;
+    }
+    
+    .cuadrados-area div h2 {
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .cuadrados-area.uno div:nth-child(2) h2 {
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .cuadrados-area div p {
+        font-size: 0.875em;
+        text-align: center;
+    }
+    
+    .cuadrados-area div .restricciones {
+        color: #434343;
+        font-size: 0.875em;
+        text-align: center;
+    }
+    
+    .cuadrados-area div a {
+        background-color: #94D529;
+        color: #fff;
+        padding: 5px 20px;
+        border-radius: 16px;
+        font-size: 1em;
+    }
+    
+    .font-boda-primary {
+        color: #000 !important;
+        padding-bottom: 2px;
+    }
+    
+    .cuadrados-area {
+        margin: 20px auto
+    }
+    
+    .cuadrados-area.dos,
+    .cuadrados-area.cuatro {
+        display: flex;
+        flex-flow: row wrap-reverse
+    }
+    
+    .cuadrados-area.dos div,
+    .cuadrados-area.cuatro div {
+        width: 100%;
+    }
+    
+    .pregunta h2 {
+        text-align: center;
+        font-size: 1.813em;
+    }
+    
+    .pregunta {
+        margin-top: 40px
+    }
+    
+    .pregunta p {
+        font-size: 0.875em;
+        text-align: center;
+    }
+    
+    .pregunta p a {
+        background-color: #94D529;
+        color: #fff;
+        padding: 5px 20px;
+        border-radius: 16px;
+    }
+    
+    .banner-medio {
+        background-color: #F7F7F7;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .banner-medio div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0 20px;
+    }
+    
+    .banner-medio h3 {
+        font-size: 1.1em;
+    }
+    
+    .banner-medio p {
+        font-size: 0.85em;
+    }
+    
+    .banner-medio p a {
+        background-color: #94D529;
+        color: #fff;
+        padding: 5px 20px;
+        border-radius: 16px;
+    }
+    
+    .board-landing-mesa__banner .double-board__item:nth-child(2) p {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .board-landing-mesa__banner .double-board__item:nth-child(2) p a {
+        text-align: center;
+        color: #fff;
+        text-decoration: underline;
+        font-size: 0.75em
+    }
+    
+    .quinary-board__item {
+        margin-bottom: 0;
+    }
+    .cemaco-brand{
+        width: 100px;
+        height: auto;
+        margin: 15px auto;
+
+    }
+    .add_brand{
+        width: 50px;
+        height: auto;
+    }
+    :root {
+        --swiper-theme-color: #94D500;
+    }
+    
+    #privilegio-actions {
+        display: block;
+    }
+    
+    .titularCategorias h3 {
+        margin: 40px 0 15px;
+    }
+    .balanceCard_question-icon{
+            display: none;
+            height: 25px;
+            width: 25px;
+            top: 8px;
+            right: 8px;
+    }
+    .swiper-button-prev{
+        opacity: 1!important;
+        left: -20px;
+    }
+    .swiper-button-next{
+        right: -20px;
+    }
+    .swiper-button-next::after, .swiper-button-prev::after{
+        font-size: 25px;
+    }
+    .product-item p{
+        font-size: 0.59rem;
+    }
+    .logo-panda{
+        width: 24%;
+    }
+    .logo-monoloco, .logo-subway, .logo-pops, .logo-donuts, .logo-prensa, .logo-fujifilm,.logo-pensativo,.logo-assitstdent,.logo-piemont,.logo-barons{
+        width: 35%;
+    }
+    .logo-brassica, .logo-tulipanes,.logo-porta2,.logo-porta,.logo-rebecana{
+        width: 25%;
+    }
+    .logo-gitano, .logo-baviera, .logo-mariaandre{
+        width: 30%;
+    }
+    .logo-cocolat,.logo-futeca .logo-skyzone{
+        width: 45%;
+    }
+    .logo-sporta{
+        width: 40%;
+    }
+    .product-item h3{
+        font-size: 0.9rem;
+    }
+    @media (max-width: 320px) {
+        .text-center .beneficios-btn {
+            padding-left: 0%;
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:first-child {
+            padding: 0 0px 0px;
+            padding: 0 15px 20px;
+        }
+        .board-landing-mesa__bebe-h,
+        .board-landing-mesa__ninos-h {
+            padding-top: 40px;
+            padding-bottom: 0px;
+        }
+    }
+    
+    @media (max-width: 375px) {
+        .text-center .beneficios-btn {
+            padding-left: 0%;
+        }
+        .privilegio-actions {
+            padding-left: 0%;
+        }
+        .board-landing-mesa__bebe-h,
+        .board-landing-mesa__ninos-h {
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+        .tag-title--level-1 {
+            font-size: 1.25rem;
+        }
+        .static-layout .double-board {
+            overflow: hidden;
+        }
+    }
+    
+    @media (min-width: 320px) {
+        #privilegio-actions {
+            padding-top: 52%;
+        }
+        .banner-medio div:nth-child(1) {
+            padding: 0 26px 20px;
+        }
+    }
+    
+    @media (min-width: 360px) {
+        #privilegio-actions {
+            padding-top: 56%;
+        }
+    }
+    
+    @media (min-width: 375px) {
+        #privilegio-actions {
+            padding-top: 57%;
+        }
+        .banner-medio div:nth-child(1) {
+            padding: 0 24px 20px;
+        }
+    }
+    @media (min-width: 400px) {
+        .product-item p{
+            font-size: 0.76rem;
+        }
+    }
+    @media (min-width: 480px) {
+        .product-item p{
+            font-size: 0.59rem;
+        }
+    }
+    @media (min-width: 570px) {
+        .product-item p{
+            font-size: 0.72rem;
+        }
+    }
+    @media only screen and (min-width:768px) {
+        .cuadrados-area.dos,
+        .cuadrados-area.cuatro {
+            display: flex;
+            flex-flow: row
+        }
+        .cuadrados-area div h2 {
+            padding-top: 26%;
+        }
+        .cuadrados-area.uno div:nth-child(2) h2 {
+            padding-top: 34%;
+        }
+        .cuadrados-area div p {
+            font-size: 0.75em;
+        }
+        .banner-medio h3 {
+            font-size: 1.1em;
+            text-align: start;
+        }
+        .banner-medio p {
+            font-size: 0.7em;
+            text-align: start;
+        }
+        .show-br{
+            display: none;
+        }
+        .product-item p{
+        font-size: 0.62rem;
+        }
+        .banner-medio div:nth-child(1) {
+            padding: 0 0 20 px;
+        }
+        .banner-medio {
+            display: flex;
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) .button-flat{
+            width: 17%;
+        }
+    }
+    @media only screen and (min-width:826px) {
+        .show-br{
+            display: inline-block;
+        }
+        .desk-show{
+            display: none;
+        }
+    }
+    @media only screen and (min-width:826px) {
+        .banner-medio div:nth-child(1) {
+            padding-left: 15px;
+        }
+    }
+    @media only screen and (min-width:826px) {
+        .product-item p{
+        font-size: 0.8rem;
+        }
+    }
+    @media only screen and (min-width:1010px) {
+        .product-item p{
+        font-size: 0.865rem;
+        }
+    }
+    @media only screen and (min-width:1024px) {
+        .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) .button-flat{
+            width: fit-content;
+            margin: 0;
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:first-child {
+            background-position: 62% 0;
+            background-size: cover;
+        }
+        .font-primary {
+            color: #000 !important;
+        }
+        .tag-title--level-2 {
+            font-size: 1.438em;
+        }
+        .cuadrados-area div h2 {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .cuadrados-area.uno div:nth-child(2) h2 {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .cuadrados-area div p {
+            font-size: 1em;
+            text-align: center;
+        }
+        .cuadrados-area div .restricciones {
+            color: #434343;
+            font-size: 0.875em;
+            text-align: center;
+        }
+        .cuadrados-area div a {
+            background-color: #94D529;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 16px;
+            font-size: 0.875em;
+        }
+        .pregunta h2 {
+            text-align: center;
+            font-size: 1.813em;
+        }
+        .pregunta {
+            margin-top: 40px
+        }
+        .pregunta p {
+            font-size: 0.875em;
+            text-align: center;
+        }
+        .pregunta p a {
+            background-color: #94D529;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 16px;
+        }
+        .banner-medio {
+            background-color: #F7F7F7;
+            margin-top: 40px;
+            padding-right:0;
+        }
+        .banner-medio_img {
+            padding-right:0;
+        }
+        .banner-medio h3 {
+            font-size: 1.3em;
+        }
+        .banner-medio p {
+            font-size: 0.86em;
+        }
+        .banner-medio p a {
+            background-color: #94D529;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 16px;
+        }
+        .banner-medio div:nth-child(1){
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        .button-lineal.large,
+        .button-flat.large,
+        .internal-form button {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        .board-landing-mesa__banner .double-board__item:first-child p {
+            width: 80%;
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+            font-size: 1.438em;
+            text-align: left;
+            padding-right: 35%;
+        }
+        .internal-form input {
+            font-size: 0.75em;
+            /* width: 95%; */
+            height: 30px;
+        }
+        .internal-form .control-wrapper--send {
+            padding-top: 0;
+        }
+        .board-landing-mesa .marcas-slider {
+            margin-bottom: 15px;
+        }
+        #privilegio-actions {
+            padding-top: 0%;
+        }
+        .balanceCard_question-icon{
+            display: block;
+            height: 23px;
+            width: 23px;
+            top: 4px;
+            right: 5px;
+        }
+        .tag-title-level--1 {
+            font-size: 1.7rem;
+        }
+        .txt-cumpleanios {
+            font-size: 1.25em;
+        }
+        .product-item p{
+            font-size: 0.67rem;
+        }
+        .product-item h3 {
+            font-size: 1rem;
+        }
+    }
+    @media only screen and (min-width:1125px) {
+        .internal-form{
+            margin: 0 10%;
+        }
+    }
+    @media only screen and (min-width:1230px) {
+        .balanceCard_question-icon{
+            top: 3px;
+        }
+    }
+    @media only screen and (min-width:1280px) {
+        .cuadrados-area div h2 {
+            font-size: 1.813em;
+        }
+        .cuadrados-area.uno div:nth-child(2) h2 {
+            font-size: 1.813em;
+        }
+        .cuadrados-area div p {
+            font-size: 1.3em;
+        }
+        .cuadrados-area div .restricciones {
+            font-size: 1.2em;
+        }
+        .banner-medio div:nth-child(1) {
+            padding-top: 3%;
+            padding-bottom: 3%;
+            padding-left: 4%;
+        }
+        .banner-medio p {
+            font-size: 1em;
+        }
+        .banner-medio p a {
+            font-size: 0.875em;
+        }
+        .banner-medio h3 {
+            font-size: 1.55em;
+        }
+        .board-landing-mesa__banner .double-board__item:first-child {
+            padding: 90px 50px;
+        }
+        .cuadrados-area div a {
+            font-size: 0.625em
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:first-child {
+            background-position: 78% 0;
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+            padding-right: 48%;
+        }
+    }
+    
+    @media only screen and (min-width:1279px) {
+        .product-item p{
+            font-size: 0.94rem;
+        }
+    }
+    @media only screen and (min-width:1280px) {
+        .product-item p{
+            font-size: 0.87rem;
+        }
+    }
+    @media only screen and (min-width:1366px) {
+        .board-landing-mesa__banner .double-board__item:first-child {
+            padding: 106px 50px;
+        }
+        .control-wrapper_large {
+            width: 70%;
+            margin: 0 auto
+        }
+        /* .internal-form input {
+            width: 70%;
+            margin: 0 auto
+        } */
+        .cuadrados-area div a {
+            font-size: 0.625em
+        }
+        .tag-subtitle {
+            font-size: 1.438rem
+        }
+        .product-item h3 {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media only screen and (min-width:1440px) {
+        .cuadrados-area div p {
+            font-size: 1.438em;
+        }
+        .cuadrados-area div .restricciones {
+            font-size: 1.375em;
+        }
+        .banner-medio h3 {
+            font-size: 1.65em;
+        }
+        .banner-medio p {
+            font-size: 1.18em;
+        }
+        .board-landing-mesa__banner .double-board__item:first-child {
+            padding: 119px 50px;
+        }
+        /* .internal-form input {
+            width: 65%;
+        } */
+        .board-landing-mesa__banner .double-board__item:nth-child(2) {
+            padding: 6% 50px;
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+            padding-right: 50%;
+        }
+        .control-wrapper_large {
+            width: 65%;
+            margin: 0 auto
+        }
+        .product-item p{
+            font-size: 1rem;
+        }
+    }
+    
+    @media only screen and (min-width:1600px) {
+        .board-landing-mesa__banner .double-board__item:first-child {
+            padding: 154px 50px;
+        }
+        .board-landing-mesa__banner .double-board__item:nth-child(2) {
+            padding: 9% 50px;
+        }
+        .product-item h3 {
+            font-size: 1.4rem;
+        }
+    }
+    
+    @media only screen and (min-width:1680px) {
+        .board-landing-mesa__banner .double-board__item:nth-child(2) {
+            padding-right: 50px;
+        }
+        /* .internal-form input {
+            width: 55%;
+        } */
+    }
+    
+    @media only screen and (min-width:1920px) {
+        .board-landing-mesa__banner .double-board__item:first-child {
+            padding: 212px 50px;
+        }
+        .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+            padding-right: 63%;
+        }
+        
+        .banner-medio h3 {
+            font-size: 2em;
+        }
+        .banner-medio p {
+            font-size: 1.4em;
+        }
+    }
+</style>
+<!-- Style -->

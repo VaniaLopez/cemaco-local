@@ -1,0 +1,226 @@
+<!-- CEMACO CSS -->
+
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    /* Genericos */
+
+    .landing404 .desk {
+        display: none;
+    }
+
+    .landing404 .mobile {
+        display: block;
+    }
+
+    .navega-404 span {
+        font-size: 0.75rem;
+    }
+
+    .mobile404 {
+        display: block;
+    }
+
+    /* Busqueda */
+    .busqueda__imgflecha {
+        width: 30px;
+        height: 35px;
+        display: inline-block;
+    }
+
+    .busqueda__imglupa {
+        height: 100px;
+        width: auto;
+        margin: 2% auto 0;
+    }
+
+    .busqueda__botonpagina {
+        background-color: #101E8E;
+        color: #fff;
+        padding: 6px 26px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    /* Info */
+    .info {
+        background-color: #F7F7F7;
+        margin: auto;
+        padding: 2%;
+        margin-top: 2%;
+
+    }
+
+    .info__icono {
+        height: 60%;
+        width: auto;
+        margin: auto;
+    }
+
+    .info__texto {
+        text-align: center;
+    }
+
+    .info__item-mobile:after {
+        content: '';
+        height: 90%;
+        width: 1px;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        background-color: #BFBFBF;
+        display: none;
+    }
+
+    .info__division {
+        width: 100%;
+        background-color: #BFBFBF;
+        height: 1px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .landing404 .info__enlace {
+        text-decoration: none !important;
+    }
+
+    .mobile320 {
+        display: block;
+    }
+
+    .mobile320-t {
+        display: none;
+    }
+
+    @media screen and (min-width: 360px) {
+        .landing404 .fullcontent-bebe {
+            display: flex;
+        }
+
+        #tarjeta-icon {
+            height: 40%;
+        }
+
+        .mobile320-t {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: 375px) {
+        .info__item-mobile:after {
+            display: block;
+        }
+
+        .mobile320 {
+            display: none;
+        }
+
+        #tarjeta-icon {
+            height: 100px;
+        }
+
+        .mobile320-t {
+            display: none;
+        }
+
+    }
+
+
+    @media screen and (min-width: 768px) {
+
+        /* Desk - Mobile Display */
+        .landing404 .desk {
+            display: block;
+        }
+
+        .landing404 .mobile {
+            display: none;
+        }
+
+        /* Info */
+        .info__item:after {
+            content: '';
+            height: 90%;
+            width: 1px;
+
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            background-color: #BFBFBF;
+        }
+
+        .info__icono {
+            height: 100px;
+            width: auto;
+            margin: auto;
+        }
+
+        .navega-404 span {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .mobile404 {
+            display: none;
+        }
+    }
+</style>
+
+<!--Div busqueda-->
+<div class="row busqueda">
+    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+        <img class="busqueda__imglupa" src="/arquivos/2021_cemaco_404_lupa.png" alt="">
+        <h1> <span>haz tu búsqueda aquí</span> <img class="busqueda__imgflecha"
+                src="/arquivos/2021_cemaco_404_flecha.png" alt=""> </h1>
+        <a href="https://www.cemaco.com/">
+            <button class="busqueda__botonpagina">página principal</button>
+        </a>
+    </div>
+</div>
+<!--Div busqueda-->
+
+
+
+<!-- Div info-->
+<div class="row info fullcontent-bebe re-central">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 info__item info__item-mobile">
+        <a href="/garantia-total" class="info__enlace">
+            <img class="info__icono" src="/arquivos/2021_cemaco_404_garantia.png" alt="">
+            <p class="info__texto">Garantía total <br class="desk"> y seguridad</p>
+            <div class="info__division mobile404"></div>
+        </a>
+
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 info__item">
+        <a href="/preguntas-frecuentes" class="info__enlace">
+            <img class="info__icono" src="/arquivos/2021_cemaco_404_entrega.png" alt="">
+            <p class="info__texto"> <br class="desk"> Entrega <br class="mobile"> rápida </p>
+            <div class="info__division mobile404"></div>
+        </a>
+    </div>
+    <br class="mobile">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 info__item info__item-mobile">
+        <a href="/autoservicio" class="info__enlace">
+            <img class="info__icono" src="/arquivos/2021_cemaco_404_retira.png" alt="">
+            <p class="info__texto">Retira en <br class="desk"> autoservicio</p>
+            <div class="info__division mobile320"></div>
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+        <a href="/metodos-de-pago" class="info__enlace">
+            <img class="info__icono" src="/arquivos/2021_cemaco_404_metodos.png" alt="" id="tarjeta-icon">
+            <p class="info__texto">Métodos de pago: <br class="desk"> tarjetas, cuotas y depósitos</p>
+            <div class="info__division mobile320-t"></div>
+        </a>
+    </div>
+</div>
+<!--Div info-->
+
+</div>

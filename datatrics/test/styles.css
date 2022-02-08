@@ -1,0 +1,30 @@
+.dt_showcase_slick li {
+    border: 1px solid #fff;
+}
+
+.dt_showcase_slick li:hover {
+    border: 1px solid #ddd;
+}
+@media only screen and (max-width: 768px){
+    .slick-list{padding:0 20% 0 0;}
+    .button-flat.secondary.js-buy-plp{
+        font-size: 0;
+        width: 35px;
+        height: 35px;
+}
+}
+.dt_teasers{
+    font-size: 0.75rem;
+    line-height: 1.1;
+    text-align: left;
+    color: #cc0000;
+}
+
+.dt_styleanchor{
+    width: 8em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1;
+}

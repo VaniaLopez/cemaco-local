@@ -1,0 +1,49 @@
+<!-- Scripts -->
+<script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
+<script src="/arquivos/cemaco-swiper.js?v=20211201-1204"></script>
+<script src="/arquivos/home-optimization.js?v=1655"></script>
+<script src="/arquivos/bootstrap.v5.min.js"></script>
+
+<!-- Scripts para carrusel plomería -->
+<script>
+    $(document).ready(function () {
+        const fatherContainer = document.querySelector(".products-slider__container.has-banner");
+        const containerSwiper03 = document.querySelector("#productsSlider03");
+        const newContainer = document.createElement("div");
+        newContainer.classList.add("row", "pb-3");
+        containerSwiper03.classList.add("position-relative");
+        newContainer.innerHTML = `
+                <h2 class="col-12 text-center py-3 tag-title--level-3">Compra el estilo</h2>
+                    <div class="mainimage">
+                        <picture>
+                            <!-- Mobile -->
+                            <source srcset="/arquivos/2022_especial-plomeria_estilo-banner_mobile.jpg" type="image/webp" media="(max-width: 767px)">
+                            <!-- Desktop -->
+                            <source srcset="/arquivos/2022_especial-plomeria_estilo-banner_desk.jpg" type="image/webp"> 
+                            <img src="/arquivos/2022_especial-plomeria_estilo-banner_desk.jpg" alt="Baño decorado sanitario, muebles y accesorios blancos paredes verdes">
+                        </picture>
+                    </div>
+            `;
+        fatherContainer.prepend(newContainer);
+        
+        const swiperButtonLeft03 = document.querySelector(
+            "#productsSlider03 .prateleira .swiper-button-next"
+        );
+        const swiperButtonRight03 = document.querySelector(
+            "#productsSlider03 .prateleira .swiper-button-prev"
+        );
+
+        containerSwiper03.appendChild(swiperButtonLeft03);
+        containerSwiper03.appendChild(swiperButtonRight03);
+
+        const newContainer03 = containerSwiper03;
+    });
+</script>
+
+<script>
+    $(".vertodos").on("click", function () {
+        $(this).hide();
+        $(this).nextAll().fadeIn();
+        $(".marcas2").show();
+    });
+</script>

@@ -1,0 +1,53 @@
+<div class="products-slider__wrapper">
+    <div class="products-slider__container vitrine resultItemsWrapper" style="background: #f6f6f6">
+            <div id="productsSlider11" class="prateleira vitrine product-list re-central" data-height="parent">
+                <div id="swiper-carrusel11" class="prateleira vitrine n12colunas swiper">
+                    <h4 class="tag-other-products text-center mb-4">Recomendaciones New-Carrusel Datatrics<br class="mobile"></h4> 
+                    <ul id="dt_showcase_homepage_last_seen2" class="dt_showcase_slick swiper-wrapper">
+                        {{#each items}} itemcount='20'
+                            <li class="@@DEPARTAMENT@@ swiper-slide">
+                                <div class="product-item__wrapper" data-height="siblings">
+                                    <div class="product-item @@CAT@@" data-index="0">
+                                        <figure class="product-item__figure">
+                                            <a href="{{url}}" class="product-item__main-image contenedor-img dl-product-link" data-id="{{parent_id}}" data-skuid="{{productid}}" tabindex="0">
+                                                <img src="{{image}}" width="400" height="400" alt="{{name}}" id="" style="visibility: visible; opacity: 1;" />
+                                                <div class="product-item__secondary-image contenedor-img"></div>
+                                                <!--{{#ifLess price_discount price_original}}
+                                                <div class="product-item__flag--discount flag-discount checked">
+                                                    {{#fieldfunction discountPercent discountPrice=price_discount regularPrice=price_original}}%
+                                                </div>
+                                                {{/ifLess}} -->
+                                            </a>
+                                        </figure>
+                                        <div class="product-item__price" data-id="{{parent_id}}">
+                                            {{#ifLess price_discount price_original}}
+                                                <span class="price-new price-promo">Q{{#price_format price_discount . ,}}</span>
+                                                <span class="price-old">Q{{#price_format price_original . ,}}</span>
+                                            {{else}}
+                                                <span class="price-new">Q{{#price_format price_discount . ,}}</span>
+                                            {{/ifLess}}
+                                        </div>
+                                        <!--TEASERS-->
+                                        {{#ifEqual tieneTeasers 2}}
+                                        <div class="dt_teasers">
+                                            {{teasers.0}}
+                                        </div>
+                                        {{/ifEqual}}
+                                        <!--TEASERS-->
+                                        <div class="product-item__caption" style="min-height: 50px;">
+                                            <h2 class="product-item__name">
+                                                <a href="{{url}}" tabindex="0">{{name}}</a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div id="swiper-button-prev11" class="swiper-button-next"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div>
+                <div id="swiper-button-next11" class="swiper-button-prev"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>
+            </div>
+    </div>
+</div>
+

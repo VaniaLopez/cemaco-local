@@ -1,0 +1,1748 @@
+/*LANDING BTS-JUGUETON <ENERO 2021>*/
+.minispiff-item p {
+    padding-top: 6px;
+}
+
+.minispiff-item p strong {
+    font-size: 23px;
+}
+
+.med-spiff h4 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #cf007f;
+}
+
+.med-spiff .lg1 {
+    padding: 10px 0 5px;
+}
+
+.med-spiff .lg2 {
+    padding: 5% 0 5% 0;
+}
+
+.med-spiff .lg3 {
+    padding: 9px 0 11px;
+}
+
+.med-spiff .row .col-md-3 .loguitos img {
+    width: 25%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.med-spiff .row .col-md-3:nth-child(2) .loguitos {
+    padding: 10px 0 8%;
+}
+
+.med-spiff .row .col-md-3:nth-child(3) .loguitos {
+    padding: 3% 0 5% 0;
+}
+
+.med-spiff .row .col-md-3:nth-child(4) .loguitos {
+    padding: 0px;
+}
+
+.landing-bts-jugueton .spiff-text {
+    min-height: 269px;
+}
+
+.landing-bts-jugueton .spiff-text span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.landing-bts-jugueton .row .col-md-6 .spiff-text {
+    min-height: 170px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    padding: 23px 0 0 27px;
+}
+
+.landing-bts-jugueton .row .col-md-6 .spiff1 {
+    background-image: url("https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_spiffarmayconstruye_desktop.jpg");
+}
+
+.landing-bts-jugueton .row .col-md-6 .spiff2 {
+    background-image: url("https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_spiffvehiculos.jpg");
+}
+
+.bannerprincipal_jugueton .mainimage-jugueton {
+    background-image: url("https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_slidervamosajugar_mobile.jpg");
+    /* min-height: 351px; */
+}
+
+.landing-bts-jugueton .row .col-md-6 .spiff1 .loguito-spiff img {
+    width: auto;
+    padding: 13px 0 0;
+}
+
+.landing-bts-jugueton .row .col-md-6 .spiff2 .loguito-spiff img {
+    width: auto;
+    padding: 13px 0 0;
+}
+
+.main-cat-jugueton {
+    margin: 10px 0 45px;
+}
+
+.row.fullcontent-jugueton {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 23px 0;
+}
+
+.categories-jugueton .col-md-2 {
+    margin: 0 0 20px;
+}
+
+.categories-jugueton img {
+    width: 80%;
+    margin: 0 auto 7px;
+}
+
+.juegosdemesa {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_juegosdemesa_mobile.jpg);
+}
+
+.titulos-imaginacion {
+    font-size: 25px;
+}
+
+.txt-ver-mas b u {
+    font-size: 13px;
+}
+
+.fullspiff {
+    margin: 20px 0 0;
+    width: 100%;
+    height: 100%;
+    min-height: 170px;
+    display: block;
+    background-size: cover;
+    padding: 9px 0 0 23px;
+}
+
+.fullspiff h3 {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.fullspiff span {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.bebe-jugueton .boton_bannerbb span {
+    background-color: #f0515f;
+    padding: 9px 28px;
+    color: white;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+.bebe-jugueton {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_spiffbebe_mobile.jpg);
+}
+
+.bebe-jugueton .logo-bebe {
+    float: inherit;
+    width: auto;
+}
+
+.bebe-jugueton .logo-bebe img {
+    width: 50%;
+}
+
+.compra-en-linea {
+    background-color: #24b6e0;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 70px 0 69px;
+}
+
+.compra-en-linea .col-md-6:first-child {
+    border-right: 1px solid;
+}
+
+.compra-en-linea img {
+    width: auto;
+    margin: 0 auto;
+}
+
+.compra-en-linea h4 {
+    font-size: 25px;
+}
+
+.compra-en-linea .bebe-secondary {
+    background-color: #94d500;
+    font-size: 15px;
+    padding: 11px 20px;
+}
+
+.re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+    background-color: #ffba00;
+    margin: 12% 0 0;
+}
+
+.re-central .bannerprincipal_jugueton .mainimage-jugueton .boton_banner {
+    padding: 41% 0% 0 0%;
+    text-align: left;
+}
+
+.bannerprincipal_jugueton .mainimage-jugueton {
+    /* min-height: 302px; */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bebe-jugueton span {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.bebe-jugueton h3 {
+    font-size: 20px;
+}
+
+.minispiff {
+    margin: 0 0 10px;
+}
+
+.landing--jugueton .principal-footer.re-central {
+    background-color: #00a954;
+}
+
+.landing--jugueton a:hover {
+    text-decoration: none;
+}
+
+/*LANDING MUNDO FERRETERO <ENERO 2021>*/
+.single-board .slider1-portada {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_slider01_mobile.png);
+}
+
+/*
+.single-board .slider2-portada {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/30dicbannerelectricosmobil.jpg);
+  display: none ;
+}
+
+.single-board .slider3-portada {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/6eneSlidemobil.jpg);
+  display: none ;
+}
+*/
+.single-board .title-slider {
+    min-height: 354px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    padding: 23px 0 0 0px;
+}
+
+.single-board .title-slider h4 {
+    font-size: 31px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.cajatexto {
+    width: 100%;
+    text-align: center;
+    margin-top: 218px;
+}
+
+.landing-mundoferre .single-board {
+    min-height: 302px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-mundoferre .minispiff .minispiff-item h3 {
+    font-weight: bold;
+    font-size: 22px;
+    padding: 6px 0 0;
+}
+
+.landing-mundoferre .minispiff .minispiff-item span {
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.landing-mundoferre .minispiff .minispiff-item content {
+    min-height: 38px;
+    display: block;
+    font-size: 13px;
+}
+
+.landing-mundoferre .minispiff .minispiff-item p {
+    margin: 0 0 5px;
+    font-size: 16px;
+    display: inline;
+}
+
+.landing-mundoferre .row .col-md-6 .spiff1 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_bannermd_desk.jpg);
+}
+
+.landing-mundoferre .row .col-md-6 .spiff2 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_bannermd2_desk.jpg);
+}
+
+.landing-mundoferre .spiff-text {
+    width: 100%;
+    height: 100%;
+    min-height: 170px;
+    display: block;
+    background-size: cover;
+    padding: 14px 0 0 27px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.landing-mundoferre .spiff-text h3 {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 5px;
+}
+
+.landing-mundoferre .spiff-text span {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 0px 0 0;
+    display: block;
+    font-size: 14px;
+}
+
+.fullspiff.autos-ferre {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_banner2_mobile.jpg);
+}
+
+.fullspiff.autos-ferre h3 {
+    font-weight: bold;
+    font-size: 26px;
+    color: #fff;
+    line-height: 26px;
+    padding-bottom: 0px;
+}
+
+.fullspiff.autos-ferre span {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.fullspiff.materiales_ferre {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_bannerFooter_mobile.jpg);
+    min-height: 162px;
+}
+
+.vermas-deps {
+    text-align: center;
+    margin: 0 0 10px;
+    display: block;
+}
+
+.fullspiff.materiales_ferre h3 {
+    color: #fff;
+}
+
+.fullspiff.materiales_ferre span {
+    color: #fff;
+}
+
+.landing-mundoferre .col-md-12,
+.col-sm-12,
+.col-lg-12,
+.col-xl-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.board-ferreteria.marcas-ferre h2 {
+    font-size: 25px;
+    margin-bottom: 0.8em;
+}
+
+.board-ferreteria.marcas-ferre img {
+    width: 100%;
+}
+
+.landing-mundoferretero .categories-jugueton img {
+    width: 100%;
+}
+
+/*
+.categories-jugueton.categories-ferre img {
+  height: 80%;
+}
+*/
+.board-ferreteria.marcas-ferre {
+    margin: 35px auto;
+    overflow: hidden;
+}
+
+.board-ferreteria.marcas-ferre .marcasferre-slider {
+    overflow: auto;
+}
+
+.landing-mundoferretero .main-slider--control-banner.slick-initialized {
+    display: none;
+}
+
+.banner-mundoferre-mob {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.landing-mundoferre .marcasferre-slider .slick-prev:before {
+    color: red;
+    width: 20px;
+    height: 20px;
+}
+
+.slick-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.landing-mundoferretero .board-ferreteria.marcas-ferre .slick-slider:not(.slick-vertical) .slick-arrow.slick-prev {
+    margin-left: -15px;
+}
+
+/*LANDING AREAS DE NO COBERTURA*/
+.content-areasdenocobertura .tittle-areasnocobertura h1 {
+    font-size: 18px;
+}
+
+.content-areasdenocobertura ul {
+    list-style: disc outside;
+    padding-left: 1.5em;
+}
+
+.content-areasdenocobertura li {
+    padding: 3px 0;
+}
+
+.content-areasdenocobertura ul li {
+    padding: 3px 0;
+    padding-bottom: 25px;
+    list-style: disc outside;
+}
+
+.content-areasdenocobertura p {
+    margin: 0 0 1em;
+    padding: 0;
+}
+
+.content-areasdenocobertura article {
+    width: 100%;
+    margin: 2% 0 0 0;
+}
+
+.content-areasdenocobertura article ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-areasdenocobertura article li {
+    display: block;
+    border-bottom: 1px solid;
+    padding: 0 !important;
+    text-align: center;
+}
+
+.content-areasdenocobertura article span {
+    display: inline-block;
+    width: 48%;
+    padding: 2% 0;
+}
+
+.content-areasdenocobertura article li span:nth-child(2) {
+    border-left: 1px solid;
+}
+
+.content-areasdenocobertura h3 {
+    font-size: 16px;
+    margin: 3% 0 2%;
+    font-weight: bold;
+}
+
+/*LANDING GUATEMALA NUESTRA <ENERO 2021>*/
+
+.gnuestra-banner {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_banner_mobile.jpg);
+    min-height: 267px;
+    background-size: cover;
+}
+
+.gnuestra-logos {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+.gnuestra-artesanos {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_bannermedio_mobile.jpg);
+    margin-bottom: 45px;
+}
+
+.gnuestra-spiff1 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_artesanos_sacala.jpg);
+}
+
+.gnuestra-spiff2 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_artesanos_artexco.jpg);
+}
+
+.gnuestra-spiff3 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_artesanos_copavic.jpg);
+}
+
+.gnuestra-spiff4 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_artesanos_topis.jpg);
+}
+
+.gnuestra-categories img {
+    width: 100%;
+    margin: 0 auto 7px;
+    margin-bottom: 40px;
+}
+
+.gnuestra-text {
+    text-align: center;
+    margin: 10px 0 31px;
+}
+
+.gnuestra-compraenlinea {
+    background-color: #101e8e;
+}
+
+.gnuestra-compraenlinea .bebe-secondary {
+    background-color: #93d500;
+}
+
+.gnuestra-spiff {
+    background-size: cover;
+    min-height: 267px;
+}
+
+.gnuestra-logos img {
+    width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.gnuestra-logos span {
+    font-size: 15px;
+}
+
+.gnuestra-artesanos h3 {
+    color: #fff;
+}
+
+.gnuestra-artesanos .boton_bannergnuestra span {
+    background-color: #93d500;
+    padding: 9px 28px;
+    color: white;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+.gnuestra-spiffdobles .col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.gnuestra-spiffdobles {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: none;
+}
+
+.row.fullcontent-jugueton.gnuestra-categories {
+    margin: 23px auto;
+}
+
+.gnuestra-categories {
+    margin: 23px auto;
+}
+
+.gnuestra-marcas {
+    overflow: hidden;
+}
+
+.gnuestra-text span {
+    text-decoration: underline;
+}
+
+.gnuestra-text p {
+    margin-bottom: 20px;
+}
+
+/*LANDING APRENDE EN CASA -CARRUSEL MARCAS-*/
+.aprendeencasa .board-ferreteria.marcas-ferre img {
+    padding-left: 15px;
+}
+
+/*LANDING C-JUGUETES*/
+.landing--c-juguetes .site-header a svg {
+    transition: none !important;
+}
+
+.landing--c-juguetes .site-header a svg:hover {
+    transform: none !important;
+}
+
+.landing--cocina-y-mesa .site-header a svg:hover {
+    transform: none !important;
+}
+
+.landing--cocina-y-mesa .site-header a svg {
+    transition: none !important;
+}
+
+/*CATEGORIAS*/
+/*-- PINTURAS --*/
+.landing--categorias .pinturas-banner .head-text.text-black {
+    color: #fff;
+}
+
+.landing--categorias .bannerhead h2 {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.landing--categorias .bannerhead h1 {
+    margin-top: 20px;
+}
+
+/*LANDING CATEGORIAS--PINTURA--*/
+.landing--categorias.cat-pinturas .landing-cat .category-themes .middle-banner .head-text .desktop {
+    margin-top: -355px;
+    margin-bottom: 235px !important;
+    padding-left: 5%;
+}
+
+/*--HERRAMIENTAS--*/
+.landing--categorias.cat-herramientas .head-text.text-black {
+    color: #fff;
+}
+
+/*LANDING CATEGORIAS --FERRETERIA-- */
+.cat-ferreteria .middle-banner .banner-background.middlebanner-cat-ferre {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/cferreteria/banner-proyectosmob.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 130px;
+    width: 100%;
+}
+
+/*--CATEGORIA FERRETERIA*/
+.cat-ferreteria .landing-cat .category-themes .item.cat-1 h2 {
+    padding-top: 15px;
+}
+
+.cat-ferreteria .landing-cat .category-themes .item.cat-5 h2 {
+    padding-top: 14px;
+}
+
+.cat-ferreteria .landing-cat .category-themes .item.cat-6 h2 {
+    padding-top: 17px;
+}
+
+.cat-ferreteria .landing-cat .category-themes .item.cat-7 h2 {
+    padding-top: 10px;
+}
+
+.cat-ferreteria .landing-cat .category-themes .item.cat-8 h2 {
+    padding-top: 20px;
+}
+
+.cat-ferreteria .landing-cat .category-themes .item.cat-9 h2 {
+    padding-top: 20px;
+}
+
+/*SEGUNDO NIVEL --ELECTRODOMESTICOS Y LINEA BLANCA-- */
+.sn--electrodomesticos #sn-electrodomesticos .head-text {
+    color: black;
+}
+
+@media (min-width: 1280px) {
+
+    /*LANDING BTS-JUGUETON <ENERO 2021>*/
+    .landing-bts-jugueton .row .col-md-6 .spiff-text {
+        min-height: 267px;
+    }
+
+    .bannerprincipal_jugueton .mainimage-jugueton {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_sliderclasesencasa.jpg);
+        /* min-height: 295px; */
+    }
+
+    .juegosdemesa {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_juegosdemesa_desktop.jpg);
+    }
+
+    .bebe-jugueton {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_spiffbebe_desktop.jpg);
+    }
+
+    .fullspiff {
+        min-height: 243px;
+        padding: 29px 0 0 23px;
+    }
+
+    .bebe-jugueton .logo-bebe img {
+        width: auto;
+    }
+
+    .fullspiff span {
+        font-size: 14px;
+    }
+
+    .bebe-jugueton span {
+        font-size: 14px;
+    }
+
+    .re-central .bannerprincipal_jugueton .mainimage-jugueton .boton_banner {
+        padding: 14% 41% 0 1%;
+    }
+
+    .minispiff {
+        margin: 32px 0 10px;
+    }
+
+    .main-cat-jugueton {
+        margin: 70px 0 45px;
+    }
+
+    .main-cat-jugueton h2 {
+        font-size: 21px;
+    }
+
+    /*LANDING MUNDO FERRETERO <ENERO 2021>*/
+    .single-board .slider1-portada {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/30dicbannercalidad2.jpg);
+        min-height: 490px;
+    }
+
+    .single-board .slider2-portada {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/30dicbannerelectricos.jpg);
+        min-height: 490px;
+    }
+
+    .single-board .slider3-portada {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/6eneSlidedesk.jpg);
+        min-height: 490px;
+    }
+
+    .landing-mundoferre .fullspiff.autos-ferre {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/10feb_spiffdesk3.jpg);
+    }
+
+    .fullspiff.materiales_ferre {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/27eneseguridad.jpg);
+        min-height: 290px;
+    }
+
+    .landing-mundoferre .spiff-text {
+        min-height: 267px;
+    }
+
+    .cajatexto {
+        margin: 144px 0 0 25px;
+        width: 642px;
+        text-align: center;
+    }
+
+    .single-board .title-slider {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-size: cover;
+        padding: 23px 0 0 27px;
+    }
+
+    .single-board .title-slider h4 {
+        font-size: 60px;
+        text-align: unset;
+    }
+
+    .minideps-ferre .col-md-2 {
+        margin: 0 23px 20px;
+    }
+
+    .landing-mundoferre .col-md-12,
+    .col-sm-12,
+    .col-lg-12,
+    .col-xl-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .board-ferreteria.marcas-ferre {
+        padding: 35px 0 28px;
+        max-width: 1018px;
+        margin: 0 auto;
+    }
+
+    .single-board .slider2-portada.title-slider h4 {
+        color: black;
+    }
+
+    .single-board .slider3-portada.title-slider h4 {
+        color: black;
+    }
+
+    .board-ferreteria.marcas-ferre img {
+        width: 70%;
+    }
+
+    .banner-mundoferre-mob {
+        display: none;
+    }
+
+    .landing-mundoferretero .main-slider--control-banner.slick-initialized {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .board-ferreteria.marcas-ferre .marcasferre-slider {
+        overflow: hidden;
+    }
+
+    /*LANDING AREAS DE NO COBERTURA*/
+    .content-areasdenocobertura article {
+        width: 55%;
+    }
+
+    /*LANDING GUATEMALA NUESTRA <ENERO 2021>*/
+    .gnuestra-banner {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_banner.jpg);
+        min-height: 540px;
+    }
+
+    .gnuestra-artesanos {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_bannermedio_desktop.jpg);
+    }
+
+    .gnuestra-categories img {
+        width: 90%;
+        margin: 0 auto 25px;
+    }
+
+    .gnuestra-spiff {
+        min-height: 658px;
+    }
+
+    .gnuestra-logos img {
+        width: 40%;
+    }
+
+    .gnuestra-logos span {
+        font-size: 25px;
+    }
+
+    .gnuestra-categories {
+        width: 890px;
+    }
+
+    .gnuestra-logos {
+        padding: 45px 0;
+    }
+
+    .gnuestra-spiffdobles-mobile {
+        display: none;
+    }
+
+    .gnuestra-spiffdobles-mobile .gnuestra-text {
+        margin-top: 0;
+    }
+
+    .gnuestra-text {
+        margin-top: 160px;
+    }
+
+    .gnuestra-spiffdobles {
+        display: inline;
+    }
+
+    .main-cat-jugueton h2 {
+        font-size: 35px;
+    }
+
+    /*CATEGORIAS*/
+    /*-- PINTURAS --*/
+    .landing--categorias .bannerhead h2 {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .landing--categorias .bannerhead h1 {
+        margin-top: 0px;
+    }
+
+    /*LANDING CATEGORIAS--PINTURA--*/
+    .landing--categorias.cat-pinturas .landing-cat .category-themes .middle-banner .head-text {
+        margin-top: -355px;
+        margin-bottom: 235px !important;
+        padding-left: 5%;
+    }
+
+    .landing--categorias.cat-pinturas .middle-banner .head-text {
+        margin-top: -300px;
+    }
+
+    .landing--categorias.cat-pinturas .display-1.font-weight-bold {
+        font-size: 1.8rem;
+    }
+
+    /*--CATEGORIA FERRETERIA*/
+    .cat-ferreteria .landing-cat .category-themes .item.cat-1 h2 {
+        padding-top: 44px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-3 h2 {
+        padding-top: 37px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-4 h2 {
+        padding-top: 23px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-6 h2 {
+        padding-top: 37px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-7 h2 {
+        padding-top: 22px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-8 h2 {
+        padding-top: 38px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .landing-mundoferretero .minideps-ferre .col-md-2 {
+        margin: 0 20px 20px;
+    }
+
+    .landing--categorias.cat-herramientas .re-cien.bannerhead {
+        margin-top: 0px !important;
+        height: 270px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /*LANDING BTS-JUGUETON <ENERO 2021>*/
+    .landing-bts-jugueton .row .col-md-6 .spiff-text {
+        min-height: 320px;
+    }
+
+    .bannerprincipal_jugueton .mainimage-jugueton {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_slidervamosajugar_desktop.jpg);
+        /* min-height: 370px; */
+    }
+
+    .bebe-jugueton {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_spiffbebe_desktop.jpg);
+    }
+
+    .fullspiff {
+        min-height: 310px;
+        padding: 29px 0 0 23px;
+    }
+
+    .bebe-jugueton .logo-bebe img {
+        width: auto;
+    }
+
+    .fullspiff span {
+        font-size: 14px;
+    }
+
+    .bebe-jugueton span {
+        font-size: 14px;
+    }
+
+    .re-central .bannerprincipal_jugueton .mainimage-jugueton .boton_banner {
+        padding: 18% 0 0 0;
+    }
+
+    .bannerprincipal_jugueton .col-xl-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .bannerprincipal_jugueton .col-md-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .bannerprincipal_jugueton .col-lg-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .minispiff {
+        margin: 32px 0 10px;
+    }
+
+    .main-cat-jugueton h2 {
+        font-size: 35px;
+    }
+
+    /*LANDING MUNDO FERRETERO <ENERO 2021>*/
+    .single-board .slider1-portada {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_slider01_desk.png);
+        min-height: 580px;
+    }
+
+    .single-board .slider2-portada {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_slider02_desk.png);
+        min-height: 580px;
+    }
+
+    .single-board .slider3-portada {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_slider03_desk.png);
+        min-height: 580px;
+    }
+
+    .single-board .col-md-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .landing-mundoferre .fullspiff.autos-ferre {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_banner2_desk.jpg);
+    }
+
+    .fullspiff.materiales_ferre {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_ferreteria_bannerFooter_desk.jpg);
+        min-height: 310px;
+    }
+
+    .landing-mundoferre .spiff-text {
+        min-height: 310px;
+    }
+
+    .cajatexto {
+        margin: 144px 0 0 25px;
+        width: 642px;
+        text-align: center;
+    }
+
+    .title-slider .cajatexto {
+        width: 100%;
+        margin: 400px 0 0 0;
+    }
+
+    .slider2-portada.title-slider .cajatexto {
+        margin: 180px 0 0 25px;
+        width: 642px;
+        text-align: center;
+    }
+
+    .slider3-portada.title-slider .cajatexto {
+        margin: 217px 0 0 25px;
+        width: 538px;
+        text-align: center;
+    }
+
+    .single-board .title-slider {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-size: cover;
+        padding: 23px 0 0 27px;
+    }
+
+    .single-board .title-slider h4 {
+        font-size: 50px;
+        text-align: unset;
+    }
+
+    .minideps-ferre .col-md-2 {
+        margin: 0 23px 20px;
+    }
+
+    .landing-mundoferre .col-md-12,
+    .col-sm-12,
+    .col-lg-12,
+    .col-xl-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .board-ferreteria.marcas-ferre {
+        padding: 35px 0 28px;
+        max-width: 1018px;
+        margin: 0 auto;
+    }
+
+    .board-ferreteria.marcas-ferre img {
+        width: 70%;
+    }
+
+    .banner-mundoferre-mob {
+        display: none;
+        margin-bottom: 15px;
+    }
+
+    .landing-mundoferretero .main-slider--control-banner.slick-initialized {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .landing-mundoferretero .categories-jugueton.categories-ferre.row .col-md-2:nth-child(7) {
+        margin-left: 110px;
+    }
+
+    .landing-mundoferretero .minideps-ferre .col-md-2 {
+        margin: 0 15px 20px;
+    }
+
+    .board-ferreteria.marcas-ferre .marcasferre-slider {
+        overflow: hidden;
+    }
+
+    /*LANDING AREAS DE NO COBERTURA*/
+    .content-areasdenocobertura article {
+        width: 55%;
+    }
+
+    /*LANDING GUATEMALA NUESTRA <ENERO 2021>*/
+    .gnuestra-banner {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_banner.jpg);
+        min-height: 540px;
+    }
+
+    .gnuestra-artesanos {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_bannermedio_desktop.jpg);
+    }
+
+    .gnuestra-categories img {
+        width: 90%;
+        margin: 0 auto 25px;
+    }
+
+    .gnuestra-spiff {
+        min-height: 658px;
+    }
+
+    .gnuestra-logos img {
+        width: 40%;
+    }
+
+    .gnuestra-logos span {
+        font-size: 25px;
+    }
+
+    .gnuestra-categories {
+        width: 890px;
+    }
+
+    .gnuestra-logos {
+        padding: 45px 0;
+    }
+
+    .gnuestra-spiffdobles-mobile {
+        display: none;
+    }
+
+    .gnuestra-spiffdobles-mobile .gnuestra-text {
+        margin-top: 0;
+    }
+
+    .gnuestra-text {
+        margin-top: 160px;
+    }
+
+    .gnuestra-spiffdobles {
+        display: inline;
+    }
+
+    /*MARCAS APRENDE EN CASA*/
+    .aprendeencasa .board-ferreteria {
+        padding-top: 110px;
+    }
+
+    .aprendeencasa .board-ferreteria.marcas-ferre h2 {
+        margin-bottom: 25px;
+    }
+
+    /*CATEGORIAS*/
+    /*-- PINTURAS --*/
+    .landing--categorias .bannerhead h2 {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .landing--categorias .bannerhead h1 {
+        margin-top: 0px;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .middle-banner .head-text {
+        margin-top: -315px;
+        margin-bottom: 200px !important;
+    }
+
+    /*LANDING CATEGORIAS--PINTURA--*/
+    .landing--categorias.cat-pinturas .landing-cat .category-themes .middle-banner .head-text {
+        margin-top: -355px;
+        margin-bottom: 235px !important;
+        padding-left: 5%;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .category-themes .grid .item img {
+        margin-bottom: 3% !important;
+    }
+
+    /*--HERRAMIENTAS--*/
+    .landing--categorias.cat-herramientas .re-cien.bannerhead {
+        margin-top: 0px !important;
+    }
+
+    .landing--categorias.cat-herramientas .display-1.font-weight-bold {
+        font-size: 3.2rem;
+    }
+
+    .landing--categorias.cat-herramientas .head-text {
+        margin-top: -249px;
+    }
+
+    .landing--categorias.cat-herramientas .middle-banner .head-text {
+        margin-top: -230px;
+    }
+
+    .landing--categorias.cat-herramientas .middle-banner {
+        margin-bottom: 50px;
+    }
+
+    .landing--categorias.cat-pinturas .middle-banner .head-text {
+        margin-top: -210px;
+    }
+
+    .landing--categorias.cat-pinturas .display-1.font-weight-bold {
+        font-size: 1.8rem;
+    }
+
+    .landing--categorias.cat-pinturas .middle-banner {
+        margin-bottom: 40px;
+    }
+
+    .landing--categorias.cat-herramientas .bannerhead h2 {
+        font-size: 1.4rem;
+        font-weight: normal;
+        margin-top: -18px;
+    }
+
+    /*--VIDEO PRIVILEGIO--*/
+    .content.privilegio .video-responsive--custom.videocontainer iframe {
+        height: 600px;
+    }
+
+    /*LANDING CATEGORIAS --FERRETERIA-- */
+    .cat-ferreteria .middle-banner .banner-background.middlebanner-cat-ferre {
+        background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/cferreteria/banner-proyectos.jpg");
+        height: 365px;
+    }
+
+    /*--CATEGORIA FERRETERIA*/
+    .cat-ferreteria .landing-cat .category-themes .item.cat-1 h2 {
+        padding-top: 44px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-3 h2 {
+        padding-top: 37px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-4 h2 {
+        padding-top: 23px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-4 h2 {
+        padding-top: 30px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-6 h2 {
+        padding-top: 37px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-7 h2 {
+        padding-top: 22px;
+    }
+
+    .cat-ferreteria .landing-cat .category-themes .item.cat-8 h2 {
+        padding-top: 38px;
+    }
+}
+
+@media (max-width: 762px) {
+
+    /*LANDING BTS-JUGUETON <ENERO 2021>*/
+    .med-spiff .col-md-3 {
+        margin-top: 15px;
+    }
+
+    .landing-bts-jugueton .row .col-md-6 .spiff-text {
+        margin-bottom: 10px;
+        padding: 2% 0 0 4%;
+    }
+
+    .landing-bts-jugueton .row .col-md-6 .spiff-text h3 {
+        font-size: 26px;
+    }
+
+    .landing-bts-jugueton .row .col-md-6 .spiff-text span {
+        font-size: 13px;
+    }
+
+    .row.fullcontent-jugueton .col-xs-4 span {
+        font-size: 12px;
+    }
+
+    .landing-bts-jugueton .loguito-spiff {
+        display: none;
+    }
+
+    .minispiff-item p strong {
+        font-size: 16px;
+    }
+
+    .minispiff-item p {
+        font-size: 10px;
+    }
+
+    .med-spiff h4 {
+        font-size: 25px;
+    }
+
+    .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+        margin: 60% 0 0 !important;
+    }
+
+    /*LANDING MUNDO FERRE FEB 10 2021*/
+    /*
+.single-board .slider1-portada {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/1banner10Feb.png);
+  min-height: 580px;
+}
+.single-board .slider2-portada {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/2banner10Feb.png);
+  min-height: 580px;
+}
+
+.single-board .slider3-portada {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/3banner10Feb.png);
+  min-height: 580px;
+}
+*/
+    .landing-mundoferretero .main-slider--control-banner.slick-initialized {
+        display: none;
+    }
+}
+
+@media (min-width: 414px) {
+    /*LANDING BTS-JUGUETON <ENERO 2021>*/
+
+    .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+        margin: 10% 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing--categorias.cat-herramientas .mobile {
+        height: 140px;
+    }
+}
+
+@media (max-width: 484px) {
+
+    /*LANDING CATEGORIAS--PINTURA--*/
+    .landing--categorias.cat-pinturas .landing-cat .category-themes .grid .item img {
+        width: 100px;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .grid .item {
+        width: auto;
+        text-align: center !important;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .grid .item h2 {
+        font-size: 0.8125rem;
+        text-align: center;
+    }
+
+    /*--HERRAMIENTAS*/
+    .landing--categorias.cat-herramientas .landing-cat .category-themes .grid .item .h2 {
+        font-size: 0.85rem;
+    }
+
+    .landing--categorias.cat-herramientas .landing-cat .category-themes .grid .item img {
+        width: 100px;
+    }
+
+    /*LANNDING PUNTOS PRIVILEGIO*/
+    .content.privilegio .video-responsive--custom.videocontainer img {
+        height: 200px;
+    }
+
+    /*LANDING CATEGORIAS FERRETERIA*/
+    .cat-ferreteria .bannerhead .re-central h2 {
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+
+    .cat-ferreteria .head-text {
+        margin-top: -34%;
+    }
+
+    .cat-ferreteria .middle-banner .banner-background p {
+        padding: 20px 0 0 25px;
+    }
+
+    .cat-ferreteria .middle-banner .display-1 {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    /*LANDING CATEGORIAS--PINTURA--*/
+    .landing--categorias.cat-pinturas .middle-banner .head-text.text-black {
+        margin-top: -117px;
+    }
+
+    /*--HERRAMIENTAS*/
+    .landing--categorias.cat-herramientas .landing-cat .category-themes .grid .item .h2 {
+        font-size: 0.85rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    /*LANDING CATEGORIAS --HERRAMIENTAS--*/
+    .landing--categorias.cat-herramientas .middle-banner .head-text {
+        margin-top: -121px;
+        margin-bottom: 60px !important;
+    }
+
+    .landing--categorias.cat-herramientas .head-text.text-black {
+        color: #fff;
+    }
+
+    .landing--categorias.cat-herramientas .bannerhead h2 {
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+
+    .landing--categorias.cat-herramientas .middle-banner .display-1 {
+        font-size: 0.9rem;
+    }
+
+    .landing--categorias.cat-herramientas .middle-banner span {
+        font-size: 0.7rem;
+    }
+
+    .landing--categorias.cat-herramientas .mobile {
+        height: 130px;
+    }
+
+    .landing--categorias.cat-herramientas .category-themes .grid .item img {
+        width: 80px !important;
+    }
+
+    .landing--categorias.cat-herramientas .category-themes .grid .item h2 {
+        font-size: 0.75rem;
+    }
+
+    /*LANDING CATEGORIAS --PINTURAS--*/
+    .landing--categorias.cat-pinturas .landing-cat .middle-banner .display-1 {
+        margin-bottom: -20px;
+        font-size: 0.8rem;
+        margin-top: 25px;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .middle-banner span {
+        font-size: 0.8rem;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .category-themes .grid .item img {
+        width: 80px !important;
+    }
+
+    .landing--categorias.cat-pinturas .category-themes h3 {
+        padding-top: 1em !important;
+    }
+
+    /*SEGUNDO NIVEL ELECTRODOMESTICOS*/
+    .sn--electrodomesticos #sn-electrodomesticos .head-text h1.display-1 {
+        width: 80% !important;
+        font-size: 1.4rem !important;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+    /*LANDING CATEGORIAS--PINTURA--*/
+    .landing--categorias.cat-pinturas .landing-cat .category-themes .grid {
+        justify-content: center;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .middle-banner .display-1 {
+        margin-bottom: -18px;
+    }
+
+    /*--HERRAMIENTAS*/
+    .landing--categorias.cat-herramientas .landing-cat .category-themes .grid .item .h2 {
+        font-size: 0.85rem;
+    }
+
+    .sn--herramientas .bannerhead .head-text.mobile {
+        margin-top: -110px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .sn--electrodomesticos #sn-electrodomesticos .head-text h2 {
+        font-size: 0.832rem;
+        margin-top: 0.3%;
+    }
+
+    .sn--electrodomesticos #sn-electrodomesticos .head-text h1.display-1 {
+        width: 65%;
+        font-size: 1.7rem;
+    }
+
+    .sn--electrodomesticos #sn-electrodomesticos .head-text {
+        margin-top: -36%;
+    }
+
+    /*SEGUNDO NIVEL HERRAMIENTAS*/
+    .sn--herramientas .bannerhead .head-text {
+        margin-top: -28%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+
+    /*LANDING BTS-JUGUETON <ENERO 2021>*/
+    .bannerprincipal_jugueton .mainimage-jugueton {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_sliderclasesencasa.jpg);
+        /* min-height: 173px; */
+    }
+
+    .re-central .bannerprincipal_jugueton .mainimage-jugueton .boton_banner {
+        padding: 13% 0 0 0;
+    }
+
+    .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+        margin: 5% 0 0;
+    }
+
+    .compra-en-linea img {
+        width: 90%;
+    }
+
+    .bebe-jugueton {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_spiffbebe_desktop.jpg);
+    }
+
+    .bebe-jugueton .logo-bebe img {
+        width: 35%;
+    }
+
+    .landing-bts-jugueton .row .col-md-6 .spiff-text {
+        padding: 2px 0 0 27px;
+    }
+
+    /*LANDING MUNDO FERRE FEB 10 2021*/
+    .single-board .slider1-portada {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/1banner10Feb.png);
+        min-height: 300px;
+    }
+
+    .single-board .slider2-portada {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/2banner10Feb.png);
+        min-height: 300px;
+    }
+
+    .single-board .slider3-portada {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/3banner10Feb.png);
+        min-height: 300px;
+    }
+
+    .landing-mundoferre .fullspiff.autos-ferre {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/10feb_spiffdesk3.jpg);
+    }
+
+    .fullspiff.materiales_ferre {
+        background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/mundoferretero/27eneseguridad.jpg);
+    }
+
+    .single-board .slider2-portada.title-slider h4 {
+        color: black;
+    }
+
+    .single-board .slider3-portada.title-slider h4 {
+        color: black;
+    }
+
+    .landing-mundoferretero .main-slider--control-banner.slick-initialized {
+        display: block;
+    }
+
+    .landing-mundoferretero .slider2-portada .cajatexto {
+        margin: 69px 0 0 25px;
+        width: 300px;
+    }
+
+    .landing-mundoferretero .slider3-portada .cajatexto {
+        margin: 69px 0 0 25px;
+        width: 300px;
+    }
+
+    .landing-mundoferretero .cajatexto {
+        margin: 175px 0 0 0;
+    }
+
+    .landing-mundoferretero .col-md-2 {
+        width: 19.667%;
+    }
+
+    .landing-mundoferretero .minideps-ferre .col-md-2 {
+        margin: 0 0px 20px;
+    }
+
+    .board-ferreteria.marcas-ferre .marcasferre-slider {
+        overflow: hidden;
+    }
+
+    /*LANDING GUATEMALA NUESTRA <ENERO 2021>*/
+    .gnuestra-body .gnuestra-banner {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cguatemalanuestra_banner.jpg);
+    }
+
+    .banner-mundoferre-mob {
+        display: none;
+    }
+
+    /*CATEGORIAS*/
+    /*-- PINTURAS --*/
+    .landing--categorias .bannerhead h2 {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .landing--categorias .bannerhead h1 {
+        margin-top: 0px;
+    }
+
+    .landing--categorias.cat-pinturas .display-1.font-weight-bold {
+        font-size: 1.8rem;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .category-themes .grid .item h2 {
+        font-size: 0.8125rem;
+    }
+
+    /*--HERRAMIENTAS--*/
+    .landing--categorias.cat-herramientas .display-1.font-weight-bold {
+        font-size: 1.8rem;
+    }
+
+    .landing--categorias.cat-herramientas .bannerhead {
+        margin-top: 0px;
+    }
+
+    .landing--categorias.cat-herramientas .re-cien.bannerhead {
+        height: 150px;
+    }
+
+    .landing-mundoferretero .minideps-ferre .col-md-12 {
+        margin: 0 0px 20px;
+    }
+
+    /*LANDING CATEGORIAS --FERRETERIA-- */
+    .cat-ferreteria .middle-banner .banner-background.middlebanner-cat-ferre {
+        background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/cferreteria/banner-proyectos.jpg");
+        height: 230px;
+    }
+
+    .cat-ferreteria .middle-banner .middlebanner-cat-ferre .display-1.font-weight-bold {
+        font-size: 1.8rem;
+    }
+
+    /*--SEGUNDO NIVEL HERRAMIENTAS--*/
+    .sn--herramientas .re-cien.bannerhead {
+        height: 150px;
+    }
+
+    .sn--herramientas .bannerhead .head-text {
+        margin-top: -15% !important;
+    }
+}
+
+@media (width: 800px) {
+
+    /*LANDING JUGUETON <ENERO 2021>*/
+    .bannerprincipal_jugueton .mainimage-jugueton {
+        /* min-height: 189px; */
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+
+    /*LANDING JUGUETON <ENERO 2021>*/
+    .bannerprincipal_jugueton .mainimage-jugueton {
+        /* min-height: 236px; */
+    }
+
+    /*SEGUNDO NIVEL HERRAMIENTAS*/
+    .sn--herramientas .re-cien.bannerhead {
+        height: 193px;
+    }
+
+    .sn--herramientas .bannerhead .head-text {
+        margin-top: -15% !important;
+    }
+}
+
+/*DIMENSIONES IPAD PRO*/
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+    .landing--categorias.cat-pinturas .grid .item h2 {
+        font-size: 0.8125rem;
+    }
+
+    .landing--categorias.cat-pinturas .landing-cat .middle-banner .head-text {
+        margin-top: -233px;
+        margin-bottom: 100px !important;
+    }
+}
+
+/*
+@media only screen and (min-width: 1024px) and (min-height: 834px){
+  .landing--categorias.cat-pinturas .landing-cat .middle-banner .head-text{
+    margin-top: -227px;
+    margin-bottom: 133px  !important;
+  }
+
+}
+*/

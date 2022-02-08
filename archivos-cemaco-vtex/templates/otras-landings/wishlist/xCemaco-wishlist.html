@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+    <vtex:contentPlaceHolder id="page-title" />
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-styles" />
+    <vtex:template id="xCemaco-styles-user" />
+    <vtex:contentPlaceHolder id="page-styles" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header" />
+    <main role="main" class="page-main--internal-page">
+        <div class="page-header--account"></div>
+        <!-- Content. Begin -->
+        <div class="re-central">
+            <div class="row">
+                <div class="col-lg-3">
+                    <vtex:template id="xCemaco-account-nav" />
+                </div>
+                <div class="col-lg-9">
+                    <h1 class="tag-title--account">Mis favoritos</h1>
+                    <div class="wishlist__shelf-item--titles d-none">
+                        <div class="wishlist__shelf-item-title product"><span>Producto</span></div>
+                        <div class="wishlist__shelf-item-title price"><span>Precio unitario</span></div>
+                        <div class="wishlist__shelf-item-title subtotal-qty"><span>Cantidad</span></div>
+                        <div class="wishlist__shelf-item-title subtotal"><span>Subtotal</span></div>
+                    </div>
+                    <ul id="wishlist-wrapper" data-height="parent">  
+                    </ul>
+                    <div id="whislist-no-items" class="container container-no-items col-9">
+                        <vtex:contentPlaceHolder id="content" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content. End -->
+    </main>
+
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-scripts" />
+    <vtex:template id="xCemaco-scripts-user" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <vtex:contentPlaceHolder id="page-scripts" />
+</body>
+</html>
