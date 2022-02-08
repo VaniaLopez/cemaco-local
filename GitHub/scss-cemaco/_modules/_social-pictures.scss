@@ -1,0 +1,14 @@
+/*--------------------Social Pictures--------------------*/
+.lifestyle{
+	&__wrapper{
+		@include padding-v(0,30);
+	}
+	&__title{
+		font-weight: $font-bold;
+		text-align: center;
+		color: $c-primary;
+	}
+	&__item{
+		@include padding-h;
+	}
+}

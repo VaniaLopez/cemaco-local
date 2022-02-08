@@ -1,0 +1,73 @@
+/*--------------------General Layout - Cintillo--------------------*/
+// Cintillo
+.Cintillo{
+    &-wrapper{
+        &{
+            width: 100%;
+            max-height: auto;
+            position: absolute;
+            @include flexbox($ai:center);
+            @include commonBreakpoints(
+                (height,
+                rem($cintillo-height--bs),
+                rem($cintillo-height--md),
+                rem($cintillo-height--lg))
+            );
+            @include commonBreakpoints(
+                (top,
+                rem($header-height--bs),
+                rem($header-height--md),
+                rem($header-height--lg))
+            );
+            @include font-size(1);
+            z-index: $z-cintillo;
+            background-color: $c-alert;
+            transition: all $animate-time;
+        }
+        body.page-scroll-on &{
+            top: ($header-height--lg - $nav-height);
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+        }
+        body.menu-shown &{
+            display: none;
+        }
+    }
+    &{
+        max-width: 85%;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        @include flexbox($jc: center, $ai: center);
+        font-size: rem(13);
+        text-align: center;
+        color: white;
+    }
+    &-title{
+        font-weight: $font-bold;
+        @include mediaTo(md){
+            font-size: 0.5rem;
+        }
+        &Details{
+            margin-left: 1em;
+            // font-weight: normal;
+            text-transform: uppercase;
+        }
+    }
+    &-trigger{
+        &__hide{
+            //display: none;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: white;
+            .svg-icon{
+                @include sizeProportion($dW: 0.6);
+                display: block;
+            }
+        }
+    }
+}

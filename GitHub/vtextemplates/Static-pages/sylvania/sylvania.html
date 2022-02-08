@@ -1,0 +1,108 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+<div class="re-central">
+    
+    <!-- Empieza video portada -->  
+    <div class="banner-sylvania">
+        <div class="videomainheadline">
+            <div>
+                <video onloadeddata="this.play();" poster="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/landing_sylvania/2021_banner_video_sylvania_smart_desktop.gif" 
+                autoplay playsinline loop muted class="mobile" width="100%"
+                    height="auto">
+                    <source
+                        src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/landing_sylvania/2021_banner_video_sylvania_smart_desktop.mp4"
+                        type="video/mp4" />
+                    <source
+                        src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/landing_sylvania/2021_banner_video_sylvania_smart_desktop.webm"
+                        type="video/webm" />
+                    Your browser does not support the video tag or the file format of this video.
+                </video>
+                <video onloadeddata="this.play();"
+                    poster="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/landing_sylvania/2021_banner_video_sylvania_smart_desktop.gif"
+                    autoplay playsinline loop muted width="100%" class="desktop" height="auto">
+                    <source
+                        src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/landing_sylvania/2021_banner_video_sylvania_smart_desktop.mp4"
+                        type="video/mp4" />
+                    <source
+                        src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/landing_sylvania/2021_banner_video_sylvania_smart_desktop.webm"
+                        type="video/webm" />
+                    Your browser does not support the video tag or the file format of this video.
+                </video>
+            </div>
+        </div>
+    </div>
+    <!-- Termina video portada -->
+
+    <!-- Empieza Banner -->  
+    <div class="banner-sylvania">
+        <picture>
+            <!-- Mobile webp min.jpg-->
+            <source srcset="/arquivos/2021_banner_cat_sylvania_mobile.min.jpg" media="(max-width: 767px)" type="image/webp">
+            <!-- Mobile .jpg-->
+            <source srcset="/arquivos/2021_banner_cat_sylvania_mobile.jpg" media="(max-width: 767px)">
+            <!-- Desktop webp min.jpg-->
+            <source srcset="/arquivos/2021_banner_cat_sylvania_desktop.min.jpg" type="image/webp">
+            <!-- Desktop .jpg-->
+            <img src="/arquivos/2021_banner_cat_sylvania_desktop.jpg" alt="Banner sylvania">
+        </picture>
+    </div>
+    <!-- Termina Banner -->
+    
+</div>
+
+<style>
+    .sylvania .banner-sylvania{
+            margin-bottom: 1.4rem;
+    }
+    .sylvania .bread-crumbs, .sylvania .category-name, .sylvania .product-list__results-items{
+        display: none;
+    }
+    .sylvania .product-list__controls{
+        display: flex;
+        margin-top: 1rem;
+    }
+    .sylvania .re-central--product-list {
+        padding: 10px 20px;
+        background: #F6F6F6;
+        margin-top: 1.5rem;
+    }
+    .sylvania .pre-footer {
+        margin-top: 2rem
+    }
+    .sylvania .product-item__wrapper .product-item{
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+    }
+    @media only screen and (min-width: 768px){
+        .sylvania .product-list__controls{
+            display: none;
+        }
+    }
+    /* DESKTOP */
+    @media only screen and (min-width: 768px){
+        .desktop{
+            display:block!important;
+        }
+        .mobile{
+            display:none!important;
+        }
+    }
+    /* MOBILE */
+    @media(min-width: 5px) and (max-width: 767px){
+        .desktop{
+            display:none!important;
+        }
+        .mobile{
+            display:block!important;
+        }
+    }
+    
+    
+</style>

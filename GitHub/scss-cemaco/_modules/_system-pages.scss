@@ -1,0 +1,61 @@
+.container {
+    &-full {
+        margin: 6rem auto;
+        .box {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            img {
+                width: 20%;
+            }
+            .content {
+                width: 75%;
+                .head {
+                    &-tittle {
+                        text-transform: uppercase;
+                        color: $c-text;
+                        letter-spacing: 3px;
+                    }
+                }
+                .h-line {
+                    width: 100%;
+                    height: 2px;
+                    background-color: $c-primary;
+                }
+                p {
+                    @include margin-v(20);
+                    color: $c-taupe-gray;
+                }
+                .button {
+                    @include margin-v(25);
+                }
+            }
+            @include mediaBetween(md, lg) {
+                img {
+                    width: 35%;
+                }
+                .content {
+                    width: 65%;
+                }
+            }
+            @include mediaBetween(sm, md) {
+                justify-content: center;
+                img {
+                    width: 55%;
+                }
+                .content {
+                    width: 100%;
+                }
+            }
+            @include mediaBetween(bs, sm) {
+                justify-content: center;
+                img {
+                    width: 85%;
+                }
+                .content {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

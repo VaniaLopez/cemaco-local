@@ -1,0 +1,223 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="re-central">
+    
+<!-- Empieza Banner portada -->  
+    <div class="banner-tramontina">
+        <picture>
+            <source srcset="/arquivos/2021_banner_tramontina_desk.min.jpg" type="image/webp" media="(min-width: 480px)">
+            <img src="/arquivos/2021_banner_tramontina_desk.png" class="desktop" alt="Banner Proveedor Tramontina">
+            <source srcset="/arquivos/2021_banner_tramontina_mob.min.jpg" type="image/webp" media="(max-width: 480px)">
+            <img src="/arquivos/2021_banner_tramontina_mob.png" class="mobile" alt="Banner Proveedor Tramontina">
+        </picture>
+    </div>
+    <!-- Termina Banner portada -->
+
+    <h3 style="text-align: center;margin: 2% 0;" class="tittle-tramontina">Compra por categoría</h3>
+    <div class="row aprende mobile">
+        <div class="col-xs-12 col-md-6 col-sm-12 col-lg-3 text-center">
+            <a href="/1523?map=productClusterIds">
+                <picture>
+                    <source media="(max-width: 376px)"  type="image/webp" srcset="/arquivos/2021_tramontina_cat-cocina_mob.min.jpg">
+                    <img src="/arquivos/2021_tramontina_cat-cocina_mob.png" alt="categoría cocina Tramontina">
+                </picture>
+                <content>
+                    <h6>Cocina</h6>
+                </content>
+                <span><b>Ver más</b></span>
+                <br><br>
+            </a>
+        </div>
+        
+        <div class="col-xs-12 col-md-6 col-sm-12 col-lg-3 text-center">
+            <a href="/1524?map=productClusterIds">
+                <picture>
+                    <source media="(max-width: 376px)" type="image/webp" srcset="/arquivos/2021_tramontina_cat-mesa_mob.min.jpg">
+                    <img src="/arquivos/2021_tramontina_cat-mesa_mob.png" alt="categoría mesa Tramontina">
+                </picture>
+                <content>
+                    <h6>Mesa</h6>
+                </content>
+                <span>Ver más</span>
+                <br><br>
+            </a>
+        </div>
+    </div>
+
+    <div class="regreso-clase desktop">
+        <a class="area-estudio" href="/1523?map=productClusterIds">
+            <h4 class="hidden-xs" style="color: #fff;">Cocina</h4>
+            <p class="hidden-xs" style="color: #fff;"> Ver más </p>
+        </a>
+        
+        <a href="/1524?map=productClusterIds" class="clase-presencial">
+            <h4 class="hidden-xs" style="color: #fff;">Mesa</h4>
+            <p class="hidden-xs" style="color: #fff;">Ver más </p>
+        </a>
+    </div>
+
+</div>
+<script>
+   $(document).ready(function () {
+        function writeTitle(){
+                var title =  document.querySelector(".tramontina .page-header--product-list .category-name #h1_name");
+                if (title != null) {
+                    title.innerHTML = "Compra lo mejor de Tramontina";
+                }else {
+                    setTimeout(writeTitle, 2000);   
+                }
+        }
+
+        setTimeout(writeTitle, 2000);   
+    }
+   );
+</script>
+<style>
+    .regreso-clase {
+        margin-top: 0%;
+    }
+    .regreso-clase p:only-of-type {
+        margin-bottom: 0;
+        margin-top: 0.3%;
+        font-size: 0.813em !important;
+        text-decoration: underline;
+    }
+    .tramontina .bread-crumbs{
+        display: none;
+    }
+
+    .tramontina .product-list__results-items{
+        display: none;
+    }
+
+    .tramontina .product-list__controls{
+        display: flex;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tramontina .re-central--product-list{
+        padding: 10px 20px;
+        background: #F6F6F6;
+    }
+
+    .tramontina .product-item__wrapper .product-item{
+       padding-right: 0.4rem;
+        padding-left: 0.4rem;
+    }
+
+    .tramontina h3.tittle-tramontina, .tramontina #h1_name{
+        font-size: 1.235rem;
+    }
+
+
+    .tramontina .pre-footer{
+        margin-top: 1.2rem;
+    }
+
+
+    @media screen and (min-width: 376px) and (max-width: 768px){
+        .clase-presencial {
+            background-image: url(/arquivos/2021_tramontina_cat-mesa_desk.png);
+            min-height: 265px;
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        .area-estudio {
+            background-image: url(/arquivos/2021_tramontina_cat-cocina_desk.png);
+            min-height: 265px;
+            width: 100%;
+            margin-right: 1%;
+
+        }
+    }
+
+    @media screen and (min-width: 762px) and (max-width: 768px){
+        .clase-presencial {
+            margin-top: 0%;
+
+        }
+    }
+
+    @media only screen and (min-width: 768px){
+        .area-estudio {
+            padding: 1.25rem 0 0 1.75rem;
+            background-image: url(/arquivos/2021_tramontina_cat-cocina_desk.png);
+            background-size: cover;
+            margin-right: 2%;
+            width: 50%;
+            min-height: 230px;
+            background-repeat: no-repeat;
+            display: block;
+            float: left;
+        }
+
+        .clase-presencial {
+            padding: 1.25rem 0 0 1.75rem;
+            background-image: url(/arquivos/2021_tramontina_cat-mesa_desk.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            display: block;
+            width: 50%;
+            min-height: 230px;
+            float: left;
+        }
+        .regreso-clase {
+            margin-bottom: 20px !important;
+            flex-direction: row;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+
+        .regreso-clase h4{
+            font-size: 1.625rem;
+            padding-bottom: 0px;
+        }
+
+        .tramontina h3.tittle-tramontina, .tramontina #h1_name{
+            font-size: 1.813rem;
+        }
+
+        .tramontina h1.category-name{
+            margin-top: 1.4rem;
+        }
+
+        .tramontina .product-list__controls{
+            display: none;
+         
+        }
+    }
+
+    @media only screen and (min-width: 1440px){
+
+        .area-estudio {       
+            min-height: 281px;
+        }
+
+        .clase-presencial {
+            min-height: 281px;
+        }
+    }
+
+    @media only screen and (min-width: 2560px){
+
+        .area-estudio {       
+            min-height: 310px;
+        }
+
+        .clase-presencial {
+            min-height: 310px;
+        }
+    }
+
+</style>

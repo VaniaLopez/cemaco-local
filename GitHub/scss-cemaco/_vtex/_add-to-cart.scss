@@ -1,0 +1,200 @@
+/*--------------------Add to Cart--------------------*/
+.atc__wrapper.overlay{
+	background: rgba(#333,.6);
+}
+.atc{
+	&__wrapper{
+		// width: 100%;
+		// height: 100%;
+		color: $c-dark-gray;
+	}
+	&__container{
+		width: 90%;
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		z-index: $z-offcanvas;
+		background: white;
+		transform: translate(-50%, -50%);
+		transition: all 0.4s;
+		@media screen and (min-width: $screen-md-min){
+			width: 570px;
+		}
+		&.is-active{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__content{
+		position: relative;
+		@include mediaFrom(sm){
+			@include flexbox($fw: wrap, $jc: space-between);
+		}
+	}
+	&__img_wrapper{
+		@include mediaTo(600px){
+			@include flex-width(40%);
+		}
+	}
+	&__added{
+		&{
+			@include flex-width(100%);
+			padding: 3px 35px 10px 35px;
+			@include flexbox($fw: wrap, $ai: flex-start);
+		}
+		&_title{
+			display: block;
+            text-transform: uppercase;
+            @include padding-v();
+			font-family: $font-title;
+			font-weight: $font-bold;
+            font-size: 1em;
+            color: white;
+            background-color: $c-primary;
+            text-align: center;
+			@include mediaFrom(sm){
+				width: 100%;
+			}
+		}
+		&_image{
+			width: 180px;
+			margin-right: 5px;
+			height: auto;
+			@include mediaTo(600px){
+				width: 100%;
+			}
+		}
+		&_summary{
+			@include flex-item($fg: 1, $fs: 0, $fb: 50%);
+			padding-left: 28px;
+		}
+		&_info{
+			margin-top: .3em;
+			font-size: 0.85em;
+			&.qty{
+				display: none;
+			}
+		}
+		&_name{
+            @include padding-v();
+			line-height: 1.5;
+			@include font-size(.875);
+			font-family: $font-title;
+			font-weight: $font-bold;
+            text-transform: uppercase;
+		}
+		&_price{
+		}
+	}
+	&__cart-summary{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+        padding: 15px 35px 30px 35px;
+        background-color: $c-light-gray;
+		@include mediaTo(600px){
+			padding: 15px;
+		}
+		&_title{
+			display: none;
+		}
+		&_item{
+			text-transform: uppercase;
+			font-size: .8em;
+			font-weight: $font-bold;
+			@include mediaTo(600px){
+				display: none!important;
+			}
+			&.price{
+				text-align: right;
+			}
+			&.total,
+			&.shipping,
+			&.discount{
+				display: none!important;
+			}
+		}
+	}
+	&_left,
+	&_right{
+		@include flex-width(50%);
+		@include mediaTo(600px){
+			@include flex-width(50%);
+		}
+	}
+	&__cta{
+		width: 100%;
+		@include flexbox($fw: wrap, $jc: space-between);
+		padding-top: 11px;
+		margin-top: 10px;
+		@include mediaTo(600px){
+			border: 0;
+			padding-top: 11px;
+			margin-top: 0;
+		}
+		.button-wrapper{
+			width: 50%;
+			margin-top: 0;
+			@include mediaTo(600px){
+				width: 100%;
+			}
+			[class*="button-"]{
+				width: auto;
+				text-align: center;
+				min-width: 178px;
+				text-transform: uppercase;
+				font-size: .75em;
+				line-height: 1.2;
+				font-family: $font-title;
+				font-weight: $font-regular;
+				padding: 1.1em 1em .8em 1em;
+				height: auto;
+				transition: all .3s;
+				@include mediaTo(600px){
+					margin-bottom: 1em;
+					width: 100%;
+				}
+			}
+			.seguirComprando{
+				border: 1px solid darken($c-light-gray, 10);
+				background: white;
+				color: $c-dark-gray;
+				&:hover{
+					border: 1px solid $c-dark;
+					background: $c-dark;
+					color: white;
+				}
+				&:focus{
+					outline: 1px dotted $c-dark;
+					outline-offset: 2px;
+				}
+				&:active{
+					border: 1px solid white;
+					background: $c-light-gray;
+					color: $c-dark;
+				}
+			}
+			.irAlCheckout{
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+.close-modal--atc{
+	display: block;
+	width: 47px;
+	height: 47px;
+	line-height: 47px;
+    text-align: center;
+    color: white;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	outline: 1px dotted transparent;
+	svg{
+		display: inline-block;
+		vertical-align: middle;
+		@include sizeProportion($dW: 1);
+	}
+}

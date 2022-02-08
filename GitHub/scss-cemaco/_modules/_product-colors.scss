@@ -1,0 +1,65 @@
+/*--------------------Product Colors--------------------*/
+$color-thumbnails: (
+    'Amarillo'              : #ffff00,
+    'Amarilloalbaricoque'   : #ffff00,
+    'Azul'                  : #0070c0,
+    'Beige'                 : #ffcc66,
+    'Blanco'                : white,
+    'Cafe'                  : #833c0c,
+    'Celeste'               : #00b0f0,
+    'Fucsia'                : #ff0066,
+    'Gris'                  : #595959,
+    'Morado'                : #7030a0,
+    'Multicolor'            : 'Swatch-Multicolor.png',
+    'Naranja'               : #ff6600,
+    'Negro'                 : #000000,
+    'Rojo'                  : #ff0000,
+    'Rosado'                : #ff9999,
+    'Sin Color'             : transparent,
+    'Suavizado'             : '',
+    'Turquesa'              : #00ffff,
+    'Verde'                 : #00b050,
+    'Vino'                  : #79343b,
+    'Plateado'              : #B4B5B2,
+    'Dorado'                : #FFD700,
+    'Cobre'                 : #C77B31,
+    'Cromo'                 : #B4B5B2,
+    'Bronce'                : #cd7f32,
+    'Transparente'          : #FFFFFF,
+);
+
+%colors{
+    background-image: none;
+}
+
+$ThumbnailsByColor : true;
+@if $ThumbnailsByColor{
+    @each $colorName, $colorValue in $color-thumbnails {
+        .product-item__color.#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        .product-item .colores.#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        fieldset.filtro_color label.sr_#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        fieldset.filtro_colores label.sr_#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        .prorduct-detail ul.Color a[title="#{str-replace($colorName, '-', ' ')}"],
+        .prorduct-detail ul.Descripciondecolor a[title="#{str-replace($colorName, '-', ' ')}"],
+        .product-detail__color-variations a.color-main__#{to_lower_case($colorName)},
+        .product-detail__sku-selection .topic.Color .select.skuList label[class*="-#{to_lower_case(str-replace($colorName, ' ', '-'))}"],
+        .product-detail__sku-selection .topic.Descripciondecolor .select.skuList label[class*="-#{to_lower_case(str-replace($colorName, ' ', '-'))}"],
+        .product-detail__sku-selection .topic.Colores .select.skuList label[class*="-#{to_lower_case($colorName)}"],
+        .product-modal .color.#{to_lower_case(str-replace($colorName, ' ', '-'))}{
+            // Global Patch
+            @extend %colors;
+            // Individual Swatch
+            @if type-of($colorValue) == color{
+                background-color: $colorValue !important;
+                @if $colorName == 'Blanco' {
+                    border: 1px solid $c-pastel-gray;
+                }
+            }
+            @else if type-of($colorValue) == string{
+                @if $colorValue != '' {
+                    background-image: url(#{$image-path}#{$colorValue});
+                }
+            }
+        }
+    }
+}

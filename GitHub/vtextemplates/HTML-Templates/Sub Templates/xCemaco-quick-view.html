@@ -1,0 +1,67 @@
+<!-- Modal - Imágenes del producto. Begin -->
+<div id="productSingleModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog product-modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title qv-name"></h2>
+				<div class="product-modal-ref">REF. <span class="qv-ref"></span></div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+
+			<div class="modal-body">
+				<div class="product-modal-image">
+					<img id="productSingleModalImage" src=""/>
+					<div class="product-modal-thumbnails"></div>
+				</div>
+
+				<div class="product-modal-info">
+					<h3 class="product-modal-name qv-name"></h3>
+					<p class="product-modal-short-desc"></p>
+
+					<div class="product-modal-desc"></div>
+
+					<div class="product-modal-price">
+						<span class="price-new"></span>
+						<span class="price-old"></span>
+					</div>
+
+					<div class="product-modal-neto"></div>
+					<div class="product-modal-promos"></div>
+
+					<!-- <div class="product-modal-color-wrapper">
+						<div class="title">Color</div>
+						<div class="product-modal-color"></div>
+					</div>
+					<div class="product-modal-size-wrapper">
+						<div class="title">Talla</div>
+					</div> -->
+					<div class="hide hidden"><div class="product-modal-size"></div></div>
+
+
+					<div class="button-wrapper">
+						<div class="product-modal__quantity">
+							<span class="dec qtybutton">-</span>
+							<input type="text" class="product-modal__quantity-input" value="1"/>
+							<span class="inc qtybutton">+</span>
+						</div>
+						<a href="#" class="buy-product button-flat primary">Comprar</a>
+						<a href="#" class="add-to-cart button-lineal secondary">Agregar a la bolsa</a>
+					</div>
+					<div class="product-modal__stock"></div>
+					<div class="product-modal__details">
+						<div class="product-modal__details-title collapse-trigger" data-target="details">Detalles</div>
+						<div class="product-modal__details-content" id="collapse-details">
+						</div>
+					</div>
+					<div class="product-modal-summary">
+						<a href="#" class="qv-link">Ver más detalles del producto</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal - Imágenes del producto. End -->
+<script src="/arquivos/css-js_quick-view.js"></script>

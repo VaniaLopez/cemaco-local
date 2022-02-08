@@ -1,0 +1,20 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+
+// Settings
+@import "_settings/settings";
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+// Modules - Estilos para módulos re-utilizables
+@import "_modules/stores";
+@import "_modules/static-layout";
+@import "_modules/system-pages";
+@import "_modules/404";
+@import "_vtex/account-privilegio";
+// Datepicker
+@import "../scss-plugins/datepicker/datepicker";

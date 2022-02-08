@@ -1,0 +1,2431 @@
+.tiendas,
+.tienda,
+.sostenibilidad,
+.revista,
+.revistas,
+.mesa-ninos,
+.landing--bebejugueton,
+.landing--actividades,
+.bebes-category {
+  --color-gray: #ebebeb;
+  --color-gray-2: #d6d4d4;
+  --color-gray-3: #bdbdbd;
+  --color-gray-4: #f7f7f7;
+  --color-blue: #101e8e;
+  --color-white: #ffffff;
+  --color-green: #8fbc28;
+  --color-green-2: #93d500;
+  --jugueton-green: #00a85d;
+  --celeste: #0cb7e1;
+  --verde: #00ac54;
+  --yellow: #fece62;
+  --orange: #ff8300;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6em 3em;
+  color: var(--color-white);
+  border-radius: 2em;
+}
+.head-text.text-black {
+  color: #000;
+}
+.btn:hover {
+  color: var(--color-white);
+}
+.btn.green {
+  background-color: var(--color-green-2);
+}
+.covid,
+.covid .full {
+  width: 100%;
+}
+.covid p {
+  font-size: 15.5px;
+}
+.covid a,
+.covid a:hover,
+.carousel a,
+.carousel a:hover,
+.tiendas .cemaco-col .store-location a,
+.tiendas .cemaco-col .store-location a:hover,
+.btn,
+.btn:hover {
+  text-decoration: none;
+}
+.covid .mobile {
+  display: none !important;
+}
+.covid .title {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+.covid .title h1 {
+  margin: 0 0 0 10px;
+  font-weight: normal;
+  font-size: 48px;
+}
+.covid h1,
+.covid h2 {
+  display: inline-block;
+  padding: 0;
+  color: var(--color-blue);
+}
+.covid h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.covid img {
+  display: inline-block;
+  width: auto;
+}
+.covid .content_with_image {
+  display: flex;
+}
+.covid .content_with_image .img-content {
+  margin: 0 3% 0 0;
+  width: 40%;
+}
+.covid .content_with_image .text-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.covid .content_with_image .text-content img {
+  width: 230px;
+  margin-top: 15px;
+}
+.covid .content_with_image .text-content p {
+  font-size: 17px;
+  line-height: 26px;
+}
+.covid .horarios .title {
+  background-color: var(--color-blue);
+  display: block;
+  text-align: center;
+  padding: 17px;
+}
+.covid .horarios .title h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-white);
+  text-align: center;
+}
+.covid .horarios .title h2 span {
+  color: var(--color-green);
+}
+.covid .horarios .col-md-4 {
+  background-color: var(--color-blue);
+}
+.covid .bg-white {
+  background-color: var(--color-white);
+}
+.covid .horarios {
+  margin: 0 0 17px;
+  padding: 15px;
+}
+.covid .horarios .bg-white {
+  border-radius: 5px;
+  width: 100%;
+}
+.covid .horarios a {
+  color: var(--color-white);
+}
+.covid .horarios .bg-white h3 {
+  color: var(--color-green);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 15px 3px;
+  margin: 0 0 16px;
+}
+
+.covid .horarios .bg-white.second h3 {
+  margin: 30px 0 16px;
+}
+.covid .horarios-container {
+  width: 32.5%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 51px 38px;
+  background: var(--color-blue);
+  border-radius: 35px;
+  min-height: 318px;
+  margin: 9px 6px 0 0;
+}
+.covid .horarios-container.last {
+  margin-right: 0;
+}
+.covid .video,
+.historia {
+  text-align: center;
+}
+.covid .video h2 {
+  margin: 20px 0 0;
+  color: var(--color-blue);
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
+.covid .video iframe {
+  width: 80%;
+  min-height: 400px;
+  margin: 20px 0 0;
+}
+.covid .seguridad dd {
+  text-align: center;
+  margin: 4% auto;
+  background: var(--color-blue);
+  width: 62%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 2%;
+  border-radius: 8px;
+}
+.covid .seguridad ol li {
+  list-style-type: none;
+  counter-increment: lista;
+  position: relative;
+  color: #4c4c4c;
+  font-family: verdana;
+  margin: 0 0 3%;
+  font-size: 15px;
+  padding-left: 30px;
+}
+.covid .seguridad ol li::before {
+  color: var(--color-green);
+  content: counter(lista) ".";
+  left: -12px;
+  position: absolute;
+  text-align: right;
+  width: 26px;
+  font-weight: bold;
+}
+.covid .seguridad fieldset {
+  padding: 10px 17px 20px;
+  border: 2px solid var(--color-green);
+}
+
+.covid .seguridad fieldset legend {
+  margin: 0 0 0 13px;
+  padding: 0 11px;
+  font-size: 22px;
+  color: var(--color-blue);
+  text-transform: none;
+  font-weight: normal;
+}
+.covid .servicios {
+  display: flex;
+}
+.covid .servicios dd:last-child img {
+  width: 70%;
+  float: right;
+}
+.covid .servicios h3,
+.covid .faq h3 {
+  color: var(--color-blue);
+  font-weight: bold;
+  font-size: 28px;
+  margin: 1% 0 4%;
+}
+.covid .faq h3 {
+  margin: 2% 0 0;
+  font-size: 35px;
+}
+.covid .servicios h3 span,
+.covid .faq h3 span {
+  color: var(--color-green);
+}
+.covid .servicios p {
+  font-size: 16px;
+}
+.covid .servicios dd {
+  width: 50%;
+}
+.covid .casitas-list {
+  padding-left: 20px;
+}
+.covid .casitas-list li {
+  padding: 4px 0 7px;
+  list-style-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/tiendas/img3.png);
+}
+.covid .faq .accordion-parent .accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.4s;
+  margin: 0.5% 0;
+  font-size: 20px;
+}
+.covid .faq .accordion-parent .panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+}
+.covid .faq .accordion-parent .panel h4 {
+  font-weight: bold;
+  color: #4c4c4c;
+  font-size: 15px;
+}
+.covid .faq .accordion-parent .panel ol,
+.covid .faq .accordion-parent .panel ul {
+  padding-left: 19px;
+}
+.covid .faq .accordion-parent .panel ol li {
+  list-style: decimal outside;
+  padding: 4px 0 7px;
+  font-size: 14px;
+}
+.covid .faq .accordion-parent .panel ul li {
+  list-style: disc outside;
+  font-size: 14px;
+}
+.covid .faq .accordion-parent .panel article {
+  margin: 2% 0;
+}
+.covid .faq .accordion-parent .panel p {
+  font-size: 14px;
+}
+.covid .faq .accordion-parent .accordion img {
+  float: right;
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+}
+.covid .faq .accordion-parent .accordion.active img {
+  transform: rotate(180deg);
+  transition: transform 0.2s linear;
+}
+.covid .tag h4,
+.tiendas .footer-covid h4 {
+  color: var(--color-blue);
+  margin: 6% 0 2%;
+  font-size: 32px;
+  text-align: center;
+}
+.covid .tag h4 span,
+.tiendas .footer-covid h4 span {
+  color: var(--color-green);
+}
+.tiendas .carousel,
+.historia {
+  overflow: hidden;
+}
+.tiendas .carousel .item {
+  padding: 0;
+}
+.tiendas .carousel span {
+  display: block;
+  font-weight: bold;
+  color: #747474;
+  margin: 0;
+  text-align: center;
+}
+.tiendas .carousel img {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+.tiendas .footer-covid {
+  text-align: center;
+  margin: 10% 0 0;
+}
+.tiendas .footer-covid img {
+  width: auto;
+  margin: 0 auto;
+}
+.tiendas .footer-covid h4 {
+  margin: 0;
+  font-size: 58px;
+  font-weight: normal;
+}
+.tiendas .cemaco-col,
+.tiendas .cemaco-col-no-border {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-right: 1px solid #bdbdbd;
+}
+.tiendas .cemaco-col-no-border hr,
+.tiendas .cemaco-express-col hr {
+  margin: 8px auto 15px;
+  width: 94%;
+}
+.tiendas .cemaco-col-no-border {
+  border: none !important;
+}
+.tiendas .locator-subtitle {
+  font-size: 18px;
+  margin: 15px 0 7px;
+  color: #4d4d4d;
+  text-align: center;
+  font-weight: normal;
+}
+.tiendas .cemaco-col .store-location {
+  padding-right: 6%;
+  width: 49.5%;
+  display: inline-block;
+}
+.tiendas .store-locator-header {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.tiendas .clearfix {
+  zoom: 1;
+}
+.tiendas .tabla-tiendas {
+  background: none repeat scroll 0 0 #fff;
+  border-bottom: 7px solid #8dc53d !important;
+  height: 75px;
+  border: solid 1px #d9d8d8;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  width: 100%;
+}
+.tiendas .tabla-tiendas td {
+  vertical-align: middle;
+  display: table-cell;
+}
+.tiendas .tabla-tiendas h3 {
+  color: var(--color-blue);
+  font-size: 14px;
+  text-align: center;
+}
+.tiendas .tag-recogerentienda {
+  display: none;
+  visibility: hidden;
+  margin: 0 0 -32px 2px;
+  z-index: 99;
+  position: relative;
+}
+.tiendas .cemaco-express-col {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-align: left !important;
+}
+.tiendas .cemaco-express-col .store-location {
+  width: 49.5%;
+  display: inline-block;
+  padding-left: 6%;
+}
+.tienda h1 {
+  color: var(--color-blue);
+  font-size: 2em;
+}
+.tienda .store-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "gallery"
+    "address"
+    "map"
+    "schedules";
+}
+.tienda .gallery {
+  grid-area: gallery;
+}
+.tienda .address {
+  grid-area: address;
+  margin: 20px 0 0;
+}
+.tienda .address h3,
+.tienda .schedules h3 {
+  font-size: 17px;
+  color: var(--color-blue);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0;
+}
+.tienda .address .phones {
+  margin: 15px 0 22px;
+}
+.tienda .map {
+  grid-area: map;
+}
+.tienda .map iframe {
+  height: 400px;
+  width: 100%;
+}
+.tienda .schedules {
+  grid-area: schedules;
+}
+.tienda .schedules li {
+  display: inline-block;
+  padding: 15px 23px 0px 0;
+  width: 100%;
+}
+.tienda .schedules li:first-child,
+.tienda .schedules li:nth-child(5) {
+  padding: 15px 23px 0 0;
+}
+.tienda .schedules .horarios b {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.tienda .schedules .horarios p {
+  font-size: 14px;
+}
+.tienda .schedules .horarios hr {
+  margin: 40px 0 25px;
+  border-top: 1px solid var(--color-gray-3);
+}
+.tienda .schedules .horarios hr:last-child {
+  margin: 25px 0 40px;
+}
+/* Dia del carinio */
+.slider-carino {
+  min-height: 149px;
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/diadelcarino/2021_portada_carinio_mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "HelveticaNeueLTW05";
+}
+.title-carino h3 {
+  color: #870b14;
+  font-family: "HelveticaNeueLTW05";
+  font-size: 20px;
+}
+.col-md-9.sorprender-items,
+.sorprender-items-second {
+  display: table;
+  width: 80%;
+  margin: 27px auto 10px;
+  float: inherit;
+}
+.row.fullcontent-bebe.sorprender-items-second {
+  width: 75%;
+  margin: 0 auto 10px;
+  align-items: center;
+  justify-content: center;
+}
+.row.fullcontent-bebe.sorprender-items-second .col-sm-6:last-child {
+  margin-top: 30px;
+}
+.col-md-9.sorprender-items .col-sm-6 {
+  margin-top: 10px;
+}
+.sorprender-items p,
+.sorprender-items-second p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+/* Preguntas frequentes */
+.landing--faq .static-layout__internal-menu--wrapper {
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: inherit;
+  max-height: max-content;
+}
+.faq-main .sidebar .active {
+  font-size: 19px;
+  margin: 17px 0 10px;
+  font-weight: bold;
+}
+.list-sidebar dd {
+  margin: 0 0 13px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.list-pedidos dd {
+  padding: 8px 0 10px;
+  border-bottom: 1px solid #989898;
+  font-size: 18px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.list-pedidos dt {
+  display: none;
+}
+.landing--faq .button-lineal.large {
+  padding: 11px 0px;
+  width: 100%;
+  font-weight: normal;
+  font-size: 14px;
+  margin: 0 2.5% 23px;
+}
+.landing--faq .tag-title--level-2 {
+  font-size: 1.8em;
+}
+.landing--faq .tag-title--level-1 {
+  padding-bottom: 0;
+  font-size: 3em;
+}
+.landing--faq .tag-title--level-2 {
+  margin: 2px 0 11px;
+}
+.landing--faq .list-pedidos dd::after {
+  content: " ";
+  width: 14px;
+  height: 14px;
+  background: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/preguntas-frequentes/faq-plus.png)
+    no-repeat;
+  padding-right: 5%;
+}
+
+.landing--faq .list-pedidos dd.activeitem {
+  border-bottom: 0;
+  font-weight: bold;
+}
+.landing--faq .list-pedidos dt.activecontent {
+  border-bottom: 1px solid #989898;
+  padding: 0px 15px 20px 0px;
+  font-size: 15px;
+}
+.landing--faq .list-pedidos dd.activeitem::after {
+  /* background: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/preguntas-frequentes/faq-less.png) no-repeat; */
+  height: 3px;
+  background-position: 0;
+  transition: height 0.35s;
+}
+.landing--faq .list-sidebar dd.active::after {
+  content: " ";
+  background: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/preguntas-frequentes/faq-less.png) no-repeat; 
+  height: 3px;
+  background-position: 0;
+  transition: height 0.35s;
+}
+/* Sostenibilidad */
+.nuestrohogar {
+  display: flex;
+  flex-direction: column;
+}
+.nuestrohogar h2 {
+  font-size: 30px;
+}
+.nuestrohogar .grid:first-child {
+  order: 2;
+  padding: 0 15px;
+}
+.nuestrohogar .grid {
+  width: 100%;
+}
+.nuestrohogar .grid .video {
+  width: 100%;
+  height: 400px;
+  background: var(--color-gray-2);
+}
+.nuestrohogar .grid .video iframe,
+.sostenibilidad.comunidades .flex-items.arte-nacional iframe {
+  width: 100%;
+  height: 100%;
+}
+.areasComprimiso h2 {
+  font-size: 23px;
+  margin: 10px 0 0;
+}
+.areasComprimiso .grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 13px;
+  flex-direction: column;
+}
+.areasComprimiso .grid .textContent {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 0 28px 17px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.areasComprimiso .grid .textContent h3 {
+  font-size: 26px;
+  line-height: 47px;
+  padding-bottom: 0;
+}
+.areasComprimiso .grid .textContent .button-flat {
+  margin: 15px 0 0;
+  padding: 9px 47px;
+  font-weight: bold;
+  font-size: 13px;
+  width: fit-content;
+}
+.areasComprimiso .grid.left:last-child .textContent .button-flat {
+  margin: 40px 0 0;
+}
+.empresaB {
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  width: 100%;
+  height: 210px;
+}
+.empresaB .background {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/sostenibilidad/empresaB.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.empresaB .background .re-central {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.empresaB .background h3 {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0;
+  font-size: 23px;
+  color: white;
+  font-weight: bold;
+  padding: 0;
+}
+.empresaB .background img {
+  width: 60px;
+  position: relative;
+}
+.textEmpresaB {
+  padding: 20px 0;
+}
+.metas {
+  background-color: var(--color-blue);
+  padding: 15px 0 45px;
+}
+.metas .re-central {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "A"
+    "B"
+    "C"
+    "D"
+    "E";
+}
+.metas .re-central h2 {
+  grid-area: A;
+  text-align: center;
+  color: var(--color-white);
+  font-size: 30px;
+  margin: 0 0 20px;
+}
+.metas .re-central .grid:nth-child(2),
+.valores .grid:first-child {
+  grid-area: B;
+}
+.metas .re-central .grid:nth-child(3),
+.valores .grid-columns .grid:nth-child(2) {
+  grid-area: C;
+}
+.metas .re-central .grid:nth-child(4),
+.valores .grid-columns .grid:nth-child(3) {
+  grid-area: D;
+}
+.metas .re-central .grid:nth-child(5) {
+  grid-area: E;
+  margin: 0;
+}
+.metas .re-central .grid {
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 47px;
+}
+.metas .re-central .grid p {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+.metas .re-central .grid h4 {
+  padding: 0 0 3px;
+  font-size: 28px;
+}
+.metas .re-central .grid h5 {
+  font-weight: normal;
+  font-size: 21px;
+}
+.valores h2,
+.historia h2,
+.historia h4 {
+  font-size: 23px;
+  text-align: center;
+  padding: 22px 0;
+}
+.valores .grid-columns {
+  display: grid;
+  grid-gap: 19px;
+  grid-template-areas:
+    "B B"
+    "C C"
+    "D E"
+    "F F"
+    "G G"
+    "H H";
+}
+.valores .grid-columns .grid:nth-child(4) {
+  grid-area: E;
+}
+.valores .grid-columns .grid:nth-child(5) {
+  grid-area: F;
+}
+.valores .grid-columns .grid:nth-child(6) {
+  grid-area: G;
+}
+.valores .grid-columns .grid:last-child {
+  grid-area: H;
+}
+.valores .grid-columns .grid:last-child img,
+.valores .grid-columns .grid:nth-child(5) img,
+.valores .grid-columns .grid:nth-child(2) img,
+.valores .grid:first-child img {
+  width: 80%;
+  margin: 0 auto;
+}
+.historia h4 {
+  padding: 40px 0 0;
+}
+.historia h5 {
+  padding: 6px 0 38px;
+  font-weight: normal;
+  text-align: center;
+}
+.historia .btn {
+  margin: 25px 0 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+.sostenibilidad .products-slider__wrapper {
+  margin-bottom: 50px;
+}
+.sostenibilidad .products-slider__wrapper .prateleira.vitrine > h2 {
+  font-size: 24px !important;
+  padding: 12px 0 20px;
+}
+/* Nuestro equipo */
+.sostenibilidad-content {
+  margin: 0 0 15px;
+}
+.sostenibilidad-content .mainimage {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/sostenibilidad/nuestro-equipo/mainimage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--color-white);
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+}
+.sostenibilidad .mainimage h2 {
+  font-size: 37px;
+  padding: 0 20px 0;
+}
+.sostenibilidad .flex-items,
+.mesa-ninos .flexitems {
+  display: flex;
+  flex-direction: column;
+}
+.sostenibilidad .flex-items .flexitem.grey {
+  background-color: var(--color-gray-3);
+  width: 100%;
+  height: 210px;
+  margin: 15px 0 0;
+  order: 2;
+}
+.sostenibilidad .flex-items .flexitem.text-center {
+  text-align: justify;
+}
+.sostenibilidad .flex-items .flexitem h4 {
+  line-height: 37px;
+}
+.sostenibilidad.nuestro-equipo .fullitem {
+  padding: 50px 0 70px;
+}
+.sostenibilidad.nuestro-equipo .fullitem .btn {
+  margin: 40px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.6em 1em;
+}
+/* Medio ambiente */
+.sostenibilidad-content.medioambiente .mainimage {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/sostenibilidad/medio-ambiente/medio-ambiente.jpg");
+}
+.sostenibilidad.medio-ambiente .flex-items,
+.sostenibilidad.comunidades .flex-items {
+  justify-content: space-between;
+}
+.sostenibilidad.medio-ambiente .flex-items.desechos-electronicos .flexitem,
+.sostenibilidad.medio-ambiente .flex-items.energia-renovable .flexitem {
+  order: 1;
+}
+.sostenibilidad.medio-ambiente
+  .flex-items.desechos-electronicos
+  .flexitem.normal-text,
+.sostenibilidad.medio-ambiente
+  .flex-items.energia-renovable
+  .flexitem.normal-text {
+  order: 2;
+}
+.sostenibilidad.medio-ambiente .flex-items .flexitem {
+  margin-bottom: 20px;
+}
+.sostenibilidad .flex-items .flexitem.normal-text p {
+  font-size: inherit;
+  text-align: justify;
+}
+.sostenibilidad .flex-items .flexitem.normal-text .btn {
+  margin-top: 16px;
+}
+.sostenibilidad.medio-ambiente .flexitem .voluntarios h4 {
+  line-height: 47px;
+  padding: 0;
+  margin-bottom: 19px;
+  font-size: 32px;
+}
+.sostenibilidad.medio-ambiente .flexitem .voluntarios h5 {
+  padding: 0 0 0 29px;
+  font-size: 14px;
+}
+.sostenibilidad.medio-ambiente .flexitem.normal-text h4 {
+  font-size: 25px;
+  line-height: 26px;
+}
+.sostenibilidad .info-banner {
+  background-color: var(--color-blue);
+  text-align: center;
+  color: var(--color-white);
+  padding: 34px 0 58px;
+}
+.sostenibilidad .info-banner .btn {
+  margin-top: 22px;
+}
+.sostenibilidad .info-banner h4 {
+  padding: 0;
+}
+.sostenibilidad .info-banner h5 {
+  padding: 0;
+}
+/* Comunidades */
+.sostenibilidad-content.comunidades .mainimage {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/sostenibilidad/comunidades/comunidades.jpg");
+}
+.sostenibilidad.comunidades .flex-items.video-gtn .flexitem.normal-text,
+.sostenibilidad.comunidades .flex-items.centros-acoplo .flexitem.normal-text,
+.sostenibilidad.comunidades .flex-items.organizaciones-apoyamos .flexitem {
+  order: 1;
+}
+.sostenibilidad.comunidades .flex-items.video-gtn .flexitem,
+.sostenibilidad.comunidades .flex-items.centros-acoplo .flexitem,
+.sostenibilidad.comunidades
+  .flex-items.organizaciones-apoyamos
+  .flexitem.normal-text {
+  order: 2;
+}
+.sostenibilidad.comunidades .flex-items iframe {
+  width: 100%;
+}
+.sostenibilidad.comunidades .flex-items:first-child .flexitem:last-child {
+  display: flex;
+  align-items: center;
+}
+.sostenibilidad.comunidades .flex-items .flexitem h4 {
+  line-height: 39px;
+}
+.sostenibilidad.comunidades .flex-items.otras-iniciativas img,
+.sostenibilidad.comunidades .flex-items.funsepa img,
+.sostenibilidad.comunidades .flex-items.arte-nacional iframe {
+  display: none;
+}
+.sostenibilidad.comunidades .flex-items.video-gtn .flexitem.normal-text {
+  margin: 0 0 15px;
+}
+.sostenibilidad.comunidades .flex-items.funsepa {
+  margin-top: 15px;
+}
+.sostenibilidad.comunidades .flex-items.arte-nacional {
+  margin: 0 0 20px;
+}
+.sostenibilidad.comunidades .flex-items.iniciativas-propias,
+.sostenibilidad.comunidades
+  .flex-items.iniciativas-propias
+  .flexitem.normal-text,
+.sostenibilidad.comunidades
+  .flex-items.centros-acoplo
+  .flexitem.flexitem.normal-text,
+.sostenibilidad.comunidades .flex-items.otras-iniciativas {
+  margin: 0 0 15px;
+}
+/* Categorias */
+.bebes-category .item-wrapper-juguetes {
+  justify-content: center;
+}
+.bebes-category a svg:hover,
+.landing-cocina svg:hover {
+  transform: initial;
+}
+.landing-cocina .products-slider__wrapper .slick-slide {
+  border-top: 1px solid #c4c4c4;
+  margin: 0;
+  border-bottom: 1px solid #c4c4c4;
+  border-left: 1px solid #c4c4c4;
+}
+.landing-cocina .product-list.grid-view .product-item__figure {
+  width: 100%;
+}
+.landing-cocina .product-item__price .price-new {
+  font-size: 14px;
+}
+.landing-cocina .product-item__flags--attributes {
+  display: none;
+}
+.landing-cocina .product-list.grid-view .product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.sale-text {
+  font-size: 12px;
+  color: #cc0000;
+}
+.landing-cocina .button-flat.secondary {
+  background-color: var(--color-green-2);
+}
+.landing-cocina .product-item__cta .product-item__skus {
+  display: none;
+}
+.landing-cocina .product-list.grid-view .product-item__name {
+  font-weight: bold;
+}
+.landing-cocina .product-item__price .price-promo {
+  display: flex;
+  flex-direction: column;
+}
+.landing-cocina .product-list.slider-view .product-item__wrapper {
+  height: 100%;
+}
+.landing-cocina .product-item__wishlist .svg-icon-wishlist {
+  width: 1em;
+}
+.landing-cocina .product-item__price .price-promo small {
+  font-weight: normal;
+}
+.landing-cocina .product-item__wishlist {
+  top: -6px;
+  right: 0px;
+}
+/* .landing-cocina .product-item .product-item__cta,
+.landing-cocina .product-item .js-buy-plp{
+    opacity: 1;
+} */
+.landing-cocina .prateleira.vitrine > h2 {
+  font-size: 29px !important;
+}
+.landing-cocina .product-item .js-buy-plp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 7px 10px;
+  font-size: 11px;
+}
+.landing-cocina .product-item__action > .js-buy-plp {
+  right: 10px;
+}
+.landing-cocina .product-item__action > .js-buy-plp svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+.landing-cocina .product-item__flag--discount {
+  bottom: inherit;
+  top: 1%;
+  left: 2%;
+}
+.landing-cocina .item {
+  width: fit-content;
+}
+.landing-cocina .middle-banner .banner-background {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/categorias/cocina/bannerintermedio_cocina.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 365px;
+  width: 100%;
+}
+.landing-cocina .middle-banner .banner-background p {
+  padding: 36px 0 0 50px;
+}
+.landing-cocina .middle-banner {
+  display: inline-block;
+  width: 100%;
+}
+.category-themes {
+  width: 68%;
+  float: left;
+  padding: 0 0 0 3%;
+  margin-bottom: 25px;
+}
+.category-themes .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.landing-cocina .products-slider__wrapper .slick-list {
+  padding-left: 0;
+}
+.landing-cocina .slick-track .slick-active:last-child {
+  border-right: 1px solid;
+}
+.landing-cocina #productsSlider02 {
+  margin: -10px 0 30px;
+}
+/* Privilegio */
+.promociones-btn {
+  margin: 30px 0;
+}
+.beneficios-btn {
+  margin: 25px 0 20px;
+}
+.preFooterPrivilegio {
+  margin: 33px 0 0;
+}
+.preFooterPrivilegio .button-flat {
+  margin: 28px 0 0;
+}
+.titularCategorias h3 {
+  margin: 40px 0 33px;
+}
+#privilegio-actions p span::after {
+  content: "\a";
+  white-space: pre;
+}
+.privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+  font-size: 1em;
+}
+.privilegio .board-landing-mesa__banner .double-board__item:first-child {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/privi/privilegio-banner-mobile.jpg);
+  background-size: contain;
+  background-position: right;
+  background-color: #fcfdfb;
+}
+/* Revistas */
+.c-revistas-wrapper {
+  flex-direction: column;
+}
+.c-revistas-wrapper .c-revista {
+  margin: 0 0 20px;
+}
+.c-revistas-wrapper h3 {
+  font-size: 16px;
+}
+.comprar-en-revista {
+  font-weight: bold;
+  font-size: 23px;
+  color: var(--color-blue);
+  display: none;
+}
+.comprar-en-revista p:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.comprar-en-revista p:first-child img {
+  width: 38px;
+  margin-left: 12px;
+}
+.revista .landing-h1 {
+  font-size: 3.5em;
+  align-self: flex-start;
+}
+.suplemento-icons {
+  margin: 50px 0 40px;
+}
+.suplemento-icons .re-central {
+  display: flex;
+  justify-content: center;
+  grid-gap: 18px;
+}
+.suplemento-icons .re-central .grid-item svg.download-magazine {
+  width: 23px;
+  height: 23px;
+}
+/* Revistas - Jugueton */
+.landing.landing--jugueton .comprar-en-revista {
+  color: var(--jugueton-green);
+}
+.landing.landing--jugueton.revistas .landing-head {
+  background-color: var(--jugueton-green);
+}
+.landing.landing--jugueton.revistas .c-revistas-wrapper .full,
+.landing.landing--bebejugueton.revistas .c-revistas-wrapper .full {
+  width: 100%;
+}
+.landing.landing--jugueton.revistas .c-revistas-wrapper .full img {
+  width: 300px;
+  margin: 0 auto;
+}
+.landing.landing--jugueton.revistas .c-revistas-wrapper a:hover,
+.landing.landing--bebejugueton.revistas .c-revistas-wrapper a:hover,
+.content.revistas-cemaco .c-revistas-wrapper a:hover {
+  text-decoration: none;
+}
+.validezSuple {
+  font-size: 18px;
+  margin: 20px 0;
+}
+/* Actividades */
+/* */
+.landing--actividades .actividades .col-md-4 {
+  margin: 0 0 20px;
+}
+.landing--actividades .actividades .content--actividad {
+  background: var(--color-gray-4);
+  border-radius: 20px;
+}
+.landing--actividades .actividades .bg-actividad {
+  height: 240px;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.landing--actividades .detail--actividad {
+  padding: 14px 33px 30px;
+}
+.landing--actividades .detail--actividad h4 {
+  font-size: 24px;
+  padding: 0 0 7px;
+}
+.landing--actividades .detail--actividad h5 {
+  font-size: 16px;
+  padding: 0 0 2px;
+}
+.landing--actividades .detail--actividad p {
+  font-size: 13px;
+  color: #989898;
+}
+/* Home - Bebe Jugueton */
+.landing--bebejugueton a:hover {
+  text-decoration: none;
+}
+.landing--bebejugueton .compra-en-linea {
+  background-color: #24b6e0;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 70px 0 69px;
+}
+.landing--bebejugueton .compra-en-linea .bebe-secondary {
+  background-color: var(--yellow);
+  font-size: 15px;
+  padding: 11px 20px;
+}
+.landing--bebejugueton .compra-en-linea .bebe-secondary:hover {
+  background-color: var(--orange);
+}
+.landing--bebejugueton .compra-en-linea .col-md-6:first-child {
+  border-right: 1px solid;
+}
+.landing--bebejugueton .compra-en-linea img {
+  width: auto;
+  margin: 0 auto;
+}
+.landing--bebejugueton .compra-en-linea h4 {
+  font-size: 25px;
+}
+.landing--bebejugueton .aprende h3 {
+  font-size: 22px;
+  padding-bottom: 0;
+}
+.landing--bebejugueton .aprende a:hover {
+  text-decoration: none;
+}
+.aprende span {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 14px;
+}
+.main-cat-bebe {
+  margin: 20px 0 15px;
+}
+.landing--bebejugueton .spiff-four-blocks content {
+  display: block;
+  font-size: 10px;
+  margin-top: 8px;
+}
+.landing--bebejugueton .spiff-four-blocks a:hover {
+  text-decoration: none;
+}
+.landing--bebejugueton .spiff-four-blocks span {
+  font-weight: bold;
+  margin: 0;
+  text-decoration: underline;
+  margin: 5px 0 20px;
+  display: block;
+  font-size: 10px;
+}
+.landing--bebejugueton .spiff-two-blocks .col-md-6 {
+  margin: 0 0 20px;
+}
+.categories-bebe .col-md-2 {
+  margin: 0 0 20px;
+}
+.landing--bebejugueton .principal-footer {
+  background-color: #0cb7e1;
+}
+.row.fullcontent-bebe {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 23px 0;
+}
+.row.spiff-four-blocks h3 {
+  font-size: 1.35rem;
+}
+.landing--bebejugueton .spiff-text {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  display: block;
+  background-size: cover;
+  padding: 0px 0 0 27px;
+}
+.landing--bebejugueton .spiff-text.spiff-text-big {
+  min-height: 295px;
+  margin: 23px 0;
+}
+.landing--bebejugueton .spiff-text.spiff-text-big.spiff1 {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/bebe/home/03Feb/3Feb_piff1.jpg);
+}
+.landing--bebejugueton .spiff-text.spiff-text-big.spiff2 {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/bebe/home/spiff_jugueton_deskD@2x.jpg);
+}
+.landing--bebejugueton .spiff-text span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.landing--bebejugueton .spiff1 {
+  background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_bebjugueton_dormitorio.jpg);
+}
+.landing--bebejugueton .spiff2 {
+  background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_bebejugueton_lactancia_mobile.jpg);
+}
+.logo-spiff {
+  width: auto;
+  margin: 0 auto;
+}
+.landing--bebejugueton .loguito1 {
+  padding: 16px 0 13px;
+}
+.landing--bebejugueton .loguito2 {
+  padding: 15px 0 10px;
+}
+.landing--bebejugueton .loguito3 {
+  padding: 9px 0 6px;
+}
+.landing--bebejugueton .loguito3 img {
+  width: 22%;
+}
+.landing--bebejugueton .mainimage-bb {
+  background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_bebe_especialcarters2_mobile.jpg);
+  min-height: 312px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+}
+.landing--bebejugueton .mainimage-bb .button-flat.secondary {
+  background-color: #24B6E0;
+  margin: 0 0 24% 0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 25px;
+  border-radius: 14px;
+  font-weight: normal;
+  color: white;
+}
+.landing--bebejugueton .aprende .col-md-6 {
+  margin: 0 0 20px;
+}
+.landing--bebejugueton .banner-jugueton {
+  background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_bebe_home_bannerabajo_mob.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 302px;
+}
+.landing--bebejugueton .boton_bannerjugueton {
+  color: white;
+  background-color: #f58647;
+  border-radius: 42px;
+  padding: 7px 26px;
+  font-size: 14px;
+  margin: 0 9px 110px 0;
+}
+.landing--bebejugueton .logo-spiff {
+  margin: 10px auto 4px;
+}
+
+.landing--bebejugueton .fullspiff {
+  margin: 20px 0 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  padding: 9px 0 0 23px;
+}
+/* Revistas - Bebe jugueton */
+.landing.landing--bebejugueton .comprar-en-revista {
+  color: var(--celeste);
+}
+.landing.landing--bebejugueton.revistas .landing-head {
+  background-color: var(--celeste);
+}
+.landing.landing--bebejugueton.revistas .c-revistas-wrapper h3,
+.content.revistas-cemaco .c-revistas-wrapper h3 {
+  font-size: 19px;
+  margin: 20px 0 0;
+}
+.landing.landing--bebejugueton.revistas .c-revistas-wrapper .full img {
+  width: 236px;
+  margin: 0 auto;
+}
+.landing--bebejugueton .spiff-text h3 {
+  font-size: 22px;
+}
+
+/* Bodas */
+.contrato-bodas ul.list li {
+  counter-increment: item;
+}
+.contrato-bodas ul.list li::before {
+  content: counter(item) ". ";
+  width: 1.2em;
+}
+.contrato-bodas ul.list.list-space ol {
+  padding-left: 30px;
+}
+.contrato-bodas ul.list.list-space ol li,
+.contrato-bodas ul.list.list-bullet ol li {
+  counter-increment: inherit;
+}
+.contrato-bodas ul.list.list-space ol li::before,
+.contrato-bodas ul.list.list-bullet ol li::before {
+  content: "";
+}
+.contrato-bodas ul.list.list-bullet ol li {
+  list-style: circle;
+  list-style-position: inside;
+}
+/* Mesa de regalos - Niños */
+.mesa-ninos .board-landing-mesa--wedding h2 {
+  color: black !important;
+}
+.mesa-ninos .flexitems .flex-item {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.mesa-ninos .content-ninos {
+  padding-bottom: 40px;
+}
+.mesa-ninos .content-ninos .form-content {
+  display: flex;
+}
+.mesa-ninos .content-ninos .form-content .form-data {
+  background: #ffc300;
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  padding: 0 6em;
+  flex-direction: column;
+}
+.mesa-ninos .content-ninos .form-content p {
+  font-size: 18px;
+  margin: 0 0 21px;
+}
+.mesa-ninos .content-ninos .form-content .form-data h3 {
+  font-size: 26px;
+  margin: 0 0 25px;
+}
+.mesa-ninos .content-ninos .form-content .form-data form {
+  width: 75%;
+}
+.mesa-ninos .content-ninos .form-content .form-data form input {
+  margin-bottom: 35px;
+  background: white;
+  height: 31px;
+  text-align: center;
+}
+.mesa-ninos .content-ninos .form-content .form-data form button {
+  margin: 30px 0 0;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 45px;
+}
+.mesa-ninos .content-ninos .button-flat {
+  background: var(--verde);
+  color: white;
+  width: fit-content;
+}
+.mesa-ninos .content-ninos .background-content {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/eventos/ninos/evento.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 37px 0 0 8%;
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  min-height: 440px;
+}
+.mesa-ninos .exp-ninos i {
+  font-style: italic;
+}
+.mesa-ninos .exp-ninos-p {
+  color: var(--verde);
+  font-weight: normal;
+}
+.mesa-ninos .grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.mesa-ninos .grid svg {
+  height: 65px;
+}
+.mesa-ninos .grid svg.path {
+  width: 95px;
+}
+.mesa-ninos .grid svg.list {
+  width: 61px;
+}
+.mesa-ninos .grid svg.setup {
+  width: 89px;
+}
+.mesa-ninos .grid svg.list-2 {
+  width: 63px;
+}
+.mesa-ninos .gallery a:hover {
+  text-decoration: none;
+}
+.mesa-ninos .gallery .flex {
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.mesa-ninos .gallery .flex .marca {
+  margin: 0 auto;
+}
+.mesa-ninos .gallery [aria-describedby="slick-slide01"] .flex .marca {
+  width: 49px;
+}
+.mesa-ninos .gallery [aria-describedby="slick-slide02"] .flex .marca {
+  width: 75px;
+}
+.mesa-ninos .gallery [aria-describedby="slick-slide03"] .flex .marca {
+  width: 80px;
+}
+.mesa-ninos .gallery [aria-describedby="slick-slide04"] .flex .marca {
+  width: 60px;
+}
+.mesa-ninos .detalles {
+  overflow: hidden;
+}
+.mesa-ninos .content-exp .button-flat,
+.mesa-ninos .comenzar-title .button-flat,
+.mesa-ninos .content-ninos .form-content .button-flat {
+  font-size: 17px;
+  padding: 13px 17px;
+}
+.mesa-ninos .comparte-title {
+  margin: 13px 0 14px;
+}
+/* Homepage */
+.vertodos {
+  cursor: pointer;
+}
+.minispiff {
+  margin: 32px 0 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-gap: 14px;
+}
+
+.minispiff-entregas {
+  margin: 32px 0 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-gap: 14px;
+}
+.minispiff-item p {
+  font-size: 17px;
+  text-align: center;
+}
+.minispiff-item p strong {
+  font-size: 22px;
+}
+.spiff {
+  display: grid;
+  grid-gap: 14px;
+}
+.maxispiff {
+  display: grid;
+  grid-gap: 14px;
+  margin: 14px 0 0;
+}
+/* Landing juguetes */
+.juguetes-mas .item-cocina {
+  width: 50%;
+  padding: 1%;
+}
+.compra-por-edad {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 320px) {
+  .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+    font-size: 12px !important;
+  }
+  /* Categorias */
+  .category-themes .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .landing-cat {
+    padding-top: 0px;
+  }
+  .head-text {
+    margin-bottom: 20px !important;
+  }
+  .nav-trigger--open {
+    margin-right: 0em;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  /* Privilegio */
+  .privilegio .bg-privilegios-02 {
+    text-align: left;
+    background-color: var(--color-white);
+  }
+  /* Homepage */
+  .landing--bebejugueton .slick-slide {
+    /*width: 100% !important;*/ /* Se deja comentado por problemas con width */
+    padding: 0;
+  }
+
+  /* Preguntas frecuentes */
+  .tab-faq dl h3::after {
+    content: " ";
+    width: 14px;
+    height: 14px;
+    background: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/preguntas-frequentes/faq-plus.png)
+      no-repeat;
+    padding-right: 5%;
+    float: right;
+  }
+
+  .list-pedidos {
+    display: block;
+  }
+
+  .list-sidebar dd {
+    display: block;
+    /*margin-right: 50px;*/
+    margin: 17px 10px 0 10px;
+    font-size: 28px;
+    font-weight: normal;
+  }
+
+  .title-mobile {
+    font-weight: bold !important;
+  }
+  .list-sidebar dd::after {
+    content: " ";
+    width: 14px;
+    height: 14px;
+    background: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/preguntas-frequentes/faq-plus.png)
+      no-repeat;
+    padding-right: 5%;
+    float: right;
+  }
+
+  .tab-faq dl h3 {
+    display: none;
+  }
+
+  .faq-main .sidebar .active {
+    font-size: 28px;
+    margin: 17px 10px 0 10px;
+  }
+
+  #mis-pedidos dd,
+  #como-comprar dd,
+  #cambios dd,
+  #certificados dd {
+    font-size: 16px;
+  }
+
+  #puntos-privilegio dd {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 484px) {
+  /* Privilegio */
+  .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+    font-size: 14px;
+  }
+  /* Categorias */
+  .landing-cocina .middle-banner .banner-background {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/categorias/cocina/bannerintermedio_cocina_mobile.jpg");
+    height: 199px;
+  }
+  .category-themes {
+    width: 100% !important;
+    padding: 0 !important;
+    border-left: none !important;
+  }
+  .category-themes .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .landing-cat .category-themes .grid .item img {
+    width: 90%;
+    display: inline !important;
+  }
+  .landing-cat .category-themes .grid .item h2 {
+    font-size: 0.9rem;
+    padding-top: 10px;
+  }
+
+  .row.spiff-four-blocks h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  /* Privilegio */
+  .privilegio .board-landing-mesa__banner .double-board__item:first-child {
+    padding: 0 15px 20px;
+  }
+  .privilegio
+    .board-landing-mesa__banner
+    .double-board__item:nth-child(1)
+    .button-flat {
+    margin-bottom: 17px;
+  }
+  /* Categorias */
+  .landing-cocina .product-item__action > .js-buy-plp {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Privilegio */
+  .privilegio .board-benefits-m .triplets-board__item img {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 590px) {
+  /* Revistas */
+  .c-revistas-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  /* Categorias */
+  .category-themes .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Homepage */
+  .maxispiff {
+    grid-template-columns: 49% 49%;
+  }
+  /* Home - Bebe jugueton */
+  .landing--bebejugueton .compra-en-linea img {
+    width: 57%;
+  }
+  /* Preguntas frequentes */
+  .landing--faq .static-layout__internal-menu--wrapper {
+    justify-content: left;
+    width: 100%;
+  }
+  .landing--faq .button-lineal.large {
+    width: 28%;
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  /* Landing juguetes */
+  .juguetes-mas .item-cocina {
+    width: 20%;
+  }
+  /* Tiendas */
+  .tienda .store-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "gallery address"
+      "gallery map"
+      "schedules schedules";
+  }
+  .tienda .gallery {
+    margin-right: 25px;
+  }
+  .tienda .address {
+    margin: 0;
+  }
+  .tienda .schedules li {
+    width: auto;
+  }
+  .tienda .map iframe {
+    height: 200px;
+  }
+  /* Sostenibilidad */
+  .metas .re-central {
+    grid-template-columns: 25%;
+    grid-template-areas:
+      "A A A A"
+      "B C D E";
+  }
+  .valores .grid-columns {
+    grid-template-columns: 31% 30% 18% 17%;
+    grid-template-areas:
+      "B C D E"
+      "F G G H";
+  }
+  .valores .grid-columns .grid:nth-child(6) img {
+    width: 80.5%;
+  }
+  .valores .grid-columns .grid:last-child {
+    grid-column-start: G;
+  }
+  .valores .grid-columns .grid:last-child img {
+    width: 39%;
+    float: right;
+  }
+  /* Tiendas */
+  .c-revistas-wrapper {
+    grid-gap: 23px;
+  }
+  /* Revistas */
+  .revistas .c-revistas-wrapper {
+    justify-content: center;
+  }
+  .c-revistas-wrapper h3 {
+    font-size: 22px;
+  }
+  /* Privilegio */
+  .privilegio .board-landing-mesa__banner .double-board__item:nth-child(1) p {
+    font-size: 1.25em;
+  }
+  .privilegio .static-layout__content .bg-privilegios-02 {
+    background-image: url(https://vicom.mx/demos/x-cemaco/arquivos/images-privilegios_banner.jpg);
+  }
+  /* Categorias */
+  .category-themes .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .tienda .title-tienda {
+    margin: 40px 0 0;
+  }
+  /* Dia del carinio */
+  .slider-carino {
+    min-height: 345px;
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/diadelcarino/2021_portada_carinio_desk.jpg");
+  }
+  .slider-carino p {
+    font-size: 50px;
+    margin-top: 12%;
+  }
+  .col-md-9.sorprender-items {
+    margin: 0 auto;
+    float: inherit;
+    display: flex;
+  }
+  .row.fullcontent-bebe.sorprender-items-second {
+    margin: 27px auto 0;
+    width: 55.6%;
+    align-items: flex-end;
+  }
+  .title-carino h3 {
+    font-size: 22px;
+    margin: 30px 0 20px;
+  }
+  /* Sostenibilidad */
+  .nuestrohogar {
+    margin-top: 40px;
+  }
+  .valores h2,
+  .historia h2,
+  .historia h4 {
+    font-size: 30px;
+    padding: 55px 0 40px;
+  }
+  .historia h4 {
+    padding: 40px 0 0;
+  }
+  .sostenibilidad .products-slider__wrapper .prateleira.vitrine > h2 {
+    font-size: 30px !important;
+    padding: 70px 0 50px;
+  }
+  .valores .grid-columns .grid:nth-child(5) img,
+  .valores .grid-columns .grid:nth-child(2) img,
+  .valores .grid:first-child img {
+    width: 100%;
+  }
+  .areasComprimiso .grid {
+    flex-direction: inherit;
+    margin: 0 0 80px;
+  }
+  .areasComprimiso .grid img {
+    width: 80%;
+  }
+  .areasComprimiso .grid.left img {
+    order: 2;
+  }
+  .areasComprimiso .grid.left .textContent {
+    order: 1;
+    margin-right: -11%;
+  }
+  .areasComprimiso .grid.right .textContent {
+    margin-left: -39%;
+  }
+  .areasComprimiso .grid .textContent {
+    width: 420px;
+    height: 293px;
+    padding: 21px 40px 17px;
+    display: inline-table;
+  }
+  .areasComprimiso .grid .textContent h3 {
+    padding: 0 0 16px;
+    font-size: 51px;
+  }
+  .areasComprimiso .textContent p span:after,
+  #privilegio-actions p span::after {
+    content: "\a";
+    white-space: pre;
+  }
+  .areasComprimiso .grid .textContent p {
+    font-size: 20px;
+  }
+  .areasComprimiso h2 {
+    text-align: center;
+    margin: 40px 0 30px;
+    font-size: 30px;
+  }
+  .metas .re-central .grid {
+    margin: 0;
+  }
+  .empresaB {
+    height: 270px;
+  }
+  .empresaB .background h3 {
+    font-size: 42px;
+    padding: 36px 0 0;
+  }
+  /* Comunidades */
+  .sostenibilidad.comunidades .flex-items h6 {
+    font-size: 25px;
+  }
+  .sostenibilidad.comunidades .flex-items:nth-child(2) .flexitem h6 {
+    margin-top: 50px;
+  }
+  .sostenibilidad.comunidades .flex-items.iniciativas-propias .flexitem h6 {
+    margin: 0;
+  }
+  /* Categorias */
+  .bebes-category .l-juguetes .double-board__item--bg-left {
+    background: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_categoriasrbebe_lactancia.jpg)
+      content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* Home - Bebe */
+  .landing--bebejugueton .mainimage-bb {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_bebe_especialcarters2_desk.jpg);
+    min-height: 363px;
+    background-size: cover;
+  }
+  .categories-bebe img {
+    width: 80%;
+    margin: 0 auto 7px;
+  }
+  .landing--bebejugueton .compra-en-linea img {
+    width: 100%;
+  }
+  .landing--bebejugueton .mainimage-bb .button-flat.secondary {
+    display: block;
+    margin: 190px 0 0 700px;
+  }
+  .landing--bebejugueton .aprende .col-md-6,
+  .landing--bebejugueton .spiff-two-blocks .col-md-6 {
+    margin: 0;
+  }
+  .main-cat-bebe {
+    margin: 70px 0 45px;
+  }
+  .landing--bebejugueton .spiff-four-blocks .logo-spiff {
+    margin: 10px auto 4px;
+  }
+  .landing--bebejugueton .spiff-four-blocks content {
+    font-size: 18px;
+  }
+  .landing--bebejugueton .spiff-four-blocks span {
+    font-size: 18px;
+  }
+  .landing--bebejugueton .spiff-bb2 {
+    margin-bottom: 45px;
+  }
+  .landing--bebejugueton .spiff1 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_bebejugueton_dormitorio_desk.jpg);
+  }
+  .landing--bebejugueton .spiff2 {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_bebejugueton_lactancia_desk.jpg);
+  }
+  .landing--bebejugueton .banner-jugueton {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_bebe_home_bannerabajo_desk.jpg);
+    min-height: 170px;
+  }
+  /* Preguntas frequentes */
+  .landing--faq .button-lineal.large {
+    width: 20%;
+  }
+  .landing--faq .button-lineal.large:first-child,
+  .landing--faq .button-lineal.large:nth-child(5),
+  .landing--faq .button-lineal.large:last-child {
+    margin-left: 0;
+  }
+  .landing--faq .sidebar {
+    border-right: 1px solid #989898;
+  }
+  .landing--faq .tab-faq {
+    padding-left: 35px;
+  }
+}
+
+@media only screen and (min-width: 894px) {
+  /* Mesa de regalos - Niños */
+  .mesa-ninos .content-exp {
+    margin: 70px 0 30px;
+  }
+  .mesa-ninos .content-exp h3 {
+    margin: 40px 0 0;
+  }
+  .mesa-ninos .content-exp .button-flat {
+    margin: 24px 0 0;
+  }
+  .mesa-ninos .beneficios-title {
+    margin: 26px 0 30px;
+  }
+  .mesa-ninos .comenzar-title {
+    margin: 50px 0 60px;
+  }
+  .mesa-ninos .detalles-title {
+    margin: 0 0 11px;
+  }
+  .mesa-ninos .detalles h5 {
+    margin: 20px 0 30px;
+  }
+  /* Sostenibilidad */
+  .nuestrohogar {
+    flex-direction: row;
+  }
+  .nuestrohogar h2 {
+    font-size: 52px;
+  }
+  .nuestrohogar .grid {
+    width: 50%;
+  }
+  .nuestrohogar .grid:last-child {
+    padding-right: 80px;
+  }
+  .nuestrohogar .grid:first-child {
+    order: 2;
+    padding: 0;
+  }
+  .areasComprimiso .grid img {
+    width: 63%;
+  }
+  .areasComprimiso .grid.right .textContent {
+    margin-left: -11%;
+  }
+  .metas .re-central h2 {
+    font-size: 50px;
+  }
+  .metas .re-central .grid h4 {
+    font-size: 43px;
+  }
+  .metas .re-central .grid p {
+    font-size: 21px;
+    margin: 0 0 20px;
+  }
+  .metas .re-central .grid h5 {
+    font-size: 27px;
+  }
+  .empresaB .background {
+    background-position: 0 -160px;
+  }
+  .empresaB .background h3 {
+    font-size: 49px;
+    padding: 20px 0 0;
+  }
+  .empresaB .background .re-central {
+    padding-top: 70px;
+  }
+  .textEmpresaB {
+    text-align: center;
+    font-size: 21px;
+    padding: 50px 0;
+  }
+  .areasComprimiso h2 {
+    font-size: 42px;
+  }
+  .valores h2,
+  .historia h2,
+  .historia h4 {
+    font-size: 50px;
+  }
+  .sostenibilidad .products-slider__wrapper .prateleira.vitrine > h2 {
+    font-size: 40px !important;
+  }
+  /* Nuestro equipo */
+  .sostenibilidad .mainimage h2 {
+    font-size: 76px;
+    padding: 0;
+  }
+  .sostenibilidad-content .mainimage {
+    min-height: 440px;
+    justify-content: center;
+  }
+  .sostenibilidad-content {
+    margin: 0 0 80px;
+  }
+  .sostenibilidad .flex-items .flexitem {
+    width: 50%;
+    padding: 110px 0;
+  }
+  .sostenibilidad .flex-items .flexitem p,
+  .sostenibilidad .fullitem p {
+    font-size: 23px;
+  }
+  .sostenibilidad .flex-items .flexitem h4 {
+    font-size: 32px;
+  }
+  .sostenibilidad .flex-items .flexitem h4,
+  .sostenibilidad .fullitem h4 {
+    font-size: 40px;
+  }
+  .sostenibilidad .flex-items .flexitem p span::after,
+  .sostenibilidad .flex-items .flexitem h4 span::after,
+  .sostenibilidad.medio-ambiente .flexitem .voluntarios h5 span::after {
+    content: "\a";
+    white-space: pre;
+  }
+  .sostenibilidad .flex-items,
+  .mesa-ninos .flexitems {
+    flex-direction: inherit;
+  }
+  .sostenibilidad .flex-items .flexitem.grey {
+    width: 50%;
+    height: auto;
+    order: inherit;
+  }
+  .sostenibilidad .flex-items .flexitem.text-center {
+    text-align: center;
+  }
+  /* Medio Ambiente */
+  .sostenibilidad.medio-ambiente .flex-items .flexitem,
+  .sostenibilidad.comunidades .flex-items .flexitem {
+    padding: 0;
+    width: 45%;
+  }
+  .sostenibilidad.medio-ambiente .flex-items,
+  .sostenibilidad.comunidades .flex-items {
+    margin-bottom: 60px;
+  }
+  .sostenibilidad.medio-ambiente .flexitem .voluntarios {
+    padding-left: 18%;
+  }
+  .sostenibilidad.medio-ambiente .flexitem .voluntarios h5 {
+    padding: 0 0 10px 29px;
+  }
+  .sostenibilidad.medio-ambiente .flexitem .voluntarios h5,
+  .sostenibilidad.comunidades .flex-items h5 {
+    font-size: 18px;
+  }
+  .sostenibilidad.medio-ambiente .flexitem .voluntarios h4,
+  .sostenibilidad.comunidades .flex-items h4 {
+    font-size: 48px;
+  }
+  .sostenibilidad .info-banner h4 {
+    font-size: 48px;
+  }
+  .sostenibilidad .info-banner h5 {
+    font-size: 38px;
+  }
+  .sostenibilidad.medio-ambiente .flex-items.energia-renovable .flexitem {
+    order: 3;
+  }
+  /* Comunidades */
+  .sostenibilidad.comunidades .flex-items.video-gtn .flexitem.normal-text,
+  .sostenibilidad.comunidades .flex-items.centros-acoplo .flexitem.normal-text,
+  .sostenibilidad.comunidades .flex-items.organizaciones-apoyamos .flexitem {
+    order: 2;
+  }
+  .sostenibilidad.comunidades .flex-items.video-gtn .flexitem,
+  .sostenibilidad.comunidades .flex-items.centros-acoplo .flexitem,
+  .sostenibilidad.comunidades
+    .flex-items.organizaciones-apoyamos
+    .flexitem.normal-text {
+    order: 1;
+  }
+  .sostenibilidad.comunidades .flex-items.otras-iniciativas img,
+  .sostenibilidad.comunidades .flex-items.funsepa img,
+  .sostenibilidad.comunidades .flex-items.arte-nacional iframe {
+    display: block;
+  }
+  /* Mesa de regalos - Niños */
+  .mesa-ninos .flexitems .flex-item {
+    width: 50%;
+  }
+  .mesa-ninos .flexitems .flex-item.text-center {
+    padding: 0 70px;
+  }
+  /* Categorias */
+  .category-themes .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* Homepage */
+  .minispiff {
+    grid-template-columns: 23.8% 23.8% 23.8% 23.8%;
+  }
+
+  .minispiff-entregas {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .spiff {
+    grid-template-columns: 49% 49%;
+  }
+
+  /*Home Bebe Jugueton 03Feb*/
+  .landing--bebejugueton .banner-jugueton {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_bebe_home_bannerabajo_desk.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* Home - Bebé jugueton */
+  .landing--bebejugueton .spiff-text {
+    min-height: 189px;
+  }
+  .landing--bebejugueton .spiff-text.spiff-text-big {
+    min-height: 329px;
+  }
+  /* Home - Jugueton */
+  .juguetes-mas {
+    width: 100% !important;
+  }
+  /* Preguntas frequentes */
+  .landing--faq .button-lineal.large {
+    width: 12%;
+  }
+  .landing--faq .button-lineal.large:first-child,
+  .landing--faq .button-lineal.large:nth-child(7) {
+    margin-left: 0;
+  }
+  .landing--faq .button-lineal.large:nth-child(6) {
+    margin-right: 0;
+  }
+  .landing--faq .button-lineal.large:nth-child(5),
+  .landing--faq .button-lineal.large:last-child {
+    margin: 0 2.5% 23px;
+  }
+  .landing--faq .button-lineal.large {
+    font-size: 12px;
+  }
+  .landing--bebejugueton .banner-jugueton {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_bebe_home_bannerabajo_desk.jpg);
+    min-height: 243px;
+    margin: 29px 0 19px;
+    justify-content: left;
+  }
+
+  .landing--bebejugueton .boton_bannerjugueton {
+    margin-left: 180px;
+    margin-top: 111px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .tienda .title-tienda {
+    margin: 0;
+  }
+  .areasComprimiso .grid img {
+    width: 85%;
+  }
+  /* Sostenibilidad */
+  .empresaB .background h3 {
+    font-size: 65px;
+  }
+  .nuestrohogar {
+    margin: 0;
+  }
+  /* Medio ambiente */
+  .sostenibilidad.medio-ambiente .flexitem.normal-text h4 {
+    font-size: 51px;
+    line-height: 49px;
+  }
+  /* Revistas */
+  .comprar-en-revista {
+    display: block;
+    margin: 60px auto 25px;
+  }
+
+  /*Home Bebe Jugueton 03Feb*/
+  .landing--bebejugueton .banner-jugueton {
+    background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_bebe_home_bannerabajo_desk.jpg);
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  .retirar-tienda.sanlucas {
+    width: 28%;
+  }
+}
+
+.titulos-tiendas h1 {
+  display: inline;
+}
+.titulos-tiendas {
+  font-size: 29px;
+  font-weight: bold;
+  display: flex;
+  font-family: "helveticaneuemedium";
+  text-align: center;
+  color: #00ac54;
+}
+.title-tiendas {
+  text-align: center;
+}
+.banner-tienda {
+  width: 100%;
+  height: auto;
+}
+
+.icon-tienda {
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  width: 144px;
+  height: 33px;
+}
+
+.item-texto {
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #00a85d;
+}
+
+.item-logo {
+  float: left;
+  margin-top: 20px;
+}
+
+.content-tienda {
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  width: 15%;
+  margin-right: auto;
+  background-color: #00ac54;
+}
+
+/*.content-tienda {
+	width:500px;
+	height:100px;
+	margin:0px auto;
+    text-align:center;
+    vertical-align: middle;
+	background-color:#CCCCCC;
+} */
+.content-tienda img {
+  float: right;
+  width: 144px;
+  height: 33px;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1280px) {
+  .tienda .map iframe {
+    height: 320px;
+  }
+  /* Preguntas frequentes */
+  .landing--faq .button-lineal.large {
+    font-size: 14px;
+  }
+  /* Sostenibilidad */
+  .empresaB {
+    height: 470px;
+  }
+  .empresaB .background h3 {
+    font-size: 85px;
+  }
+  .metas .re-central .grid p {
+    font-size: 20px;
+  }
+  /* homepage */
+  .minispiff {
+    grid-template-columns: 24% 24% 24% 24%;
+  }
+  /* Home - Bebé jugueton */
+  .landing--bebejugueton .spiff-text {
+    min-height: 269px;
+  }
+  .landing--bebejugueton .spiff-text.spiff-text-big {
+    min-height: 560px;
+  }
+  .landing--bebejugueton .compra-en-linea img {
+    width: auto;
+  }
+  .minispiff-entregas {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .tienda .map iframe {
+    height: 363px;
+  }
+  /* Sostenibilidad */
+  .metas .re-central .grid p {
+    font-size: 21px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .mesa-ninos .content-ninos .background-content {
+    padding: 37px 0 0 234px;
+  }
+}

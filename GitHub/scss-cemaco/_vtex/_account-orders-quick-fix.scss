@@ -1,0 +1,22 @@
+body.account,
+body.orders{
+    a.myo-cancel-btn{
+        display: none !important;
+    }
+    span.db.pv2.c-link.hover-c-link.link{
+        display: none;
+    }
+}
+#root > form > div.w-100 > div:nth-child(4){
+    display: none !important;
+}
+.product-item__quick-view .product-item__quick-view__trigger{
+    display: none;
+}
+#wishlist-wrapper .product-list li{
+    list-style: none;
+}
+#wishlist-wrapper p{
+    @include margin-v();
+    font-size: rem(22);
+}

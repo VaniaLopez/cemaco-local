@@ -1,0 +1,302 @@
+<vtex.cmc:xCemacoAddDynamicClass />
+
+
+<div class="secretword" style="display:none;">
+    <div class="barraazul"></div>
+        <div>
+            <h3>Bienvenido a</h3>
+            <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/palabrasecreta/logocemacoblanco.png" class="secretlogo"/>
+
+            <div class="secretbanner_desk">
+                <a href="https://cemaco.com">
+                    <h3>Ingresa aquí para realizar<br></br> tus compras en cemaco.com</h3>
+                    <div class="botonircemacocom">cemaco.com</div>
+                </a>
+            </div>
+
+            <!--<a href="https://cemaco.com">
+                <img src="https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/palabrasecreta/bannercemacocom_m.jpg" alt="" class="scretbannerm"/>
+            </a>-->
+        </div>
+    <div class="entersecret">
+        <form class="secretcemacocom">
+            <div class="errorsecret">Ingresaste la palabra incorrecta, intenta de nuevo</div>
+            <!--<label>Para acceder al sitio interno, ingresa la palabra secreta</label>-->
+            <input type="password" class="inputsecret"/>
+            <button type="submit">Acceder</button>
+        </form>
+    </div>
+</div>
+
+<script>
+$( ".secretcemacocom" ).submit(function(e){
+    e.preventDefault();
+    //alert('secret');
+    if ($(".inputsecret").val() == "nuevositio") {
+        $(".secretword").hide();
+        Cookies.set('secretcemacocom', 'saved');
+    }else{
+        $( ".errorsecret" ).show();
+    };
+});
+
+$( ".inputsecret" ).click(function() {
+  $( ".errorsecret" ).hide();
+});
+
+$( document ).ready(function() {
+    if (!!$.cookie('secretcemacocom')) {
+        $(".secretword").hide();
+    } else{
+        $(".secretword").show();
+    };
+});
+
+$( ".closechat" ).click(function(e){
+	e.preventDefault();
+	Cookies.set('hidehotjarfreshchat', 'closed');
+	$("._hj-3J5sV__MinimizedWidgetBottom__open").hide();
+	$("#fc_widget").hide();
+	$(".closechat").hide();
+});
+</script>
+
+<style>
+.footer-button.hotjar{display:none;}
+.secretword{
+    position:fixed;
+    top:0;
+    left:0;
+    background:white;
+    z-index:651;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+.barraazul{
+    background:#101E8E;
+    width:100%;
+    height:20px;
+}
+.secretword .secretlogo {
+    max-width: 365px;
+    margin: 0 auto;
+    padding: 0 0 25px;
+}
+.secretword .secretbanner_desk{
+    width: 100%;
+    max-width: 1093px;
+    margin: 0 auto 0;
+    background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2020/img/palabrasecreta/bannercemacocom_desk_back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 237px;
+    padding:0px 0 0 64px;
+    text-align: left;
+}
+
+.secretword .secretbanner_desk h3 {
+    line-height: 13px;
+}
+
+.secretword .secretbanner_desk .botonircemacocom{
+    background-color: #94D500;
+    border-radius: 21px;
+    padding: 9px 37px;
+    margin: 20px 0 0;
+    color: #fff;
+    font-size: 19px;
+    width: fit-content;
+}
+
+.secretword .scretbannerm{
+    display:none;
+}
+.secretword .entersecret {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 120px 0 0;
+    color:#707070;
+}
+.secretword .entersecret .errorsecret{
+    display:none;
+    color:red;
+}
+.secretword .entersecret label{
+    padding:0 15px 0 0;
+    color: #6e6e6e;
+}
+.secretword .entersecret input{
+    max-width: 161px;
+    display: inline;
+    border-color: #6e6e6e;
+}
+.secretword .entersecret button{
+    display:block;
+    margin: 0 auto;
+    text-decoration:underline;
+    color: #6e6e6e;
+}
+.secretword h3{
+    padding: 75px 0 0;
+    font-size: 22px;
+}
+.closechat{
+    position: fixed;
+    bottom: 8.5%;
+    left: 2%;
+    z-index: 9999999999;
+    display: none;
+}
+.closechat .closechat-x{
+    color: #000;
+    z-index: 9;
+    background: #fff;
+    padding: 5%;
+    width: 24px;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px){
+    .secretword h3 {padding: 47px 0 0;}
+    .secretword .scretbanner {margin: 0px auto 0;}
+    .secretword .scretbannerm{display:block;}
+    .secretword .secretbanner_desk{background-position: -146px 0px;padding: 22px 0 0 35px;}
+    .secretword .entersecret {padding: 98px 0 0;color: #707070;max-width: 280px;}
+    .secretword .entersecret input {max-width: inherit;margin: 9px 0 7px;}
+}
+@media screen and (max-width:320px){
+  .secretword h3 {padding: 30px 0 0;font-size: 18px;}
+  .secretword .secretlogo {max-width: 291px;}
+  .secretword .secretbanner_desk .botonircemacocom {font-size: 16px;}
+  .secretword .secretbanner_desk {background-position: -198px 0px;padding: 22px 0 0 20px;min-height: 208px;}
+  .secretword .entersecret {padding: 15px 0 0;max-width: 270px;}
+  .closechat{display: initial; }
+}
+
+}
+</style>
+
+<header class="site-header" data-offset="75">
+    <!-- Top Bar. Begin -->
+    <div class="top-bar">
+        <div class="re-central">
+            <div class="top-bar__content">
+                <ul class="top-bar__list--left">
+                    <li class="top-bar__item">
+                        <a href="mailto:tusamigos@cemaco.com ">
+                            <svg class="svg-icon">
+                                <use href="#svg-icon-email"></use>
+                            </svg>
+                            Tusamigos@Cemaco.Com
+                        </a>
+                    </li>
+                    <li class="top-bar__item">
+                        <a href="tel:+50224999900">
+                            <svg class="svg-icon">
+                                <use href="#svg-icon-cellphone"></use>
+                            </svg>
+                            +(502)2499-9900
+                        </a>
+                    </li>
+                </ul>
+                <ul class="top-bar__list--right">
+                    <li class="top-bar__item">
+                        <a href="/jugueton">
+                            <img src="/arquivos/images_jugueton.png" alt="jugueton-logo" />
+                        </a>
+                    </li>
+                    <li class="top-bar__item">
+                        <a href="/">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 18" class="site-brand__svg">
+                                <title>CEMACO</title>
+                                <path d="M8.0606,11.5412a1.367,1.367,0,0,0,1.2879,1.3146,2.1082,2.1082,0,0,0,2.3038-2.3578A3.048,3.048,0,0,0,8.4907,7.8021a3.7715,3.7715,0,0,0-3.9416,3.9093c0,2.6737,2.291,4.99,6.9013,4.99h2.9308V7.71L7.9477,2.5075,1.7034,7.5222V18.4508H0V6.5754L7.9477.33,16.0851,6.859V18.4508H10.3143c-4.2715,0-7.7034-2.6781-7.7034-6.7393a5.6254,5.6254,0,0,1,5.88-5.7146,4.6288,4.6288,0,0,1,4.8562,4.5012,3.693,3.693,0,0,1-3.9984,4.0256,3.0689,3.0689,0,0,1-3.09-3.062,2.3266,2.3266,0,0,1,2.232-2.36c1.0481,0,1.7518.61,1.7518,1.3441a.86.86,0,0,1-.9079.9207,1.1452,1.1452,0,0,1-.9085-.57.8638.8638,0,0,0-.3655.7449" transform="translate(0 -0.33)" style="fill:#93d500"/><polygon points="30.443 12.051 33.204 12.051 33.204 9.789 30.443 9.789 30.443 7.934 34.311 7.934 33.844 5.672 27.792 5.672 27.792 16.369 33.983 16.369 34.638 14.111 30.443 14.111 30.443 12.051" style="fill:#fff"/><polygon points="44.658 5.423 41.179 11.974 37.81 5.423 37.778 5.423 34.846 16.25 37.562 16.622 38.481 11.49 38.511 11.49 41.069 16.622 41.101 16.622 43.909 11.475 43.939 11.475 44.859 16.622 47.527 16.25 44.689 5.423 44.658 5.423" style="fill:#fff"/><path d="M64.5226,14.5181a2.9858,2.9858,0,0,1-3.0894-3.1967,2.9841,2.9841,0,0,1,3.0894-3.1349,3.11,3.11,0,0,1,1.6312.5542L65.53,5.9044a4.625,4.625,0,0,0-1.2123-.1519,5.4177,5.4177,0,0,0-5.5355,5.6306,5.3015,5.3015,0,0,0,5.5522,5.5684,6.6873,6.6873,0,0,0,1.8715-.3862,2.5634,2.5634,0,0,0,.4562-.27l.1046-2.7416s-.1019.0773-.232.1686a3.6779,3.6779,0,0,1-2.0122.7955" transform="translate(0 -0.33)" style="fill:#fff"/><path d="M24.4006,14.5181a2.9851,2.9851,0,0,1-3.0888-3.1967,2.9845,2.9845,0,0,1,3.0888-3.1349,3.1162,3.1162,0,0,1,1.6328.5542l-.6253-2.8362a4.6245,4.6245,0,0,0-1.2111-.1519A5.4186,5.4186,0,0,0,18.66,11.3831a5.3024,5.3024,0,0,0,5.5533,5.5684,6.7122,6.7122,0,0,0,1.8714-.3862,2.7944,2.7944,0,0,0,.4562-.27l.1035-2.7416s-.1018.0773-.2331.1686a3.6745,3.6745,0,0,1-2.0111.7955" transform="translate(0 -0.33)" style="fill:#fff"/><path d="M73.29,5.7525a5.6581,5.6581,0,0,0-5.7079,5.6006,5.71,5.71,0,0,0,11.4181,0,5.659,5.659,0,0,0-5.71-5.6006m0,8.7656a3.1677,3.1677,0,1,1,3.0576-3.165,3.1866,3.1866,0,0,1-3.0576,3.165" transform="translate(0 -0.33)" style="fill:#fff"/><path d="M52.1548,12.6772l1.4192-2.62,1.4192,2.62ZM53.574,5.7525,47.8661,16.41l2.5736.5419L51.5145,14.66h4.0723l1.0916,2.2916,2.6987-.5419L53.6052,5.7525Z" transform="translate(0 -0.33)" style="fill:#fff"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="top-bar__item">
+                        <a href="/bebe-jugueton">
+                            <img src="/arquivos/images_bebe-jugueton.png" alt="bebe-jugueton" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar. End -->
+
+    <a href="/" class="site-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 18" class="site-brand__svg">
+            <title>CEMACO</title>
+            <path d="M8.0606,11.5412a1.367,1.367,0,0,0,1.2879,1.3146,2.1082,2.1082,0,0,0,2.3038-2.3578A3.048,3.048,0,0,0,8.4907,7.8021a3.7715,3.7715,0,0,0-3.9416,3.9093c0,2.6737,2.291,4.99,6.9013,4.99h2.9308V7.71L7.9477,2.5075,1.7034,7.5222V18.4508H0V6.5754L7.9477.33,16.0851,6.859V18.4508H10.3143c-4.2715,0-7.7034-2.6781-7.7034-6.7393a5.6254,5.6254,0,0,1,5.88-5.7146,4.6288,4.6288,0,0,1,4.8562,4.5012,3.693,3.693,0,0,1-3.9984,4.0256,3.0689,3.0689,0,0,1-3.09-3.062,2.3266,2.3266,0,0,1,2.232-2.36c1.0481,0,1.7518.61,1.7518,1.3441a.86.86,0,0,1-.9079.9207,1.1452,1.1452,0,0,1-.9085-.57.8638.8638,0,0,0-.3655.7449" transform="translate(0 -0.33)" style="fill:#93d500" class="isotype"/><polygon points="30.443 12.051 33.204 12.051 33.204 9.789 30.443 9.789 30.443 7.934 34.311 7.934 33.844 5.672 27.792 5.672 27.792 16.369 33.983 16.369 34.638 14.111 30.443 14.111 30.443 12.051" style="fill:#fff"/><polygon points="44.658 5.423 41.179 11.974 37.81 5.423 37.778 5.423 34.846 16.25 37.562 16.622 38.481 11.49 38.511 11.49 41.069 16.622 41.101 16.622 43.909 11.475 43.939 11.475 44.859 16.622 47.527 16.25 44.689 5.423 44.658 5.423" style="fill:#fff"/><path d="M64.5226,14.5181a2.9858,2.9858,0,0,1-3.0894-3.1967,2.9841,2.9841,0,0,1,3.0894-3.1349,3.11,3.11,0,0,1,1.6312.5542L65.53,5.9044a4.625,4.625,0,0,0-1.2123-.1519,5.4177,5.4177,0,0,0-5.5355,5.6306,5.3015,5.3015,0,0,0,5.5522,5.5684,6.6873,6.6873,0,0,0,1.8715-.3862,2.5634,2.5634,0,0,0,.4562-.27l.1046-2.7416s-.1019.0773-.232.1686a3.6779,3.6779,0,0,1-2.0122.7955" transform="translate(0 -0.33)" style="fill:#fff"/><path d="M24.4006,14.5181a2.9851,2.9851,0,0,1-3.0888-3.1967,2.9845,2.9845,0,0,1,3.0888-3.1349,3.1162,3.1162,0,0,1,1.6328.5542l-.6253-2.8362a4.6245,4.6245,0,0,0-1.2111-.1519A5.4186,5.4186,0,0,0,18.66,11.3831a5.3024,5.3024,0,0,0,5.5533,5.5684,6.7122,6.7122,0,0,0,1.8714-.3862,2.7944,2.7944,0,0,0,.4562-.27l.1035-2.7416s-.1018.0773-.2331.1686a3.6745,3.6745,0,0,1-2.0111.7955" transform="translate(0 -0.33)" style="fill:#fff"/><path d="M73.29,5.7525a5.6581,5.6581,0,0,0-5.7079,5.6006,5.71,5.71,0,0,0,11.4181,0,5.659,5.659,0,0,0-5.71-5.6006m0,8.7656a3.1677,3.1677,0,1,1,3.0576-3.165,3.1866,3.1866,0,0,1-3.0576,3.165" transform="translate(0 -0.33)" style="fill:#fff"/><path d="M52.1548,12.6772l1.4192-2.62,1.4192,2.62ZM53.574,5.7525,47.8661,16.41l2.5736.5419L51.5145,14.66h4.0723l1.0916,2.2916,2.6987-.5419L53.6052,5.7525Z" transform="translate(0 -0.33)" style="fill:#fff"/>
+        </svg>
+    </a>
+
+    <!-- Middle Bar | Right. Begin -->
+    <div class="middle-bar--right">
+        <ul class="middle-bar__list">
+            <li id="accountTriggerWrapper" class="middle-bar__item nav-ecommerce__item">
+                <a href="/account#/orders" class="nav-ecommerce__link">
+                    <svg class="svg-icon nav-ecommerce__icon--account">
+                        <use href="#svg-icon-account"></use>
+                    </svg>
+                    <span class="nav-ecommerce__label"></span>
+                </a>
+                <div id="accountMenu" class="AccountMenu">
+                    <div class="AccountMenu-header">
+                        <span id="accountMenuTitle" class="tag-title--level-2"><a href="/account#/profile">Iniciar sesión</a></span>
+                        <span id="activateAccount" class="tag-title--level-2"><a href="/account#/profile?activateAccount" >Activar cuenta</a></span>
+                        <button id="accountMenuClose" class="AccountMenu-trigger__close">
+                            <svg class="svg-icon">
+                                <use href="#svg-icon-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="AccountMenu-options">
+                        <li class="AccountMenu-option__with-log"><a href="/account#/profile" id="accountGreeting">Mi cuenta</a></li>
+                        <li class="AccountMenu-option__with-log"><a href="/account#/orders">Mis pedidos</a></li>
+                        <li class="AccountMenu-option__with-log"><a href="/account#/addresses">Direcciones</a></li>
+                        <li class="AccountMenu-option__with-log"><a href="/account/billing">Facturación</a></li>
+                        <li class="AccountMenu-option__with-log"><a href="/account/credito-en-linea">Crédito en línea</a></li>
+                        <li class="AccountMenu-option__with-log"><a href="/account/wishlist" class="AccountMenu-link__wishlist">Mi lista de deseos</a></li>
+                        <!-- <li class="AccountMenu-option__with-log"><a href="/account#/subscriptions">Suscripciones</a></li> -->
+                        <li class="AccountMenu-option__with-log"><a href="/account/puntos-privilegio">Puntos privilegio</a></li>
+                        <li class="AccountMenu-option__with-log"><a href="/logout" id="accountMenuAccess">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="middle-bar__item nav-ecommerce__item">
+                <a href="/account/wishlist">
+                    <svg class="svg-icon nav-ecommerce__icon--wishlist">
+                        <use href="#svg-icon-wishlist-outline"></use>
+                    </svg>
+                    <span id="total-wishlist-items" class="nav-ecommerce__label--counter">0</span>
+                </a>
+            </li>
+            <li id="minicart-container" class="middle-bar__item nav-ecommerce__item nav-ecommerce__item--minicart">
+                <a href="/checkout" class="nav-ecommerce__link">
+                    <svg class="svg-icon nav-ecommerce__icon--minicart">
+                        <use href="#svg-icon-cart"></use>
+                    </svg>
+                    <span id="total-cart-items" class="nav-ecommerce__label--counter">0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Middle Bar | Right. End -->
+
+    <!-- Nav. Begin -->
+    <vtex.cmc:xCemacoMainNavTwo />
+    <!-- Nav. End -->
+
+    <vtex.cmc:xCemacoCintilloHeader />
+
+
+    <div id="generalSearcherWrapper" class="searcher__wrapper">
+        <vtex.cmc:celebrosSearchBox />
+    </div>
+    <!-- Searcher. End-->
+</header>

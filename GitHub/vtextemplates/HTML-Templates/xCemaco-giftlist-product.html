@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+<title>CEMACO</title>
+<vtex:metaTags/>
+<vtex:template id="xCemaco-meta-tags" />
+<vtex:template id="xCemaco-styles" />
+<link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+<link rel="stylesheet" href="/arquivos/css-js_giftlist-product.css"/>
+<vtex:contentPlaceHolder id="page-styles" />
+<vtex.cmc:xCemacoFallback />
+</head>
+<body>
+<vtex:template id="xCemaco-header" />
+
+<main role="main" class="page-main--internal-page">
+	<div class="static-layout__content static-layout__mesa--manage">
+		<vtex:contentPlaceHolder id="Banner01" />
+		<vtex:contentPlaceHolder id="InternalMenu" />
+		<vtex:contentPlaceHolder id="Content01" />
+		<div class="re-central">
+			<div class="mdr__shelf-info--wrapper">
+				<!-- <h2 class="mdr__shelf-info-title"><span id="mdr__shelf-info-title">Boda</span></h2>
+                <h3 class="mdr__shelf-info-subtitle"><span id="mdr__shelf-info-listname">Boda pruebas 123</span></h3> -->
+                <h3 class="mdr__shelf-info-title3">Mensaje para tus invitados</h3>
+				<p class="mdr__shelf-info-txt"><span id="mdr__shelf-info-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec augue consequat, vulputate dui et, egestas lectus. Donec ornare elementum lorem ac tincidunt. Nam sit amet magna nec lorem sodales vestibulum quis et massa. Quisque tellus orci, convallis ac faucibus vel, elementum vitae est. Vivamus nunc lacus, tristique a urna ut, gravida lobortis tellus. Curabitur et accumsan turpis. Maecenas fermentum aliquam nulla, ac ullamcorper purus facilisis dapibus. Nullam ultrices urna vitae condimentum pharetra. Aliquam feugiat nibh mi, sit amet vehicula diam egestas eu.</span></p>
+
+                <div class="mdr__shelf-info-member-wrapper">
+                    <p class="mdr__shelf-info-member">Nombres: <span id="mdr__shelf-info-member1-name">Nombre</span></p>
+                    <p class="mdr__shelf-info-member">Apellidos: <span id="mdr__shelf-info-member1-lastname">Apellidos</span></p>
+                </div>
+                <div class="mdr__shelf-info-member-wrapper">
+                    <p class="mdr__shelf-info-member">Nombres: <span id="mdr__shelf-info-member2-name">Nombre</span></p>
+                    <p class="mdr__shelf-info-member">Apellidos: <span id="mdr__shelf-info-member2-lastname">Apellidos</span></p>
+                </div>
+                <div class="mdr__shelf-info-member-wrapper">
+                    <p class="mdr__shelf-info-member">Tienda de liquidación: <span id="mdr__shelf-info-store">Tienda</span></p>
+                    <a id="link_contrato" href="/arquivos/contrato-bodas-12102020.pdf" target="_blank">Ver contrato <svg class='svg-icon'><use href='#svg-icon-chevron-right'></use></svg></a>
+                </div>
+				<a id="link_edit" href="#" class="button-flat gray">Editar información</a>
+				<div class="mdr__shelf-share">
+					<h3 class="mdr__shelf-share-title">Compartir lista de regalos</h3>
+                    <p class="mdr__shelf-share-link"><span id="mdr__shelf-share-link">https://www.cemaco.com/list/bodadepruebas1</span></p>
+                    <div class="mdr__shelf-share-social">
+                        <a href="/" id="mdr__shelf-share-social-whatsapp" class="mdr__shelf-share-social-link" target="_blank"><svg class='svg-icon-whatsapp'><use href='#svg-icon-whatsapp'></use></svg></a>
+                        <a href="/" id="mdr__shelf-share-social-facebook" class="mdr__shelf-share-social-link" target="_blank"><svg class='svg-icon-facebook'><use href='#svg-icon-facebook'></use></svg></a>
+                        <a href="/" id="mdr__shelf-share-social-twitter" class="mdr__shelf-share-social-link" target="_blank"><svg class='svg-icon-twitter'><use href='#svg-icon-twitter'></use></svg></a>
+                    </div>
+                </div>
+                <div class="mdr__shelf-buttons">
+                    <a href="" id="mdr__shelf-info-received-gifts" class="button-flat gray">Regalos recibidos</a>
+                    <a href="/_secure/mesa-de-regalos/boda/categorias" id="mdr__shelf-info-advantages" class="button-flat gray" target="_blank">Beneficios</a>
+                </div>
+			</div>
+			<div class="mdr__shelf-items--wrapper">
+				<div class="mdr__shelf-item--titles">
+					<div class="mdr__shelf-item-title product"><span>Producto</span></div>
+					<div class="mdr__shelf-item-title price"><span>Precio</span></div>
+					<div class="mdr__shelf-item-title quantity"><span>Cantidad</span></div>
+					<div class="mdr__shelf-item-title action"><span>Eliminar</span></div>
+				</div>
+				<div class="mdr__shelf-item--wrapper">
+					<div id="GiftListProductsV2--wrapper"><vtex.cmc:GiftListProductsV2 size="500" image="29" /></div>
+				</div>
+            </div>
+        </div>
+        <div class="mdr__shelf-item-buy-out-list re-central">
+            <svg class='svg-icon'><use href='#svg-icon-bodas-logo'></use></svg>
+            <p>
+                <strong>Tu registro de boda está pendiente de liquidación</strong> <br />
+                Para liquidarlo, escríbenos a nuestro chat en línea
+                al correo <a href="mailto:bodas@cemaco.com">bodas@cemaco.com</a> o al WhatsApp <a href="https://wa.me/+50224999900">2499-9990</a>
+            </p>
+        </div>
+		<vtex:contentPlaceHolder id="Content02" />
+		<div id="GiftListInfoV2--wrapper"><vtex.cmc:GiftListInfoV2 /></div>
+		<div id="GiftListStatisticsV2--wrapper"><vtex.cmc:GiftListStatisticsV2 /></div>
+	</div>
+</main>
+
+<vtex:template id="xCemaco-footer" />
+<vtex:template id="xCemaco-svg-sprite" />
+<vtex:template id="xCemaco-scripts" />
+<!-- Plugins -->
+<script src="/arquivos/plugins_slick_slick.min.js"></script>
+<!-- Static Pages -->
+<script src="/arquivos/css-js_giftlist-product.js"></script>
+<vtex:contentPlaceHolder id="page-scripts" />
+<script type="text/html" id="template-mdr__shelf-item">
+	<div class="mdr__shelf-item">
+		<div class="mdr__shelf-item-image">
+			<a href="{#uri}">{#image}</a>
+		</div>
+		<div class="mdr__shelf-item-product">
+			<h3 class="mdr__shelf-item-name">{#name}</h3>
+			<div class="mdr__shelf-item-action">
+				<div class="mdr__shelf-item-qty">
+					<input type="text" inputmode="numeric" value="1" class="mdr__shelf-item-qty-input" />
+					<div class="mdr__shelf-item-qty-plus"></div>
+					<div class="mdr__shelf-item-qty-rest"></div>
+				</div>
+				<a href="#" data-skuid="$idSku" class="button-flat gray mdr__shelf-item-buy">Agregar a carreta</a>
+			</div>
+		</div>
+		<div class="mdr__shelf-item-price">
+			<strong>Precio</strong>
+			<span class="price-old">{#listPrice}</span>
+			<span class="price-new promo">{#bestPrice}</span>
+		</div>
+		<div class="mdr__shelf-item-purchased" data-skuid="$idSku"><strong>Comprados</strong><span>{#purchased}</span></div>
+		<div class="mdr__shelf-item-wished" data-skuid="$idSku"><strong>Deseados</strong><span>{#wished}</span></div>
+		<div class="mdr__shelf-item-needed" data-skuid="$idSku"><strong>Eliminar</strong><span>{#delete}</span></div>
+	</div>
+</script>
+<div class="confirmation-overlay"></div>
+<div class="confirmation-modal">
+	<h3 class="confirmation-title">¿Realmente deseas eliminar este producto de tu lista?</h3>
+	<p class="confirmation-message"></p>
+	<div class="confirmation-action">
+		<a href="#" class="confirmation-no btn-no button-flat gray">No</a>
+		<a href="#" class="confirmation-yes btn-yes button-flat tertiary">Sí</a>
+	</div>
+</div>
+</body>
+</html>

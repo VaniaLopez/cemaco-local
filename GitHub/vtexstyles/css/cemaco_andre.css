@@ -1,0 +1,2033 @@
+/* ========================
+Home de cemaco Vtex Andre 07-01-2021
+==========================*/
+
+/* Genericos */
+/*
+body{
+  font-family: 'helveticaneuemedium';
+}*/
+.contenet-image {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.tiendas .pre-footer {
+  width: 100%;
+}
+
+.txt-image {
+  position: absolute;
+  color: #ffffff;
+  top: 20px;
+  left: 50px;
+  width: 50%;
+  text-align: left;
+  font-size: 26px;
+}
+
+#prod-propositos {
+  font-size: 14px;
+}
+
+.margin-productos {
+  margin-bottom: 15px;
+}
+/* Texto de propositos */
+#txt-propositos {
+  top: 30%;
+  width: 84%;
+  font-size: 29px;
+  position: absolute;
+  color: #ffffff;
+  left: 30px;
+  text-align: left;
+}
+
+.btn-cemaco-default {
+  position: absolute;
+  background-color: #94d529;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+}
+
+.titulos-banners {
+  font-size: 20px;
+}
+/* Home - Jeancarlo */
+.carruselDeSpiffs section {
+  min-height: 300px;
+  background-size: cover;
+}
+.carruselDeSpiffs .portadita aside {
+  padding: 71px 0 0 10px;
+}
+.carruselDeSpiffs .swiper-slide.portadita h3 {
+  color: #fff;
+  text-align: left;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: normal;
+  padding: 30px 0 0;
+  text-align: left;
+}
+.carruselDeSpiffs .swiper-slide.portadita span {
+  color: white;
+  padding: 3px 0 0;
+  text-align: left;
+}
+.carruselDeSpiffs .swiper-slide h3 {
+  font-size: 21px;
+  line-height: 27px;
+  padding: 11px 0 5px;
+  font-weight: bold;
+  text-align: center;
+}
+.carruselDeSpiffs .swiper-slide span {
+  text-align: center;
+  display: block;
+}
+.home a:hover {
+  text-decoration: none;
+}
+/* Portada principal, el texto esta seperado de la imagen, se usa position relative y absolute */
+.banner-portada {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  /*background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/mobile/mbanner.jpg");*/
+  min-height: 371px;
+  background-size: cover;
+}
+
+.banner-portada1 {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/mobile/banner_home_enero_mobile.jpg");
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  min-height: 270px;
+}
+
+.banner-portada picture {
+  width: 110%;
+}
+.favoritos-title {
+  padding-bottom: 0;
+}
+.txt-portada {
+  /* display: flex;
+  justify-content: flex-end;
+  position: absolute; */
+  font-size: 52px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0px;
+}
+
+/* Img saludable */
+.img-saludable {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.txt-saludable {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  font-size: 35px;
+  color: #ffffff;
+  text-align: center;
+  font-style: bold;
+}
+
+/* ****************************DIV REGRESO A CLASES************************* */
+
+.titulos-banners-clases {
+  display: none;
+}
+
+#imagen-desk {
+  height: auto;
+  width: 121%;
+}
+
+/* ******************Banner liquidacion fin de año********************** */
+.banner-liquidacion {
+  display: flex;
+  justify-content: center !important;
+  align-items: flex-end;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 75px;
+}
+
+.banner-liquidacion picture {
+  width: 100%;
+  height: auto;
+}
+
+.btn-liquidacion {
+  position: absolute;
+  background-color: #94d529;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+  margin-bottom: 25px;
+  bottom: 0;
+}
+
+#liquidacion-btn {
+  display: block;
+}
+
+#cocina-txtm {
+  display: none;
+}
+
+/* ********************Banner cocina ********************** */
+.banner-cocina {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.text-cocina {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  font-size: 35px;
+  color: #000000;
+  text-align: left;
+  font-size: 17px;
+  width: 22%;
+  margin-left: 20px;
+}
+
+.cocina-electro {
+  margin-bottom: 10px;
+}
+
+.banner-cocina picture {
+  width: 100%;
+  height: auto;
+}
+
+#txt-cocina {
+  color: #000000;
+  width: 24%;
+  top: 30%;
+  font-size: 15px;
+  padding-left: 15px;
+}
+/* ***********************Banner privilegio*************************** */
+.banner-privi {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.btn-cemaco {
+  /* position: absolute; */
+  background-color: #94d529;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 12px;
+  /* margin-top: 240px; */
+}
+
+.banner-tech {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+/* ************************************************ Banner iconos ********************************************** */
+.banner-iconos {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.banner-iconos img {
+  width: 140px;
+  margin: auto;
+}
+
+/***************** Banner privilegio *******************/
+
+.txt-privilegio {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.txt-proyectos-todo {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#txt-proyectos-todo {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.m-top {
+  margin-top: 35px;
+  width: 65%;
+  margin: auto;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.m-bottom {
+  margin-bottom: 10px !important;
+}
+
+.banner-privilegio {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-default {
+  background-color: #94d529;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+}
+
+#puntos-display {
+  display: none;
+}
+
+#iconos-tarjetas {
+  height: 100px;
+  width: auto;
+}
+
+.ver-prod-txt {
+  font-size: 14px !important;
+}
+
+#ver-prod-txt {
+  font-size: 14px !important;
+}
+
+#ver-cocina {
+  display: none;
+}
+
+#necesitas-tech {
+  margin-top: 15px;
+}
+
+#ver-todo-txt {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.txt-titulos-propositos {
+  font-size: 23px;
+  margin-top: 12px;
+}
+
+.regreso-clase {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+.area-estudio {
+  color: #ffffff;
+  padding: 10px 0 0 20px;
+  width: 35%;
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/organizacion.jpg");
+  background-size: cover;
+  min-height: 445px;
+}
+
+.clase-presencial {
+  color: #ffffff;
+  padding: 10px 0 0 20px;
+  width: 64%;
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/autos.jpg");
+  background-size: cover;
+}
+
+.txt-preparate-mobile {
+  display: none;
+}
+
+/*================================================================================================================ */
+/*====================================================Privilegio Cemaco=========================================== */
+/*================================================================================================================ */
+#txt-conoce-beneficios {
+  margin-bottom: 2%;
+}
+
+/* =============================================================================================================== */
+/* =======================================================ACTIVIDADES============================================  */
+/* =============================================================================================================== */
+.landing--actividades .actividades .col-md-4 {
+  margin: 0 0 20px;
+}
+.landing--actividades .actividades .content--actividad {
+  background: var(--color-gray-4);
+  border-radius: 20px;
+  margin-top: 10%;
+}
+.landing--actividades .actividades .bg-actividad {
+  height: 240px;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.landing--actividades .detail--actividad {
+  padding: 14px 33px 30px;
+  display: flex;
+}
+.landing--actividades .detail--actividad h4 {
+  font-size: 24px;
+  padding: 0 0 7px;
+}
+.landing--actividades .detail--actividad h5 {
+  font-size: 16px;
+  padding: 0 0 2px;
+}
+.landing--actividades .detail--actividad p {
+  font-size: 15px;
+  color: #000000;
+}
+
+.banner--actividades {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/banner.jpg");
+  width: 100%;
+  height: 450px;
+  margin-bottom: 5%;
+  padding: 172px 0px 0px 20px;
+  background-size: cover;
+}
+
+.icons-actividad {
+  margin-top: 5%;
+}
+
+.info-actividad {
+  flex-wrap: nowrap;
+  margin-top: 15px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.hide-p {
+  display: none;
+}
+
+.show-p {
+  display: block;
+}
+
+.fb-live-actividades {
+  width: 90%;
+}
+
+.board-activities__covid .icons-actividad img {
+  width: 90%;
+}
+
+#fblive-ic {
+  width: 90%;
+}
+
+.banner-act .bg-activities {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/banner-full.jpg");
+  background-position: inherit;
+  min-height: 520px;
+}
+
+.banner-act .static-layout-banner--wrapper {
+  padding-bottom: 0px;
+}
+
+.banner-act .static-layout__content {
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 375px) {
+  #liquidacion-btn {
+    display: block;
+  }
+
+  #cocina-txt {
+    display: none;
+  }
+  #cocina-txtm {
+    display: block;
+  }
+
+  /* Texto de propositos */
+  #txt-propositos {
+    width: 80%;
+    font-size: 37px;
+    position: absolute;
+    color: #ffffff;
+    text-align: center;
+    display: block !important;
+  }
+
+  #imagen-desk {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  #sano {
+    margin-bottom: 20px;
+  }
+
+  .banner-tech {
+    padding: 5%;
+  }
+
+  #prod-propositos {
+    display: none;
+  }
+  .txt-image {
+    display: none;
+  }
+  .regreso-clases img {
+    width: 90%;
+    margin: auto;
+  }
+
+  .titulos-banners-clases {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px !important;
+  }
+
+  .titulos-banners-clases b {
+    font-size: 25px;
+  }
+
+  .banner-cocina {
+    margin: auto;
+  }
+
+  /* Banners portadao */
+  .txt-portada {
+    margin-top: 0;
+    font-size: 19px;
+  }
+
+  .banner-cocina img {
+    width: 90%;
+    margin: auto;
+  }
+
+  .btn-cemaco {
+    /* font-size: 12px;
+    padding: 5px 20px;
+    margin-top: 210px; */
+  }
+  .banner-portada {
+    margin-left: 5%;
+    margin: auto;
+    padding-bottom: 55%;
+  }
+
+  .banner-privilegio {
+    padding: 30px 5px;
+  }
+
+  #puntos-display {
+    display: block;
+  }
+
+  .btn-default {
+    margin-top: 30px;
+  }
+
+  #ver-todo-txt {
+    margin-bottom: 30px;
+  }
+
+  #ver-todo-txt2 {
+    display: none;
+  }
+
+  .txt-imper {
+    display: none;
+  }
+
+  #iconos-tarjetas {
+    height: 24px;
+    width: auto;
+  }
+
+  .txt-p-spiff {
+    font-size: 12px;
+  }
+
+  .minispiff-item p strong {
+    font-size: 17px;
+  }
+
+  .minispiff-item p {
+    font-size: 9px;
+  }
+
+  .row.fullcontent-bebe {
+    font-size: 12px;
+  }
+  #ver-cocina {
+    display: block;
+    text-align: center;
+  }
+
+  .txt-pryectos-desc {
+    width: 84%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .minispiff-item p.parati-text {
+    font-size: 14px;
+    margin-bottom: 40px;
+    width: 98%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .ver-mas-prop {
+    margin-bottom: 20px !important;
+  }
+
+  .banner-iconos img {
+    float: left;
+    width: 40%;
+  }
+
+  .banner-iconos .col-sm-6,
+  .col-xs-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 5%;
+  }
+
+  .txt-envios {
+    color: #101e8e;
+    margin-top: 2%;
+  }
+
+  #icon-seguridad {
+    width: 30%;
+    margin-left: 20px;
+  }
+
+  #icon-garantia {
+    width: 55%;
+  }
+
+  #txt-garantia {
+    margin-top: 10%;
+  }
+
+  #txt-seguridad {
+    margin-top: 10%;
+  }
+  /* .regreso-clase {
+      flex-direction: column;
+  }*/
+
+  .banner-tech .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .regreso-clase {
+    flex-direction: column;
+  }
+
+  .area-estudio {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/mobile/morganizacion.jpg");
+    min-height: 285px;
+    width: 100%;
+  }
+
+  .clase-presencial {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/mobile/mautos.jpg");
+    min-height: 265px;
+    width: 100%;
+    margin-top: 10%;
+  }
+
+  .txt-preparate-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .banner--actividades {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/mobile/banner-mobile.jpg");
+    background-repeat: no-repeat;
+    padding: 10px 0px 0px 10px;
+    margin-bottom: 1%;
+    margin: auto;
+    height: 300px !important;
+  }
+
+  .banner-act .bg-activities {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/mobile/banner-mobile.jpg");
+    background-position: inherit;
+    min-height: 300px;
+  }
+
+  .txt-banner-actividades {
+    margin-top: 12%;
+  }
+
+  .info-actividad h4:first-child {
+    font-size: 21px;
+  }
+
+  .info-actividad h4:nth-child(2) {
+    font-size: 17px;
+  }
+
+  .content--actividad .bg-actividad {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/mobile/corriente-mobile.jpg");
+  }
+
+  #txt-title-proyectos {
+    font-size: 1.313;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .naranjomall-store .horario.horario-bebe {
+    min-height: 112px;
+    align-items: flex-end;
+  }
+  .banner-portada {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/banner.jpg");
+  }
+  .direccion-tienda {
+    height: 119px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .direccion-tienda {
+    height: 95px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 762px) {
+  #liquidacion-btn {
+    display: block;
+  }
+
+  #iconos-tarjetas {
+    height: 24px;
+    width: auto;
+  }
+
+  #cocina-txt {
+    display: none;
+  }
+
+  #cocina-txtm {
+    display: block;
+  }
+
+  #ver-todo-txt2 {
+    display: none;
+  }
+
+  .txt-imper {
+    display: none;
+  }
+
+  /* Texto de propositos */
+  #txt-propositos {
+    display: block;
+    width: 90%;
+    font-size: 30px !important;
+    position: absolute;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  #prod-propositos {
+    display: none;
+  }
+
+  #sano {
+    margin-bottom: 20px;
+  }
+
+  .txt-image {
+    display: none;
+  }
+  .regreso-clases img {
+    width: 90%;
+    margin: auto;
+  }
+
+  #imagen-desk {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  .banner-tech {
+    padding: 0;
+  }
+
+  .titulos-banners-clases {
+    display: block;
+    font-style: bold;
+    text-align: center;
+  }
+
+  .titulos-banners-clases b {
+    font-size: 25px;
+  }
+
+  .banner-cocina img {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* Banners portadao */
+  .txt-portada {
+    font-size: 25px;
+  }
+
+  .btn-cemaco {
+    font-size: 12px;
+  }
+
+  .banner-portada {
+    margin-left: 5%;
+    margin: auto;
+    padding-bottom: 55%;
+  }
+
+  .banner-privilegio {
+    padding: 30px 5px;
+  }
+  #puntos-display {
+    display: block;
+  }
+
+  .txt-pryectos-desc {
+    width: 84%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  #ver-cocina {
+    display: block;
+    text-align: center;
+  }
+
+  .regreso-clase {
+    flex-direction: column;
+  }
+
+  .area-estudio {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/mobile/morganizacion.jpg");
+    min-height: 265px;
+    width: 100%;
+  }
+
+  .clase-presencial {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/home/feb15-16/mobile/mautos.jpg");
+    min-height: 265px;
+    width: 100%;
+    margin-top: 10%;
+  }
+
+  .txt-preparate-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .banner--actividades {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/mobile/banner-mobile.jpg");
+    background-repeat: no-repeat;
+    padding: 70px 0px 0px 10px;
+    margin-bottom: 1%;
+    margin: auto;
+    height: 300px;
+  }
+
+  .info-actividad h4:first-child {
+    font-size: 21px;
+  }
+
+  .info-actividad h4:nth-child(2) {
+    font-size: 17px;
+  }
+
+  #mis-pedidos dd,
+  #puntos-privilegio dd {
+    font-size: 16px;
+  }
+
+  .banner--actividades {
+    padding-top: 6%;
+  }
+
+  .banner-act .bg-activities {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/mobile/banner-mobile.jpg");
+    background-position: inherit;
+    min-height: 325px;
+  }
+
+  .minispiff-item p.parati-text {
+    font-size: 14px;
+    margin-bottom: 40px;
+    width: 81%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #txt-title-proyectos {
+    font-size: 1.313em;
+  }
+  #height-mobile {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 765px) and (max-width: 1000px) {
+  #liquidacion-btn {
+    display: none;
+  }
+
+  #cocina-txt {
+    display: none;
+  }
+
+  #cocina-txtm {
+    display: block;
+  }
+
+  /* Texto de propositos */
+  #txt-propositos {
+    display: block;
+    width: 70%;
+    font-size: 15px;
+    position: absolute;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  #prod-propositos {
+    display: none;
+  }
+
+  #sano {
+    margin-bottom: 20px;
+  }
+
+  .txt-image {
+    display: block;
+    font-size: 15px;
+  }
+
+  .ver-prod-txt {
+    font-size: 10px !important;
+  }
+  .regreso-clases img {
+    width: 90%;
+    margin: auto;
+  }
+
+  .banner-tech {
+    padding: 5%;
+  }
+
+  .titulos-banners-clases {
+    display: none;
+    font-style: bold;
+    text-align: center;
+  }
+
+  .banner-cocina img {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* Banners portadao */
+  .txt-portada {
+    font-size: 25px;
+  }
+
+  .btn-cemaco {
+    font-size: 12px;
+    margin-top: 20%;
+  }
+
+  .txt-portada {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  .regreso-clase {
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+  }
+
+  .area-estudio {
+    min-height: 265px;
+    width: 100%;
+    margin-right: 1%;
+  }
+
+  .clase-presencial {
+    min-height: 265px;
+    width: 100%;
+  }
+
+  .clase-presencial h4 {
+    font-size: 15px;
+  }
+
+  .clase-presencial p {
+    font-size: 10px;
+  }
+
+  .area-estudio h4 {
+    font-size: 15px;
+  }
+
+  .area-estudio p {
+    font-size: 10px;
+  }
+
+  .txt-preparate-mobile {
+    display: none;
+    text-align: center;
+  }
+
+  .banner-tech {
+    margin-top: 0;
+  }
+  .minispiff-item .parati-text p {
+    font-size: 24;
+  }
+
+  #btn-privi {
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+
+  #txt-proyectos-todo {
+    font-size: 23px;
+  }
+
+  #txt-cocina {
+    font-size: 70%;
+  }
+
+  .banner--actividades {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/mobile/banner.jpg");
+    background-repeat: no-repeat;
+    padding: 10px 0px 0px 10px;
+    margin-bottom: 1%;
+    margin: auto;
+    height: 300px !important;
+  }
+
+  .landing--actividades .actividades .content--actividad {
+    height: 95%;
+  }
+
+  .banner-act .bg-activities {
+    background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/cemaco/actividades/mobile/banner-mobile.jpg");
+    background-position: inherit;
+    min-height: 325px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1370px) {
+  .txt-portada {
+    margin-top: 70px;
+  }
+
+  /* .btn-cemaco {
+    margin-top: 190px;
+  } */
+
+  .landing--actividades .actividades .content--actividad {
+    height: 95%;
+  }
+
+  .info-actividad h4:first-child {
+    font-size: 21px;
+  }
+
+  .info-actividad h4:nth-child(2) {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================================================================== */
+/* ===========================================TIENDAS CEMACO================================================== */
+/* =========================================================================================================== */
+
+/* Id de portada para escritorio, en los media query se pasa none cuando se requiera (las imagenes de desk y mobile son diferentes) */
+#portada-desk {
+  display: block;
+}
+
+#portada-mobile {
+  display: none;
+}
+
+#compra-desk {
+  display: block;
+}
+
+#compra-mobile {
+  display: none;
+}
+
+.titulos-tiendas {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.retirar-tienda {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  width: 85px;
+}
+
+.vl {
+  border-left: 6px solid #ffffff;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.tiendas {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto;
+  max-width: 100%;
+  align-items: stretch;
+}
+
+.portada {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.image-tiendas {
+  max-width: 10% !important;
+  height: auto !important;
+  display: inline !important;
+}
+
+/* Contenedor de tienda individual */
+.tienda {
+  background: #f6f6f6;
+  padding: 10px;
+  height: 162px;
+  width: 426px;
+  text-align: left;
+  margin: 5px;
+}
+
+.direccion-tienda {
+  font-weight: bold;
+  height: 63px;
+}
+
+.horario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 9px 0 10px;
+}
+.horario.horario-bebe img {
+  width: 130px;
+}
+.horario-bebe .content-bebe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.direccion-tienda {
+  margin-bottom: 10px;
+}
+
+.horario img {
+  width: 100px;
+}
+.horario.horario-bebe .iconos img {
+  width: auto;
+}
+.horario .telefono {
+  display: block;
+  text-align: right;
+  width: 120%;
+}
+
+/* .horario-jugueton,
+.horario-bebe{
+} */
+
+.titulo {
+  flex-wrap: wrap;
+  font-size: 20px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.info {
+  flex-wrap: wrap;
+  display: block;
+  margin-top: 15px;
+}
+
+.info p {
+  width: 100%;
+  display: block;
+  font-size: 14px;
+}
+
+/* Contenedor de la imagen y del texto, queda position relative y texto debe de ser absolute */
+.banner {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  /* Ocupar el 100% del ancho */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 2%;
+}
+
+.iconos {
+  /* flex-direction: row !important;*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bg-tienda {
+  background-color: #f6f6f6;
+  text-align: left;
+  padding: 20px 23px 0;
+  margin-bottom: 30px;
+}
+
+/* Clases de banner de contacto */
+.banner-contacto {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.txt-contacto {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  font-size: 30px;
+  color: black;
+  text-align: justify;
+  font-weight: bold;
+  margin-left: 5px;
+  width: 30%;
+}
+
+.btn-contacto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: absolute;
+  background-color: #94d529;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+.contactar-mobile {
+  display: none;
+  margin-top: 120px;
+}
+
+/* Clases de banner compra en linea */
+.banner-compra {
+  display: flex;
+  flex-direction: row;
+  background-color: #101e8e;
+  color: white;
+  height: 288px;
+  margin: 20px 0px;
+}
+
+.compra {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.auto-servicio {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.icon-autoservicio {
+  width: 507px;
+  margin: 10px;
+}
+
+.txt-compra {
+  color: white;
+  font-size: 34px;
+}
+
+.btn-auto {
+  background-color: #94d529;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+/* Texto del banner principal, se cambio a texto y no va sobre la imagen position absolute */
+.txt-banner {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  font-size: 46px;
+  color: white;
+  text-align: justify;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.dudas {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.txt-dudas {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 1vw;
+  color: #000000;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.titulos-tiendas h1 {
+  text-transform: capitalize !important;
+  margin-right: 10px;
+  font-size: 30px !important;
+  font-weight: bold;
+  font-family: "helveticaneuemedium", Arial;
+  color: black !important;
+}
+
+.maps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#waze {
+  height: 25px important;
+}
+
+#maps {
+  height: 10px important;
+  margin-top: 1px;
+}
+
+.fullspiff {
+  display: flex;
+  justify-content: center !important;
+}
+
+.btn-nuevo {
+  display: inline;
+  float: right;
+  border: 1px solid #27a85d;
+  border-radius: 20px;
+  padding: 3px 26px 7px;
+  text-align: center;
+}
+
+.btn-nuevo p {
+  display: inline;
+  color: #27a85d;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#cayala {
+  padding-bottom: 5%;
+}
+
+/*
+  .col-md-4, .col-lg-4 .bg-tienda{
+    margin-bottom: 10px;
+  }
+  */
+
+/* -------------------------------------Inicio de media---------------------------------------------- */
+
+@media only screen and (max-width: 340px) {
+  .titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+
+  .image-tiendas {
+    max-width: 40% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  #portada-desk {
+    display: none !important;
+  }
+
+  #portada-mobile {
+    display: block;
+  }
+
+  #txt-direccion {
+    height: 85px;
+  }
+
+  #compra-mobile {
+    display: block;
+  }
+
+  #compra-desk {
+    display: none;
+  }
+
+  .txt-banner {
+    /*font-size: 20vw;*/
+    font-size: 25px;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-left: 2vw;
+  }
+
+  .direccion {
+    font-size: 5vw;
+    text-align: justify;
+  }
+
+  .horario {
+    font-size: 11px;
+  }
+
+  .tienda {
+    font-size: 5vw;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 8px;
+    align-content: center;
+    width: 100%;
+  }
+
+  .iconos {
+    align-items: baseline;
+  }
+
+  .gmaps {
+    width: 20px !important;
+  }
+
+  .contactar {
+    display: none;
+    color: white;
+    position: absolute;
+    font-size: 16px;
+    background: #94d500;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    position: absolute;
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .btn-auto {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .txt-contacto {
+    font-size: 16px;
+    top: 20%;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 63%;
+  }
+
+  .btn-contacto {
+    font-size: 12px;
+    padding: 5px 10px;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 63%;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+  }
+
+  .contactar-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .banner-compra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 288px;
+    margin: 50px 0px;
+    padding-bottom: 300px;
+  }
+
+  .icon-autoservicio {
+    display: block;
+    height: 80px;
+    width: auto;
+  }
+
+  .txt-compra {
+    font-size: 20px !important;
+  }
+
+  .auto-servicio {
+    width: 90%;
+  }
+
+  .compra {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .retirar-tienda {
+    width: 30%;
+  }
+
+  .info p {
+    width: 100%;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+}
+
+@media only screen and (min-width: 341px) and (max-width: 550px) {
+  .image-tiendas {
+    max-width: 40% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  #portada-desk {
+    display: none;
+  }
+
+  #portada-mobile {
+    display: block;
+  }
+
+  #compra-mobile {
+    display: block;
+  }
+
+  #compra-desk {
+    display: none;
+  }
+
+  .info {
+    margin-left: 2vw;
+  }
+
+  .titulo {
+    margin-left: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 140%;
+  }
+
+  .retirar-tienda {
+    float: right;
+    width: 33%;
+  }
+
+  .tienda {
+    margin-bottom: 8px;
+    align-content: center;
+    width: 100%;
+    height: 190px;
+  }
+
+  .txt-banner {
+    font-size: 200%;
+  }
+
+  .txt-dudas {
+    font-size: 12px;
+  }
+
+  .contactar {
+    display: none;
+    font-size: 2vw;
+    padding: 2px;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+
+  .contactar {
+    display: none;
+    color: white;
+    position: absolute;
+    font-size: 16px;
+    background: #94d500;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    position: absolute;
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .btn-auto {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .txt-contacto {
+    font-size: 20px;
+    top: 180%;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    margin-top: -95%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 62%;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .btn-contacto {
+    font-size: 15px;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 80px;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+  }
+
+  .contactar-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .banner-compra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    margin: 20px 0px;
+    padding-bottom: 50px;
+  }
+
+  .icon-autoservicio {
+    display: block;
+    height: 150px;
+    width: auto;
+  }
+
+  .txt-compra {
+    font-size: 20px !important;
+  }
+
+  .auto-servicio {
+    width: 90%;
+  }
+
+  .compra {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .info p {
+    width: 100%;
+  }
+
+  .direccion-mobile {
+    height: auto;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 1000px) {
+  .tiendas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 195px;
+  }
+
+  .tienda {
+    justify-content: center;
+    width: 320px;
+    margin-bottom: 10px;
+  }
+
+  .txt-banner {
+    font-size: 20px;
+  }
+
+  .retirar-tienda {
+    width: 50px;
+  }
+
+  .titulo {
+    display: inline;
+  }
+
+  /* .titulo-encabezado {
+    padding: 5% 1%;
+  } */
+
+  .image-tiendas {
+    max-width: 20% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  .contactar {
+    display: none;
+    color: white;
+    position: absolute;
+    font-size: 16px;
+    background: #94d500;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    position: absolute;
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .btn-auto {
+    font-size: 12px;
+  }
+
+  .txt-contacto {
+    font-size: 25px;
+    top: 15%;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .btn-contacto {
+    font-size: 20px;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 100px;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+  }
+
+  .contactar-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .banner-compra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 288px;
+    margin: 40px 0px;
+  }
+
+  .icon-autoservicio {
+    display: block;
+    height: 150px;
+    width: auto;
+  }
+
+  .txt-compra {
+    font-size: 25px !important;
+  }
+
+  .auto-servicio {
+    width: 90%;
+  }
+
+  .compra {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  #compra-mobile {
+    display: block;
+  }
+
+  #compra-desk {
+    display: none;
+  }
+
+  .info p {
+    width: 100%;
+  }
+  .info span {
+    font-size: 80%;
+  }
+
+  .btn-nuevo {
+    padding: 1px 10px 3px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .express-store-sanlucas .titulo {
+    font-size: 18px;
+  }
+  .tienda {
+    width: 250px;
+    height: 162px;
+    margin-top: 20px;
+  }
+
+  .image-tiendas {
+    max-width: 17% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+  .custom-stores .direccion-tienda {
+    height: auto;
+  }
+  .direccion-tienda {
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .horario {
+    font-size: 12px;
+  }
+
+  .retirar-tienda {
+    width: 32%;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  #height-san-cristobal {
+    height: 175px;
+  }
+
+  #express {
+    height: 182px !important;
+    margin-top: 20px;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .express-store-sanlucas .titulo {
+    font-size: 15px;
+  }
+  .naranjomall-store .horario.horario-bebe {
+    min-height: 96px;
+  }
+  .custom-stores .col-md-12:first-child .bg-tienda {
+    margin-bottom: 0.8em;
+  }
+  .tienda {
+    width: 400px;
+    height: 180px !important;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .image-tiendas {
+    max-width: 13% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  .direccion-tienda {
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .horario {
+    font-size: 12px;
+  }
+
+  .retirar-tienda {
+    width: 32%;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  #height-san-cristobal {
+    height: 175px;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .custom-stores .col-md-12:first-child .bg-tienda {
+    margin-bottom: 1.7em;
+  }
+  .express-store-sanlucas .titulo {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .tienda {
+    width: 426px;
+    height: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.row.fullcontent-bebe.express-stores {
+  margin-bottom: 80px;
+}
+.horario.horario-bebe {
+  flex-direction: row;
+}

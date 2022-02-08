@@ -1,0 +1,155 @@
+.sending{
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(white,.7) url('#{$image-path}loading.gif') 50% 90% no-repeat;
+		z-index: 2;
+	}
+}
+#form-create-priv{
+	&.sending{
+		@extend .sending;
+	}
+}
+#TipoID{
+	position: absolute;
+	left: 16px;
+	top: 10px;
+	width: 105px;
+	background-color: $c-light-gray;
+	background-position: 90% 50%;
+}
+#Identificacion{
+	padding-left: 125px;
+}
+.priv{
+	&__identity{
+		&--wrapper{
+			position: relative;
+			padding: 10px 0 10px 16px;
+		}
+	}
+	&__zone{
+		&-input{
+			&--wrapper{
+				padding: 10px 0 10px 16px;
+			}
+		}
+	}
+	&__state{
+		display: none;
+		margin: 1em auto 3em;
+		.button-flat{
+			font-weight: $font-bold;
+		}
+		&-title{
+			&-blue{
+				font-size: 1.5rem;
+				line-height: 1.5;
+				color: $c-primary;
+				font-weight: $font-regular;
+			}
+		}
+		&-subtitle{
+			&-black{
+				font-size: 1.25rem;
+				font-weight: $font-bold;
+				color: $c-dark;
+			}
+			&-gray{
+				font-size: 1.25rem;
+				font-weight: $font-bold;
+				color: $c-dim-gray;
+				padding-bottom: 0;
+			}
+		}
+		&-desc{
+			font-size: 1rem;
+			color: $c-dim-gray;
+			padding-bottom: 1em;
+		}
+		&-back{
+			color: $c-secondary;
+			font-weight: $font-bold;
+			cursor: pointer;
+			text-decoration: none!important;
+			padding: 10px 20px 10px 0;
+			margin: 1em 0;
+			&:hover,
+			&:focus,
+			&active{
+				color: $c-secondary;
+			}
+			svg{
+				width: 12px;
+				height: 12px;
+			}
+		}
+		&-banner{
+			margin-top: 2.5em;
+			@include mediaFrom(lg){
+				margin-top: 5em;
+			}
+		}
+		&-input{
+			&--wrapper{
+				margin-bottom: 0;
+				padding: 10px 0 10px 16px;
+			}
+		}
+		&-img{
+			display: block;
+			width: 80%;
+			max-width: 272px;
+			height: auto;
+			margin: 0 auto;
+		}
+		&-link{
+			&--wrapper{
+				position: relative;
+				&.sending{
+					@extend .sending;
+				}
+			}
+		}
+		&-info{
+			&--wrapper{
+				width: 100%;
+				background: $c-primary url('#{$image-path}images-privilegio-bg.png') center center no-repeat;
+				background-size: cover;
+				color: white;
+				text-align: center;
+				padding: 1.5rem 1rem 2rem;
+			}
+			&-name{
+				font-size: 1.85rem;
+				line-height: 1.1;
+				margin-top: 1rem;
+			}
+			&-card{
+				font-size: 1.85rem;
+				line-height: 1.1;
+			}
+			&-balance{
+				font-size: 2rem;
+				line-height: 1.1;
+				margin-top: .5rem;
+				font-weight: $font-bold;
+			}
+
+		}
+	}
+}
+#priv__loading{
+	img{
+		width: auto;
+		height: auto;
+		display: block;
+		margin: 5em auto 15px;
+	}
+}

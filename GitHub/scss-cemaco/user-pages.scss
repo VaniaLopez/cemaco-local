@@ -1,0 +1,135 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+// Vtex
+$c-fb: #3b5998;
+$c-fb-l1: lighten($c-fb, 10);
+$c-fb-d1: darken($c-fb, 10);
+
+// Settings
+@import "_settings/settings";
+$c-border-account: $c-dusty-gray;
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+// Modules - Estilos para módulos re-utilizables
+@import "_modules/static-menu";
+@import "_modules/product-list";
+
+// Vtex
+@import "_vtex/login";
+@import "_vtex/account-orders";
+@import "_vtex/account-orders-quick-fix";
+@import "_vtex/account-profile";
+@import "_vtex/orders";
+@import "_vtex/wishlist";
+@import "_vtex/account-privilegio";
+// @import "_vtex/account-all";
+
+// Datepicker
+@import "../scss-plugins/datepicker/datepicker";
+
+span[data-i18n="vtexid.selectAuthOption"]{
+    font-size: 0;
+    text-transform: initial;
+    &:after{
+        content: '¡Bienvenido! ¿Cómo deseas iniciar tu sesión?';
+        font-size: rem(16);
+    }
+}
+
+.tag-title--account{
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0.25em;
+    margin-bottom: 0;
+    border-bottom: 1px solid $c-dusty-gray;
+    font-family: $font-title !important;
+    font-size: 1.85rem !important;
+    font-weight: $font-bold !important;
+    color: $c-dark-gray !important;
+}
+
+.tag-title--account-2{
+    text-align: center;
+    color: $c-dusty-gray !important;
+    font-size: rem(28);
+}
+
+.tag-title--account-3{
+    color: $c-secondary !important;
+    font-size: rem(17);
+}
+
+// Labels & Controls
+label{
+    border: none;
+    margin-bottom: 0.5em;
+    display: block;
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: $font-regular;
+    color: $c-dark-gray;
+    line-height: 25px;
+    span{
+        height: 25px;
+        margin-left: 2px;
+        font-family: $font-number;
+        font-weight: $font-light;
+        color: inherit;
+    }
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
+input[type="password"],
+input[type="file"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="time"],
+input[type="week"],
+input[type="month"],
+input[type="color"],
+select,
+textarea{
+    width: 100%;
+    height: 35px !important;
+    display: block;
+    clear: both;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $c-pastel-gray;
+    font-size: 14px !important;
+    font-weight: $font-light;
+    color: $c-dark-gray !important;
+    background-color: rgba(white,0.8);
+    box-shadow: none !important;
+    @include placeholder(lighten($c-text,45));
+    transition: all .5s ease;
+    &:focus{
+        border-color: $c-pastel-gray !important;
+    }
+    &.touched:invalid{
+        border: 1px dashed $c-invalid;
+        box-shadow: none;
+    }
+}
+input[type="file"]{
+    height: 32px;
+}
+input[type="checkbox"],
+input[type="radio"]{
+    margin: 5px 5px 0 0;
+}
+textarea{
+    height: 80px;
+}

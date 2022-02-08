@@ -1,0 +1,345 @@
+@import '../../abstracts/variables';
+@import '../../abstracts/mixins';
+
+.propositos{
+    .text-white{
+        color:#fff !important;
+    }
+    .pointer{
+      cursor: pointer;  
+    }
+    h2, h3, h4, h5, h6{
+        &.tag-title--level-3{
+            font-size: 1.302em;;
+            @include responsive(sm){
+                font-size: 1.875em;
+            }
+        }
+    }
+    a{
+        &:hover,
+        &:focus{
+            text-decoration: none;
+        }
+    }
+    #productSingleModal{
+        display: none;
+    }
+    .products-slider__wrapper{
+        width: 100%!important;
+        .products-slider__container{
+             background: #F7F7F7;
+            margin-left: 0;
+            margin-right: 0;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .prateleira{
+            &.vitrine{
+                h2{
+                    padding-bottom: 0;
+                }
+                p{
+                    text-decoration: underline;
+                    font-weight: normal;
+                    margin-bottom: 5px;
+                    font-size: 0.813em;
+                    @include responsive(md){
+                        font-size: .613em;
+                    }
+                    .svg-icon {
+                       width: 0.7rem;
+                       height: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+    .banners-slider__wrapper{
+        #txt-proyectos-todo{
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            @include responsive(md){
+                font-size: 1.25em;
+            }
+            @include responsive(lg){
+                font-size: 1.118em;
+            }
+        }
+        #ver-todo-txt{
+            font-size: 0.875em;
+            text-decoration: underline;
+        }
+    }
+    
+    .spiff__after-slider{
+        h4{
+            font-size: 1.25em;
+            @include responsive(lg){
+                font-size: 1.23em;
+            }
+        }
+        p{
+            font-size: .67em;
+            @include responsive(lg){
+                font-size: .75em;
+            }
+            @include responsive(xxl){
+                font-size: 0.95em;
+            }
+            u{
+                font-size: .93em;
+            }
+
+        }
+    }
+
+    .banner-single{
+        margin: 0 0 1em;
+        @include responsive(md){
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+        }
+        &.txt-infront-image{
+            position: relative;
+            .content{
+                position: absolute;
+                top: calc(100% - 95px);
+                width: 100%;
+                @include responsive(md){
+                    top: 0;
+                }
+            }
+        }
+        .content{
+            color: black;
+            text-align: center;
+            @include responsive(md){
+                position: absolute;
+                color: white;
+                top: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 0 0 0 2em;
+                text-align: inherit;
+            }
+            h3{
+                font-size: 1.1rem;
+                margin: 3% 0 0;
+                @include responsive(md){
+                    font-size: 0.9em;
+                    margin: 0;
+                }
+                @include responsive(xl){
+                    font-size: 1.25em;
+                }
+                @include responsive(xxl){
+                    font-size: 1.625em;
+                }
+            }
+            .vermas{
+                text-decoration: underline;
+                font-size: 0.9em;
+                font-weight: bold;
+                @include responsive(md){
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    .teofrecemos{
+        background-color: rgba(247, 247, 247, 0.4);
+        section{
+            &.spiffs-item{
+                border-right: 1px solid $grey;
+                span{
+                    font-weight: bold;
+                    text-decoration: underline;
+                    font-size: 0.813em;
+                }
+                p{
+                    font-size: .875em;
+                    @include responsive(xs){
+                        font-size: 1em;
+                    }
+                    @include responsive(md){
+                        height: 3.7rem;
+                    }
+                    @include responsive(xl){
+                        height: 2.7rem;
+                    }
+                }
+            }
+        }
+        .col-md-3{
+            img{
+                margin: 0 auto 10%;
+                @include responsive(md){
+                    margin: 0 auto 5%;
+                }
+            }
+            &:first-child{
+                img{
+                    width: 44%;
+                    @include responsive(md){
+                        width: 29%;
+                    }
+                }
+            }
+            &:nth-child(2){
+                section{
+                    &.spiffs-item{
+                        border-right: 0;
+                        @include responsive(md){
+                            border-right: 1px solid $grey;
+                        }
+                    }
+                }
+                img{
+                    width: 73%;
+                    @include responsive(md){
+                        width: 43%;
+                        padding: 3% 0 0 0;
+                    }
+                }
+            }
+            &:nth-child(3){
+                border-top: 1px solid $grey;
+                @include responsive(md){
+                    border-top: 0;
+                }
+                img{
+                    width: 54%;
+                    @include responsive(md){
+                        width: 35%;
+                        padding: 3% 0 0;
+                    }
+                }
+            }
+            &:last-child{
+                border-top: 1px solid $grey;
+                @include responsive(md){
+                    border-top: 0;
+                }
+                section{
+                    &.spiffs-item{
+                        border-right: 0;
+                    }
+                }
+                img{
+                    width: 56%;
+                    padding: 0;
+                    @include responsive(md){
+                        width: 35%;
+                        padding: 12% 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+    .triplets,
+    .quadruplet{
+        h4,
+        #txt-proyectos-todo{
+            font-size: 1.2em;
+            @include responsive(md){
+                font-size: 1.25em;
+            }
+        }
+        #txt-proyectos-todo{
+            @include responsive(md){
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    #nuestrapromesa{
+        h3{
+            font-size: 0.9em;
+        }
+    }
+    .modal{
+        &.fade{
+            .modal-dialog{
+                top: inherit;
+                left: inherit;
+                -webkit-transform: inherit;
+                -ms-transform: inherit;
+                transform: inherit;
+                position: initial;
+                margin: auto;
+            }
+        }
+        .closepopup{
+            color: $green;
+            font-size: 2em;
+            font-weight: bold;
+            position: absolute;
+            right: 11px;
+            top: 0;
+            z-index: 2;
+        }
+        &#garantiaTotal,
+        &#entregaRapida,
+        &#retiraTienda,
+        &#metodosPago{
+            p{
+                font-size: 0.870em;
+            }
+        }
+        &#retiraTienda {
+            section {
+                img {
+                    width: 42%;
+                    display: block;
+                    margin: 2% 0 3% 6%;
+                }
+                ul{
+                    li{
+                        list-style-type: disc;
+                        /*list-style-position: inside;*/
+                        padding: 0 0 0 7%;
+                        font-size: 0.870em;
+                        text-align: left;
+                        @include responsive(xl){
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+        &#metodosPago{
+            section{
+                small{
+                    font-size: 0.6em;
+                }
+                article{
+                    img{
+                        margin: 2% auto 3%;
+                    }
+                    &:nth-child(2){
+                        img{
+                            width: 15%;
+                        }
+                    }
+                    &:nth-child(3){
+                        img{
+                            width: 34%;
+                        }
+                    }
+                    &:nth-child(4){
+                        img{
+                            width: 42%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

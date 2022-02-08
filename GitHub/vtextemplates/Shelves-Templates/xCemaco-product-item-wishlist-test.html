@@ -1,0 +1,50 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($pName = $product.HtmlEscapedName)
+
+<div class="wishlist__shelf-item">
+	<div class="wishlist__shelf-item-image">
+		<a href="$uri">$product.GetImageTag(160,160)</a>
+	</div>
+	<div class="wishlist__shelf-item-product">
+		<h3 class="wishlist__shelf-item-name">$product.SkuName</h3>
+		<p class="wishlist__shelf-item-brand">$product.BrandName</p>
+		<div class="wishlist__shelf-item-action">
+			<div class="wishlist__shelf-item-qty">
+				<div class="wishlist__shelf-item-qty-rest"></div>
+				<!-- <input type="text" inputmode="numeric" data-price="$product.BestPrice" value="1" class="wishlist__shelf-item-qty-input" /> -->
+				<select data-price="$product.BestPrice" class="wishlist__shelf-item-qty-input">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3s</option>
+                    <option value="4">4</option>
+                </select>
+                
+                <div class="wishlist__shelf-item-qty-plus"></div>
+			</div>
+			<a href="#" data-skuid="$idSku" class="button-flat secondary wishlist__shelf-item-buy">Agregar a carreta</a>
+		</div>
+	</div>
+	<div class="wishlist__shelf-item-price">
+		#if ($product.IsInStock)
+			<strong>Precio</strong>
+			#if ($product.HasBestPrice)
+				<span class="price-old">$product.ListPrice</span>
+				<span class="price-new promo">$product.BestPrice</span>
+			#else
+				<span class="price-new">$product.BestPrice</span>
+			#end
+		#else
+			<span>Sin stock</span>
+		#end
+	</div>
+	<div class="wishlist__shelf-item-subtotal-qty">1</div>
+	<div class="wishlist__shelf-item-subtotal">$product.BestPrice</div>
+	<div class="wishlist__shelf-item-wishlist">
+		<button class="product-item__wishlist__trigger" data-id="$id">
+			<svg class="svg-icon-remove">
+				<use xlink:href="#svg-icon-remove"></use>
+			</svg>
+		</button>
+	</div>

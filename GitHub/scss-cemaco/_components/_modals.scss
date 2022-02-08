@@ -1,0 +1,77 @@
+/*--------------------Modals - Setting Bootstrap Component--------------------*/
+// Modals
+body.modal-open{
+	overflow: hidden !important;
+	padding-right: 0 !important;
+	.modal {
+		padding-right: 0 !important;
+	}
+}
+.modal-backdrop{
+	&.in{
+		opacity: 0.75;
+	}
+}
+.modal-dialog{
+	position: absolute;
+	@include margin-v(0);
+	@include margin-h(0);
+	.modal.fade &{
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+	.modal.in &{
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+.modal-content{
+	border: none;
+	border-radius: 0;
+	.close{
+		width: 20px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		z-index: 400;
+		border-radius: 50%;
+		margin-top: 0;
+		font-size: 2.5em;
+		font-weight: 100;
+		line-height: 20px;
+		color: $c-dusty-gray;
+		font-family: $font-body;
+		text-shadow: none;
+		opacity: 1;
+	}
+}
+.modal-header,
+.modal-body,
+.modal-footer{
+	@include padding-h(15);
+}
+.modal-header {
+	position: relative;
+	@include padding-v(15);
+	border: none;
+	background-color: white;
+	.modal-title {
+		@include padding-v(0);
+		font-family: $font-body;
+		font-weight: $font-light;
+		@include font-size(1);
+		letter-spacing: 0.1em;
+		color: darken(white,5);
+	}
+}
+.modal-body {
+	overflow: hidden;
+	@include font-size(0.9);
+}
+.modal-footer {
+	border-top: 1px solid $c-light-gray;
+}

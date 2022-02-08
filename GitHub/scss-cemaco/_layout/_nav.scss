@@ -1,0 +1,843 @@
+/*--------------------Nav [Trigger]--------------------*/
+.nav-trigger{
+    &{
+        body.page-scroll-on &{
+            display: block;
+        }
+        .nav-item--level-0.is-active &{
+            &::after{
+                @include mediaFrom(lg){
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &--open{
+        margin-right: 0.3em;
+       @include flexbox($ai:center);
+       body.page-scroll-on &{
+            @include mediaTo(md){
+                width: 21px;
+                height: 21px;
+                margin-top: 2em;
+            }
+        }
+        .svg-icon.svg-icon{
+            @include sizeProportion($dW: 0.65);
+            stroke-width: 5px;
+            margin-left: 0.5em;
+            color: $c-secondary;
+            body.landing--jugueton &{
+                color: $c-jugueton-secondary;
+            }
+            body.landing--bebejugueton &{
+                color: $c-bebejugueton-secondary;
+            }
+            body.page-scroll-on &{
+                @include mediaTo(md){
+                    display: none;
+                }
+            }
+        }
+        .menu-shown &{
+            position: relative;
+            color: $c-primary;
+            z-index: $z-nav-mobile + 20;
+            .nav-item--departamentos &{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: -5px;
+                    width: calc(100vw - 50px);
+                    height: 30px;
+                    background-color: #fff;
+                }
+            }
+            body.landing--jugueton &{
+                color: $c-jugueton;
+            }
+            body.landing--bebejugueton &{
+                color: $c-bebejugueton;
+            }
+            .svg-icon{
+                color: inherit;
+            }
+        }
+    }
+    &--close{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 10px;
+        top: -5px;
+        z-index: $z-nav-mobile;
+        transition: left 0.5s;
+        background-color: #fff;
+        @include mediaFrom(lg){
+            display: none;
+        }
+        .svg-icon.svg-icon{
+            @include sizeProportion($dW: 1.25);
+            @include horizontal-center;
+            //@include horizontal-right($left: 90, $unit: 1%);
+            stroke-width: 4px;
+            top: 10px;
+            color: $c-primary;
+            body.landing--jugueton &{
+                color: $c-jugueton-secondary;
+            }
+            body.landing--bebejugueton &{
+                color: $c-bebejugueton-secondary;
+            }
+        }
+    }
+    &__label{
+        position: relative;
+        z-index: 1;
+        body.page-scroll-on &{
+            @include mediaTo(md){
+                display: none;
+            }
+        }
+        .more{
+            font-size: 1.2em;
+            color: $c-secondary;
+        }
+    }
+    &__hamburguer{
+        &{
+            display: none;
+            width: 21px;
+            height: 3px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            border-radius: 5px;
+            margin-top: -2px;
+            background: $c-secondary;
+            .nav-trigger.is-active &{
+                background-color: transparent;
+            }
+            body.page-scroll-on &{
+                @include mediaTo(md){
+                    display: block;
+                }
+            }
+            body.landing--jugueton &{
+                background: $c-jugueton;
+            }
+            body.landing--bebejugueton &{
+                background: $c-bebejugueton;
+            }
+        }
+        &,
+        &:before,
+        &:after{
+            transition: all 0.2s;
+        }
+        &:before,
+        &:after{
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: block;
+            position: absolute;
+            left: 0;
+            border-radius: 5px;
+            background: $c-secondary;
+            // pointer-events: none;
+            body.landing--jugueton &{
+                background: $c-jugueton;
+            }
+            body.landing--bebejugueton &{
+                background: $c-bebejugueton;
+            }
+        }
+        &:before{
+            bottom: 6px;
+            .nav-trigger.is-active &{
+                bottom: 0;
+                transform: rotate(45deg);
+            }
+        }
+        &:after{
+            top: 6px;
+            .nav-trigger.is-active &{
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+/*--------------------Nav [General Layout]--------------------*/
+.site-nav{
+    position: absolute;
+    left: 0;
+    @include commonBreakpoints(
+        (top,
+        em($header-height--bs - $nav-height),
+        em($header-height--md - $nav-height),
+        em($header-height--lg - $nav-height--lg))
+    );
+    @include commonBreakpoints(
+        (height,
+        em($nav-height),
+        em($nav-height),
+        em($nav-height--lg))
+    );
+    @include debug($is-debugging);
+    body.page-scroll-on &{
+        top: 0;
+        left: em(40);
+        @include mediaFrom(md){
+            left: em(37.5);
+        }
+        @include mediaFrom(lg){
+            left: 0;
+            top: em($header-height--lg - $nav-height--lg);
+        }
+    }
+    .show-more-icon{
+        @include mediaFrom(lg){
+            display: none;
+        }
+    }
+    .nav-accordion__trigger--active .show-more-icon{
+        font-size: 0;
+        &:after{
+            content: '-';
+            font-size: rem(15);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+/*--------------------Mobile - Iván Luna [Re]--------------------*/
+@include mediaTo(md){
+    .site-nav{
+        &.menu-shown{
+            background-color: #fff;
+        }
+    }
+    /*-----General settings-----*/
+    .re-nav-color{
+        height: em($nav-height);
+        body.page-scroll-on &{
+            height: em($nav-height + 20);
+        }
+    }
+    ul.re-ul-principal, ul.re-ul--promociones, ul.re-ul--ver-mas, ul.re-ul--bodas{
+        position: fixed;
+        top: $header-height--bs;
+        left: 0;
+        z-index: $z-nav-mobile + 10;
+        width: 100%;
+        @include padding-v();
+        @include padding-h(30);
+        background-color: white;
+        display: none;
+        overflow-x: hidden;
+        @include mediaFrom(md){
+            top: $header-height--md;
+        }
+        li{
+            > a{
+                display: block;
+                position: relative;
+                &,
+                &:hover,
+                &:focus{
+                    @include padding-v(0.5,0.5, 1em);
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    ul.re-ul-principal{
+        //overflow-y: scroll;
+        .nav-item--level-0.menu-shown &{
+            display: block;
+        }
+    }
+    ul.re-ul--ver-mas{
+        text-align: center;
+        .nav-item--level-0.menu-shown &{
+            display: block;
+        }
+        img{
+            width: 80px;
+            margin: 0 auto;
+        }
+        svg{
+            width: 80px;
+        }
+    }
+    ul.re-ul--bodas{
+        .nav-item--level-0.menu-shown &{
+            display: block;
+        }
+    }
+    ul.re-ul--promociones{
+        .nav-item--level-0.menu-shown &{
+            @include flexbox($fw: wrap, $jc: space-between);
+        }
+        .button-simple{
+            padding: 0;
+            margin-top: 0.5em;
+            font-size: rem(10);
+        }
+    }
+    .nav-item--level-0{
+        float: right;
+        padding-right: 1.25em;
+        padding-top: 0.5em;
+        position: relative;
+        color: white;
+        font-size: rem(11);
+        &:first-child{
+            float: left;
+        }
+        &:nth-child(2){
+            padding-right: 0;
+        }
+        &:last-child{
+            ul.re-ul-secondary &{
+                > a{
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+        body.landing--jugueton &{
+            color: $c-jugueton;
+        }
+        body.landing--bebejugueton &{
+            color: $c-bebejugueton;
+        }
+        body.page-scroll-on &{
+            &:not(.nav-item--departamentos){
+                display: none;
+            }
+        }
+    }
+    .nav-list--level-1{
+        max-height: calc(100% - 160px);
+        overflow-y: auto;
+        @include mediaFrom(md){
+            height: calc(100% - 130px);
+            max-height: calc(100% - 170px);
+        }
+    }
+    .nav-item--level-1{
+        width: 100%;
+        position: relative;
+        transition: max-height 0.3s ease-out;
+        border-bottom: 1px solid $c-dusty-gray;
+        > a{
+            @include padding-h(10);
+            font-size: rem(14);
+            color: black;
+            font-weight: $font-regular;
+            &.nav-accordion__trigger--active{
+                font-weight: $font-bold;
+            }
+        }
+        .show-more-icon{
+            position: absolute;
+            right: 10px;
+            color: $c-primary;
+            body.landing--jugueton &{
+                color: $c-jugueton;
+            }
+            body.landing--bebejugueton &{
+                color: $c-bebejugueton;
+            }
+        }
+        ul.re-ul--promociones &{
+            width: 49%;
+            margin-bottom: 1em;
+            border: none;
+            color: black;
+        }
+    }
+    .nav-list--level-2, .nav-list--level-3{
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: all 0.5s ease-out;
+        .nav-item--is-active > &{
+            max-height: 1000px;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+    .nav-item--level-2, .nav-item--level-3{
+        &:last-child,
+        &:nth-last-of-type(1){
+            border-bottom: none;
+        }
+        > a{
+            padding-top: 0.5em !important;
+            padding-bottom: 0.5em !important;
+            @include padding-h(20);
+            font-size: rem(14);
+            color: black;
+            > img{
+                display: none;
+            }
+        }
+    }
+    .nav-item--level-3{
+        > a{
+            @include padding-h(40,15);
+        }
+    }
+    .nav-item--product-list,
+    .nav-item--image{
+        display: none !important;
+    }
+    .nav-item__title{
+        display: none;
+    }
+    .nav-cemaco-logo{
+        background-color: $c-primary;
+        svg{
+            width: 80px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .nav-jugueton{
+        body.landing--jugueton &{
+            display: none;
+        }
+    }
+    .nav-bebe-jugueton{
+        body.landing--bebejugueton &{
+            display: none;
+        }
+    }
+}
+/*--------------------Menú Dropdown - Iván Luna [Re]--------------------*/
+@include mediaFrom(lg){
+    .site-nav{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: $z-nav-desktop;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $c-primary;
+        body.landing--jugueton &, body.landing--bebejugueton &{
+            background-color: #fff;
+        }
+        &__header{
+            display: none;
+        }
+    }
+    // Wrapper - Center
+    .re-nav-color{
+        position: relative;
+        height: $nav-height--lg;
+        @include debug(false);
+    }
+    ul.re-ul--promociones{
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        @include padding-v();
+        @include padding-h();
+        background-color: $c-light-gray;
+        .nav-item--level-1{
+            border-bottom: none;
+        }
+    }
+    ul.re-ul--ver-mas{
+        height: auto;
+        right: 0;
+        left: auto;
+    }
+    ul.re-ul--bodas{
+        width: rem(600);
+        height: auto;
+        left: auto;
+        right: 0;
+        .nav-item--level-1{
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+    }
+    /*-----Item Menú - Megamenu-----*/
+    .nav-item--level-0{
+        float: right;
+        @include debug($is-debugging, lighten(red,45), lighten(red,40), red);
+        &:first-child{
+            float: left;
+            > a{
+                font-size: rem(15);
+                font-weight: $font-bold;
+            }
+        }
+        &:nth-child(2){
+            > a{
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+        > a{
+            display: flex;
+            height: $nav_link-height;
+            line-height: $nav_link-height;
+            padding-right: 2.5em;
+            position: relative;
+            font-size: em(14);
+            font-weight: $font-medium;
+            text-decoration: none;
+            color: white;
+            transition: border-color 0.5s;
+            @include mediaFrom(lg){
+                height: $nav_link-height--lg;
+                line-height: $nav_link-height--lg;
+            }
+            body.landing--jugueton &{
+                color: $c-jugueton;
+            }
+            body.landing--bebejugueton &{
+                color: $c-bebejugueton;
+            }
+            .show-more-icon{
+                display: block;
+                right: 0;
+                color: $c-secondary;
+            }
+        }
+    }
+    // Categories - Level 1
+    $levelOne--padding-h: 20px;
+    $levelOne--column-width: 245px;
+    $levelOne--margin-left: 50px;
+    .nav-list--level-1{
+        width: $levelOne--column-width;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: rem(575);
+        position: absolute !important;
+        top: $nav-height--lg;
+        left: 15px;
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: 0 0 0;
+        transition: all 0.5s ease;
+        background-color: $c-light-gray;
+        @include debug($is-debugging, lighten(green,70), lighten(green,65), green, solid);
+        &::-webkit-scrollbar-thumb{
+            border-radius: 1px;
+            background-color: $c-secondary;
+        }
+        &::-webkit-scrollbar-track{
+            border-radius: 1px;
+            background-color: $c-pastel-gray;
+        }
+        &::-webkit-scrollbar{
+            width: 8px;
+            background-color: transparent;
+        }
+        @media (max-height: 660px){
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+        @media (max-height: 600px){
+            max-height: 450px;
+        }
+        @media (max-height: 550px){
+            max-height: 400px;
+        }
+        .nav-item--level-0.is-active &{
+            opacity: 1;
+            visibility: visible;
+        }
+        .nav-item--departamentos &{
+            &.ListL2-shown{
+                width:  $levelOne--column-width * 3;
+            }
+            &.ListL3-shown{
+                width:  $levelOne--column-width * 4;
+            }
+        }
+    }
+    .re-ul-principal{
+        body.landing--jugueton &, body.landing--bebejugueton &{
+            height: rem(420) !important;
+            overflow-y: hidden;
+        }
+    }
+    .nav-item--level-1{
+        @include padding-v(3);
+        padding-left: $levelOne--padding-h;
+        padding-right: $levelOne--padding-h;
+        display: block;
+        font-family: $font-title;
+        font-size: em(12);
+        color: $c-dark-gray;
+        // pointer-events: none;
+        cursor: pointer;
+        border-bottom: 1px solid $c-pastel-gray;
+        background-color: $c-light-gray;
+        @media (max-height: 767px) {
+            // @include padding-v(2.5);
+            // font-size: em(11);
+        }
+        &.is-active{
+            background-color: $c-pastel-gray;
+        }
+        .nav-item--departamentos &{
+            width: $levelOne--column-width;
+        }
+        > a{
+            &:hover{
+                text-decoration: none;
+            }
+            body.landing--jugueton &{
+                color: $c-jugueton;
+            }
+            body.landing--bebejugueton &{
+                color: $c-bebejugueton;
+            }
+        }
+    }
+    // Categories - Level 2
+    $levelTwo--padding-h: 20px;
+    $levelTwo--column-width: 245px;
+    $levelTwo--margin-left: 50px;
+    .nav-list--level-2{
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: rem(575);
+        position: fixed;
+        border-left: 1px solid $c-pastel-gray;
+        @include re-central-left-from-lg;
+        top: $header-height--lg;
+        z-index: -1;
+        opacity: 0;
+        transition: left 0.5s ease-out, opacity 0.5s ease-out, z-index 0 step-end;
+        font-size: rem(12);
+        background-color: $c-light-gray;
+        @include debug($is-debugging, lighten(blue,45), lighten(blue,40), blue, solid);
+        &::-webkit-scrollbar-thumb{
+            border-radius: 1px;
+            background-color: $c-secondary;
+        }
+        &::-webkit-scrollbar-track{
+            border-radius: 1px;
+            background-color: $c-pastel-gray;
+        }
+        &::-webkit-scrollbar{
+            width: 8px;
+            background-color: transparent;
+        }
+        .nav-item--level-1.is-active &{
+            z-index: 1;
+            opacity: 1;
+            transition: left 0.5s ease-out, opacity 0.5s ease-out, z-index 0.2s step-start;
+        }
+        .ListL2-shown &{
+            width:  $levelOne--column-width * 2;
+            left: calc(50% + 245px) !important;
+        }
+        .ListL3-shown &{
+            width:  $levelOne--column-width * 3;
+        }
+    }
+    .nav-item--level-2{
+        width:  $levelTwo--column-width;
+        display: block;
+        @include padding-v(3);
+        @include padding-h(20);
+        border-bottom: 1px solid $c-pastel-gray;
+        background-color: $c-light-gray;
+        .show-more-icon{
+            display: none;
+        }
+        &.is-hover{
+            background-color: $c-pastel-gray;
+        }
+        .nav-item--departamentos &{
+            width: $levelTwo--column-width;
+        }
+        > a{
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
+    }
+    // Categories - Level 3
+    $levelTree--padding-h: 20px;
+    $levelTree--column-width: 245px;
+    $levelTree--margin-left: 50px;
+    .nav-list--level-3{
+        width: 100%;
+        height: rem(575);
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: absolute;
+        border-left: 1px solid $c-pastel-gray;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: left 0.5s ease-out, opacity 0.5s ease-out, z-index 0 step-end;
+        font-size: rem(12);
+        background-color: $c-light-gray;
+        @include debug($is-debugging, lighten(blue,45), lighten(blue,40), blue, solid);
+        .nav-item--level-2.is-hover &{
+            z-index: 1;
+            opacity: 1;
+            transition: left 0.5s ease-out, opacity 0.5s ease-out, z-index 0.2s step-start;
+        }
+        .ListL2-shown &{
+            width:  $levelOne--column-width * 2;
+            left: $levelTree--column-width;
+        }
+
+    }
+    .nav-item--level-3{
+        position: relative;
+        display: block;
+        @include padding-v(3);
+        @include padding-h(20);
+        border-bottom: 1px solid $c-pastel-gray;
+        .show-more-icon{
+            display: none;
+        }
+        &:hover{
+            background-color: $c-pastel-gray;
+        }
+        > a{
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
+    }
+    // Title{
+    .nav-item__title{
+        font-weight: $font-bold;
+        color: $c-primary;
+        body.landing--jugueton &{
+            color: $c-jugueton;
+        }
+        body.landing--bebejugueton &{
+            color: $c-bebejugueton;
+        }
+
+    }
+    // Image
+    .nav-item--image{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: $levelOne--column-width;
+        width: $levelOne--column-width + 15px;
+        transition: all 0.5s ease;
+        img{
+            height: rem(575);
+        }
+        .ListL2-shown &{
+            opacity: 1;
+            visibility: visible;
+        }
+        .ListL3-shown &{
+            left: $levelOne--column-width * 2;
+        }
+    }
+    // Bodas
+    .nav-item--bodas{
+        position: relative;
+    }
+    /*-----Hide on desktop-----*/
+    li.dl-back{
+        display: none;
+    }
+}
+.submenu{
+    &__boda{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        &-search{
+            &--wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 35px 23px 35px;
+                @include mediaFrom(lg){
+                    width: 56%;
+                }
+                .svg-icon{
+                    display: block;
+                    color: $c-boda;
+                    margin: 0 auto;
+                    transform: translateY(-50%) rotate(270deg);
+                    @include sizeProportion($dW: 4);
+                }
+            }
+            &-form{
+                width: 100%;
+            }
+            &-input{
+                @at-root input[type="text"]#{&} {
+                    margin: 0 auto 1em auto;
+                    width: 100%;
+                    max-width: 245px;
+                }
+            }
+        }
+        &-admin{
+            &--wrapper{
+                background-color: $c-boda;
+                padding: 65px 25px;
+                color: white;
+                @include mediaFrom(lg){
+                    width: 44%;
+                }
+            }
+        }
+        &-title{
+            font-size: 1.5em;
+            line-height: 1.2;
+            padding: 0;
+            text-align: center;
+            .submenu__boda-search--wrapper &{
+                color: $c-boda;
+                margin-bottom: .5em;
+            }
+        }
+        &-disclaimer{
+            font-size: .75em;
+            margin-top: 1em;
+            margin-bottom: 3em;
+        }
+        &-link{
+            color: white;
+            display: block;
+            font-size: .85em;
+            margin-bottom: 1em;
+            span{
+                display: inline-block;
+                line-height: 1.1;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+}

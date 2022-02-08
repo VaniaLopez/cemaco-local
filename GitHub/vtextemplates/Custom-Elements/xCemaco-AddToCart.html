@@ -1,0 +1,60 @@
+<script type="text/html" id="cart-template">
+	<div class="atc__wrapper overlay overlay--atc">
+		<div class="atc__container">
+            <h2 id="lb-title" class="atc__added_title">Añadido a la carreta</h2>
+			<div id="lb-product-wrapper" class="atc__content">
+				<div class="atc__added">
+					<div class="atc__img_wrapper">
+						<img src="" id="lb-product-image" class="atc__added_image"/>
+					</div>
+					<div class="atc__added_summary">
+						<h3 id="lb-product-name" class="atc__added_name"></h3>
+						<div class="atc__added_info color">Color: <span id="lb-product-color"></span></div>
+						<div class="atc__added_info size">Talla: <span id="lb-product-size"></span></div>
+						<div class="atc__added_info qty">Cantidad: <span id="lb-product-qty"></span></div>
+						<div id="lb-product-price" class="atc__added_price"></div>
+					</div>
+				</div>
+				<div class="atc__cart-summary">
+					<h2 class="atc__cart-summary_title">Tu carreta</h2>
+					<div class="atc_left">
+						<div class="atc__cart-summary_item items">
+							Artículos en tu carreta: <span id="lb-cart-products"></span>
+						</div>
+					</div>
+					<div class="atc_right">
+						<div class="atc__cart-summary_item price">
+							Subtotal productos: <span id="atc-ti"></span>
+						</div>
+					</div>
+					<div class="atc__cart-summary_item discount">
+						<div class="atc_left">Descuentos:</div>
+						<div class="atc_right"><span id="atc-td"></span></div> <!-- Add to cart total discount -->
+					</div>
+					<div class="atc__cart-summary_item shipping">
+						<div class="atc_left">Gastos de envío:</div>
+						<div class="atc_right"><span id="atc-ts"></span></div> <!-- Add to cart total shipping -->
+					</div>
+
+					<div class="atc__cart-summary_item total">
+						<div class="atc_left">Total:</div>
+						<div class="atc_right"><span id="lb-total"></span></div> <!-- Total Orden -->
+					</div>
+					<div id="envio_gratis_wrapper"></div>
+					<div class="atc__cta">
+						<div class="button-wrapper">
+							<a class="seguirComprando button-flat primary"><span></span>Seguir comprando</a>
+						</div>
+						<div class="button-wrapper text-right">
+							<a href="/checkout/#cart" class="irAlCheckout button-flat secondary"><span></span>Ver carreta</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="close-modal close-modal--atc">
+				<svg class="icon svg-icon-close" aria-hidden="true"><use href="#svg-icon-close"></use></svg>
+			</div>
+		</div>
+	</div>
+</script>
+<script src="/arquivos/css-js_add-to-cart.js" type="text/javascript"></script>

@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK"/>
+
+<div class="re-central sherwin">
+    <!-- Inicia portada -->
+
+    <div class="portadas text-black">
+        <div class="caruselp">
+            <div class="item text-center">
+                <picture>
+                    <!-- Mobile -->
+                    <source srcset="/arquivos/2022_portada-distroller-mob.jpg" type="image/webp" media="(max-width: 767px)">
+                    <!-- Desktop -->
+                    <source srcset="/arquivos/2022_portada-distroller-desk.jpg" type="image/webp"> 
+                    <img src="/arquivos/2022_portada-distroller-desk.jpg" alt="distroller">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <!-- Inicia portada -->
+    <!-- 
+    <div class="banner-sherwin">
+        <h1>El poder de <br class="hidden-xs"> crear con</h1>
+    </div>
+    -->
+    <!-- Inician categorias  -->
+    <div class="categorias">
+        <h3 class = "distroller_txt_compra">Compra por categoría</h3>
+        <div class="row distroller-container">
+            <article class="col-bs-6 col-md-4">
+                <a href="/1728?map=productClusterIds">
+                    <img src="/arquivos/2022_distroller-spiff1.jpg" alt="" />
+                    <p class = "distroller_txt">Chamoy Amiguis</p>
+                </a>
+            </article>
+            <article class=" col-bs-6 col-md-4">
+                <a href="/1725?map=productClusterIds">
+                    <img src="/arquivos/2022_distroller-spiff2.jpg" alt="" />
+                    <p class = "distroller_txt">Neo Farmacia</p>
+                </a>
+            </article>
+            <article class="spiff-show col-md-4">
+                <a href="/1727?map=productClusterIds">
+                    <img src="/arquivos/2022_distroller-spiff3.jpg" alt="" />
+                    <p class = "distroller_txt">Neonato</p>
+                </a>
+            </article>
+        </div>
+        <div class="row spiff-hide">
+            <article class="col-bs-6 col-md-4">
+                <a href="/1727?map=productClusterIds" style="text-decoration: none;">
+                    <img src="/arquivos/2022_distroller-spiff3.jpg" alt="" />
+                    <p class = "distroller_txt">Neonato</p>
+                </a>
+            </article>
+        </div>
+    </div>
+    <!-- Termina categorias -->
+
+</div>
+
+<style>
+    .re-central--product-list {
+        background-color: #F6F6F6;
+        padding: 10px;
+    }
+    .bread-crumbs, .category-name, .product-list__results-items{
+        display: none;
+    }
+    .categorias{
+        padding-bottom: 3rem;
+    }
+    .distroller-container{
+        padding-top: 1rem;
+    }
+    .distroller-container article a:hover{
+        text-decoration: none;
+    }
+    .distroller_txt_compra{
+        padding: 1rem 0;
+    }
+    .distroller_txt{
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+@media screen and (min-width: 320px) {
+    .spiff-show {
+            display: none;
+        }
+    .spiff-hide {
+            display: flex;
+            justify-content: center;
+        }
+}
+@media screen and (min-width: 768px) {
+    .spiff-show {
+        display: block;
+    }
+    .spiff-hide {
+        display: none;
+    }
+    .distroller-container{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .distroller-container article{
+        padding: 0 5%;
+    }
+    .page-header--product-list{
+        display: none;
+    }
+}
+</style>

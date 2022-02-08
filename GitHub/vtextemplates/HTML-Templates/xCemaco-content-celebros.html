@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+    <head>
+        <title>CEMACO - celebros</title>
+        <vtex:metaTags />
+        <vtex:template id="xCemaco-styles-celebros" />
+        <link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+        <vtex:template id="xCemaco-meta-tags-celebros" />
+        <vtex:contentPlaceHolder id="page-styles" />
+        <vtex.cmc:xCemacoFallback />
+        <link rel="stylesheet" href="https://vtexstyles.cemaco.com/cemaco.css" id="cemacoStyles" />
+        <script src="https://cemacogt.vteximg.com.br/Scripts/vtex.viewPart.fullTextSearchBox.js?v=1.4.1090.1832"></script>
+    </head>
+    <body>
+        <vtex:template id="xCemaco-header" />
+        <main role="main" class="page-main--internal-page">
+            <vtex.cmc:CelebrosSearchResult layout="df627386-2aa4-4dc6-96dc-cf132cfa3c9b" />
+            <script src="//celebrosnlp.com/uitemplatev6/Clients/Cemaco/output/CelScripts.js"></script>
+
+        </main>
+        <vtex:template id="xCemaco-footer" />
+        <style>
+            #celUITDiv .to-top{
+                /*display: none;*/
+            }
+            .toolbar #sorting{
+                /*display: none;*/
+            }
+            .toolbar #sorting option:nth-child(2),
+            .toolbar #sorting option:nth-child(3),
+            .toolbar #sorting option:nth-child(4){
+                display: none;
+                visibility: hidden;
+                height: 0;
+                position: absolute;
+                width: 0;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+            /*Alinear filtros y cantidad de productos en topbar*/
+            #celUITDiv .toolbar {
+                display: block;
+            }
+            #celUITDiv #filter-details, #celUITDiv #filter-breadcrumbs {
+                display: inline-block;
+            }
+            #celUITDiv .toolbar #sorting {
+                display: inline-block;
+                float: right;
+            }
+            #celUITDiv {
+                padding-top: 7px;
+            }
+            #celUITDiv #filter-title {
+                border-bottom: 0px solid #FFF;
+                font-size: 10px;
+                padding: 0 0 0 5px;
+            }
+            /*Ocultar texto opiniones junto estrellas yotpo*/
+            .yotpo .text-m {
+                display: none;
+            }
+            /*Reducir espaciado botón agregar a carreta*/
+            #celUITDiv .products > li .cuit_item_container .add-to-cart {
+                padding-top: 0;
+            }
+            @media (max-width: 768px){
+                #celUITDiv #filters #questions-toggle span {
+                    margin: 0 auto;
+                    text-align: center;
+                }
+                #celUITDiv #filter-title {
+                    text-align:center;
+                }
+                #celUITDiv .products {
+                    padding-top: 17px;
+                }
+            }
+        </style>
+        <vtex:template id="xCemaco-svg-sprite" />
+        <vtex:template id="xCemaco-scripts-celebros" />
+        <script>
+        $( document ).ready(function() {
+            //Ocultar opciones de filtro no requeridas
+            $( ".toolbar #sorting option:nth-child(2)" ).hide();
+            $( ".toolbar #sorting option:nth-child(2)" ).prop("disabled", true); // for safari
+            $( ".toolbar #sorting option:nth-child(3)" ).hide();
+            $( ".toolbar #sorting option:nth-child(3)" ).prop("disabled", true); // for safari
+            $( ".toolbar #sorting option:nth-child(4)" ).hide();
+            $( ".toolbar #sorting option:nth-child(4)" ).prop("disabled", true); // for safari
+        });
+        </script>
+        <!-- Plugins -->
+        <!-- <script src="/arquivos/plugins_slick_slick.min.js"></script> -->
+        <!-- Static Pages -->
+        <!-- <script src="/arquivos/css-js_static-pages.js"></script> -->
+        <!-- Add This Social-->
+        <!-- <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54833d9450389b1a"></script>
+        <vtex:contentPlaceHolder id="page-scripts" /> -->
+    </body>
+</html>

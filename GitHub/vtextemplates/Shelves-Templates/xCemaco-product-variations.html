@@ -1,0 +1,5 @@
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+<a class="product-detail__color-link" title="$escapedName" href="$uri">
+    $product.ProductField(20)
+</a>

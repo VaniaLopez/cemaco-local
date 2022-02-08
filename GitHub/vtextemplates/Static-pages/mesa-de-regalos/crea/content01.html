@@ -1,0 +1,494 @@
+<div class="re-central" id="mdr__form--wrapper">
+    <div class="static-layout__mesa--create">
+        <div class="text-center mdr__message">
+            <h2 class="mdr__message-title">
+                Crea tu registro de eventos
+            </h2>
+            <p>
+                Llena los datos que se te solicitan a continuación y empieza con la experiencia que el Programa de Bodas tiene para ti.
+                <br>
+                *campos requeridos
+            </p>
+        </div>
+        <!-- <div class="mdr__member-selection">
+            <h3 class="mdr__form-title">¿A quién pertenece esta cuenta <span id="mdr__account-email"></span>?</h3>
+            <div class="mdr__member-option--wrapper">
+                <label class="mdr__member-option" data-member="1" for="member1">Mamá <input type="radio" id="member1"></label>
+                <label class="mdr__member-option" data-member="2" for="member2">Papá <input type="radio" id="member2"></label>
+            </div>
+        </div> -->
+        <div id="">
+            <div class="internal-form">
+                <div class="control-wrapper">
+                    <h3 class="mdr__form-title">Tipo de evento *</h3>
+                    <select id="mdr-type">
+                        <option value="">Selecciona el tipo de evento</option>
+                        <option value="Té">Té</option>
+                        <option value="Cumpleaños">Cumpleaños</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="internal-form">
+                <div class="control-wrapper">
+                    <h3 class="mdr__form-title">Fecha de tu evento *</h3>
+                    <input type="text" id="mdr-date" placeholder="DD/MM/AAAA"/>
+                </div>
+                <div class="control-wrapper">
+                    <h3 class="mdr__form-title">Nombre de tu evento *</h3>
+                    <input type="text" id="mdr-name" placeholder="Nombre de la lista"/>
+                </div>
+            </div>
+            <div class="mdr__form-check-member2">
+                <span class="mdr__form-check disclaimer" id="check-member2">Habilitar un segundo festejado</span>
+            </div>
+            <div class="internal-form">
+                <div class="control-wrapper">
+                    <h3 class="mdr__form-title">Festejado 1 *</h3>
+                    <div class="mdr__form-control" id="mdr-fes1-name-wrapper">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes1-lastname-wrapper">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes1-dpi-wrapper">
+                        <input type="text" id="mdr-fes1-dpi" placeholder="Número de DPI" class="">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes1-cel-wrapper">
+                        <input type="text" id="mdr-fes1-cel" placeholder="Celular" class="">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes1-email-wrapper">
+                    </div>
+                </div>
+                <div class="control-wrapper">
+                    <h3 class="mdr__form-title">Festejado 2</h3>
+                    <div class="mdr__form-control" id="mdr-fes2-name-wrapper">
+                        <input type="text" maxlength="100" value="" id="membername2" name="" placeholder="Nombre">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes2-lastname-wrapper">
+                        <input type="text" maxlength="100" value="" id="membersurname2" name="" placeholder="Apellido(s)">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes2-dpi-wrapper">
+                        <input type="text" id="mdr-fes2-dpi" placeholder="Número de DPI" class="">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes2-cel-wrapper">
+                        <input type="text" id="mdr-fes2-cel" placeholder="Celular" class="">
+                    </div>
+                    <div class="mdr__form-control" id="mdr-fes2-email-wrapper">
+                        <input type="text" id="mdr-fes2-email" placeholder="Email" class="">
+                    </div>
+                    <div style="display:none;">
+                        <input type="hidden" value="2" id="membernumber2" name="">
+                        <input type="hidden" value="" id="memberid2" name="">
+                        <input type="hidden" value="" id="memberclientid2" name="">
+                        <input type="hidden" value="" id="memberuserid2" name="">
+                        <input type="hidden" id="membertitle2" name="" value="">
+                        <input type="hidden" maxlength="200" value="" id="membermail2" name="" placeholder="e-mail">
+                        <input type="hidden" maxlength="200" value="" id="inputtext1member2" name="" placeholder="extra info">
+                        <input type="hidden" maxlength="200" value="" id="inputtext2member2" name="" placeholder="event">
+                        <input type="hidden" id="memberisactive2" name="" value="False">
+                        <input type="radio" checked="checked" value="False" id="memberisadmin-no2" name="">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="mdr__form-title">Dirección *</h2>
+                <div class="mdr__form-address--wrapper">
+                    <div id='addresscomponent2' class='placeholder-component-address-book2'></div>
+                    <div id="mdr-address-list"></div>
+                    <div id="mdr-address-new"></div>
+                    <div id="mdr-address-action"></div>
+                </div>
+            </div>
+            <div class="static-layout__mesa--delivery">
+                <h2 class="mdr__form-title">Opciones de entrega *</h2>
+                <div class="internal-form">
+                    <div class="control-wrapper" style="display:none;">
+                        <div class="text-center">
+                            <svg class="svg-icon-giftcard delivery-icon"><use xlink:href="#svg-icon-giftcard"></use></svg>
+                            <p>
+                                Todos los regalos comprados por tus invitados podrás intercambiarlos por un certificado de regalo.
+                            </p>
+                        </div>
+                        <div class="mdr__form-delivery--wrapper">
+                            <div data-delivery-type="credito" class="internal-form__label-small mdr__form-delivery">
+                                <label>
+                                    <span>
+                                        Me quedo con intercambio. <br>
+                                        Esta opción es preferida por 8/10 clientes.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-wrapper">
+                        <div class="text-center">
+                            <svg class="svg-icon-d-direccion delivery-icon"><use xlink:href="#svg-icon-d-direccion"></use></svg>
+                            <p>
+                                Los regalos comprados por tus invitados serán enviados a una dirección de entrega o los puedes recoger en tienda.
+                            </p>
+                        </div>
+                        <div class="mdr__form-delivery--wrapper" style="display:none;">
+                            <div data-delivery-type="productos" class="internal-form__label-small mdr__form-delivery active">
+                                <label>
+                                    <span>
+                                        No quiero certificado, quiero recibir los regalos en casa, sin empaque de regalo.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdr__privilegio">
+                <h2 class="mdr__form-title">Privilegio *</h2>
+                <h3 class="mdr__form-subtitle">¿Tienes tarjeta privilegio?</h3>
+                <div class="mdr__form-control">
+                    <span data-priv-have="si" class="button-flat mdr__privilegio-option mdr__privilegio-have active">Sí</span>
+                    <a href="/privilegio" target="_blank" data-priv-have="no" class="button-flat mdr__privilegio-option">No</a>
+                </div>
+                <div class="priv__state" id="priv__create">
+                    <!-- <a href="#" class="priv__state-back"><svg class="svg-icon"><use href="#svg-icon-chevron-left"></use></svg> Regresar</a> -->
+                    <h3 class="priv__state-subtitle-gray">¡Aún no tienes Tarjeta Privilegio!</h3>
+                    <p class="priv__state-desc">Crea tu tarjeta privilegio para acumular puntos y obtener muchos beneficios.</p>
+                    <div id="form-create-priv">
+                        <h2 class="priv__state-subtitle-black">Datos de la Tarjeta Privilegio</h2>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" placeholder="Nombre(s)" id="name" name="name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" placeholder="Apellido(s)" id="lastname" name="lastname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <select name="civil" id="civil">
+                                        <option value="">Estado civil</option>
+                                        <option value="S">Soltero/a</option>
+                                        <option value="C">Casado/a</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" placeholder="Fecha de nacimiento DD/MM/AAAA" id="birthdate" name="birthdate">
+                                    <input type="hidden" id="birthdate-alt">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <select name="gender" id="gender">
+                                        <option value="">Género</option>
+                                        <option value="F">Femenino</option>
+                                        <option value="M">Masculino</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" placeholder="Número de teléfono" id="phone" name="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" placeholder="Correo electrónico" id="email" name="email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" placeholder="Nombre en tarjeta" id="nameCard" name="nameCard">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" placeholder="Dirección" id="address" name="address">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="priv__identity--wrapper">
+                                    <select name="TipoID" id="TipoID">
+                                        <option value="2">DPI</option>
+                                        <option value="3">Pasaporte</option>
+                                    </select>
+                                    <input type="text" name="Identificacion" id="Identificacion" placeholder="Número de identificación">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <select name="depto" id="depto">
+                                        <option value="">Selecciona tu departamento</option>
+                                        <option value="501">ALTA VERAPAZ</option>
+                                        <option value="500">BAJA VERAPAZ</option>
+                                        <option value="489">CHIMALTENANGO</option>
+                                        <option value="505">CHIQUIMULA</option>
+                                        <option value="487">EL PROGRESO</option>
+                                        <option value="499">EL QUICHÉ</option>
+                                        <option value="490">ESCUINTLA</option>
+                                        <option value="486">GUATEMALA</option>
+                                        <option value="498">HUEHUETENANGO</option>
+                                        <option value="503">IZABAL</option>
+                                        <option value="506">JALAPA</option>
+                                        <option value="507">JUTIAPA</option>
+                                        <option value="502">PETÉN</option>
+                                        <option value="494">QUETZALTENANGO</option>
+                                        <option value="496">RETALHULEU</option>
+                                        <option value="488">SACATEPEQUEZ</option>
+                                        <option value="497">SAN MARCOS</option>
+                                        <option value="491">SANTA ROSA</option>
+                                        <option value="492">SOLOLÁ</option>
+                                        <option value="495">SUCHITEPEQUEZ</option>
+                                        <option value="493">TOTONICAPÁN</option>
+                                        <option value="504">ZACAPA</option>
+                                    </select>
+                                    <input type="hidden" id="depto-input">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper">
+                                    <input type="text" name="NIT" id="NIT" placeholder="NIT (Número de Identificación Tributaría)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="priv__state-input--wrapper" id="municipality-container">
+                                    <select name="municipality" id="municipality">
+                                        <option value="">Selecciona el municipio</option>
+                                    </select>
+                                    <input type="hidden" id="municipality-input">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="priv__zone-input--wrapper" id="zone-container">
+                                    <select id="zone" title="Zona">
+                                        <option value="">Elige una zona</option>
+                                    </select>
+                                    <input type="hidden" id="zone-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-offset-6">
+                                <div class="priv__state-input--wrapper text-right">
+                                    <button class="button-flat secondary">Crear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="internal-form" id="privilegio-step-final">
+                    <div class="control-wrapper">
+                        <input type="text" id="mdr-tp" name="mdr-tp" placeholder="Ingresa tu numero de tarjeta privilegio">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="mdr__form-title">¡Últimas preguntas!</h2>
+                <div class="internal-form">
+                    <div class="control-wrapper">
+                        <div class="static-layout__mesa--faq">
+                            <h3 class="mdr__form-subtitle">Tienda para hacer tu recorrido *</h3>
+                            <span class="tooltip">
+                                <svg class="svg-icon-faqs"><use xlink:href="#svg-icon-faqs"></use></svg>
+                                <span class="tooltiptext">Si elegiste la opción de intercambio  10%, selecciona una tienda CEMACO para realizar la liquidación de tu evento y recibir el certificado de regalo con el monto acumulado en regalos   el 10% adicional. </span>
+                            </span>
+                        </div>
+                        <select class="form-control c-square c-theme control-cotiza" name="mdr-tr" id="mdr-tr" required="">
+                            <option value="">Escoge tu tienda</option>
+                            <option value="T010">Plaza CEMACO, zona 10</option>
+                            <option value="T004">Zona 4, Ciudad</option>
+                            <option value="T0PC">Pradera Concepción</option>
+                            <option value="T007">Peri-Roosevelt, zona 7</option>
+                            <option value="T017">Portales, zona 17</option>
+                            <option value="T0XE">Xela, Quetzaltenango</option>
+                            <option value="T0SK">SanKris, zona 8 de Mixco</option>
+                            <option value="T0FT">El Frutal, villa nueva</option>
+                            <option value="T0MZ">Mazatenango, Suchitepéquez</option>
+                            <option value="T0AM">Amatitlán, Guatemala</option>
+                            <option value="T0AL">Ecocentro, San Miguel Petapa</option>
+                            <option value="T0CY">Cayalá, zona 16</option>
+                            <option value="T0NJ">Naranjo, Mixco</option>
+                            <option value="TK21">Plaza Madero, Km 21.7 Carretera a El Salvador</option>
+                            <option value="T0CH">Chimaltenango</option>
+                            <!-- <option value="online-store">No tengo una tienda cerca</option> -->
+                        </select>
+                    </div>
+                    <div class="control-wrapper">
+                        <div class="static-layout__mesa--faq">
+                            <h3 class="mdr__form-subtitle">Tienda donde realizarás tu liquidación *</h3>
+                            <span class="tooltip">
+                                <svg class="svg-icon-faqs"><use xlink:href="#svg-icon-faqs"></use></svg>
+                                <span class="tooltiptext">Si elegiste la opción de intercambio  10%, selecciona una tienda CEMACO para realizar la liquidación de tu evento y recibir el certificado de regalo con el monto acumulado en regalos   el 10% adicional. </span>
+                            </span>
+                        </div>
+                        <select class="form-control c-square c-theme control-cotiza" name="mdr-tl" id="mdr-tl" required="">
+                            <option value="">Escoge tu tienda</option>
+                            <option value="T010">Plaza CEMACO, zona 10</option>
+                            <option value="T004">Zona 4, Ciudad</option>
+                            <option value="T0PC">Pradera Concepción</option>
+                            <option value="T007">Peri-Roosevelt, zona 7</option>
+                            <option value="T017">Portales, zona 17</option>
+                            <option value="T0XE">Xela, Quetzaltenango</option>
+                            <option value="T0SK">SanKris, zona 8 de Mixco</option>
+                            <option value="T0FT">El Frutal, villa nueva</option>
+                            <option value="T0MZ">Mazatenango, Suchitepéquez</option>
+                            <option value="T0AM">Amatitlán, Guatemala</option>
+                            <option value="T0AL">Ecocentro, San Miguel Petapa</option>
+                            <option value="T0CY">Cayalá, zona 16</option>
+                            <option value="T0NJ">Naranjo, Mixco</option>
+                            <option value="TK21">Plaza Madero, Km 21.7 Carretera a El Salvador</option>
+                            <option value="T0CH">Chimaltenango</option>
+                            <!-- <option value="online-store">No tengo una tienda cerca</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="internal-form">
+                    <div class="control-wrapper mb0 control-message">
+                        <h3 class="mdr__form-title">Personaliza tu lista de regalos</h3>
+                        <div class="mdr__form-control">
+                            <textarea id="mdr-comments" name="mdr-comments" placeholder="Escribe un mensaje para tus invitados"  aria-required="true"></textarea>
+                        </div>
+                    </div>
+                    <div class="control-wrapper mb0 mdr__form-url--wrapper">
+                        <div class="mdr__form-control">
+                            <div class="static-layout__mesa--faq">
+                                <!--h3 class="mdr__form-title">URL de lista</h3-->
+                                <h3 class="mdr__form-title">Personaliza</h3>
+                                <span class="tooltip">
+                                    <svg class="svg-icon-faqs"><use xlink:href="#svg-icon-faqs"></use></svg>
+                                    <span class="tooltiptext" style="display:none;">Copia el enlace de tu lista de regalos y compártela con tus invitados para que puedan ver en cemaco.com los productos que elegiste.</span>
+                                </span>
+                            </div>
+                            <div class="static-layout__mesa--link" style="display:none;">
+                                <p>
+                                    htttps://www.cemaco.com/lista/
+                                </p>
+                                <input type="text" id="mdr-url" placeholder="Escoge tu link" class="">
+                            </div>
+                        </div>
+                        <div class="mdr__form-control" id="mdr__form-image--wrapper">
+                            <div class="mdr__form-image" id="mdr__form-image" style="display:none;"></div>
+                            <a href="" id="mdr__form-image-btn" class="button-flat btn_bg">Subir foto</a>
+                            <p class="disclaimer">
+                                Te recomendamos que la imagen cuente con las siguientes
+                                especificaciones: <strong>1440px x 300px</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="internal-form">
+                    <div class="control-wrapper">
+                        <div class="static-layout__mesa--faq">
+                            <h3 class="mdr__form-title">Términos y Condiciones *</h3>
+                            <a href="#" id="send-contract-email" title="Enviar el contrato de festejo a mi correo">
+                                <svg class="svg-icon-email"><use xlink:href="#svg-icon-email"></use></svg>
+                            </a>
+                            <a href="https://cemacogt.vteximg.com.br/arquivos/politica_de_registro_festejo_25-01-2021.pdf" target="_blank">
+                                <svg class="svg-icon-print"><use xlink:href="#svg-icon-print"></use></svg>
+                            </a>
+                        </div>
+                        <span class="internal-form__label-small">
+                            <input type="checkbox" id="terms-check">
+                            <label for="terms-check"><span class="disclaimer">Acepto los <a href="/_secure/mesa-de-regalos/contrato" target="_blank"><u>términos y condiciones</u></a></span></label>
+                        </span>
+                        <div style="
+                            font-size: 0.75rem;
+                            padding: 0 0 0.5rem;">
+                            Puedes agregar productos a tu registro desde nuestras tiendas y/o a través de CEMACO.com.
+                            <b>La existencia de productos en tiendas y nuestro sitio web</b>, para tus invitados, <b>puede variar</b> por disponibilidad de inventario.
+                            ¿Tienes dudas? llámanos al 2499-9990 ¡Estamos para servirte!</div>
+                    </div>
+                </div>
+                <div class="text-center mdr__action--wrapper">
+                    <a href="#" id="btn-giftlist-cancel" class="button-flat gray">Cancelar</a>
+                    <button id="btn-giftlist-save" class="button-flat btn_bg">Crea tu evento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="html-mdr-address-new">
+        <div class="control-wrapper mb0">
+            <span class="internal-form__label-small">
+                Usar datos de:
+            </span>
+            <span class="internal-form__label-small">
+                <input type="radio" class="radio-receives" name="radio-receives" id="radio-receives-1" value="mama">
+                <label for="radio-receives-1"><span>Mamá</span></label>
+            </span>
+            <span class="internal-form__label-small">
+                <input type="radio" class="radio-receives" name="radio-receives" id="radio-receives-2" value="papa">
+                <label for="radio-receives-2"><span>Papá</span></label>
+            </span>
+        </div>
+        <div class="internal-form">
+            <div class="control-wrapper mb0">
+                <input type="text" id="receiverName" name="receiverName" placeholder="Nombre de persona que puede recibir sus regalos" class="">
+            </div>
+        </div>
+        <div class="internal-form">
+            <div class="control-wrapper">
+                <div class="mdr__form-control">
+                    <select class="form-control c-square c-theme control-cotiza" name="state" id="state" required="">
+                        <option value="">Departamento</option>
+                    </select>
+                </div>
+                <div class="mdr__form-control">
+                    <select class="form-control c-square c-theme control-cotiza" name="city" id="city" required="">
+                        <option value="">Zona</option>
+                    </select>
+                </div>
+                <div class="mdr__form-control">
+                    <select class="form-control c-square c-theme control-cotiza" name="" id="Municipio" required="">
+                        <option value="">Municipio</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-wrapper">
+                <div class="mdr__form-control">
+                    <input type="text" id="mdr-dir" name="" placeholder="Dirección" class="">
+                </div>
+                <div class="mdr__form-control">
+                    <input type="text" id="" name="" placeholder="Referencias" class="">
+                </div>
+                <!-- <input type="text" id="" name="" placeholder="Apellidos" class=""> -->
+                <!-- <input type="text" id="" name="" placeholder="Celular" class=""> -->
+            </div>
+        </div>
+    </script>
+    <!-- SVG Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" display="none" style="display:none;">
+        <defs>
+        <!-- Giftcard -->
+       <symbol id="svg-icon-giftcard" viewBox="0 0 32 32">
+            <title>Giftcard</title>
+            <path fill="currentColor" d="M31.8,18.9L25,12.1C24.9,12,24.8,12,24.7,12h-2.9v-1.7V9.9c0-1.7-1.4-3.1-3.1-3.1H3.1C1.4,6.8,0,8.2,0,9.9
+            v0.3v2.3v5.6c0,1.7,1.4,3.1,3.1,3.1H18v-0.2c0,2.5,1.9,4.1,4.8,4.1c0.3,0,0.5-0.2,0.5-0.5c0-0.3-0.2-0.5-0.5-0.5
+            c-2.3,0-3.8-1.2-3.8-3.2c0,0,0,0,0,0c0.4,0,0.8-0.2,1.2-0.3c0.8,1,2.1,1.7,3.8,1.7c0.3,0,0.5-0.2,0.5-0.5c0-0.3-0.2-0.5-0.5-0.5
+            c-1.4,0-2.6-0.6-3.2-1.6c0,0,0,0,0,0c-0.4-0.6-0.6-1.3-0.6-2.1c0-0.3-0.2-0.5-0.5-0.5h-3.4c-0.4,0-0.7-0.2-0.7-0.6
+            c-0.1-0.4,0.3-0.8,0.7-0.8h8.8c0,0,0.5-0.4,0.5-0.7c0-0.3-0.2-0.5-0.5-0.6h-3V13h2.7l6.7,6.7c0.1,0.1,0.2,0.2,0.4,0.2
+            s0.3-0.1,0.4-0.2C32.1,19.5,32.1,19.1,31.8,18.9 M18.8,7.8c1.1,0,2,0.8,2,1.7L20.7,13v0.4h-9.6c0.3-0.2,0.5-0.4,0.6-0.4l0,0
+            c0,0,1.4-1.3,1.4-2.5c0-0.4-0.2-0.8-0.5-1.1c-0.3-0.3-0.7-0.5-1.2-0.5c-0.8,0-1.6,0.5-2.5,1.6c-0.1,0.1-0.1,0.2-0.2,0.3
+            c0,0.1-0.1,0.1-0.1,0.2V7.8H18.8z M8.8,13.2c0.1-0.5,0.4-1.6,1-2.2c0.7-0.8,1.3-1.3,1.8-1.3c0.2,0,0.4,0.1,0.5,0.2
+            c0.1,0.1,0.2,0.3,0.2,0.4c0,0.7-0.9,1.6-1.1,1.8C11.1,12.3,10.2,13.1,8.8,13.2 M1,12l0-2.4c0.1-1,1-1.7,2-1.7h4.6v2.9
+            c-0.2-0.3-0.4-0.5-0.4-0.6l0,0c0,0-1.3-1.4-2.5-1.4c-0.4,0-0.8,0.2-1.1,0.5C3.3,9.6,3.1,10,3.1,10.5c0,0.8,0.6,1.6,1.6,2.4
+            C4.9,13,5,13.1,5.2,13.2c0.1,0,0.1,0.1,0.2,0.1H1V13V12z M7.7,13.2c-0.6-0.1-1.6-0.4-2.2-1v0c-0.8-0.7-1.2-1.3-1.3-1.8
+            c0-0.2,0.1-0.4,0.2-0.6c0.1-0.1,0.2-0.2,0.4-0.2c0.7,0,1.7,0.9,1.8,1.1C6.6,10.8,7.5,11.8,7.7,13.2 M1,18.2v-3.9H7l-2.1,2
+            c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.2,0.1,0.3c0.2,0.2,0.5,0.2,0.7,0l2.1-2.1v5.4H3.1C2,20.3,1,19.3,1,18.2 M15.9,14.7L15.9,14.7
+            c-1,0-1.8,0.9-1.7,1.9c0.1,0.9,0.9,1.6,1.8,1.6h3.3c0.1,0.7,0.2,1.3,0.5,1.9c-0.3,0.1-0.6,0.2-0.9,0.2H8.6v-5.4l2.1,2.1
+            c0.2,0.2,0.5,0.2,0.7,0c0.1-0.1,0.1-0.2,0.1-0.3c0-0.1-0.1-0.2-0.1-0.3l-2.1-2h11.4v0.4H15.9z"/>
+        </symbol>
+        </defs>
+    </svg>
+</div>

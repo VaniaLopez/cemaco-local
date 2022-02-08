@@ -1,0 +1,49 @@
+#app-top{
+    h1{
+        padding: 10px 0;
+        font-family: $font-title;
+        @include font-size(1.5);
+        font-weight: $font-regular;
+        text-transform: uppercase;
+    }
+    .bg-washed-green{
+        border-color: lighten($c-success,60);
+        background-color: lighten($c-success,70);
+    }
+    .dark-green{
+        color: darken($c-primary, 10);
+    }
+}
+
+.cconf-product-table{
+    .cconf-product{
+        img{
+            width: auto;
+        }
+    }
+}
+
+.cconf-address,
+.cconf-payment,
+.cconf-summary{
+    .bg-white{
+        background: $c-light-gray;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+#app-container{
+    .cconf-myorders-button,
+    .cconf-continue-button{
+        @include button-flat($c-primary);
+        border: none;
+        font-size: 1rem;
+    }
+}
+
+.body-checkout-confirmation{
+    .center{
+        @include padding-h();
+    }
+}

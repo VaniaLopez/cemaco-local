@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+    <title>Mis órdenes | CEMACO</title>
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-styles" />
+    <vtex:template id="xCemaco-styles-user" />
+    <vtex:contentPlaceHolder id="page-styles" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header" />
+    <main role="main" class="page-main--internal-page">
+        <div class="page-header--account"></div>
+        <!-- Content. Begin -->
+        <div class="re-central">
+            <vtex:template id="xCemaco-account-nav" />
+            <vtex.cmc:orderList />
+        </div>
+        <!-- Content. End -->
+    </main>
+
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-scripts" />
+    <vtex:template id="xCemaco-scripts-user" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <vtex:contentPlaceHolder id="page-scripts" />
+</body>
+</html>

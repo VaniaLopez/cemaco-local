@@ -1,0 +1,78 @@
+/*--------------------Footer Buttons--------------------*/
+$c-whatsapp-color: #56A52E;
+$c-hotjar-color: #fd385b;
+
+//Whatsapp & Hotjar Button
+.footer-button{
+    @include flexbox($jc:center, $ai: center);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+	position: fixed;
+    right: 25px;
+    z-index: 1000;
+    color: white;
+    transition: all $animate-time;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+    cursor: pointer;
+    &.whatsapp{
+        bottom: 70px;
+        background-color: $c-whatsapp-color;
+        // display: none;
+        @include mediaFrom(lg){
+            bottom: 100px;
+        }
+    }
+    &.hotjar{
+        bottom: 130px;
+        background-color: $c-hotjar-color;
+        @include mediaFrom(lg){
+            bottom: 160px;
+        }
+    }
+    &:hover{
+        border-radius: 50px;
+        width: em(130);
+        span{
+            max-width: 100%;
+            padding-right: 0.5em;
+        }
+    }
+    span{
+        max-width: 0;
+        font-size: em(11);
+        letter-spacing: 1px;
+        overflow: hidden;
+        transition: all $animate-time;
+    }
+    a{
+        line-height: 0;
+    }
+    svg{
+        @include sizeProportion($dW: 1.5);
+        stroke-width: 1;
+        font-size: 1em;
+	}
+}
+
+//Chat button
+#salemove{
+    @include mediaTo(md){
+        .sm-visitor-app{
+            right: 25px !important;
+        }
+        .sm-reactive-tab{
+            min-height: 50px;
+        }
+        .sm-reactive-tab-content{
+            position: relative;
+            min-width: 50px;
+            min-height: 50px;
+            border-radius: 100%;
+        }
+        .sm-icon{
+            top: 10px;
+            left: 8px;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+/*--------------------Slider Main--------------------*/
+.main-slider-fullscreen{
+	position: relative;
+	z-index: 1;
+	// Slider Container
+	.container-slider-landscape,
+	.container-slider-mobile-portrait,
+	.container-slider-mobile-landscape{
+		display: none !important;
+		position: relative;
+		// background: white url(../images/loader.gif) center no-repeat;
+	}
+	/*.container-slider-mobile-portrait,
+	.container-slider-mobile-landscape{
+		transition: height 0.1s ease-out;
+		@media screen and (min-width: $screen-bs-min){
+			min-height: 260px;
+		}
+		@media screen and (min-width: $screen-xs-min){
+			min-height: 640px;
+		}
+		@media screen and (min-width: $screen-md-min){
+			min-height: 950px;
+		}
+		@media screen and (min-width: $screen-lg-min){
+			min-height: 690px;
+		}
+		@media screen and (min-width: $screen-xl-min){
+			min-height: 650px;
+		}
+		@media screen and (min-width: $screen-xxl-min){
+			min-height: 830px;
+		}
+		@media screen and (min-width: $screen-hd-min){
+			min-height: 900px;
+		}
+	}*/
+	.container-slider-mobile-portrait{
+		@media screen and (orientation: portrait){
+			display: block !important;
+		}
+	}
+	.container-slider-landscape,
+	.container-slider-mobile-landscape{
+		@media screen and (orientation: landscape){
+			display: block !important;
+		}
+		html.browser--desktop &.only-mobile{
+			display: none !important;
+		}
+	}
+	// Slider
+	.slider-landscape,
+	.slider-mobile-portrait,
+	.slider-mobile-landscape{
+		width: 100%;
+		display: none;
+		position: relative;
+	}
+	// Video
+	li.video-slider{
+		.slotholder{
+			display: none !important;
+			@media
+			screen and (max-width: $screen-lg-min) and (-webkit-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (-moz-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (-ms-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (-o-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (min-device-pixel-ratio: 1.5){
+				display: block !important;
+			}
+		}
+		.fullscreenvideo{
+			@media
+			screen and (max-width: $screen-lg-min) and (-webkit-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (-moz-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (-ms-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (-o-min-device-pixel-ratio: 1.5),
+			screen and (max-width: $screen-lg-min) and (min-device-pixel-ratio: 1.5){
+				display: none !important;
+			}
+		}
+	}
+}
+
+.main-slider{
+    &--wrapper{
+        overflow: hidden;
+    }
+	&--control-banner{
+        overflow: hidden;
+		opacity: 0;
+		transition: opacity 0.2s;
+		&.slick-initialized{
+			opacity: 1;
+        }
+        .slick-track{
+            @include mediaTo(md){
+                padding-bottom: 1.5em;
+            }
+        }
+        .slick-dots{
+            //width: calc(100% - 30px);
+            @include mediaFrom(md){
+                width: calc(94% - 30px);
+            }
+            @include mediaFrom(lg){
+                width: auto;
+                bottom: 1em;
+            }
+            @include mediaTo(md) {
+                li {
+                    width: 100% !important;
+                    button {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        .slick-arrow svg{
+            stroke: transparent;
+        }
+		img{
+			height: auto;
+        }
+	}
+}

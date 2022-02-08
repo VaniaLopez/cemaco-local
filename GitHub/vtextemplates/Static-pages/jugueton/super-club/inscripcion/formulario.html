@@ -1,0 +1,208 @@
+<div class="super-bloque">
+    <a id="aQuienEres" class="fix-anchor"> </a>
+    <form action="/send-email" method="POST" class="superclub__form" id="superclubSubscribe">
+        <div class="super-bloque-item">
+            <div class="control-club">
+                <p class="super-titulo-form">¿Quién eres?</p>
+            </div>
+            <div class="control-club"><input type="radio" name="quieneres" id="quieneress" value="Nino/Nina"> Niño /
+                Niña</div>
+            <div class="control-club"><input type="radio" name="quieneres" id="quieneres" value="Adulto"> Adulto
+                (estoy ingresando los datos del niño/niña)</div>
+            <small class="alert_super" id="quienEresSuper"></small>
+        </div>
+
+        <div class="super-bloque-item">
+            <a id="aPrimeraVez" class="fix-anchor"> </a>
+            <p class="super-titulo-form">¿Es la primera vez que te inscribes al Super Club?</p>
+            <div class="control-club"><input id="superclubSi" name="primeravez" type="radio" value="Si">Si</div>
+            <div class="control-club"><input id="superclubNoActualizar" name="primeravez" type="radio"
+                    value="No, ya tengo mi tarjeta y quiero actualizar mis datos">No, ya tengo mi tarjeta y quiero
+                actualizar mis datos</div>
+            <div class="control-club"><input id="superclubNoNueva" name="primeravez" type="radio"
+                    value="No, perdí mi tarjeta y quiero una nueva">No, perdí mi tarjeta y quiero una nueva</div>
+            <small class="alert_super" id="primeraVezSuper"></small>
+        </div>
+
+        <div>
+            <p class="super-titulo-form">Datos del niño / niña</p>
+            <div class="control-datos super-personaje"><img
+                    src="https://cemacogt.vteximg.com.br/arquivos/super-inscripcion-1.jpg" alt=""></div>
+            <div class="control-datos control-datos-m">
+                <div class="control-club"><a id="aNombreNino" class="fix-anchor"> </a><input type="text"
+                        id="superclubNombreNino" value="" placeholder="Nombre" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="nombreNino"></small></div>
+                <div class="control-club"><a id="aApellidosNino" class="fix-anchor"> </a><input type="text"
+                        id="superclubApellidos" value="" placeholder="Apellidos" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="apellidoNino"></small></div>
+                <div class="control-club"><a id="aCorreoNino" class="fix-anchor"> </a><input type="text"
+                        id="superclubEmail" value="" placeholder="Correo electrónico" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="correoNino"></small></div>
+                <div class="control-club"><a id="aConfCorreoNino" class="fix-anchor"> </a><input type="text"
+                        id="superclubConfirmar" value="" placeholder="Confirmar correo electrónico" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="confCorreoNino"></small>
+                </div>
+                <!-- <div class="control-club control-wrapper_large"><input type="date" id="superclubFechaNacimiento" value=""
+                        placeholder="Fecha de nacimiento"
+                        class="fulltext-subscribe-box2 datepick hasDatepicker"><small class="alert_super"
+                        id="FechaNino"></small></div>-->
+
+                <div class="control-club"><a id="aFechaNino" class="fix-anchor"> </a>
+                    <input placeholder="Fecha de nacimiento" type="text" id="superclubFechaNacimiento"
+                        name="cardBirthday" autocomplete="off">
+                    <input type="hidden" id="cardBirthday-alt">
+                    <small class="alert_super" id="fechaNacimientoNino"></small>
+                </div>
+            </div>
+            <div class="control-datos">
+                <div class="control-club">
+                    <a id="aGeneroNino" class="fix-anchor"> </a>
+                    <p class="super-subtitulo-form">Género</p>
+                </div>
+                <div class="control-club"><input id="superclubGeneroF" name="genero" type="radio"
+                        value="Femenino">Femenino</div>
+                <div class="control-club"><input id="superclubGeneroM" name="genero" type="radio"
+                        value="Masculino">Masculino</div>
+                <small class="alert_super" id="generoNino"></small>
+                <div class="super-personaje3"><img
+                        src="https://cemacogt.vteximg.com.br/arquivos/super-inscripcion-1.jpg" alt=""></div>
+                <div class="control-club">
+                    <a id="aInteresNino" class="fix-anchor"> </a>
+                    <p class="super-subtitulo-form">Intereses</p>
+                </div>
+                <div class="control-club"><textarea id="superclubIntereses"
+                        placeholder="Ingresa tus intereses favoritos" style="min-height: 115px;"></textarea>
+                    <small class="alert_super" id="interesesNino"></small>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="super-titulo-form">Datos de mami, papi o persona responsable</p>
+
+        <div>
+            <div class="control-datos  super-personaje"><img
+                    src="https://cemacogt.vteximg.com.br/arquivos/super-inscripcion-2.jpg" alt=""></div>
+            <div class="control-datos  control-datos-m">
+                <div class="control-club"><a id="aParentescoRes" class="fix-anchor"> </a><input type="text"
+                        id="superclubParentesco" value="" placeholder="Parentesco con el niño / niña"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="parentescoRes"></small></div>
+                <div class="control-club"><a id="aNombreRes" class="fix-anchor"> </a><input type="text"
+                        id="superclubNombresPapas" value="" placeholder="Nombres" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="nombreRes"></small></div>
+                <div class="control-club"><a id="aApellidoRes" class="fix-anchor"> </a><input type="text"
+                        id="superclubApellidosPapas" value="" placeholder="Apellidos" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="apellidoRes"></small></div>
+                <div class="control-club"><a id="aDpiRes" class="fix-anchor"> </a><input type="number" id="superclubDPI"
+                        value="" placeholder="Número de DPI" autocomplete="off" class="fulltext-subscribe-box2"><small
+                        class="alert_super" id="dpiRes"></small></div>
+                <div class="control-club"><a id="aPriviRes" class="fix-anchor"> </a><input type="number"
+                        id="superclubNoPrivilegio" value="" placeholder="Número de tarjeta Privilegio"
+                        autocomplete="off" class="fulltext-subscribe-box2"><small class="alert_super"
+                        id="priviRes"></small></div>
+                <div class="control-club"><small>Si no cuentas con la tarjeta puntos privilegio, estaremos generando
+                        una automaticamente para ti.</small></div>
+                <!--<div class="control-club"><input type="text" id="superclubFechaPapas" value=""
+                        placeholder="Fecha de nacimiento" autocomplete="off" class="fulltext-subscribe-box2"></div>-->
+                <div class="control-club">
+                    <a id="aFechaRes" class="fix-anchor"> </a>
+                    <input placeholder="Fecha de nacimiento" type="text" id="superclubFechaPapas" name="cardBirthdayy">
+                    <input type="hidden" id="cardBirthdayParetns-alt">
+                    <small class="alert_super" id="fechaRes"></small>
+                </div>
+                <div class="control-club">
+                    <a id="aGeneroRes" class="fix-anchor"> </a>
+                    <p class="super-subtitulo-form">Género</p>
+                </div>
+                <div class="control-club"><input id="superclubGeneroPapasF" name="generoAdulto" type="radio"
+                        value="Femenino">Femenino</div>
+                <div class="control-club"><input id="superclubGeneroPapasM" name="generoAdulto" type="radio"
+                        value="Masculino">Masculino</div>
+                <small class="alert_super" id="generoRes"></small>
+                <div class="super-personaje3"><img
+                        src="https://cemacogt.vteximg.com.br/arquivos/super-inscripcion-2.jpg" alt=""></div>
+            </div>
+            <div class="control-datos">
+                <div class="control-club"><a id="aCorreoRes" class="fix-anchor"> </a><input type="text"
+                        id="superclubCorreoPapas" value="" placeholder="Correo electrónico" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="correoRes"></small></div>
+                <div class="control-club"><a id="aConfCorreoRes" class="fix-anchor"> </a><input type="text"
+                        id="superclubConfirmarPapas" value="" placeholder="Confirmar correo electrónico"
+                        autocomplete="off" class="fulltext-subscribe-box2"><small class="alert_super"
+                        id="confCorreoRes"></small></div>
+                <div class="control-club"><a id="aTelefonoRes" class="fix-anchor"> </a><input type="number"
+                        id="superclubTelefono" value="" placeholder="Teléfono de casa" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="telefonoRes"></small></div>
+                <div class="control-club"><a id="aCelularRes" class="fix-anchor"> </a><input type="number"
+                        id="superclubTelefonoCelular" value="" placeholder="Teléfono de celular" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="celularRes"></small></div>
+                <!--<div class="control-club"><a id="aZonaRes" class="fix-anchor"> </a><input type="number"
+                        id="superclubZona" value="" placeholder="Zona" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="zonaRes"></small></div> -->
+                <!--<div class="control-club"><a id="aDepartamentoRes" class="fix-anchor"> </a><input type="text"
+                        id="superclubDepartamento" value="" placeholder="Departamento" autocomplete="off"
+                        class="fulltext-subscribe-box2"><small class="alert_super" id="departamentoRes"></small></div>-->
+                <div class="control-club"> <a id="aDepartamentoRes" class="fix-anchor"> </a> <select name="depto" id="depto">
+                        <option value="">Selecciona tu departamento</option>
+                        <option value="501">ALTA VERAPAZ</option>
+                        <option value="500">BAJA VERAPAZ</option>
+                        <option value="489">CHIMALTENANGO</option>
+                        <option value="505">CHIQUIMULA</option>
+                        <option value="487">EL PROGRESO</option>
+                        <option value="499">EL QUICHÉ</option>
+                        <option value="490">ESCUINTLA</option>
+                        <option value="486">GUATEMALA</option>
+                        <option value="498">HUEHUETENANGO</option>
+                        <option value="503">IZABAL</option>
+                        <option value="506">JALAPA</option>
+                        <option value="507">JUTIAPA</option>
+                        <option value="502">PETÉN</option>
+                        <option value="494">QUETZALTENANGO</option>
+                        <option value="496">RETALHULEU</option>
+                        <option value="488">SACATEPEQUEZ</option>
+                        <option value="497">SAN MARCOS</option>
+                        <option value="491">SANTA ROSA</option>
+                        <option value="492">SOLOLÁ</option>
+                        <option value="495">SUCHITEPEQUEZ</option>
+                        <option value="493">TOTONICAPÁN</option>
+                        <option value="504">ZACAPA</option>
+                    </select>
+                    <input type="hidden" id="depto-input"> </a>
+                    <small class="alert_super" id="departamentoRes"></small>
+                </div>
+                <div class="control-club"><a id="aDireccionRes" class="fix-anchor"> </a> <select name="municipality"
+                        id="municipality">
+                        <option value="">Selecciona el municipio</option>
+                    </select>
+                    <input type="hidden" id="municipality-input"><small class="alert_super" id="municipioRes"></small>
+                </div>
+                <div class="control-club"><a id="aZonaRes" class="fix-anchor"> </a> <select id="zone" title="Zona">
+                        <option value="">Elige una zona</option>
+                </select>
+                <input type="hidden" id="zone-input"><small class="alert_super" id="zonaRes"></small>
+                </div>
+                <div class="control-club"><a id="aDireccionRes" class="fix-anchor"> </a><textarea
+                        id="superclubDireccion" placeholder="Dirección completa"></textarea><small class="alert_super"
+                        id="direccionRes"></small></div>
+                <div class="control-club">
+                    <p class="super-subtitulo-form">Dirección para recibir la tarjeta Super Club</p>
+                </div>
+                <div class="control-club"><a id="aEntregaRes" class="fix-anchor"> </a><input
+                        id="superclubDireccionMisma" name="direccion" type="radio"
+                        value="Es la misma dirección que mi casa">Es la misma dirección que mi casa</div>
+                <div class="control-club"><input id="superclubDireccionOtra" name="direccion" type="radio"
+                        value="Otra">Otra</div>
+                <div class="control-club"><input type="text" id="superclubOtraDireccion" value="" style="display: none;"
+                        placeholder="Direccion de entraga" class="fulltext-subscribe-box2"><small class="alert_super"
+                        id="otraDireccionRes"></small></div>
+            </div>
+
+        </div>
+        <p class="txt_preFooter" id="txt_success" style="display: none; color:#008c5e;">¡Listo! Tus datos han sido
+            enviados</p>
+        <p class="txt_preFooter">¡Listo!<br>Revisa tus datos antes de enviar el formulario</p>
+        <!--<p align="center"><a href="" class="button-flat super">Incríbete</a></p>-->
+        <input align="center" type="submit" id="btn_inscribir" name="" class="button-flat super" value="Inscribete"
+            style="display: flex;" />
+    </form>
+</div>

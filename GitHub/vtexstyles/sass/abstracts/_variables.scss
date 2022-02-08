@@ -1,0 +1,17 @@
+// Breakpoints docs: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+$breakpoints: (
+    xs: 414px,
+    sm: 576px,
+    md: 768px,
+    mdg: 810px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// Colors
+$green: #94D500;
+$grey: #D8D8D8;
+$grey-2: #FAFAFA;
+$blue: #101E8E;
+$light-blue-bebe: #1EC0DF;

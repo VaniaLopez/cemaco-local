@@ -1,0 +1,37 @@
+body.callcenter{
+	padding-top: 65px!important;
+	header{
+		top: 65px!important;
+	}
+}
+#vtex-callcenter__toolbar{
+    position: fixed!important;
+    top: 0 !important;
+}
+#impersonateButton{
+	padding-left: 0!important;
+	padding-right: 0!important;
+	white-space: nowrap!important;
+	text-align: center!important;
+}
+#impersonationForm{
+	overflow: visible;
+	& > div.cc-absolute{
+		top: 2px!important;
+		& > h4{
+			font-size: .9rem;
+			padding: .5em 0;
+		}
+	}
+}
+#vtex-callcenter__customer-login-submit{
+	margin-left: auto!important;
+	display: block!important;
+	width: 230px!important;
+	font-weight: 400!important;
+	font-size: .7rem!important;
+	padding: 10px 0!important;
+}
+#impersonateButton{
+	// display: none!important;
+}

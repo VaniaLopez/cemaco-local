@@ -1,0 +1,12 @@
+.not-found{
+	&{
+		position: relative;
+	}
+	&__summary{
+		@include absolute-center;
+		padding: 2em;
+		color: $c-primary;
+		text-align: center;
+		background-color: rgba(white,0.5);
+	}
+}

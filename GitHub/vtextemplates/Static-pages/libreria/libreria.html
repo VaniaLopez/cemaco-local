@@ -1,0 +1,407 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="re-central">
+    
+    <!-- Empieza Banner portada -->
+    <!--
+    <div class="banner-libreria">
+        <picture>
+            
+            <source srcset="/arquivos/2021_banner_cat_libreria_mobile.min.jpg" media="(max-width: 767px)" type="image/webp">
+            
+            <source srcset="/arquivos/2021_banner_cat_libreria_mobile.jpg" media="(max-width: 767px)">
+            
+            <source srcset="/arquivos/2021_banner_cat_libreria_desktop.min.jpg" type="image/webp">
+        
+            <img src="/arquivos/2021_banner_cat_libreria_desktop.jpg" alt="Banner libreria">
+        </picture>
+    </div>
+    -->
+    <div class="banner-libreria">
+        <picture>
+            <!-- Mobile webp min.jpg-->
+            <source srcset="/arquivos/2022_banner_cat_libreria_mobile.min.jpg" media="(max-width: 767px)" type="image/webp">
+            <!-- Mobile .jpg-->
+            <source srcset="/arquivos/2022_banner_cat_libreria_mobile.jpg" media="(max-width: 767px)">
+            <!-- Desktop webp min.jpg-->
+            <source srcset="/arquivos/2022_banner_cat_libreria_desktop.min.jpg" type="image/webp">
+            <!-- Desktop .jpg-->
+            <img src="/arquivos/2022_banner_cat_libreria_desktop.jpg" alt="Banner libreria">
+        </picture>
+    </div>
+    <!-- Termina Banner portada -->
+    
+    <!-- Empieza Titulo -->
+    <h2 class="title-landing">Compra por categoría</h2>
+    <!-- Termina Titulo-->
+    
+    <!-- Empieza imagenes categorias -->
+    <div class="row content-categories">
+        <div class="item-category">
+            <a href="/1687?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_libreria_categoria_escolar.min.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_libreria_categoria_escolar.jpg" class="image-category image-one" alt="libreria Banner">
+                </picture>
+                <h3 class="title-category title-one">Escolar</h3>
+            </a>
+        </div>
+        <div class="item-category">
+            <a href="/1688?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_libreria_categoria_oficina.min.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_libreria_categoria_oficina.jpg" class="image-category image-two" alt="libreria Banner">
+                </picture>
+                <h3 class="title-category title-two">Oficina</h3>
+            </a>
+        </div>
+        <div class="item-category">
+            <a href="/1689?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_libreria_categoria_manualidades.min.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_libreria_categoria_manualidades.jpg" class="image-category" alt="libreria Banner">
+                </picture>
+                <h3 class="title-category">Manualidades</h3>
+            </a>
+        </div>
+        <div class="item-category item-padding">
+            <a href="/1690?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_libreria_categoria_crayones_marcadores.min.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_libreria_categoria_crayones_marcadores.jpg" class="image-category image-three" alt="libreria Banner">
+                </picture>
+                <h3 class="title-category title-three">Crayones y marcadores</h3>
+            </a>
+        </div>
+        <div class="item-category">
+            <a href="/1691?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_libreria_categoria_plasticina.min.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_libreria_categoria_plasticina.jpg" class="image-category image-four" alt="libreria Banner">
+                </picture>
+                <h3 class="title-category title-four">Plasticina</h3>
+            </a>
+        </div>
+    </div>
+    <!-- Termina imagenes categorias -->
+</div>
+
+<style>
+    .row{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .libreria .banner-libreria{
+            margin-bottom: 1.4rem;
+    }
+    .libreria .bread-crumbs, .libreria .category-name, .libreria .product-list__results-items{
+        display: none;
+    }
+    
+    .libreria .product-list__controls{
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    .libreria .re-central--product-list {
+        padding: 10px 20px;
+        background: #F6F6F6;
+        margin-top: 1.5rem;
+    }
+
+    .libreria .pre-footer {
+        margin-top: 2rem
+    }
+
+    .libreria .product-item__wrapper .product-item{
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+    }
+
+    @media only screen and (min-width: 768px){
+        .libreria .product-list__controls{
+            display: none;
+        }
+    }
+    
+    .content-categories{
+        width:100%;
+    }
+
+    .title-landing{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top:-10px;
+    }
+
+    .filter-accordion__trigger {
+        font-size: 0.8rem;
+    }
+    
+    .item-category{
+        width:33.33%;
+        float:left;
+        margin-bottom:20px;
+    }
+    .image-category{
+        width:100%;
+        display:block;
+        margin:auto;
+    }
+    img.image-category {
+        width: 91%;
+    }
+    .title-category{
+        text-align:center;
+        font-size:0.6rem;
+        margin-top: 10px;
+    }
+    .item-category.item-padding{
+		    margin-left: 16.67%;
+		}
+		
+	h3.title-category {
+        font-weight: 500;
+    }
+
+    
+    @media(min-width: 5px) and (max-width: 306px){
+        
+    }
+    
+    @media(min-width: 307px) and (max-width: 330px){
+		/*empieza titulos de categorias*/
+		.filter-accordion__trigger{
+			font-size:0.9rem;
+		}
+		/*termina totulos de categorias*/
+		
+	}
+	
+	
+	@media(min-width: 481px) and (max-width: 767px){
+		/*empieza titulos de categorias*/
+		.filter-accordion__trigger{
+			font-size:1rem;
+		}
+		/*termina totulos de categorias*/
+		
+		
+	}
+	
+	@media(min-width: 600px) and (max-width: 767px){
+		/*empieza titulos de categorias*/
+		.filter-accordion__trigger{
+			font-size:1rem;
+		}
+		/*termina totulos de categorias*/
+		.title-category {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        
+		
+	}
+	@media only screen and (min-width: 768px){
+		/*empieza titulos de categorias*/
+		.filter-accordion__trigger{
+			font-size:1.1rem;
+		}
+		/*termina totulos de categorias*/
+
+		
+		.title-landing{
+            font-size: 1.2rem;
+        }
+        .item-category{
+            width:20%;
+        }
+	
+	    img.image-category {
+            width: 75%;
+        }
+        .title-category {
+            text-align: center;
+            font-size: 0.64rem;
+            margin-top: 10px;
+        }
+        .image-one{
+            margin-left: 0px;
+        }
+        .title-one{
+            text-align: start;
+            margin-left: 24%;
+        }
+        
+        .image-two{
+            margin-left: 5%;
+        }
+        .title-two{
+            margin-left: -17%;
+        }
+        
+        .image-three{
+            margin-right: 7%;
+        }
+        .title-three{
+            margin-right: -13%;
+        }
+        
+        .image-four{
+            margin-right: 0px;
+        }
+        .title-four{
+            margin-left: 25%;
+        }
+        
+        .item-category.item-padding{
+		    margin-left: 0;
+		}
+	}
+	
+	
+	@media only screen and (min-width: 1024px){
+		.filter-accordion__trigger {
+            font-size: 0.63rem;
+        }
+        .title-landing{
+            font-size: 1.5rem;
+        }
+        img.image-category {
+            width: 61%;
+        }
+        .title-category {
+            text-align: center;
+            font-size: 0.76rem;
+            margin-top: 10px;
+        }
+        .image-one{
+            margin-left: 0px;
+        }
+        .title-one{
+            text-align: start;
+            margin-left:18%;
+        }
+        
+        .image-two{
+            margin-left: 7%;
+        }
+        .title-two{
+            margin-left: -26%;
+        }
+        
+        .image-three{
+            margin-right: 7%;
+        }
+        .title-three{
+            margin-right: -25%;
+        }
+        
+        .image-four{
+            margin-right: 0px;
+        }
+        .title-four{
+            margin-left: 39%;
+        }
+	}
+	
+	@media only screen and (min-width: 1280px){
+		.filter-accordion__trigger {
+            font-size: 0.8rem;
+        }
+        .title-landing{
+            font-size: 1.5rem;
+        }
+        img.image-category {
+            width: 61%;
+        }
+        .title-category {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .image-one{
+            margin-left: 0px;
+        }
+        .title-one{
+            text-align: start;
+            margin-left: 19%!important;
+        }
+        
+        .image-two{
+            margin-left: 7%;
+        }
+        .title-two{
+            margin-left: -27%;
+        }
+        
+        .image-three{
+            margin-right: 7%;
+        }
+        .title-three{
+            margin-right: -25%;
+        }
+        
+        .image-four{
+            margin-right: 0px;
+        }
+        .title-four{
+            margin-left: 39%;
+        }
+	}
+	
+	@media only screen and (min-width: 1440px){
+		.filter-accordion__trigger {
+            font-size: 0.9rem;
+        }
+        .title-landing{
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        img.image-category {
+            width: 61%;
+        }
+        .title-category {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .image-one{
+            margin-left: 0px;
+        }
+        .title-one{
+            text-align: start;
+            margin-left: 19%!important;
+        }
+        
+        .image-two{
+            margin-left: 7%;
+        }
+        .title-two{
+            margin-left: -27%;
+        }
+        
+        .image-three{
+            margin-right: 7%;
+        }
+        .title-three{
+            margin-right: -23%;
+        }
+        
+        .image-four{
+            margin-right: 0px;
+        }
+        .title-four{
+            margin-left: 39%;
+        }
+	}
+</style>

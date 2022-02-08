@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+<title>CEMACO</title>
+<vtex:metaTags/>
+<vtex:template id="xCemaco-meta-tags" />
+<vtex:template id="xCemaco-styles" />
+<link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+<link rel="stylesheet" href="/files/css-js_giftlist-search.css"/>
+<vtex:contentPlaceHolder id="page-styles" />
+<vtex.cmc:xCemacoFallback />
+</head>
+<body>
+<vtex:template id="xCemaco-header" />
+
+<main role="main" class="page-main--internal-page">
+	<div class="static-layout__content static-layout__mesa--manage">
+		<vtex:contentPlaceHolder id="Banner01" />
+		<vtex:contentPlaceHolder id="InternalMenu" />
+		<vtex:contentPlaceHolder id="Content01" />
+		<div class="re-central text-center double-board">
+			<div class="double-board__item">
+				<form id="Regalaform" class="internal-form">
+					<div class="control-wrapper">
+						<h2 class="tag-title--level-1">Regala</h2>
+						<input type="text" id="mdr__search-form-name" placeholder="Nombre*" class="mdr__search-form-input" />
+						<input type="text" id="mdr__search-form-lastname" placeholder="Apellido(s)*" class="mdr__search-form-input" />
+						<select class="form-control c-square c-theme control-cotiza mdr__search-form-select" id="mdr__search-form-event">
+							<option value="x">Evento</option>
+							<option value="4">Boda</option>
+							<option value="5">Bebé</option>
+							<option value="7">Niños</option>
+							<option value="6">Genérico</option>
+						</select>
+						<button id="mdr__search-form-send" class="button-flat large secondary">Buscar</button>
+					</div>
+				</form>
+				<p class="font-primary">
+					¿No puedes encontrar la lista pero
+					aún así necesitas un regalo?
+				</p>
+				<a href="/busca?fq=H:140" class="button-flat primary">Comprar</a>
+			</div>
+			<div class="double-board__item" id="search-results--wrapper">
+			</div>
+		</div>
+		<div class="re-central text-center static-layout__question">
+			<h3 class="tag-title">
+				¿Tienes alguna duda?
+			</h3>
+			<div class="mdr__search-how-to-buy">
+				<a class="button-flat large secondary" href="#">Cómo comprar</a>
+			</div>
+		</div>
+
+		<vtex:contentPlaceHolder id="Content02" />
+	</div>
+</main>
+
+<vtex:template id="xCemaco-footer" />
+<vtex:template id="xCemaco-svg-sprite" />
+<vtex:template id="xCemaco-scripts" />
+<!-- Plugins -->
+<script src="/arquivos/plugins_slick_slick.min.js"></script>
+<!-- Static Pages -->
+<script src="/arquivos/css-js_giftlist-search.js"></script>
+<vtex:contentPlaceHolder id="page-scripts" />
+
+<script type="text/html" id="template--mdr__search-results">
+	<div class="search-results">
+		<div class="search-results__item">
+			<h3 class="tag-title-level--1">
+				{#listname}
+			</h3>
+			<p>Evento: <strong>{#event}</strong></p>
+			<p>Fecha: <strong>{#date}</strong></p>
+		</div>
+		<a href="{#uri}" class="button-flat primary search-results__item">Ver lista de regalos</a>
+	</div>
+</script>
+</body>
+</html>

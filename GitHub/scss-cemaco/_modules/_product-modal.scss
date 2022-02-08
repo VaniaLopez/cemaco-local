@@ -1,0 +1,448 @@
+// Product single - Modal with image gallery
+$c-border:			lighten($c-pastel-gray,3);
+.product-modal.modal-dialog{
+	width: 90%;
+	height: 90%;
+	max-width: 1224px;
+	// height: 100%;
+	@include horizontal-center-auto;
+	.modal-content{
+		height: 100%;
+		padding: 15px;
+		overflow-y: scroll;
+		@media screen and (min-width: $screen-md-min){
+			padding: 25px;
+		}
+		.modal-header{
+			padding: 0;
+			.modal-title,
+			.product-modal-ref{
+				display: none;
+			}
+		}
+		.modal-body{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 0;
+			overflow-y: auto;
+			@media screen and (min-width: $screen-xs-min){
+				align-items: flex-start;
+			}
+			@media screen and (min-width: $screen-md-min){
+				padding: 20px 0;
+				overflow: hidden;
+			}
+			&::-webkit-scrollbar{
+				width: 5px;
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar-track{
+				background-color: darken($c-light-gray,0);
+			}
+			&::-webkit-scrollbar-thumb{
+				background-color: darken($c-secondary,10);
+			}
+		}
+		.close{
+			position: fixed;
+			top: 3.75%;
+			right: 2.75%;
+		}
+	}
+}
+.product-modal-image{
+	// @include flex-item($fg: 1);
+	width: 52%;
+	margin-right: 11%;
+	> img{
+		display: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	@media screen and (max-width: $screen-sm-max){
+		width: 100%; height: 100%;
+		>img{max-height: 120px; width: auto;}
+	}
+}
+.product-modal-thumbnails{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: auto;
+	img{
+		width: 100%;
+		display: block;
+		cursor: pointer;
+		margin-bottom: 20px;
+	}
+	.thumbnails-wrapper{
+		&{
+			border-radius: 50%;
+			overflow: hidden;
+			display: inline-block;
+			border: 2px solid $c-primary;
+			width: 15px;
+			height: 15px;
+			margin: 5px;
+		}
+		&.activo{
+			background: $c-primary
+		}
+		img{
+			opacity: 0;
+			padding: 0;
+		}
+	}
+}
+.product-modal-info{
+	width: 100%;
+	padding: 0;
+	@media screen and (min-width: $screen-md-min){
+		position: fixed;
+		width: 34%;
+		right: 4%;
+	}
+	.product-modal-name{
+		@include font-size(1.75);
+		color: $c-primary;
+		font-size: 2.8em;
+		font-family: $font-title;
+		text-transform: uppercase;
+		padding: .75em 0 .2em 0;
+	}
+	.product-modal-size-wrapper{
+		display: flex !important;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-top: 10px;
+		.title{
+			width: 100%;
+			margin: 5px 0;
+			text-transform: uppercase;
+			color: $c-primary;
+		}
+	}
+	.product-detail__last-pieces{
+		&{width: auto; margin: 10px 0;}
+		i{font-size: 1.25em; line-height: 1;}
+		@media screen and (max-width: $screen-sm-max){
+			text-align: center;
+		}
+	}
+	.product-modal-color{
+		&-wrapper{
+			display: none;
+		}
+		.color{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			margin: 0 3px 3px 3px;
+			font-size: 0;
+			text-indent: -1000px;
+			cursor: pointer;
+			border: 1px solid darken($c-light-gray, 10%);
+			transition: all .3s;
+
+			&.active{border: 1px solid #eee; box-shadow: 0 0 0 1px #bbb;}
+		}
+	}
+	.product-modal-size{
+		display: none; width: 100%;
+		@media screen and (max-width: 1320px){
+			width: 100%;
+		}
+		.size-wrapper{
+			display: none;
+			&.active{
+				display: flex !important;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				align-items: center;
+				align-content: center;
+			}
+			.size{
+				width: 17%;
+				height: 3.5em;
+				font-family: $font-body;
+				@include font-size(.85);
+				border: 1px solid $c-border;
+				margin-top: 0.5em;
+				margin-right: 3.75%;
+				line-height: 3.5em;
+				text-align: center;
+				color: $c-secondary;
+				cursor: pointer;
+				transition: all .3s;
+				&:nth-child(5n+5){
+					margin-right: 0;
+				}
+				@media screen and (min-width: $screen-lg-min){
+					margin: 10px 3.75% 0 0;
+				}
+				&:hover{
+					border-color: $c-primary;
+					color: white;
+					background-color: $c-primary;
+				}
+				&.selected:not(.disabled){
+					position: relative;
+					border-color: $c-primary;
+					color: white;
+					background-color: $c-primary;
+				}
+				&.low-stock{
+					border-color: lighten($c-alert, 15%);
+					color: lighten($c-alert, 15%);
+				}
+				&.disabled{
+					cursor: default;
+					border-color: $c-border;
+					color: lighten($c-secondary, 50);
+					background-color: lighten($c-light-gray,3);
+					overflow: hidden;
+					position: relative;
+					&:after{
+						content: '';
+						display: block;
+						width: 200%;
+						height: 1px;
+						background: $c-border;
+						transform: rotate(-28deg);
+						position: absolute;
+						right: -50%;
+						top: 50%;
+					}
+				}
+			}
+		}
+	}
+	.product-modal-summary{
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.msj-low-stock{
+			display: none !important;
+			position: absolute;
+			right: 0;
+			top: 10px;
+			text-transform: uppercase;
+		}
+		@media screen and (max-width: $screen-sm-max){
+			text-align: center;
+			a{margin: 0 auto; text-align: center; line-height: 1;}
+		}
+	}
+	.qv-link{
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		line-height: 3;
+	}
+
+	.product-modal-ref{
+		@include font-size(0.75);
+		color: $c-primary;
+	}
+
+	.product-modal-color{
+		.title{@include font-size(1); color: $c-primary;}
+	}
+
+	.product-modal-price{
+		margin-bottom: 0.75em;
+		@include font-size(1.5);
+		font-weight: $font-thin;
+		@include font-smooth;
+		.price-new,
+		.price-old{
+			// display: block;
+		}
+		.price-old{
+			font-size: 0.85em;
+			text-decoration: line-through;
+			color: $c-tertiary;
+		}
+		.price-new{
+			font-size: .85em;
+			margin-right: 0.75em;
+			color: $c-primary;
+			&.price-promo{
+				color: $c-primary;
+			}
+		}
+	}
+}
+.product-modal{
+	// Quantity
+	&__quantity{
+		width: 20%;
+		position: relative;
+		input,
+		span{
+			display: none;
+		}
+		&-dropdown{
+			display: block;
+			width: 100%;
+			height: 42px;
+			border: 1px solid $c-pastel-gray;
+			position: relative;
+			&.active{
+				.product-modal__quantity-arrow{
+					svg{
+						transform: rotate(180deg);
+					}
+				}
+				.product-modal__quantity-options{
+					height: auto;
+				}
+			}
+		}
+		&-txt{
+			position: absolute;
+			left: 10px;
+			top: 0;
+			height: 100%;
+			line-height: 44px;
+		}
+		&-arrow{
+			position: absolute;
+			right: 10px;
+			top: 0;
+			height: 100%;
+			line-height: 44px;
+			color: $c-secondary;
+			svg{
+				width: 8px;
+				height: 8px;
+				transition: all .3s;
+			}
+		}
+		&-option,
+		&-current{
+			height: 42px;
+			line-height: 44px;
+			text-align: right;
+			padding: 0 30px 0 10px;
+			cursor: pointer;
+		}
+		&-options{
+			position: absolute;
+			width: calc(100% + 2px);
+			z-index: 1;
+			left: -1px;
+			top: 100%;
+			height: 0;
+			border-left: 1px solid $c-pastel-gray;
+			border-right: 1px solid $c-pastel-gray;
+			border-bottom: 1px solid $c-pastel-gray;
+			overflow: hidden;
+			z-index: 1;
+		}
+		&-option{
+			background: white;
+			position: relative;
+			z-index: 1;
+			&:hover{
+				color: lighten($c-secondary, 60);
+			}
+		}
+		&-current{
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	// Free Shipping
+	&__free-shipping{
+		margin: 1.5em 0;
+		text-align: center;
+		text-transform: uppercase;
+		color: $c-primary;
+	}
+
+	&__details{
+		display: none;
+	}
+	// Product Details
+	&__details-title{
+		text-transform: uppercase;
+		color: $c-primary;
+		position: relative;
+		line-height: 2.5;
+		&:before{
+			content: '';
+			display: block;
+			width: 8px;
+			height: 2px;
+			background: $c-dim-gray;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 8px;
+			height: 2px;
+			background: $c-dim-gray;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all .3s;
+		}
+		&.active{
+			&:after{
+				transform: rotate(-90deg) translate(10%, 0);
+			}
+		}
+	}
+	&__details-contant{
+		color: $c-text;
+		font-family: $font-body;
+		display: none;
+	}
+
+	.button-wrapper{
+		&{
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 10px;
+			text-align: center;
+			display: flex;
+		}
+		.button-flat,
+		.button-lineal{
+			text-transform: uppercase;
+		}
+		.buy-product{
+			display: none;
+		}
+		.add-to-cart{
+			border: 0;
+			background: $c-primary;
+			color: white;
+			height: 42px;
+			line-height: 42px;
+			padding: 0 20px;
+			transition: all .3s;
+			margin-left: 15px;
+			flex-grow: 1;
+		}
+	}
+}
+
+.collapse-trigger{
+	cursor: pointer;
+}

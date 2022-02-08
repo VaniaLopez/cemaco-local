@@ -1,0 +1,11 @@
+@import './variables';
+
+@mixin responsive ($breakpoint) {
+    @each $size, $px in $breakpoints {
+        @if( $breakpoint == $size ){
+            @media (min-width: $px) {
+                @content
+            }
+        }
+    }
+}

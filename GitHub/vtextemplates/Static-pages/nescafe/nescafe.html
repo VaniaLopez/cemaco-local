@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK"/>
+
+<div class="re-central ">
+    <!-- Inicia portada -->
+
+    <div class="portadas text-black">
+        <div class="video-nescafe">
+            <div class="item text-center">
+                <video onloadeddata="this.play();" poster="https://vtexstyles.cemaco.com/images/2022/landing-proveedor/nescafe/2022-nescafe-portada-movil.mp4" 
+                autoplay playsinline loop muted class="mobile" width="100%"
+                    height="auto">
+                    <source
+                        src="https://vtexstyles.cemaco.com/images/2022/landing-proveedor/nescafe/2022-nescafe-portada-movil.mp4"
+                        type="video/mp4" />
+                        Your browser does not support the video tag or the file format of this video.
+                </video>
+                <video onloadeddata="this.play();"
+                    poster="https://vtexstyles.cemaco.com/images/2022/landing-proveedor/nescafe/2022-nescafe-portada-desk.mp4"
+                    autoplay playsinline loop muted width="100%" class="desktop" height="auto">
+                    <source
+                        src="https://vtexstyles.cemaco.com/images/2022/landing-proveedor/nescafe/2022-nescafe-portada-desk.mp4"
+                        type="video/mp4" />
+                        Your browser does not support the video tag or the file format of this video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .re-central--product-list{
+        margin-bottom: 2rem;
+    }
+    .bread-crumbs, .category-name, .product-list__results-items{
+        display: none;
+    }
+    .re-central--product-list {
+        background-color: #F6F6F6;
+        padding: 10px;
+    }
+    .video-nescafe{
+        padding-bottom: 2rem;
+    }
+@media only screen and (min-width: 768px){
+    .desktop{
+            display:block!important;
+        }
+    .mobile{
+            display:none!important;
+        }
+    .page-header--product-list{
+        display: none;
+    }
+}
+    /* MOBILE */
+@media(min-width: 5px) and (max-width: 767px){
+    .desktop{
+            display:none!important;
+        }
+    .mobile{
+            display:block!important;
+        }
+}
+</style>

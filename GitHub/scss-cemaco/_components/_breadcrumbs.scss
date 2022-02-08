@@ -1,0 +1,88 @@
+/*--------------------Bread Crumbs--------------------*/
+$breadcrumb_space:			10px;
+$breadcrumb_font-size:		0.85;
+$breadcrumb_line-height:	30px;
+$breadcrumb_color:			black;
+$breadcrumb_color-2:		black;
+.bread-crumbs{
+    @include margin-v(0.5,0.5,1em);
+    margin-right: auto;
+    overflow: hidden;
+    font-family: $font-title;
+    @include font-size($breadcrumb_font-size);
+    @include font-smooth();
+    @include mediaFrom(lg){
+        @include margin-v(1,1,1em);
+    }
+    ul{
+        @include flexbox($fw: wrap);
+    }
+    li{
+        position: relative;
+        margin-right: $breadcrumb_space;
+        line-height: $breadcrumb_line-height;
+        color: $breadcrumb_color;
+        @include debug;
+        // First
+        &:first-child{
+            color: $breadcrumb_color-2;
+            a{
+                font-size: 0;
+                line-height: 0;
+                &:before{
+                    content: 'Home';
+                    display: block;
+                    @include font-size($breadcrumb_font-size);
+                    line-height: $breadcrumb_line-height;
+                }
+            }
+        }
+        // Last
+        &:last-child,
+        &.last{
+            margin-right: 0;
+            color: $breadcrumb_color-2;
+            &:after{
+                display: none;
+            }
+            strong{
+                body.resultado-busca &{
+                    a:first-child{
+                        font-size: 0;
+                        line-height: 0;
+                        &:before{
+                            content: attr(title);
+                            @include font-size($breadcrumb_font-size);
+                            line-height: $breadcrumb_line-height;
+                        }
+                    }
+                    a.busca-texto-livre-elimina{
+                        display: none;
+                    }
+                }
+            }
+        }
+        //
+        &:after{
+            content: '>';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -($breadcrumb_space / 2);
+            color: $breadcrumb_color-2;
+            transform: translate(50%,-2%);
+            // border-width: $breadcrumb_space 0 $breadcrumb_space $breadcrumb_space;
+            // border-style: solid;
+            // border-color: transparent transparent transparent darken($c-light-gray,10);
+        }
+    }
+    a,
+    strong{
+        display: block;
+        position: relative;
+        font-weight: inherit;
+    }
+    a{
+        color: inherit;
+    }
+}

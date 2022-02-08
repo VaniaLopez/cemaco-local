@@ -1,0 +1,585 @@
+#cartLoadedDiv{
+    @include mediaFrom(xl){
+        & > div.cart{
+            margin-left: 3em;
+        }
+    }
+    .summary-coupon-wrap.moved{
+        display: flex!important;
+        justify-content: flex-end;
+        margin-left: auto;
+        & > div.summary-coupon{
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: 0;
+            @include mediaTo(xs){
+                max-width: 90%;
+                margin: auto;
+            }
+        }
+    }
+    #cart-coupon-add{
+        width: 100%;
+    }
+}
+.cart-links-bottom{
+    margin-bottom: 0;
+}
+.empty-cart-content{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    float: none;
+    width: 100%;
+    padding: 3em 0;
+}
+h2.empty-cart-title{
+    font-family: $font-title;
+    font-weight: $font-regular;
+    text-transform: uppercase;
+    font-size: 0;
+    line-height: 0;
+    color: $c-dark;
+    &:before{
+        content: 'Mi carreta vacía';
+        font-size: rem(20);
+        line-height: 1.5;
+    }
+}
+#cart-choose-products{
+    @include button-flat($c-secondary);
+    background: $c-secondary;
+    text-shadow: none;
+    border: 0;
+}
+
+.cart-template.full-cart{
+    @include flexbox($fw: wrap);
+    margin-bottom: 0;
+}
+.cart-template-holder{
+    width: 70%;
+    flex-grow: 1;
+    .empty-cart &{
+        width: 100%;
+    }
+    .cart{
+        padding: 0;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+    }
+    .table.cart-items{
+        padding: 15px;
+        thead{
+            background-color: $c-light-gray;
+            font-size: 1em;
+            text-align: left;
+            color: $c-dusty-gray;
+            th{
+                padding-top: 0;
+                padding-bottom: 3px;
+                text-transform: lowercase;
+                &.product{
+                    width: 30%;
+                    text-align: center;
+                }
+                &.shipping-date{
+                    width: 20%;
+                }
+                &.product-price{
+                    width: 15%;
+                }
+                &.quantity{
+                    width: 15%;
+                }
+                &.quantity-price{
+                    width: 15%;
+                }
+                &.item-remove{
+                    width: 5%;
+                }
+            }
+        }
+        tbody{
+            tr{
+                &.product-item{
+                    border-top: none;
+                    border-bottom: 1px solid $c-light-gray;
+                    @include font-size(0.8);
+                    @media screen and (min-width: $screen-xl-min){
+                        @include padding-v(1,1,1em);
+                        @include font-size(0.85);
+                    }
+                    &.show-decrement-button{
+                        .item-quantity-change-decrement{
+                            i{
+                                display: inline !important;
+                            }
+                        }
+                    }
+                    &.hide{
+                        display: table-row;
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    > td{
+                        color: $c-text;
+                        font-weight: $font-bold;
+                        .item-quantity-change{
+                            transform: translateY(-3px);
+                            display: inline-block;
+                            @include mediaFrom(md){
+                                left: 33px;
+                            }
+                        }
+                        i.icon{
+                            color: $c-text;
+                        }
+                        &.product-image{
+                            background-image: none;
+                            img{
+                                width: 70px;
+                                max-width: none;
+                                height: auto;
+                            }
+                        }
+                        &.product-name{
+                            margin-left: 90px;
+                            a{
+                                color: inherit;
+                            }
+                        }
+                        &.product-price{
+                            span.best-price{
+                                span.new-product-price-label{
+                                    display: none;
+                                }
+                            }
+                        }
+                        &.quantity{
+                            margin-left: 90px;
+                            .item-quantity-change-decrement{
+                                width: 20.4px;
+                                @include mediaFrom(md){
+                                    width: 40px;
+                                }
+                                @include mediaFrom(lg){
+                                    width: 15.4px;
+                                }
+                                i{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Empaque de regalo
+.add-service{
+    display: none !important;
+    appearance: none;
+    background: none!important;
+    border: 0;
+    text-shadow: none;
+    box-shadow: none;
+    margin-top: 1rem;
+    color: $c-dim-gray!important;
+    font-size: 0;
+    line-height: 0;
+    &:before{
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid $c-dim-gray;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    &:after{
+        content: 'Empaque de regalo';
+        font-size: 13px;
+        line-height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.gift-message-add{
+    font-size: 13px;
+    color: $c-secondary;
+    margin-left: 15px;
+    text-decoration: underline;
+}
+label[for*="gift-message-"]{
+    font-size: 0;
+    line-height: 0;
+}
+.gift-message-max-length,
+textarea.gift-message-textarea{
+    display: none;
+}
+input.gift-from{
+    border: 1px solid $c-pastel-gray;
+    outline: none!important;
+    display: block;
+    margin-bottom: 5px;
+    &:focus{
+        border-color: $c-secondary;
+        box-shadow: none;
+    }
+}
+textarea.gift-message{
+    border: 1px solid $c-pastel-gray;
+    outline: none!important;
+    height: 40px;
+    display: block;
+    &:focus{
+        border-color: $c-secondary;
+        box-shadow: none;
+    }
+}
+.bundle-item-name{
+    & > span{
+        font-size: 13px;
+        color: $c-dim-gray;
+        display: inline-block;
+        &:before{
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid $c-secondary;
+            margin-right: 5px;
+            vertical-align: middle;
+            @extend .bg-icon-dove;
+        }
+    }
+}
+// End empaque de regalo
+
+.srp-toggle__wrapper{
+    background: $c-light-gray
+}
+.srp-pickup-empty{
+    @include flexbox($jc: center, $ai: center);
+}
+.srp-pickup-empty__my-location{
+    width: 50%;
+}
+.srp-pickup-my-location__button.srp-pickup-my-location__button, #find-pickup-link{
+    padding: 0;
+    border: none;
+    color: $c-text;
+    background-color: #fff;
+    text-transform: none;
+}
+.srp-pickup-my-location__button.srp-pickup-my-location__button{
+    &:hover{
+        background-color: #fff;
+        border-color: #fff;
+    }
+    &:before{
+        content: url('#{$image-path}images_usar-mi-ubicacion.jpg');
+        display: block;
+    }
+}
+#find-pickup-link{
+    &:before{
+        content: url('#{$image-path}images_buscar.jpg');
+        display: block;
+    }
+}
+.srp-toggle__wrapper{
+    .srp-toggle__current{
+        background: white;
+        border: 1px solid $c-primary;
+    }
+    & > label{
+        z-index: 1;
+        text-transform: none!important;
+        font-weight: $font-light;
+    }
+    & > .blue{
+        font-weight: $font-bold;
+        color: $c-text;
+    }
+}
+.srp-delivery-header{
+    .blue{
+        color: $c-text;
+    }
+}
+
+.srp-toggle__pickup{
+    font-size: 0;
+    line-height: 0;
+    &:after{
+        content: 'Retirar en tienda';
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+#deliver-at-text{
+    a{
+        display: block;
+        color: $c-primary;
+        font-weight: $font-bold;
+    }
+}
+#ship-state,
+#ship-city{
+    min-width: rem(302);
+    border-radius: 30px;
+    appearance: none;
+    line-height: 1;
+    &:focus{
+        border-color: $c-secondary;
+    }
+}
+#cart-shipping-calculate{
+    margin-top: 1em;
+    @include button-flat($c-primary, white);
+    font-weight: $font-bold;
+    padding: 0 3em;
+    text-shadow: none;
+    border: 0;
+}
+#shipping-calculate-link{
+    @include button-flat($c-primary, white);
+    text-transform: initial;
+    font-weight: $font-bold;
+    text-shadow: none;
+    border: 0;
+}
+.srp-pickup-info{
+    .srp-address-title{
+        &:after{
+            content: 'Elegir otra tienda >';
+            font-size: rem(10);
+            display: block;
+            position: absolute;
+            transform: translate(205px, 60px);
+            @include mediaFrom(lg){
+                transform: translate(205px, 70px);
+            }
+        }
+    }
+}
+
+// Coupon
+#cart-link-coupon-add{
+    span{
+        display: none;
+    }
+    &:before{
+        content: 'Agregar código promocional';
+    }
+}
+label[for="cart-coupon"]{
+    font-size: 0;
+    line-height: 0;
+    &:before{
+        content: 'Código promocional';
+        text-transform: none;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: $c-dusty-gray;
+    }
+}
+#cart-coupon{
+    display: block;
+    width: 100%;
+}
+// End coupon
+
+
+
+body.giftlist-cart{
+    #shipping-preview-container{
+        padding-top: 80px;
+        &:before{
+            content: 'Dirección de entrega: ';
+            font-size: 13px;
+            line-height: 20px;
+        }
+        & > div{
+            display: none;
+        }
+    }
+}
+
+body.in-cart {
+    #shipping-preview-container{
+        .srp-unavailable {
+            display: none;
+            visibility: hidden;
+        }
+        .srp-pickup-header.mb3 {
+            .srp-items.f5.black-70 {
+                display: none;
+                visibility: hidden;
+            }
+            #deliver-at-text {
+                .srp-address-title.link.pointer.blue.f5 {
+                    font-size: 0;
+                    &::after {
+                        display: block;
+                        color: $c-primary;
+                        font-size: rem(16);
+                        font-weight: 700;
+                        content: 'Selecciona tu tienda';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.clone-item{
+    display: none !important;
+}
+
+body.in-cart {
+    .summary-totalizers {
+        .totalizers-list {
+            tr.Shipping {
+                display: none !important;
+            }
+        }
+    }
+}
+
+// Attachments
+.item-attachments-head,
+.item-attachments-content{
+    background: $c-light-gray;
+}
+.item-attachments-name-envio-de-gift-card{
+    .item-attachments-item-fields{
+        width: 100%;
+    }
+    .item-attachment{
+        margin: 0 0 5px;
+        width: 49%;
+        &.item-attachment-name-mensaje{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        input, textarea{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 30px;
+            resize: none;
+            padding: 0 15px;
+        }
+    }
+}
+// Send Gift Card
+.clone-item{
+    display: none!important;
+}
+.item-attachment-value-container{
+    textarea{
+        height: 30px;
+        resize: none;
+        box-sizing: border-box;
+        font-size: 13px;
+        overflow-y: hidden;
+        overflow-x: visible;
+        line-height: 1.5;
+        overflow-y: scroll;
+    }
+}
+.item-attachment-name-email,
+.item-attachment-name-confirmar-email{
+    .item-attachment-max-length{
+        display: none;
+    }
+}
+.item-attachments-name-envio-de-gift-card{
+    .item-attachment{
+        width: 100%;
+        box-sizing: border-box;
+        @media (min-width: 1024px){
+            width: 49%;
+        }
+        input,
+        textarea{
+            // height: 30px;
+            // width: 100%;
+            // box-sizing: border-box;
+        }
+    }
+}
+#cart-to-orderform{
+    // display: none;
+}
+#validate-send-giftcard{
+    width:263px; height:43px; padding:0; line-height:42px; font-size:0.75rem;
+}
+@media screen and (min-width: 480px)  and (max-width: 979px) {
+    html body .btn-place-order-wrapper #validate-send-giftcard{max-width:230px!important; height:40px;}
+}
+@media screen and (max-width: 640px) {
+    #cart-to-orderform,
+    #validate-send-giftcard{margin-left:auto!important; margin-right:auto!important; float:none!important;}
+}
+@media (max-width: 480px){
+    #cart-to-orderform,
+    #validate-send-giftcard{width:100%;}
+}
+.item-attachment{
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    &:after{
+        content: '';
+        font-size: 12px;
+        color: red;
+        position: absolute;
+        left: 2px;
+        bottom: 0;
+    }
+}
+.item-attachment input[type="text"].item-attachment-value,
+.item-attachment textarea.item-attachment-value{
+    // font-size: 12px;
+    // padding: 3px 10px;
+}
+td.item-attachments-item-fields.giftcard-error-required-name .item-attachment-name-nombre:after{
+    content: 'Este campo es requerido';
+}
+td.item-attachments-item-fields.giftcard-error-required-lastname .item-attachment-name-apellido:after{
+    content: 'Este campo es requerido';
+}
+td.item-attachments-item-fields.giftcard-error-required-email .item-attachment-name-email:after{
+    content: 'Este campo es requerido';
+}
+td.item-attachments-item-fields.giftcard-error-required-email2 .item-attachment-name-confirmar-email:after{
+    content: 'Este campo es requerido';
+}
+td.item-attachments-item-fields.giftcard-error-not-valid-email .item-attachment-name-email:after{
+    content: 'Email invalido';
+}
+td.item-attachments-item-fields.giftcard-error-not-same-email .item-attachment-name-confirmar-email:after{
+    content: 'El email no es igual';
+}
+
+body[class*="loading"]{
+    #cart-choose-more-products,
+    #validate-send-giftcard{
+        opacity: .5;
+        pointer-events: none!important;
+    }
+}
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+<title>CEMACO</title>
+<vtex:metaTags/>
+<vtex:template id="xCemaco-meta-tags" />
+<vtex:template id="xCemaco-styles" />
+<link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+<link rel="stylesheet" href="/files/css-js_giftlist-create.css"/>
+<vtex:contentPlaceHolder id="page-styles" />
+<vtex.cmc:xCemacoFallback />
+</head>
+<body>
+<vtex:template id="xCemaco-header" />
+
+<main role="main" class="page-main--internal-page">
+	<div class="static-layout__content static-layout__mesa--registro">
+		<vtex:contentPlaceHolder id="Banner01" />
+		<vtex:contentPlaceHolder id="InternalMenu" />
+		<vtex:contentPlaceHolder id="Content01" />
+		<vtex.cmc:GiftListFormV2 types="5" urlmanage="/mesa-de-regalos/administra" urledit="/mesa-de-regalos/bebe/edita" />
+		<vtex:contentPlaceHolder id="Content02" />
+	</div>
+</main>
+
+<vtex:template id="xCemaco-footer" />
+<vtex:template id="xCemaco-svg-sprite" />
+<vtex:template id="xCemaco-scripts" />
+<!-- Plugins -->
+<script src="/arquivos/plugins_slick_slick.min.js"></script>
+<!-- Static Pages -->
+<script src="/arquivos/css-js_giftlist-create.js"></script>
+<script src="/arquivos/css-js_giftlist-create-address.js"></script>
+<vtex:contentPlaceHolder id="page-scripts" />
+<div class="confirmation-overlay"></div>
+<div class="confirmation-modal">
+	<p class="message">¿Realmente deseas salir y perder los cambios en tu mesa de regalos?</p>
+	<div>
+		<a href="#" class="confirmation-yes btn-yes">Sí, salir</a>
+		<a href="#" class="confirmation-no btn-no">No, seguir editando</a>
+	</div>
+</div>
+</body>
+</html>

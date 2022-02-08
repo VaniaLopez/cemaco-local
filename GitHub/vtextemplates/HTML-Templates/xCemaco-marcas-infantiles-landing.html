@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <title>CEMACO - Tienda en Línea</title>
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-styles-performance-new" />
+    <vtex.cmc:xCemacoFallback />
+    <link rel="stylesheet" type="text/css" href="https://cemacogt.vteximg.com.br/arquivos/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cemacogt.vteximg.com.br/arquivos/cemaco-swiper.min.css?v=0104" />
+</head>
+
+<body>
+    <vtex:template id="xCemaco-header--bebejugueton" />
+
+    <main role="main" class="page-main--home-page">
+        <!-- Main slider. Begin -->
+        <div id="mainSlider" class="main-slider--control-banner">
+            <vtex:contentPlaceHolder id="MonsterBanner" />
+        </div>
+        <!-- Main slider. End -->
+
+        <div class="re-central">
+            <vtex:contentPlaceHolder id="Bloque01-PortadaySpiffs" />
+            <!-- Productos slider 01. Begin -->
+            <div class="products-slider__wrapper productsSlider01">
+                <div class="products-slider__container has-banner">
+                    <div id="productsSlider01" class="product-list grid-view slider-view is-active" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-01" />
+                    </div>
+                </div>
+            </div>
+            <!-- Productos slider 01. End -->
+            <!-- Productos slider 02. Begin -->
+            <div class="products-slider__wrapper productsSlider02">
+                <div class="products-slider__container has-banner">
+                    <div id="productsSlider02" class="product-list grid-view slider-view is-active" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-02" />
+                    </div>
+                </div>
+            </div>
+            <!-- Productos slider 02. End -->
+            <vtex:contentPlaceHolder id="Bloque02-bloqueSpiffs" />
+
+            <!-- Productos slider 03. Begin -->
+            <div class="products-slider__wrapper productsSlider03">
+                <div class="products-slider__container has-banner">
+                    <div id="productsSlider03" class="product-list grid-view slider-view is-active" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-03" />
+                    </div>
+                </div>
+            </div>
+            <!-- Productos slider 03. End -->
+            <vtex:contentPlaceHolder id="Bloque03-GrillaDepartamentos" />
+
+            <vtex:contentPlaceHolder id="Bloque04-banner" />
+            <vtex:contentPlaceHolder id="Bloque07-ferreteria" />
+            <vtex:contentPlaceHolder id="Bloque08-cocina-y-mesa" />
+
+            <!-- Productos slider 04. Begin -->
+            <div class="products-slider__wrapper productsSlider04">
+                <div class="products-slider__container has-banner">
+                    <div id="productsSlider04" class="product-list grid-view slider-view is-active" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-04" />
+                    </div>
+                </div>
+            </div>
+            <!-- Productos slider 04. End -->
+            <vtex:contentPlaceHolder id="Bloque05-BloqueSpiffs" />
+
+            <vtex:contentPlaceHolder id="Bloque06-BannerPrefooter" />
+
+        </div>
+
+    </main>
+    <div id="is-home"></div>
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-quick-view" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le5C3oaAAAAACIWrXP3lkl9DmiXDOWBgtVyuauw"></script>
+    <!-- JS Generales -->
+    <script src="/arquivos/plugins.min.js?v=20211019-1731" type="text/javascript"></script>
+
+    <!-- vtex id -->
+    <script language="javascript" src="https://io.vtex.com.br/vtex-id-ui/3.15.25/vtexid-jquery.min.js?v=1.4.1123.1876" type="text/javascript"></script>
+    <!-- / END vtex id -->
+
+    <!-- JS Core -->
+    <link rel="stylesheet" href="/arquivos/css-js_global-components.css" />
+    <script src="/arquivos/css-js_newsletter.min.js?v=20211019-1559" type="text/javascript" async="async"></script>
+    <script src="/arquivos/css-js_minified.min.js?v=20211019-1608" type="text/javascript" async="async"></script>
+
+    <!-- CEMACO -->
+    <script src="/arquivos/cemaco-scripts.test.js?v=20211103-1247" type="text/javascript" async="async"></script>
+    <script src="/arquivos/require.min.js" type="text/javascript"></script>
+    <script src="/files/service-worker.js" type="text/javascript"></script>
+    <!-- Scripts Home -->
+    <script src="/arquivos/css-js_landings.js?v=202110257-0920"></script>
+
+    <script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
+    <script src="/arquivos/jugueton-swiper.js?v=20211026-0047"></script>
+    <script src="/arquivos/home-optimization.js?v=1655"></script>
+    <vtex:contentPlaceHolder id="scripts" />
+    <script>
+        $(document).ready(function() {
+            $('.landing--bebejugueton .revistas-link a').attr('href', '/bebe-jugueton/revistas')
+        })
+    </script>
+</body>
+
+</html>

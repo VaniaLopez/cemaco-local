@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+<title>CEMACO</title>
+<vtex:metaTags/>
+<vtex:template id="xCemaco-meta-tags" />
+<vtex:template id="xCemaco-meta-microdatos" />
+<vtex:template id="xCemaco-styles" />
+<link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+<link rel="stylesheet" href="/arquivos/css-js_giftlist-product.css"/>
+<vtex:contentPlaceHolder id="page-styles" />
+<vtex.cmc:xCemacoFallback />
+</head>
+<body>
+<vtex:template id="xCemaco-header" />
+
+<main role="main" class="page-main--internal-page">
+    <div class="static-layout__content static-layout__mesa--manage">
+        <vtex:contentPlaceHolder id="Banner01" />
+        <vtex:contentPlaceHolder id="InternalMenu" />
+        <vtex:contentPlaceHolder id="Content01" />
+        <div class="re-central">
+            <div class="mdr-received__loading"><img src="/arquivos/loading.gif" alt="Cargando..." /></div>
+            <div class="mdr-received__results" id="mdr-received__results"></div>
+            <div class="mdr__shelf-item--wrapper" id="mdr__shelf-item--wrapper"></div>
+        </div>
+        <vtex:contentPlaceHolder id="Content02" />
+        <div id="GiftListInfoV2--wrapper"><vtex.cmc:GiftListInfoV2 /></div>
+    </div>
+</main>
+
+<vtex:template id="xCemaco-footer" />
+<vtex:template id="xCemaco-svg-sprite" />
+<vtex:template id="xCemaco-scripts" />
+<!-- Plugins -->
+<script src="/arquivos/plugins_slick_slick.min.js"></script>
+<!-- Static Pages -->
+<script src="/arquivos/css-js_giftlist-gifts.js"></script>
+<vtex:contentPlaceHolder id="page-scripts" />
+</body>
+</html>

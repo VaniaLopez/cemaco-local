@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es">
+<head>
+    <vtex:metaTags/>
+    <vtex.cmc:xCemacoScriptsIO />
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:contentPlaceHolder id="meta" />
+    <vtex:template id="xCemaco-styles" />
+    <link type="text/css" rel="stylesheet" href="//staticw2.yotpo.com/9DjOc6M9GSCHszd0xjOkNPnJt0SCbr8SJgFcM9O0/widget.css?widget_version=2021-06-06_15-16-58" />
+    <script type="text/javascript" async="" src="//staticw2.yotpo.com/9DjOc6M9GSCHszd0xjOkNPnJt0SCbr8SJgFcM9O0/widget.js"></script>
+    <link rel="stylesheet" href="/arquivos/css-js_product-list.css?v=20210729-1031" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header" />
+
+    <main role="main" class="page-main--internal-page">
+        <!-- Page Inside Head. Begin -->
+        <div class="page-header--product-list">
+            <div class="re-central">
+                <!-- Breadcrumbs. Begin -->
+                <div class="bread-crumbs">
+                    <vtex.cmc:breadCrumb />
+                </div>
+                <!-- Breadcrumbs. End -->
+                
+                <vtex:template id="xCemacoColecciones" />
+                
+                <vtex.cmc:searchTitle />
+
+                 <div class="filter-indicator__wrapper"></div> 
+                 <div class="product-list__controls">
+                    <h6 class="product-list__filtersTitle hidden-md-down">Filtrar por</h6>
+                    <button id="filtersOpen" class="button-lineal gray">Filtrar <svg class="svg-icon"><use href="#svg-icon-filter"></use></svg></button>
+                     <!--Productos Ordenamiento. Begin-->
+                    <div id="order-by-wrapper" class="product-list__sort-wrapper"></div>
+                     <!--Productos Ordenamiento. End-->
+                </div> 
+            </div>
+        </div>
+        <!-- Page Inside Head. End -->
+
+        <div class="re-central">
+            <div class="re-central--product-list">
+                <!-- Navigator. Begin-->
+                <aside class="site-sidebar product-list__aside">
+                    <div id="asideFilters" class="product-list__filters">
+                        <div class="product-list__filtersHeader">
+                            <h6 class="product-list__filtersTitle hidden-lg-up">Filtrar por
+                                <button id="filtersClose" class="product-list__filtersClose">
+                                    <svg class="svg-icon">
+                                        <use href="#svg-icon-close"></use>
+                                    </svg>
+                                </button>
+                            </h6>
+                        </div>
+                        <div id="searchNavigator-wrapper" class="product-list__filtersWrapper">
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                        <div class="product-list__filtersFooter">
+                            <button id="filtersApply" class="button-flat secondary">Aplicar filtros</button>
+                        </div>
+                    </div>
+                </aside>
+                <!-- Navigator. End -->
+
+                <!-- Productos Listado. Begin -->
+                <div class="product-list__wrapper">
+                    <div class="product-list grid-view grid-small" data-height="parent">
+                       <vtex.cmc:searchResult layout="d6567a8f-4136-4e91-bbc1-864cd0f560f3" itemCount="12" columnCount="12" />
+                        <!-- <vtex.cmc:CelebrosSearchResult layout="d6567a8f-4136-4e91-bbc1-864cd0f560f3" itemCount="12" columnCount="12" />
+                        <script src="//celebrosnlp.com/uitemplatev6/Clients/Cemaco/output/CelScripts.js"></script> -->
+                    </div>
+                </div>
+                <!-- Productos Listado. End -->
+            </div>
+        </div>
+    </main>
+    <style>
+        #celUITDiv .to-top{
+            display: none;
+        }
+        .product-list__controls #order-by-wrapper{
+            display: none;
+        }
+        .product-list__controls #filtersOpen{
+            margin: 0 auto 20px;
+            left: inherit;
+        }
+    </style>
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-quick-view" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <vtex:template id="xCemaco-scripts" />
+    <!-- Product List -->
+    <script src="/arquivos/css-js_product-list.js?v=20211005-1518"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/*--------------------General [Re]sponsive | Iván Luna [Re]--------------------*/
+.site-header,
+.site-nav,
+.page-main--home-page,
+.page-main--internal-page,
+.site-footer,
+.re-central,
+.re-middle,
+.re-cien{
+	width: 100%;
+	min-width: 240px;
+}
+.re-central,
+.re-middle,
+.re-cien{
+	@include padding-h;
+	@include horizontal-center-auto;
+}
+.re-central{
+	@at-root
+	&, // This is equal to medium without padding-h
+    &--small,
+    &--medium,
+    &--big{
+		@include horizontal-center-auto;
+	}
+	&,
+	&--small,
+	&--medium,
+	&--big{
+		@include re-central-width;
+		@include padding-h;
+	}
+	@at-root
+    &--small,
+    &--medium,
+    &--big{
+		width: auto;
+	}
+    @at-root &--small{
+        max-width: 955px;
+	}
+    @at-root &--medium{
+		max-width: 1400px;
+		@media screen and (min-width: $screen-hd-min){
+			max-width: 1440px;
+		}
+	}
+    @at-root  &--big{
+		max-width: 1680px;
+	}
+}
+.re-middle{
+	width: 88%;
+}

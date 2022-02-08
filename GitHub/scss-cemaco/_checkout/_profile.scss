@@ -1,0 +1,89 @@
+#client-profile-data{
+    select{
+        border-radius: 30px;
+    }
+    #orderform-to-cart{
+        font-size: 0;
+        &:after{
+            content: 'Volver a mi carreta';
+            font-size: rem(13);
+            color: $c-primary;
+        }
+    }
+    #go-to-shipping,
+    #go-to-payment{
+        font-size: 0;
+        line-height: 0;
+        padding: .65rem 3.5rem;
+        font-weight: $font-bold;
+        border-radius: 30px;
+        @include font-smooth;
+        &:before{
+            content: 'Continuar';
+            font-size: 1rem;
+            line-height: 1;
+        }
+    }
+    .client-notice.notice{
+        font-size: .85rem;
+    }
+    label{
+        color: $c-text;
+    }
+    p.client-email{
+        span{
+            font-size: .85rem;
+        }
+    }
+    .client-profile-data .client-document,
+    .client-profile-data .client-phone{
+        @include mediaTo(490px){
+            width: 100%;
+            float: none;
+            input{
+                width: 100%;
+            }
+        }
+    }
+    #client-first-name,
+    #client-last-name{
+        @include mediaTo(490px){
+            width: 100%!important;
+        }
+    }
+}
+.box-client-info{
+    .client-document{
+        display: none;
+    }
+    p.pull-left{
+        float: none;
+        margin: 0 0 10px;
+    }
+    .input-xlarge,
+    .input-small{
+        width: 100%;
+    }
+}
+.icon-user{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(-2px);
+    @extend .bg-icon-identificacion;
+    &:before{
+        display: none;
+    }
+}
+.step.accordion-group.client-profile-data.filled{
+    @include mediaFrom(xxl){
+        // min-height: 171px;
+    }
+}
+.box-client-info-pj{
+    & > h5,
+    ul.links{
+        display: none!important;
+    }
+}

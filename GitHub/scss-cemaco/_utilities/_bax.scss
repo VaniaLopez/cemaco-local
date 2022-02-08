@@ -1,0 +1,70 @@
+@mixin flex($dir: row, $wrap: nowrap, $items: flex-start, $justy: flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $justy;
+    align-items: $items;
+}
+
+@mixin box($dir: row, $wrap: nowrap, $jc: flex-start, $ai: flex-start) {
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin part-to-cien($part: 49%, $md: 100%, $sm: 100%) {
+    width: $part;
+    @include mediaTo(md) {
+        width: $md;
+    }
+    @include mediaTo(sm) {
+        width: $sm;
+    }
+}
+@mixin margin-y($top: 1rem, $bottom: 2rem) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+@mixin pannel-collapse {
+    .pannel-collapse {
+        .visible {
+            display: block !important;
+        }
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        margin: 0.3rem auto;
+        & > div {
+            &:nth-child(1) {
+                border-radius: 3px 3px 0px 0px;
+                h4 {
+                    font-size: 1rem;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    a {
+                        display: block;
+                        padding: 15px 10px;
+                        font-size: 16px;
+                        color: inherit;
+                        font-weight: 400;
+                        background: #f3f3f3;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                display: none;
+                background-color: white;
+                padding: 15px;
+                border-radius: 3px;
+            }
+        }
+        .chev {
+            float: right;
+            &:after {
+                content: "▼";
+            }
+        }
+    }
+}

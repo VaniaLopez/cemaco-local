@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es">
+<head>
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:contentPlaceHolder id="meta" />
+    <vtex:template id="xCemaco-styles" />
+    <link rel="stylesheet" href="https://vicom.mx/demos/x-cemaco/arquivos/css-js_product-list.css" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header" />
+
+    <main role="main" class="page-main--internal-page">
+        <!-- Page Inside Head. Begin -->
+        <div class="page-header--product-list">
+            <div class="re-central">
+                <!-- Breadcrumbs. Begin -->
+                <div class="bread-crumbs">
+                    <vtex.cmc:breadCrumb />
+                </div>
+                <!-- Breadcrumbs. End -->
+                <vtex.cmc:searchTitle />
+
+                <!-- <div class="filter-indicator__wrapper"></div> -->
+                <div class="product-list__controls">
+                    <h6 class="product-list__filtersTitle hidden-md-down">Filtrar por</h6>
+                    <button id="filtersOpen" class="button-lineal gray">Filtrar <svg class="svg-icon"><use href="#svg-icon-filter"></use></svg></button>
+                    <!-- Productos Ordenamiento. Begin -->
+                    <div id="order-by-wrapper" class="product-list__sort-wrapper"></div>
+                    <!-- Productos Ordenamiento. End -->
+                </div>
+            </div>
+        </div>
+        <!-- Page Inside Head. End -->
+
+        <div class="re-central">
+            <div class="re-central--product-list">
+                <!-- Navigator. Begin -->
+                <aside class="site-sidebar product-list__aside">
+                    <div id="asideFilters" class="product-list__filters">
+                        <div class="product-list__filtersHeader">
+                            <h6 class="product-list__filtersTitle hidden-lg-up">Filtrar por
+                                <button id="filtersClose" class="product-list__filtersClose">
+                                    <svg class="svg-icon">
+                                        <use href="#svg-icon-close"></use>
+                                    </svg>
+                                </button>
+                            </h6>
+                        </div>
+                        <div id="searchNavigator-wrapper" class="product-list__filtersWrapper">
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                        <div class="product-list__filtersFooter">
+                            <button id="filtersApply" class="button-flat secondary">Aplicar filtros</button>
+                        </div>
+                    </div>
+                </aside>
+                <!-- Navigator. End -->
+
+                <!-- Productos Listado. Begin -->
+                <div class="product-list__wrapper">
+                    <vtex:contentPlaceHolder id="SearchSuggestions" />
+                    <div class="product-list grid-view grid-small" data-height="parent">
+                        <vtex.cmc:searchResult layout="e305a505-3970-4e63-8763-7375d1783f4f" itemCount="12" columnCount="12" />
+                    </div>
+                </div>
+                <!-- Productos Listado. End -->
+            </div>
+        </div>
+    </main>
+
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-quick-view" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <vtex:template id="xCemaco-scripts" />
+    <!-- Slick -->
+    <script src="https://vicom.mx/demos/x-cemaco/arquivos/plugins_slick_slick.min.js"></script>
+    <!-- Product List -->
+    <script src="https://vicom.mx/demos/x-cemaco/arquivos/css-js_product-list.min.js"></script>
+</body>
+</html>

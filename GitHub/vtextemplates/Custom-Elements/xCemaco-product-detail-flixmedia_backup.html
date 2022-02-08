@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+    <head>
+        <vtex:metaTags />
+        <vtex:template id="xCemaco-meta-tags" />
+        <title>
+            <vtex.cmc:productPageTitle />
+        </title>
+        <vtex:template id="xCemaco-styles" />
+    <link rel="stylesheet" href="/arquivos/css-js_product-detail.css?v=20210429" />
+        <vtex.cmc:xCemacoFallback />
+    </head>
+    <body>
+        <vtex:template id="xCemaco-header" />
+
+        <main role="main" class="page-main--internal-page">
+            <!-- Image & Summary. Begin -->
+            <div class="product-detail__wrapper">
+                <div class="re-central">
+                    <!-- Breadcrumbs. Begin -->
+                    <div class="bread-crumbs">
+                        <vtex.cmc:breadCrumb />
+                    </div>
+                    <!-- Breadcrumbs. End -->
+                    <div class="product-detail">
+                        <!-- Product Image. Begin -->
+                        <div class="product-detail__image-wrapper">
+                            <!--Flixmedia-->
+                            <div id="flix-inpage"></div>
+                            <!--Flixmedia-->
+                            <div class="product-detail__image-container"></div>
+                            <!-- Wishlist. Begin -->
+                            <div class="product-detail__add-to-wishlist">
+                                <svg class="svg-icon-heart" aria-hidden="true">
+                                    <use href="#svg-icon-heart"></use>
+                                </svg>
+                            </div>
+                            <!-- Wishlist. End -->
+
+                            <!-- Product share -->
+                            <div class="product-detail__share">
+                                <a href="/" class="addthis_button_facebook"><svg class='svg-icon-facebook'>
+                                        <use href='#svg-icon-facebook'></use>
+                                    </svg></a>
+                                <a href="/" class="addthis_button_pinterest"><svg class='svg-icon-pinterest'>
+                                        <use href='#svg-icon-pinterest'></use>
+                                    </svg></a>
+                                <a href="/" class="share_instagram"><svg class='svg-icon-instagram'>
+                                        <use href='#svg-icon-instagram'></use>
+                                    </svg></a>
+                            </div>
+                            <!-- Product share. END -->
+                        </div>
+                        <!-- Product Image. End -->
+
+                        <!-- Info - Bottom. Begin -->
+                        <div class="product-detail__info product-detail__info--bottom">
+                            <h1 class="product-detail__name">
+                                <vtex.cmc:productName />
+                            </h1>
+                            <small class="product-detail__sku">
+                                <span>SKU:</span>
+                                <vtex.cmc:skuReference />
+                            </small>
+                            <div class="product-detail__price">
+                                <vtex.cmc:skuPrice />
+                            </div>
+
+                            <div class="product-detail__flags">
+                                <vtex.cmc:HightLight />
+                                <vtex.cmc:discountHightLight />
+                            </div>
+
+                            <div class="product-detail__color-variations">
+                                <vtex:contentPlaceHolder id="color-variations" />
+                            </div>
+
+                            <!-- SKU Selector. Begin -->
+                            <div class="product-detail__sku-selection">
+                                <div class="sku-selector-container sku-selector-container-0"></div>
+                            </div>
+                            <!-- SKU Selector. End -->
+
+                            <!-- CTA. Begin -->
+                            <div class="product-detail__cta">
+                                <!-- Buy. Begin -->
+                                <div class="product-detail__action">
+                                    <!-- Quantity. Begin -->
+                                    <div class="product-detail__quantity">
+                                        <span class="dec qtybutton">
+                                            <svg class="svg-icon">
+                                                <use href="#svg-icon-chevron-down"></use>
+                                            </svg>
+                                        </span>
+                                        <input type="text" class="product-detail__quantity-input" value="1" />
+                                        <span class="inc qtybutton">
+                                            <svg class="svg-icon">
+                                                <use href="#svg-icon-chevron-up"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <!-- Quantity. End -->
+                                    <div class="BuyInPage-wrapper">
+                                        <a class="buy-in-page-button button-flat primary" productindex="0"
+                                            href="#">Agregar a mi carreta</a>
+                                    </div>
+                                    <div id="BuyButton-wrapper" class="BuyButton-wrapper">
+                                        <a target="_top" class="buy-button buy-button-ref button-flat tertiary"
+                                            href="#">Comprar</a>
+                                    </div>
+                                </div>
+                                <!-- Buy. End -->
+                            </div>
+                            <!-- CTA. End -->
+
+                            <div class="product-detail__options">
+                                <div class="product-detail__options-item">
+                                    <a href="">
+                                        <span class="svg-wrapper">
+                                            <svg class="svg-icon">
+                                                <use href="#svg-icon-chevron-right"></use>
+                                            </svg>
+                                        </span>
+                                        <p>Agregar a mi registro</p>
+                                    </a>
+                                </div>
+                                <div class="product-detail__options-item">
+                                    <a href="">
+                                        <span class="svg-wrapper">
+                                            <svg class="svg-icon">
+                                                <use href="#svg-icon-free-shipping"></use>
+                                            </svg>
+                                        </span>
+                                        <p>Consíguelo antes del 17 de dic. <br /> Envío <strong>GRATIS</strong> a partir
+                                            de Q 49</p>
+                                        <button>Detalles</button>
+
+                                        <div class="product-detail__options-info">
+                                            <div class="options-title">
+                                                <strong>Tipos de entrega</strong>
+                                                <strong>Costo</strong>
+                                            </div>
+                                            <div class="options-module">
+                                                <strong>Recibe
+                                                    gratis<span>......................................GRATIS</span></strong>
+                                                <p>Todos los envíos en cemaco.com son gratis *</p>
+                                            </div>
+                                            <div class="options-module">
+                                                <strong>Recibe
+                                                    mañana<span>.......................................Q99</span></strong>
+                                                <p>
+                                                    Entrega al día siguiente después de tu compra <br />
+                                                    Máximo 2 artículos, en producto seleccionado.*
+                                                </p>
+                                            </div>
+                                            <div class="options-module">
+                                                <strong>Recibe hoy
+                                                    mismo<span>..................................Q99</span></strong>
+                                                <p>
+                                                    Disponible en pedidos antes de las 2:00 pm <br />
+                                                    Máximo 2 artículos, en producto seleccionado.*
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-detail__options-item">
+                                    <a href="">
+                                        <span class="svg-wrapper">
+                                            <svg class="svg-icon">
+                                                <use href="#svg-icon-pickup"></use>
+                                            </svg>
+                                        </span>
+                                        <p>Compra en linea <strong>retira <br /> en tienda</strong></p>
+                                        <button>Detalles</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- NotifyMe. Begin -->
+                            <vtex.cmc:xCemacoNotifyMe />
+                            <!-- NotifyMe. End -->
+
+                        </div>
+                        <!-- Info - Bottom. End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Image & Summary. End -->
+
+            <div class="re-central PDP-Specifications">
+                <!-- Specification Tab & Anchor. Begin -->
+                <ul class="content__tabs">
+                    <li class="content__tab-trigger is-active" data-id="tab-description"><span>Descripción</span></li>
+                    <li class="content__tab-trigger" data-id="tab-characteristics"><span>Características</span></li>
+                    <li class="content__tab-trigger" data-id="tab-observations"><span>Observaciones</span></li>
+                </ul>
+                <ul class="content__anchors">
+                    <li class="content__anchor-trigger is-active" data-id="tab-description"><span>Descripción</span>
+                    </li>
+                    <li class="content__anchor-trigger" data-id="tab-characteristics"><span>Características</span></li>
+                    <li class="content__anchor-trigger" data-id="tab-observations"><span>Observaciones</span></li>
+                </ul>
+                <!-- Specification Tab & Anchor. End -->
+
+                <div id="VTEXSpecifications" class="PDP-InfoSpecifications-Control">
+                    <vtex.cmc:productSpecification />
+                </div>
+
+                <!-- Product Description. Begin -->
+                <div id="tab-description" class="content__content is-active ProductSpecifications-Group">
+                    <h4 class="content__accordion-trigger ProductSpecifications-GroupName"><span>Descripción</span></h4>
+                    <vtex.cmc:ProductDescription />
+                </div>
+                <!-- Product Description. End -->
+
+                <!-- Product Characteristics. Begin -->
+                <div id="tab-characteristics" class="content__content ProductSpecifications-Group">
+                    <h4 class="content__accordion-trigger ProductSpecifications-GroupName"><span>Características</span>
+                    </h4>
+                </div>
+                <!-- Product Characteristics. End -->
+
+                <!-- Product Observations. Begin -->
+                <div id="tab-observations" class="content__content ProductSpecifications-Group">
+                    <h4 class="content__accordion-trigger ProductSpecifications-GroupName"><span>Observaciones</span>
+                    </h4>
+                </div>
+                <!-- Product Observations. End -->
+            </div>
+
+            <!-- Productos slider. Begin -->
+            <div class="re-central products-slider__wrapper products-slider__wrapper--pdp">
+                <div class="products-slider__container">
+                    <div id="productsSlider01" class="product-list grid-view slider-view" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-01" />
+                    </div>
+                </div>
+            </div>
+            <!-- Productos slider. End -->
+
+            <!-- Begin Yotpo -->
+            <div class="re-central">
+                <div class="yotpo yotpo-main-widget" data-product-id="168784"
+                    data-name="AURICULARES INALÁMBRICOS PARA EJERCICIO - E-TEK"
+                    data-url="https://cemaco.com/972838-auriculares-inalambricos-para-ejercicio.html?___store=es&amp;___from_store=es"
+                    data-image-url="https://d254m61ueq2zlm.cloudfront.net/media/catalog/product/9/7/972838.jpg"
+                    data-description="AURICULARES INALÁMBRICOS PARA EJERCICIO - E-TEK">
+                </div>
+            </div>
+            <!-- End Yotpo -->
+        </main>
+
+        <!-- Super Zoom. Begin -->
+        <div id="superZoomWrapper" class="super-zoom__wrapper"></div>
+        <!-- Super Zoom. End -->
+
+        <vtex:template id="xCemaco-footer" />
+        <vtex:template id="xCemaco-quick-view" />
+        <vtex:template id="xCemaco-svg-sprite" />
+        <vtex:template id="xCemaco-scripts" />
+        <script language="javascript"
+            src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-sku-selector-with-template.min.js?v=1.4.1094.1837"
+            type="text/javascript"></script>
+        <script language="javascript"
+            src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-buy-button.min.js?v=1.4.1090.1832"
+            type="text/javascript"></script>
+        <!-- EasyZoom -->
+        <link rel="stylesheet" href="/arquivos/plugins_easyzoom_easyzoom.css" />
+        <script src="/arquivos/plugins_easyzoom_easyzoom.min.js"></script>
+        <!-- Slick -->
+        <script src="/arquivos/plugins_slick_slick.min.js"></script>
+        <!-- Add This Social-->
+        <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54833d9450389b1a"></script>
+        <!-- Products -->
+        <script src="/arquivos/css-js_product-detail.js"></script>
+        <!--Flixmedia-->
+        <script type="text/javascript" src="//media.flixfacts.com/js/loader.js" data-flix-distributor="14918"
+            data-flix-language="gu" data-flix-brand="LG" data-flix-mpn="BP350" data-flix-ean=""
+            data-flix-inpage="flix-inpage" data-flix-fallback-language="t2"></script>
+        <!--Flixmedia-->
+    </body>
+</html>

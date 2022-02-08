@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title>Cemaco | Tienda en Línea: Ferretería, Hogar, Blancos y Mascotas</title>
+        <vtex:metaTags />
+        <vtex:template id="xCemaco-meta-tags" />
+        <vtex:template id="xCemaco-styles" />
+        <vtex.cmc:xCemacoFallback />
+        <style>
+            <vtex:contentPlaceHolder id="css"/>
+        </style>
+    </head>
+    <body>
+        <vtex:template id="xCemaco-header" />
+
+        <main role="main" class="page-main--internal-page landing-cocina">
+            <div class="static-layout__content">
+                <vtex:contentPlaceHolder id="html" />
+            </div>
+        </main>
+        <div id="is-home"></div>
+        <vtex:template id="xCemaco-footer" />
+        <vtex:template id="xCemaco-quick-view" />
+        <vtex:template id="xCemaco-svg-sprite" />
+        <vtex:template id="xCemaco-scripts" />
+        <script src="/arquivos/css-js_home.min.js"></script>
+
+    </body>
+</html>

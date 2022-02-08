@@ -1,0 +1,49 @@
+/*--------------------Monster Video--------------------*/
+.monster-video{
+	display: none;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	html.browser--desktop &{
+		@media screen and (orientation: landscape){
+			display: block !important;
+		}
+	}
+}
+
+/*--------------------Monster Banner--------------------*/
+.monster-banner{
+	&-portrait,
+	&-landscape{
+		position: relative;
+		overflow: hidden;
+		img{
+			width: 100%;
+			display: block;
+		}
+		.button-lineal{
+			position: absolute;
+			z-index: 10;
+			@include font-size(1.5);
+		}
+	}
+	&-portrait{
+		@media screen and (orientation: landscape){
+			display: none !important;
+		}
+		.button-lineal{
+			left: 30%;
+			bottom: 15%;
+		}
+	}
+	&-landscape{
+		@media screen and (orientation: portrait){
+			display: none !important;
+		}
+		.button-lineal{
+			top: 50%;
+			left: 30%;
+			margin-top: 50px;
+		}
+	}
+}

@@ -1,0 +1,552 @@
+/*-------------------- General Sizes - Percent --------------------*/
+@for $i from 1 through 100 {
+    .s {
+        &#{$i} {
+            @include part-to-cien($part: #{$i + "%"}, $md: 100%, $sm: 100%);
+        }
+    }
+}
+
+/*--------------------General Layout - Footer--------------------*/
+$brand-footer-width: 79px;
+$brand-footer-height: 18px;
+
+.line-divider {
+    @include mediaTo(md) {
+        display: none;
+    }
+    &.v {
+        width: 1px;
+        height: 15rem;
+        margin: 0rem 3rem;
+        border: 5px;
+        background-color: $c-dusty-gray;
+    }
+}
+
+.site-footer {
+    min-height: 25px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: $z-footer;
+    font-size: em(13);
+    color: black;
+    @include mediaFrom(lg) {
+        background-color: $c-primary;
+        body.landing--jugueton & {
+            background-color: $c-jugueton;
+        }
+        body.landing--bebejugueton & {
+            background-color: $c-bebejugueton;
+        }
+    }
+}
+/*   Pre footer Wrapper   */
+.pre-footer {
+    padding: 2rem 0rem;
+    background-color: $c-light-gray;
+    &__wrapper {
+        @include box($dir: row, $wrap: wrap, $jc: space-between, $ai: center);
+        & > :nth-child(1) {
+            &.box {
+                @include box(
+                    $dir: row,
+                    $wrap: wrap,
+                    $jc: space-between,
+                    $ai: center
+                );
+                color: $c-primary;
+                @include mediaTo(md) {
+                    text-align: center;
+                }
+            }
+            img {
+                @include mediaTo(sm){
+                    margin: 0% 34%;
+                }
+                @include mediaBetween(sm, md){
+                    margin: 0% 42%;
+                }
+                width: 175px;
+            }
+        }
+        h2,
+        h3,
+        a {
+            padding-bottom: 0em;
+            font-weight: $font-bold;
+            color: $c-primary;
+            span {
+                font-size: 0.99rem;
+            }
+        }
+        a {
+            font-size: 1rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            @media screen and(min-width:$screen-lg-min ) {
+                text-align: left;
+            }
+        }
+        h3 {
+            font-size: 1.6rem;
+            text-align: center;
+            @media screen and(min-width:$screen-lg-min ) {
+                text-align: left;
+            }
+        }
+    }
+    .newsletter {
+        &__container {
+            position: relative;
+            input {
+                width: 100%;
+                margin-bottom: 1rem;
+                background-color: white;
+                @include mediaTo(md) {
+                    width: 100%;
+                }
+            }
+            .btn {
+                &.icon {
+                    position: absolute;
+                    top: 8px;
+                    left: 93%;
+                    @include mediaTo(lg) {
+                        left: 92%;
+                    }
+                    @include mediaTo(sm) {
+                        left: 90%;
+                    }
+                    svg {
+                        color: $c-primary;
+                        @include sizeProportion($dW: 1);
+                        cursor: pointer;
+                        display: block;
+                        position: absolute;
+                        right: -25px;
+                        top: calc(50% - -4px);
+                        stroke-width: 2px;
+                    }
+                    .arrow-right {
+                        width: 10px;
+                        height: 10px;
+                        border-bottom: 3px solid $c-primary;
+                        -webkit-transform: rotate(-135deg);
+                        -ms-transform: rotate(-135deg);
+                        transform: rotate(-135deg);
+                        -webkit-transition: all 0.25s ease;
+                        -o-transition: all 0.25s ease;
+                        transition: all 0.25s ease;
+                        border-left: 3px solid $c-primary;
+                    }
+                }
+            }
+        }
+    }
+    .subscribe {
+        // Form
+        &__wrapper {
+            width: 100%;
+        }
+        &__form {
+            position: relative;
+            background-color: white;
+            border: 1px solid $c-dim-gray;
+            border-radius: 20px;
+            color: $c-primary;
+            @include debug(
+                $is-debugging,
+                lighten(green, 45),
+                lighten(green, 40),
+                green
+            );
+            body.landing--jugueton & {
+                border: 1px solid $c-jugueton-secondary;
+            }
+            body.landing--bebejugueton & {
+                border: 1px solid $c-bebejugueton-secondary;
+            }
+            .control-wrapper {
+                @include flexbox($ai: center);
+                margin-bottom: 0;
+                transition: margin-right 0.3s ease-out;
+                @include mediaTo(md) {
+                    margin-left: 0.75em;
+                }
+            }
+            input[type="text"] {
+                @include commonBreakpoints(
+                    (
+                        height,
+                        em($searcher-height--bs),
+                        em($searcher-height--md),
+                        em($searcher-height--lg)
+                    )
+                );
+                border: none;
+                @include font-smooth();
+                color: $c-dark-gray;
+                background-color: white;
+                font-size: 0.85em;
+                @include placeholder($c-dark-gray);
+                @include debug(
+                    $is-debugging,
+                    lighten(blue, 45),
+                    lighten(blue, 40),
+                    blue
+                );
+                @include mediaTo(md) {
+                    @include padding-h(0);
+                }
+                @include mediaFrom(lg) {
+                    @include padding-h(2, 2, 1em);
+                }
+            }
+            &__submit {
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                margin-right: 5px;
+                border-radius: 50%;
+                background-color: $c-secondary;
+                body.landing--jugueton & {
+                    background-color: $c-jugueton;
+                }
+                body.landing--bebejugueton & {
+                    background-color: $c-bebejugueton;
+                }
+                .svg-icon {
+                    color: $c-primary;
+                    @include absolute-center;
+                    @include sizeProportion($dW: 0.9);
+                    .site-nav & {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+// General
+.footer {
+    &__block {
+        position: relative;
+        font-weight: $font-light;
+        @include mediaTo(md) {
+            width: 100%;
+            border-bottom: 1px solid $c-pastel-gray;
+        }
+        /* @include mediaFrom(lg){
+            margin-right: 7em;
+        }
+        @include mediaFrom(xl){
+            margin-right: 12em;
+        } */
+    }
+    &__logo {
+        width: 65.5px;
+        height: 12.5px;
+        margin-left: 0.2em;
+        color: white;
+        /* @include mediaFrom(lg) {
+            color: white;
+        } */
+        @include mediaTo(md) {
+            height: 10.5px;
+        }
+    }
+    &__title {
+        font-size: rem(13);
+        font-weight: $font-bold;
+        @include mediaTo(md) {
+            text-align: left;
+        }
+        @include mediaFrom(lg) {
+            padding-bottom: 0.5em;
+            font-size: rem(19);
+        }
+        .footer__item--contacto & {
+            @include mediaTo(md) {
+                display: none;
+            }
+        }
+        .footer-brand {
+            display: inline;
+            vertical-align: middle;
+            //width: 150px;
+            @include mediaFrom(xl) {
+                width: 200px;
+            }
+        }
+        .sub-text {
+            display: block;
+            font-weight: 500;
+            padding: 1rem 0rem;
+        }
+    }
+    &__list {
+        &--social {
+            @include mediaFrom(lg) {
+                @include margin-v($top: 20, $bottom: 1, $unit: 1%);
+            }
+            > li {
+                display: inline-block;
+                margin-right: 1em;
+                &:last-child {
+                    margin-right: 0;
+                }
+                svg {
+                    @include sizeProportion($dW: 1.75);
+                }
+                .svg-icon-youtube {
+                    @include sizeProportion($dW: 2);
+                }
+            }
+            a:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__collapse {
+        @include mediaTo(md) {
+            order: 2;
+        }
+        &--title {
+            @include mediaTo(md) {
+                cursor: pointer;
+                padding-bottom: 1em;
+                &:after {
+                    content: "+";
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                }
+                &.active {
+                    &:after {
+                        content: "-";
+                    }
+                }
+            }
+        }
+        &--content {
+            @include mediaTo(md) {
+                display: none;
+            }
+            @include mediaFrom(lg) {
+                display: block !important;
+            }
+            li {
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+    &__payments {
+        display: none;
+        width: 100%;
+        margin-bottom: 20px;
+        @include padding-v(5);
+        border-bottom: 1px solid $c-pastel-gray;
+        font-weight: $font-bold;
+        @include mediaTo(md) {
+            text-align: center;
+        }
+        @include mediaFrom(md) {
+            //display: block;
+            //@include flexbox($fw:wrap, $ai:center, $jc: center);
+        }
+        li {
+            &:nth-child(2),
+            &:nth-child(3) {
+                svg {
+                    @include sizeProportion($dW: 4.5);
+                }
+            }
+        }
+        svg {
+            @include sizeProportion($dW: 2);
+            @include mediaFrom(lg) {
+                @include sizeProportion($dW: 3.25);
+            }
+            path {
+                fill: $c-light-gray;
+            }
+        }
+        span {
+            font-size: rem(14);
+            color: $c-dark-gray;
+            @include mediaFrom(md) {
+                margin-right: 1em;
+            }
+        }
+        ul {
+            @include flexbox($ai: center, $jc: center);
+            li {
+                @include margin-h(0.5, 0.5, 1em);
+                @include mediaFrom(lg) {
+                    @include margin-h(1, 1, 1em);
+                }
+            }
+        }
+    }
+    &__legal {
+        @include mediaTo(md) {
+            justify-content: center;
+        }
+        @include mediaFrom(lg) {
+            order: 1;
+            align-items: center;
+            margin-bottom: 0;
+            color: $c-primary;
+        }
+        &--action {
+            display: block;
+            @media screen and(min-width:$screen-lg-min ) {
+                display: flex;
+                justify-content: flex-start;
+            }
+            li {
+                padding-left: 15px;
+            }
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+    &--contacto {
+        a {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        svg {
+            width: 1.25em;
+            height: 1.25em;
+            margin-right: 0.5em;
+            vertical-align: middle;
+        }
+        @include mediaTo(md) {
+            display: flex;
+            flex-flow: row wrap;
+            @include padding-v(20, 0);
+            text-align: center;
+            background-color: $c-primary;
+            color: white;
+            body.landing--jugueton & {
+                background-color: $c-jugueton;
+            }
+            body.landing--bebejugueton & {
+                background-color: $c-bebejugueton;
+            }
+            a {
+                width: 50%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+            svg {
+                width: 2.25em;
+                height: 2.25em;
+                margin-bottom: 0.8rem;
+            }
+            .footer__list--social {
+                width: 100%;
+                @include padding-v(20);
+            }
+            .footer__legal {
+                width: 100%;
+                background-color: white;
+                color: $c-primary;
+                &--action {
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    li {
+                        width: 50%;
+                        @include padding-v(10);
+                        a {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*-----Principal Footer-----*/
+.principal-footer {
+    & {
+        position: relative;
+        @include flexbox($fw: wrap, $jc: space-between);
+        padding-top: 1.8rem;
+        padding-bottom: 2rem;
+        background-color: $c-primary;
+        color: white;
+        @include mediaFrom(lg) {
+            @include padding-v(60);
+            color: white;
+        }
+    }
+}
+/*-----Post Footer-----*/
+.post-footer {
+    &__wrapper {
+        border-top: 1px solid $c-pastel-gray;
+        font-size: rem(11);
+        color: $c-primary;
+        background-color: #fff;
+        @include mediaFrom(md) {
+            @include padding-v(20, 20);
+        }
+    }
+    & {
+        @include mediaTo(md) {
+            text-align: center;
+        }
+        @include mediaFrom(lg) {
+            @include flexbox($jc: space-between, $fw: wrap, $ai: center);
+        }
+    }
+}
+// Developed
+.developed-by {
+    @include flexbox($ai: center);
+    font-weight: $font-light;
+    @include mediaTo(md) {
+        justify-content: center;
+    }
+    @include mediaTo(xs) {
+        @include margin-v(1, 1, 1em);
+    }
+    @include mediaFrom(lg) {
+        order: 2;
+    }
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        text-decoration: none;
+        &:nth-child(2) {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+    img {
+        width: auto;
+        display: block;
+        max-height: 15px;
+    }
+}

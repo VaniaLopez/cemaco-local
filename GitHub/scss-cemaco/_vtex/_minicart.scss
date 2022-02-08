@@ -1,0 +1,365 @@
+/*--------------------MiniCart--------------------*/
+.nav-ecommerce__label--counter{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    font-size: 0.5em;
+    font-weight: $font-bold;
+    line-height: 12px;
+    text-align: center;
+    color: $c-primary;
+    background-color: #fff;
+    transform: translateX(8%);
+}
+.minicart{
+    &__wrapper{
+        width: 100%;
+        z-index: $z-offcanvas;
+        background: white;
+        opacity: 0;
+        transition: all 0.4s;
+        @include mediaTo(md){
+            position: fixed;
+            // display: none;
+            right: -1000px;
+        }
+        @include mediaTo(xs){
+            top: 0;
+            height: 100%;
+        }
+        @include mediaFrom(sm){
+            width: 290px;
+        }
+        @include mediaFrom(lg){
+            position: absolute;
+            top: 100%;
+            right: 0;
+        }
+        body.page-scroll-on &{
+            @include commonBreakpoints(
+            top,
+            $header-height--bs - $top-bar-height--bs,
+            $header-height--md - $top-bar-height--md,
+            $header-height--lg - $top-bar-height--lg
+            );
+        }
+        body.has-cintillo &{
+            @include commonBreakpoints(
+            top,
+            $header-height--bs+$cintillo-height--bs,
+            $header-height--md+$cintillo-height--md,
+            $header-height--lg+$cintillo-height--lg
+            );
+        }
+        body.has-cintillo.page-scroll-on &{
+            @include commonBreakpoints(
+            top,
+            $header-height--bs,
+            $header-height--md,
+            $header-height--lg
+            );
+        }
+        &.is-active{
+            opacity: 1;
+            @include mediaTo(xs){
+                right: 0!important;
+            }
+        }
+    }
+    &{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    &__header{
+        margin-bottom: 1em;
+        position: relative;
+        line-height: 50px;
+        text-align: center;
+        background-color: $c-secondary;
+        .svg-icon{
+            width: 16px;
+            height: 16px;
+            display: none;
+        }
+        @include mediaTo(xs){
+            display: block;
+            order: 1;
+        }
+        span{
+            font-size: em(14);
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .close-minicart{
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            cursor: pointer;
+            transform: translateY(-50%);
+            @include mediaFrom(md){
+                right: 10px;
+            }
+        }
+    }
+    &__products, &__footer{
+        @include padding-h(10);
+    }
+    &__products{
+        min-height: 10px;
+        max-height: none;
+        display: block;
+        overflow-y: auto;
+        @include mediaTo(xs){
+            order: 3;
+        }
+        &::-webkit-scrollbar{
+            width: 8px;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-track{
+            border-radius: 5px;
+            background-color: darken($c-light-gray,0);
+        }
+        &::-webkit-scrollbar-thumb{
+            border-radius: 5px;
+            background-color: darken($c-light-gray,40);
+        }
+        @include mediaFrom(md){
+            max-height: none;
+        }
+    }
+    &__empty-message{
+        padding: .5em 0;
+        font-size: .9em;
+        text-align: center;
+        color: $c-text;
+    }
+    &__footer{
+        width: 100%;
+        border-top: 3px solid $c-light-gray;
+        @include mediaTo(xs){
+            order: 2;
+        }
+        .is-empty &{
+            display: none;
+        }
+        .button-wrapper{
+            width: 100%;
+            text-align: center;
+            margin-top: 1em;
+            margin-bottom: 1.25em;
+        }
+        a[class*="button-"]{
+            font-size: em(11);
+            text-transform: uppercase;
+            background-color: $c-dark-gray;
+            @include font-smooth();
+        }
+    }
+    &__subtotals,
+    &__total{
+        padding: 2% 0;
+        display: none;
+        font-size: em(14);
+        font-weight: $font-bold;
+    }
+    &__subtotals{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    &__value{
+        @include flexbox($jc: space-between);
+        font-size: 1em;
+        text-transform: uppercase;
+        color: $c-dark-gray;
+    }
+    &__total-products{
+        margin-left: 10px;
+        display: none;
+        vertical-align: bottom;
+        font-size: 70%;
+        font-weight: $font-thin;
+        line-height: 1.5;
+        text-transform: none;
+        color: $c-dusty-gray;
+    }
+}
+.item-added{
+    padding: 3px 0px;
+    margin-bottom: 1em;
+    @include flexbox;
+    flex-wrap: wrap;
+    position: relative;
+    font-weight: $font-light;
+    overflow: hidden;
+    &__img{
+        @include flex-item($fs: 0, $fb: 60px);
+        margin-right: 5px;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+    &__summary{
+        width: 60%;
+        padding: 0;
+        @include flex-item($fg: 1);
+        @include font-size(1);
+        font-weight: $font-bold;
+        position: relative;
+    }
+    &__name{
+        width: 65%;
+        padding-bottom: .5em;
+        font-family: $font-title;
+        font-size: em(13);
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        @include font-smooth();
+        color: $c-dark-gray;
+        a:hover{
+            text-decoration: none;
+        }
+    }
+    &__color{
+        padding-bottom: .5em;
+    }
+    &__size{
+        padding-bottom: .5em;
+    }
+    &__qty{
+        width: 100%;
+        font-size: em(10.8);
+        font-weight: $font-light;
+        line-height: 15px;
+        position: relative;
+        .qty{
+            display: inline-block;
+            text-align: center;
+        }
+        a{
+            position: relative;
+            color: white;
+            display: inline-block;
+            vertical-align: middle;
+            width: 12px;
+            text-align: center;
+            text-decoration: none!important;
+        }
+        &-no-stock{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: white;
+        }
+        .qty-less,
+        .qty-plus{
+            display: none;
+        }
+        .qty-less{
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 45%;
+                width: 10px;
+                height: 1px;
+                background: $c-text;
+            }
+        }
+        .qty-plus{
+            &:before{
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 45%;
+                width: 9px;
+                height: 1px;
+                background: $c-text;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                right: 4px;
+                top: 3px;
+                width: 1px;
+                height: 9px;
+                background: $c-text;
+            }
+        }
+    }
+    &__price{
+        display: inline-block;
+        position: relative;
+        &-wrapper{
+            margin-bottom: .5em;
+            display: none;
+        }
+        &:after{
+            content: '';
+            display: block;
+            width: 110%;
+            height: 1px;
+            background: $c-text;
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translateX(-50%);
+        }
+        &--selling{
+            display: inline-block;
+            margin-left: 4px;
+            color: $c-invalid;
+        }
+    }
+    &__additional-info{
+        min-height: 1px;
+        padding: 0;
+        @include flex-item( $fb: 70%);
+        font-size: 1;
+        font-weight: $font-bold;
+    }
+    &__subtotal{
+        font-size: em(12);
+        font-weight: $font-light;
+        text-align: right;
+        color: $c-dark-gray;
+    }
+    &__discount{
+        padding-top: 0.5em;
+        font-size: em(10.8);
+        font-weight: $font-regular;
+        color: $c-invalid;
+    }
+    &__del{
+        position: absolute;
+        top: 0;
+        right: 0;
+        .svg-icon{
+            @include sizeProportion($dW: 0.8);
+            color: $c-dark-gray;
+        }
+        .remove{
+            cursor: pointer;
+            transition: all .3s;
+            &:hover{
+                color: $c-dark-gray;
+            }
+        }
+    }
+
+    &:hover{
+        .product-del{
+            .remove{
+                transform: translateX(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,318 @@
+@charset "UTF-8";
+// Import Shelf info
+@import "giftlist-shelf";
+@import "_giftlist/main";
+
+$c-whatsapp: #128c7e;
+$c-facebook: #3b5998;
+$c-twitter: #00acee;
+
+.product-b{
+	a.urlproduct{
+		cursor: default!important;
+		text-decoration: none!important;
+		pointer-events: none!important;
+	}
+}
+.mdr__shelf-item.product-b{
+	.mdr__shelf-item-image{
+		a{
+			cursor: default!important;
+			text-decoration: none!important;
+			pointer-events: none!important;
+		}
+	}
+}
+
+#GiftListStatisticsV2--wrapper,
+#giftlistremovecheckedskus,
+.showskuorders-popup{
+	display: none!important;
+}
+#giftlistremovecheckedskus{
+	&[disabled="disabled"]{
+		opacity: .45;
+		cursor: default;
+	}
+}
+#delete_checked_skus{
+	opacity: .45;
+	cursor: default;
+	&.active{
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+.no-product.message{
+	text-align: center;
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+.ko-grid-pageLinks{
+	text-align: right;
+	margin-top: 1em;
+	span{
+		text-transform: capitalize;
+	}
+	a{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background: $c-dim-gray;
+		color: white;
+		opacity: .9;
+		text-decoration: none!important;
+		transition: all .3s;
+		&:hover{
+			opacity: 1;
+		}
+		&.selected{
+			background: $c-primary;
+		}
+	}
+}
+.giftlist-remove-sku{
+	text-align: right;
+}
+#GiftListProductsV2--wrapper{
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s;
+	&.shown{
+		opacity: 1;
+		visibility: visible;
+	}
+	thead{
+		display: none;
+	}
+	tr{
+		padding: 2em 0;
+		display: flex;
+		border-bottom: 1px solid $c-pastel-gray;
+		@include mediaTo(md){
+			flex-wrap: wrap;
+		}
+	}
+	td{
+		padding: 0;
+		width: 15%;
+		display: flex;
+        align-items: center;
+        font-weight: $font-bold;
+		@include mediaTo(md){
+			width: 100%;
+			margin-bottom: .5em;
+		}
+		&.image{
+			width: 90px;
+			padding-left: 30px;
+			@include mediaTo(md){
+				width: 70px;
+				padding-left: 10px;
+			}
+			img{
+				width: 60px;
+				height: 60px;
+			}
+		}
+		&.name{
+			width: calc(40% - 90px);
+			padding-left: 20px;
+			@include mediaTo(md){
+				width: calc(100% - 70px);
+				font-weight: $font-bold;
+			}
+		}
+		&.price,
+		&.purchased,
+		&.wished,
+		&.checkuncheck{
+			justify-content: center;
+			@include mediaTo(md){
+				justify-content: flex-start;
+				padding-left: 20px;
+			}
+        }
+        &.purchased{
+            display: none !important;
+        }
+		&.wished{
+			display: flex;
+            align-items: center;
+            //display: none;
+		}
+		&.actions{
+			width: 15%;
+			justify-content: center;
+			@include mediaTo(md){
+                width: 140px;
+                margin-right: 20px;
+				justify-content: flex-start;
+				padding: 0 0 0 20px;
+			}
+			svg{
+				width: 10px;
+                height: 10px;
+                color: black;
+			}
+		}
+		&.price{
+			@include mediaTo(md){
+				&:before{
+					content: 'Precio:';
+					font-weight: $font-bold;
+					display: inline-block;
+					margin-right: .4em;
+				}
+			}
+		}
+		&.purchased{
+			@include mediaTo(md){
+				&:before{
+					content: 'Comprados:';
+					font-weight: $font-bold;
+					display: inline-block;
+					margin-right: .4em;
+				}
+			}
+		}
+		&.wished{
+			@include mediaTo(md){
+				&:before{
+					content: 'Deseados:';
+					font-weight: $font-bold;
+					display: inline-block;
+					margin-right: .4em;
+				}
+			}
+		}
+		&.actions{
+			@include mediaTo(md){
+				&:before{
+					content: 'Eliminar:';
+					font-weight: $font-bold;
+					display: inline-block;
+					margin-right: .4em;
+				}
+			}
+		}
+		&.checkuncheck{
+			width: 5%;
+			@include mediaTo(md){
+                padding: 0;
+                &:before{
+					content: 'Seleccionar:';
+					font-weight: $font-bold;
+					display: inline-block;
+					margin-right: .4em;
+				}
+			}
+		}
+		.giftlistsku-input-wishedamt{
+            order: 2;
+			appearance: none;
+			border-radius: 0;
+			padding: 0;
+			text-align: center;
+			width: 24px;
+			border: 0;
+            border-bottom: 1px solid white;
+            @include font-size(1.25);
+			@include mediaTo(md){
+				border-bottom: 1px solid $c-pastel-gray
+			}
+		}
+	}
+}
+.mdr{
+	&__product{
+		&-item{
+			&-qty{
+                position: relative;
+				.show-controls &{
+                    @include flexbox($ai: center);
+                    order: 2;
+                    .mdr__product-item-qty{
+                        width: 25px;
+                        .mdr__shelf-item-qty-plus, .mdr__shelf-item-qty-rest{
+                            display: none;
+                        }
+                    }
+				}
+			}
+		}
+    }
+    &__more-products{
+        &-wrapper{
+            text-align: center;
+            display: none;
+            &.generico{
+                body.generico &{
+                    display: block;
+                }
+            }
+            &.bebe{
+                body.bebe &{
+                    display: block;
+                }
+            }
+            &.kids{
+                body.kids &{
+                    display: block;
+                }
+            }
+            .button-flat{
+                border-radius: 2rem;
+                &.less-products{
+                    font-size: 0;
+                    &:after{
+                        display: block;
+                        content: 'Ver menos';
+                        font-size: rem(12);
+                        padding: 1em 3em;
+                        border-radius: 2em;
+                    }
+                }
+            }
+        }
+        @include flexbox($fw: wrap);
+        .tag-title--level-2{
+            width: 100%;
+        }
+        &-item{
+            width: 49%;
+            margin-bottom: 3%;
+            @include mediaFrom(md){
+                width: 24%;
+            }
+            @include mediaFrom(lg){
+                @include padding-h();
+                width: 15.6%;
+            }
+            &.show{
+                display: block;
+                visibility: visible;
+            }
+        }
+    }
+	&__shelf-item-qty-rest,
+	&__shelf-item-qty-plus{
+		display: none;
+		.show-controls &{
+			display: block;
+		}
+	}
+}
+.out-of-stock{
+	opacity: .5;
+	.price{
+		color: $c-invalid;
+	}
+}
+.giftlistproductsv2{
+	&-loading{
+		display: none;
+	}
+}

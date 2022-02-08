@@ -1,0 +1,270 @@
+.wishlist{
+	&__shelf{
+		&-info{
+			&--wrapper{
+				@include mediaFrom(xl){
+					max-width: 80%;
+					margin: 0 auto;
+					padding-top: 2em;
+				}
+				@include mediaFrom(xxl){
+					max-width: 70%;
+				}
+				hr{
+					background: $c-pastel-gray;
+					height: 1px;
+					border: 0;
+				}
+			}
+			&-title{
+				font-size: 2rem;
+				margin: 0 0 .5em 0;
+				padding: 0;
+			}
+			&-subtitle{
+				font-size: 1.35rem;
+			}
+			&-title3{
+				font-size: 1rem;
+				margin-bottom: .5em;
+			}
+			&-member{
+				font-weight: $font-bold;
+				span{
+					font-weight: $font-regular;
+					color: darken($c-dusty-gray, 5);
+				}
+			}
+			&-txt{
+				color: darken($c-dusty-gray, 5);
+			}
+		}
+		&-items{
+			&--wrapper{
+				margin: 5em auto;
+			}
+		}
+		&-item{
+			&--titles{
+				margin-top: 2em;
+				background: darken($c-light-gray, 5);
+				color: $c-dusty-gray;
+				font-weight: $font-bold;
+				display: flex;
+				line-height: 26px;
+				border-radius: 20px;
+				font-size: .9rem;
+			}
+			&-title{
+				text-align: center;
+				&.product{
+					width: 55%;
+				}
+				&.price{
+					width: 15%;
+				}
+				&.subtotal-qty{
+					width: 15%;
+				}
+				&.subtotal{
+					width: 15%;
+				}
+				&.action{
+					width: 15%;
+				}
+				&.price,
+				&.subtotal-qty,
+				&.subtotal,
+				&.action{
+					@include mediaTo(md){
+						display: none;
+					}
+				}
+			}
+			&--wrapper{
+				// display: flex;
+				// flex-wrap: wrap;
+			}
+			&{
+				width: 100%;
+				padding: 40px 0;
+				display: flex;
+				flex-wrap: wrap;
+				border-bottom: 1px solid $c-border-account;
+				font-size: .85rem;
+				@include mediaFrom(lg){
+					flex-wrap: unset;
+				}
+				div[id*="ResultItems"] ul li:last-child &{
+					border: 0;
+				}
+				strong{
+					@include mediaFrom(md){
+						display: none;
+					}
+				}
+			}
+			&-image{
+				width: 60px;
+				@include mediaFrom(lg){
+					width: 120px;
+				}
+				img{
+					height: auto;
+				}
+			}
+			&-product{
+				width: calc(100% - 60px);
+				@include mediaFrom(md){
+					width: calc(85% - 60px);
+				}
+				@include mediaFrom(lg){
+					width: calc(55% - 120px);
+				}
+				padding-left: 1em;
+			}
+			&-name{
+				font-weight: $font-regular;
+				padding: 0;
+				margin: 0 0 .04em;
+				font-size: 1.5rem;
+				font-weight: $font-bold;
+			}
+			&-brand{
+				font-size: 1rem;
+				color: $c-dusty-gray;
+				font-weight: $font-bold;
+			}
+			&-action{
+				margin-top: 5px;
+				display: flex;
+				flex-wrap: wrap;
+				@include mediaFrom(md){
+					flex-wrap: unset;
+				}
+			}
+			&-qty{
+				position: relative;
+				margin-right: 20px;
+				width: 100%;
+				@include mediaFrom(md){
+					width: auto;
+				}
+				&-input{
+					&[type="text"]{
+						border-radius: 0;
+						border: 0;
+						border-bottom: 1px solid $c-dark-gray;
+						width: 100%;
+						height: 36px;
+						padding-left: 10px;
+						padding-right: 60px;
+						text-align: center;
+						font-size: .85rem;
+						color: $c-dusty-gray;
+						@include mediaFrom(md){
+							width: 130px;
+						}
+					}
+				}
+				&-plus,
+				&-rest{
+					width: 30px;
+					height: 36px;
+					position: absolute;
+					top: 0;
+					cursor: pointer;
+					z-index: 1;
+					&:before,
+					&:after{
+						content: '';
+						width: 13px;
+						height: 1px;
+						background: black;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translateX(-50%);
+						transition: background .3s;
+					}
+					&:hover{
+						&:before,
+						&:after{
+							@each $color,$value in $color-giftlist-map {
+								.#{$color} &{
+									background: 	map-get($value,color);
+								}
+							}
+						}
+					}
+				}
+				&-plus{
+					right: 0;
+					&:after{
+						transform: translateX(-50%) rotate(90deg);
+					}
+				}
+				&-rest{
+					right: 30px;
+				}
+			}
+			&-buy{
+				font-size: .7rem;
+				line-height: 1.5;
+				font-weight: $font-bold;
+				height: 32px;
+				line-height: 32px;
+				padding: 0 2.5em;
+				width: 90%;
+				margin-top: 1em;
+				margin-right: 20px;
+				@include mediaFrom(md){
+					width: auto;
+					margin-top: 0;
+					margin-right: 0;
+				}
+			}
+			&-price,
+			&-subtotal-qty,
+			&-subtotal{
+				width: 100%;
+				text-align: center;
+				justify-content: flex-start;
+				align-items: center;
+				display: flex;
+				font-size: 1.25rem;
+				font-weight: $font-bold;
+				color: $c-dim-gray;
+				padding: 20px 0 20px 70px;
+				@include mediaFrom(md){
+					width: 15%;
+					justify-content: center;
+					padding: 0;
+				}
+				@include mediaFrom(lg){
+					width: 15%;
+				}
+			}
+			&-price,
+			&-subtotal-qty{
+				display: none;
+				@include mediaFrom(lg){
+					display: flex;
+				}
+			}
+			&-wishlist{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				svg{
+					width: 20px;
+					height: 20px;
+				}
+			}
+			&-price .promo{
+				padding-left: 15px; 
+				color: $c-invalid;
+			}
+		}
+	}
+}

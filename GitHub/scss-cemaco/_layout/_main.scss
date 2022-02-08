@@ -1,0 +1,60 @@
+/*--------------------General Layout - Main--------------------*/
+main[role="main"]{
+    body > &{
+        min-height: 500px;
+        margin-bottom: auto;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: $z-main;
+        background-color: white;
+    }
+    body.departamento &,
+    body.categoria &,
+    body.brand &,
+    body.resultado-busca &,
+    body.folder &{
+        background-color: $c-light-gray;
+        @include mediaFrom(lg){
+            z-index: $z-main--desktop;
+        }
+    }
+    body.departamento &,
+    body.categoria &{
+        background-color: $c-light-gray;
+    }
+    body.site-header-fixed &{
+        @include commonBreakpoints(
+        (margin-top,
+            rem($header-height--bs),
+            rem($header-height--md),
+            rem($header-height--lg))
+        );
+
+    }
+    body.site-header-fixed.has-cintillo &{
+        @include commonBreakpoints(
+        (margin-top,
+            rem($header-height--bs + $cintillo-height--bs),
+            rem($header-height--md + $cintillo-height--md),
+            rem($header-height--lg + $cintillo-height--lg))
+        );
+    }
+    body.site-header-fixed.has-cintillo.has-store-top-bar &{
+        @include commonBreakpoints(
+        (margin-top,
+            rem($header-height--bs + $cintillo-height--bs + $store-top-bar-mobile),
+            rem($header-height--md + $cintillo-height--md),
+            rem($header-height--lg + $cintillo-height--lg))
+        );
+    }
+    body.site-header-fixed.page-scroll-on &{
+        @include commonBreakpoints(
+        (margin-top,
+            rem($middle-bar-height--bs),
+            rem($middle-bar-height--md),
+            rem($middle-bar-height--lg))
+        );
+    }
+}

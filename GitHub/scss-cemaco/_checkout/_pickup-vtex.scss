@@ -1,0 +1,83 @@
+// Store Locator
+.vtex-pickup-points-modal-3-x{
+    &-searching{
+        &:after{
+            content: '¡Asegúrate de tener la ubicación GPS habilitada en tu dispositivo!';
+            display: block;
+            margin-top: 20px;
+            text-decoration: underline;
+            font-size: rem(13);
+        }
+    }
+    &-modalTitle{
+        font-size: 0 !important;
+        &:after{
+            content: 'Elija un punto para retirar en tienda';
+            font-size: 16px;
+        }
+    }
+    &-searchAloneTitle{
+        font-size: 0 !important;
+        &:before{
+            content: 'Ubica tu tienda más cercana';
+            font-size: 23px;
+            font-weight: $font-bold;
+            @include mediaFrom(lg){
+                font-size: 28px;
+            }
+        }
+    }
+    &-errorWrapper.vtex-pickup-points-modal-3-x-errorWrapper{
+        width: 50%;
+    }
+    &-errorTitle{
+        &:before{
+            content: 'Asegúrate de tener la ubicación GPS habilitada en tu dispositivo!';
+            display: block;
+            margin-bottom: 20px;
+            font-size: rem(13);
+            text-decoration: underline;
+        }
+    }
+    &-errorBackButton.vtex-pickup-points-modal-3-x-errorBackButton{
+        @include button-flat($c-primary);
+        margin-top: 10px;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 2rem;
+        font-size: 0;
+        &:after{
+            content: 'Buscar por una dirección';
+            font-size: rem(16);
+        }
+    }
+    &-utiliza-icon{
+        @include horizontal-center;
+        bottom: 10px;
+        width: 100%;
+        @include padding-h();
+        font-size: rem(13);
+        text-align: center;
+        text-decoration: underline;
+        svg{
+            color: $c-primary;
+        }
+    }
+    &-modalDetailsBottom{
+        button{
+            font-size: 0;
+            &:after{
+                content: 'Retirar en esta tienda';
+                font-size: 16px;
+            }
+        }
+    }
+}
+.pac-container{
+    @include mediaTo(md){
+        z-index: 9999999999;
+        max-width: 200px;
+        overflow-y: auto;
+    }
+}
+

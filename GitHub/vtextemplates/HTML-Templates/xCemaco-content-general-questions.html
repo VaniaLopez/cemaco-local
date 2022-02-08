@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+    <head>
+        <title>CEMACO</title>
+        <vtex:metaTags/>
+        <vtex:template id="xCemaco-meta-tags" />
+        <vtex:template id="xCemaco-styles" />
+        <link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+        <vtex:contentPlaceHolder id="page-styles" />
+        <vtex.cmc:xCemacoFallback />
+    </head>
+    <body class="board-sticky">
+        <vtex:template id="xCemaco-header" />
+
+        <main role="main" class="page-main--internal-page">
+            <vtex:contentPlaceHolder id="Banner01" />
+            <vtex:contentPlaceHolder id="InternalMenu" />
+            <vtex:contentPlaceHolder id="Content01" />
+            <!-- Productos slider. Begin -->
+            <div class="re-central products-slider__wrapper">
+                <div class="products-slider__container">
+                    <div id="productsSlider01" class="product-list grid-view slider-view" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-01" />
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <vtex:template id="xCemaco-footer" />
+        <vtex:template id="xCemaco-svg-sprite" />
+        <vtex:template id="xCemaco-scripts" />
+        <!-- Plugins -->
+        <script src="/arquivos/plugins_slick_slick.min.js"></script>
+        <!-- Static Pages -->
+        <script src="/arquivos/css-js_static-pages.js"></script>
+        <vtex:contentPlaceHolder id="page-scripts" />
+    </body>
+    </html>

@@ -1,0 +1,233 @@
+/*--------------------Miscellaneous--------------------*/
+.grid-board{
+    &__list{
+        $elementName: removeSelector(&);
+        @at-root [class*="#{$elementName}"]:not(.slick-initialized){
+            @include flexbox($fw: wrap);
+        }
+        @at-root [class*="#{$elementName}"].slick-dotted{
+            padding-bottom: 2em;
+        }
+        &:not(.slick-initialized){
+            margin-top: 2em;
+            @include grid(
+                '.grid-board__item',
+                (bp: bs, cols: 1, gutter: 5),
+                (bp: xs, cols: 2, gutter: 5),
+                (bp: lg, cols: 3, gutter: 5)
+            );
+        }
+        &--categories{
+            margin-top: 2.5em;
+            margin-bottom: 2em;
+        }
+    }
+    &__item{
+        position: relative;
+        flex-grow: 1;
+        .grid-board__list--categories &{
+            @include mediaFrom(lg){
+                width: 16%;
+            }
+        }
+    }
+    &__summary{
+        &--over,
+        &--over-center{
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            text-align: center;
+        }
+        &--over{
+            bottom: 2em;
+        }
+        &--over-center{
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &--outside{
+            text-align: center;
+        }
+        .button-flat{
+            font-size: 0.8em;
+        }
+    }
+    &__title{
+        font-family: $font-body;
+        font-size: 1.75em;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        small{
+            display: block;
+            margin-top: 1em;
+            text-transform: none;
+        }
+    }
+    &__figure{
+        $elementClass: removeSelector(&);
+        @at-root [class*="#{$elementClass}"]{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            img{
+                transition: all 1s ease-out;
+                .grid-board__item:hover &{
+                    transform: scale(1);
+                }
+            }
+        }
+        &--to-gray{
+            img{
+                .grid-board__item:hover &{
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+    &__lookbook-hotspots{
+        position: relative;
+        background-color: #fff;
+    }
+}
+
+// Fit guide
+.fit-guide{
+	&__modal-dialog{
+		width: 75%;
+		max-height: 80vh;
+		overflow-y: auto;
+		@media screen and (min-width: $screen-md-min){
+			width: 500px;
+		}
+		@media screen and (min-width: $screen-xl-min){
+			width: 525px;
+			max-height: 90vh;
+		}
+	}
+	&__poster{
+		&-wrapper{
+			text-align: center;
+		}
+		&{
+			width: auto;
+			max-width: 100%;
+			max-height: 70vh;
+			display: inline-block;
+		}
+	}
+	&__link{
+		&--modal{
+			font-size: 0.8em;
+			font-weight: $font-medium;
+			color: black;
+			&,
+			&:hover,
+			&:focus{
+				text-decoration: underline;
+				color: $c-primary;
+			}
+		}
+	}
+}
+
+.m-top-50 { margin-top: 50px; overflow: hidden; }
+
+.cocina-col-1 { width: 32%; float: left; text-align: left;  padding: 3% 0; }
+.cocina-col-1 .tag-title { font-size: 2.3rem; text-align: left; }
+.cocina-li { font-size: 1.4rem; margin: 4% 0;}
+.cocina-col-2 {width: 68%; float: left; text-align: center; padding: 3% 0 3% 3%; border-left: solid #333333 1px;}
+.item-cocina { width: 33%; float: left; text-align: center; padding: 3%;}
+.banner-cocina {margin: 40px 0px;}
+
+@media screen and (max-width: 768px) {
+
+.control-wrapper {
+    margin-bottom: 10px;
+}
+
+.mesa-de-regalos-board__form .control-wrapper--send {
+    margin-top: 0.5em;
+}
+
+.mesa-de-regalos-board__info {
+    padding-top: 0px!important;
+}
+
+.mesa-de-regalos-board__anchors .button-simple {
+    font-weight: bold;
+}	
+	
+.mesa-de-regalos-board__anchors .button-simple svg {
+    width: 1.2em;
+    height:1.2em;
+    stroke-width: 20px;
+	font-weight: bold;
+}	
+	
+.mesa-de-regalos-board__anchor	.button-simple svg { 
+    margin-left: 0em;
+}
+
+
+.m-top-50 { margin-top: 5px;  }
+.cocina-col-1 { width: 100%; }
+.cocina-col-1 .tag-title { font-size: 1.6rem;  }
+.cocina-li { font-size: 1.2rem; margin: 2% 0;}
+	.cocina-col-2{     width: 100%;  padding: 3% 0; border-left: none;}
+.item-cocina { width: 44%;}
+	.banner-cocina {margin: 40px 0px;}
+	
+	
+}
+.pop-stores{
+    .modal-content{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .modal-footer{
+        border-top: none!important;
+        button{
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $c-primary;
+        }
+    }
+    .modal-body{
+        width: 360px;
+        @media screen and (min-width: $screen-lg-min){
+            width: auto;
+		}
+    }
+}
+#cintillo > .re-central{
+    position: relative;
+  }
+
+.cocina-col-1{
+    .tag-title--level-2{
+        text-align: left;
+    }
+}
+.item-cocina{
+    .tag-subtitle{
+        padding-top: 30px;
+        font-weight: $font-bold;
+    }
+}
+.l-juguetes{
+    .double-board .double-board__item--top-left{
+        padding-bottom: 0;
+        @media screen and (min-width: $screen-lg-min){
+            padding-bottom: 5px;
+		}
+    }
+    .double-board__item>div{
+        margin-bottom: 0;
+        @media screen and (min-width: $screen-lg-min){
+            margin-bottom: 0.3em;
+		}
+    }
+}

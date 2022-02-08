@@ -1,0 +1,274 @@
+.account {
+    h4{
+        border-bottom: 1px solid currentColor;
+        margin-bottom: 1em;
+        font-size: 1.5rem;
+        font-weight: $font-regular;
+        color: $c-dark-gray;
+    }
+}
+  .account .btn.btn-primary {
+    display: inline-block;
+    padding: 0px 20px;
+    transition: all .3s; }
+  .account form > div {
+    overflow: visible; }
+  .account main {
+    position: static; }
+  .account .profile-detail-display-info,
+  .account .form-personal-data-cpf {
+    display: none; }
+  .account .profile-detail-form h5 {
+    display: none; }
+  .account .form-business-data-name {
+    display: none !important; }
+  .account #response-message {
+    background: #fff;
+    text-align: center; }
+  .account #exclude {
+    background: #fff;
+    }
+  .account h4.msj {
+    background: #fff;
+    padding: 15px;
+    text-align: center; }
+  .account h1 {
+    text-align: center;
+    color: #535256;
+    border-bottom: 1px solid #f3f3f3;
+    margin-bottom: 40px; }
+  /*.account h4 {
+    color: #ed1c26;
+    text-transform: uppercase; }*/
+  .account .modal-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000 !important; }
+  .account .profile-detail-display,
+  .account .address-display-block {
+      padding-bottom: 1em;
+      border-bottom: 1px dashed $c-light-gray;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+.account .profile-detail-display{
+    h5,
+    p{
+        font-size: em(16);
+    }
+}
+    .account .profile-detail-display .title,
+    .account .address-display-block .title {
+      font-weight: bold;
+      color: #ed1c26; }
+    .account .profile-detail-display .data,
+    .account .address-display-block .data {
+      color: #000;
+      font-weight: bold; }
+  .account .profile-detail-display-cellphone,
+  .account .form-contact-data-cellphone,
+  .account .profile-detail-display-nickname,
+  .account .form-personal-data-nickname {
+    display: none; }
+  /*.account .address-display-unit h5 {
+    display: none; }
+  .account .control-group.address-form-addressee #addressName,
+  .account .control-group.address-form-addressee label[for="addressName"],*/
+  .account .control-group.address-form-address-type {
+    display: none; }
+  .account .address-display-block .row {
+    margin: 0px; }
+  .account #editar-perfil {
+    max-height: 480px; }
+  .account .modal-backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s; }
+    .account .modal-backdrop.in {
+      opacity: 1;
+      visibility: visible; }
+  .account .modal {
+      width: 600px;
+      height: 70%;
+      display: none;
+      top: 50%;
+      left: 50%;
+    z-index: 13000;
+    background: #fff;
+    transform: translate(-50%,-50%);
+}
+    .account .modal.in {
+      display: block;
+      z-index: 100000; }
+    .account .modal#address-remove {
+      max-height: 240px !important; }
+
+    @media (max-width: 620px) {
+      .account .modal {
+        width: 96%;
+        height: 92%;
+        max-height: 500px !important;
+        }
+    }
+    .account .modal .row {
+      margin: 0px; }
+    .account .modal label.error {
+        visibility: visible !important;
+        font-size: 12px;
+        color: $c-invalid;
+      //display: block !important;
+       }
+    .account .modal input, .account .modal select {
+      margin-bottom: 10px;
+      }
+    .account .modal div.span4,
+    .account .modal div.span1,
+    .account .modal div.span3 {
+      width: 50%;
+      float: left; }
+      .account .modal div.span4 input,
+      .account .modal div.span1 input,
+      .account .modal div.span3 input {
+        width: 95%; }
+    .account .modal .btn-link {
+        // @include button-lineal($c-dark-gray);
+    }
+    .account .modal #profile-submit,
+    .account .modal #form-submit,
+    .account .modal #address-delete {
+        @include button-flat($c-dark-gray);
+        width: auto !important;
+        @include padding-v(1,1,1em);
+        float: right;
+    }
+    .account .modal form {
+      background: #fff !important; }
+    .account .modal #form-address {
+      background: #fff;
+    }
+    .account .modal #editar-perfil-conteudo {
+      margin: 0px;
+      width: 100%;
+      height: auto;
+      background: #fff; }
+      .account .modal #editar-perfil-conteudo input {
+        width: 100%;
+    }
+      .account .modal #editar-perfil-conteudo .btn {
+        color: #fff;
+    }
+      .account .modal #editar-perfil-conteudo .profile-detail-form:after {
+        content: '';
+        display: block;
+        clear: both; }
+      .account .modal #editar-perfil-conteudo .profile-detail-form-personal-data {
+        margin: 0px;}
+        .account .modal #editar-perfil-conteudo .profile-detail-form-personal-data .radio {
+          margin: 0px; }
+          .account .modal #editar-perfil-conteudo .profile-detail-form-personal-data .radio input {
+            width: auto;
+            height: auto;
+            padding: 0px;
+            margin: 0 5px 0 0;
+            display: inline-block;
+            float: none;
+            position: static; }
+      .account .modal #editar-perfil-conteudo .profile-detail-form-business-data,
+      .account .modal #editar-perfil-conteudo .form-business-data-name,
+      .account .modal #editar-perfil-conteudo .profile-detail-form-contact-data {
+          @include debug($is-debugging);
+    }
+      .account .modal #editar-perfil-conteudo .form-business-data-name {
+        margin: 10px 0px; }
+        .account .modal #editar-perfil-conteudo .form-business-data-name a {
+          display: block;
+          padding: 5px;
+          background: #ed1c26;
+          color: #fff;
+          margin-left: -15px;
+          margin-right: 15px;
+          text-align: center; }
+  .account #edit-data-link{
+        @include button-flat($c-dark-gray);
+        text-decoration: none;
+    }
+
+.account.modal-open .wrapper {
+  position: static; }
+
+.account #account-wrapper {
+  /* display: none; */ }
+.account #account-wrapper .loading {
+font-size: 16px;
+font-weight: bold;
+color: #131313; }
+
+.account{
+    .modal-header{
+        h3{
+            @at-root .account .exclude .modal-header h3{
+                font-size: 0;
+                &:before{
+                    content: 'Eliminar dirección';
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+#accountAjaxBusy{
+    display: none;
+}
+.new-address-link{
+    .address-update{
+        @include button-flat($c-dark-gray);
+    }
+}
+.address-display-unit{
+    padding: 1em 1em 0.5em;
+    margin-top: 0.75em;
+    @include flexbox($fd: column);
+    font-size: 1rem;
+    &:first-child{
+        background-color: $c-light-gray;
+    }
+    .edit-address-link{
+        margin-top: 1em;
+        order: 2;
+        font-size: em(14);
+        color: white;
+        .address-update{
+            text-decoration: underline;
+            color: $c-text;
+        }
+        .delete{
+            display: none;
+        }
+    }
+    h5 {
+        margin-top: -15px;
+        font-size: em(14);
+        font-weight: $font-bold;
+        color: black;
+    }
+    p.address-display-unit-info {
+        font-size: 0.9em;
+    }
+}
+
+// #editar-perfil-conteudo #profile .modal-footer{
+//     font-size:0;
+//     color: transparent;
+//     &:before{
+//         content: 'No puede cambiar los datos de usuario por este medio. Si es necesario, puede cambiar estos datos durante  la finalización de su pedido.';
+//         font-size: 1rem;
+//         color: #000;
+//     }
+// }

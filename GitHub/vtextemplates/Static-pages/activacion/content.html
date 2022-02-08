@@ -1,0 +1,260 @@
+<!-- Mi codigo -->
+<style>
+    
+    .bannerhead h2 {
+        font-weight: normal;
+    }
+
+    .bloque-central {
+        margin-top: 11%;
+    }
+
+    .btn-cemaco {
+        border-radius: 25px;
+        background-color: #94d529;
+        padding: 10px 30px;
+        display: block;
+    }
+
+    .btn-simple {
+        border-radius: 25px;
+        background-color: white;
+        padding: 10px 30px;
+        border: 1px solid #000;
+        display: block;
+    }
+
+    .btn-cemaco,
+    .btn-simple {
+        font-size: .9rem;
+    }
+
+    .centrado {
+        margin: 5% auto 8%;
+    }
+
+
+    .list-items {
+        list-style: none;
+        counter-reset: item;
+        list-style: decimal;
+    }
+    .list-items li {
+        counter-increment: item;
+        margin-bottom: 5px;
+        display: flex;
+          padding: 1rem 0;
+    }
+    .list-items li:before {
+        margin-right: 10px;
+        content: counter(item) ".";
+        width: 1.2em;
+        font-weight: bold;
+    }
+ 
+    .bannerhead {
+        background: url('https://cemacogt.vteximg.com.br/arquivos/2021_activacion_banner_mobile2.jpg') no-repeat;
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 7% 0 50% 3%;
+    }
+
+    .cuentacemacocom {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .content-activacion{
+        padding-bottom: 10%;
+    }
+    .esperamos-texto{
+        text-align: center;
+    }
+
+  .pagina-activacion .bannerhead h1 {
+            font-size: 1.4rem;
+    }
+    .activacion-br {
+        display: block;
+    }
+
+    @media screen and (min-width: 375px) {
+        .pagina-activacion .bannerhead h1 {
+            font-size: 1.6rem;
+    }
+    }
+    @media screen and (min-width: 768px) {
+        .bannerhead {
+            background: url('https://cemacogt.vteximg.com.br/arquivos/2021_activacion_banner_desktop.jpg') no-repeat;
+            background-size: cover;
+            padding: 13% 0 14% 3%;
+        }
+        .btn-cemaco,
+        .btn-simple {
+            font-size: 1rem;
+        }
+        .centrado {
+            margin: 1% auto 2%;
+        }
+        .esperamos-texto{
+            text-align: left;
+        }
+        .bannerhead h1{
+        
+        }
+        .cuentacemacocom{
+            margin-top: 17px;
+        }
+        .list-items,
+        .esperamos-texto{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .esperamos-texto {
+            margin: 0 auto 25px;
+        }
+        .list-items p{
+            
+        }
+        .list-items li{
+            padding: 0 0 14px;
+        }
+        .content-activacion {
+            padding-bottom: 6%;
+        }
+
+       .pagina-activacion .bannerhead h1 {
+            font-size: 2.1rem;
+    }
+     .activacion-br {
+        display: none;
+    }
+    }
+    @media screen and (min-width: 1024px){
+        .bannerhead {
+            padding: 13% 0 14% 3%;
+        }
+        .bannerhead h1{
+        
+        }
+        .cuentacemacocom {
+            font-size: 22px;
+        }
+        .list-items,
+        .esperamos-texto{
+            width: 58%;
+            font-size: 17px;
+        }
+        .list-items p{
+            
+        }
+        .content-activacion{
+
+        }
+        .esperamos-texto {
+            margin: 37px auto 27px;
+        }
+    }
+    @media screen and (min-width: 1280px) {
+        .bannerhead {
+            padding: 13% 0 14% 3%;
+        }
+        .bannerhead h1{
+        
+        }
+        .btn-cemaco, .btn-simple {
+            font-size: 1.1rem;
+        }
+        .centrado {
+            margin: 15px auto 20px;
+        }
+        .cuentacemacocom {
+            font-size: 1.4em;
+            line-height: 36px;
+        }
+        .list-items{
+
+        }
+        .list-items p{
+            
+        }
+        .content-activacion{
+            padding-bottom: 40px;
+        }
+        .btn-cemaco {
+            margin-bottom: 30px;
+        }
+        .lasttext{
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .bannerhead {
+            padding: 10% 0 10% 3%;
+        }
+        .bannerhead h1{
+        
+        }
+        .cuentacemacocom{
+        
+        }
+        .list-items{
+
+        }
+        .list-items p{
+            
+        }
+    }
+</style>
+<!-- Banner head -->
+<div class="re-cien bannerhead">
+    <!-- <img src="https://cemacogt.vteximg.com.br/arquivos/2021_activacion_banner_desktop.jpg" alt="" class="desktop">
+    <img src="https://cemacogt.vteximg.com.br/arquivos/2021_cemaco_portadacat_electricos_mobile.jpg" alt="" class="mobile"> -->
+    <div class="re-central head-text">
+        <h1>
+          ¡Te damos la <br class = "activacion-br"> bienvenida <br>
+            al nuevo <br class = "activacion-br"> sitio!
+        </h1>
+    </div>
+</div>
+
+<div class="re-central">
+
+</div>
+<!-- end Banner head  -->
+<!-- Banner -->
+
+<!-- Texto centro -->
+<div class="re-central content-activacion">
+    <h3 class="text-center cuentacemacocom">Si ya tienes cuenta en cemaco.com, la hemos migrado, ¡y tus datos están seguros!
+        <br>¡Un clic más y listo!
+    </h3>
+
+    <button class="btn-cemaco centrado" onclick="window.location='/login?ReturnUrl=/_secure/account#/profile?activateAccount'"><b>Sí tengo cuenta: activar</b></button>
+    <button class="btn-simple centrado" onclick="window.location='/login?ReturnUrl=/_secure/account#/profile'"><b>No tengo cuenta: crear</b></button>
+
+    <p class="esperamos-texto">Esperamos poder brindarte un mejor servicio, acá te explicamos cómo puedes activar tu cuenta.</p>
+
+    <ol class="list-items">
+        <li>Ingresa tu correo registrado.</li>
+        <li>Será necesario que actualices tu contraseña. Si utilizas Face ID, toma en cuenta que debes actualizar primero tu contraseña; después puedes activar esta función.</li>
+        <li>Valida tu cuenta. Recibirás un código de verificación en tu correo. <br>Ingrésalo y ¡listo! Tu
+            cuenta está activa.</li>
+        <li>Sigue acumulando puntos Privilegio en tus compras. Tu tarjeta continuará enlazada a tu cuenta.
+            Si aún no la tienes, puedes enlazar tu tarjeta o solicitar una tarjeta nueva en el
+            area de privilegio en MI CUENTA.
+        </li>
+        <li>Habrá datos que te pediremos actualizar, incluyendo tu información de pago. <br>
+            ¡Cuidamos de ti y de tu seguridad! </li>
+        <li>Si tienes crédito en línea asignado a tu cuenta, este fue migrado a la nueva plataforma.
+        </li>
+    </ol>
+
+    <p class="text-center lasttext"><b>¡Disfruta la nueva experiencia de cemaco.com!</b></p>
+</div>
+<!-- Texto centro -->
+
+
+<!-- Mi codigo -->

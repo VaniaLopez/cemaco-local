@@ -1,0 +1,91 @@
+/**
+* Colores y base url
+*/
+body {
+  --color-gray: #ebebeb;
+  --color-gray-2: #d6d4d4;
+  --color-gray-3: #bdbdbd;
+  --color-gray-4: #f7f7f7;
+  --color-blue: #101e8e;
+  --color-white: #ffffff;
+  --color-green: #8fbc28;
+  --color-green-2: #93d500;
+  --jugueton-green: #00a85d;
+  --celeste: #0cb7e1;
+  --verde: #00ac54;
+  --yellow: #fece62;
+  --orange: #ff8300;
+}
+
+/*
+* Headings
+*/
+.cllas {
+  color: var(--yellow);
+}
+
+.ejemplo-code-sandbox {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+/*
+* Botones
+*/
+.b-radius {
+  border-radius: 20px;
+}
+
+.bannerrandom {
+  background-color: var(--celeste);
+}
+
+.banner2 {
+  font-size: 1.1rem;
+  color: red;
+}
+/*
+* Iconos
+*/
+
+/*
+* Campañas
+*/
+/*campaña1*/
+/*campaña2*/
+/*campaña3*/
+
+/*
+* Landing
+*/
+/*landing1*/
+
+/*
+* Media queries
+*/
+@media screen and (min-width: 360px) {
+}
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@media screen and (min-width: 1920px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@media screen and (min-width: 1920px) {
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-meta-microdatos" />
+    <vtex.cmc:productRichSnippets showFacebook="1" />
+    <title><vtex.cmc:productPageTitle /></title>
+    <vtex:template id="xCemaco-styles" />
+    <link rel="stylesheet" href="https://cemacogt.vteximg.com.br/arquivos/css-js_product-detail.css?v=20211124-1729" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header" />
+
+    <main role="main" class="page-main--internal-page">
+        <!-- Image & Summary. Begin -->
+        <div class="product-detail__wrapper">
+            <div class="re-central">
+                <!-- Breadcrumbs. Begin -->
+                <div class="bread-crumbs">
+                    <vtex.cmc:breadCrumb />
+                </div>
+                <!-- Breadcrumbs. End -->
+                <div class="product-detail">
+                    <!-- Product Image. Begin -->
+                    <div class="product-detail__image-wrapper">
+                        <div class="hide" style="display:none;"><vtex.cmc:ProductImage/></div>
+                        <div class="product-detail__image-container"></div>
+                        <!-- Wishlist. Begin -->
+                        <div class="product-detail__add-to-wishlist">
+                            <svg class="svg-icon-wishlist" aria-hidden="true">
+                                <use href="#svg-icon-wishlist"></use>
+                            </svg>
+                        </div>
+                        <!-- Wishlist. End -->
+
+                        <!--div class="product-detail__liquidacion"></div-->
+
+                        <!-- Product share -->
+                        <!-- <div class="product-detail__share">
+                            <a href="/" class="addthis_button_facebook"><svg class='svg-icon-share'><use href='#svg-icon-share'></use></svg></a>
+                            <a href="/" class="addthis_button_pinterest"><svg class='svg-icon-pinterest'><use href='#svg-icon-pinterest'></use></svg></a>
+                            <a href="/" class="share_instagram"><svg class='svg-icon-instagram'><use href='#svg-icon-instagram'></use></svg></a>
+                        </div> -->
+                        <!-- Product share. END -->
+                    </div>
+                    <!-- Product Image. End -->
+
+                    <!-- Info - Bottom. Begin -->
+                    <div class="product-detail__info product-detail__info--bottom">
+                        <vtex.cmc:brandName/>
+                        <h1 class="product-detail__name"><vtex.cmc:productName/></h1>
+                        <small class="product-detail__sku">
+                            <span>SKU:</span> <vtex.cmc:skuReference/>
+                        </small>
+                        <div class="product-detail__rating">
+                            <div class="yotpo bottomLine NETREVIEWS_PRODUCT_STARS" data-yotpo-product-id="168784"></div>
+                        </div>
+                        <div class="product-detail__flags">
+                            <vtex.cmc:HightLight/>
+                            <vtex.cmc:discountHightLight/>
+                        </div>
+                        <div class="product-detail__price">
+                            <vtex.cmc:skuPrice/>
+                        </div>
+                        <div class="product-detail__color-variations">
+                            <vtex:contentPlaceHolder id="color-variations"/>
+                        </div>
+
+                        <!-- SKU Selector. Begin -->
+                        <div class="product-detail__sku-selection">
+                            <div class="sku-selector-container sku-selector-container-0"></div>
+                        </div>
+                        <!-- SKU Selector. End -->
+
+                        <!-- CTA. Begin -->
+                        <div class="product-detail__cta">
+                            <!-- Buy. Begin -->
+                            <div class="product-detail__action">
+                                <!-- Quantity. Begin -->
+                                <div class="product-detail__quantity">
+                                    <span class="dec qtybutton">
+                                        <svg class="svg-icon">
+                                            <use href="#svg-icon-chevron-down"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="inc qtybutton">
+                                        <svg class="svg-icon">
+                                            <use href="#svg-icon-chevron-up"></use>
+                                        </svg>
+                                    </span>
+                                    <input type="text" class="product-detail__quantity-input" value="1"/>
+                                </div>
+                                <!-- Quantity. End -->
+                                <div class="BuyInPage-wrapper">
+                                    <a class="buy-in-page-button button-flat secondary" productindex="0" href="#">Agregar a mi carreta</a>
+                                </div>
+                                <div id="BuyButton-wrapper" class="BuyButton-wrapper">
+                                    <a target="_top" class="buy-button buy-button-ref button-flat tertiary" href="#">Comprar</a>
+                                </div>
+                            </div>
+                            <!-- Buy. End -->
+                        </div>
+                        <!-- CTA. End -->
+
+                        <div class="product-detail__options">
+                            <div class="product-detail__options-item mdr" id="agregarRegistro">
+                                <a href="">
+                                    <span class="svg-wrapper">
+                                        <svg class="svg-icon">
+                                            <use href="#svg-icon-gift"></use>
+                                        </svg>
+                                    </span>
+                                    <p>Agregar a mi registro</p>
+                                    <span class="end svg-wrapper">
+                                        <svg class="svg-icon">
+                                            <use href="#arrowdown"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="product-detail__options-info mdr">
+                                    <div class="options-module product-detail__mdr-action" id="product-detail__mdr-action">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-detail__options-item" id="tiempoEntrega">
+                                <a href="">
+                                    <span class="svg-wrapper">
+                                        <svg class="svg-icon" style="width: 3.5em; height: 3.5em;">
+                                            <use href="#enviopdp"></use>
+                                        </svg>
+                                    </span>
+                                    <p>Tiempos de entrega</p>
+                                    <span class="end svg-wrapper">
+                                        <svg class="svg-icon">
+                                            <use href="#arrowdown"></use>
+                                        </svg>
+                                    </span>
+                                    <!-- <button>Detalles</button> -->
+
+                                    <div class="product-detail__options-info">
+                                        <div id="Tentrega-2"></div>
+                                        <div id="Tentrega-3"></div>
+                                        <div id="Tentrega-4"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product-detail__options-item" id="retirarEnTienda">
+                                <span class="svg-wrapper">
+                                    <svg class="svg-icon">
+                                        <use href="#retiraentiendapdp"></use>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <div id="Tentrega-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-detail__product-info hidden-md-down">
+                            <div class="Tproducto"></div>
+                        </div>
+
+                        <!-- NotifyMe. Begin -->
+                        <vtex.cmc:xCemacoNotifyMe />
+                        <!-- NotifyMe. End -->
+                        
+                        <!-- Promesas de valor. Begin -->
+                        <div class="promesasvalor">
+                            <div class="promesasvalor__container">
+                                <div class="promesasvalor__icon">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                        <use href="#svg-felicidad"></use>
+                                    </svg>
+                                </div>
+                                <div class="promesasvalor__text">
+                                    <b>Tu felicidad, garantizada</b>
+                                    <p>Si no estás 100% satisfecho con tu experiencia en CEMACO.com, contáctanos y lo resolveremos</p>
+                                </div>
+                            </div>
+                            <div class="promesasvalor__container">
+                                <div class="promesasvalor__icon">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                        <use href="#svg-metodospago"></use>
+                                    </svg>
+                                </div>
+                                <div class="promesasvalor__text">
+                                    <b>Métodos de pago</b>
+                                    <p>Tarjetas de débito/crédito locales e internacionales, transferencias o depósitos con los principales bancos nacionales, Visacuotas, Mastercuotas y Cuotas Credomatic.</p>
+                                </div>
+                            </div>
+                            <div class="promesasvalor__container">
+                                <div class="promesasvalor__icon">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                        <use href="#svg-garantia"></use>
+                                    </svg>
+                                </div>
+                                <div class="promesasvalor__text">
+                                    <b>Garantía y seguridad total</b>
+                                    <p>En CEMACO.com tienes grantía total en los productos que adquieres. ¡Protegemos tu información! tu compra en nuestro sitio web es 100% segura.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Promesas de valor. End -->
+
+                    </div>
+                    <!-- Info - Bottom. End -->
+                </div>
+            </div>
+        </div>
+        <!-- Image & Summary. End -->
+        <div class="re-central PDP-Specifications PDP-Specifications--Informacion-Complementaria">
+            <!-- Specification Tab & Anchor. Begin -->
+            <ul class="content__tabs">
+                <li class="content__tab-trigger is-active" data-id="tab-description"><span>Características</span></li>
+                <li class="content__tab-trigger" data-id="tab-characteristics"><span>Información complementaria</span></li>
+                <li class="content__tab-trigger" data-id="tab-observations"><span>Observaciones</span></li>
+            </ul>
+            <ul class="content__anchors">
+                <li class="content__anchor-trigger is-active" data-id="tab-description"><span>Características</span></li>
+                <li class="content__anchor-trigger" data-id="tab-characteristics"><span>Información complementaria</span></li>
+                <li class="content__anchor-trigger" data-id="tab-observations"><span>Observaciones</span></li>
+            </ul>
+            <!-- Specification Tab & Anchor. End -->
+
+            <div id="VTEXSpecifications" class="PDP-InfoSpecifications-Control">
+                <vtex.cmc:productSpecification/>
+            </div>
+
+            <!-- Product Description. Begin -->
+            <div id="tab-description" class="content__content is-active ProductSpecifications-Group">
+                <h4 class="content__accordion-trigger ProductSpecifications-GroupName"><span>Características</span></h4>
+                <vtex.cmc:ProductDescription/>
+            </div>
+            <!-- Product Description. End -->
+
+            <!-- Product Characteristics. Begin -->
+            <div id="tab-characteristics" class="content__content ProductSpecifications-Group">
+                <h4 class="content__accordion-trigger ProductSpecifications-GroupName"><span>Detalles de Producto</span></h4>
+            </div>
+            <!-- Product Characteristics. End -->
+
+            <!-- Product Observations. Begin -->
+            <div id="tab-observations" class="content__content ProductSpecifications-Group">
+                <h4 class="content__accordion-trigger ProductSpecifications-GroupName"><span>Observaciones</span></h4>
+            </div>
+            <!-- Product Observations. End -->
+            <div class="product-detail__product-info hidden-lg-up">
+                <div class="Tproducto"></div>
+            </div>
+        </div>
+
+        <!-- FlixMedia. Begin -->
+        <div class="re-central">
+          <div id="flix-inpage"></div>
+        </div>
+        <!-- FlixMedia. End -->
+
+        <div class="pdpCarruselU"></div>
+        <div class="pdpCarruselD"></div>
+        <div class="pdpCarruselE"></div>
+
+        <!--Yotpo-->
+        <div class="re-central mainyotpo">
+            <!--h4>Descripción y Opiniones</h4-->
+            <div class="yotpo yotpo-main-widget NETREVIEWS_PRODUCT_REVIEWS" data-product-id=""> </div>
+        </div>
+        <!--Yotpo-->
+
+        <!-- Productos slider. Begin -->
+        <div class="re-central products-slider__wrapper products-slider__wrapper--pdp">
+            <div class="products-slider__container">
+                <div id="productsSlider01" class="product-list grid-view slider-view" data-height="parent">
+                    <vtex:contentPlaceHolder id="products-slider-01" />
+                </div>
+            </div>
+        </div>
+        <!-- Productos slider. End -->
+
+        <!-- Tiempo de regalar. Begin -->
+        <div class="re-central products-slider__wrapper products-slider__wrapper--tiempo">
+            <div class="products-slider__container">
+                <div id="productsSlider02" class="product-list grid-view slider-view" data-height="parent">
+                    <vtex:contentPlaceHolder id="products-slider-02" />
+                </div>
+            </div>
+        </div>
+        <!-- Tiempo de regalar. End -->
+
+        <vtex:contentPlaceHolder id="pdp-promos" />
+
+    </main>
+
+    <!-- Super Zoom. Begin -->
+    <div id="superZoomWrapper" class="super-zoom__wrapper"></div>
+    <!-- Super Zoom. End -->
+
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-quick-view" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <!-- EasyZoom -->
+    <link rel="stylesheet" href="https://cemacogt.vteximg.com.br/arquivos/plugins_easyzoom_easyzoom.css" />
+    <script src="https://cemacogt.vteximg.com.br/arquivos/plugins_easyzoom_easyzoom.min.js"></script>
+
+    <script language="javascript" src="https://cemacogt.vteximg.com.br/arquivos/portal-sku-selector-with-template.min.js?v=1.4.1094.1837" type="text/javascript"></script>
+    <script language="javascript" src="https://cemacogt.vteximg.com.br/arquivos/portal-buy-button.min.js?v=1.4.1090.1832" type="text/javascript"></script>
+
+    <vtex:template id="xCemaco-scripts" />
+
+    <!-- Products -->
+    <script src="https://cemacogt.vteximg.com.br/arquivos/css-js_product-detail.js?v=20211123-1027"></script>
+    <script src="https://cemacogt.vteximg.com.br/arquivos/css-js_microdatos-detail.js?v=2"></script>
+     <!--Yotpo-->
+    <script type="text/javascript">
+    (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/9DjOc6M9GSCHszd0xjOkNPnJt0SCbr8SJgFcM9O0/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
+    <!--Yotpo-->
+    <script src="https://cemacogt.vteximg.com.br/arquivos/cemaco-js_opiniones-verificadas.js"></script>
+    <div style="display: none;">
+        <vtex.cmc:GiftListInsertSkuV2 />
+    </div>
+    <div class="giftlist-added__overlay"></div>
+    <div class="giftlist-added__modal">
+        <div class="giftlist-added__content">
+            <h2 class="giftlist-added__title">Agregado a tu mesa de regalos</h2>
+            <div class="giftlist-added__summary">
+                <div class="giftlist-added__img">
+                    <img src="" />
+                </div>
+                <div class="giftlist-added__info">
+                    <h3 class="giftlist-added__name"></h3>
+                    <div class="giftlist-added__qty">Deseados: <span id="giftlist-added__qty"></span></div>
+                </div>
+            </div>
+            <div class="giftlist-added__actions">
+                <a href="#" class="button-lineal primary giftlist-added__close">Cerrar</a>
+                <a href="/mesa-de-regalos/administra/productos?id=" class="button-flat secondary giftlist-added__viewlist">Ver lista</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

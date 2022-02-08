@@ -1,0 +1,500 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+
+// Settings
+@import "_settings/settings";
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+// Datepicker
+@import "../scss-plugins/datepicker/datepicker";
+
+$c-whatsapp: #128c7e;
+$c-facebook: #3b5998;
+$c-twitter: #00acee;
+
+body.giftlist.manage{
+	main{
+		.static-layout__mesa--manage{
+			& > .re-central{
+				padding-top: 2rem;
+			}
+		}
+	}
+}
+
+#GiftListManagerV2--wrapper{
+	display: none;
+}
+.static-layout{
+	&__banner{
+		.manage &{
+			background: $c-primary url('#{$image-path}images-bg_mesa-generico.jpg') center right no-repeat;
+			background-size: cover;
+			position: relative;
+			&:before{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: rgba(black, .3);
+			}
+		}
+	}
+}
+
+h3#mdr__manage-create-title{
+	font-size: 1.5rem;
+	color: $c-text;
+	margin-bottom: 1rem;
+	display: none;
+}
+.mdr{
+	&__banner{
+		position: relative;
+		z-index: 5;
+		&-breadcrumb a,
+		&-breadcrumb li:after,
+		&-title{
+			.manage &{
+				color: white;
+			}
+		}
+	}
+	&__manage{
+		&-item{
+			&--wrapper{
+				@include mediaFrom(xl){
+					// max-width: 80%;
+					margin: 0 auto;
+					padding-top: 0em;
+				}
+				@include mediaFrom(xxl){
+					// max-width: 70%;
+				}
+			}
+			&--create{
+				margin-top: 2rem;
+				// max-width: 70%;
+				margin-left: auto;
+				margin-right: auto;
+				.text-center{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+				}
+			}
+			&-button{
+				margin-bottom: 1rem;
+				font-weight: $font-bold;
+				width: 48%;
+				img{
+					width: 100%;
+					height: auto;
+				}
+				@include mediaFrom(lg){
+					width: 23%;
+				}
+			}
+			&-link-text{
+				color: $c-text;
+				font-weight: $font-regular;
+				margin-top: 1rem;
+			}
+			&{
+				display: flex;
+				padding: 3em 0;
+				border-bottom: 1px solid lighten($c-pastel-gray, 5);
+				@include mediaTo(xs){
+					flex-wrap: wrap;
+				}
+			}
+			&--left{
+				width: 25%;
+				@include mediaTo(xs){
+					width: 100%;
+					margin-bottom: 1rem;
+				}
+			}
+			&--right{
+				width: 75%;
+                display: flex;
+                justify-content: flex-end;
+				flex-wrap: wrap;
+				@include mediaTo(xs){
+					width: 100%;
+				}
+			}
+			&-title{
+				font-size: 1.1rem;
+				color: $c-text;
+				margin-bottom: .35em;
+			}
+			&-subtitle{
+				font-size: .95rem;
+				color: lighten($c-text, 10);
+			}
+			&-action1--wrapper{
+				display: flex;
+				width: 100%;
+				align-items: center;
+				@include mediaFrom(lg){
+					width: 15%;
+				}
+				a{
+					color: black;
+					display: block;
+					margin-right: .5em;
+					&:hover{
+						color: lighten(black, 20);
+					}
+				}
+				svg{
+					width: 24px;
+					height: 24px;
+				}
+			}
+			&-action2--wrapper{
+                width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-right: 3%;
+				@include mediaTo(sm){
+					flex-wrap: wrap;
+				}
+				@include mediaFrom(lg){
+					width: 15%;
+					margin-right: 0;
+				}
+				a{
+					width: 100%;
+					padding-left: 0;
+					padding-right: 0;
+					@include mediaTo(sm){
+						margin-top: .5rem;
+					}
+					@include mediaFrom(md){
+						//width: 32%;
+					}
+				}
+			}
+			&-logo{
+                width: 100%;
+                margin-top: 20px;
+				img{
+					width: 100px;
+					max-width: 100%;
+					height: auto;
+					display: block;
+					margin-left: auto;
+				}
+			}
+			&-link{
+				width: 100%;
+				text-align: right;
+				padding-top: 2em;
+				a{
+					position: relative;
+					display: inline-block;
+					&:after{
+						content: 'Copiado';
+						color: $c-secondary;
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						left: 0;
+						top: 0;
+						text-align: center;
+						background: rgba(white, 1);
+						transition: all .3s;
+						opacity: 0;
+						visibility: hidden;
+					}
+					&.copy{
+						&:after{
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+					span{
+						display: inline-block;
+						vertical-align: middle;
+						font-weight: $font-bold;
+					}
+					svg{
+						width: 16px;
+						height: 16px;
+						margin-left: 1em;
+						vertical-align: middle;
+						display: inline-block;
+						color: $c-secondary;
+					}
+				}
+			}
+		}
+	}
+	&__modal{
+		&-share{
+			&--overlay{
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(black, .8);
+				z-index: 10000;
+				cursor: pointer;
+			}
+			&--wrapper{
+				position: absolute;
+				left: 50%;
+				top: 5%;
+				width: 96%;
+				max-width: 908px;
+				transform: translateX(-50%);
+				background: white;
+				padding: 20px 50px 50px;
+				z-index: 10001;
+				fieldset{
+					border: 0;
+					margin-bottom: .5em;
+				}
+				label{
+					font-size: .85rem;
+				}
+			}
+			&--close{
+				position: absolute;
+				right: 50px;
+				top: 20px;
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				&:hover{
+					&:before,
+					&:after{
+						background: $c-invalid;
+					}
+				}
+				&:before,
+				&:after{
+					content: '';
+					display: block;
+					width: 30px;
+					height: 1px;
+					background: black;
+					position: absolute;
+					top: 50%;
+				}
+				&:before{
+					transform: rotate(45deg);
+				}
+				&:after{
+					transform: rotate(-45deg);
+				}
+			}
+			&-sm{
+				&--wrapper{
+					width: 90%;
+					max-width: 390px;
+					margin: 30px auto;
+				}
+				&-title{
+					font-size: 1rem;
+					text-align: center;
+					margin-bottom: 1em;
+				}
+				&-icons{
+					display: flex;
+					justify-content: space-around;
+					width: 80%;
+					margin: 0 auto 2em;
+					a{
+						display: inline-block;
+						&.wa{
+							&:hover{
+								svg{
+									color: $c-whatsapp;
+								}
+							}
+						}
+						&.fb{
+							&:hover{
+								svg{
+									color: $c-facebook;
+								}
+							}
+						}
+						&.tw{
+							&:hover{
+								svg{
+									color: $c-twitter;
+								}
+							}
+						}
+					}
+					svg{
+						width: 60px;
+						height: 60px;
+						color: darken($c-pastel-gray, 10);
+						transition: color .3s;
+					}
+				}
+				&-input{
+					cursor: pointer;
+					width: 100%;
+					background: white!important;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+// Modal share
+#div-title{
+	font-size: 1.5rem;
+	color: $c-dusty-gray;
+	font-weight: $font-light;
+	padding-bottom: 10px;
+	border-bottom: 2px solid $c-pastel-gray;
+}
+#legYourData,
+#legFriendsData,
+#legMessage{
+	font-size: 1rem;
+	font-weight: $font-regular;
+	text-transform: none;
+}
+#fldYourData--wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#legYourData{
+	width: 100%;
+}
+#div-yourName,
+#div-yourEmail{
+	width: 48%;
+}
+#grp-amigo-indicar{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	& > div{
+		width: 48%;
+		margin-bottom: .5em;
+	}
+}
+#btnAdicionarAmigos, #btnCancelar, #btnEnviar{
+	cursor: pointer;
+}
+#btnAdicionarAmigos{
+	margin-bottom: 1em;
+}
+
+span[id*="Error"]{
+	font-size: .85rem;
+	color: $c-invalid;
+}
+
+// Modal confirmation
+.confirmation{
+	&-overlay{
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: rgba(#000,.7);
+		opacity: 0;
+		visibility: hidden;
+		transition: all .5s;
+		z-index: 100000;
+		.show-confirmation &{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&-modal{
+		display: block;
+		width: 500px;
+		max-width: 96%;
+		min-height: 120px;
+		border-radius: 20px;
+		position: fixed;
+		top: 30%;
+		left: 50%;
+		opacity: 0;
+		visibility: hidden;
+		background: white;
+		box-shadow: 0px 0px 10px rgba(#000,.3);
+		padding: 30px 10px 10px 10px;
+		transform: translate(-50%,-50%);
+		transition: all .5s;
+		z-index: 100001;
+		text-align: center;
+		.show-confirmation &{
+			opacity: 1;
+			visibility: visible;
+		}
+		.btn-yes,
+		.btn-no{
+			width: 100%;
+			letter-spacing: 1px;
+			margin: 5px 0px 5px;
+			font-size: .8rem;
+			@include mediaFrom(sm){
+				width: auto;
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+		}
+	}
+	&-title{
+		font-size: 1.3rem;
+		color: $c-primary;
+	}
+	&-message{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+}
+
+#refer-a-friend-form-gift-list{
+	&.loading{
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+			background: rgba(white, .75) url('#{$image-path}loading.gif') 50% 90% no-repeat;
+		}
+	}
+	#txtMensagem{
+		height: 80px!important;
+		padding: .75rem;
+	}
+	& > *{
+		// display: none;
+	}
+	& > #invite-success--wrapper{
+		display: block;
+	}
+}

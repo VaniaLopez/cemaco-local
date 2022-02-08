@@ -1,0 +1,767 @@
+/*--------------------General--------------------*/
+.triplets-board, .quadruplets-board, .puntos-board, .marcas-slider__wraper, .mesa-de-regalos-board, .quaternary-board, .quinary-board{
+    @include margin-v(30);
+    @include mediaFrom(lg){
+        @include margin-v(30,30);
+    }
+}
+/*--------------------Single Board--------------------*/
+.single-board{
+    @include margin-v(0);
+    @include mediaFrom(lg){
+        @include margin-v(30,30);
+    }
+    position: relative;
+    .main-slider--control-banner &{
+        margin: 0;
+    }
+    &__action{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img{
+            width: auto;
+        }
+        a{
+            &:last-child{
+                padding-left: 15px;
+            }
+        }
+    }
+    &__item--top-left &{
+        position: absolute;
+        top: 2em;
+        left: 2em;
+    }
+    &__summary{
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        @media screen and(min-width:$screen-lg-min ) {
+            top: 2em;
+            left: 2em;
+        }
+        .button-simple{
+            margin-top: 0;
+        }
+        .tag-title--level-3{
+            text-align: left;
+        }
+    }
+}
+/*--------------------Double Board--------------------*/
+.double-board{
+    @include margin-v(0);
+    @include mediaFrom(lg){
+        @include margin-v(30,0);
+    }
+    &{
+        @include mediaFrom(md){
+            @include flexbox($fw:wrap, $jc: space-between);
+        }
+    }
+    &__item{
+        position: relative;
+        margin-bottom: 1em;
+        margin: 0;
+        @include mediaFrom(md){
+            width: 49%;
+        }
+        > div{
+            margin-bottom: 0.3em;
+            @media screen and(min-width:$screen-lg-min ) {
+                margin-bottom: 1em;
+            }
+        }
+        .button-simple{
+            font-size: rem(14);
+            font-weight: $font-bold;
+        }
+        &--left{
+            position: relative;
+        }
+    }
+    .double-board__item--top-left {
+        padding-bottom: 5px;
+        @media screen and(min-width:$screen-lg-min ) {
+            padding-bottom: 0px;
+        }
+    }
+    .double-board__bg-item--top-left{
+        picture{
+            @media screen and(min-width:$screen-md-min ) {
+                display: none;
+            }
+        }
+    }
+    &__summary{
+        font-size: em(14);
+        .double-board__item--top-left &{
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            @media screen and(min-width:$screen-lg-min ) {
+                top: 2em;
+                left: 2em;
+            }        }
+        .double-board__item--twin-top-left &{
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            @media screen and(min-width:$screen-lg-min ) {
+                top: 2em;
+                left: 2em;
+            }
+        }
+        strong{
+            display: block;
+            margin-bottom: 0.25em;
+            font-size: em(24);
+        }
+        .big{
+            display: block;
+            font-size: rem(55);
+        }
+        .tag-title--level-3{
+            text-align: left;
+        }
+        .button-simple{
+            margin-top: 0;
+        }
+    }
+}
+/*--------------------Triplets Board--------------------*/
+.triplets-board{
+    &{
+        @include mediaFrom(md){
+            @include flexbox($fw:wrap, $jc: space-between);
+        }
+    }
+    &__item{
+        position: relative;
+        margin-bottom: 0.3em;
+        @media screen and (min-width:$screen-lg-min){
+            margin-bottom: 1em;
+        }
+        @include mediaFrom(md){
+            width: 32.45%;
+        }
+        > div{
+            margin-bottom: 1em;
+        }
+        .button-simple{
+            font-size: rem(12);
+            /*font-weight: $font-bold;*/
+        }
+        .c-font{
+            color: $c-text;
+            @media screen and(min-width:$screen-lg-min ) {
+                color: white;
+            }
+        }
+    }
+    &__summary{
+        font-size: em(14);
+        .triplets-board__item--top-left &{
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            line-height: .7em;
+            @media screen and ($screen-lg-min){
+                top: .8em;
+                left: 2.9em;
+            }
+        }
+        strong{
+            display: block;
+            margin-bottom: 0.25em;
+            font-size: rem(24);
+            line-height: 1.7em;
+        }
+        .big{
+            display: block;
+            font-size: rem(55);
+        }
+        .tag-title--level-3{
+            text-align: left;
+        }
+        .button-simple{
+            margin-top: 0;
+        }
+    }
+}
+/*--------------------Quadruplets Board--------------------*/
+.quadruplets-board{
+    &{
+        @include flexbox($fw:wrap, $jc: space-between);
+    }
+    &__item{
+        width: 49%;
+        position: relative;
+        margin-bottom: 1em;
+        text-align: center;
+        @include mediaFrom(md){
+            width: 20%;
+        }
+        img{
+            width: auto;
+            height: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2em;
+            @include mediaFrom(lg){
+                height: 90px;
+            }
+        }
+        span{
+            display: block;
+            font-size: em(14);
+            font-weight: $font-bold;
+        }
+    }
+}
+.quaternary-board{
+    &{
+        @include flexbox($fw:wrap, $jc: space-between);
+    }
+    &__item{
+        width: 50%;
+        position: relative;
+        margin-bottom: 1em;
+        text-align: center;
+        @include mediaFrom(md){
+            width: 19%;
+        }
+    }
+}
+.quinary-board{
+    &{
+        @include flexbox($fw:wrap, $jc: space-between);
+    }
+    &__item{
+        width: 20%;
+        position: relative;
+        margin-bottom: 1em;
+        text-align: center;
+        @include mediaFrom(md){
+            width: 19%;
+        }
+    }
+}
+/*--------------------Puntos Board--------------------*/
+.puntos-board{
+    position: relative;
+    background-color: $c-primary;
+    @include padding-h(40);
+    @include padding-v(40);
+    @include mediaFrom(lg){
+        background-image: url(#{$image-path}images_puntos-privilegio-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    @include mediaFrom(xl){
+        @include padding-h(88);
+        @include padding-v(88);
+    }
+    @include mediaFrom(xxl){
+        @include padding-h(120);
+    }
+    &__logo{
+        max-width: rem(300);
+        margin-bottom: 1em;
+        @include mediaTo(md){
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include mediaFrom(lg){
+            width: 50%;
+        }
+    }
+    &__list{
+        @include flexbox($fw:wrap);
+        /*margin-bottom: 1em;*/
+        @include mediaFrom(lg){
+            width: 40%;
+            @include vertical-center;
+            right: 0;
+        }
+        @include mediaFrom(xxl){
+            right: 8%;
+        }
+    }
+    &__item{
+        width: 50%;
+        /*margin-bottom: 1em;*/
+        margin: 1em 0;
+        /*@include mediaFrom(lg){
+            margin-bottom: 2em;
+        }*/
+        a{
+            @include flexbox();
+            align-items: center;
+        }
+        svg{
+            margin-right: 1em;
+            width: 1.6em;
+        }
+        span{
+            /*width: 60%;*/
+            font-size: 0.85em;
+            font-weight: 300;
+            @include mediaFrom(md){
+                font-size: 1.3em;
+            }
+        }
+    }
+    &__text{
+        @include mediaTo(md){
+            text-align: center;
+        }
+        p{
+            @include margin-v(1,1,1em);
+            @include font-size(0.875);
+        }
+    }
+}
+/*--------------------Departaments Board--------------------*/
+.departaments-board{
+    &{
+        @include flexbox($fw:wrap, $jc: space-between);
+    }
+    &__wrapper{
+        text-align: center;
+        .button-simple{
+            display: inline-block;
+        }
+        .tag-title--level-2{
+            body.giftlist &{
+                padding-bottom: 1em !important;
+            }
+        }
+    }
+    &__item{
+         width: 32.3%;
+        margin-bottom: 2em;
+        text-align: center;
+        @include mediaFrom(xs){
+            width: 32.3%;
+        }
+        @include mediaFrom(lg){
+            width: 15%;
+        }
+        img{
+            margin-bottom: 2em;
+        }
+        span{
+            font-size: rem(13);
+            body.giftlist &{
+                font-size: rem(16);
+            }
+        }
+    }
+}
+/*--------------------Marcas Slider--------------------*/
+.marcas-slider{
+    &__wraper{
+        text-align: center;
+    }
+    &{
+        margin-bottom: em(30);
+        @include mediaFrom(lg){
+            margin-bottom: em(60);
+        }
+    }
+    &__item{
+        @include flexbox($ai:center);
+    }
+    .slick-list{
+        overflow: hidden;
+        margin: 0 auto;
+        @include mediaTo(md){
+            width: 150%;
+            padding-bottom: 1.5em;
+        }
+    }
+    .slick-arrow{
+        @include mediaTo(md){
+            display: none !important;
+        }
+    }
+    .slick-dots{
+        @include mediaFrom(lg){
+            display: none !important;
+        }
+    }
+}
+/*--------------------Mesa de regalos--------------------*/
+.mesa-de-regalos-board{
+    &{
+        @include mediaTo(md){
+            background-color: $c-light-gray;
+        }
+        @include mediaFrom(lg){
+            position: relative;
+        }
+    }
+    &__imgtitle{
+        width: 50%;
+    }
+    &__info{
+        @include mediaTo(md){
+            @include padding-h(30);
+            @include padding-v(30);
+        }
+        @media screen and(min-width:$screen-lg-min ) {
+            top: 10%;
+            width: 65%;
+            position: absolute;
+            left: 32%;
+        }
+        @media screen and(min-width:$screen-xl-min ) {
+            top: 10%;
+            width: 60%;
+            position: absolute;
+            left: 35%;
+        }
+    }
+    &__anchors{
+        @include flexbox();
+        .button-simple{
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-right: 1em;
+        }
+    }
+    &__form{
+        @include flexbox($fw:wrap, $jc: space-between);
+        margin-bottom: 0em;
+        @include mediaFrom(lg){
+            padding-right: 1em;
+        }
+        .control-wrapper{
+            @media screen and(min-width:$screen-lg-min){
+                width: 33%;
+                &:nth-child(3){
+                    width: 30%;
+                }
+            }
+            @media screen and(min-width:$screen-xl-min){
+                width: 35%;
+                &:nth-child(3){
+                    width: 25%;
+                }
+            }
+            &--send{
+                margin-top: 0em;
+                @media screen and(min-width:$screen-lg-min ) {
+                    margin-top: 0em;
+                }
+            }
+        }
+    }
+    &__logo{
+        width: 160px;
+        margin: 1em auto 0;
+        @include mediaFrom(lg){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    .tag-title--level-1, .tag-title--level-2{
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        @include mediaFrom(lg){
+            padding-bottom: 0.65em;
+        }
+    }
+}
+
+.movil { display: none; }
+/* .web { } */
+
+@media screen and (max-width: 768px) {
+
+	.puntos-board {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.puntos-board__logo {
+    margin-bottom: 0.1em;
+}
+
+.puntos-board__item {
+    margin: 0.6em 0;
+}
+
+.puntos-board__text p {
+    margin-top: 0.1em;
+}
+
+.movil { display: inline-block; }
+/* .web { } */
+
+
+.triplets-board__item--top-left .triplets-board__summary {
+    line-height: .1em;
+}
+.triplets-board__summary strong {
+    margin-bottom: 0.1em;
+    font-size: 1rem;
+    line-height: 1.8em;
+}
+
+.triplets-board__summary .big {
+    font-size: 3rem;
+}
+
+}
+
+
+/***    New boards  ***/
+.title-central {
+    width: 100%;
+    font-family: $font-title;
+    font-size: 2rem;
+    text-align: center;
+    @include mediaFrom(lg) {
+        font-size: 3rem;
+    }
+}
+.one-board {
+    &-container {
+        position: relative;
+        width: 100%;
+        @include margin-v($top: 0, $bottom: 3, $unit: 1rem);
+        &.bg {
+            &-one {
+                height: 25rem;
+                background-color: $c-dim-gray;
+                background-image: url($image-path+'bg-one.jpg');
+                background-position: center;
+                background-size: cover;
+            }
+        }
+        .re-central {
+            height: 100%;
+        }
+        .board {
+            &-item {
+                width: 100%;
+                height: 100%;
+                @include padding-v(20);
+                &.right-order {
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    float: right;
+                    @include mediaFrom(lg) {
+                        width: 40%;
+                        align-items: center;
+                    }
+                }
+            }
+            &-title {
+                font-family: $font-title;
+                font-size: 2rem;
+                @include mediaFrom(lg) {
+                    font-size: 3rem;
+                }
+            }
+            &-copy {
+                font-family: $font-copy;
+                font-size: 1rem;
+                font-weight: $font-medium;
+                text-align: justify;
+                @include mediaFrom(lg) {
+                    font-size: 1.4rem;
+                }
+                &.font-bold {
+                    font-size: 2rem;
+                    @include mediaTo(md) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.steps-board {
+    &-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include margin-v($top: 0, $bottom: 3, $unit: 1rem);
+        .step {
+            &-item {
+                width: 100%;
+                @include padding-h(10);
+                @include mediaFrom(lg) {
+                    width: 25%;
+                }
+            }
+            &-icon {
+                width: 100px;
+                margin: auto;
+            }
+            &-title {
+                font-family: $font-title;
+                font-size: 1.4rem;
+                text-align: center;
+                @include mediaFrom(lg) {
+                    font-size: 1.8rem;
+                }
+            }
+            &-copy {
+                font-family: $font-copy;
+                font-size: 0.9rem;
+                font-weight: $font-medium;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.lineal-board {
+    &-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        @include margin-v($top: 0, $bottom: 3, $unit: 1rem);
+        &.padding-left {
+            @include mediaFrom(lg) {
+                padding-left: 3rem;
+            }
+        }
+        .board {
+            &-item {
+                width: 100%;
+                padding-right: 0rem;
+                @include mediaFrom(lg) {
+                    width: 25%;
+                    padding-right: 0.5rem;
+                }
+                .extra {
+                    &-content {
+                        height: 100%;
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: flex-end;
+                        @include mediaFrom(lg) {
+                            @include padding-h($left: 3, $right: 0, $unit: 1rem);
+                        }
+                    }
+                    &-copy {
+                        font-size: 1.4rem;
+                        font-weight: $font-semibold;
+                        @include mediaFrom(lg) {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            &-title {
+                font-family: $font-title;
+                font-size: 3rem;
+            }
+            &-copy {
+                font-family: $font-copy;
+                font-size: 1rem;
+                font-weight: $font-regular;
+                text-align: justify;
+                @include mediaFrom(lg) {
+                    font-size: 1.4rem;
+                }
+                &.font-bold {
+                    font-size: 1.2rem;
+                    font-weight: $font-semibold;
+                    @include mediaFrom(lg) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pop {
+    &-copy {
+        font-family: $font-copy;
+        font-size: 1.4rem;
+        font-weight: $font-light;
+    }
+    &-message {
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: space-between;
+        align-items: center;
+        @include padding-h($left: 30, $right: 10);
+        background-color: rgb(190, 190, 190);
+        color: $c-exclusive-product;
+        &.warning {
+            .pop-icon {
+                width: 65px;
+                height: 55px;
+                background-image: url($image-path + 'warning-icon.png');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        @include mediaFrom(lg) {
+            height: 5rem;
+            flex-flow: row nowrap;
+        }
+    }
+    &-close-button {
+        float: right;
+        padding-top: 10px;
+        align-self: flex-start;
+        order: 0;
+        .svg-icon-close {
+            width: 1rem;
+            height: 1rem;
+        }
+        @include mediaFrom(lg) {
+            order: 3;
+        }
+    }
+}
+.spiff-item p a, .maxispiff-item p a{
+    display: block;
+}
+.banner-home{
+    padding-bottom: 1px;
+    &_wrapper{
+        @media screen and(min-width:$screen-lg-min){
+            position: absolute;
+            transform: translate(0,35%);
+            strong{
+                padding-bottom: 15px;
+                display: block;
+            }
+        }
+    }
+}
+
+.board-ferreteria{
+    text-align: center;
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+        flex-wrap: wrap;
+    }
+    &_item{
+        width: 32%;
+        @media screen and(min-width:$screen-lg-min){
+            width: 17%;
+        }
+    }
+}

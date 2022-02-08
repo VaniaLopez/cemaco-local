@@ -1,0 +1,336 @@
+/*--------------------Debug--------------------*/
+%debug{
+    @if $is-debugging{
+        outline: 1px solid blue;
+    }
+}
+
+body.no-overflow{
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+/*--------------------Boxes--------------------*/
+// Box reset
+.box-reset{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+        > *{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+// Box table
+.box-table{
+    @include box-table;
+}
+// Children alineados verticalmente
+.child-inline{
+    > *{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+/*--------------------Hide Elements--------------------*/
+.hide{
+    display: none;
+}
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+@each $breakpoint, $size in $breakpoints {
+    @media screen and (min-width: map-get($size,min)) and (max-width: map-get($size,max)){
+        .hidden-#{$breakpoint} {
+            display: none !important;
+        }
+    }
+    @media screen and (min-width: map-get($size,min)){
+        .hidden-#{$breakpoint}-up{
+            display: none !important;
+        }
+    }
+    @media screen and (max-width: map-get($size,max)){
+        .hidden-#{$breakpoint}-down{
+            display: none !important;
+        }
+    }
+}
+
+/*--------------------Padding & Margin Classes--------------------*/
+// For each side
+$paddings-margins: (
+    padding: 	padding,
+    padding-t: 	padding-top,
+    padding-b: 	padding-bottom,
+    padding-l: 	padding-left,
+    padding-r: 	padding-right,
+    margin: 	margin,
+    margin-t: 	margin-top,
+    margin-b: 	margin-bottom,
+    margin-l: 	margin-left,
+    margin-r: 	margin-right
+);
+// @each $padding-margin,$padding-margin-side in $paddings-margins {
+// 	@for $i from 1 through 20 {
+// 		.#{$padding-margin}-#{$i*5} {
+// 			#{$padding-margin-side}: $i*5px;
+// 		}
+// 	}
+// }
+// For both sides
+$paddings-margins-pair: (
+    padding-v:			(side-1: padding-top, side-2: padding-bottom),
+    padding-h:			(side-1: padding-left, side-2: padding-right),
+    margin-v:			(side-1: margin-top, side-2: margin-bottom),
+    margin-h:			(side-1: margin-left, side-2: margin-right)
+);
+// @each $padding-margin,$padding-margin-side in $paddings-margins-pair {
+// 	@for $i from 1 through 20 {
+// 		.#{$padding-margin}-#{$i*5} {
+// 			#{map-get($padding-margin-side,side-1)}: $i*5px;
+// 			#{map-get($padding-margin-side,side-2)}: $i*5px;
+// 		}
+// 	}
+// }
+
+/*--------------------Center--------------------*/
+.absolute-center{
+    @include absolute-center;
+}
+.vertical-center{
+    @include vertical-center;
+}
+.horizontal-center{
+    @include horizontal-center;
+}
+.horizontal-center-auto{
+    @include horizontal-center-auto;
+}
+
+/*--------------------Generic Classes--------------------*/
+*.float-left{
+    float: left;
+}
+*.float-right{
+    float: right;
+}
+*.clear-both{
+    clear: both;
+}
+*.clearfix{
+    content: '';
+    display: block;
+    clear: both;
+}
+*.num-font{
+    font-family: $font-number;
+    font-weight: $font-light;
+    white-space: nowrap;
+}
+*.llamar{
+    cursor: default;
+    &:hover{
+        text-decoration: none;
+        color: none;
+    }
+}
+.content-stand{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px dotted darken($c-light-gray,10);
+    margin-bottom: 10px;
+}
+span.mensaje{
+    @include font-size(1.5);
+    color: darken($c-text,10);
+}
+
+/*--------------------Typography--------------------*/
+.font-title{
+    font-family: $font-title;
+}
+.font-body{
+    font-family: $font-body;
+}
+.font-number{
+    font-family: $font-number;
+}
+// Font size in pt
+@for $i from 1 through 50{
+    .font-#{$i*2} {
+        @include font-size($i*2);
+    }
+}
+// Font weight
+@each $label, $weight in $font-weight-list {
+    .font-#{$label} {
+        font-weight: $weight;
+    }
+}
+// Colores
+@each $color,$value in $color-palette-map {
+    .font-#{$color} {
+        color: map-get($value,color) !important;
+    }
+}
+// Transformation
+.font-lowercase{
+    text-transform: lowercase;
+}
+.font-uppercase{
+    text-transform: uppercase;
+}
+.font-capitalize{
+    text-transform: capitalize;
+}
+// Alignment
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
+.text-nowrap{
+    white-space: nowrap;
+}
+
+/*--------------------Unordered Lists--------------------*/
+ul.unordered-list{
+    padding-left: 1.5em;
+    list-style-type: disc;
+}
+
+/*--------------------Ordered Lists--------------------*/
+ol.ordered-list{
+    padding-left: 30px;
+    list-style-type: decimal-leading-zero;
+}
+
+/*--------------------Images--------------------*/
+.img-center{
+    max-width: 100%;
+    display: block;
+    @include horizontal-center-auto;
+}
+.img-cien,
+.img-100{
+    width: 100%;
+    display: block;
+}
+
+/*--------------------Backgrounds--------------------*/
+@each $color,$value in $color-palette-map {
+    .bg-#{$color} {
+        background-color: map-get($value,color);
+    }
+    @for $i from 1 through 10 {
+        .bg-#{$color}-opacity-#{$i*10} {
+            background-color: rgba(map-get($value, color), $i*0.1);
+        }
+    }
+}
+
+/*--------------------General accordion--------------------*/
+.accordion{
+    &__trigger{
+        cursor: pointer;
+    }
+    &__content{
+        display: none;
+    }
+}
+
+/*--------------------Overlays--------------------*/
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-overlay;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(black,0.5);
+    transition: all 0.3s;
+    &--account{
+        z-index: $z-header + 20;
+    }
+    &--sign-up{
+        //
+    }
+    &--filters{
+        @include mediaFrom(lg){
+            display: none;
+        }
+    }
+    &--atc{
+        visibility: visible;
+        opacity: 1;
+    }
+    &--nav{
+        z-index: 1;
+        top: $header-height--bs + 40;
+        @include mediaFrom(md){
+            top: $header-height--md + 40;
+        }
+        @include mediaFrom(lg){
+            top: $header-height--lg;
+        }
+        body.page-scroll-on &{
+            @include mediaFrom(lg){
+                top: $header-height--lg - 25;
+            }
+        }
+    }
+    &.is-active{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/*--------------------Close Modal--------------------*/
+.close-modal{
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    font-size: 1em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+    &--sign-up{
+        display: block;
+        @include font-size(3);
+        font-weight: $font-light;
+        line-height: 0.5;
+        color: $c-primary;
+        background-color: transparent;
+    }
+}
+
+/*--------------------Loading--------------------*/
+.loading{
+    &__image-wrapper{
+        display: none;
+        margin-top: 50px;
+    }
+}

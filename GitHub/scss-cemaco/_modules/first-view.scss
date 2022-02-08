@@ -1,0 +1,6 @@
+.product-list__aside{
+	opacity: 0;
+	&.is-loaded{
+		opacity: 1;
+	}
+}

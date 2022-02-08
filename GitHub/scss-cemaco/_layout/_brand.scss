@@ -1,0 +1,78 @@
+/*--------------------General Layout - Brand--------------------*/
+$brand-width: 79px;
+$brand-height: 18px;
+.site-brand{
+    position: absolute;
+    top: ($top-bar-height--bs + $middle-bar-height--bs / 2);
+    transform: translateY(-50%);
+    z-index: $z-brand;
+    background-color: transparent;
+    @include re-central-left-until-md;
+    @include re-central-left-from-lg;
+    body.page-scroll-on &{
+        @include mediaTo(md){
+            width: 24px;
+            height: 27px;
+            overflow: hidden;
+            top: ($middle-bar-height--bs / 2);
+        }
+    }
+
+    @include mediaFrom(md){
+        top: ($top-bar-height--md + $middle-bar-height--md / 2);
+    }
+    @include mediaFrom(lg){
+        top: ($top-bar-height--lg + $middle-bar-height--lg / 2);
+        transform: translate(15px, -50%);
+    }
+    img{
+        &.landing-logo{
+            body.landing &{
+                width: 118px;
+                @include mediaFrom(lg){
+                    width: 158px;
+                }
+            }
+            body.page-scroll-on &{
+                @include mediaTo(md){
+                    display: none;
+                }
+            }
+        }
+        &.landing-logo-scroll{
+            body.landing &{
+                display: none;
+            }
+            body.page-scroll-on &{
+                @include mediaTo(md){
+                    display: block;
+                }
+            }
+        }
+    }
+    &__svg{
+        width: em($brand-width * 1.5);
+        height: em($brand-height * 1.5);
+        display: block;
+        opacity: 1;
+        @include mediaFrom(lg){
+            width: em($brand-width * 2);
+            height: em($brand-height * 2);
+        }
+        path, polygon{
+            transition: opacity $animate-time;
+            @include mediaTo(md){
+                body.page-scroll-on &{
+                    display: none;
+                }
+            }
+            &.isotype{
+                body.page-scroll-on &{
+                    @include mediaTo(md){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1008 @@
+/* =========================================================================================================== */
+/* ===========================================TIENDAS CEMACO================================================== */
+/* =========================================================================================================== */
+
+/* Id de portada para escritorio, en los media query se pasa none cuando se requiera (las imagenes de desk y mobile son diferentes) */
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.desktop-show {
+  display: block;
+}
+
+.mobile-show {
+  display: none;
+}
+
+.banner img {
+  width: auto !important;
+}
+
+figcaption {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
+#portada-desk {
+  display: block;
+  position: relative;
+}
+
+#logo-instalaciones {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+}
+
+#portada-mobile {
+  display: none;
+}
+
+#compra-desk {
+  display: block;
+}
+
+#compra-mobile {
+  display: none;
+}
+
+.cotizar {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.titulos-tiendas {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.retirar-tienda {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  width: 85px;
+}
+
+.vl {
+  border-left: 6px solid #ffffff;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.tiendas {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto;
+  text-align: center;
+  max-width: 100%;
+  margin: 2px 3px 2px 2px;
+  align-items: stretch;
+}
+
+.portada {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.image-tiendas {
+  max-width: 10% !important;
+  height: auto !important;
+  display: inline !important;
+}
+
+/* Contenedor de tienda individual */
+.tienda {
+  background: #f6f6f6;
+  padding: 10px;
+  height: 162px;
+  width: 426px;
+  text-align: left;
+  margin: 5px;
+}
+
+.direccion-tienda {
+  font-weight: bold;
+  height: 63px;
+}
+
+.horario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+  height: 44px;
+}
+
+.titulo {
+  flex-wrap: wrap;
+  font-size: 20px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.info {
+  margin-right: 20px;
+  flex-wrap: wrap;
+  display: block;
+  margin-top: 15px;
+  margin-left: 3%;
+}
+
+.info p {
+  width: 100%;
+  display: block;
+  font-size: 14px;
+}
+
+/* Contenedor de la imagen y del texto, queda position relative y texto debe de ser absolute */
+.banner {
+  display: flex;
+  justify-content: left !important;
+  /* align-items: center; */
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  /* Ocupar el 100% del ancho */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 2%;
+  margin-top: 5px;
+}
+
+.banner-mobile {
+  display: none;
+}
+
+.iconos {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bg-tienda {
+  background-color: #f6f6f6;
+  text-align: left;
+  padding: 10px 16px 10px 11px;
+  margin-bottom: 30px;
+}
+
+/* Clases de banner de contacto */
+.banner-contacto {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.txt-contacto {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  font-size: 30px;
+  color: black;
+  text-align: justify;
+  font-weight: bold;
+  margin-left: 5px;
+  width: 30%;
+}
+
+.btn-contacto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: absolute;
+  background-color: #94d529;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+.contactar-mobile {
+  display: none;
+  margin-top: 120px;
+}
+
+/* Clases de banner compra en linea */
+.banner-compra {
+  display: flex;
+  flex-direction: row;
+  background-color: #101e8e;
+  color: white;
+  height: 288px;
+  margin: 20px 0px;
+}
+
+.compra {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.auto-servicio {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.icon-autoservicio {
+  width: 507px;
+  margin: 10px;
+}
+
+.txt-compra {
+  color: white;
+  font-size: 34px;
+}
+
+.btn-auto {
+  background-color: #94d529;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+/* Texto del banner principal, se cambio a texto y no va sobre la imagen position absolute */
+.txt-banner {
+  position: absolute;
+  top: 58%;
+  font-size: 21px;
+  color: black;
+  text-align: justify;
+}
+
+.txt-banner button {
+  font-size: 14px !important;
+  margin-top: 35px !important;
+}
+
+.dudas {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.txt-dudas {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 1vw;
+  color: #000000;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.titulos-tiendas h1 {
+  text-transform: capitalize !important;
+  margin-right: 10px;
+  font-size: 30px !important;
+  font-weight: bold;
+  font-family: "helveticaneuemedium", Arial;
+  color: black !important;
+}
+
+.maps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#waze {
+  height: 25px important;
+}
+
+#maps {
+  height: 10px important;
+  margin-top: 1px;
+}
+
+.fullspiff {
+  display: flex;
+  justify-content: center !important;
+}
+
+.btn-nuevo {
+  display: inline;
+  float: right;
+  border: 1px solid #27a85d;
+  border-radius: 20px;
+  padding: 3px 26px 7px;
+  text-align: center;
+}
+
+.btn-nuevo p {
+  display: inline;
+  color: #27a85d;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#cayala {
+  padding-bottom: 5%;
+}
+
+/* -------------------------------------Inicio de media---------------------------------------------- */
+
+@media only screen and (max-width: 340px) {
+  .desktop-show {
+    display: none !important;
+  }
+
+  .mobile-show {
+    display: block !important;
+  }
+
+  figcaption {
+    font-size: 22px !important;
+    margin-top: 5px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .banner {
+    display: none !important;
+  }
+
+  .banner-mobile {
+    display: block !important;
+  }
+
+  .banner-mobile #logo-instalaciones {
+    width: 75% !important;
+    display: block !important;
+    margin: auto !important;
+    position: relative;
+  }
+
+  .titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+
+  .image-tiendas {
+    max-width: 40% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  #portada-desk {
+    display: none !important;
+  }
+
+  #portada-mobile {
+    display: block;
+  }
+
+  #txt-direccion {
+    height: 85px;
+  }
+
+  #compra-mobile {
+    display: block;
+  }
+
+  #compra-desk {
+    display: none;
+  }
+
+  .banner-mobile .txt-banner {
+    font-size: 14px !important;
+    position: relative !important;
+    margin-top: 25px !important;
+    text-align: center !important;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-left: 2vw;
+  }
+
+  .direccion {
+    font-size: 5vw;
+    text-align: justify;
+  }
+
+  .horario {
+    font-size: 11px;
+  }
+
+  .tienda {
+    font-size: 5vw;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 8px;
+    align-content: center;
+    width: 100%;
+  }
+
+  .iconos {
+    align-items: baseline;
+  }
+
+  .gmaps {
+    width: 20px !important;
+  }
+
+  .contactar {
+    display: none;
+    color: white;
+    position: absolute;
+    font-size: 16px;
+    background: #94d500;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    position: absolute;
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .btn-auto {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .txt-contacto {
+    font-size: 16px;
+    top: 20%;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 63%;
+  }
+
+  .btn-contacto {
+    font-size: 12px;
+    padding: 5px 10px;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 63%;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+  }
+
+  .contactar-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .banner-compra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 288px;
+    margin: 50px 0px;
+    padding-bottom: 300px;
+  }
+
+  .icon-autoservicio {
+    display: block;
+    height: 80px;
+    width: auto;
+  }
+
+  .txt-compra {
+    font-size: 20px !important;
+  }
+
+  .auto-servicio {
+    width: 90%;
+  }
+
+  .compra {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .retirar-tienda {
+    width: 30%;
+  }
+
+  .info p {
+    width: 100%;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+}
+
+@media only screen and (min-width: 341px) and (max-width: 550px) {
+  .desktop-show {
+    display: none !important;
+  }
+
+  .mobile-show {
+    display: block !important;
+  }
+
+  figcaption {
+    font-size: 22px !important;
+    margin-top: 5px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .banner {
+    display: none !important;
+  }
+
+  .banner-mobile #logo-instalaciones {
+    width: 75% !important;
+    display: block !important;
+    margin: auto !important;
+    position: relative;
+  }
+
+  .banner-mobile {
+    display: block !important;
+  }
+
+  hr {
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+  }
+
+  .image-tiendas {
+    max-width: 40% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  #portada-desk {
+    display: none;
+  }
+
+  #portada-mobile {
+    display: block;
+  }
+
+  #compra-mobile {
+    display: block;
+  }
+
+  #compra-desk {
+    display: none;
+  }
+
+  .info {
+    margin-left: 2vw;
+  }
+
+  .titulo {
+    margin-left: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 140%;
+  }
+
+  .retirar-tienda {
+    float: right;
+    width: 33%;
+  }
+
+  .tienda {
+    margin-bottom: 8px;
+    align-content: center;
+    width: 100%;
+    height: 190px;
+  }
+
+  .banner-mobile .txt-banner {
+    font-size: 14px !important;
+    position: relative !important;
+    margin-top: 25px !important;
+    text-align: center !important;
+  }
+
+  .txt-dudas {
+    font-size: 12px;
+  }
+
+  .contactar {
+    display: none;
+    font-size: 2vw;
+    padding: 2px;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+
+  .contactar {
+    display: none;
+    color: white;
+    position: absolute;
+    font-size: 16px;
+    background: #94d500;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    position: absolute;
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .btn-auto {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .txt-contacto {
+    font-size: 20px;
+    top: 180%;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    margin-top: -95%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 62%;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .btn-contacto {
+    font-size: 15px;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 80px;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+  }
+
+  .contactar-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .banner-compra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    margin: 20px 0px;
+    padding-bottom: 50px;
+  }
+
+  .icon-autoservicio {
+    display: block;
+    height: 150px;
+    width: auto;
+  }
+
+  .txt-compra {
+    font-size: 20px !important;
+  }
+
+  .auto-servicio {
+    width: 90%;
+  }
+
+  .compra {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .info p {
+    width: 100%;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 1000px) {
+  .tiendas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 195px;
+  }
+
+  .tienda {
+    justify-content: center;
+    width: 320px;
+    margin-bottom: 10px;
+  }
+
+  .txt-banner {
+    font-size: 13px;
+    top: 50% !important;
+  }
+
+  .txt-banner button {
+    margin-top: 10px !important;
+  }
+
+  #portada-desk {
+    width: 100% !important;
+  }
+
+  #logo-instalaciones {
+    width: 40% !important;
+    top: 5%;
+  }
+
+  .retirar-tienda {
+    width: 50px;
+  }
+
+  .titulo {
+    font-size: 75%;
+    display: inline;
+  }
+
+  .titulo-encabezado {
+    padding: 5% 1%;
+  }
+
+  .image-tiendas {
+    max-width: 20% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  .contactar {
+    display: none;
+    color: white;
+    position: absolute;
+    font-size: 16px;
+    background: #94d500;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    position: absolute;
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .btn-auto {
+    font-size: 12px;
+  }
+
+  .txt-contacto {
+    font-size: 25px;
+    top: 15%;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .btn-contacto {
+    font-size: 20px;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 100px;
+  }
+
+  .titulos-tiendas {
+    font-size: 25px;
+  }
+
+  .contactar-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .banner-compra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 288px;
+    margin: 40px 0px;
+  }
+
+  .icon-autoservicio {
+    display: block;
+    height: 150px;
+    width: auto;
+  }
+
+  .txt-compra {
+    font-size: 25px !important;
+  }
+
+  .auto-servicio {
+    width: 90%;
+  }
+
+  .compra {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  #compra-mobile {
+    display: block;
+  }
+
+  #compra-desk {
+    display: none;
+  }
+
+  .info p {
+    width: 100%;
+    margin-bottom: 20%;
+    font-size: 80%;
+  }
+
+  .btn-nuevo {
+    padding: 1px 10px 3px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1275px) {
+  #portada-desk {
+    width: 100% !important;
+  }
+
+  .txt-banner {
+    font-size: 16px;
+    top: 50% !important;
+  }
+
+  #logo-instalaciones {
+    width: 35% !important;
+    top: 5%;
+  }
+
+  .tienda {
+    width: 250px;
+    height: 162px;
+    margin-top: 20px;
+  }
+
+  .image-tiendas {
+    max-width: 17% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  .direccion-tienda {
+    height: 50px !important;
+    font-size: 12px;
+  }
+
+  .horario {
+    height: 24px !important;
+    font-size: 12px;
+  }
+
+  .retirar-tienda {
+    width: 32%;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  #height-san-cristobal {
+    height: 175px;
+  }
+
+  #express {
+    height: 182px !important;
+    margin-top: 20px;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  .tienda {
+    width: 400px;
+    height: 180px !important;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .image-tiendas {
+    max-width: 13% !important;
+    height: auto !important;
+    display: inline !important;
+  }
+
+  .direccion-tienda {
+    height: 50px !important;
+    font-size: 12px;
+  }
+
+  .horario {
+    height: 24px !important;
+    font-size: 12px;
+  }
+
+  .retirar-tienda {
+    width: 32%;
+  }
+
+  .titulo {
+    font-size: 20px;
+    margin-left: 3%;
+  }
+
+  #height-san-cristobal {
+    height: 175px;
+  }
+
+  .titulo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .tienda {
+    width: 426px;
+    height: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

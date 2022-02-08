@@ -1,0 +1,108 @@
+/*--------------------Button Wrapper--------------------*/
+.button-wrapper{
+    display: block;
+    margin-top: $re-gutter;
+}
+
+/*--------------------General Settings to Buttons--------------------*/
+.button-lineal,
+.button-flat{
+    cursor: pointer;
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
+    &.short{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    &.large{
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    &.small{
+        font-size: 0.8rem;
+    }
+    &.big{
+        font-size: 1.5rem;
+    }
+    // To icons
+    svg{
+        margin-right: 0.5em;
+    }
+}
+
+/*--------------------Button Flat--------------------*/
+.button-flat{
+    @include button-flat($isOnMap: true);
+    @each $color,$value in $color-palette-map {
+        &.#{$color} {
+            color: map-get($value,font);
+            background-color: map-get($value,color);
+        }
+        &.#{$color}:hover {
+            background-color: lighten(map-get($value,color),5);
+        }
+    }
+    &.dark{
+        background: $c-dark-gray;
+        border: 1px solid $c-dark-gray;
+        color: white;
+        &:hover,
+        &:focus{
+            border: 1px solid $c-light-gray;
+            background: $c-light-gray;
+            color: $c-dark-gray;
+        }
+        &:active{
+            background: white;
+        }
+    }
+    &.bebe-primary, &.jugueton-primary{
+        font-weight: $font-bold;
+    }
+}
+/*--------------------Button Lineal--------------------*/
+.button-lineal{
+    @include button-lineal($isOnMap: true);
+    @each $color,$value in $color-palette-map {
+        &.#{$color} {
+            border-color: map-get($value,color);
+            color: map-get($value,color);
+            background: transparent;
+        }
+        &.#{$color}:hover{
+            color: map-get($value,font);
+            background: map-get($value,color);
+        }
+    }
+    &.gray{
+        color: black;
+    }
+}
+/*--------------------Button Simple--------------------*/
+.button-simple{
+    display: block;
+    margin-top: 1em;
+    font-size: em(12);
+    font-weight: $font-regular;
+    vertical-align: middle;
+    svg{
+        @include sizeProportion($dW: 0.9);
+        stroke-width: 5;
+        margin-left: 0.3em;
+        vertical-align: middle;
+    }
+    @each $color,$value in $color-palette-map {
+        &.#{$color} {
+            svg{
+                color: map-get($value,color);
+            }
+        }
+        &.#{$color}:hover {
+            svg{
+                color: darken(map-get($value,color),10);
+            }
+        }
+    }
+}

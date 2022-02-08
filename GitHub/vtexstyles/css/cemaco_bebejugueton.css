@@ -1,0 +1,60 @@
+/*Banner top*/
+.landing--bebejugueton .mainimage-bb {
+  background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/bebe/home/24feb/24feb_sliderverano.jpg);
+  min-height: 378px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+}
+
+/****************** Spiff de 3 banners Entrega a toda Guatemala, Cuidamos tu salud y compra en linea ****************************************/
+.bannermedidas {
+  padding: 0 0 10px;
+  margin: 40px 0 0;
+}
+.bannermedidas img {
+  width: 100%;
+}
+.bannermedidas h4 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0 0 9px;
+}
+.bannermedidas content {
+  font-size: 12px;
+  padding: 6px 26px 0;
+  display: block;
+}
+.bannermedidas content a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .landing--bebejugueton .mainimage-bb {
+    background-image: url(https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/bebe/home/24feb/24feb_slidervernomobil.jpg);
+    min-height: 363px;
+    background-size: cover;
+  }
+}
+@media (max-width: 480px) {
+  /****************** Spiff de 3 banners Entrega a toda Guatemala, Cuidamos tu salud y compra en linea ****************************************/
+  .bannermedidas {
+    padding: 0;
+  }
+  .bannermedidas .grid.sept3 .grid-item {
+    margin-bottom: 0;
+  }
+  .bannermedidas h4 {
+    font-size: 27px;
+  }
+  .landing--bebejugueton .mainimage-bb .button-flat.secondary {
+    margin: 277px 0 0 0;
+  }
+}

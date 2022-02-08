@@ -1,0 +1,186 @@
+<h1 class="tag-title--account">Puntos privilegio</h1>
+<div class="text-center" id="priv__loading"><img src="/arquivos/loading.gif?v=20200529-1211"></div>
+<div class="priv__state" id="priv__init">
+	<div class="row">
+		<div class="col-lg-6">
+			<h2 class="priv__state-title-blue">Crea tu tarjeta privilegio para acumular puntos y obtener muchos beneficios.</h2>
+			<a href="#" class="button-flat secondary" id="priv__state-create">Crea</a>
+		</div>
+		<div class="col-lg-6">
+			<h2 class="priv__state-title-blue">Enlaza tu tarjeta para acumular puntos en tus compras en línea.</h2>
+			<a href="#" class="button-flat secondary" id="priv__state-link">Enlaza</a>
+		</div>
+	</div>
+</div>
+<div class="priv__state" id="priv__create">
+	<a href="#" class="priv__state-back"><svg class="svg-icon"><use href="#svg-icon-chevron-left"></use></svg> Regresar</a>
+	<h3 class="priv__state-subtitle-gray">¡Aún no tienes Tarjeta Privilegio!</h3>
+	<p class="priv__state-desc">Crea tu tarjeta privilegio para acumular puntos y obtener muchos beneficios.</p>
+	<form id="form-create-priv">
+		<h2 class="priv__state-subtitle-black">Datos de la Tarjeta Privilegio</h2>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<input type="text" placeholder="Nombre(s)" id="name" name="name">
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<input type="text" placeholder="Apellido(s)" id="lastname" name="lastname">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<select name="civil" id="civil">
+						<option value="">Estado civil</option>
+						<option value="S">Soltero/a</option>
+						<option value="C">Casado/a</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<input type="text" placeholder="Fecha de nacimiento DD/MM/AAAA" id="birthdate" name="birthdate">
+					<input type="hidden" id="birthdate-alt">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<select name="gender" id="gender">
+						<option value="">Género</option>
+						<option value="F">Femenino</option>
+						<option value="M">Masculino</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<input type="text" placeholder="Número de teléfono" id="phone" name="phone">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<input type="text" placeholder="Correo electrónico" id="email" name="email">
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper">
+					<input type="text" placeholder="Nombre en tarjeta" id="nameCard" name="nameCard">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+            <div class="col-lg-6">
+                <div class="priv__state-input--wrapper">
+                    <input type="text" placeholder="Dirección" id="address" name="address">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="priv__identity--wrapper">
+                    <select name="TipoID" id="TipoID">
+                        <option value="2">DPI</option>
+                        <option value="3">Pasaporte</option>
+                    </select>
+                    <input type="text" name="Identificacion" id="Identificacion" placeholder="Número de identificación">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="priv__state-input--wrapper">
+                    <select name="depto" id="depto">
+                        <option value="">Selecciona tu departamento</option>
+                        <option value="501">ALTA VERAPAZ</option>
+                        <option value="500">BAJA VERAPAZ</option>
+                        <option value="489">CHIMALTENANGO</option>
+                        <option value="505">CHIQUIMULA</option>
+                        <option value="487">EL PROGRESO</option>
+                        <option value="499">EL QUICHÉ</option>
+                        <option value="490">ESCUINTLA</option>
+                        <option value="486">GUATEMALA</option>
+                        <option value="498">HUEHUETENANGO</option>
+                        <option value="503">IZABAL</option>
+                        <option value="506">JALAPA</option>
+                        <option value="507">JUTIAPA</option>
+                        <option value="502">PETÉN</option>
+                        <option value="494">QUETZALTENANGO</option>
+                        <option value="496">RETALHULEU</option>
+                        <option value="488">SACATEPEQUEZ</option>
+                        <option value="497">SAN MARCOS</option>
+                        <option value="491">SANTA ROSA</option>
+                        <option value="492">SOLOLÁ</option>
+                        <option value="495">SUCHITEPEQUEZ</option>
+                        <option value="493">TOTONICAPÁN</option>
+                        <option value="504">ZACAPA</option>
+                    </select>
+                    <input type="hidden" id="depto-input">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="priv__state-input--wrapper">
+                    <input type="text" name="NIT" id="NIT" placeholder="NIT (Número de Identificación Tributaría)">
+                </div>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="priv__state-input--wrapper" id="municipality-container">
+					<select name="municipality" id="municipality">
+						<option value="">Selecciona el municipio</option>
+					</select>
+					<input type="hidden" id="municipality-input">
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="priv__zone-input--wrapper" id="zone-container">
+					<select id="zone" title="Zona">
+	                    <option value="">Elige una zona</option>
+	                </select>
+	                <input type="hidden" id="zone-input">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-6">
+				<div class="priv__state-input--wrapper text-right">
+					<button class="button-flat secondary">Crear</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="priv__state" id="priv__link">
+	<div class="priv__state-link--wrapper">
+		<a href="#" class="priv__state-back"><svg class="svg-icon"><use href="#svg-icon-chevron-left"></use></svg> Regresar</a>
+		<h2 class="priv__state-subtitle-black">Enlaza tu tarjeta</h2>
+		<div class="row">
+			<div class="col-lg-5">
+				<input placeholder="Número de tarjeta privilegio" type="text" id="cardNumber" name="cardNumber">
+			</div>
+			<div class="col-lg-5">
+				<input placeholder="Fecha de nacimiento" type="text" id="cardBirthday" name="cardBirthday">
+				<input type="hidden" id="cardBirthday-alt">
+			</div>
+			<div class="col-lg-2 text-right">
+				<a href="#" id="priv__state-btn-link" class="button-flat secondary">Enlaza</a>
+			</div>
+		</div>
+	</div>
+	<div class="priv__state-banner">
+		<a href="/privilegio"><img src="/arquivos/images-privilegio-banner-enlazar.png" alt="Puntos Privilegio"></a>
+	</div>
+</div>
+<div class="priv__state" id="priv__info">
+	<div class="priv__state-info--wrapper">
+		<img src="/arquivos/images-privilegio-card.png" alt="Tarjeta privilegio" class="priv__state-img">
+		<div class="priv__state-info-name" id="priv__state-info-name">asdf adsf asdf</div>
+		<div class="priv__state-info-card" id="priv__state-info-card">00000000000000</div>
+		<div class="priv__state-info-balance" id="priv__state-info-balance">Saldo: Q0.00</div>
+	</div>
+</div>

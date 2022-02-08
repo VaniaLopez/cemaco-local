@@ -1,0 +1,66 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+
+// Settings
+@import "_settings/settings";
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+// Base - Estilos por defecto
+@import "_base/typographies";
+// @import "_base/icon-fonts";
+@import "_base/base";
+
+//bax
+@import "_utilities/bax";
+
+// Layout - Estilos para bloques principales
+@import "_layout/responsive";
+@import "_layout/brand";
+@import "_layout/cintillo";
+@import "_layout/header";
+@import "_layout/nav";
+@import "_layout/main";
+@import "_layout/sidebar";
+@import "_layout/footer";
+
+// Components - Estilos para componentes re-utilizables
+// @import "_components/links";
+@import "_components/buttons";
+// @import "_components/tags";
+@import "_components/sprite-icons";
+// @import "_components/dropdowns";
+// @import "_components/tooltips";
+@import "_components/forms";
+@import "_components/store-top-bar";
+@import "_components/tables";
+@import "_components/modals";
+@import "_components/breadcrumbs";
+// @import "_components/pagination";
+// @import "_components/video-responsive";
+@import "_components/monster-banner";
+@import "_components/slider-main";
+
+// Modules - Estilos para módulos re-utilizables
+@import "_modules/searcher";
+@import "_modules/account-menu";
+@import "_modules/product-item";
+@import "_modules/products-slider";
+@import "_modules/banner-board";
+// @import "_modules/first-view";
+// @import "_modules/category";
+@import "_modules/social-pictures";
+@import "_modules/custom-plugins";
+@import "_modules/miscellaneous";
+
+// Vtex
+@import "_vtex/vtex";
+@import "_vtex/callcenter";
+
+// Utilities
+@import "_utilities/re-utilities";
+@import "_utilities/utilities-project";

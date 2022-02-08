@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es">
+    <head>
+        <vtex:metaTags />
+        <vtex:template id="xCemaco-meta-tags" />
+        <vtex:contentPlaceHolder id="meta" />
+        <vtex:template id="xCemaco-styles" />
+        <link rel="stylesheet" href="/arquivos/css-js_colores-configurables.css" />
+        <link rel="stylesheet" href="/arquivos/css-js_product-list.css" />
+        <vtex.cmc:xCemacoFallback />
+    </head>
+    <body>
+        <vtex:template id="xCemaco-header" />
+
+        <main role="main" class="page-main--internal-page">
+            <div style="background-color:#000;color:#fff;width:100%;padding:50px;display:block">Banner ejemplo</div>
+            <!-- Page Inside Head. Begin -->
+            <div class="page-header--product-list">
+                <div class="re-central">
+                    <!-- Breadcrumbs. Begin -->
+                    <div class="bread-crumbs">
+                        <vtex.cmc:breadCrumb />
+                    </div>
+                    <!-- Breadcrumbs. End -->
+                    <vtex.cmc:searchTitle />
+
+                    <!-- <div class="filter-indicator__wrapper"></div> -->
+                    <div class="product-list__controls">
+                        <h6 class="product-list__filtersTitle hidden-md-down">Filtrar por</h6>
+                        <button id="filtersOpen" class="button-lineal gray">Filtrar <svg class="svg-icon">
+                                <use href="#svg-icon-filter"></use>
+                            </svg></button>
+                        <!-- Productos Ordenamiento. Begin -->
+                        <div id="order-by-wrapper" class="product-list__sort-wrapper"></div>
+                        <!-- Productos Ordenamiento. End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Page Inside Head. End -->
+
+            <div class="re-central">
+                <div class="re-central--product-list">
+                    <!-- Navigator. Begin -->
+                    <aside class="site-sidebar product-list__aside">
+                        <div id="asideFilters" class="product-list__filters">
+                            <div class="product-list__filtersHeader">
+                                <h6 class="product-list__filtersTitle hidden-lg-up">Filtrar por
+                                    <button id="filtersClose" class="product-list__filtersClose">
+                                        <svg class="svg-icon">
+                                            <use href="#svg-icon-close"></use>
+                                        </svg>
+                                    </button>
+                                </h6>
+                            </div>
+                            <div id="searchNavigator-wrapper" class="product-list__filtersWrapper">
+                                <vtex.cmc:searchNavigator />
+                            </div>
+                            <div class="product-list__filtersFooter">
+                                <button id="filtersApply" class="button-flat secondary">Aplicar filtros</button>
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- Navigator. End -->
+
+                    <!-- Productos Listado. Begin -->
+                    <div class="product-list__wrapper">
+                        <vtex:contentPlaceHolder id="SearchSuggestions" />
+                        <div class="product-list grid-view grid-small" data-height="parent">
+                            <vtex.cmc:searchResult layout="d6567a8f-4136-4e91-bbc1-864cd0f560f3" itemCount="12"
+                                columnCount="12" />
+                        </div>
+                    </div>
+                    <!-- Productos Listado. End -->
+                </div>
+            </div>
+        </main>
+    <style>
+        #celUITDiv .to-top{
+            display: none;
+        }
+        .product-list__controls #order-by-wrapper{
+            /*display: none;*/
+        }
+        .product-list__controls #order-by-wrapper option[value=OrderByTopSaleDESC],
+        .product-list__controls #order-by-wrapper option[value=OrderByReviewRateDESC],
+        .product-list__controls #order-by-wrapper option[value=OrderByNameASC],
+        .product-list__controls #order-by-wrapper option[value=OrderByNameDESC],
+        .product-list__controls #order-by-wrapper option[value=OrderByReleaseDateDESC],
+        .product-list__controls #order-by-wrapper option[value=OrderByBestDiscountDESC]{
+            display: none;
+            visibility: hidden;
+            height: 0;
+            position: absolute;
+            width: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        /*.product-list__controls #filtersOpen{
+            margin: 0 auto 20px;
+            left: inherit;
+        }*/
+        @media (max-width: 768px){
+            .bread-crumbs li {
+                font-size: 0.6rem;
+            }
+            .bread-crumbs li:first-child a:before {
+                font-size: 0.6rem;
+            }
+            .product-list__controls{
+                padding: 0 0 19px;
+            }
+        }
+    </style>
+        <vtex:template id="xCemaco-footer" />
+        <vtex:template id="xCemaco-quick-view" />
+        <vtex:template id="xCemaco-svg-sprite" />
+        <vtex:template id="xCemaco-scripts" />
+        <!-- Slick -->
+        <script src="/arquivos/plugins_slick_slick.min.js"></script>
+        <!-- Product List -->
+        <script src="/arquivos/css-js_product-list.min.js"></script>
+        <script>
+            $(window).on('load', function() {
+                 //Ocultar opciones de filtro no requeridas
+                $( ".product-list__sort-wrapper select option:nth-child(4)" ).hide();
+                $( ".product-list__sort-wrapper select option:nth-child(4)" ).prop("disabled", true); // for safari
+                $( ".product-list__sort-wrapper select option:nth-child(5)" ).hide();
+                $( ".product-list__sort-wrapper select option:nth-child(5)" ).prop("disabled", true); // for safari
+                $( ".product-list__sort-wrapper select option:nth-child(6)" ).hide();
+                $( ".product-list__sort-wrapper select option:nth-child(6)" ).prop("disabled", true); // for safari
+                $( ".product-list__sort-wrapper select option:nth-child(7)" ).hide();
+                $( ".product-list__sort-wrapper select option:nth-child(7)" ).prop("disabled", true); // for safari
+                $( ".product-list__sort-wrapper select option:nth-child(8)" ).hide();
+                $( ".product-list__sort-wrapper select option:nth-child(8)" ).prop("disabled", true); // for safari
+                $( ".product-list__sort-wrapper select option:nth-child(9)" ).hide();
+                $( ".product-list__sort-wrapper select option:nth-child(9)" ).prop("disabled", true); // for safari
+            });
+        </script>
+    </body>
+</html>

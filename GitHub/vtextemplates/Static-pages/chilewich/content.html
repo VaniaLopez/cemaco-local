@@ -1,0 +1,165 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="re-central">
+    
+<!-- Empieza Banner portada -->  
+    <div class="banner-chilewich">
+            <img src="/arquivos/2021_banner_chilewich_desktop.png" class="desktop" alt="Chilewich Banner">
+            <img src="/arquivos/2021_banner_chilewich_mobile.png" class="mobile" alt="Chilewich Banner">
+    </div>
+    <!-- Termina Banner portada -->
+
+    <h2 style="text-align: center;margin-top: 2%;">Compra por categoría</h2>
+    <div class="row aprende mobile">
+        <div class="col-xs-12 col-md-6 col-sm-12 col-lg-3 text-center">
+            <a href="/1454?map=productClusterIds">
+                <picture>
+                    <source media="(max-width: 764px)" srcset="/arquivos/2021_cat_chilewich-alfombra_mobile.png">
+                    <img src="/arquivos/2021_cat_chilewich-alfombra_mobile.png" alt="categoría alfombras Chilewich">
+                </picture>
+                <content>
+                    <h6>Alfombras</h6>
+                </content>
+                <span><b>Ver más</b></span>
+                <br><br>
+            </a>
+        </div>
+        
+        <div class="col-xs-12 col-md-6 col-sm-12 col-lg-3 text-center">
+            <a href="/1453?map=productClusterIds">
+                <picture>
+                    <source media="(max-width: 764px)" srcset="/arquivos/2021_cat_chilewich-mesa_mobile.png">
+                    <img src="/arquivos/2021_cat_chilewich-mesa_mobile.png" alt="categoría mesa Chilewich">
+                </picture>
+                <content>
+                    <h6>Mesa</h6>
+                </content>
+                <span>Ver más</span>
+                <br><br>
+            </a>
+        </div>
+    </div>
+
+    <div class="regreso-clase desktop">
+        <a class="area-estudio" href="/1454?map=productClusterIds">
+            <h4 class="hidden-xs" style="color: #fff;">Alfombras</h4>
+            <p class="hidden-xs" style="color: #fff;"> Ver más </p>
+        </a>
+        
+        <a href="/1453?map=productClusterIds" class="clase-presencial">
+            <h4 class="hidden-xs" style="color: #fff;">Mesa</h4>
+            <p class="hidden-xs" style="color: #fff;">Ver más </p>
+        </a>
+    </div>
+
+</div>
+<script>
+   $(document).ready(function () {
+        function writeTitle(){
+                var title =  document.querySelector(".chilewich .page-header--product-list .category-name #h1_name");
+                if (title != null) {
+                    title.innerHTML = "Compra lo mejor de Chilewich";
+                }else {
+                    setTimeout(writeTitle, 2000);   
+                }
+        }
+
+        setTimeout(writeTitle, 2000);   
+    }
+   );
+</script>
+<style>
+    .regreso-clase {
+        margin-top: 0%;
+    }
+    .regreso-clase p:only-of-type {
+        margin-bottom: 0;
+        margin-top: 0.3%;
+        font-size: 0.813em !important;
+        text-decoration: underline;
+    }
+    .chilewich .bread-crumbs, .chilewich .product-list__controls{
+        display: none;
+    }
+
+    .chilewich .re-central--product-list{
+        padding: 10px 20px;
+        background: #F6F6F6;
+    }
+
+    .chilewich h2, .chilewich #h1_name{
+        font-size: 1.235rem;
+    }
+
+    @media only screen and (min-width: 768px){
+        .regreso-clase {
+            margin-bottom: 20px !important;
+            flex-direction: row;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .area-estudio {
+            padding: 1.25rem 0 0 1.75rem;
+            background-image: url(/arquivos/2021_cat_chilewich-alfombra_desktop.png);
+            background-size: cover;
+            margin-right: 2%;
+            width: 50%;
+            min-height: 230px;
+            background-repeat: no-repeat;
+            display: block;
+            float: left;
+        }
+
+        .clase-presencial {
+            padding: 1.25rem 0 0 1.75rem;
+            background-image: url(/arquivos/2021_cat_chilewich-mesa_desktop.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            display: block;
+            width: 50%;
+            min-height: 230px;
+            float: left;
+        }
+
+        .regreso-clase h4{
+            font-size: 1.625rem;
+            padding-bottom: 0px;
+        }
+
+        .chilewich h2, .chilewich #h1_name{
+            font-size: 1.813rem;
+        }
+    }
+
+    @media only screen and (min-width: 1440px){
+
+        .area-estudio {       
+            min-height: 281px;
+        }
+
+        .clase-presencial {
+            min-height: 281px;
+        }
+    }
+
+    @media only screen and (min-width: 2560px){
+
+        .area-estudio {       
+            min-height: 310px;
+        }
+
+        .clase-presencial {
+            min-height: 310px;
+        }
+    }
+
+</style>

@@ -1,0 +1,38 @@
+/*--------------------Typographies--------------------*/
+$font-path: 'https://cemacogt.vteximg.com.br/arquivos/';
+$fonts: (
+    'font_HelveticaNeueLTW05-35Thin':                      (family: 'HelveticaNeueLTW05', weight: $font-x-light),
+    'font_HelveticaNeueLTW05-45Light':                      (family: 'HelveticaNeueLTW05', weight: $font-light),
+    'font_HelveticaNeueLTW05-55Roman':                      (family: 'HelveticaNeueLTW05', weight: $font-regular),
+    'font_HelveticaNeueLTW05-75Bold':                      (family: 'HelveticaNeueLTW05', weight: $font-bold),
+);
+
+//@each $font, $value in $fonts{
+//    @font-face{
+//        font-family: map-get($value, family);
+//        font-weight: map-get($value, weight);
+//        font-style: map-get($value, style);
+//        font-display: swap;
+//        src:	url('#{$font-path}#{$font}.eot'); /* IE9 Compat Modes */
+//        src:	url('#{$font-path}#{$font}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//                url('#{$font-path}#{$font}.woff2') format('woff2'), /* Super Modern Browsers */
+//                url('#{$font-path}#{$font}.woff') format('woff'), /* Pretty Modern Browsers */
+//                url('#{$font-path}#{$font}.ttf') format('truetype'), /* Safari, Android, iOS */
+//                url('#{$font-path}#{$font}.svg#{map-get($value, file)}') format('svg'); /* Legacy iOS */
+//    }
+//}
+
+@each $font, $value in $fonts{
+    @font-face{
+        font-family: map-get($value, family);
+        font-weight: map-get($value, weight);
+        font-style: map-get($value, style);
+        font-display: swap;
+        src:	url('#{$font-path}#{$font}.eot.css'); /* IE9 Compat Modes */
+        src:	url('#{$font-path}#{$font}.eot.css?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('#{$font-path}#{$font}.woff2.css') format('woff2'), /* Super Modern Browsers */
+                url('#{$font-path}#{$font}.woff.css') format('woff'), /* Pretty Modern Browsers */
+                url('#{$font-path}#{$font}.ttf.css') format('truetype'), /* Safari, Android, iOS */
+                url('#{$font-path}#{$font}.svg.css#{map-get($value, file)}') format('svg'); /* Legacy iOS */
+    }
+}

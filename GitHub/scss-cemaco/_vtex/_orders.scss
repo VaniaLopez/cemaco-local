@@ -1,0 +1,237 @@
+.vtex-account__page-body{
+    .vtex-dropdown,
+    .vtex-input,
+    &.vtex-account__order-details{
+        .bg-base{
+            border: 1px solid $c-border-account!important;
+            border-radius: 20px;
+            overflow: auto;
+        }
+    }
+}
+a.myo-collapsed-order{
+    transform: none!important;
+    text-decoration: none!important;
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+    border-bottom: 1px solid $c-border-account!important;
+    margin-bottom: 0;
+    transition: all .3s;
+    &:hover,
+    &:focus{
+        background: $c-light-gray;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &:active{
+        background: darken($c-light-gray, 5);
+    }
+    .myo-order-id:before{
+        text-align: right;
+    }
+    & > div:first-child{
+        & > div{
+            span{
+                font-size: .75rem;
+                font-weight: $font-bold;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+.myo-reorder-btn,
+.myo-details-btn{
+    width: 18em !important;
+    span{
+        @include padding-v(0);
+        margin-left: 0 !important;
+    }
+}
+.myo-reorder-btn{
+    // @include button-lineal(black);
+    color: $c-secondary;
+    font-weight: $font-bold;
+    margin: 0;
+    font-size: .75rem;
+    min-width: 150px;
+    text-align: center;
+    text-decoration: underline;
+    svg{
+        display: none;
+    }
+}
+.myo-details-btn{
+    @include text-link();
+    color: $c-secondary!important;
+    background-color: white;
+    margin: 0;
+}
+.myo{
+    &-order{
+        &-card{
+            margin: 0;
+            border-radius: 0;
+            border-bottom: 1px solid $c-border-account !important;
+            .cf *{
+                margin-bottom: 0;
+            }
+            .cf.pa3{
+                .myo-cancel-btn{
+                    display: none;
+                }
+            }
+            .bg-base{
+                //display: none;
+                > div{
+                    &:first-child{
+                        display: none;
+                    }
+                    &:nth-child(2){
+                        width: 100%;
+                        padding-top: .5rem;
+                        @include flexbox($jc: center);
+                    }
+                }
+            }
+        }
+        &-header{
+            margin-bottom: 0;
+            background-color: white;
+            &.b--black-20.bg-near-white{
+                *{
+                    margin-bottom: 0;
+                }
+            }
+            .ttu{
+                font-weight: $font-bold;
+            }
+            .absolute.db.ba-ns{
+                pointer-events: none;
+                &.o-100{
+                    pointer-events: auto;
+                }
+            }
+        }
+        &-product{
+            padding-right: 1em;
+            border-bottom: 1px solid $c-border-account;
+            div.v-top.dib{
+                //
+            }
+            h4{
+                @include padding-v(0.5,0.5,1em);
+                @include font-size(1.1);
+                text-transform: uppercase;
+                a{
+                    font-size: inherit;
+                    color: $c-dark-gray;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &-id{
+            color: $c-secondary !important;
+            &:before{
+                content: 'No. Pedido';
+                text-align: left;
+                display: block;
+                font-weight: $font-bold;
+                color: $c-text;
+                font-size: .75rem;
+                line-height: 1.5;
+            }
+        }
+    }
+    &-view-order{
+        > a{
+            margin-bottom: 0.5em;
+            @include text-link;
+            text-transform: uppercase;
+        }
+        .lh-copy{
+            font-size: 1rem;
+            font-weight: $font-bold;
+        }
+        time{
+            font-size: 0.9rem;
+        }
+        .overflow-y-scroll{
+            border-radius: 0;
+            font-size: 1rem;
+            @include scrollbar;
+            h3{
+                margin-top: 0;
+                font-size: em(16);
+                color: $c-dark-gray;
+                letter-spacing: normal;
+            }
+            p{
+                font-size: em(14);
+            }
+        }
+    }
+    &-progress{
+        &-bar{
+            border-width: 1px;
+            border-radius: 20px;
+            border-color: $c-border-account;
+            &__title-font{
+                font-size: 1rem !important;
+                letter-spacing: normal;
+            }
+            &__title-font + div{
+                @media screen and (min-width: $screen-lg-min){
+                    @include padding-h(3,3, 1em);
+                }
+            }
+        }
+    }
+    &-product{
+        &-info{
+            @include flexbox($ai: center);
+        }
+        &-image{
+            width: 80px;
+            flex-grow: 0;
+        }
+        &-name{
+            font-size: 1rem;
+            font-weight: $font-bold;
+            color: $c-dark-gray;
+        }
+        &-quantity{
+            padding-left: 2em;
+        }
+        &-row{
+            border-top: none;
+            border-bottom: 1px solid $c-border-account;
+        }
+        &-table{
+            th{
+                text-align: center;
+                background-color: $c-light-gray;
+                padding-top: 0.5em;
+            }
+            td{
+                vertical-align: middle;
+            }
+        }
+    }
+    &-seller-name{
+        display: none;
+    }
+}
+
+#order-status-detail{
+    padding: 4em 0 0;
+    .order-status-desc{
+        padding: 0 3em;
+    }
+}
+.myo-progress-bar.h4-plus{
+    height: auto;
+}

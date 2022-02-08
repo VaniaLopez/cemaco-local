@@ -1,0 +1,283 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="re-central">
+    
+    <!-- Empieza Banner portada -->
+    <div class="banner-remington">
+        <picture>
+            <!-- Mobile webp min.jpg-->
+            <source srcset="/arquivos/2021_bannercat_remington_mobile.min.jpg" media="(max-width: 767px)" type="image/webp">
+            <!-- Mobile .jpg-->
+            <source srcset="/arquivos/2021_bannercat_remington_mobile.jpg" media="(max-width: 767px)">
+            <!-- Desktop webp min.jpg-->
+            <source srcset="/arquivos/2021_bannercat_remington_desk.min.jpg" type="image/webp">
+            <!-- Desktop .jpg-->
+            <img src="/arquivos/2021_bannercat_remington_desk.jpg" alt="Banner remington">
+        </picture>
+    </div>
+    <!-- Termina Banner portada -->
+
+    <!-- Empieza titulo compra por categoria-->
+    <h2 class="main-title-categorie">Compra por categoría</h2>
+    <!-- Termina titulo compra por cateoria-->
+
+    <!-- Empiezan las categorias -->
+    <div class="row p-0 m-0">
+        <div class="col col-sm-6 col-xs-6 col-md-4 content-categories-images">
+            <a href="/1627?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_secadoras_para_cabello.min.jpg" type="image/webp">
+                    <img src="/arquivos/2021_cat_secadoras_para_cabello.jpg" class="img-responsive categories-images" alt="Secadoras para cabello">
+                </picture>
+                <h3 class="text-center">Secadoras para cabello</h3>
+            </a>
+        </div>
+        <div class="col col-sm-6 col-xs-6 col-md-4 content-categories-images">
+            <a href="/1628?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_planchas_para_cabello.min.jpg" type="image/webp">
+                    <img src="/arquivos/2021_cat_planchas_para_cabello.jpg" class="img-responsive categories-images" alt="Planchas para cabello">
+                </picture>
+                <h3 class="text-center">Planchas para cabello</h3>
+            </a>
+        </div>
+        <div class="col col-sm-6 col-xs-6 col-md-4 content-categories-images">
+            <a href="/1629?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_rizadoras.min.jpg" type="image/webp">
+                    <img src="/arquivos/2021_cat_rizadoras.jpg" class="img-responsive categories-images" alt="Rizadoras">
+                </picture>
+                <h3 class="text-center">Rizadoras</h3>
+            </a>
+        </div>
+        <div class="col col-sm-6 col-xs-6 col-md-6 content-categories-images">
+            <a href="/1630?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_cepillos_para_el_cabello.min.jpg" type="image/webp">
+                    <img src="/arquivos/2021_cat_cepillos_para_el_cabello.jpg" class="img-responsive categories-images" alt="Cepillos para el cabello">
+                </picture>
+                <h3 class="text-center">Cepillos para el cabello</h3>
+            </a>
+        </div>
+        <div class="col col-sm-12 col-xs-6 col-md-6 content-categories-images last-categorie-image">
+            <a href="/1631?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_cuidado_personal.min.jpg" type="image/webp">
+                    <img src="/arquivos/2021_cat_cuidado_personal.jpg" class="img-responsive categories-images last-image" alt="Cuidado personal">
+                </picture>
+                <h3 class="text-center">Cuidado personal</h3>
+            </a>
+        </div>
+    </div>
+    <!-- Terminan las categorias-->
+
+</div>
+
+<style>
+    .remington .banner-remington{
+            margin-bottom: 1.4rem;
+    }
+    .remington .bread-crumbs, .remington .category-name, .remington .product-list__results-items{
+        display: none;
+    }
+    .remington .product-list__controls{
+        display: flex;
+        margin-top: 1rem;
+    }
+    .remington .re-central--product-list {
+        padding: 10px 20px;
+        background: #F6F6F6;
+        margin-top: 1.5rem;
+    }
+    .remington .pre-footer {
+        margin-top: 2rem
+    }
+    .remington .product-item__wrapper .product-item{
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+    }
+    .categories-images{
+        display: block;
+        margin: auto;
+    }
+    .main-title-categorie{
+        text-align: center!important;
+    }
+    .text-center{
+        text-align: center!important;
+    }
+    
+    @media only screen and (min-width: 768px){
+        .remington .product-list__controls{
+            display: none;
+        }
+
+    }
+    
+
+    /* pantallas de 306px */
+    @media(min-width: 5px) and (max-width: 306px){
+        .main-title-categorie{
+            font-size: 1.1rem;
+        }
+        .text-center{
+            font-size: 0.7rem;
+        }
+
+        .content-categories-images {
+            padding: 7px;
+            width: 50%;
+            float: left;
+        }
+        .content-categories-images.last-categorie-image{
+            width: 100%;
+        }
+        .categories-images.last-image {
+            width: 50%!important;
+        }
+	}
+
+    /* pantallas de 307px - 480px*/
+    @media(min-width: 307px) and (max-width: 480px){
+        .main-title-categorie{
+            font-size: 1.3rem;
+        }
+        .text-center{
+            font-size: 0.81rem;
+        }
+
+        .content-categories-images {
+            padding: 15px;
+            width: 50%;
+            float: left;
+        }
+        .content-categories-images.last-categorie-image{
+            width: 100%;
+        }
+
+        .categories-images.last-image {
+            width: 50%!important;
+        }
+        .filter-accordion__trigger {
+            font-size: 0.9rem!important;
+        }
+	}
+	
+    /* pantallas de 481px - 767px*/
+    @media(min-width: 481px) and (max-width: 767px){
+        .main-title-categorie{
+            font-size: 1.3rem;
+        }
+        .text-center{
+            font-size: 0.81rem;
+        }
+
+        .content-categories-images {
+            padding: 15px;
+            width: 50%;
+            float: left;
+        }
+        .content-categories-images.last-categorie-image{
+            width: 100%;
+        }
+
+        .categories-images.last-image {
+            width: 50%!important;
+        }
+	}
+
+    /* pantallas mayores a 768px*/
+    @media(min-width: 768px) and (max-width: 1023px){
+        .remington .product-list__controls{
+            display: none;
+        }
+        .main-title-categorie{
+            font-size: 1.5rem;
+        }
+        .text-center{
+            font-size: 0.6rem;
+        }
+
+        .content-categories-images {
+            padding: 8px;
+            width: 20%;
+            float: left;
+        }
+        .content-categories-images.last-categorie-image{
+            width: 20%;
+        }
+        .categories-images .last-image{
+            width: 100%;
+        }
+	}
+	
+    /* pantallas mayores a 1024px*/
+    @media(min-width: 1024px) and (max-width: 1279px){
+
+        .main-title-categorie{
+            font-size: 1.2rem;
+        }
+        .text-center{
+            font-size: 0.7rem;
+        }
+        .content-categories-images {
+            padding: 30px;
+            width: 20%;
+            float: left;
+        }
+        .content-categories-images.last-categorie-image{
+            width: 20%;
+        }
+        .categories-images .last-image{
+            width: 100%;
+        }
+	}
+	
+    /* pantallas mayores a 1280px*/
+    @media(min-width: 1280px) and (max-width: 1439px){
+        .main-title-categorie{
+            font-size: 1.8rem;
+        }
+        .text-center{
+            font-size: 0.96rem;
+        }
+        .content-categories-images {
+            padding: 30px;
+            width: 20%;
+            float: left;
+        }
+        .content-categories-images.last-categorie-image{
+            width: 20%;
+        }
+        .categories-images .last-image{
+            width: 100%;
+        }
+	}
+	
+    /* pantallas mayores a 1440px*/
+	@media(min-width: 1440px){
+        .main-title-categorie{
+            font-size: 1.8rem;
+        }
+        .text-center{
+            font-size: 1.12rem;
+        }
+        .content-categories-images {
+            padding: 30px;
+            width: 20%;
+            float: left;
+        }
+        .content-categories-images.last-categorie-image{
+            width: 20%;
+        }
+        .categories-images .last-image{
+            width: 100%;
+        }
+	}
+</style>

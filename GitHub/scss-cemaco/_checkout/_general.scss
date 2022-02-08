@@ -1,0 +1,105 @@
+body,
+html{
+    padding: 0;
+    margin: 0;
+}
+body *{
+    outline: none !important;
+}
+body.loading{
+    .payment-submit-wrap{
+        opacity: .5;
+        pointer-events: none!important;
+        *{
+            pointer-events: none!important;
+        }
+    }
+    .cart-links.cart-links-bottom{
+        opacity: .5;
+        pointer-events: none!important;
+        *{
+            pointer-events: none!important;
+        }
+    }
+}
+a{
+    color: $c-primary;
+}
+.re-central{
+    max-width: 1280px;
+}
+.loading-img{
+    .icon-spinner{
+        &:before{
+            transform: translateY(-5px);
+        }
+    }
+}
+#checkout-header,
+#checkout-footer{
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Main containers
+.container-cart,
+.container-order-form{
+    width: 100%;
+    @include padding-h();
+    max-width: 1280px;
+}
+// Titles
+#cart-title,
+#orderform-title,
+.cart-template h2.srp-main-title{
+    @include padding-v(0);
+    @include margin-v(20);
+    font-family: $font-title;
+    font-weight: $font-bold;
+    color: $c-text;
+    @include mediaTo(md){
+        @include padding-h();
+    }
+}
+#cart-title{
+    font-size: 0;
+    line-height: 0;
+    .empty-cart &{
+        display: none !important;
+    }
+    &:before{
+        content: 'Mi carreta';
+        @include font-size(1.5);
+        font-weight: $font-bold;
+        line-height: 1.5;
+    }
+}
+#orderform-title{
+    @include font-size(1.5);
+    font-weight: $font-bold;
+    line-height: 1.5;
+}
+
+
+// To check
+.modal{
+    img{
+        width: auto;
+        height: auto;
+    }
+}
+
+#vtexIdContainer{
+    position: fixed!important;
+    .vtexIdUI{
+        position: fixed;
+        .modal-header{
+            .close{
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+}

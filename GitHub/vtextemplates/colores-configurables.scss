@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+/*--------------------Product Colors--------------------*/
+$color-thumbnails-configurables: (
+    'Amarillo'                      :#ffff00,
+    'Amarilloalbaricoque'           :#ffff00,
+    'Azul'                          :#0070c0,
+    'Cafe'                          :#833c0c,
+    'Celeste'                       :#00b0f0,
+    'Fucsia'                        :#ff0066,
+    'Gris'                          :#595959,
+    'Morado'                        :#7030a0,
+    'Multicolor'                    :'Swatch-Multicolor.png',
+    'Naranja'                       :#ff6600,
+    'Rojo'                          :#ff0000,
+    'Rosado'                        :#ff9999,
+    'Sin Color'                     :transparent,
+    'Suavizado'                     :'',
+    'Verde'                         :#00b050,
+    'Vino'                          :#79343b,
+    'Plateado'                      :#B4B5B2,
+    'Dorado'                        :#FFD700,
+    'Cobre'                         :#C77B31,
+    'Cromo'                         :#B4B5B2,
+    'Bronce'                        :#cd7f32,
+    'Transparente'                  :#FFFFFF,
+    'asdf'                          :#ffffff,
+    'Ultra Deep'                    :#ffffff,
+    'Extra White'                   :#ffffff,
+    'Ultra Blanco'                  :#ffffff,
+    'Amarillo Albaricoque'          :#ffff00,
+    'Amarillo Maiz'                 :#ffeab2,
+    'Aqua Calipso'                  :#2a9bb7,
+    'Aqua Reflejo'                  :#7db2b5,
+    'Aqua Refrescante'              :#00bac6,
+    'Azafran'                       :#d2a957,
+    'Azafrán'                       :#d2a957,
+    'Azul Bandera'                  :#007ab5,
+    'Beige Arena'                   :#ddd8be,
+    'Beige'                         :#d9cdb4,
+    'Blanco Antiguo Americano'      :#ffffff,
+    'Blanco Antiguo'                :#ecebe2,
+    'Blanco Cuarzo'                 :#dfdace,
+    'Blanco Dover'                  :#f5f4eb,
+    'Blanco Hueso'                  :#fafcf4,
+    'Blanco Navajo'                 :#eeeddb,
+    'Blanco Ostra'                  :#ece9df,
+    'Blanco Porcelana'              :#f6f5ec,
+    'Blanco'                        :#ffffff,
+    'Bronce Antiguo'                :#bb7f0e,
+    'Cafe Aroma'                    :#885b49,
+    'Cafe Latte'                    :#bf9b6d,
+    'Cafe Madeira'                  :#c5ab7d,
+    'Cafe Toffee'                   :#6f4e33,
+    'Café Aroma'                    :#885b49,
+    'Café Latte'                    :#bf9b6d,
+    'Café Madeira'                  :#c5ab7d,
+    'Café Toffee'                   :#6f4e33,
+    'Castano'                       :#baa68a,
+    'Castaño'                       :#baa68a,
+    'Celeste Burbuja'               :#c4e5e7,
+    'Chocolate Oxido'               :#6e5046,
+    'Chocolate Óxido'               :#6e5046,
+    'Crisantemo'                    :#ffdf00,
+    'Cromado Satinado'              :#b3b3b3,
+    'Gris Cantera'                  :#67615d,
+    'Gris Meteoro'                  :#7c7880,
+    'Gris Perla'                    :#eeeeee,
+    'Grisperla'                     :#eeeeee,
+    'Jalapeno'                      :#a45a38,
+    'Jalapeño'                      :#a45a38,
+    'Mandarina'                     :#e99a5a,
+    'Marfil Suave'                  :#f6f5ec,
+    'Marfil'                        :#e9e5c9,
+    'Melocoton'                     :#fed5aa,
+    'Melocotón'                     :#fed5aa,
+    'Melon'                         :#f1e4d1,
+    'Melón'                         :#f1e4d1,
+    'Morado Atrevido'               :#9c5591,
+    'Morado Ensueno'                :#b4a3cf,
+    'Morado Ensueño'                :#b4a3cf,
+    'Morado Hechizo'                :#8b76aa,
+    'Naranja Energía'               :#f7a34d,
+    'Naranja Monarc'                :#b74026,
+    'Pina Colada'                   :#fff6e5,
+    'Piña Colada'                   :#fff6e5,
+    'Rojo Barro'                    :#722923,
+    'Rojo Ladrillo Quemado'         :#aa6445,
+    'Rojo Ladrillo'                 :#d3a781,
+    'Rojo Místico'                  :#dd153b,
+    'Rosado Plumeri'                :#ad2f6d,
+    'Rosado Sublime'                :#ea6a7f,
+    'Turquesa'                      :#97d4c4,
+    'Verde Menta'                   :#9dddad,
+    'Verde Musgo'                   :#709a5c,
+    'Verde Pistacho'                :#e5f0e1,
+    'Verde Primavera'               :#47a451,
+    'Verde Selva'                   :#ada46c,
+    'Azul Cenicienta'               :#A0BFC7,
+    'Azul Infinito'                 :#03B8EC,
+    'Celeste Infinito'              :#BBDEE4,
+    'Negro'                         :#000000,
+    'Rojo Terracota'                :#B1812F,
+    'Rosado Linaje'                 :#F0A4C5,
+    'Verde Alegre'                  :#D4EAD3,
+    'Verde Caryman'                 :#BAD745
+);
+.item-dimension-Descripciondecolor{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    .group_0{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.skuselector-specification-label{
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0 !important;
+    -moz-appearance: none;
+    &:checked{
+        + label{
+            border: 3px solid #acacac;
+        }
+    }
+}
+.dimension-Descripciondecolor{
+    cursor: pointer;
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-right: 10px !important;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #dddddd;
+    font-size: 0;
+}
+%colors{
+    background-image: none;
+}
+
+$ThumbnailsByColor : true;
+@if $ThumbnailsByColor{
+    @each $colorName, $colorValue in $color-thumbnails-configurables {
+        .product-item__color.#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        .product-item .colores.#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        fieldset.filtro_color label.sr_#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        fieldset.filtro_colores label.sr_#{to_lower_case(str-replace($colorName, ' ', '-'))},
+        fieldset.filtro_descripcion-color label.sr_#{to_lower_case(str-replace($colorName, ' ', '-'))}:before,
+        .prorduct-detail ul.Color a[title="#{str-replace($colorName, '-', ' ')}"],
+        .prorduct-detail ul.Descripciondecolor a[title="#{str-replace($colorName, '-', ' ')}"],
+        .product-detail__color-variations a.color-main__#{to_lower_case($colorName)},
+        .product-detail__sku-selection .topic.Color .select.skuList label[class*="-#{to_lower_case(str-replace($colorName, ' ', '-'))}"],
+        .product-detail__sku-selection .topic.Descripciondecolor input[value="#{$colorName}"]+label,
+        .product-detail__sku-selection .topic.Colores .select.skuList label[class*="-#{to_lower_case($colorName)}"],
+        .product-modal .color.#{to_lower_case(str-replace($colorName, ' ', '-'))}{
+            // Global Patch
+            @extend %colors;
+            // Individual Swatch
+            @if type-of($colorValue) == color{
+                background-color: $colorValue !important;
+                @if $colorName == 'Blanco' {
+                    border: 1px solid #dddddd;
+                }
+            }
+            @else if type-of($colorValue) == string{
+                @if $colorValue != '' {
+                    background-image: url(#{'https://cemacogt.vteximg.com.br/arquivos/'}#{$colorValue});
+                }
+            }
+        }
+    }
+}

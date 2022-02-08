@@ -1,0 +1,334 @@
+#ship-street,
+#ship-neighborhood,
+#ship-name,
+.ship-neighborhood{
+    width: 100%;
+}
+.selectize-control.single .selectize-input{
+    height: 34px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+    .item{
+        line-height: 32px;
+    }
+}
+
+.icon-home{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(-2px);
+    @extend .bg-icon-entrega;
+    &:before{
+        display: none;
+    }
+}
+
+#shipping-data{
+    .address-shipping-options{
+        .label-vertical-group{
+            text-shadow: none;
+            background: white;
+            color: $c-primary;
+            border-radius: 0;
+            padding-top: 12px;
+            padding-bottom: 10px;
+            &.active{
+                background: $c-secondary;
+                color: white;
+            }
+            i{
+                margin-top: 4px;
+            }
+        }
+    }
+    .pickup-points {
+        &-recomendations {
+            @include margin-v(15);
+            @include padding-h(15);
+            font-family: $font-body;
+            font-size: rem(13);
+            p {
+                color: $c-text;
+                font-weight: $font-semibold;
+            }
+            ul {
+                font-size: rem(12);
+                li {
+                    color: $c-dim-gray;
+                    &::before {
+                        content: "\2022";
+                        color: $c-secondary;
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 1em;
+                        margin-left: -1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shipping-summary-placeholder{
+    @include flexbox($fw: wrap, $ai: center);
+    position: relative;
+    p.address{
+        width: 100%;
+    }
+    .shipping-options,
+    .shp-summary-group{
+        width: 100%;
+    }
+    a.link-change-shipping{
+        @include button-lineal($c-dusty-gray);
+        width: 100%;
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+}
+
+#shipping-data{
+    .vtex-omnishipping-1-x-geolocationTitle{
+        font-size: 0;
+        line-height: 0;
+        color: $c-text;
+        font-weight: $font-bold;
+        &:before{
+            content: 'Puntos cercanos para retirar en tienda';
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+    }
+    .vtex-omnishipping-1-x-subtitle{
+        font-size: 0;
+        line-height: 0;
+        color: $c-text;
+        &:before{
+            content: 'Busca las tiendas más cercanas para retirar tu pedido';
+            font-size: .75rem;
+            line-height: 1.5;
+        }
+    }
+    .vtex-omnishipping-1-x-deliveryOptionActive{
+        color: $c-text;
+        font-weight: bold;
+    }
+    .vtex-omnishipping-1-x-deliveryChannelsWrapper{
+        background: $c-checkout-bg;
+    }
+    #shipping-option-pickup-in-point{
+        .shp-method-option-text{
+            font-size: 0;
+            line-height: 0;
+            &:before{
+                content: 'Retirar en tienda';
+                line-height: 1.1;
+            }
+        }
+        .shp-method-option-complement{
+            display: none;
+        }
+    }
+    #shipping-option-delivery{
+        .shp-method-option-text{
+            font-size: 0;
+            line-height: 0;
+            &:before{
+                content: 'Entregar';
+                line-height: 1.1;
+            }
+        }
+        .shp-method-option-complement{
+            display: none;
+        }
+    }
+    .shp-method-option-inactive{
+        .shp-method-option-text{
+            &:before{
+                font-size: .95rem;
+                color: darken($c-pastel-gray, 20);
+            }
+        }
+    }
+    .shp-method-option-active{
+        .shp-method-option-text{
+            &:before{
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .vtex-omnishipping-1-x-pickupPointChange{
+        border-color: $c-primary;
+    }
+    .pickup-marker-blue{
+        path{
+            fill: $c-primary;
+        }
+    }
+    .vtex-omnishipping-1-x-leanShippingGroupList{
+        border-radius: 10px;
+    }
+    .address-item{
+        border: 1px solid $c-checkout-border;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        &:hover{
+            background: white;
+            border-color: darken($c-secondary, 10);
+        }
+    }
+    .vtex-omnishipping-1-x-leanShippingOptionActive,
+    .vtex-omnishipping-1-x-active{
+        background: white;
+        border: 1px solid $c-secondary;
+        border-radius: 10px;
+        .shp-option-icon{
+            border: 1px solid $c-secondary;
+            border-radius: 50%;
+            @extend .bg-icon-dove;
+            width: 15px;
+            height: 15px;
+            svg{
+                opacity: 0;
+            }
+        }
+    }
+    #btn-go-to-payment{
+        font-size: 0;
+        line-height: 0;
+        padding: .65rem 3.5rem;
+        font-weight: $font-bold;
+        border-radius: 30px;
+        @include font-smooth;
+        &:before{
+            content: 'Continuar';
+            font-size: 1rem;
+            line-height: 1;
+        }
+    }
+    input[type="text"]{
+        border-radius: 30px;
+    }
+}
+
+#postalCode-finished-loading{
+    .vtex-omnishipping-1-x-deliveryChannelsToggle{
+        background: white;
+        border-color: $c-primary;
+    }
+}
+
+.ask-for-geolocation-cta{
+    .btn-success{
+        border: 0;
+        background: $c-secondary;
+        box-shadow: none;
+        text-shadow: none;
+        border-radius: 30px;
+        transition: all .3s;
+        font-size: 0;
+        line-height: 0;
+        font-weight: $font-bold;
+        letter-spacing: 0.05em;
+        font-family: $font-title;
+        &:before{
+            content: 'Buscar tiendas';
+            font-size: .95rem;
+            letter-spacing: .5px;
+            line-height: 1;
+        }
+        &:hover,
+        &:focus,
+        &:active{
+            background: darken($c-secondary, 5);
+        }
+    }
+}
+#shipping-data{
+    .ask-for-geolocation-image-ask{
+        background-color: white;
+        @extend .bg-icon-pickup-points;
+        box-shadow: none;
+        width: 150px;
+        height: 150px;
+        svg{
+            opacity: 0;
+            rect{
+                fill: $c-secondary;
+            }
+        }
+    }
+}
+
+.btn-link{
+    color: $c-primary;
+    &:hover,
+    &:focus,
+    &:active{
+        color: lighten($c-primary, 5);
+    }
+}
+
+body.giftlist{
+    .shp-summary-group-content{
+        .shp-summary-group-info{
+            padding-left: 40px;
+            color: $c-text;
+            position: relative;
+            &:before{
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuNSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9InN2Zy1pY29uLWdpZnQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIKCSB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMjEyMTIxO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwLDguMWgtOC40YzIuNy0xLjUsNC4xLTMsNC4xLTQuNGMwLTEuMS0xLTItMi43LTIuNWMtMy41LTEuMS01LjgsMi41LTYuOSw0LjdjLTAuOC0yLjItMi4zLTUuMy00LjUtNS45CgljLTEuMi0wLjMtMi4zLDAuMi0zLjQsMS40QzcsMi44LDYuNiw0LjEsNyw1LjRjMC40LDEuMiwxLjQsMi4xLDIuNSwyLjhIMkMxLDguMSwwLjEsOSwwLjEsMTAuMXY1LjZjMCwxLjEsMC45LDEuOSwxLjksMS45aDEuN3YxMy43CglDMy43LDMxLjcsNCwzMiw0LjUsMzJIMjhjMC40LDAsMC43LTAuMywwLjctMC43VjE3LjZIMzBjMS4xLDAsMS45LTAuOSwxLjktMS45di01LjZDMzEuOSw5LDMxLDguMSwzMCw4LjF6IE0xMi44LDMwLjVINS4yVjE3LjdoNy42CglDMTIuOCwxNy43LDEyLjgsMzAuNSwxMi44LDMwLjV6IE0xMi44LDE2LjFIMmMtMC4yLDAtMC40LTAuMi0wLjQtMC40di01LjZjMC0wLjIsMC4yLTAuNCwwLjQtMC40aDEwLjhWMTYuMXogTTguNCw0LjkKCUM4LjIsNC4yLDguNSwzLjQsOS4zLDIuNWMwLjctMC44LDEuMy0xLjEsMS45LTAuOWMxLjcsMC40LDMuMyw0LjIsNCw2LjZoLTEuOUMxMS45LDcuNyw4LjksNi42LDguNCw0Ljl6IE0xNy4yLDMwLjVoLTIuOFYxNy43aDIuOAoJVjMwLjV6IE0xNy4yLDE2LjFoLTIuOFY5LjZoMi44VjE2LjF6IE0xNi44LDguMWMwLjQtMS4xLDIuNS02LjQsNS43LTUuNWMxLDAuMywxLjYsMC43LDEuNiwxLjFDMjQuMSw0LjMsMjIuOSw2LDE4LDhoLTEuMlY4LjF6CgkgTTI3LjIsMzAuNWgtOC42VjE3LjdoOC42VjMwLjV6IE0zMC40LDE1LjZjMCwwLjItMC4yLDAuNC0wLjQsMC40SDE4LjZWOS42SDMwYzAuMiwwLDAuNCwwLjIsMC40LDAuNFYxNS42eiIvPgo8L3N2Zz4K') center center no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+p.ship-number,
+p.ship-complement,
+p.ship-reference{
+    display: block!important;
+    label{
+        font-size: 0;
+        line-height: 0;
+        &:before{
+            content: '';
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+}
+p.ship-number{
+    label{
+        &:before{
+            content: 'Edificio o condominio';
+        }
+    }
+}
+p.ship-complement{
+    label{
+        &:before{
+            content: 'Piso o apartamento';
+        }
+    }
+}
+p.ship-reference{
+    label{
+        &:before{
+            content: 'Indicaciones';
+        }
+    }
+}
+
+
+

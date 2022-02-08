@@ -1,0 +1,637 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css" id="cemacoStylesJ" />
+
+<style>
+    img.cocina-movil {
+        padding-bottom: 10px
+    }
+
+    .p-relative {
+        position: relative;
+    }
+
+    .p-absolute {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 100px;
+        z-index: 99999;
+    }
+
+    .double-board__item {
+        text-align: left;
+    }
+
+    .p-absolute span.big {
+        font-size: 1.5rem !important;
+        color: white;
+    }
+
+    .p-absolute p {
+        color: #fff;
+        margin: -15px 0 0 0;
+        font-size: 0.875rem;
+        font-weight: bold;
+    }
+
+    .double-board__summary .big {
+        line-height: 1.5rem;
+    }
+
+    .double-board__summary .button-simple {
+        margin-top: 5px;
+    }
+
+    .mobile,
+    .cocina-movil .big {
+        display: block;
+    }
+
+    .double-board__summary.double-board__ropa.font-white.mobile {
+        top: -10em;
+        left: 1em;
+        position: relative;
+    }
+
+    .double-board__summary .double-board__ropa span.big {
+        font-size: 1.5rem;
+        line-height: 0;
+    }
+
+    a.button-simple.tercery {
+        font-size: 0.875em;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    .button-simple.tercery svg {
+        color: #93D500;
+    }
+    
+    .l-juguetes .double-board .double-board__item--top-left {
+        padding-bottom: 5px !important;
+    }
+
+    @media only screen and (min-width: 414px) {
+        .double-board__summary.double-board__ropa.font-white.mobile {
+            top: -11em;
+            left: 1em;
+            position: relative;
+        }
+    }
+
+    @media only screen and (min-width: 480px) {
+        .double-board__summary.double-board__ropa.font-white.mobile {
+            top: -12.5em;
+            left: 1em;
+            position: relative;
+        }
+    }
+
+    @media only screen and (min-width:768px) {
+        .double-board__summary .big {
+            line-height: 1.5rem;
+        }
+
+        .double-board__summary.double-board__ropa.font-white.desktop {
+            position: relative;
+            top: -10.5em;
+            left: 1.5em;
+        }
+
+        .double-board__summary.double-board__ropa span.big {
+            font-size: 2.5rem;
+            line-height: 0;
+        }
+
+        .cocina-web {
+            display: block;
+        }
+
+        .l-juguetes .double-board__item>div {
+            margin-bottom: 6px;
+        }
+
+        .double-board__summary .button-simple {
+            margin-top: 5px;
+        }
+
+        .double-board__summary-titulo .button-simple {
+            margin-top: 0px;
+        }
+
+        a.button-simple.tercery {
+            margin-top: 16px;
+        }
+
+        .item-juguetes .tag-subtitle {
+            font-size: 1em;
+        }
+
+        .juguetes-mas {
+            justify-content: start;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .double-board__item--bg-left img {
+            display: block;
+        }
+
+        .double-board__summary .big {
+            line-height: 2.5rem;
+        }
+
+        .double-board__summary-titulo {
+            padding: 20px 20px;
+        }
+
+        .double-board__summary .big {
+            line-height: 2rem;
+            margin-left: -5px;
+        }
+
+        .double-board__summary.double-board__ropa.font-white.desktop {
+            position: relative;
+            top: -12.5em;
+            left: 1.5em;
+        }
+
+        .tag-title,
+        .tag-title--level-1 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 2.3rem;
+        }
+
+        .l-juguetes .double-board__item>div {
+            margin-bottom: 12px;
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .double-board__summary.double-board__ropa.font-white.desktop {
+            position: relative;
+            top: -16.5em;
+            left: 1.5em;
+        }
+
+        a.button-simple.tercery {
+            margin-top: 20px;
+        }
+
+        .l-juguetes .double-board__item>div {
+            margin-bottom: 14px;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+        .double-board__summary.double-board__ropa.font-white.desktop {
+            position: relative;
+            top: -19.5em;
+            left: 1.5em;
+        }
+
+        a.button-simple.tercery {
+            margin-top: 23px;
+        }
+
+        .double-board__summary .big {
+            line-height: 2.5rem;
+        }
+    }
+
+    @media only screen and (min-width:1920px) {
+        .double-board__summary .double-board__ropa span.big {
+            font-size: 2.5rem;
+            line-height: 0;
+        }
+
+        .double-board__summary.double-board__ropa.font-white.desktop {
+            position: relative;
+            top: -21.5em;
+            left: 1.5em;
+        }
+
+        .l-juguetes .double-board__item>div {
+            margin-bottom: 14px;
+        }
+    }
+    
+    
+.double-board {
+    margin-bottom: 9px!important;
+}
+.l-juguetes .double-board .double-board__item--top-left {
+    padding-bottom: -1px !important;
+}
+
+.double-board.paddingbottomin {
+    margin-bottom: -3px!important;
+}
+
+
+@media(min-width: 5px) and (max-width: 767px){
+    .double-board__item.double-board__item--top-left {
+        margin-top: 9px;
+    }
+    .banner-doble {
+        margin-top: 12px!important;
+    }
+    .double-board__item.double-board__item--top-left.double-board__item--bg-left.paddingfortop {
+        margin-bottom: -14px!important;
+    }
+    .double-board__summary.double-board__ropa.font-white.desktop {
+        display: none!important;
+    }
+    
+    }
+
+    @media(min-width: 5px) and (max-width: 480px){
+        h2.tag-title--level-1.paddingtotitle{
+            margin-top: -37px;
+        }
+    }
+    
+@media(min-width: 5px) and (max-width: 300px){
+    .double-board__summary.double-board__ropa.font-white.mobile {
+        top: -6.5em;
+    }
+}
+@media(min-width: 301px) and (max-width: 360px){
+    .double-board__summary.double-board__ropa.font-white.mobile {
+        top: -7.5em;
+    }
+}
+
+@media(min-width: 361px) and (max-width: 400px){
+    .double-board__summary.double-board__ropa.font-white.mobile {
+        top: -8.5em;
+    }
+}
+
+@media(min-width: 401px) and (max-width: 500px){
+    .double-board__summary.double-board__ropa.font-white.mobile {
+        top: -9.5em;
+        display:block!important;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 600px){
+.double-board__summary.double-board__ropa.font-white.mobile {
+    top: -11.5rem;
+    position: relative;
+    left: 1rem;
+    display:block!important;
+}
+}
+
+@media(min-width: 601px) and (max-width: 767px){
+.double-board__summary.double-board__ropa.font-white.mobile {
+    top: -13.5rem;
+    position: relative;
+    left: 1rem;
+    display:block!important;
+}
+}
+
+@media(min-width: 768px){
+.double-board__item.double-board__item--top-left.double-board__item--bg-left.paddingfortop{
+    background-image: none!important;
+}
+}
+
+</style>
+
+<div class="static-layout__content">
+    <h2 class="tag-title--level-1">Compra por categoría</h2>
+    <div class="double-board paddingbottomin">
+        <div class="double-board__item double-board__item--top-left double-board__item--bg-left paddingfortop">
+            <a href="/segundonivel/bebe#lactancia">
+                <picture>
+                    <!-- Mobile -->
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_lactancia_mobile.min.jpg" class="cocina-movil" media="(max-width: 762px)">
+                    <!-- wepb -> min.png -->
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_lactancia_mobile.jpg" class="cocina-movil" media="(max-width: 762px)">
+                    <!-- Desktop -->
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_lactancia.min.jpg"> <!-- wepb -> min.png -->
+                    <img src="/arquivos/2021_cemaco_categoriasrbebe_lactancia.jpg" alt="lactancia" class="cocina-web">
+                </picture>
+                
+                <img src="/arquivos/2021_cemaco_categoriasrbebe_lactancia_mobile.jpg" alt="lactancia"
+                    class="cocina-movil">
+                <div class="double-board__summary">
+                    <strong><span class="big">Lactancia</span><br></strong>
+                    <a class="button-simple secondary" href="/segundonivel/bebe#lactancia">Ver todo<svg
+                            class="svg-icon">
+                            <use href="#svg-icon-chevron-right"></use>
+                        </svg></a>
+            </a>
+        </div>
+    </div>
+    <div class="double-board__item double-board__item--top-left">
+        <div class="banner-doble">
+            <a href="/segundonivel/bebe#alimentacion">
+                <div class="double-board__summary-titulo font-white">
+                    <strong><span class="big">Alimentación</span><br></strong>
+                    <a class="button-simple secondary" href="/segundonivel/bebe#alimentacion">Ver todo<svg
+                            class="svg-icon">
+                            <use href="#svg-icon-chevron-right"></use>
+                        </svg></a>
+                </div>
+            </a>
+            <a href="/segundonivel/bebe#alimentacion">
+                <picture>
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_alimentacion_mobile.min.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_alimentacion_mobile.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_alimentacion.min.jpg"> 
+                    <img src="/arquivos/2021_cemaco_categoriasrbebe_alimentacion.jpg" alt="alimentos para bebes"
+                    class="">
+                </picture>
+    
+                <!--<img src="/arquivos/2021_cemaco_categoriasrbebe_alimentacion.jpg" alt="alimentos para bebes"
+                    class="cocina-web">
+                <img src="/arquivos/2021_cemaco_categoriasrbebe_alimentacion_mobile.jpg" alt="alimentos para bebes"
+                    class="cocina-movil">-->
+            </a>
+        </div>
+        <div class="banner-doble">
+            <a href="/segundonivel/bebe#panales">
+                <div class="double-board__summary-titulo font-white">
+                    <strong><span class="big">Pañales y accesorios</span><br></strong>
+                    <a class="button-simple secondary" href="/segundonivel/bebe#panales">Ver todo<svg class="svg-icon">
+                            <use href="#svg-icon-chevron-right"></use>
+                        </svg></a>
+                </div>
+            </a>
+            <a href="/segundonivel/bebe#panales">
+                
+                <picture>
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_panales_mobile.min.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_panales_mobile.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_panales.min.jpg"> 
+                    <img src="/arquivos/2021_cemaco_categoriasrbebe_panales.jpg" alt="panales y accesorios"
+                    class="">
+                </picture>
+                
+                <!--<img src="/arquivos/2021_cemaco_categoriasrbebe_panales.jpg" alt="panales y accesorios"
+                    class="cocina-web">
+                <img src="/arquivos/2021_cemaco_categoriasrbebe_panales_mobile.jpg" alt="panales y accesorios"
+                    class="cocina-movil">-->
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="double-board">
+    <div class="double-board__item double-board__item--top-left">
+        <a href="/segundonivel/bebe#cuidado">
+               <picture>
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_cuidado_mobile.min.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_cuidado_mobile.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_cuidado.min.jpg"> 
+                    <img src="/arquivos/2021_cemaco_categoriasrbebe_cuidado.jpg" alt="cuidado para bebes"
+                    class="">
+                </picture>
+            <!--<img src="/arquivos/2021_cemaco_categoriasrbebe_cuidado.jpg" alt="cuidado pora bebes" class="cocina-web">
+            <img src="/arquivos/2021_cemaco_categoriasrbebe_cuidado_mobile.jpg" alt="cuidado para bebes"
+                class="cocina-movil">-->
+            <div class="double-board__summary">
+                <strong><span class="big">Cuidado personal <br />y bienestar</span><br></strong>
+                <a class="button-simple secondary" href="/segundonivel/bebe#cuidado">Ver todo<svg class="svg-icon">
+                        <use href="#svg-icon-chevron-right"></use>
+                    </svg></a>
+        </a>
+    </div>
+</div>
+<div class="double-board__item double-board__item--top-left">
+    <a href="/segundonivel/bebe#seguridad">
+         <picture>
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_seguridad_mobile.min.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_seguridad_mobile.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_seguridad.min.jpg"> 
+                    <img src="/arquivos/2021_cemaco_categoriasrbebe_seguridad.jpg" alt="limpieza de bebes" class="">
+        </picture>
+        <!--<img src="/arquivos/2021_cemaco_categoriasrbebe_seguridad.jpg" alt="limpieza de bebes" class="cocina-web">
+        <img src="/arquivos/2021_cemaco_categoriasrbebe_seguridad_mobile.jpg" alt="limpieza de bebes"
+            class="cocina-movil">-->
+        <div class="double-board__summary font-white">
+            <strong><span class="big">Seguridad y limpieza</span><br></strong>
+            <a href="/segundonivel/bebe#seguridad" class="button-simple secondary">Ver todo<svg class="svg-icon">
+                    <use href="#svg-icon-chevron-right"></use>
+                </svg>
+            </a>
+        </div>
+    </a>
+</div>
+</div>
+
+<div class="double-board">
+    <div>
+        <a href="/segundonivel/bebe#ropa">
+            <picture>
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_ropa_mobile.min.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasrbebe_ropa_mobile.jpg" media="(max-width: 762px)">
+                    <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_07.min.png"> 
+                    <img src="/arquivos/2021_cemaco_images_bebe_07.jpg" alt="limpieza de bebes" class="">
+            </picture>
+            <!--<img src="/arquivos/2021_cemaco_images_bebe_07.png" alt="ropa para bebes" class="cocina-web">-->
+            <div class="double-board__summary double-board__ropa font-white mobile">
+                <strong><span class="big">Ropa</span><br></strong>
+                <a href="/segundonivel/bebe#ropa" class="button-simple tercery">Ver todo<svg class="svg-icon">
+                        <use href="#svg-icon-chevron-right"></use>
+                    </svg></a>
+        </a>
+    </div>
+    <div class="double-board__summary double-board__ropa font-white desktop">
+        <a href="/segundonivel/bebe#ropa">
+            <strong><span class="big">Ropa</span><br></strong>
+            <a href="/segundonivel/bebe#ropa" class="button-simple tercery">Ver todo<svg class="svg-icon">
+                    <use href="#svg-icon-chevron-right"></use>
+                </svg></a>
+        </a>
+    </div>
+
+</div>
+<!--a href="/segundonivel/bebe#ropa" class="p-relative">
+        <img src="/arquivos/2021_cemaco_images_bebe_07.jpg" alt="" class="banner-cocina cocina-web">
+        <img src="/arquivos/2021_cemaco_categoriasrbebe_ropa_mobile.jpg" alt="" class="banner-cocina cocina-movil">
+        <div class="p-absolute">
+            <strong class="cocina-movil"><span class="big">Ropa</span><br></strong>
+         <p class="cocina-movil button-simple secondary">Ver todo<svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p>
+    </div>
+</a-->
+</div>
+</div>
+
+<h2 class="tag-title--level-1 paddingtotitle">Más categorías</h2>
+<div class="item-wrapper-juguetes">
+    <div class="item-juguetes"><a href="/segundonivel/bebe#dormitorio">
+        <picture>
+            <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasbebe_dormitorio.min.jpg"> <!-- wepb -> min.png -->
+            <img src="/arquivos/2021_cemaco_categoriasbebe_dormitorio.jpg" alt="dormitorio">
+        </picture>
+        <p class="tag-subtitle">Dormitorio</p>
+        </a></div>
+    <div class="item-juguetes"><a href="/segundonivel/bebe#bano">
+        <picture>
+            <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasbebe_bano.min.jpg"> <!-- wepb -> min.png -->
+            <img src="/arquivos/2021_cemaco_categoriasbebe_bano.jpg" alt="entrenadores">
+        </picture>
+        
+            <p class="tag-subtitle">Baño y <br />entrenadores</p>
+        </a></div>
+    <div class="item-juguetes"><a href="/segundonivel/bebe#juguetes">
+         <picture>
+            <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasbebe_juguetes.min.jpg"> <!-- wepb -> min.png -->
+            <img src="/arquivos/2021_cemaco_categoriasbebe_juguetes.jpg" alt="juguetes">
+        </picture>
+        
+        
+            <p class="tag-subtitle">Juguetes</p>
+        </a></div>
+    <div class="item-juguetes"><a href="/segundonivel/bebe#actividad">
+        
+         <picture>
+            <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasbebe_actividad.min.jpg"> <!-- wepb -> min.png -->
+           <img src="/arquivos/2021_cemaco_categoriasbebe_actividad.jpg" alt="actividades">
+        </picture>
+        
+        
+            <p class="tag-subtitle">Actividades</p>
+        </a></div>
+    <div class="item-juguetes"><a href="/segundonivel/bebe#transporte">
+        
+         <picture>
+            <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasbebe_transporte.min.jpg"> <!-- wepb -> min.png -->
+            <img src="/arquivos/2021_cemaco_categoriasbebe_transporte.jpg" alt="transporte">
+        </picture>
+        
+       
+            <p class="tag-subtitle">Transporte</p>
+        </a></div>
+    <div class="item-juguetes"><a href="/segundonivel/bebe#embarazo">
+        
+         <picture>
+            <source type="image/webp" srcset="/arquivos/2021_cemaco_categoriasbebe_embarazo.min.jpg"> <!-- wepb -> min.png -->
+            <img src="/arquivos/2021_cemaco_categoriasbebe_embarazo.jpg" alt="embarazo y cuidado de la madre">
+        </picture>
+        
+        
+            <p class="tag-subtitle">Embarazo y <br />cuidado de la madre</p>
+        </a></div>
+</div>
+
+<picture>
+        <!-- Mobile -->
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_bannerintermedio_bebe_mobile.min.jpg" media="(max-width: 762px)">
+        <!-- wepb -> min.png -->
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_bannerintermedio_bebe_mobile.jpg" media="(max-width: 762px)">
+        <!-- Desktop -->
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_08.min.jpg"> <!-- wepb -> min.png -->
+        <img src="/arquivos//arquivos/2021_cemaco_images_bebe_08.jpg.png" alt="productos para bebes"
+    class="banner-cocina">
+</picture>
+
+<!-- <img src="/arquivos/2021_cemaco_images_bebe_08.jpg" alt="productos para bebes" class="banner-cocina cocina-web"> -->
+
+
+<h2 class="tag-title--level-1">Compra por edad</h2>
+<div class="juguetes-mas">
+
+    <div class="item-cocina"><a href="/1123?map=productClusterIds"> 
+    <picture>
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_09.min.jpg"> <!-- wepb -> min.png -->
+        <img src="/arquivos/2021_cemaco_images_bebe_09.jpg"
+                alt="bebes de 0 a 2 meses">
+    </picture>
+        
+       
+        </a>
+        <p class="tag-subtitle tag-subtitle-j">
+            <!--0-2 meses-->
+        </p>
+    </div>
+    <div class="item-cocina"><a href="/1125?map=productClusterIds">
+    <picture>
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_10.min.jpg"> <!-- wepb -> min.png -->
+        <img src="/arquivos/2021_cemaco_images_bebe_10.jpg"
+                alt="bebes de 0 a 2 meses">
+    </picture>
+    
+        <!--<img src="/arquivos/2021_cemaco_images_bebe_10.png"
+                alt="bebes de 3 a 5 meses"> -->
+                
+                </a>
+        <p class="tag-subtitle tag-subtitle-j">
+            <!--3-5 meses-->
+        </p>
+    </div>
+    <div class="item-cocina"> <a href="/1127?map=productClusterIds">
+      <picture>
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_11.png"> <!-- wepb -> min.png -->
+       <img src="/arquivos/2021_cemaco_images_bebe_11.png"
+                alt="bebes de 6 a 8 meses">
+    </picture>
+    
+    
+                
+    </a>
+        <p class="tag-subtitle tag-subtitle-j">
+            <!--6-8 meses-->
+        </p>
+    </div>
+    <div class="item-cocina"> <a href="/1128?map=productClusterIds"> 
+      <picture>
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_12.min.jpg"> <!-- wepb -> min.png -->
+        <img src="/arquivos/2021_cemaco_images_bebe_12.png"
+                alt="bebes de 9 a 11 meses">
+    </picture>
+    
+    
+    
+    </a>
+        <p class="tag-subtitle tag-subtitle-j">
+            <!--0-11 meses-->
+        </p>
+    </div>
+    <div class="item-cocina"> <a href="/1134?map=productClusterIds"> 
+      <picture>
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_13.min.jpg"> <!-- wepb -> min.png -->
+        <img src="/arquivos/2021_cemaco_images_bebe_13.png"
+                alt="bebes de 12 a 13 meses">
+    </picture>
+    
+    
+                
+                </a>
+        <p class="tag-subtitle tag-subtitle-j">
+            <!--12-13 meses-->
+        </p>
+    </div>
+    <div class="item-cocina"> <a href="/1135?map=productClusterIds">
+      <picture>
+        <source type="image/webp" srcset="/arquivos/2021_cemaco_images_bebe_14.min.jpg"> <!-- wepb -> min.png -->
+        <img src="/arquivos/2021_cemaco_images_bebe_14.png"
+                alt="bebes de 14 meses en adelante">
+    </picture>
+    
+     </a>
+        <p class="tag-subtitle tag-subtitle-j">
+            <!--14 meses-->
+        </p>
+    </div>
+</div>
+
+<!--div class="marcas-slider__wraper">
+    <h2 class="tag-title--level-2">Compra por marca</h2>
+    <div id="marcasSlider" class="marcas-slider">
+        <div class="marcas-slider__item"><a href="/1110?map=productClusterIds"><img src="https://vicom.mx/demos/x-cemaco/arquivos/images_juguetes-25.jpg" alt=""></a></div>
+        <div class="marcas-slider__item"><a href="1109?map=productClusterIds"><img src="https://vicom.mx/demos/x-cemaco/arquivos/images_juguetes-26.jpg" alt=""></a></div>
+        <div class="marcas-slider__item"><a href="1111?map=productClusterIds"><img src="https://vicom.mx/demos/x-cemaco/arquivos/images_juguetes-28.jpg" alt=""></a></div>
+		<div class="marcas-slider__item"><a href="1112?map=productClusterIds"><img src="https://vicom.mx/demos/x-cemaco/arquivos/images_juguetes-29.jpg" alt=""></a></div>
+        <div class="marcas-slider__item"><a href="1113?map=productClusterIds"><img src="https://vicom.mx/demos/x-cemaco/arquivos/images_juguetes-30.jpg" alt=""></a></div>
+    </div>
+</div>-->
+
+</div>

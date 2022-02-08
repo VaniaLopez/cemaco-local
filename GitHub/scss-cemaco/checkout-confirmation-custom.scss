@@ -1,0 +1,583 @@
+@charset "UTF-8";
+$is-checkout: true;
+// Settings
+@import "_settings/settings";
+$c-checkout-buttons: 	#737373;
+$c-checkout-bg:         $c-light-gray;
+$c-checkout-border:		$c-pastel-gray;
+$c-checkout-continue:	#008000;
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+// Base - Estilos por defecto
+@import "_base/typographies";
+@import "_base/base";
+@import "_base/icon-fonts";
+
+// Layout - Estilos para bloques principales
+@import "_layout/responsive";
+
+// Components - Estilos para componentes re-utilizables
+@import "_components/buttons";
+@import "_components/sprite-icons";
+
+@import "_checkout/header";
+@import "_checkout/footer";
+
+.bg-icon-dove-circle{
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuNSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojOTNENDAwOyIgZD0iTTE1LjcsMS41QzExLjgsMS42LDguMiwzLjIsNS41LDZjLTIuNywyLjgtNC4xLDYuNS00LDEwLjRjMC4xLDQuNCwyLjIsOC40LDUuNiwxMS4xCgkJYzEuMywxLDIuNywxLjgsNC4zLDIuM2MxLjYsMC41LDMuMywwLjgsNSwwLjdjMS43LDAsMy40LTAuNCw0LjktMWMxLjUtMC42LDIuOS0xLjQsNC4yLTIuNWMzLjMtMi44LDUuMi03LDUuMS0xMS40CgkJYy0wLjEtMy45LTEuNy03LjUtNC41LTEwLjJDMjMuMiwyLjgsMTkuNSwxLjQsMTUuNywxLjUgTTI4LjIsMTUuN2MwLjEsMy43LTEuNSw3LjItNC4zLDkuNWMtMSwwLjktMi4yLDEuNi0zLjUsMi4xCgkJYy0xLjMsMC41LTIuNywwLjgtNC4xLDAuOGMtMS40LDAtMi44LTAuMi00LjItMC42Yy0xLjMtMC40LTIuNS0xLjEtMy42LTEuOWMtMi45LTIuMy00LjYtNS43LTQuNy05LjNDMy44LDEzLDQuOSw5LjksNy4yLDcuNgoJCWMyLjItMi40LDUuMy0zLjcsOC41LTMuOGMzLjItMC4xLDYuMywxLjEsOC43LDMuNEMyNi44LDkuNCwyOC4xLDEyLjUsMjguMiwxNS43Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojOTNENDAwOyIgZD0iTTIzLjEsOS4zTDEyLjcsMjAuMWwtNC00Yy0wLjUtMC41LTEuMi0wLjUtMS43LDBjLTAuMiwwLjItMC4zLDAuNS0wLjMsMC44YzAsMC4zLDAuMSwwLjYsMC4zLDAuOAoJCWw0LjgsNC44YzAuMiwwLjIsMC41LDAuMywwLjgsMC4zaDBjMC4zLDAsMC42LTAuMSwwLjgtMC40bDExLjItMTEuN2MwLjQtMC41LDAuNC0xLjIsMC0xLjdDMjQuMyw4LjgsMjMuNSw4LjgsMjMuMSw5LjMiLz4KPC9nPgo8L3N2Zz4K');
+	background-repeat: no-repeat;
+	background-size: 13px 13px;
+}
+.order-placed-title{
+	font-size: 1.8rem;
+	font-weight: $font-bold;
+	line-height: 1.1;
+	padding: 0 0 1rem;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	text-transform: none;
+}
+
+html.billing-modal{
+	overflow: hidden;
+}
+.re-central{
+    max-width: 1280px;
+}
+
+#checkout-confirmation-header{
+	// padding-top: 20px;
+}
+
+#eproduct{
+	color: $c-primary;
+}
+
+#app-top,
+#app-container{
+	.w-70-ns{
+		@media screen and (min-width: 30em){
+			width: 90%;
+			max-width: 1280px;
+		}
+	}
+}
+
+#app-top{
+	.mb4{
+		h1{
+			text-transform: none;
+			font-size: 0;
+			line-height: 0;
+			font-weight: $font-bold;
+			color: $c-text;
+			&:before{
+				content: 'Pedido confirmado';
+				font-size: 2rem;
+				line-height: 1.1;
+			}
+		}
+		time{
+			color: $c-text;
+			font-size: 1.5rem;
+		}
+	}
+	.bg-washed-green{
+		.db.f4.fw6.mb4{
+			margin-bottom: 0;
+			span{
+				font-size: 0;
+				line-height: 0;
+				&:before{
+					content: 'Tu pedido ha sido confirmado con éxito';
+					font-size: 1.65rem;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+	.bg-washed-green{
+		background: $c-primary;
+		border: 0;
+		color: white;
+		border-radius: 10px;
+		p{
+			display: inline;
+			font-size: .95rem;
+			&:first-child{
+				span{
+					&:first-child{
+						font-size: 0;
+						line-height: 0;
+						&:before{
+							content: 'Enviaremos a tu correo';
+							font-size: .95rem;
+							line-height: 20px;
+						}
+					}
+					&:last-child{
+						font-size: 0;
+						line-height: 0;
+						&:before{
+							content: 'los detalles de tu compra';
+							font-size: .95rem;
+							line-height: 20px;
+						}
+					}
+				}
+			}
+			&:last-child{
+				margin-left: 5px;
+				font-size: 0;
+				line-height: 0;
+				&:before{
+					content: 'Estamos procesando el pago, en pocos minutos recibirás un email de confirmación.';
+					font-size: .95rem;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+#app-container{
+	a.blue{
+		color: $c-text;
+	}
+	h2{
+		@extend .order-placed-title;
+		padding-left: 20px;
+		margin-top: 1rem;
+		padding-top: 1rem;
+		span{
+			font-weight: $font-bold;
+			&#order-id{
+				font-weight: $font-regular;
+			}
+		}
+	}
+	h3,
+	h4{
+		text-transform: none;
+		letter-spacing: 0;
+		@extend .order-placed-title;
+		span{
+			text-transform: none;
+		}
+	}
+	.cf{
+		position: relative;
+	}
+	.cconf-profile,
+	.cconf-payment,
+	.cconf-summary,
+	.cconf-payment + .w-two-thirds-l{
+		border: 1px solid $c-checkout-border;
+		border-radius: 10px;
+		padding: 20px;
+		min-height: 200px;
+		margin-right: 20px;
+		width: calc(33.3333% - 13.33px);
+		@include mediaTo(md){
+			width: 100%;
+			margin: 0 0 15px;
+		}
+	}
+	.cconf-summary,
+	.cconf-payment + .w-two-thirds-l{
+		margin-right: 0;
+	}
+	.cconf-payment + .w-two-thirds-l{
+		border: 0;
+		padding: 20px;
+		&:before{
+			content: 'Resumen de envío';
+			display: block;
+			@extend .order-placed-title;
+		}
+		& > .w-50-l{
+			width: 100%;
+		}
+		@include mediaFrom(lg){
+			position: absolute;
+			right: 0;
+			min-height: auto;
+			overflow: visible;
+		}
+	}
+	div.bg-near-white{
+		background: white;
+		border: 1px solid $c-checkout-border;
+		border-radius: 10px;
+		padding: 20px;
+	}
+	div.bg-light-gray{
+		background: white;
+	}
+	.cf.pv4-ns{
+		& > div{
+			min-height: 240px;
+			&.w-third-l{
+				width: calc(33.33% - 13.33px);
+				margin-right: 20px;
+				padding: 0;
+				@include mediaTo(md){
+					width: 100%;
+					margin: 0 0 15px;
+				}
+				&.cconf-summary{
+					padding: 20px;
+				}
+			}
+			&.w-two-thirds-l{
+
+			}
+		}
+	}
+	.cf.mt4.mt0-ns.mb3{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		a{
+			font-size: 1rem;
+			font-weight: $font-bold;
+			text-align: center;
+			min-width: 250px;
+		}
+	}
+	a.cconf-myorders-button{
+		&:before{
+			content: 'Mis Pedidos';
+		}
+		span{
+			display: none;
+		}
+	}
+	a.cconf-continue-button{
+		&:before{
+			content: 'Nueva compra';
+		}
+		span{
+			display: none;
+		}
+	}
+}
+
+#app-container{
+	.ph3-ns{
+		.cf.pv4-ns{
+			.fl-l.w-third-l.w-70-m{
+				.bg-near-white{
+					h4.mt0.mb3{
+						span.db.mb1.ttu.fw4.f4{
+							span{
+								font-size: 0;
+								line-height: 0;
+								&:before{
+									content: 'Dirección de entrega';
+									@extend .order-placed-title;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.show-billing-modal{
+		background: $c-primary;
+		color: white;
+		border-radius: 2em;
+		padding: 1em 3em;
+		width: auto;
+		line-height: 1;
+		border: none;
+		font-weight: $font-light;
+		letter-spacing: 0.05em;
+		transition: all .3s;
+		&:hover{
+			background: lighten($c-primary, 5);
+		}
+		&:hover,
+		&:active{
+			background: lighten($c-primary, 10);
+		}
+	}
+}
+
+#invoiced-message{
+	float: none;
+	flex: none;
+	clear: both;
+	text-align: left;
+	width: 410px;
+	margin: auto;
+}
+
+#billing-form{
+	&.sending{
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+			background: rgba(white, .5) url('/arquivos/loading.gif') center 90% no-repeat;
+		}
+	}
+}
+
+.overlay{
+	position: fixed;
+	display: block;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(#000, .7);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s;
+	z-index: 1000;
+	.billing-modal &{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.modal-billing{
+	display: block;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 96%;
+	max-width: 480px;
+	// height: 82%;
+	// max-height: 500px;
+	transform: translate(-50%,-50%);
+	background: white;
+	box-shadow: 5px 5px 20px rgba(#000, .5);
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 30px;
+	overflow: hidden;
+	transition: all .6s;
+	z-index: 1001;
+	font-size: .85rem;
+	.row{
+		margin-top: 1em;
+	}
+	input,
+	select{
+		border-radius: 30px;
+		width: 100%;
+		height: 36px;
+	}
+	select{
+		margin-top: 5px;
+	}
+	h2{
+		color: $c-primary;
+		@include mediaFrom(md){
+			padding: 15px 30px;
+		}
+		&:after{
+			content: '';
+			width: 100px;
+			height: 100px;
+			display: block;
+			margin: 90px auto 0 auto;
+			@extend .bg-icon-dove-circle;
+			background-size: cover;
+		}
+	}
+	.billing-modal &{
+		opacity: 1;
+		visibility: visible;
+	}
+	&__header{
+		border-bottom: 1px solid $c-primary;
+		background: $c-primary;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding: 1em 2.5em 1em 1.5em;
+		@media (max-width: 479px){
+			flex-wrap: wrap;
+		}
+		svg{
+			width: 125px;
+			height: 30px;
+			margin-right: 10px;
+			order: 1;
+		}
+		h3{
+			order: 0;
+			@media (max-width: 479px){
+				@include flex-width(100%);
+			}
+			color: white;
+			font-size: 1.65em;
+			margin: 0;
+			padding: 0;
+		}
+
+	}
+	&--close{
+		cursor: pointer;
+		margin: 1em auto;
+	}
+	&__close{
+		display: none;
+		position: absolute;
+		right: 15px;
+		top: 40%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		width: 24px;
+		height: 24px;
+		line-height: 22px;
+		text-align: center;
+		background: none;
+		border-radius: 50%;
+		text-indent: 1px;
+		cursor: pointer;
+		color: $c-light-gray;
+		transition: all .3s;
+		font-size: 0;
+		font-weight: $font-light;
+		&:before,
+		&:after{
+			content: '';
+			display: block;
+			width: 13px;
+			height: 1px;
+			background: white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:before{
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&:after{
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		&:hover{
+			color: white;
+		}
+	}
+	&__consumidor{
+        input[type="checkbox"]{
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            margin-top: 0;
+        }
+        span{
+            font-size: 13px;
+            vertical-align: middle;
+        }
+	}
+	&__body{
+		padding: 1.5em;
+		overflow: overlay;
+		max-height: 600px;
+	}
+	.row{
+		margin-left: -8px;
+		margin-right: -8px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.form__input{
+		appearance: none;
+		display: block;
+		width: 100%;
+		border: 1px solid darken($c-light-gray, 10);
+		height: 36px;
+		padding: 0 10px;
+		margin-bottom: 0;
+		box-sizing: border-box;
+		box-shadow: none!important;
+		outline: none!important;
+	}
+	.col-lg-6{
+		padding: 8px;
+		width: 100%;
+		flex-basis: 100%;
+		@media (min-width: 480px){
+			width: 50%;
+			flex-basis: 50%;
+		}
+	}
+	.col-xs-12,
+	.col-lg-12{
+		padding: 8px;
+		width: 100%;
+		flex-basis: 100%;
+	}
+	#cp{
+		max-width: 120px;
+	}
+	.error{
+		color: $c-invalid;
+		font-size: .75em;
+	}
+	.btn-primary{
+		border: 0;
+		border-radius: 30px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: $font-title;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 80px;
+		background: $c-primary;
+		transition: all .3s;
+		outline: none!important;
+		&:hover,
+		&:focus{
+			background: darken($c-primary, 5);
+		}
+		&:active{
+			background: lighten($c-primary, 5);
+		}
+	}
+}
+
+
+// Gift Message
+.cconf-attachment-message{
+	.ml2{
+		margin-left: 0;
+	}
+	& > td{
+		padding: 0 0 1rem 0;
+	}
+	.gift-message{
+		border: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		font-size: .8rem;
+		line-height: 1.1;
+		color: $c-dusty-gray;
+	}
+}
+
+.store-locator-element{
+    display: none !important;
+}
+p.js-close_modal.modal-billing--close.modal-billing__consumidor{
+	font-size: 0.98rem;
+}

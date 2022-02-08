@@ -1,0 +1,46 @@
+<!-- dd0dd1da-0641-436c-b6b0-ba5adb751ceb -->
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($pName = $product.HtmlEscapedName)
+
+<div class="mdr__shelf-item">
+	<div class="mdr__shelf-item-image">
+		<a href="$uri">$product.GetImageTag(60,60)</a>
+	</div>
+	<div class="mdr__shelf-item-product">
+        <h3 class="mdr__shelf-item-name">$product.SkuName</h3>
+    </div>
+	<div class="mdr__shelf-item-price">
+		#if ($product.IsInStock)
+			<strong>Precio</strong>
+			#if ($product.HasBestPrice)
+				<span class="price-old">$product.ListPrice</span>
+				<span class="price-new promo">$product.BestPrice</span>
+			#else
+				<span class="price-new">$product.BestPrice</span>
+			#end
+		#else
+			<span>Sin stock</span>
+		#end
+    </div>
+    <div class="mdr__shelf-item-wished" data-skuid="$idSku"><strong>Solicitado</strong><span>$product.GiftListWishedAmount</span></div>
+    <div class="mdr__shelf-item-purchased" data-skuid="$idSku"><strong>Comprado</strong><span>$product.GiftListPurchasedAmount</span></div>
+    <div class="mdr__shelf-item-needed" data-skuid="$idSku"><strong>Aún se necesitan:</strong><span>X</span></div>
+    <div class="mdr__shelf-item-qty" data-skuid="$idSku">
+    	<strong>Cantidad:</strong>
+    	<div class="mdr__shelf-item-qty__wrapper">
+    		<span class="mdr__shelf-item-qty__rest">-</span>
+    		<input class="mdr__shelf-item-qty-input" value="0" type="text">
+    		<span class="mdr__shelf-item-qty__plus">+</span>
+    	</div>
+    </div>
+    <div class="mdr__shelf-item-action">
+        #if ($product.IsInStock)
+            <a href="$uri" class="mdr__shelf-item-buy" data-id="$id" data-skuid="$idSku"><svg class="svg-icon"><use href="#svg-icon-cart"></use></svg>Agregar a mi carreta</a>
+        #end
+    </div>
+	<!-- <div class="mdr__shelf-item-wished" data-skuid="$idSku"><strong>Deseados</strong><span>$product.GiftListWishedAmount</span></div>
+	<div class="mdr__shelf-item-needed" data-skuid="$idSku"><strong>Aún se necesitan</strong><span>X</span></div> -->
+	<div style="display: none;" class="mdr__shelf-item-department" id="mdr__shelf-item-department-$idSku" data-skuid="$idSku">$product.DepartmentName</div>
+</div>

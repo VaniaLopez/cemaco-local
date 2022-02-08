@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+    <vtex:contentPlaceHolder id="title" />
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-styles" />
+    <vtex:contentPlaceHolder id="page-styles" />
+    <link href="https://vicom.mx/demos/x-cemaco/arquivos/css-js_sucursales.css" rel="stylesheet" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header" />
+
+    <main role="main" class="page-main--internal-page">
+        <div class="row">
+            <section>
+                <div class="re-cien">
+                    <div class="row re-central margin-b-80">
+                        <div class="col-lg-12 div-multimedia">
+                            <h1 class="margin-30 text-center tag-other-products">Sucursales</h1>
+                        </div>
+                        <div class="col-lg-4">
+                            <p>Selecciona un estado para ver la información</p>
+                            <select name="Estado" id="Estado">
+                                <option value="">Seleccione Estado</option>
+                                <option value="CIUDAD DE MÉXICO">CIUDAD DE MÉXICO</option>
+                                <option value="ESTADO DE MÉXICO">ESTADO DE MÉXICO</option>
+                                <option value="JALISCO">JALISCO</option>
+                                <option value="QUINTANA ROO">QUINTANA ROO</option>
+                                <option value="VERACRUZ">VERACRUZ</option>
+                            </select>
+                            <div class="direccion-sucursal">
+                            </div>
+                            <div class="sucursal-list" data-height="parent">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-8 sucursales-map">
+                            <div id="mapa" class="re-cien bg-dark" style="min-height: 470.857px; position: relative; overflow: hidden;"></div>
+                        </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-scripts" />
+    <vtex:contentPlaceHolder id="page-scripts" />
+    <script type="text/javascript" src="https://vicom.mx/demos/x-cemaco/arquivos/css-js_sucursales.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv7_IvFTI1Lgy7S4-Z8lLYSb4FpQPOu1g"></script>
+</body>
+</html>

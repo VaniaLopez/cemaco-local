@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+	xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+	<head>
+		<title>CEMACO</title>
+		<vtex:metaTags />
+		<vtex:template id="xCemaco-meta-tags" />
+		<vtex:template id="xCemaco-meta-microdatos" />
+		<vtex:template id="xCemaco-styles" />
+		<link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+		<link rel="stylesheet" href="https://vicom.mx/demos/x-cemaco/arquivos/css-js_giftlist-product.css" />
+		<vtex:contentPlaceHolder id="page-styles" />
+		<vtex.cmc:xCemacoFallback />
+	</head>
+	<body>
+		<vtex:template id="xCemaco-header" />
+
+		<main role="main" class="page-main--internal-page">
+			<div class="static-layout__content static-layout__mesa--manage">
+				<vtex:contentPlaceHolder id="Banner01" />
+				<vtex:contentPlaceHolder id="InternalMenu" />
+				<vtex:contentPlaceHolder id="Content01" />
+				<div class="re-central">
+					<div class="mdr__shelf-info--wrapper">
+						<p class="mdr__shelf-info-txt"><span id="mdr__shelf-info-message">Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit. Nam nec augue consequat, vulputate dui et, egestas lectus.
+								Donec ornare elementum lorem ac tincidunt. Nam sit amet magna nec lorem sodales
+								vestibulum quis et massa. Quisque tellus orci, convallis ac faucibus vel, elementum
+								vitae est. Vivamus nunc lacus, tristique a urna ut, gravida lobortis tellus. Curabitur
+								et accumsan turpis. Maecenas fermentum aliquam nulla, ac ullamcorper purus facilisis
+								dapibus. Nullam ultrices urna vitae condimentum pharetra. Aliquam feugiat nibh mi, sit
+								amet vehicula diam egestas eu.</span></p>
+
+						<div class="mdr__shelf-info-member-wrapper">
+							<p class="mdr__shelf-info-member">Nombres: <span
+									id="mdr__shelf-info-member1-name">Nombre</span></p>
+							<p class="mdr__shelf-info-member">Apellidos: <span
+									id="mdr__shelf-info-member1-lastname">Apellidos</span></p>
+						</div>
+						<div class="mdr__shelf-info-member-wrapper">
+							<p class="mdr__shelf-info-member">Nombres: <span
+									id="mdr__shelf-info-member2-name">Nombre</span></p>
+							<p class="mdr__shelf-info-member">Apellidos: <span
+									id="mdr__shelf-info-member2-lastname">Apellidos</span></p>
+						</div>
+					</div>
+					<div class="mdr__shelf-giftcard--wrapper">
+						<h2 class="mdr__shelf-giftcard-info-title">
+							Listado de regalos
+						</h2>
+						<div class="mdr__shelf-giftcard-icon--wrapper">
+							<div class="mdr__shelf-giftcard-icon">
+								<img src="/arquivos/images-mesa_boda-brand.jpg" alt="Regalar una tarjeta de regalo" />
+							</div>
+						</div>
+						<div class="mdr__shelf-giftcard-info">
+							<h3 class="mdr__shelf-giftcard-info-subtitle">Certificado de regalo</h3>
+							<p>
+								Los novios agradecen certificados de regalo por cualquier monto.<br />
+								Si deseas agregar diferentes cantidades, haz click en el ícono de más (+) <br />
+								para variar y ajustar tus montos
+							</p>
+						</div>
+						<div class="mdr__shelf-giftcard-action--wrapper">
+							<!-- <select id="mdr__shelf-giftcard-qty">
+						<option value="">Cantidad</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+                    </select> -->
+							<div class="mdr__shelf-giftcard-qty-wrapper">
+								<span class="dec qtybutton">-</span>
+								<input type="text" id="mdr__shelf-giftcard-qty" value="1" />
+								<span class="inc qtybutton">+</span>
+							</div>
+							<div class="mdr__shelf-giftcard-action">
+								<select id="mdr__shelf-giftcard-amount">
+									<option value="">Monto</option>
+								</select>
+								<a href="#" id="mdr__shelf-giftcard-buy" class="button-flat gray">Agregar a carreta</a>
+							</div>
+						</div>
+					</div>
+					<div class="mdr__shelf-item--titles">
+						<div class="mdr__shelf-item-title product"><span>Producto</span></div>
+						<div class="mdr__shelf-item-title price"><span>Precio</span></div>
+						<div class="mdr__shelf-item-title wished"><span>Solicitado</span></div>
+						<div class="mdr__shelf-item-title needed"><span>Aún se necesita</span></div>
+						<div class="mdr__shelf-item-title quantity"><span>Cantidad</span></div>
+						<div class="mdr__shelf-item-title add-to-cart"><span>Agregar a la carretilla</span></div>
+					</div>
+					<div class="mdr__shelf-item--wrapper">
+						<vtex.cmc:giftListShelfPaged layout="dd0dd1da-0641-436c-b6b0-ba5adb751ceb" itemCount="48"
+							columnCount="48" />
+					</div>
+				</div>
+				<vtex:contentPlaceHolder id="Content02" />
+				<div id="GiftListInfoV2--wrapper">
+					<vtex.cmc:GiftListInfoV2 />
+				</div>
+				<div class="mdr__shelf-item-buy-out-list re-central">
+					<svg class='svg-icon'>
+						<use href='#svg-icon-bodas-logo'></use>
+					</svg>
+					<p>
+						Si quieres regalarle a los novios un producto diferente a los que tienen en su listado, ¡no te
+						preocupes! <br />
+						Tenemos una gran variedad de productos para elegir a nuestro catálogo en línea que pueden ser de
+						tu agrado.
+					</p>
+					<a href="/" class="button-flat gray">Comprar fuera del listado</a>
+				</div>
+			</div>
+		</main>
+
+		<vtex:template id="xCemaco-footer" />
+		<vtex:template id="xCemaco-svg-sprite" />
+		<vtex:template id="xCemaco-scripts" />
+		<!-- Plugins -->
+		<script src="/arquivos/plugins_slick_slick.min.js"></script>
+		<!-- Static Pages -->
+		<script src="https://vicom.mx/demos/x-cemaco/arquivos/css-js_giftlist-shelf.js"></script>
+		<vtex:contentPlaceHolder id="page-scripts" />
+	</body>
+</html>

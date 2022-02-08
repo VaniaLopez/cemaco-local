@@ -1,0 +1,107 @@
+/*--------------------Notify Me--------------------*/
+.notifyme{
+    display: none !important;
+}
+.out-of-stock{
+    &.product-detail__price,
+    &.product-detail__sku-selection,
+    &.product-detail__cta,
+    &.product-detail__quantity,
+    &.product-detail__add-to-wishlist,
+    &.product-detail__floating{
+        display: none !important;
+    }
+    &.product-detail__action{
+        width: 100%;
+    }
+}
+.avisame-wrapper{
+    @include font-size;
+    margin-top: 2em;
+    body.is_only_in_store &{
+        display: none!important;
+    }
+    .notifyme-title{
+        @include padding-v(0.5,0.5, 1em);
+        @include font-size(1.5);
+        font-weight: $font-bold;
+        line-height: 1;
+        color: $c-primary;
+        + p{
+            margin-bottom: 1em;
+            font-size: rem(14);
+        }
+    }
+    .avisame-form{
+        color: $c-text;
+        @media screen and (min-width: $screen-sm-min){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .control-wrapper{
+            margin-bottom: 15px;
+            @media screen and (min-width: $screen-sm-min){
+                width: 47.5%;
+            }
+            @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max){
+                width: 32%;
+            }
+            &--send{
+                width: 100%;
+                margin-top: 0;
+                margin-bottom: 1em;
+                @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max){
+                    width: 32%;
+                }
+            }
+            input,
+            button{
+                text-align: center;
+            }
+        }
+        .success,
+        .error{
+            text-align: center;
+        }
+        .error{
+            margin-top: 0.25em;
+            font-size: 0.8em;
+        }
+        .notifyme-button-ok{
+            width: 100%;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            font-weight: $font-bold;
+            text-shadow: none;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+    }
+    .avisame-error{
+        color: $c-invalid;
+    }
+    .avisame-loading{
+        width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .privacy-wrapper{
+        font-size: 0.9em;
+        a{
+            text-decoration: underline;
+            color: $c-primary;
+        }
+    }
+}
+.produto{
+    input.notifyme-client-name,
+    input.notifyme-client-email{
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 0;
+    }
+}

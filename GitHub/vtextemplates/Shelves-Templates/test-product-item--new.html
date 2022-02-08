@@ -1,0 +1,102 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($pName = $product.HtmlEscapedName)
+
+<div class="product-item__wrapper" data-height="siblings">
+    <div class="product-item">
+        <figure class="product-item__figure">
+            <a href="$uri" class="product-item__main-image contenedor-img dl-product-link" data-id="$id" data-skuid="$idSku">
+                $product.GetImageTag(400,400)
+                <div class="product-item__secondary-image contenedor-img">
+                    #if ($product.GetImageTag(400,400,"2")!="")
+                        $product.GetImageTag(400,400,"2")
+                    #else
+                        #if ($product.GetImageTag(400,400,"3")!="")
+                            $product.GetImageTag(400,400,"3")
+                        #else
+                            #if ($product.GetImageTag(400,400,"4")!="")
+                                $product.GetImageTag(400,400,"4")
+                            #end
+                        #end
+                    #end
+                </div>
+                <div class="product-item__flag--discount flag-discount-$product.ListPriceMinusBestPriceInPercent">
+                    $product.ListPriceMinusBestPriceInPercent
+                </div>
+            </a>
+        </figure>
+        <div class="product-item__category">$product.CategoryName</div>
+                 <div class="product-item__department">$product.DepartmentName</div>
+        <em class="product-item__brand-name">$product.BrandName</em>
+        <div class="product-item__caption">
+            <h2 class="product-item__name">
+                <a href="$uri">$pName</a>
+            </h2>
+        </div>
+        <div class="product-item__rating">
+
+            <div class="yotpo bottomLine" data-product-id="$idSku"></div>
+
+        </div>
+        <div class="product-item__price" data-id="$id">
+            #if ($product.HasBestPrice)
+            <span class="price-new price-promo">$product.BestPrice</span>
+            <span class="price-old">$product.ListPrice</span>
+            #else
+            <span class="price-new">$product.BestPrice</span>
+            #end
+        </div>
+        <div class="product-item__flags--discounts">
+            $product.DiscountHightLight
+        </div>
+        <div class="product-item__cta">
+            <div class="product-item__skus" data-id="$id" data-sku="$idSku">
+                <div class="product-item__size" id="product-item__size-$id"></div>
+            </div>
+            <div class="product-item__action">
+                #if ($product.IsInStock)
+                <a href="$uri" class="button-flat secondary js-buy-plp" data-id="$id" data-skuid="$idSku"><svg class="svg-icon"><use href="#svg-icon-cart-plus"></use></svg>Agregar a mi carreta</a>
+                <a href="$uri" class="js-buy-pdp">Ver detalles</a>
+                #else
+                <a href="$uri" class="button-lineal primary dl-product-link" data-skuid="$idSku">Consultar</a>
+                #end
+            </div>
+        </div>
+        <div class="product-item__flags--collections">
+            $product.HightLight
+        </div>
+        <div class="product-item__flags--attributes">
+            $product.ProductField(303)
+            $product.ProductField(304)
+        </div>
+        <div class="product-item__wishlist">
+            <button class="product-item__wishlist__trigger" data-id="$id">
+                <svg class="svg-icon-wishlist">
+                    <use xlink:href="#svg-icon-wishlist"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="product-item__quick-view">
+            <button class="product-item__quick-view__trigger" data-id="$id" data-sku="$idSku" data-toggle="modal" data-target="#productSingleModal">
+                Vista rápida
+                <svg class="svg-icon">
+                    <use xlink:href="#svg-icon-quick-view"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="hide hidden" style="display:none;">
+    <div class="dataLayer-info" id="dataLayer-info-$id" data-id="$id" data-skuid="$idSku">
+        <div id="dl-name-$idSku">$product.SkuName</div>
+        #if ($product.IsInStock)
+        <div id="dl-price-$idSku">$product.BestPrice</div>
+        #else
+        <div id="dl-price-$idSku">0</div>
+        #end
+        <div id="dl-brand-$idSku">$product.Brand</div>
+        <div id="dl-cat-$idSku">$product.CategoryName</div>
+        <div id="dl-variant-$idSku"></div>
+    </div>
+</div>

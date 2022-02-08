@@ -1,0 +1,49 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
+// @import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+// Modals - needs bootstrap.js
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/modal";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        .border-#{$breakpoint}-start-none {
+            border-left:none !important;
+        }
+        .border-#{$breakpoint}-end-none {
+            border-right:none !important;
+        }
+        .border-#{$breakpoint}-top-none {
+            border-top:none !important;
+        }
+        .border-#{$breakpoint}-bottom-none {
+            border-bottom:none !important;
+        }
+        @for $size from 1 through 1{
+            .border-#{$breakpoint}-start-#{$size} {
+                border-left:1px solid $gray-300 !important;
+            }
+            .border-#{$breakpoint}-end-#{$size} {
+                border-right:1px solid $gray-300 !important;
+            }
+            .border-#{$breakpoint}-top-#{$size} {
+                border-top:1px solid $gray-300 !important;
+            }
+            .border-#{$breakpoint}-bottom-#{$size} {
+                border-bottom:1px solid $gray-300 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+  lang="es-es"
+>
+  <head>
+    <title>CEMACO</title>
+    <vtex:metaTags />
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-styles" />
+    <vtex:template id="xCemaco-styles-user" />
+    <link rel="stylesheet" href="/arquivos/css-js_static-pages.css" />
+    <link rel="stylesheet" href="/arquivos/css-js_giftlist-manage.css" />
+    <vtex:contentPlaceHolder id="page-styles" />
+    <vtex.cmc:xCemacoFallback />
+  </head>
+  <body>
+    <vtex:template id="xCemaco-header" />
+
+    <main role="main" class="page-main--internal-page">
+      <div class="static-layout__content static-layout__mesa--manage">
+        <vtex:contentPlaceHolder id="Banner01" />
+        <vtex:contentPlaceHolder id="InternalMenu" />
+        <vtex:contentPlaceHolder id="Content01" />
+        <div class="re-central">
+          <div class="row">
+            <div class="col-xl-3">
+              <vtex:template id="xCemaco-account-nav" />
+            </div>
+            <div class="col-xl-9">
+              <div class="mdr__manage-item--wrapper"></div>
+              <div class="mdr__manage-item--create">
+                <h3 id="mdr__manage-create-title">
+                  Aún no tienes un registro de regalos. ¡Crea tu listado hoy!
+                </h3>
+                <div class="text-center">
+                  <div class="mdr__manage-item-button">
+                    <a href="/mesa-de-regalos/boda/crea">
+                      <img src="/arquivos/images-mdr-boda.png" alt="Boda" />
+                    </a>
+                    <a
+                      href="/mesa-de-regalos/boda/crea"
+                      class="mdr__manage-item-link-text"
+                      >Boda</a
+                    >
+                  </div>
+                  <div class="mdr__manage-item-button">
+                    <a href="/mesa-de-regalos/bebe/crea">
+                      <img src="/arquivos/images-mdr-bebe.png" alt="Bebé" />
+                    </a>
+                    <a
+                      href="/mesa-de-regalos/bebe/crea"
+                      class="mdr__manage-item-link-text"
+                      >Bebé</a
+                    >
+                  </div>
+                    <div class="mdr__manage-item-button">
+								<a href="/mesa-de-regalos/crea">
+									<img src="/arquivos/images-mdr-generica.png" alt="Celebración" />
+								</a>
+								<a href="/mesa-de-regalos/crea" class="mdr__manage-item-link-text">Celebración</a>
+					</div>
+					<div class="mdr__manage-item-button">
+								<a href="/mesa-de-regalos/ninos/crea">
+									<img src="/arquivos/images-mdr-ninos.png" alt="Piñata" />
+								</a>
+								<a href="/mesa-de-regalos/ninos/crea" class="mdr__manage-item-link-text">Piñata</a>
+					</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="GiftListManagerV2--wrapper">
+          <vtex.cmc:GiftListManagerV2 />
+        </div>
+        <vtex:contentPlaceHolder id="Content02" />
+      </div>
+    </main>
+
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <vtex:template id="xCemaco-scripts" />
+    <!-- Plugins -->
+    <script src="/arquivos/plugins_slick_slick.min.js"></script>
+    <!-- Page Scripts -->
+    <script src="/arquivos/css-js_giftlist-manage.js"></script>
+    <script src="/arquivos/css-js_user-pages.js"></script>
+    <vtex:contentPlaceHolder id="page-scripts" />
+
+    <script type="text/html" id="template--mdr__manage-item">
+      <div class="mdr__manage-item" id="mdr__manage-item">
+      	<div class="mdr__manage-item--left">
+      		<div class="mdr__manage-item-caption">
+      			<div class="mdr__manage-item-title" id="mdr__manage-item--title"></div>
+      			<div class="mdr__manage-item-subtitle event">Evento: <span id="mdr__manage-item--event"></span></div>
+      			<div class="mdr__manage-item-subtitle date">Fecha: <span id="mdr__manage-item--date"></span></div>
+      		</div>
+      	</div>
+      	<div class="mdr__manage-item--right">
+      		<div class="mdr__manage-item-action1--wrapper">
+      			<a href="#" id="mdr__manage-item-share" title="Compartir" class="mdr__manage-item-action share"><svg class="svg-icon-share"><use href="#svg-icon-share"></use></svg></a>
+      			<a href="#" id="mdr__manage-item-edit" title="Editar lista" class="mdr__manage-item-action edit"><svg class="svg-icon-edit"><use href="#svg-icon-edit"></use></svg></a>
+      			<a href="#" id="mdr__manage-item-delete" title="Eliminar lista" class="mdr__manage-item-action remove"><svg class="svg-icon-remove"><use href="#svg-icon-remove"></use></svg></a>
+      		</div>
+      		<div class="mdr__manage-item-action2--wrapper">
+      			<!-- <a href="#" id="mdr__manage-item-view" class="button-flat gray view">Ver lista</a>
+      			<a href="#" id="mdr__manage-item-add" class="button-flat gray add">Agregar productos</a> -->
+      			<a href="#" id="mdr__manage-item-manage" class="button-flat boda-primary manage">Administra</a>
+      		</div>
+      		<div class="mdr__manage-item-logo">
+      			<span id="mdr__manage-item-img"></span>
+      		</div>
+      		<!-- <div class="mdr__manage-item-link">
+      			<a href="#" id="mdr__manage-item-copy"><span>Copiar enlace</span> <svg class="svg-icon svg-icon-chevron-right"><use href="#svg-icon-chevron-right"></use></svg></a>
+      		</div> -->
+      	</div>
+      </div>
+    </script>
+
+    <script type="text/html" id="template--mdr__modal-share-sm">
+      <div class="mdr__modal-share-sm--wrapper">
+      	<div class="mdr__modal-share-sm-title">Compartir por:</div>
+      	<div class="mdr__modal-share-sm-icons">
+      		<a href="#" class="mdr__modal-share-sm-item wa" target="_blank"><svg class="svg-icon-whatsapp"><use href="#svg-icon-whatsapp"></use></svg></a>
+      		<a href="#" class="mdr__modal-share-sm-item fb" target="_blank"><svg class="svg-icon-facebook"><use href="#svg-icon-facebook"></use></svg></a>
+      		<a href="#" class="mdr__modal-share-sm-item tw" target="_blank"><svg class="svg-icon-twitter"><use href="#svg-icon-twitter"></use></svg></a>
+      	</div>
+      	<div class="mdr__modal-share-sm-title">Copiar enlace</div>
+      	<input type="text" class="mdr__modal-share-sm-input" readonly="readonly" />
+      </div>
+    </script>
+
+    <div style="display: none;" id="mdr__logos--wrapper">
+      <img
+        src="/arquivos/images-trabaja_cemaco.png"
+        alt="CEMACO"
+        class="image__logo-generico"
+      />
+      <img
+        src="/arquivos/images-trabaja_jugueton.png"
+        alt="jugueton"
+        class="image__logo-jugueton"
+      />
+      <img
+        src="/arquivos/images-trabaja_bebejugueton.png"
+        alt="bebéjuegueton"
+        class="image__logo-bebejugueton"
+      />
+      <img
+        src="/arquivos/images-logos-bodas-cemaco.png"
+        alt="bodascemaco"
+        class="image__logo-boda"
+      />
+    </div>
+    <div class="confirmation-overlay"></div>
+    <div class="confirmation-modal">
+      <h3 class="confirmation-title">¿Realmente desea eliminar la lista?</h3>
+      <p class="confirmation-message">
+        Todos los participantes y productos elegidos también serán eliminados
+      </p>
+      <div class="confirmation-action">
+        <a href="#" class="confirmation-no btn-no button-flat gray">No</a>
+        <a href="#" class="confirmation-yes btn-yes button-flat tertiary">Sí</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+/*--------------------Newsletter Subscribe--------------------*/
+.newsletter-subscribe{
+    &{
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        font-size: em(13);
+        @include mediaFrom(lg){
+            max-width: 300px;
+        }
+        @include mediaFrom(xl){
+            max-width: 400px;
+        }
+    }
+    &__wrapper{
+        width: 100%;
+        @include padding-v(1,1,1em);
+        border-top:1px solid $c-pastel-gray;
+        position: relative;
+        z-index: $z-footer;
+        @include mediaFrom(lg){
+            @include padding-v(2,2,1em);
+        }
+    }
+    &__summary{
+        margin-bottom: 1em;
+    }
+    &__note{
+        margin-bottom: 0.5em !important;
+        font-size: rem(16);
+        font-weight: $font-bold;
+        letter-spacing: 1px;
+        color: inherit;
+    }
+    &__form{
+        color: inherit;
+        input[type="text"]{
+            height: 37px;
+            border: 1px solid $c-pastel-gray;
+            border-radius: 30px;
+            @include padding-h(30, 60);
+            font-size: inherit;
+            letter-spacing: 1px;
+            color: inherit;
+            @include placeholder($c-dusty-gray);
+            color: $c-dusty-gray;
+            background-color: white;
+            font-size: rem(11);
+            &::placeholder{
+
+            }
+        }
+        .option-wrapper{
+            position: relative;
+            margin-right: 3em;
+            overflow: hidden;
+        }
+        > a{
+            display: block;
+            margin-bottom: 0.75em;
+        }
+    }
+    &__thanks{
+        font-size: em(11);
+        color: $c-primary;
+    }
+}

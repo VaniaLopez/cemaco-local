@@ -1,0 +1,356 @@
+<style type="text/css">
+    @import url('https://vtexstyles.cemaco.com/css/fonts.css');
+    
+    .mainimage{
+        background: url(/arquivos/2021_diamama_slider_mobile.png?v=637551413100400000) no-repeat;
+        background-size: cover;
+        padding: 3% 0% 50%;
+        text-align: center;
+        margin: 0 0 30px;
+    }
+    .mainimage h1{
+        font-family: 'ChaletParisNineteenSixty';
+        color: #4A384B;
+        padding: 0;
+        font-weight: lighter;
+    }
+    .mainimage h1 span{
+        display: block;
+        font-family: 'ChaletNewYorkNineteenSixty';
+    }
+    .mainimage .btn{
+        background: white;
+        border-radius: 20px;
+        padding: 5px 23px 7px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 4px 0 0;
+        display: inline-block;
+    }
+    .mainimage .btn:hover{
+        text-decoration: none;
+    }
+    .row.categories{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .row.categories .category{
+        text-align: center;
+        width: 46%;
+        display: inline-block;
+        margin-bottom: 14px;
+    }
+    .category:nth-of-type(2n) {
+        margin-left: 6%;
+    }
+    .category p {
+        font-size: 0.9rem;
+        margin: 7px 0 0;
+    }
+    .br-mob{
+        display: block;
+    }
+    .col-xs-12.col-md-4.col-lg-4.col-xl-4 {
+        padding: 0;
+    }
+    .minispiff-item p {
+        font-size: 8px;
+        text-align: center;
+        padding-top: 6px;
+    }
+    .minispiff-item p strong {
+        font-size: 16px;
+    }
+    .minispiff-item {
+        margin: 0;
+    }
+    
+    @media screen and (min-width: 480px) {
+        /*.col-xs-12.col-md-4.col-lg-4.col-xl-4 {*/
+        /*    height: 250px;*/
+        /*}*/
+    }
+    
+    @media screen and (min-width: 768px) {
+        .mainimage{
+            background: url(/arquivos/2021_diamama_slider.png) no-repeat;
+            background-size: cover;
+            padding: 6% 0 5%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .row.categories{
+            width: 100%;
+            justify-content: center;
+        }
+        .row.categories .category{
+            width: 19%;
+            margin-left: 9px;
+        }
+        .row.categories .category:first-child,
+        .row.categories .category:nth-child(6){
+            margin: 0;
+        }
+        .category:nth-of-type(2n) {
+            margin-left: 0;
+        }
+        .content-mainimage{
+            margin-right: 3%;
+        }
+        .col-xs-12.col-md-4.col-lg-4.col-xl-4 {
+            height: 165px;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .col-xs-12.col-md-4.col-lg-4.col-xl-4 {
+            height: 210px;
+        }
+        .minispiff-item p {
+            font-size: 10px;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .minispiff-item u {
+            font-size: 10px;
+        }
+
+        .minispiff-item p strong {
+            font-size: 17px;
+        }
+
+        .minispiff-item {
+            margin: 0 !important;
+        }
+        .minispiff-item p.parati-text {
+            font-size: 11px;
+            margin-left: 4%;
+            margin-right: 3%;
+            margin-top: 4%;
+            width: 90%;
+        }
+        .minispiff-item .parati-text u {
+            font-size: 11px;
+        }
+    }
+    
+    @media screen and (min-width: 1280px) {
+        .row.categories .category {
+            width: 16%;
+            margin-left: 36px;
+        }
+        .content-mainimage {
+            margin-right: 7%;
+        }
+        .col-xs-12.col-md-4.col-lg-4.col-xl-4 {
+            height: 260px;
+        }
+        .minispiff-item p strong {
+            font-size: 23px;
+        }
+
+        .minispiff-item p {
+            font-size: 13px;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .minispiff-item u {
+            font-size: 13px;
+        }
+
+        .minispiff-item {
+            margin: 0 !important;
+        }
+        .minispiff {
+            grid-template-columns: 24% 24% 24% 24%;
+            margin-top: 2%;
+        }
+        .minispiff-item p.parati-text {
+            font-size: 14px;
+            margin-left: 4%;
+            margin-right: 3%;
+            margin-top: 0%;
+            width: 90%;
+        }
+        .minispiff-item .parati-text u {
+            font-size: 14px;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .content-mainimage {
+            margin-right: 9%;
+        }
+        .col-xs-12.col-md-4.col-lg-4.col-xl-4 {
+            height: 285px;
+        }
+        .minispiff-item p {
+            font-size: 15px;
+            text-align: center;
+            padding-top: 8px;
+        }
+        .minispiff-item u {
+            font-size: 15px;
+        }
+        .minispiff-item p strong {
+            font-size: 24px;
+        }
+        .minispiff-item p.parati-text {
+            font-size: 15px;
+            margin-left: 4%;
+            margin-right: 3%;
+            margin-top: 4%;
+            width: 90%;
+        }
+        .minispiff-item .parati-text u {
+            font-size: 15px;
+        }
+        .minispiff {
+            grid-template-columns: 24.2% 24.2% 24.2% 24.2%;
+            margin-top: 2%;
+        }
+    }
+    @media only screen and (min-width: 1920px) {
+        .col-xs-12.col-md-4.col-lg-4.col-xl-4 {
+            height: 315px;
+        }
+        .minispiff-item p {
+            font-size: 16px;
+            padding-top: 8px;
+        }
+        .minispiff-item u {
+            font-size: 16px;
+        }
+        .minispiff-item p strong {
+            font-size: 26px;
+        }
+        .minispiff {
+            grid-template-columns: 24.2% 24.2% 24.2% 24.2%;
+        }
+        .minispiff-item p.parati-text {
+            font-size: 17px;
+            margin-left: 4%;
+            margin-right: 3%;
+            margin-top: 4%;
+            width: 90%;
+        }
+        .minispiff-item .parati-text u {
+            font-size: 17px;
+        }
+    }
+</style>
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/cemaco.css" type="text/css" />
+<div class="re-central">
+    <div class="mainimage">
+        <div class="content-mainimage">
+            <h1>Todo para <span>celebrar a mamá</span></h1>
+            <a href="/1196?map=productClusterIds" class="btn">Compra aquí</a>
+        </div>
+    </div>
+    <div class="row categories">
+        <div class="category">
+            <a href="/1196?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat1.png" alt="">
+                <p>Ver todo</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="/1197?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat2.jpg" alt="">
+                <p>Para consentir <br/>a mamá</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="/1198?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat3.jpg" alt="">
+                <p>Para la mamá que <br/>le encanta cocinar</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="/1199?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat4.jpg" alt="">
+                <p>Detalles para la <br/>casa de mamá</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="/1200?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat5.jpg" alt="">
+                <p>Para la mamá <br/>tecnológica</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="/1201?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat6.jpg" alt="">
+                <p>Para la mamá <br/>“manos a la obra”</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="/1202?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat7.jpg" alt="">
+                <p>Descanso <br/>de mamá</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="/1203?map=productClusterIds">
+                <img src="/arquivos/2021_diamama_cat8.jpg" alt="">
+                <p>Para las futuras <br/>mamás</p>
+            </a>
+        </div>
+    </div>
+    <div class="carruselMamaU"></div>
+    <div class="carruselMamaE"></div>
+    <div class="row">
+        <h2 class="text-center">Importante para ti</h2>
+        <div class="col-xs-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="minispiff-item">
+                <a href="/preguntas-frecuentes?seguridad#seguridad" class="entregaentodaguate">
+                    <picture>
+                        <source srcset="/arquivos/2021_cemaco_home_importante01_mobile.jpg?v=637523814062230000" media="(max-width: 762px)">
+                        <img src="/arquivos/2021_cemaco_home_importante01_desk.jpg?v=637523814059900000" alt="entrega de compras">
+                    </picture>
+                </a>
+                <p class="parati-text">
+                    Entregamos tus compras en línea en todo el país en 48 horas en la capital y 72 horas en el interior del
+                    país.
+                    <a href="https://beta.cemaco.com/preguntas-frecuentes?seguridad#seguridad"><u><b>Conoce más aquí</b></u></a>
+                </p>
+            </div>
+            <div class="divisionparati mobile"></div>
+        </div>
+        <div class="col-xs-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="minispiff-item">
+                <a href="/autoservicio">
+                    <picture>
+                        <source srcset="/arquivos/2021_cemaco_home_importante02_mobile.jpg?v=637523814064770000" media="(max-width: 762px)">
+                        <img src="/arquivos/2021_cemaco_home_importante02_desk.jpg?v=637523814079470000" alt="">
+                    </picture>
+                </a>
+                <p class="parati-text">
+                    Compra en línea, selecciona tu tienda más cercana y al llegar recibe tu producto en tu auto, ¡sin
+                    contacto y sin bajarte!
+                    <a href="https://beta.cemaco.com/autoservicio"><u><b>Conoce más aquí</b></u></a>
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="divisionparati mobile"></div>
+            <div class="minispiff-item">
+                <a href="/prevencion">
+                    <picture>
+                        <source srcset="/arquivos/2021_cemaco_home_importante03_mobile.jpg?v=637523814081000000" media="(max-width: 762px)">
+                        <img src="/arquivos/2021_cemaco_home_importante03_desk.jpg?v=637523814068030000" alt="">
+                        <!--<p class="caption-slider-home white-text">Las mejores marcas<br class="desktop">para tus <br class="mobile">proyectos</p>-->
+                    </picture>
+                </a>
+                <p class="parati-text">
+                    Nuestra misión es ser el lugar más seguro para trabajar y comprar. Estamos tomando medidas importantes
+                    para tu seguridad y la de nuestro equipo.
+                    <a href="https://beta.cemaco.com/prevencion"><u><b>Conócelas</b></u></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

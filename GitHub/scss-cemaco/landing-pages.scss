@@ -1,0 +1,21 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+
+// Settings
+@import "_settings/settings";
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+.Department{
+    &-description{
+        margin-bottom: 5em;
+        line-height: 1.75;
+        @include mediaFrom(lg){
+            width: 80%;
+        }
+    }
+}

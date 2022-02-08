@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title>Cemaco | Tienda en Línea: Ferretería, Hogar, Blancos y Mascotas</title>
+        <vtex:metaTags />
+        <vtex:template id="xCemaco-meta-tags" />
+        <vtex:template id="xCemaco-styles" />
+        <vtex.cmc:xCemacoFallback />
+    </head>
+    <body>
+        <vtex:template id="xCemaco-header" />
+
+        <main role="main" class="page-main--home-page">
+            <div class="re-central">
+                <vtex:contentPlaceHolder id="Portada" />
+                <vtex:contentPlaceHolder id="Bloque01-Spiffs" />
+                
+                <!-- Productos slider 01. Begin -->
+                <div class="products-slider__wrapper">
+                    <div class="products-slider__container">
+                        <div id="productsSlider01" class="product-list grid-view slider-view is-active"
+                            data-height="parent">
+                            <vtex:contentPlaceHolder id="products-slider-01" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Productos slider 01. End -->
+                
+                <!-- Productos slider 02. Begin -->
+                <div class="products-slider__wrapper">
+                    <div class="products-slider__container">
+                        <div id="productsSlider02" class="product-list grid-view slider-view is-active"
+                            data-height="parent">
+                            <vtex:contentPlaceHolder id="products-slider-02" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Productos slider 02. End -->
+                
+                <!-- Productos slider 03. Begin -->
+                <div class="products-slider__wrapper">
+                    <div class="products-slider__container">
+                        <div id="productsSlider03" class="product-list grid-view slider-view is-active"
+                            data-height="parent">
+                            <vtex:contentPlaceHolder id="products-slider-03" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Productos slider 03. End -->
+
+                <vtex:contentPlaceHolder id="Bloque02-bloqueCirculos" />
+                
+                <!-- Productos slider 04. Begin -->
+                <div class="products-slider__wrapper">
+                    <div class="products-slider__container">
+                        <div id="productsSlider04" class="product-list grid-view slider-view is-active"
+                            data-height="parent">
+                            <vtex:contentPlaceHolder id="products-slider-04" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Productos slider 04. End -->
+                
+                <!-- Productos slider 05. Begin -->
+                <div class="products-slider__wrapper">
+                    <div class="products-slider__container">
+                        <div id="productsSlider05" class="product-list grid-view slider-view is-active"
+                            data-height="parent">
+                            <vtex:contentPlaceHolder id="products-slider-05" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Productos slider 05. End -->
+                
+                <vtex:contentPlaceHolder id="Bloque03-GrillaDepartamentos" />
+                <vtex:contentPlaceHolder id="Bloque04-bannersFinales" />
+                
+                <vtex:contentPlaceHolder id="Bloque05-BloqueSpiffs" />
+                <vtex:contentPlaceHolder id="Bloque06-ferreteria" />
+            </div>
+        </main>
+        <div id="is-home"></div>
+        <vtex:template id="xCemaco-footer" />
+        <vtex:template id="xCemaco-quick-view" />
+        <vtex:template id="xCemaco-svg-sprite" />
+        <vtex:template id="xCemaco-scripts" />
+        <!-- <vtex.cmc:xCemacoPopUpHome /> -->
+        <!-- Plugins -->
+        <script src="/arquivos/plugins_slick_slick.min.js"></script>
+        <!-- Scripts Home -->
+        <script src="/arquivos/css-js_home.min.js"></script>
+    </body>
+</html>

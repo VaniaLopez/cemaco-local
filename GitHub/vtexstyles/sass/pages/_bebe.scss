@@ -1,0 +1,16 @@
+@import '../abstracts/variables';
+
+.landing--bebe{
+    p{
+        font-size: 1.2em;
+        &.clase{
+            font-size: 1em;
+        }
+    }
+    span{
+        text-decoration: none;
+        &.boton{
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.vtex-account__page{
+	.vtex-pageHeader-link__container{
+		& > button{
+			span.mr3{
+				svg{
+					display: none;
+				}
+				&:before{
+					content: '<';
+					display: inline-block;
+					transform: scaleX(.75) scaleY(1.25);
+				}
+			}
+		}
+	}
+}
+.vtex-account__page-body.vtex-account__profile{
+	& > .flex{
+		flex-wrap: wrap;
+		& > .w-60-ns,
+		& > .w-40-ns{
+			width: 100%;
+		}
+		& > .w-40-ns{
+			border-top: 1px solid $c-border-account;
+			padding-top: 30px;
+		}
+	}
+	footer{
+		&.justify-end{
+			padding: 0;
+			justify-content: flex-start;
+			& > button{
+				align-self: flex-start;
+			}
+		}
+	}
+}
+
+.hover-bg-action-secondary:focus, .hover-bg-action-secondary:hover{
+	background-color: transparent;
+}
+.vtex-dropdown__arrow{
+	svg{
+		g{
+			fill: $c-secondary!important;
+		}
+	}
+}
+.vtex-profile-form__toggle-business-btn__wrapper{
+	text-align: right;
+	button{
+		display: inline-block;
+		background: $c-dusty-gray;
+		color: white;
+		border-radius: 30px;
+		border: 0;
+		padding: 3px 20px;
+		text-transform: none;
+		font-weight: $font-bold;
+		height: 36px;
+		width: 250px;
+		transition: all .3s;
+		&:hover,
+		&:focus,
+		&:active{
+			background: darken($c-secondary, 5);
+			color: white;
+		}
+	}
+}
+
+.vtex-account__address-edit{
+    .b--action-primary + .mt5{
+        display: inline-block;
+        margin-right: 0.5em;
+        button{
+            margin-right: 0.5em;
+            margin-top: 0.5em;
+        }
+    }
+}

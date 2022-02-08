@@ -1,0 +1,199 @@
+/*--------------------MiniCart--------------------*/
+.nav-ecommerce__label--counter{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    font-size: 0.5em;
+    font-weight: $font-bold;
+    line-height: 12px;
+    text-align: center;
+    color: $c-primary;
+    background-color: white;
+    transform: translateX(42%);
+    body.landing &{
+        color: white;
+    }
+    body.landing--jugueton &{
+        background-color: $c-jugueton;
+    }
+    body.landing--bebejugueton &{
+        background-color: $c-bebejugueton;
+    }
+}
+.minicart{
+    &{
+        @include flexbox($fd:column);
+        height: 100%;
+    }
+	&__wrapper{
+        width: 100%;
+        max-width: 350px;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		z-index: $z-offcanvas;
+		background:white;
+		box-shadow: 0 3px 10px rgba(#000,.3);
+		visibility: hidden;
+		opacity: 1;
+		transition: all 0.4s;
+		@include mediaFrom(md){
+			width: 450px;
+		}
+		&.is-active{
+			right: 0;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__header{
+		position: relative;
+        margin-bottom: 1em;
+        @include padding-v();
+        @include padding-h();
+		font-family: $font-title;
+        font-weight: $font-bold;
+        color: white;
+        background-color: $c-primary;
+		span{
+			@include flexbox($ai: center);
+			.svg-icon{
+				order: 2;
+				@include sizeProportion($dW: 0.95);
+				margin-left: 1em;
+			}
+		}
+		.close-minicart{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15px;
+            color: white;
+            background-color: $c-primary;
+			svg{
+				@include sizeProportion($dW: 1);
+			}
+		}
+	}
+	&__products{
+		min-height: 150px;
+        max-height: 450px;
+		display: block;
+        @include padding-h();
+		overflow-y: auto;
+		&::-webkit-scrollbar{
+			width: 8px;
+			background-color: transparent;
+		}
+		&::-webkit-scrollbar-track{
+			border-radius: 5px;
+			background-color: darken($c-light-gray,0);
+		}
+		&::-webkit-scrollbar-thumb{
+			border-radius: 5px;
+			background-color: darken($c-light-gray,40);
+		}
+		@media screen and (min-width: $screen-md-min){
+			max-height: none;
+			height: calc(100% - 210px);
+		}
+	}
+	&__footer{
+        align-self: flex-end;
+        width: 100%;
+        margin-top: auto;
+        @include padding-v(1,1,1em);
+        @include padding-h();
+        border-top: 1px solid $c-pastel-gray;
+        background-color: $c-light-gray;
+        .wrapper-payment{
+            margin-top: 1em;
+            text-align: center;
+            span{
+                @include margin-h(5);
+            }
+        }
+	}
+	&__value{
+        font-size: em(14);
+        @include flexbox($jc: space-between);
+        span{
+            text-transform: uppercase;
+        }
+	}
+	.button-wrapper{
+		margin-top: 0.5em;
+		text-align: center;
+	}
+	svg,
+	.svg-icon{
+		@include sizeProportion($dW: 1);
+	}
+}
+.item-added{
+	@include flexbox;
+    position: relative;
+    @include padding-v(1,1,1em);
+    font-size: em(12);
+	overflow: hidden;
+	border-bottom: 1px solid $c-pastel-gray;
+	&__img{
+		@include flex-item($fs: 0, $fb: 100px);
+		margin-right: 1em;
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+	&__summary{
+		@include flexbox($fw: wrap, $ac: flex-start);
+		padding-right: 2em;
+	}
+	&__name{
+        margin-bottom: 0.5em;
+        line-height: 1.2;
+        color: $c-primary;
+        font-weight: $font-bold;
+	}
+	&__refid{
+		width: 100%;
+		display: none;
+	}
+	&__price{
+		&,
+		&--selling{
+			width: 100%;
+			color: $c-primary;
+		}
+		&{
+            margin-bottom: 0.25em;
+            .item-added.has-benefit &{
+                color: $c-dusty-gray;
+				text-decoration: line-through;
+			}
+		}
+		&--selling{
+			display: none;
+			.item-added.has-benefit &{
+				display: block;
+			}
+		}
+	}
+	&__del{
+        color: $c-dusty-gray;
+        button{
+            text-decoration: underline;
+        }
+	}
+	&:hover{
+		.item-added__del{
+			.remove{
+				// transform: translateX(0);
+			}
+		}
+	}
+}

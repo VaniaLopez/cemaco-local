@@ -1,0 +1,144 @@
+#vtexIdUI-global-loader{
+    background:#fff!important;
+    z-index:1000001!important;
+}
+#vtexIdContainer{
+    position:fixed!important;
+    z-index:1000002!important;
+    background-color: rgba(black,0.4);
+    .vtexIdUI{
+        position: fixed;
+        font-family: $font-body;
+        box-shadow: 0 0 5px rgba(black,0.075);
+    }
+}
+.vtexIdUI{
+    .modal-header{
+        padding : 0 !important;
+        margin-bottom: 0;
+        background-color: #fff !important;
+        border-bottom: none !important;
+        .close.close.close{
+            width: 35px;
+            height: 35px;
+            display: block !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            font-size: 1.75em;
+            font-weight: $font-regular;
+            color: $c-secondary;
+            background-color: white;
+            opacity: 1;
+            @include mediaFrom(lg){
+                right: -30px !important;
+                top: - 10px !important;
+            }
+        }
+    }
+}
+.vtexIdUI-heading{
+    margin: 0 !important;
+    font-weight: $font-bold !important;
+    text-align: center;
+    border-bottom: none !important;
+    color: black !important;
+    @include mediaTo(md){
+        body:not(.body-order-form) &{
+            margin-top: 40px !important;
+            @include padding-h();
+        }
+    }
+}
+.vtexIdUI.vtexIdUI-show-app{
+    background:white;
+    border-radius:0;
+    border:0;
+    box-shadow:none;
+    @include mediaFrom(lg){
+        width: 460px;
+        @include padding-v(10,0);
+    }
+    *{
+        border-radius:0!important;
+    }
+    .vtexIdUI-page.vtexIdUI-page.vtexIdUI-page{
+        background-color: white;
+        @include mediaFrom(lg){
+            @include padding-h(30);
+        }
+        button.btn{
+            text-shadow:none!important;
+            box-shadow:none!important;
+            @include button-flat;
+            &.vtexIdUI-send-email{
+                @include button-lineal();
+                letter-spacing: 0;
+                background-color: #fff !important;
+                &:hover{
+                    background-color: $c-primary !important;
+                }
+                i{
+                    display: none;
+                }
+                span{
+                    transition: color 0s;
+                }
+            }
+            &.vtexIdUI-others-send-email{
+                width: 100%;
+                background-image: none;
+                span{
+                    transition: color 0s;
+                }
+            }
+            &.vtexIdUI-send-email,
+            &.vtexIdUI-others-send-email{
+                width: 100%;
+                font-weight: $font-bold;
+            }
+            &.btn-success{
+                background: $c-primary;
+            }
+            &#vtexIdUI-facebook{
+                background:$c-fb;
+                width: 100%;
+                &:hover{
+                    background: $c-fb-l1;
+                }
+            }
+            &#vtexIdUI-google-plus{
+                width: 100%;
+                background:$c-light-gray;
+                &:hover{
+                    background: lighten($c-light-gray,2);
+                }
+            }
+        }
+    }
+}
+.vtexIdUI-providers-list{
+    @include flexbox($fw:wrap);
+    li{
+        width: 100%;
+        &:nth-child(4){
+            order: 1;
+        }
+        &:nth-child(2){
+            order: 2;
+        }
+        &:first-child{
+            order: 3;
+        }
+        &:nth-child(3){
+            order: 4;
+        }
+    }
+}
+body.login{
+    .vtexIdUI-show-app{
+        box-sizing:border-box;
+        border: 1px solid $c-light-gray;
+    }
+}

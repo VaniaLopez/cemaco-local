@@ -1,0 +1,261 @@
+/* ========================
+        metodos de pago
+======================== */
+.double-board__item {
+  text-align: center;
+}
+.payment-m .double-board__item ul {
+  padding-top: 1em !important;
+  text-align: center;
+  padding-bottom: 2em;
+}
+.payment-m .double-board__item ul li img {
+  padding: 0;
+  display: inherit;
+}
+.payment-m .double-board__item ul li {
+  display: inline;
+}
+.payment-m img {
+  width: auto;
+  margin: 0 auto;
+}
+.payment-m .double-board {
+  margin-bottom: 0.5em !important;
+}
+
+/*cuotas*/
+.cuadricula {
+  width: 100%;
+  display: block;
+  font-family: "helveticaneuemedium" !important;
+}
+.cuadricula h1 {
+  font-size: 39px !important;
+  font-weight: bold;
+  text-align: center;
+  text-transform: none !important;
+}
+.cuadricula p {
+  font-size: 22px !important;
+  text-align: center;
+}
+.cuadricula .cuadros {
+  width: 50%;
+  text-align: center;
+  float: left;
+  display: inline;
+  margin: 20px 0;
+}
+.cuadricula .cuadros .image img {
+  height: 207px;
+  margin: 0 auto;
+}
+.cuadricula .cuadros p {
+  font-size: 15px !important;
+  text-align: center;
+  width: 444px;
+  margin: 0 auto;
+}
+.cuadricula .cuadros .bancos img {
+  height: 30px;
+  margin: 0 auto;
+}
+p.textoG {
+  font-size: 27px !important;
+  font-weight: bold;
+  text-align: center;
+  color: #2f2f31;
+  margin-bottom: 30px !important;
+}
+
+.title-cuotas {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 40px;
+}
+body.cms-page-view .std .title-cuotas h1 {
+  font-family: "helveticaneuemedium";
+  font-size: 37px !important;
+  text-transform: none;
+  font-weight: bold;
+  line-height: 34px;
+}
+.title-cuotas span {
+  font-weight: normal;
+  font-size: 27px;
+}
+i.dot {
+  background-color: #26beff;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.cuotas th {
+  font-family: "HelveticaNeueLTW05";
+  color: #101e8e;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px 0;
+}
+.cuotas {
+  font-family: "HelveticaNeueLTW05" !important;
+}
+.cuotas td {
+  vertical-align: middle;
+}
+.cuotas th,
+.cuotas td {
+  border-bottom: 1px solid rgb(16 30 142 / 0.2);
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgb(16 30 142 / 0.2);
+  width: 10%;
+  text-align: center;
+  display: table-cell;
+}
+.cuotas th:first-child,
+.cuotas td:first-child {
+  border-left: 0;
+}
+.cuotas td img {
+  margin: 0 auto;
+}
+.cuotas tr:last-child td {
+  border-bottom: 0;
+}
+body .bkg-light-grey,
+body .bkg-light-grey .main,
+body .main-content-wrapper .container {
+  background: white;
+}
+.dot-container {
+  padding: 15px 0;
+}
+
+/*retira en tienda*/
+.withdraw-board .quaternary-board__item .tag-title {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .withdraw-board .quaternary-board__item:first-child {
+    width: 22%;
+    padding-bottom: 0;
+  }
+  .bannerhead {
+    overflow: hidden;
+    margin-top: 0px !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .dot-container {
+    padding: 19px 0;
+  }
+  .cms-page-view .title-cuotas h1 {
+    font-size: 37px;
+  }
+  .cuotas th {
+    font-size: 21px;
+  }
+  .withdraw-board .quaternary-board__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .withdraw-board .quaternary-board__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .cuadricula h1 {
+    font-size: 39px !important;
+    font-weight: bold;
+    text-align: center;
+    text-transform: none !important;
+  }
+  .cuadricula p {
+    font-size: 16px !important;
+    text-align: center;
+  }
+  .cuadricula .cuadros {
+    width: 100%;
+    text-align: center;
+    float: none;
+    display: block;
+    margin: 35px 0;
+  }
+  .cuadricula .cuadros .image img {
+    height: 207px;
+    margin: 0 auto;
+  }
+  .cuadricula .cuadros p {
+    font-size: 15px !important;
+    text-align: center;
+    width: 100%;
+  }
+  .cuadricula .cuadros .bancos img {
+    height: 30px;
+    margin: 0 auto;
+  }
+  p.textoG {
+    font-size: 23px !important;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .catsubmenu.mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .std .cuadricula h1 {
+    font-size: 39px !important;
+  }
+  .cuadricula .cuadros p {
+    width: 89%;
+  }
+  .payment-m .double-board {
+    margin-bottom: 0px;
+  }
+  .payment-m .blue-bg img {
+    width: 65%;
+  }
+  .cuotas td {
+    vertical-align: middle;
+    padding: 0;
+  }
+  .coutas {
+    width: 134%;
+    max-width: 114%;
+    margin-left: -25px !important;
+  }
+  .title-cuotas {
+    margin-bottom: 0 !important;
+  }
+  .payment-m {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 375px) {
+  .std .cuadricula h1 {
+    font-size: 26px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  body.cms-page-view .std .title-cuotas h1 {
+    font-size: 34px !important;
+  }
+  .title-cuotas span {
+    font-size: 21px;
+  }
+}

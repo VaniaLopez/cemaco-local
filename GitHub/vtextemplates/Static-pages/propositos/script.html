@@ -1,0 +1,37 @@
+
+
+<!-- Scripts Home -->
+<script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
+<script src="/arquivos/cemaco-swiper.js?v=20211201-1204"></script>
+<!--<script src="/arquivos/cemaco-swiper-special_test.js?v=20211201-1204"></script>-->
+<script src="/arquivos/home-optimization.js?v=1655"></script>
+<script src="/arquivos/bootstrap.v5.min.js"></script>
+
+<script>
+var urlTest1='/1718?map=productClusterIds';
+if($('#productsSlider01 .prateleira').length){
+    $('.propositos .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+urlTest1+'"><p class="ms-3 text-decoration-none">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+     $('.propositos .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').after('<a class="text-center d-sm-block d-md-none fw-normal" href="'+urlTest1+'"><p class="mb-2">Ver todo</p></a>');
+}
+$(".vertodos").on("click", function () {
+    $(this).hide();
+    $(this).nextAll().fadeIn();
+    $(".ofertas1").hide();
+    $(".ofertas2").show();
+});
+</script>
+<script>
+    var vwImportant = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    if( vwImportant < 768 ){
+        var swiper = new Swiper('.importanteparati', {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    }
+</script>

@@ -1,0 +1,401 @@
+ <!-- Banner LEMAX -->
+<!-- <div class="navidad-content">
+  
+    <div class="banner-lemax">
+        <a href="/lemax">
+            <div class="banner-lemax_container">
+                <h5>Lemax</h5>
+                <span>Ver más</span>
+            </div>
+        </a>
+    </div>
+</div> -->
+
+
+<style>
+    .mobile{}
+    .desk{display:none;}
+    .intro{
+        text-align:center;
+        font-size: 0.8em;
+        padding: 0 0 1.4em;
+    }
+    .bannertienda{
+        margin: 4% 0 3%;
+    }
+    .bannertienda .titular{
+        color: #fff;
+        position: absolute;
+        float: right;
+        padding: 45% 0 0 0;
+        text-align: center;
+        width: 92%;
+    }
+    .bannertienda .titular h3{
+        padding: 0 0 2% 0;
+        font-size: .9rem;;
+    }
+    .bannertienda .titular span{
+        font-size: .8rem;
+        text-decoration: underline;
+    }
+    .cpc_cats  h2.titulo_deptos{
+        text-align: center;
+    }
+    .intro h5{
+        padding-top: 0.9em;
+        padding-bottom: 0.2em; 
+    }
+    .colecciones_cole{
+        padding: 0 0 1em;
+    }
+    .colecciones_cole_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .colecciones_cole_container_row {
+        width: 44.3%;
+        padding: 0 0.1em;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    .colecciones_cole_container_row_image {
+        width: 55%;
+        padding: 0 0.1em;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    .colecciones_cole_container_row_full{
+        width: 100%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    .colecciones_cole_texto{
+        font-size: 0.7em;        
+    }
+    .colecciones_cole_texto span{
+        display: block;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .colecciones_cole_col__gris{
+        background-color: #F7F7F7;
+    }
+    .colecciones_cole a:hover{
+        text-decoration:none;
+    }
+    .video-container {
+        min-height: 204px;
+        width: 100%;
+        position: relative;
+    }
+    .video-container a:hover, .banner-lemax a:hover{
+        text-decoration: none;    
+    }
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        z-index: 0;
+    }
+        
+        /* Just styling the content of the div, the *magic* in the previous rules */
+    .video-container .caption {
+        z-index: 1;
+        position: relative;
+        text-align: left;
+        padding: 0.3em 0 0 1em;
+    }
+    .video-container .caption span{
+        text-decoration: underline;
+        font-size: 0.8em;
+    }
+    .cpc_cats {
+        padding: 0 0 1em;
+    }
+    .cpc_cats_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+    .cpc_cats_container_row {
+        width: 33%;
+        padding: 0 0.2em;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    .cpc_cats_container_row span{
+        padding:5px 0;
+        font-size: 0.7em;
+        display: block;
+    }
+    
+    .cpc_spiffs_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .cpc_spiffs_container_row {
+        width: 50%;
+        padding: 0 0.2em;
+        margin-bottom: 0.9em;
+        text-align: center;
+    }
+    .cpc_spiffs_container_row span{
+        padding:0.7em 0;
+        font-size: 0.9em;
+        display: block;
+    }
+    .banner-lemax{
+        padding: 0 0 2em;
+    }
+    .banner-lemax_container{
+        background-image: url('/arquivos/banner_lemax_mobile@2x.png');
+        background-size: cover;
+        height: 9em;
+        padding:0.2EM 0 0 0.8EM;
+        margin:0;
+    }
+    .banner-lemax_container H5{
+        padding-bottom: 0.2EM;
+    }
+    .banner-lemax_container span{
+        font-weight:bold;
+        text-decoration:underline;
+    }
+    .cpc_arboles {
+        padding: 0 0 1.5em;
+    }
+    [class*=products-slider__wrapper] {
+        margin: 0em auto 2.5em;
+    }
+    body .product-list .prateleira h2 {
+        display:none;
+    }
+    body .product-list .prateleira .product-item__name a{
+        display: block;
+    }
+    .titular-carrusel{
+        padding: 0 0 0.5em;
+    }
+    .titular-carrusel h5{
+        padding-bottom: 0.1em;
+    }
+    .titular-carrusel a{
+        font-size: 0.8em;
+        text-decoration: underline;
+    }
+    .carrusel-vermas{
+        font-size: 0.8em;
+        text-decoration:underline;
+        text-align:center;
+    }
+    
+    @media screen and (min-width: 360px){
+        .bannertienda .titular{
+            padding: 47% 0 0 0;
+        }
+    }
+    @media screen and (min-width: 375px){
+        .intro {
+            font-size: 1em;
+            padding: 0 0 1.7em;
+        }
+        .cpc_cats_container_row span{
+            font-size: 0.8em;
+        }
+        .banner-lemax_container {
+            height: 11em;
+        }
+        .colecciones_cole_texto{
+            font-size: 0.8em;        
+        }
+        .bannertienda .titular{
+            padding: 47% 0 0 0;
+        }
+        .bannertienda .titular h3{
+            font-size: 1rem;
+        }
+        .bannertienda .titular span{
+            font-size: .9rem;
+        }
+    }
+    @media screen and (min-width: 414px){
+        .cpc_arboles {
+            padding: 0 0 1.4em;
+        }
+        .cpc_arboles h6{
+            padding-bottom: 1em;
+        }
+        .banner-lemax_container {
+            height: 12em;
+        }
+        .bannertienda .titular{
+            padding: 47% 0 0 0;
+        }
+        .bannertienda .titular h3{
+            font-size: 1.1rem;
+        }
+        .bannertienda .titular span {
+            font-size: .9rem;
+        }
+    }
+    @media screen and (min-width: 768px){
+        [class*=products-slider__wrapper] {
+            width: 100%;
+        }
+        .mobile{
+            display:none;
+        }
+        .desk{
+            display:inherit;
+        }
+        .video-container {
+            min-height: 356px;
+        }
+        .container {
+            width: 100%;
+        }
+        .cpc_cats_container_row {
+            width: 24%;
+            padding: 0 0.5em;
+        }   
+        .cpc_cats_container_row span{
+            font-size: 1em;
+        }
+        .banner-lemax_container{
+            background-image: url('/arquivos/banner_lemax_desk@2x.png');
+            background-size: cover;
+            height: 15em;
+            padding:0.2EM 0 0 1EM;
+            margin:0;
+        }
+        .cpc_spiffs_container_row {
+            width: 24.8%;
+        }
+        .colecciones_cole_texto{
+            font-size: 0.7em;
+            min-height: inherit;
+        }
+        .colecciones_cole_textoyvideo{
+            min-height: 16.2em;
+            align-items: center;
+            display: flex;
+        }
+        .colecciones_cole_container_row_image{
+            width: 49.8%;
+        }
+        .colecciones_cole_container_row{
+            width: 49.8%;
+        }
+        .bannertienda .titular{
+            padding: 4% 0 0 48.2%;
+            width: unset;
+        }
+        .bannertienda .titular h3 {
+            font-size: 1rem;
+        }
+        .bannertienda .titular span {
+            font-size: 1rem;
+        }
+    }
+    @media screen and (min-width: 1024px){
+        .cpc_cats_container_row {
+            width: 16%;
+            padding: 0 0.7em;
+        }   
+        .intro h5 {
+            padding-top: 1.3em;
+            padding-bottom: 0.2em;
+        }
+        .colecciones_cole_texto {
+            min-height: 7em;
+            font-size: 0.75em;
+            padding: 0 2.5em;
+        }
+        .titular-carrusel h5{
+            padding-top: 0;
+        }
+        .banner-lemax_container {
+            height: 18em        ;
+            padding: 1em 0 0 1em;
+            margin: 0 0 3em;
+        }
+        .colecciones_cole_video{
+            padding: 0.9em 0 0;
+        }
+        .bannertienda .titular{
+            padding: 4% 0 0 45.2%;
+        }
+        .bannertienda .titular h3 {
+            font-size: 1.5rem;
+        }
+        .bannertienda .titular span {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media screen and (min-width: 1280px){
+        .bannertienda .titular{
+            padding: 4% 0 0 49.2%;
+        }
+    }
+    
+    @media screen and (min-width: 1360px){
+        .bannertienda .titular{
+            padding: 4% 0 0 46.2%;
+        }
+    }
+
+    @media screen and (min-width: 1280px){
+        .colecciones_cole_texto {
+            font-size: 0.9em;
+            padding: 0 3em;
+        }
+        .colecciones_cole_video {
+            padding: 1.4em 0 0;
+        }
+        .colecciones_cole_texto {
+            min-height: 7em;
+        }
+        .banner-lemax_container {
+            height: 23em;
+            padding: 1em 0 0 1.5em;
+            margin: 0 0 3em;
+        }
+        .cpc_spiffs_container_row span {
+            font-size: 1.1em;
+        }
+        .colecciones_cole_container_row {
+            width: 49.7%;
+        }
+        .colecciones_cole_container_row_image {
+            width: 49.7%;
+        }
+        .cpc_spiffs_container_row {
+            width: 24.6%;
+        }
+    }
+    @media screen and (min-width: 1440px){
+        .colecciones_cole_texto {
+            min-height: 7.0em;
+        }
+        .colecciones_cole_video {
+            padding: 2.4em 0 0;
+        }
+        .banner-lemax_container {
+            height: 26em;
+        }
+        .bannertienda .titular{
+            padding: 4% 0 0 51.2%;
+        }
+    }
+    @media screen and (min-width: 1600px){
+        .bannertienda .titular{
+            padding: 4% 0 0 44.2%;
+        }
+    }
+</style>

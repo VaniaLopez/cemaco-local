@@ -1,0 +1,794 @@
+.AccountStatic-menu--overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(black, .5);
+    transition: all .5s;
+    cursor: pointer;
+    body.show-account-menu &{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.AccountStatic-menu--trigger{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 130px;
+    padding: .3rem .5rem;
+    border: 1px solid $c-text;
+    border-radius: 40px;
+    text-align: center;
+    background: white;
+    z-index: 100;
+    body.show-account-menu &{
+        width: 100%;
+        max-width: 320px;
+        border-radius: 0;
+        border: none;
+        padding: 1rem;
+        text-align: left;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 5%;
+            width: 90%;
+            bottom: 1px;
+            height: 1px;
+            background: $c-text;
+        }
+    }
+    svg{
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        color: $c-secondary;
+        vertical-align: middle;
+        margin-left: 5px;
+        transition: all .5s;
+        body.show-account-menu &{
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    @include mediaFrom(xl){
+        display: none;
+    }
+}
+.AccountStatic-menu{
+    body.account &,
+    body.orders &{
+        display: flex;
+        @include mediaFrom(xl){
+            display: none;
+        }
+    }
+    &{
+        @include mediaTo(lg){
+            margin-bottom: 2em;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;;
+            background: white;
+            width: 90%;
+            max-width: 320px;
+            padding: 1rem;
+            z-index: 100;
+            transition: all .5s;
+            body.show-account-menu &{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        @include mediaFrom(lg){
+            border-right: 1px solid currentColor;
+            margin-right: 1em;
+            padding-right: 3em;
+        }
+        @include mediaFrom(xl){
+            margin-right: 3em;
+        }
+        &:before{
+            @include mediaFrom(xl){
+                content: 'Mi cuenta';
+                display: block;
+                margin-bottom: 0.5em;
+                font-size: rem(30);
+                font-weight: $font-bold;
+                color: $c-dark-gray;
+            }
+        }
+        a[href="/salir"]{
+            width: 137px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 15px;
+            padding: 0;
+            font-size: 0;
+            text-align: center;
+            background-color: $c-primary;
+            &:after{
+                content: 'Cerrar sesión';
+                font-size: 13.6px;
+                color: white;
+            }
+            &:before{
+                display: none;
+            }
+        }
+    }
+}
+.vtex-account{
+    &{
+        > *{
+            padding-top: 0 !important;
+            .c-muted-1{
+                color: $c-text;
+            }
+        }
+    }
+    // Menu
+    &__menu{
+        padding-left: 0;
+        display: none;
+        @include mediaFrom(md){
+            width: 30% !important;
+        }
+        @include mediaFrom(lg){
+            width: 20% !important;
+            margin-right: 3rem;
+            border-right: 1px solid $c-border-account;
+        }
+        @include mediaFrom(xl){
+            display: block;
+        }
+        &:before{
+            content: 'Mi cuenta';
+            display: block;
+            margin-bottom: 0.5em;
+            font-size: rem(30);
+            font-weight: $font-bold;
+            color: $c-dark-gray;
+        }
+    }
+    &__menu > div:first-child,
+    &__user-info{
+        display: none;
+    }
+    @at-root &__menu-links,
+    .AccountStatic-menu{
+        @include flexbox($fd: column);
+        a{
+            padding: 5px;
+            border-left: none;
+            border-radius: 20px;
+            margin-top: 0;
+            margin-bottom: 7.5px;
+            order: 10;
+            font-size: 0.85rem;
+            &.b--action-primary,
+            &.is-active{
+                background-color: $c-light-gray;
+            }
+            &:hover,
+            &:focus{
+                text-decoration: none;
+                color: $c-primary;
+            }
+            &:before{
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+            }
+        }
+        a[href*="#/cards"], a[href*="#/profile"], a[href*="#/orders"], a[href*="/wishlist"]{
+            font-size: 0;
+            &:after{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13.6px;
+            }
+        }
+        a[href*="#/cards"]{
+            order: 5;
+            display: none!important;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPjx0aXRsZT5jYXJkczwvdGl0bGU+PHBhdGggZD0iTTEuMjE3NCw1LjI2NDZhLjU2NjcuNTY2NywwLDAsMC0uMDU4Ni4yNDY2djEwLjVhLjYyNTYuNjI1NiwwLDAsMCwuNjI1LjYyNUgxNi4yMzg5YS42MjU2LjYyNTYsMCwwLDAsLjYyNS0uNjI1di0xMC41YS42MjU2LjYyNTYsMCwwLDAtLjYyNS0uNjI1SDEzLjM4NjNWMS45ODg3YS42MjQ5LjYyNDksMCwwLDAtLjc4OS0uNjAzbC0xMSwzYS42MjY4LjYyNjgsMCwwLDAtLjQzOTUuNzY3MUEuMzI1NC4zMjU0LDAsMCwwLDEuMjE3NCw1LjI2NDZabTMuMjk0OS0uMzc4NCw3LjYyNC0yLjA3OTFWNC44ODYyWm0tMi4xMDM1LDEwLjV2LTkuMjVIMTUuNjEzOXY5LjI1WiIgc3R5bGU9ImZpbGw6I2E4ZDQzMiIvPjwvc3ZnPg==');
+            }
+            &:after{
+                content: 'Mis tarjetas';
+            }
+        }
+        a[href*="#/addresses"]{
+            order: 3;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPjx0aXRsZT5sb2NhdGlvbjwvdGl0bGU+PHBhdGggZD0iTTMuOTcsMTUuMTg0NkE3Ljk3MjEsNy45NzIxLDAsMSwwLDEuMDI3Myw5LDcuOTUxMiw3Ljk1MTIsMCwwLDAsMy45NywxNS4xODQ2Wk0yLjEwNDUsOWE2Ljg5MTUsNi44OTE1LDAsMSwxLDkuMjQ0MSw2LjQ4NTQsNi45NTg5LDYuOTU4OSwwLDAsMS00LjY5NzItLjAwMDVBNi45MSw2LjkxLDAsMCwxLDIuMTA0NSw5WiIgc3R5bGU9ImZpbGw6I2E4ZDQzMiIvPjxwYXRoIGQ9Ik04LjYyNCwxMy4yMzI5YS40NDQ3LjQ0NDcsMCwwLDAsLjc0NDItLjAwMWwyLjE5ODItMy4zNzNhMy4xMjksMy4xMjksMCwxLDAtNS4xODQ2LS4wNjU0Wk02Ljc1NDksOC4wNzQyYTIuMjQxMiwyLjI0MTIsMCwxLDEsNC4wNzIyLDEuMjkyNWwtMS44MzEsMi44MUw3LjEyNCw5LjMwNjJBMi4yMzIyLDIuMjMyMiwwLDAsMSw2Ljc1NDksOC4wNzQyWiIgc3R5bGU9ImZpbGw6I2E4ZDQzMiIvPjxwYXRoIGQ9Ik04Ljk5NjEsOS41NTA4QTEuNDUzOSwxLjQ1MzksMCwxLDAsNy41NDMsOC4wOTcyLDEuNDU1NCwxLjQ1NTQsMCwwLDAsOC45OTYxLDkuNTUwOFpNOC40MzA3LDguMDk3MmEuNTY1NC41NjU0LDAsMSwxLC41NjU0LjU2NTRBLjU2NjUuNTY2NSwwLDAsMSw4LjQzMDcsOC4wOTcyWiIgc3R5bGU9ImZpbGw6I2E4ZDQzMiIvPjwvc3ZnPg==');
+            }
+        }
+        a[href*="#/profile"]{
+            order: 1;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPjx0aXRsZT5wcm9maWxlPC90aXRsZT48cGF0aCBkPSJNOSwuMjkxNEE4LjcwODYsOC43MDg2LDAsMSwwLDExLjk2NzMsMTcuMTksOC43MTE0LDguNzExNCwwLDAsMCwxNS4xNTgxLDIuODQxOSw4LjY1MTQsOC42NTE0LDAsMCwwLDksLjI5MTRabTIuNTMsMTUuNjkyMUE3LjQxNDksNy40MTQ5LDAsMCwxLDQuMzIsMTQuNzY0YTUuMTUsNS4xNSwwLDAsMSw0LjY2ODgtMi45OTgxaC4wMTQ4QTUuMTUsNS4xNSwwLDAsMSwxMy42OCwxNC43NjM5YTcuMzcsNy4zNywwLDAsMS0yLjE1LDEuMjJabS0uMTUzNi03Ljg3NzFBMi4zNzYzLDIuMzc2MywwLDEsMSw5LDUuNzMsMi4zODExLDIuMzgxMSwwLDAsMSwxMS4zNzY1LDguMTA2NFptMS4yODM0LDBBMy42NiwzLjY2LDAsMSwwLDYuNjYyNCwxMC45Miw2LjQ1MDcsNi40NTA3LDAsMCwwLDMuMzU2MywxMy44MjVhNy40MjQ5LDcuNDI0OSwwLDEsMSwxMS4yODc2LDAsNi40NTEsNi40NTEsMCwwLDAtMy4zMDYtMi45MDQ5QTMuNjU2NCwzLjY1NjQsMCwwLDAsMTIuNjYsOC4xMDY0WiIgc3R5bGU9ImZpbGw6I2E4ZDQzMiIvPjwvc3ZnPg==');
+            }
+            &:after{
+                content: 'Mi perfil';
+            }
+            // border-top: 1px solid $c-dark;
+        }
+        a[href*="#/orders"]{
+            order: 2;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPjx0aXRsZT5vcmRlcnM8L3RpdGxlPjxwYXRoIGQ9Ik0xLjYyNTcsMy40MDU4aDEuNzUxTDQuOTg4LDExLjYwNGEuMzQuMzQsMCwwLDAsLjAyODQuMDg5NC41MzczLjUzNzMsMCwwLDAsLjUyNDQuNDE2NWg5LjQ0MTRhLjUzODYuNTM4NiwwLDAsMCwwLTEuMDc3MkgxMS45ODcxbDMuMjkyLS41MTU2YS41Mzc1LjUzNzUsMCwwLDAsLjQ0MzMtLjQxMjZMMTYuOSw0LjkyMTlhLjUzOTEuNTM5MSwwLDAsMC0uMTA2NS0uNDU3MWwtLjAwMSwwYS41NDYzLjU0NjMsMCwwLDAtLjQyMjgtLjJIMTYuMzY2TDQuNjc3NSw0LjQzNzUsNC4zNDg0LDIuNzYzN0EuNTQuNTQsMCwwLDAsMy44MiwyLjMyODZIMS42MjU3YS41Mzg2LjUzODYsMCwxLDAsMCwxLjA3NzJaTTQuODg4NCw1LjUxMTdsMTAuODA4Ni0uMTYtLjk0NTMsNC4xNTcyTDUuOTQ2LDEwLjg4ODJaIiBzdHlsZT0iZmlsbDojYThkNDMyIi8+PHBhdGggZD0iTTUuMDkyNSwxNC4xMzEzYTEuNTQwNiwxLjU0MDYsMCwxLDAsMS41NDEtMS41NEExLjU0MjQsMS41NDI0LDAsMCwwLDUuMDkyNSwxNC4xMzEzWm0yLjAwMzksMGEuNDYyOS40NjI5LDAsMSwxLS40NjI5LS40NjI4QS40NjM1LjQ2MzUsMCwwLDEsNy4wOTY0LDE0LjEzMTNaIiBzdHlsZT0iZmlsbDojYThkNDMyIi8+PHBhdGggZD0iTTExLjczNTEsMTQuMTMxM2ExLjU0LDEuNTQsMCwxLDAsMS41NC0xLjU0QTEuNTQxNSwxLjU0MTUsMCwwLDAsMTEuNzM1MSwxNC4xMzEzWm0xLjA3NzIsMGEuNDYyOS40NjI5LDAsMSwxLC40NjI5LjQ2MjlBLjQ2MzUuNDYzNSwwLDAsMSwxMi44MTIzLDE0LjEzMTNaIiBzdHlsZT0iZmlsbDojYThkNDMyIi8+PC9zdmc+');
+            }
+            &:after{
+                content: 'Mis pedidos';
+            }
+        }
+        a[href*="/subscriptions"]{
+            order: 7;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPjx0aXRsZT5zdXNjcmlwdGlvbnM8L3RpdGxlPjxwYXRoIGQ9Ik0xMS4yNTczLDE0LjIwNzlhMi41MSwyLjUxLDAsMCwxLTUuMDExNiwwSDIuNjk3NGEuNzkxMy43OTEzLDAsMCwxLS41ODE0LS4yNTE3LDEuNzQ0OCwxLjc0NDgsMCwwLDEsMS4wNTkxLTMuMDk0NEwzLjE3NDUsNy41MTU0QTUuNTc4NCw1LjU3ODQsMCwwLDEsNi44LDIuMjlWMS42NDY1QS44OTMuODkzLDAsMCwxLDcuMDgwOC45OUM4Ljc0ODktLjU0OTMsMTAuNzAzNC42MDQ5LDEwLjcwMzQsMi4yMTYyVjIuMjlhNS41Nzg4LDUuNTc4OCwwLDAsMSwzLjYyNSw1LjIyNTZ2My4zNDU5YTEuNjc2NiwxLjY3NjYsMCwwLDEsMS42MzI3LDIuMDQ1OCwxLjcwNDMsMS43MDQzLDAsMCwxLTEuNjgzNywxLjMwMDhabS0xLjE5MTcsMEg3LjI5MDlhMS4zOTQ0LDEuMzk0NCwwLDAsMCwyLjc3NDcsMFpNNy41MTE4LDMuMjI4M0E0LjQ2MjQsNC40NjI0LDAsMCwwLDQuMjksNy41MTU0djMuOTY2NGEuNjA4Ny42MDg3LDAsMCwxLS44NjI5LjU1MTEuNTc0LjU3NCwwLDAsMC0uNjM0Ni45NC4zMzI0LjMzMjQsMCwwLDAsLjI1MjQuMTE5MkgxNC4zMDEzYS41NzUzLjU3NTMsMCwwLDAsLjU1NDYtLjM3MjkuNTYuNTYsMCwwLDAtLjUyODEtLjc0MjQsMS4xMTQxLDEuMTE0MSwwLDAsMS0xLjExNDgtMS4xMTU5VjcuNTE1NEE0LjQ2MjksNC40NjI5LDAsMCwwLDkuOTkxMSwzLjIyODNMOS41ODgsMy4xMTIxVjIuMjUzM2EuODUuODUsMCwwLDAtLjU2NDctLjgyLjgzOTMuODM5MywwLDAsMC0xLjEwODQuNzkyMVYzLjExMloiIHN0eWxlPSJmaWxsOiNhOGQ0MzIiLz48L3N2Zz4=');
+            }
+        }
+        a[href*="/wishlist"]{
+            order: 6;
+            &:after{
+                content: 'Lista de deseos';
+            }
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPjx0aXRsZT53aXNobGlzdDwvdGl0bGU+PHBhdGggZD0iTTYuMjkwNSwxNC41ODU3Yy41MzYyLjQ1NzUsMS4xNDQ2Ljk3NTYsMS43NzQ0LDEuNTI2OGExLjQxODcsMS40MTg3LDAsMCwwLDEuODY5MiwwYy42MzE4LS41NTI3LDEuMjQtMS4wNzE3LDEuNzkyLTEuNTQxQTMzLjIyOTEsMzMuMjI5MSwwLDAsMCwxNS42NiwxMC44NzM4YTYuMjk3Miw2LjI5NzIsMCwwLDAsMS42Njc5LTQuMTMzM0E1LjM4OTMsNS4zODkzLDAsMCwwLDE1Ljk1MjYsMy4wNmE0LjcwMyw0LjcwMywwLDAsMC0zLjQ5OC0xLjUyMzlBNC40MjYsNC40MjYsMCwwLDAsOS42ODksMi40ODlhNS4zNjE1LDUuMzYxNSwwLDAsMC0uNjkuNjQsNS4yOTQ0LDUuMjk0NCwwLDAsMC0uNjg4NS0uNjQsNC40MjU2LDQuNDI1NiwwLDAsMC0yLjc2NTYtLjk1MzYsNC43LDQuNywwLDAsMC0zLjQ5OCwxLjUyMzRBNS4zODgsNS4zODgsMCwwLDAsLjY3MjQsNi43NDA1LDYuMjk3Miw2LjI5NzIsMCwwLDAsMi4zNCwxMC44NzM4LDMzLjMzMjYsMzMuMzMyNiwwLDAsMCw2LjI5MDUsMTQuNTg1N1pNMi43ODI3LDMuNzM3NUEzLjcwOTMsMy43MDkzLDAsMCwxLDUuNTQ1NCwyLjUzNTksMy40NSwzLjQ1LDAsMCwxLDcuNywzLjI4MDVhNC41MjUxLDQuNTI1MSwwLDAsMSwuODk0NS45MzU2LjUuNSwwLDAsMCwuODEwNiwwQTQuNTI1OSw0LjUyNTksMCwwLDEsMTAuMywzLjI4MDVhMy42OTU0LDMuNjk1NCwwLDAsMSw0LjkxOC40NTcsNC40LDQuNCwwLDAsMSwxLjEwOTMsMy4wMDNBNS4zNiw1LjM2LDAsMCwxLDE0Ljg5LDEwLjIzNjEsMzIuNzU4NiwzMi43NTg2LDAsMCwxLDExLjA2NCwxMy44MjJjLS41NC40NjA1LTEuMTUyNC45ODI0LTEuNzg5MSwxLjUzODZhLjQyNjkuNDI2OSwwLDAsMS0uNTUwOC0uMDAwNWMtLjYzNDctLjU1NDctMS4yNDUxLTEuMDc1Ny0xLjc4OS0xLjUzODZBMzIuODEzMiwzMi44MTMyLDAsMCwxLDMuMTEsMTAuMjM2MSw1LjM2LDUuMzYsMCwwLDEsMS42NzI0LDYuNzQwNSw0LjM5MTksNC4zOTE5LDAsMCwxLDIuNzgyNywzLjczNzVaIiBzdHlsZT0iZmlsbDojYThkNDMyIi8+PC9zdmc+');
+            }
+        }
+        a[href*="/billing"]{
+            order: 4;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPjx0aXRsZT5iaWxsaW5nPC90aXRsZT48cGF0aCBkPSJNMTUuMjUsMS4xNDc3SDIuNzVhLjYyNTYuNjI1NiwwLDAsMC0uNjI1LjYyNVYxNi4yMjczYS42MjU2LjYyNTYsMCwwLDAsLjYyNS42MjVoMTIuNWEuNjI1Ni42MjU2LDAsMCwwLC42MjUtLjYyNVYxLjc3MjdBLjYyNTYuNjI1NiwwLDAsMCwxNS4yNSwxLjE0NzdabS0uNjI1LDEuMjVWMTUuNjAyM0gzLjM3NVYyLjM5NzdaIiBzdHlsZT0iZmlsbDojYThkNDMyIi8+PHBhdGggZD0iTTUuNzUsNi44NTIzaDZhLjYyNS42MjUsMCwwLDAsMC0xLjI1aC02YS42MjUuNjI1LDAsMCwwLDAsMS4yNVoiIHN0eWxlPSJmaWxsOiNhOGQ0MzIiLz48cGF0aCBkPSJNNy4xMjUsOS4yMjczYS42MjU2LjYyNTYsMCwwLDAsLjYyNS42MjVoNWEuNjI1LjYyNSwwLDAsMCwwLTEuMjVoLTVBLjYyNTYuNjI1NiwwLDAsMCw3LjEyNSw5LjIyNzNaIiBzdHlsZT0iZmlsbDojYThkNDMyIi8+PHBhdGggZD0iTTUuNzUsMTIuODUyM2g2YS42MjUuNjI1LDAsMCwwLDAtMS4yNWgtNmEuNjI1LjYyNSwwLDAsMCwwLDEuMjVaIiBzdHlsZT0iZmlsbDojYThkNDMyIi8+PC9zdmc+');
+            }
+        }
+        a[href*="mesa-de-regalos"]{
+            order: 7;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA3MiA3MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYzLjA2MjkgNjkuNDEwNUg4LjM1OUM3LjcyNDE0IDY5LjQxMDUgNy4zMDA5IDY5LjAxMjEgNy4zMDA5IDY4LjQxNDZWMzcuMjQxQzcuMzAwOSAzNi42NDM0IDcuNzI0MTQgMzYuMjQ1IDguMzU5IDM2LjI0NUg2My4wNjI5QzYzLjY5NzcgMzYuMjQ1IDY0LjEyMSAzNi42NDM0IDY0LjEyMSAzNy4yNDFWNjguNTE0MkM2NC4xMjEgNjkuMDEyMiA2My41OTE5IDY5LjQxMDUgNjMuMDYyOSA2OS40MTA1Wk05LjQxNzExIDY3LjQxODZINjIuMDA0OFYzOC4yMzY5SDkuNDE3MTFWNjcuNDE4NloiIGZpbGw9IiM5M0Q1MDAiLz4KPHBhdGggZD0iTTM5LjU3MyA2OS4yMTEzQzM4LjkzODIgNjkuMjExMyAzOC41MTQ5IDY4LjgxMyAzOC41MTQ5IDY4LjIxNTRWMTkuNzEyQzM4LjUxNDkgMTkuMzEzNiAzOC44MzIzIDE4LjkxNTIgMzkuMTQ5OCAxOC44MTU2QzUwLjc4ODkgMTQuNTMzIDU0LjgwOTcgMTAuNTQ5MiA1NC43MDM5IDguNDU3NjNDNTQuNTk4MSA2Ljg2NDA5IDUxLjk1MjggNS44NjgxMyA1MC4zNjU3IDUuMzcwMTVDNDEuNDc3NiAyLjc4MDY1IDM2LjE4NzEgMTcuOTE5MyAzNi4xODcxIDE4LjExODVDMzYuMDgxMyAxOC41MTY5IDM1LjY1OCAxOC44MTU2IDM1LjEyOSAxOC44MTU2QzM0LjcwNTggMTguODE1NiAzNC4yODI1IDE4LjUxNjkgMzQuMTc2NyAxOC4xMTg1QzMzLjExODYgMTQuMjM0MiAyOS4yMDM2IDMuOTc1OCAyNC4zMzY0IDIuODgwMjRDMjIuNjQzNCAyLjQ4MTg2IDIxLjA1NjIgMy4yNzg2MyAxOS4yNTc1IDUuMTcwOTZDMTcuMTQxMyA3LjM2MjA3IDE2LjQwMDYgOS4zNTQgMTcuMDM1NCAxMS4xNDY3QzE4LjQxMSAxNS4zMjk4IDI2Ljc3IDE4LjExODUgMjkuODM4NSAxOC44MTU2QzMwLjI2MTcgMTguOTE1MiAzMC42ODUgMTkuMzEzNiAzMC42ODUgMTkuODExNlY2OC4zMTVDMzAuNjg1IDY4LjkxMjUgMzAuMjYxNyA2OS4zMTA5IDI5LjYyNjkgNjkuMzEwOUMyOC45OTIgNjkuMzEwOSAyOC41Njg4IDY4LjkxMjUgMjguNTY4OCA2OC4zMTVWMjAuNTA4OEMyNS44MTc3IDE5LjgxMTYgMTYuNzE4IDE3LjAyMjkgMTUuMDI1MSAxMS43NDQzQzE0LjE3ODYgOS4yNTQ0IDE1LjEzMDkgNi41NjUzIDE3LjY3MDMgMy43NzY2MUMxOS45OTgxIDEuMjg2NyAyMi40MzE4IDAuMzkwMzM2IDI0Ljg2NTQgMC44ODgzMTdDMzAuMDUwMSAyLjA4MzQ3IDMzLjc1MzUgMTAuMzUgMzUuMzQwNiAxNC43MzIyQzM3LjU2MjYgOS45NTE1NyA0Mi44NTMxIDEuMDg3NTEgNTEuMTA2MyAzLjM3ODIyQzU0LjgwOTcgNC40NzM3OCA1Ni44MjAxIDYuMDY3MzIgNTYuOTI1OSA4LjI1ODQ0QzU3LjAzMTcgMTEuOTQzNSA1MS4yMTIxIDE2LjMyNTcgNDAuNzM2OSAyMC4zMDk2VjY4LjExNThDNDAuNjMxMSA2OC44MTMgNDAuMjA3OSA2OS4yMTEzIDM5LjU3MyA2OS4yMTEzWiIgZmlsbD0iIzkzRDUwMCIvPgo8cGF0aCBkPSJNNjcuNjEyNyAzNy44Mzg1SDIuNzUxMDZDMC42MzQ4NTggMzcuODM4NSAtMS4wNTgxMSAzNi4yNDUgLTEuMDU4MTEgMzQuMjUzVjIyLjEwMjNDLTEuMDU4MTEgMjAuMTEwNCAwLjYzNDg1OCAxOC41MTY4IDIuNzUxMDYgMTguNTE2OEg2Ny42MTI3QzY5LjcyODkgMTguNTE2OCA3MS40MjE5IDIwLjExMDQgNzEuNDIxOSAyMi4xMDIzVjM0LjI1M0M3MS40MjE5IDM2LjI0NSA2OS43Mjg5IDM3LjgzODUgNjcuNjEyNyAzNy44Mzg1Wk0yLjc1MTA2IDIwLjUwODhDMS43OTg3NyAyMC41MDg4IDEuMDU4MSAyMS4yMDU5IDEuMDU4MSAyMi4xMDIzVjM0LjI1M0MxLjA1ODEgMzUuMTQ5NCAxLjc5ODc3IDM1Ljg0NjYgMi43NTEwNiAzNS44NDY2SDY3LjYxMjdDNjguNTY1IDM1Ljg0NjYgNjkuMzA1NyAzNS4xNDk0IDY5LjMwNTcgMzQuMjUzVjIyLjEwMjNDNjkuMzA1NyAyMS4yMDU5IDY4LjU2NSAyMC41MDg4IDY3LjYxMjcgMjAuNTA4OEgyLjc1MTA2WiIgZmlsbD0iIzkzRDUwMCIvPgo8L3N2Zz4K');
+                background-size: 16px 16px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+        a[href*="privilegio"]{
+            order: 7;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuNSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9InN2Zy1pY29uLXByaXZpbGVnZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IgoJIHk9IjBweCIgdmlld0JveD0iMCAwIDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM5M0Q1MDA7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNi40LDIybC0yLjktMi41Yy0wLjItMC4xLTAuMy0wLjEtMC41LDBsLTIuOSwyLjZjLTAuMSwwLjEtMC4xLDAuMi0wLjEsMC4zdjRjMCwwLjIsMC4yLDAuMywwLjMsMC4zaDUuOAoJCWMwLjIsMCwwLjMtMC4yLDAuMy0wLjN2LTRDMjYuNiwyMi4yLDI2LjUsMjIsMjYuNCwyMnogTTIwLjgsMjUuOXYtMy41bDIuNS0yLjNsMi41LDIuMnYzLjVMMjAuOCwyNS45eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTIzLjMsMTYuOWMtMy42LDAtNi40LDMtNi40LDYuNXMzLDYuNCw2LjUsNi40czYuNC0zLDYuNC02LjVTMjYuOSwxNi45LDIzLjMsMTYuOXogTTIzLjQsMjguOAoJCWMtMywwLTUuNi0yLjQtNS42LTUuNXMyLjQtNS42LDUuNS01LjZzNS42LDIuNCw1LjYsNS41QzI4LjgsMjYuMywyNi40LDI4LjgsMjMuNCwyOC44eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTIzLjMsMTVjMy42LDAsNi41LTMsNi40LTYuNWMwLTMuNi0zLTYuNS02LjUtNi40Yy0zLjYsMC4xLTYuNSwzLTYuNCw2LjVDMTYuOCwxMi4yLDE5LjcsMTUuMSwyMy4zLDE1egoJCSBNMjMuMiwzLjFjMywwLDUuNSwyLjQsNS42LDUuNWMwLDMtMi40LDUuNS01LjUsNS42Yy0zLDAtNS41LTIuNC01LjYtNS41QzE3LjcsNS42LDIwLjIsMy4xLDIzLjIsMy4xeiIvPgoJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIyNi4yLDExLjUgMjYuMiw3LjUgMjMuMiw1IDIwLjMsNy41IDIwLjMsMTEuNSAJIi8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOSw0LjdjLTAuMi0wLjItMC4zLTAuMi0wLjUsMEw1LjYsNy4yQzUuNSw3LjMsNS40LDcuNCw1LjQsNy41djRjMCwwLjIsMC4yLDAuMywwLjMsMC4zaDUuOAoJCWMwLjIsMCwwLjMtMC4yLDAuMy0wLjN2LTRjMC0wLjEtMC4xLTAuMi0wLjEtMC4zTDksNC43eiBNMTEuMiwxMS4xSDYuMVY3LjdsMi41LTIuM2wyLjUsMi4zTDExLjIsMTEuMUwxMS4yLDExLjF6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOC43LDIuMWMtMy42LDAtNi41LDMtNi41LDYuNXMzLDYuNSw2LjUsNi41czYuNS0zLDYuNS02LjVTMTIuMywyLjEsOC43LDIuMXogTTguNywxNC4xYy0zLDAtNS41LTIuNC01LjUtNS41CgkJczIuNC01LjUsNS41LTUuNXM1LjUsMi40LDUuNSw1LjVTMTEuNywxNC4xLDguNywxNC4xeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTguNywxN2MtMy42LDAtNi41LDMtNi40LDYuNWMwLDMuNiwzLDYuNSw2LjUsNi40YzMuNiwwLDYuNS0zLDYuNC02LjVDMTUuMSwxOS44LDEyLjMsMTYuOSw4LjcsMTd6IE04LjcsMjguOQoJCWMtMywwLTUuNS0yLjQtNS42LTUuNWMwLTMsMi40LTUuNSw1LjUtNS42YzMsMCw1LjUsMi40LDUuNiw1LjVDMTQuMiwyNi40LDExLjcsMjguOSw4LjcsMjguOXoiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOC43LDE5LjcgNS44LDIyLjMgNS44LDI2LjMgMTEuNiwyNi4zIDExLjYsMjIuMyAJIi8+CjwvZz4KPC9zdmc+Cg==');
+            }
+        }
+        a[href*="credito"]{
+            order: 5;
+            &:before{
+                background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuNSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA2MCA2MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjAgNjA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojOTNENTAwO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzguOCwzNi42YzEuNi0yLDIuNS00LjUsMi41LTcuMWMwLTMtMS4yLTUuOS0zLjMtOGMtMi4xLTIuMS01LTMuMy04LTMuM2MtMywwLTUuOSwxLjItOCwzLjMKCQljLTIuMiwyLjEtMy4zLDUtMy4zLDhjMCwzLjQsMS41LDYuNiw0LjIsOC44YzEsMC44LDIuMSwxLjQsMy4zLDEuOWMyLjUsMC45LDUuMiwwLjksNy43LDBjMC43LTAuMywxLjQtMC42LDIuMS0xbDIuMywyLjMKCQljMC40LDAuNCwwLjgsMC42LDEuNCwwLjZjMC41LDAsMS0wLjIsMS40LTAuNmMwLjQtMC40LDAuNi0wLjgsMC42LTEuNGMwLTAuNS0wLjItMS0wLjYtMS40TDM4LjgsMzYuNnogTTI5LjgsMzAuMwoJCWMtMC40LDAuNC0wLjYsMC44LTAuNiwxLjRjMCwwLjUsMC4yLDEsMC42LDEuNGwzLjUsMy41Yy0wLjIsMC4xLTAuNSwwLjItMC43LDAuM2MtMS43LDAuNi0zLjYsMC42LTUuMywwYy0wLjgtMC4zLTEuNi0wLjctMi4zLTEuMwoJCWMtMS44LTEuNS0yLjktMy43LTIuOS02YzAtMi4xLDAuOC00LDIuMy01LjVjMS41LTEuNSwzLjQtMi4zLDUuNS0yLjNzNCwwLjgsNS41LDIuM2MxLjUsMS41LDIuMywzLjQsMi4zLDUuNQoJCWMwLDEuNy0wLjUsMy4yLTEuNSw0LjVsLTMuNy0zLjdDMzEuOCwyOS42LDMwLjUsMjkuNiwyOS44LDMwLjMiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zMCwzYy03LjIsMC0xNCwyLjgtMTkuMSw3LjlDNS44LDE2LDMsMjIuOCwzLDMwYzAsOC4yLDMuNiwxNS44LDEwLDIwLjljMi40LDEuOSw1LDMuNCw3LjgsNC41CgkJYzIuOSwxLjEsNiwxLjYsOS4yLDEuNmMzLjIsMCw2LjMtMC41LDkuMi0xLjZjMi44LTEsNS41LTIuNSw3LjgtNC40YzYuMy01LjIsMTAtMTIuOCwxMC0yMC45YzAtNy4yLTIuOC0xNC03LjktMTkuMQoJCUM0NCw1LjgsMzcuMiwzLDMwLDMgTTUzLjQsMzBjMCw3LjEtMy4xLDEzLjctOC42LDE4LjF2MGMtMiwxLjctNC4zLDMtNi44LDMuOGMtNS4xLDEuOC0xMC44LDEuOC0xNS45LDBjLTIuNS0wLjktNC43LTIuMi02LjgtMy44CgkJQzkuOCw0My43LDYuNiwzNy4xLDYuNiwzMGMwLTYuMiwyLjQtMTIuMSw2LjgtMTYuNUMxNy45LDkuMSwyMy44LDYuNiwzMCw2LjZjNi4yLDAsMTIuMSwyLjQsMTYuNSw2LjhTNTMuNCwyMy44LDUzLjQsMzAiLz4KPC9nPgo8L3N2Zz4K');
+            }
+        }
+        a.pointer{
+            width: 137px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 15px;
+            padding: 0;
+            font-size: 0;
+            text-align: center;
+            color: white;
+            background-color: $c-primary;
+            &:after{
+                content: 'Cerrar sesión';
+                font-size: 13.6px;
+            }
+            &:before{
+                display: none;
+            }
+        }
+    }
+    &__menu-links{
+        // Custom
+        a[href*="/account#"],
+        a[href*="/subscriptions"],
+        a[href="/salir"]{
+            display: none;
+        }
+    }
+    // Content
+    &__page{
+        width: 100%;
+        @include mediaFrom(xl){
+            width: 80%;
+        }
+        &-body{
+            padding: 0;
+            font-family: $font-body !important;
+            font-size: rem(14);
+            label{
+                font-weight: $font-bold;
+            }
+            .b--muted-4{
+                border: none;
+            }
+            .ph7, .pv6{
+                padding: 0;
+            }
+        }
+    }
+    &__password-box{
+        .relative .relative{
+            border: 1px solid $c-pastel-gray;
+            border-radius: 50%;
+            overflow: hidden;
+            input[type="checkbox"]{
+                margin: 0;
+            }
+        }
+        [for="newsletterOptIn"]{
+            margin-bottom: 0;
+        }
+    }
+    // Edit my profile
+    &__profile-edit{
+        &:before{
+            display: block;
+            margin-bottom: 1.5em;
+            content: 'Edita tus datos y actualiza tu información.\a';
+        }
+        .mw6-ns{
+            max-width: 100% !important;
+        }
+        .vtex-profile-form__personal-fields{
+            @include flexbox($fw: wrap, $jc: space-between);
+        }
+        .vtex-profile-form__field-wrapper{
+            width: 45%;
+            .vtex-dropdown label>div{
+                height: 35px;
+                line-height: 35px;
+                padding-left: 1em;
+                padding-right: 1em;
+                border-radius: 20px;
+            }
+            .vtex-dropdown__button{
+                padding: 0;
+            }
+        }
+    }
+    // Address
+    &__address-list{
+        > div{
+            justify-content: space-between;
+            .pr5-ns{
+                @include margin-v(1,1,1em);
+                padding: 1em;
+                border-radius: 10px;
+                border: 1px solid $c-pastel-gray;
+                @include mediaFrom(md){
+                    width: 49%;
+                }
+                &:hover{
+                    border-color: $c-secondary;
+                }
+            }
+        }
+    }
+    //Credit Card
+    &__cards-list{
+        &:before{
+            display: block;
+            margin-bottom: 1.5em;
+            content: 'Puedes almacenar de forma segura la información de tus tarjetas VISA y Mastercard y así puedes realizar tus compras en cemaco.com con un solo click, sin necesidad de digitar tu información de tarjeta en cada compra que realices';
+        }
+    }
+}
+// Header
+.vtex-pageHeader{
+    &__container{
+        padding: 0;
+    }
+    &__title{
+        @extend .tag-title--account;
+    }
+}
+// Control wrapper
+%control-wrapper{
+    padding-bottom: 0;
+    margin-bottom: 1.25em;
+    label span{
+        margin-bottom: 0;
+        font-family: $font-body !important;
+        font-size: rem(14);
+    }
+    input{
+        font-family: $font-body !important;
+    }
+}
+.vtex-dropdown{
+    font-family: $font-body !important;
+    label > div{
+        border: 1px solid $c-pastel-gray;
+        border-radius: 0;
+    }
+}
+// Profile
+.vtex-profile-form{
+    &__profile-summary{
+        div.mb8{
+            @extend %control-wrapper;
+        }
+    }
+    &__field-wrapper{
+        @extend %control-wrapper;
+    }
+}
+// Address
+.vtex-address-form{
+    $className: removeSelector(&);
+    @at-root [class*="#{$className}__"]{
+        @extend %control-wrapper;
+        .b--solid{
+            border: none;
+        }
+    }
+}
+.vtex-address-form__country{
+    display: none!important;
+}
+// Crédito en Línea
+.total-credit{
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: $font-bold;
+}
+#total-credit{
+    color: transparent;
+    transition: all .5s;
+    background: url('#{$image-path}loading.gif') center center no-repeat;
+    background-size: auto 100%;
+    &.shown{
+        color: $c-text;
+        background: none;
+    }
+}
+// Orders
+article.myo-order-card,
+a.myo-collapsed-order{
+    @include mediaFrom(lg){
+        display: flex;
+        .myo-order-header{
+            padding: 1rem 0;
+            width: 65%;
+            display: flex;
+            .ttu{
+                text-transform: none;
+            }
+            .f5-l,
+            .f6-xl{
+                font-size: .75rem;
+            }
+            & > div{
+                width: 20%;
+                order: 2;
+                padding: 0 5px;
+                &:first-child{
+                    width: 25%;
+                    & > div:first-child span{
+                        font-size: 0;
+                        line-height: 0;
+                        &:before{
+                            content: 'Fecha';
+                            font-size: .75rem;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+                &.w-100-s{
+                    width: 55%;
+                    order: 1;
+                    display: flex;
+                    & > div.myo-order-id{
+                        width: 55%;
+                        text-align: left;
+                    }
+                    & > div:last-child{
+                        text-align: left;
+                        width: 45%;
+                        padding: 0 5px;
+                        margin-top: 0;
+                        &:before{
+                            content: 'Estado';
+                            display: block;
+                            font-size: .75rem;
+                            line-height: 1.5;
+                            font-weight: $font-bold;
+                        }
+                        & > div{
+                            display: block;
+                            text-align: left;
+                            background-color: transparent;
+                            padding: 0;
+                            span{
+                                span{
+                                    color: $c-text;
+                                }
+                                &.c-on-danger{
+                                    span{
+                                        color: $c-accent;
+                                        font-weight: $font-bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bg-base{
+            width: 40%;
+            padding: 1rem 0;
+            .myo-details-btn[href*="orders"]{
+                span span{
+                    font-size: 0;
+                    line-height: 0;
+                    &:before{
+                        content: 'Ver detalle';
+                        color: $c-secondary;
+                        font-weight: $font-bold;
+                        font-size: .75rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+    @include mediaTo(md){
+        .myo-order-header{
+            div.bg-warning{
+                background: none;
+                color: $c-alert;
+                font-weight: $font-bold;
+                border: 1px solid $c-alert;
+                cursor: default;
+                span{
+                    span{
+                        color: $c-alert;
+                    }
+                }
+            }
+            div.bg-danger{
+                background: none;
+                color: $c-accent;
+                font-weight: $font-bold;
+                border: 1px solid $c-accent;
+                cursor: default;
+                span{
+                    span{
+                        color: $c-accent;
+                    }
+                }
+            }
+        }
+        .bg-base{
+            .myo-details-btn[href*="orders"]{
+                text-align: right;
+                padding-right: 0;
+                span span{
+                    font-size: 0;
+                    line-height: 0;
+                    &:before{
+                        content: 'Ver detalle';
+                        color: $c-secondary;
+                        font-weight: $font-bold;
+                        font-size: .75rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+
+    }
+}
+.myo-collapsed-order{
+    @include mediaTo(md){
+        div.bg-warning{
+            background: none;
+            color: $c-alert;
+            font-weight: $font-bold;
+            border: 1px solid $c-alert;
+            cursor: default;
+            span{
+                span{
+                    color: $c-alert;
+                }
+            }
+        }
+        div.bg-danger{
+            background: none;
+            color: $c-accent;
+            font-weight: $font-bold;
+            border: 1px solid $c-accent;
+            cursor: default;
+            span{
+                span{
+                    color: $c-accent;
+                }
+            }
+        }
+    }
+}
+.vtex-account__order-details{
+    time{
+        .bg-warning{
+            background: none;
+            font-weight: $font-bold;
+            border: 1px solid $c-alert;
+            cursor: default;
+            span span{
+                color: $c-alert;
+            }
+        }
+        .bg-danger{
+            background: none;
+            font-weight: $font-bold;
+            border: 1px solid $c-accent;
+            cursor: default;
+            span span{
+                color: $c-accent;
+            }
+        }
+    }
+    ul{
+        li:first-child{
+            a.c-link{
+                font-weight: $font-bold;
+                span span{
+                    display: inline-block;
+                    text-decoration: underline;
+                }
+                svg{
+                    display: none;
+                }
+            }
+        }
+    }
+    .myo-product-row{
+        .myo-product-price,
+        .myo-product-quantity,
+        .myo-product-total-price{
+            text-align: center;
+        }
+    }
+    .myo-attachment-empaque-de-regalo{
+        img{
+            width: 20px;
+        }
+    }
+}
+//Billing
+.billing{
+    &-text{
+        margin: 15px 0 !important;
+        font-weight: $font-bold;
+        color: $c-dusty-gray;
+    }
+    &-form{
+        @include mediaTo(sm){
+            margin-bottom: 2em;
+        }
+        @include mediaFrom(md){
+            @include flexbox($fw: wrap, $jc: space-between);
+            margin-top: 1rem;
+        }
+        .control-wrapper{
+            @include mediaFrom(lg){
+                width: 40%;
+            }
+        }
+    }
+    &-info{
+        &{
+            @include mediaFrom(md){
+                @include flexbox($fw: wrap, $jc: space-between);
+            }
+        }
+        &__item{
+            &{
+                margin-bottom: 1em;
+                padding: 1em;
+                border: 1px solid $c-pastel-gray;
+                border-radius: 10px;
+                @include mediaFrom(md){
+                    width: 49%;
+                    @include flexbox($fw: wrap);
+                }
+                &:hover{
+                    border-color: $c-secondary;
+                }
+                .vtex-button{
+                    margin-left: auto;
+                    span{
+                        color: $c-secondary;
+                    }
+                }
+                strong, span{
+                    display: block;
+                    width: 100%;
+                }
+                strong{
+                    margin-bottom: 1em;
+                }
+                label, span{
+                    margin-bottom: 0.25em;
+                    color: $c-dusty-gray;
+                    font-size: rem(14);
+                    &.eliminar_factura, &.editar_factura{
+                        text-decoration: underline;
+                    }
+                    &.eliminar_factura{
+                        color: $c-invalid;
+                    }
+                }
+            }
+        }
+        &__add{
+            width: 100%;
+            text-align: right;
+        }
+    }
+}
+// Buttons
+.vtex-button{
+    &.b--action-primary{
+        @include button-flat($c-secondary);
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        border: none;
+        text-transform: none;
+        font-weight: $font-bold;
+    }
+    &.b--danger{
+        @include button-flat(lighten($c-invalid,20));
+        border: none;
+        text-transform: none;
+        font-weight: $font-bold;
+    }
+    &.b--muted-5{
+        @include button-flat($c-dusty-gray);
+        border: none;
+    }
+    @at-root .dead-link,
+    &.b--transparent{
+        font-size: rem(14) !important;
+        font-weight: $font-bold !important;
+        text-transform: none !important;
+        color: $c-secondary !important;
+        & > div{
+            padding: 3px;
+            position: relative;
+            border-bottom: 1px solid $c-secondary;
+        }
+    }
+}
+.c-link, .hover-c-link:focus, .hover-c-link:hover{
+    color: $c-secondary;
+}
+
+.vtex-address-form__complement.dn.pb7{display: block;}
+.vtex-address-form__number.dn.pb7{display: block;}
+.vtex-address-form__number.dn.pb7 label span{content: ''; font-size: 0px;}
+.vtex-address-form__number.dn.pb7 label span:before{content: 'Edificio o condominio'; font-size: 0.875rem;}
+
+.vtex-address-form__reference.dn.pb7{display: block;}
+.vtex-address-form__reference.dn.pb7 label span{content: ''; font-size: 0px;}
+.vtex-address-form__reference.dn.pb7 label span::before {content: 'Indicaciones'; font-size: 0.875rem;}

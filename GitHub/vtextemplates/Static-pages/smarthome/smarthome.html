@@ -1,0 +1,362 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="re-central">
+    
+    <!-- Empieza Banner portada -->  
+    <div class="banner-smarthome">
+        <picture>
+            <!-- Mobile webp min.jpg-->
+            <source srcset="/arquivos/2021_bannercat_smarthome_mob.min.jpg" media="(max-width: 767px)" type="image/webp">
+            <!-- Mobile .jpg-->
+            <source srcset="/arquivos/2021_bannercat_smarthome_mob.jpg" media="(max-width: 767px)">
+            <!-- Desktop webp min.jpg-->
+            <source srcset="/arquivos/2021_bannercat_smarthome_desk.min.jpg" type="image/webp">
+            <!-- Desktop .jpg-->
+            <img src="/arquivos/2021_bannercat_smarthome_desk.jpg" alt="Banner smarthome">
+        </picture>
+    </div>
+    <!-- Termina Banner portada -->
+    
+    <!-- Empieza  titulo marcas favoritas-->
+    <h2 class="title-landing">Tus marcas favoritas</h2>
+    <!-- Termina  titulo marcas favoritas-->
+    
+    <!-- Empieza las imagenes -->
+    <div class="row content-images">
+        <div class="col-lg-4">
+            <a href="/nexxt">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_nexxt.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_cat_nexxt.min.jpg" class="img-left" alt="nexxt Banner">
+                </picture>
+            </a>
+        </div>
+        <div class="col-lg-4 content-image-center">
+            <a href="/sylvania">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_sylvania.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_cat_sylvania.min.jpg" class="img-center" alt="sylvania Banner">
+                </picture>
+            </a>
+        </div>
+        <div class="col-lg-4">
+            <a href="/wiz">
+                <picture>
+                    <source srcset="/arquivos/2021_cat_wiz.jpg"  media="(min-width: 480px)" type="image/webp">
+                    <img src="/arquivos/2021_cat_wiz.min.jpg" class="img-right" alt="wiz Banner">
+                </picture>
+            </a>
+        </div>
+    </div>
+    <!-- Termina las imagenes-->
+    
+    <!-- Empieza  titulo marcas favoritas-->
+    <h2 class="title-landing">Vuelve tu hogar Smart</h2>
+    <!-- Termina  titulo marcas favoritas-->
+    
+</div>
+
+<style>
+    .smarthome .banner-smarthome{
+            margin-bottom: 1.4rem;
+    }
+    .smarthome .bread-crumbs, .smarthome .category-name, .smarthome .product-list__results-items{
+        display: none;
+    }
+
+    
+    .smarthome .product-list__controls{
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    .smarthome .re-central--product-list {
+        padding: 10px 20px;
+        background: #F6F6F6;
+        margin-top: 1.5rem;
+    }
+
+    .smarthome .pre-footer {
+        margin-top: 2rem
+    }
+
+    .smarthome .product-item__wrapper .product-item{
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+    }
+    
+    
+    
+    
+    
+    
+
+    .title-landing{
+        text-align: center!important;
+        margin-bottom: 10px;
+    }
+
+    @media(min-width: 5px) and (max-width: 480px){
+        .title-landing{
+            font-size: 1rem;
+        }
+        .content-images{
+            padding-left:40px;
+            padding-right:40px;
+            padding-bottom:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-lg-4 {
+            float: left;
+            width: 30%;
+            padding: 0px;
+        }
+        .content-image-center{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-left{
+            width: 50%;
+            float: left;
+        }
+        .img-center{
+            width: 100%;
+            display: block;
+            margin:auto;
+        }
+        .img-right{
+            width: 70%;
+            float: right;
+        }
+        .filter-accordion__trigger{
+			font-size:0.85rem!important;
+		}
+    }
+    
+    
+    @media(min-width: 481px) and (max-width: 767px){
+        .title-landing{
+            font-size: 1.4rem;
+        }
+        .content-images{
+            padding-left:90px;
+            padding-right:90px;
+            padding-bottom:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-lg-4 {
+            float: left;
+            width: 30%;
+            padding: 0px;
+        }
+        .content-image-center{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-left{
+            width: 40%;
+            float: left;
+        }
+        .img-center{
+            width: 100%;
+            display: block;
+            margin:auto;
+        }
+        .img-right{
+            width: 60%;
+            float: right;
+        }
+        .filter-accordion__trigger{
+			font-size:1rem!important;
+		}
+    }
+    
+    
+    
+
+	@media only screen and (min-width: 768px){
+		.title-landing{
+            font-size: 1.3rem;
+        }
+        .smarthome .product-list__controls{
+            display: none;
+        }
+        
+        .content-images{
+            padding-left:100px;
+            padding-right:100px;
+            padding-bottom:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .col-lg-4 {
+            float: left;
+            width: 30%;
+            padding: 0px;
+        }
+        .content-image-center{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-left{
+            width: 40%;
+            float: left;
+        }
+        .img-center{
+            width: 100%;
+            display: block;
+            margin:auto;
+        }
+        .img-right{
+            width: 55%;
+            float: right;
+        }
+        .filter-accordion__trigger{
+			font-size:1.1rem!important;
+		}
+	}
+	
+	@media only screen and (min-width: 1024px){
+        .title-landing{
+            font-size: 1.5rem;
+        }
+        .smarthome .product-list__controls{
+            display: none;
+        }
+        .content-images{
+            padding-left:145px;
+            padding-right:145px;
+            padding-bottom:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .filter-accordion__trigger {
+            font-size: 0.59rem!important;
+        }
+        .links-wrapper>ul {
+            font-size: 0.775rem;
+        }
+	}
+	
+	@media only screen and (min-width: 1280px){
+        .title-landing{
+            font-size: 1.5rem;
+        }
+        .smarthome .product-list__controls{
+            display: none;
+        }
+        .content-images{
+            padding-left:190px;
+            padding-right:190px;
+            padding-bottom:15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-left{
+            width: 35%;
+            float: left;
+        }
+        .img-center{
+            width: 81%;
+            display: block;
+            margin:auto;
+        }
+        .img-right{
+            width: 45%;
+            float: right;
+        }
+        .filter-accordion__trigger {
+            font-size: 0.75rem!important;
+        }
+	}
+	
+	
+	@media only screen and (min-width: 1366px){
+	    .title-landing{
+            font-size: 1.85rem;
+        }
+        .smarthome .product-list__controls{
+            display: none;
+        }
+        .content-images{
+            padding-left:175px;
+            padding-right:175px;
+            padding-bottom:15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .img-left{
+            width: 40%;
+            float: left;
+        }
+        .img-center{
+            width: 100%;
+            display: block;
+            margin:auto;
+        }
+        .img-right{
+            width: 55%;
+            float: right;
+        }
+        .filter-accordion__trigger{
+			font-size:0.8rem!important;
+		}
+	}
+	
+	
+	
+	@media only screen and (min-width: 1440px){
+        .title-landing{
+            font-size: 1.9rem;
+        }
+        .smarthome .product-list__controls{
+            display: none;
+        }
+        .content-images{
+            padding-left:196px;
+            padding-right:196px;
+            padding-bottom:15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-left{
+            width: 35%;
+            float: left;
+        }
+        .img-center{
+            width: 86%;
+            display: block;
+            margin:auto;
+        }
+        .img-right{
+            width: 46%;
+            float: right;
+        }
+        .filter-accordion__trigger {
+            font-size: 0.9rem!important;
+        }
+	}
+</style>

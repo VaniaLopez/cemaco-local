@@ -1,0 +1,50 @@
+/*--------------------Dropdowns--------------------*/
+.dropup,
+.dropdown{
+	position: relative;
+	&:hover{
+		// background-color: inherit;
+		> a{
+			color: inherit;
+		}
+	}
+	> a{
+		color: inherit;
+	}
+}
+
+.dropdown-menu{
+	width: 220px;
+	display: none;
+	position: absolute;
+	left: -1px;
+	border-left: 1px solid inherit;
+	border-right: 1px solid inherit;
+	text-align: left !important;
+	background-color: white;
+	// 
+	.dropdup &{
+		bottom: 100%;
+		border-top: 1px solid inherit;
+	}
+	.dropdown &{
+		top: 100%;
+		border-bottom: 1px solid inherit;
+	}
+	.dropup:hover &,
+	.dropdown:hover &{
+		display: block;
+	}
+
+	> li{
+		display: block;
+		&:hover > a{
+			color: inherit;
+		}
+		> a{
+			display: block;
+			padding: 0.4em 0.75em;
+			text-decoration: none;
+		}
+	}
+}

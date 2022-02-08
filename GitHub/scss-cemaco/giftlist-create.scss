@@ -1,0 +1,882 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+
+// Settings
+@import "_settings/settings";
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+@import "_giftlist/main";
+@import "_vtex/account-privilegio";
+
+// Datepicker
+@import "../scss-plugins/datepicker/datepicker";
+
+// Header backgrounds
+$bg-giftlist-map: (
+	'generico': (
+        bg: '#{$image-path}images-giftlist-generico-header.jpg',
+        color: $c-primary,
+        select: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMC41NCA1Ljk5Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzEwMUU4RTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFzc2V0IDM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGcgaWQ9Ikdyb3VwXzEiIGRhdGEtbmFtZT0iR3JvdXAgMSI+PHBhdGggaWQ9IlJlY3RhbmdsZV81IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA1IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xLjIyLjIxLDUuNzcsNC43NmEuNzEuNzEsMCwwLDEsMCwxaDBhLjcxLjcxLDAsMCwxLTEsMEwuMjEsMS4yMmEuNzEuNzEsMCwwLDEsMC0xaDBBLjcxLjcxLDAsMCwxLDEuMjIuMjFaIi8+PHBhdGggaWQ9IlJlY3RhbmdsZV82IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA2IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xMC4zMywxLjIyLDUuNzgsNS43OGEuNzIuNzIsMCwwLDEtMSwwaDBhLjcyLjcyLDAsMCwxLDAtMUw5LjMyLjIxYS43MS43MSwwLDAsMSwxLDBoMEEuNzEuNzEsMCwwLDEsMTAuMzMsMS4yMloiLz48L2c+PC9nPjwvZz48L3N2Zz4=',
+    ),
+	'boda': (
+        bg: '#{$image-path}images-giftlist-boda-header.jpg',
+        color: $c-boda,
+        select: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMC41NCA1Ljk5Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6Izk1NmU3OTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFzc2V0IDM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGcgaWQ9Ikdyb3VwXzEiIGRhdGEtbmFtZT0iR3JvdXAgMSI+PHBhdGggaWQ9IlJlY3RhbmdsZV81IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA1IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xLjIyLjIxLDUuNzcsNC43NmEuNzEuNzEsMCwwLDEsMCwxaDBhLjcxLjcxLDAsMCwxLTEsMEwuMjEsMS4yMmEuNzEuNzEsMCwwLDEsMC0xaDBBLjcxLjcxLDAsMCwxLDEuMjIuMjFaIi8+PHBhdGggaWQ9IlJlY3RhbmdsZV82IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA2IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xMC4zMywxLjIyLDUuNzgsNS43OGEuNzIuNzIsMCwwLDEtMSwwaDBhLjcyLjcyLDAsMCwxLDAtMUw5LjMyLjIxYS43MS43MSwwLDAsMSwxLDBoMEEuNzEuNzEsMCwwLDEsMTAuMzMsMS4yMloiLz48L2c+PC9nPjwvZz48L3N2Zz4=',
+    ),
+    'bebe': (
+        bg: '#{$image-path}images-giftlist-bebe-header.jpg',
+        color: $c-bebejugueton,
+        select: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMC41NCA1Ljk5Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzBDQjdFMTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFzc2V0IDM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGcgaWQ9Ikdyb3VwXzEiIGRhdGEtbmFtZT0iR3JvdXAgMSI+PHBhdGggaWQ9IlJlY3RhbmdsZV81IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA1IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xLjIyLjIxLDUuNzcsNC43NmEuNzEuNzEsMCwwLDEsMCwxaDBhLjcxLjcxLDAsMCwxLTEsMEwuMjEsMS4yMmEuNzEuNzEsMCwwLDEsMC0xaDBBLjcxLjcxLDAsMCwxLDEuMjIuMjFaIi8+PHBhdGggaWQ9IlJlY3RhbmdsZV82IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA2IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xMC4zMywxLjIyLDUuNzgsNS43OGEuNzIuNzIsMCwwLDEtMSwwaDBhLjcyLjcyLDAsMCwxLDAtMUw5LjMyLjIxYS43MS43MSwwLDAsMSwxLDBoMEEuNzEuNzEsMCwwLDEsMTAuMzMsMS4yMloiLz48L2c+PC9nPjwvZz48L3N2Zz4=',
+    ),
+    'kids': (
+        bg: '#{$image-path}images-giftlist-kids-header.jpg',
+        color: $c-cta,
+        select: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMC41NCA1Ljk5Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzAwOGM1ZTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFzc2V0IDM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGcgaWQ9Ikdyb3VwXzEiIGRhdGEtbmFtZT0iR3JvdXAgMSI+PHBhdGggaWQ9IlJlY3RhbmdsZV81IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA1IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xLjIyLjIxLDUuNzcsNC43NmEuNzEuNzEsMCwwLDEsMCwxaDBhLjcxLjcxLDAsMCwxLTEsMEwuMjEsMS4yMmEuNzEuNzEsMCwwLDEsMC0xaDBBLjcxLjcxLDAsMCwxLDEuMjIuMjFaIi8+PHBhdGggaWQ9IlJlY3RhbmdsZV82IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA2IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xMC4zMywxLjIyLDUuNzgsNS43OGEuNzIuNzIsMCwwLDEtMSwwaDBhLjcyLjcyLDAsMCwxLDAtMUw5LjMyLjIxYS43MS43MSwwLDAsMSwxLDBoMEEuNzEuNzEsMCwwLDEsMTAuMzMsMS4yMloiLz48L2c+PC9nPjwvZz48L3N2Zz4=',
+    ),
+);
+
+#priv__create{
+    display: none;
+    input,
+    select{
+        margin-bottom: 10px;
+    }
+}
+#TipoID{
+    position: absolute;
+    left: 16px;
+    top: 10px;
+    width: 105px;
+    background-color: $c-light-gray;
+    background-position: 90% 50%;
+}
+#Identificacion{
+    padding-left: 125px;
+}
+.priv{
+    &__state-input--wrapper,
+    &__zone-input--wrapper{
+        padding: 10px 18px 10px 16px;
+    }
+    &__identity{
+        &--wrapper{
+            position: relative;
+            padding: 10px 18px 0px 16px;
+        }
+    }
+}
+
+#errormessage{
+    margin-bottom: 1rem;
+    color: $c-invalid;
+
+}
+#send-contract-email.sent{
+    opacity: .4;
+    cursor: default;
+}
+
+#mdr__form--hide{
+	display: none;
+}
+.internal-form .control-wrapper{
+	@include mediaFrom(xl){
+		width: 47%;
+	}
+	@include mediaFrom(xxl){
+		width: 46%;
+	}
+	@include mediaFrom(hd){
+		width: 43%;
+	}
+}
+.mb0{
+	margin-bottom: 0!important;
+}
+.static-layout{
+	&__banner{
+		background: $c-light-gray;
+		@each $bg,$value in $bg-giftlist-map {
+			.#{$bg} &{
+				background: lighten(map-get($value,color), 10) url(map-get($value,bg)) center right no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+	&__mesa{
+        &--registro{
+            .tag-title--level-1,
+            .tag-subtitle{
+                text-align: left!important;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .tag-subtitle{
+                text-align: left!important;
+                color: $c-primary;
+                svg{
+                    @include sizeProportion($dW: 1);
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+            }
+            .control-column{
+                display: flex;
+                justify-content: start;
+                padding-bottom: 20px;
+            }
+        }
+        &--login{
+            .tag-title--level-1{
+                text-align: center!important;
+            }
+        }
+        &--registro,
+        &--login{
+            .static-layout__banner{
+                a{
+                    width: 100%;
+                    margin-bottom: 15px;
+                    @include mediaFrom(md){
+                        width: auto;
+                    }
+                }
+            }
+            .control-wrapper{
+                input,
+                select{
+                    margin-bottom: 10px;
+                }
+            }
+            .control-wrapper--send{
+                text-align: center;
+                a{
+                    display: block;
+                    color: $c-primary;
+                    padding-bottom: 50px;
+                }
+            }
+            .quaternary-board{
+                padding-top: 50px;
+                @include mediaFrom(md){
+                    padding-top: 100px;
+                }
+            }
+            .quaternary-board__item{
+                color: $c-primary;
+                svg{
+                    @include sizeProportion($dW: 3);
+                }
+                h3{
+                    font-size: 1.1em;
+                }
+            }
+            .tag-copy{
+                padding-bottom: 20px;
+                color: $c-dark-gray;
+            }
+            .internal-form{
+                padding-top: 20px;
+            }
+        }
+        &--copy{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        &--list-products{
+            .board-information{
+                padding-top: 50px;
+                padding-bottom: 50px;
+                .tag-title--level-1,
+                .tag-title--level-2,
+                .tag-title--level-3{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+                p{
+                    margin-top: 1em;
+                }
+                small{
+                    color: $c-dim-gray;
+                }
+            }
+            .gift-certificate{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                .tag-title--level-1{
+                    text-align: center;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    @include mediaFrom(lg){
+                        text-align: left;
+                    }
+                }
+                @include mediaFrom(lg){
+                    flex-wrap: inherit;
+                }
+                &__item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    @include mediaFrom(lg){
+                        flex-wrap: inherit;
+                        justify-content: space-between;
+                    }
+                    div{
+                        p{
+                            margin-bottom: 0.5em!important;
+                        }
+                        &:nth-child(1){
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width:100%;
+                            height: 150px;
+                            border-radius: 20px;
+                            background-color: $c-boda;
+                            @include mediaFrom(md){
+                                width: 200px;
+                                height: 150px;
+                            }
+
+                        }
+                        &:nth-child(2){
+                           padding-left: 20px;
+                           text-align: center;
+                           @include mediaFrom(lg){
+                                text-align: left;
+                            }
+
+                        }
+                    }
+                    &:nth-child(1){
+                        width: 100%;
+                        @include mediaFrom(lg){
+                            width: 65%;
+                        }
+                    }
+                    &:nth-child(2){
+                        width: 100%;
+                        @include mediaFrom(lg){
+                            width: 30%;
+                        }
+                        select{
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .svg-icon-heart-boda{
+                        @include sizeProportion($dW: 4);
+                        color: white;
+                    }
+                }
+            }
+        }
+        &--registro{
+            .button-flat{
+                // width: 25%;
+                margin-bottom: 20px;
+            }
+            .button-simple{
+                font-style: italic;
+                text-decoration: underline;
+                color: $c-primary;
+                float: right;
+            }
+            .internal-form__label-small{
+                display: inline-block;
+                padding-right: 10px;
+            }
+            textarea{
+                min-height: 200px;
+                padding: 25px;
+            }
+        }
+        &--delivery{
+            .internal-form{
+                svg{
+                    @include sizeProportion($dW: 4);
+                    margin-left: 15px;
+                    @each $color,$value in $color-giftlist-map {
+                    	.#{$color} &{
+                        	color: map-get($value,icon_color);
+                    	}
+                    }
+                }
+                p{
+                    @each $color,$value in $color-giftlist-map {
+                        .#{$color} &{
+                            color: map-get($value,color_radio_text1);
+                        }
+                    }
+                    padding-bottom: 20px;
+                    .giftlist &{
+                        min-height: 80px;
+                    }
+                }
+                span{
+                    text-align: left;
+                    height: auto;
+                    @each $color,$value in $color-giftlist-map {
+                    	.#{$color} &{
+                        	color: map-get($value,color_radio_text2);
+                    	}
+                    }
+                }
+            }
+        }
+        &--faq{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            svg{
+                @include sizeProportion($dW: 1.25);
+                justify-self: right;
+                color: $c-primary;
+                @each $color,$value in $color-giftlist-map {
+                	.#{$color} &{
+                    	color: map-get($value,color);
+                	}
+                }
+            }
+        }
+        &--link{
+            display: flex;
+            align-items: center;
+            p{
+                padding-right: 20px;
+            }
+        }
+        // -------------------------------------------------- //
+		&--create{
+			color: $c-dark-gray;
+			@include mediaFrom(xl){
+				max-width: 80%;
+				margin: 0 auto;
+				padding-top: 2em;
+			}
+			@include mediaFrom(xxl){
+				max-width: 70%;
+			}
+			select{
+				appearance: none;
+				border-radius: 20px;
+				background-size: 12px 12px;
+				background-position: 97% 50%;
+				background-repeat: no-repeat;
+                @each $bg,$value in $bg-giftlist-map {
+                    .#{$bg} &{
+                         background-image: url(map-get($value,select));
+                     }
+                 }
+			}
+			textarea{
+				height: 200px;
+			}
+			.internal-form__label-small{
+				display: inline-block;
+				padding-right: 10px;
+			}
+			.double-board{
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.board-landing-mesa{
+    .tag-title{
+        text-align: left;
+    }
+    &__banner{
+        .double-board{
+            justify-content: center;
+            &__item{
+                &:nth-child(1){
+                    width: 100%;
+                    padding:50px;
+                    position: relative;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    @include mediaFrom(lg){
+                        width: 65%;
+                    }
+                    p{
+                        font-size: 1.5em;
+                        padding-bottom: 20px;
+                        width: 70%;
+                    }
+                    .button-simple{
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%,0);
+                        padding-bottom: 20px;
+                        text-decoration: underline;
+                    }
+                }
+                &:nth-child(2){
+                    width: 100%;
+                    padding: 100px 50px;
+                    @include mediaFrom(lg){
+                        width: 35%;
+                    }
+                    .tag-title-level--1{
+                        text-align: center;
+                        color: white;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &__bebe-h, &__ninos-h{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: auto;
+            align-self: center;
+        }
+    }
+}
+
+.mdr{
+	&__banner{
+		&--wrapper{
+			min-height: 300px;
+			padding-top: 50px;
+		}
+		&-breadcrumb{
+			a{
+				color: white;
+			}
+			li{
+				&:after{
+					color: white;
+				}
+			}
+		}
+		&-title{
+			color: white;
+			font-size: 3em;
+			line-height: 1.3;
+			@include mediaFrom(lg){
+				width: calc(100% - 300px);
+			}
+			@include mediaFrom(xl){
+				width: calc(100% - 400px);
+			}
+			small{
+				font-size: 1rem;
+				font-weight: $font-regular;
+				margin-top: .5em;
+			}
+		}
+	}
+	&__message{
+		margin-bottom: 2em;
+		&-title{
+			@each $color,$value in $color-giftlist-map {
+				.#{$color} &{
+					color: map-get($value,color_title_1);
+				}
+			}
+			@include font-size(2);
+		}
+	}
+	&__member{
+		&-selection{
+			text-align: center;
+			p{
+				font-size: 1.5rem;
+				@each $color,$value in $color-giftlist-map {
+					.#{$color} &{
+						color: map-get($value,color);
+					}
+				}
+			}
+		}
+		&-option{
+			&--wrapper{
+			}
+			&{
+				display: inline-block;
+				margin: 10px 5px;
+				padding: 5px 20px;
+				transition: all .3s;
+				cursor: pointer;
+				border-radius: 20px;
+				@each $color,$value in $color-giftlist-map {
+					.#{$color} &{
+						border: 1px solid map-get($value,color);
+						color: map-get($value,color);
+						&:hover,
+						&:focus,
+						&:active{
+							background: lighten(map-get($value,color), 10);
+							color: map-get($value,contrast);
+						}
+						&.active{
+							background: map-get($value,color);
+							color: map-get($value,contrast);
+						}
+					}
+				}
+				input{
+					display: none;
+				}
+			}
+		}
+	}
+	&__form{
+		&-title{
+			@each $color,$value in $color-giftlist-map {
+            	.#{$color} &{
+                	color: map-get($value,color_title_2);
+            	}
+            }
+			@include font-size(1.5);
+		}
+		&-subtitle{
+			.giftlist &{
+				@each $color,$value in $color-giftlist-map {
+                    .#{$color} &{
+                        color: map-get($value,color_title_3);
+                    }
+                }
+			}
+			@include font-size(1.3);
+			font-weight: $font-bold;
+            @include mediaFrom(xxl){
+                white-space: nowrap;
+            }
+		}
+		&-control{
+			margin-bottom: 1em;
+			p{
+				margin: 0;
+			}
+		}
+		&-address{
+			&--wrapper{
+				margin-bottom: 2em;
+			}
+			&--additional{
+				// display: none;
+			}
+			&--action{
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: 1em;
+				p,.button-flat{
+					margin-bottom: 0;
+					margin-right: 8px;
+				}
+			}
+		}
+        &-check{
+            display: inline-block;
+            padding-left: 30px;
+            position: relative;
+            cursor: pointer;
+            &.checked{
+                &:before{
+                    @each $color,$value in $color-giftlist-map {
+                        .#{$color} &{
+                            background: map-get($value,color_radio_active);
+                        }
+                    }
+                }
+            }
+            &-member2{
+                @include mediaFrom(lg){
+                    margin-left: 57%;
+                    transform: translateY(20px);
+                }
+            }
+            &:before{
+                content: '';
+                display: block;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                position: absolute;
+                left: 3px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: $c-dusty-gray;
+                transition: background .3s;
+            }
+        }
+		&-delivery{
+			padding-left: 20px;
+			position: relative;
+			cursor: pointer;
+			display: block;
+			height: auto;
+			opacity: .9;
+			&--wrapper{
+				display: flex;
+				justify-content: center;
+			}
+			label{
+				line-height: 1.2;
+			}
+			span{
+				font-weight: $font-regular;
+				transition: all .3s;
+				cursor: pointer;
+				font-size: .9rem;
+			}
+			&:before{
+				content: '';
+				width: 12px;
+				height: 12px;
+				position: absolute;
+				left: 0;
+				top: 6px;
+				border-radius: 50%;
+				background: darken($c-pastel-gray, 6.5);
+			}
+			&:hover{
+				opacity: .95;
+			}
+			&.active{
+				opacity: 1;
+				@each $color,$value in $color-giftlist-map {
+					.#{$color} &{
+						&:before{
+							background: map-get($value,color_radio_active);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__privilegio{
+		&-option{
+			background: darken($c-pastel-gray, 6.5);
+            color: white;
+			@each $color,$value in $color-giftlist-map {
+				.#{$color} &{
+					&:hover{
+						background: lighten(map-get($value,btn_bg), 5);
+						color: white;
+					}
+					&:active,
+					&.active{
+						background: map-get($value,btn_bg);
+						color: map-get($value,btn_color);
+					}
+				}
+			}
+			@include mediaFrom(lg){
+				width: 300px;
+			}
+		}
+        &-step{
+            display: none;
+        }
+	}
+}
+#privilegio-step-final{
+    padding-top: 0;
+}
+
+
+// Address
+.address-list{
+	&__wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&--items{
+		.address-item{
+			width: 100%;
+			border: 2px solid $c-pastel-gray;
+			padding: 15px;
+			margin-bottom: 1em;
+			border-radius: 20px;
+			text-align: center;
+			cursor: pointer;
+			opacity: .65;
+			&:hover{
+				opacity: .8;
+			}
+			&.active{
+				opacity: 1;
+				box-shadow: 2px 2px 10px rgba(black, .1);
+				@each $color,$value in $color-giftlist-map {
+	            	.#{$color} &{
+	                	border-color: map-get($value,color);
+	            	}
+	            }
+			}
+			& span{
+				cursor: pointer;
+			}
+			input[type="radio"]{
+				display: none;
+			}
+			.text-box-selected{
+				text-align: center;
+				display: block;
+				@each $color,$value in $color-giftlist-map {
+	            	.#{$color} &{
+	                	color: map-get($value,color);
+	            	}
+	            }
+			}
+			@include mediaFrom(md){
+				width: 50%;
+			}
+			@include mediaFrom(xl){
+				width: 49%;
+			}
+			label{
+				span{
+					color: $c-text;
+				}
+			}
+		}
+	}
+}
+
+#giftlistremoveimage{
+	margin-top: 1em;
+}
+#mdr__form-image{
+    display: block;
+    border: 1px solid $c-pastel-gray;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+#giftlistimage{
+    appearance: none;
+    // opacity: 0;
+    border: 0;
+    margin: 0;
+}
+#giftlistupload{
+	cursor: pointer;
+    appearance: none;
+    border: 0;
+}
+.sending{
+	position: relative;
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(white, .7) url('#{$image-path}loading.gif') center 97% no-repeat;
+		z-index: 10;
+	}
+}
+
+// Hide default elements
+#giftlistform{
+    &{
+        @each $color,$value in $color-giftlist-map {
+            .#{$color} &{
+                color: map-get($value,color_text);
+                .disclaimer{
+                    color: map-get($value,color_disclaimer);
+                }
+            }
+        }
+    }
+	& > .basic,
+	& > .image,
+	& > .event,
+	& > .members-box,
+	& > .address-component,
+	& > .therms-area,
+	& > .action-area{
+		display: none!important;
+	}
+	&.sending{
+		@extend .sending;
+	}
+    input[readonly="readonly"],
+    input[type="text"][disabled="disabled"]{
+        background: $c-light-gray;
+        color: darken($c-light-gray, 10);
+        &::-webkit-input-placeholder { /* Edge */
+            color: darken($c-light-gray, 10);
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: darken($c-light-gray, 10);
+        }
+        &::placeholder {
+            color: darken($c-light-gray, 10);
+        }
+    }
+    input[type="text"]{
+        transition: all .3s;
+        &:focus{
+            @each $color,$value in $color-giftlist-map {
+                .#{$color} &{
+                    border-color: map-get($value,color);
+                }
+            }
+        }
+        &.success{
+            background-color: lighten($c-pastel-gray, 3);
+            &:focus{
+                background-color: white;
+            }
+            &:hover{
+                background-color: $c-light-gray;
+            }
+        }
+    }
+    label.error{
+        color: $c-invalid;
+        line-height: 0;
+        padding-left: 15px;
+        &[for="terms-check"]{
+            position: absolute;
+            margin-top: 5px;
+        }
+        &[for="giftlisturl"]{
+            position: absolute;
+            width: 100%;
+            text-align: right;
+            margin-top: 25px;
+            padding-right: 15px;
+        }
+        &[for="mdr-address"]{
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+    }
+    .button-flat.bebe-secondary{
+        color: white;
+        border: 0;
+    }
+    .button-flat.gray{
+        color: white;
+        border: 0;
+    }
+}
+#mdr__form-image--wrapper{
+	&.sending{
+		@extend .sending;
+	}
+}

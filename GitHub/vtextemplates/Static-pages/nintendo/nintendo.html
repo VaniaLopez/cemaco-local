@@ -1,0 +1,204 @@
+<!-- CEMACO CSS -->
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ">
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="re-central">
+    
+    <!-- Empieza Banner portada -->
+    <div class="banner-nintendo">
+        <picture>
+            <!-- Mobile webp min.jpg-->
+            <source srcset="/arquivos/2022_banner_cat_nintendo_mobile.min.jpg" media="(max-width: 767px)" type="image/webp">
+            <!-- Mobile .jpg-->
+            <source srcset="/arquivos/2022_banner_cat_nintendo_mobile.jpg" media="(max-width: 767px)">
+            <!-- Desktop webp min.jpg-->
+            <source srcset="/arquivos/2022_banner_cat_nintendo_desktop.min.jpg" type="image/webp">
+            <!-- Desktop .jpg-->
+            <img src="/arquivos/2022_banner_cat_nintendo_desktop.jpg" alt="Banner nintendo">
+        </picture>
+    </div>
+    <!-- Termina Banner portada -->
+
+    <!-- Empieza Video portada -->
+    <div class="re-central row content-spiffs">
+    <div class="videomainheadline">
+        <div>
+            <video onloadeddata="this.play();" poster="" autoplay playsinline loop muted class="mobile" width="100%" height="auto">
+                <source src="https://vtexstyles.cemaco.com/images/2022/landing-proveedor/nintendo/nintendo_mobile.mp4" type="video/mp4" />
+                <source src="" type="video/webm" /> Your browser does not support the video tag or the file format of this video.
+            </video>
+                
+            <video onloadeddata="this.play();" poster="" autoplay playsinline loop muted width="100%" class="desktop" height="auto">
+                <source src="https://vtexstyles.cemaco.com/images/2022/landing-proveedor/nintendo/nintendo_desktop.mp4" type="video/mp4" />
+                <source src="" type="video/webm" /> Your browser does not support the video tag or the file format of this video.
+            </video>
+        </div>
+    </div>
+    <!-- Termina Video portada -->
+    
+    <!-- Empieza Spiff -->
+    <div class="row fullcontent">
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 content-spiff content-padding-right">
+            <div class="c-content">
+                <a href="/1721?map=productClusterIds">
+                    <picture>
+                        <source srcset="/arquivos/2022_spiff_consolas.min.jpg" type="image/webp">
+                        <img src="/arquivos/2022_spiff_consolas.jpg">
+                    </picture> 
+                    <h2 class="titulo-categoria">Consolas</h2>
+                    <p class="ver-mas-link"><u>Ver más</u></p>
+                    <br class="mobile-d">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 content-spiff content-padding-center">
+            <div class="c-content">
+                <a href="/1722?map=productClusterIds">
+                    <picture>
+                        <source srcset="/arquivos/2022_spiff_videojuegos.min.jpg" type="image/webp">
+                        <img src="/arquivos/2022_spiff_videojuegos.jpg">
+                    </picture> 
+                    <h2 class="titulo-categoria">Videojuegos</h2>
+                    <p class="ver-mas-link"><u>Ver más</u></p>
+                    <br class="mobile-d">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 content-spiff content-padding-left">
+            <div class="c-content">
+                <a href="/1723?map=productClusterIds">
+                    <picture>
+                        <source srcset="/arquivos/2022_spiff_accesorios.min.jpg" type="image/webp">
+                        <img src="/arquivos/2022_spiff_accesorios.jpg">
+                    </picture> 
+                    <h2 class="titulo-categoria">Accesorios</h2>
+                    <p class="ver-mas-link"><u>Ver más</u></p>
+                    <br class="mobile-d">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Termina Spiff -->
+    
+</div>
+
+<style>
+    .videomainheadline {
+            margin: 0 0 0 0;
+        }
+    .nintendo .banner-nintendo{
+        margin-bottom: 0px;
+    }
+    .nintendo .bread-crumbs, .nintendo .category-name, .nintendo .product-list__results-items{
+        display: none;
+    }
+    .nintendo .product-list__controls{
+        display: flex;
+        margin-top: 1rem;
+    }
+    .nintendo .re-central--product-list {
+        padding: 10px 20px;
+        background: #F6F6F6;
+        margin-top: 1.5rem;
+    }
+    .nintendo .pre-footer {
+        margin-top: 2rem
+    }
+    .nintendo .product-item__wrapper .product-item{
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+    }
+    @media only screen and (min-width: 768px){
+        .nintendo .product-list__controls{
+            display: none;
+        }
+    }
+    /* DESKTOP */
+    @media only screen and (min-width: 768px){
+        .desktop{
+            display:block!important;
+        }
+        .mobile{
+            display:none!important;
+        }
+    }
+    /* MOBILE */
+    @media(min-width: 5px) and (max-width: 767px){
+        .desktop{
+            display:none!important;
+        }
+        .mobile{
+            display:block!important;
+        }
+    }
+    
+    /* estilo para spiffs*/
+    .titulo-categoria {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .ver-mas-link{
+        text-align:center;
+        font-size:0.8rem;
+        font-weight: bold;
+        width: 100%;
+    }
+    
+    @media(min-width:1024px){
+        h2.titulo-categoria {
+            font-size: 1.2rem;
+        }
+        p.ver-mas-link{
+            font-size: 0.9rem;
+        }
+    }
+    
+    .row.fullcontent {
+        display: flex;
+        justify-content: space-between!important;
+        flex-wrap: wrap;
+        padding: 0 0 25px;
+        margin-top:15px;
+    }
+
+    @media(min-width: 1024px) {
+        .mobile-d {
+            display: none;
+        }
+        .fullcontent.content-spiff{
+            flex: unset;   
+        }
+    }
+    
+    
+    
+    @media(min-width: 5px) and (max-width: 767px){
+        .re-central.row.content-spiffs {
+            padding: 0px;
+        }
+    }
+    
+    @media(min-width: 768px){
+        .content-padding-right{
+            padding-right: 9%;
+        }
+        .content-padding-center{
+            padding: 0 4.5%;
+        }
+        .content-padding-left{
+            padding-left: 9%;
+        }
+    }
+    
+    
+    @media (min-width: 5px) and (max-width:767px){
+        .col-sm-6.col-md-4.col-lg-4.col-xl-4.content-spiff {
+            width: 50%!important;
+        }
+    }
+    
+</style>

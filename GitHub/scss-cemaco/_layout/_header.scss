@@ -1,0 +1,327 @@
+/*--------------------General Layout - Header--------------------*/
+.site-header{
+    @include commonBreakpoints(
+        (height,
+        em($header-height--bs),
+        em($header-height--md),
+        em($header-height--lg))
+    );
+    @include flexbox($fw: wrap, $ai: flex-start);
+    position: relative;
+    z-index: $z-header--menu-shown;
+    background-color: $c-primary;
+    transition: all $animate-time;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    @include debug($is-debugging, lighten(red,45));
+    @include mediaFrom(lg){
+        z-index: $z-header--desktop;
+    }
+    body.landing &{
+        background-color: white;
+    }
+    body.page-scroll-on &{
+        @include mediaTo(md){
+            height: rem($middle-bar-height--bs);
+        }
+    }
+    body.has-store-top-bar &{
+        top: $store-top-bar-mobile !important;
+    }
+    body.has-store-top-bar.page-scroll-on &{
+        top: 0 !important;
+    }
+}
+// Header - Top bar
+.top-bar{
+    &{
+        width: 100%;
+        position: relative;
+        z-index: $z-header-top-bar;
+        @include font-size(1);
+        color: $c-primary;
+        background-color: $c-light-gray;
+        @include commonBreakpoints(
+            (line-height,
+            em($top-bar-height--bs),
+            em($top-bar-height--md),
+            em($top-bar-height--lg))
+        );
+        body.page-scroll-on &{
+            @include mediaTo(md){
+                display: none;
+            }
+        }
+        body.landing--jugueton &{
+            color: $c-jugueton;
+        }
+        body.landing--bebejugueton &{
+            color: $c-bebejugueton;
+        }
+    }
+    &__content{
+        @include flexbox($jc: center, $ai: center);
+        font-size: 0.6em;
+    }
+    &__list{
+        $element: removeSelector(&);
+        //
+        @at-root [class*="#{$element}"]{
+            position: relative;
+            @include mediaFrom(md){
+                @include flexbox();
+            }
+        }
+        &--left{
+            display: none;
+            // @include mediaFrom(md){
+            //     display: flex;
+            //     align-items: center;
+            // }
+        }
+        &--right{
+            display: flex;
+            align-items: center;
+            @include mediaTo(md){
+                width: 100%;
+            }
+        }
+    }
+    &__item{
+        color: currentColor;
+        background-color: #fff;
+        overflow: hidden;
+        @include mediaTo(md){
+            width: 33%;
+        }
+        a{
+            .top-bar__list--right &{
+                @include mediaFrom(lg){
+                    @include padding-h(25);
+                }
+                @include commonBreakpoints(
+                    (height,
+                    ($top-bar-height--bs + 3),
+                    ($top-bar-height--md + 3),
+                    ($top-bar-height--lg - 2))
+                );
+            }
+        }
+        svg{
+            @include sizeProportion($dW: 1);
+            color: currentColor;
+            .top-bar__list--left &{
+                margin-right: 0.5em;
+                color: $c-secondary;
+            }
+            .top-bar__list--right &{
+                width: 8em;
+                height: auto;
+            }
+        }
+        img{
+            .top-bar__list--right &{
+                width: 8em;
+            }
+        }
+        &:first-child{
+            border-radius: 7px 0 0 0;
+            a{
+                .top-bar__list--right &{
+                    //background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA4Mi40IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA4Mi40IDI1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDp1cmwoI1NWR0lEXzFfKTt9DQoJLnN0MXtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTMiIHkxPSIxMi41MDI5IiB4Mj0iOS4zNzUwMDBlLTAyIiB5Mj0iMTIuNTAyOSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgLTEgMTMuMDkzOCAyNS4wMDU5KSI+DQoJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRkZGRjtzdG9wLW9wYWNpdHk6MCIvPg0KCTxzdG9wICBvZmZzZXQ9IjAuNDUyNCIgc3R5bGU9InN0b3AtY29sb3I6IzdENzk3NjtzdG9wLW9wYWNpdHk6MC41ODQ3Ii8+DQoJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMCIvPg0KPC9saW5lYXJHcmFkaWVudD4NCjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMC4xLDAgMTMsMCAxMywyNSAwLjEsMjUgIi8+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTgxLjEsMjVIMS41YzIuNiwwLDQuOC0yLjIsNC44LTQuOFY0LjhDNi4zLDIuMSw4LjQsMCwxMS4xLDBoNjAuNGMyLjYsMCw0LjgsMi4xLDQuOCw0Ljh2MTUuNA0KCQkJQzc2LjMsMjIuOCw3OC40LDI1LDgxLjEsMjV6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=);
+                    //background-size: cover;
+                }
+            }
+        }
+        &:nth-child(2){
+            a{
+                .top-bar__list--right &{
+                    border-radius: 7px 7px 0 0;
+                    //background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA4Mi40IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA4Mi40IDI1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDp1cmwoI1NWR0lEXzFfKTt9DQoJLnN0MXtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iODMuNzUiIHkxPSIxMi41MDI5IiB4Mj0iNzAuODQzOCIgeTI9IjEyLjUwMjkiPg0KCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkZGRkY7c3RvcC1vcGFjaXR5OjAiLz4NCgk8c3RvcCAgb2Zmc2V0PSIwLjQ1MjQiIHN0eWxlPSJzdG9wLWNvbG9yOiM3RDc5NzY7c3RvcC1vcGFjaXR5OjAuNTg0NyIvPg0KCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDAwMDAiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8cmVjdCB4PSI3MC44IiB5PSIwIiBjbGFzcz0ic3QwIiB3aWR0aD0iMTIuOSIgaGVpZ2h0PSIyNSIvPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik04MS4xLDI1SDEuNWMyLjYsMCw0LjgtMi4yLDQuOC00LjhWNC44QzYuMywyLjEsOC40LDAsMTEuMSwwaDYwLjRjMi42LDAsNC44LDIuMSw0LjgsNC44djE1LjQNCgkJCUM3Ni4zLDIyLjgsNzguNCwyNSw4MS4xLDI1eiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K);
+                    body:not(.landing--jugueton):not(.landing--bebejugueton) &{
+                        background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTE0IDM0Ij48dGl0bGU+MjwvdGl0bGU+PHBhdGggZD0iTTExNS4zOTIsMzRILS40OTMyYTYuODY0NCw2Ljg2NDQsMCwwLDAsNi45ODgtNi41MjhWNi41MjhBNi42ODMsNi42ODMsMCwwLDEsMTMuNDgyOSwwaDg3LjkzM2E2Ljc3MzMsNi43NzMzLDAsMCwxLDYuOTg4LDYuNTI4VjI3LjQ3MkE2Ljc3LDYuNzcsMCwwLDAsMTE1LjM5MiwzNFoiIHN0eWxlPSJmaWxsOiMxMDFlOGUiLz48L3N2Zz4=);
+                        //background-color: $c-primary;
+                       background-size: cover;
+                       background-repeat: no-repeat;
+                       background-position: center bottom;
+                       @include mediaFrom(lg){
+                            background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTI2LjggMjgiPjx0aXRsZT4xPC90aXRsZT48cGF0aCBkPSJNMTI2LjkzMzgsMjhILS4xMzM4YzQuMTUsMCw3LjY2MjMtMi40NjQsNy42NjIzLTUuMzc2VjUuMzc2QzcuNTI4NSwyLjM1MiwxMC44ODA4LDAsMTUuMTkwOSwwaDk2LjQxODNjNC4xNSwwLDcuNjYyMywyLjM1Miw3LjY2MjMsNS4zNzZWMjIuNjI0QzExOS4yNzE1LDI1LjUzNiwxMjIuNjIzOCwyOCwxMjYuOTMzOCwyOFoiIHN0eWxlPSJmaWxsOiMxMDFlOGUiLz48L3N2Zz4=);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center bottom;
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(3){
+            border-radius: 0 7px 0 0;
+            a{
+                .top-bar__list--right &{
+                    //background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA4Mi40IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA4Mi40IDI1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDp1cmwoI1NWR0lEXzFfKTt9DQoJLnN0MXtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iODMuNzUiIHkxPSIxMi41MDI5IiB4Mj0iNzAuODQzOCIgeTI9IjEyLjUwMjkiPg0KCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkZGRkY7c3RvcC1vcGFjaXR5OjAiLz4NCgk8c3RvcCAgb2Zmc2V0PSIwLjQ1MjQiIHN0eWxlPSJzdG9wLWNvbG9yOiM3RDc5NzY7c3RvcC1vcGFjaXR5OjAuNTg0NyIvPg0KCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDAwMDAiLz4NCjwvbGluZWFyR3JhZGllbnQ+DQo8cmVjdCB4PSI3MC44IiB5PSIwIiBjbGFzcz0ic3QwIiB3aWR0aD0iMTIuOSIgaGVpZ2h0PSIyNSIvPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik04MS4xLDI1SDEuNWMyLjYsMCw0LjgtMi4yLDQuOC00LjhWNC44QzYuMywyLjEsOC40LDAsMTEuMSwwaDYwLjRjMi42LDAsNC44LDIuMSw0LjgsNC44djE1LjQNCgkJCUM3Ni4zLDIyLjgsNzguNCwyNSw4MS4xLDI1eiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K);
+                    //background-size: cover;
+                }
+            }
+            img{
+                .top-bar__list--right &{
+                    width: 7em;
+                }
+            }
+        }
+    }
+    a{
+        @include flexbox($ai: center, $jc: center);
+        text-decoration: none;
+        color: inherit;
+        &:hover{
+            color: $c-secondary;
+        }
+    }
+}
+// Header - Middle bar
+.middle-bar{
+    &{
+        $element: removeSelector(&);
+        //
+        @at-root [class*="#{$element}--"]{
+            position: absolute;
+            z-index: $z-header-middle-bar;
+            @include font-size(0.75);
+            @include debug($is-debugging);
+            @include mediaFrom(lg){
+                @include flexbox($ai:center);
+                @include font-size(1);
+            }
+            @include commonBreakpoints(
+                (top,
+                ($top-bar-height--bs),
+                ($top-bar-height--md),
+                ($top-bar-height--lg))
+            );
+            @include commonBreakpoints(
+                (height,
+                ($middle-bar-height--bs),
+                ($middle-bar-height--md),
+                ($middle-bar-height--lg))
+            );
+            body.page-scroll-on &{
+                @include mediaTo(md){
+                    top: 0;
+                    height: rem($middle-bar-height--bs);
+                }
+            }
+        }
+        &--left{
+            @include re-central-left-until-md;
+            @include mediaFrom(lg){
+                display: none;
+            }
+        }
+        &--right{
+            @include re-central-right-until-md;
+            @include re-central-right-from-lg;
+            @include mediaTo(md){
+                @include flexbox($ai:center);
+            }
+            @include mediaFrom(lg){
+                right: 50%;
+                transform: translateX(-15px);
+            }
+        }
+    }
+    &__list{
+        @include flexbox($ai: center);
+    }
+    &__item{
+        margin-right: 1em;
+        @include flexbox($ai: center);
+        font-size: 0.9em;
+        color: inherit;
+        @include mediaFrom(xl){
+            margin-right: 1.5em;;
+        }
+        &:last-child{
+            margin-right: 0 !important;
+        }
+        body.page-scroll-on &{
+            @include mediaTo(md){
+                margin-right: 1em;
+            }
+        }
+    }
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+// Nav eCommerce item
+.nav-ecommerce{
+    &__item{
+        position: relative;
+        font-size: 1em;
+        &:first-child{
+            body.page-scroll-on &{
+                @include mediaTo(md){
+                    display: none;
+                }
+            }
+        }
+        &--minicart{
+            &.is-empty .svg-icon{
+                display: block;
+            }
+            body.page-scroll-on &{
+                @include mediaTo(md){
+                    display: block;
+                }
+            }
+            svg{
+                position: relative;
+                @include sizeProportion($dH: 2.5);
+            }
+        }
+    }
+    &__link{
+        @include flexbox($ai: center);
+        &:hover,
+        &:focus{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    &__icon{
+        $className: removeSelector(&);
+        @at-root [class*="#{$className}"]{
+            @include sizeProportion($dH: 2.25);
+            display: block;
+            color: $c-secondary;
+            body.landing--jugueton &{
+                color: $c-jugueton-secondary;
+            }
+            body.landing--bebejugueton &{
+                color: $c-bebejugueton-secondary;
+            }
+        }
+    }
+    &__label{
+        margin-left: 0.5em;
+        color: white;
+        line-height: 1;
+        font-size: em(9);
+        @include mediaFrom(lg){
+            max-width: 35px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: normal;
+        }
+        @include mediaFrom(xxl){
+            max-width: 90px;
+        }
+        body.landing--jugueton &{
+            color: $c-jugueton;
+        }
+        body.landing--bebejugueton &{
+            color: $c-bebejugueton;
+        }
+    }
+}

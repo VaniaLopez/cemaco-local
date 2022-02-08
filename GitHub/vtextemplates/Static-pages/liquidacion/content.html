@@ -1,0 +1,280 @@
+<!-- CEMACO CSS -->
+
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+<style>
+    /* Banner liquidacion Main */
+    .bannerliquidacion {
+        background-image: url('/arquivos/2021_cemaco_slider_liquidacion_mobile.png');
+        text-align: center;
+        background-size: cover;
+        padding: 51% 0 0 0;
+    }
+
+    .bannerliquidacion__texto-blanco {
+        font-size: 2em;
+        color: #ffffff;
+        padding-bottom: 13%;
+    }
+
+    /* Banner Medio liquidacion */
+    .bannerMedioliquidacion {
+        background-image: url('/arquivos/2021_cemaco_trupper_middleBanner_mobile4.png');
+        background-size: cover;
+        padding: 78% 0 0 0;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .bannerMedioliquidacion__texto {
+        font-size: 1.5em;
+        padding-bottom: 15%;
+    }
+
+
+    /* Categorias liquidación */
+    .liquidacionCategoria__titulo {
+        text-align: center;
+    }
+
+    .liquidacionCategoria__titulo {
+        padding-bottom: 0;
+    }
+
+
+    /* Estilos genericos modificados en landing liquidación */
+    .landingliquidacion .fullcontent-bebe {
+        justify-content: center;
+    }
+
+    .landingliquidacion .row .fullcontent-bebe {
+        display: block;
+        margin: 0;
+    }
+
+    .landingliquidacion .re-central--product-list {
+        background-color: #F6F6F6;
+        padding: 10px;
+    }
+
+    .page-header--product-list a {
+        display: none;
+    }
+
+    .page-header--product-list span.product-list__results-items {
+        display: none;
+    }
+
+    .page-header--product-list h1.category-name {
+        display: none;
+    }
+
+    @media screen and (min-width: 320px) {
+        .landingliquidacion .categories-bebe .col-md-2 {
+            margin: 0 0 12%;
+        }
+    }
+
+    @media screen and (min-width: 375px) {
+        .landingliquidacion .row .fullcontent-bebe {
+            display: flex;
+        }
+
+        /*.landingliquidacion .fullcontent-bebe {
+            justify-content: left;
+        }*/
+    }
+
+
+    @media screen and (min-width: 768px) {
+        .bannerliquidacion {
+            background-image: url('arquivos/2021_cemaco_slider_liquidacion_desk.png');
+            background-size: cover;
+            padding: 9em 0 1em 1.5em;
+            text-align: left;
+        }
+
+        .bannerMedioliquidacion {
+            background-image: url('/arquivos/2021_cemaco_trupper_middleBanner_desk.jpg');
+            background-size: cover;
+            min-height: 205px;
+            padding: 13% 0 7% 4%;
+            text-align: left;
+        }
+
+        .bannerliquidacion__texto-blanco {
+            font-size: 2.5em;
+            padding-bottom: 0;
+        }
+
+        .bannerMedioliquidacion__texto {
+            font-size: 1.5em;
+            padding-bottom: 0%
+        }
+
+        .liquidacionCategoria .col-md-2 {
+            width: 20% !important;
+        }
+
+        .liquidacionCategoria__titulo {
+            font-size: 1.813em;
+        }
+
+        .landingliquidacion .fullcontent-bebe {
+            justify-content: center;
+        }
+
+        .landingliquidacion .categories-bebe .col-md-2 {
+            margin: 0 0 20px;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .bannerMedioliquidacion {
+            padding: 13% 0 7% 5.5%;
+        }
+
+        .bannerMedioliquidacion__texto {
+            font-size: 1.813em;
+        }
+
+        .landingliquidacion .product-list__filters h3 {
+            font-size: 0.7rem;
+        }
+
+        .bannerliquidacion {
+            padding: 9em 0 3.9em 1.5em;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+
+        .bannerliquidacion {
+            padding: 11em 0 5em 2.5em;
+        }
+
+        .bannerMedioliquidacion {
+            min-height: 255px;
+            padding: 9.5% 0 0 5%;
+        }
+
+
+    }
+
+    @media screen and (min-width: 1400px) {
+        .bannerliquidacion {
+            padding: 14em 0 4.2em 3em;
+        }
+
+        .bannerMedioliquidacion {
+            min-height: 315px;
+            padding: 10em 0 0 5.5em;
+        }
+
+        .bannerliquidacion__texto-blanco {
+            font-size: 3.5em;
+        }
+    }
+
+    /* Se deja este media query para manejar el font size en plp de productos, ya que en electromesticos 
+    la flecha queda sobre el texto, con esto se corrrige*/
+    @media screen and (min-width: 1450px) {
+        .landingliquidacion .product-list__filters h3 {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 1920px) {
+        .bannerliquidacion {
+            padding: 14em 0 6em 3em;
+        }
+    }
+</style>
+
+<!-- Banner principal -->
+<div class="row re-central fluid bannerliquidacion">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <!--<h1 class="bannerliquidacion__texto-blanco">Es mucha <br> herramienta</h1> -->
+    </div>
+</div>
+
+
+
+<!--Div de categoria-->
+<div class=" re-central liquidacionCategoria" style="margin-top: 3%; margin-bottom: 3%;">
+    <h2 class="liquidacionCategoria__titulo">Compra por categoría</h2> <br>
+    <div class="row categories-bebe fullcontent-bebe text-center">
+
+        <div class="col-md-2 text-center col-xs-6">
+            <a href="/1414?map=productClusterIds">
+                <picture>
+                    <img src="/arquivos/2021_cemaco_cat1_cocina.png" alt="cocina, mesa y electrodomésticos" />
+                </picture>
+                <span>Cocina, mesa y electrodomésticos</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-6">
+            <a href="/1415?map=productClusterIds">
+                <picture>
+                    <img src="/arquivos/2021_cemaco_cat2_banos.png" alt="Baños, cuidado personal y plomeria" />
+                </picture>
+                <span>Baños, cuidado personal<br>
+                    y plomería</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-6">
+            <a href="/1416?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cemaco_cat3_herramientas.png" media="(max-width: 762px)">
+                    <img src="/arquivos/2021_cemaco_cat3_herramientas.png"
+                        alt="Herramientas, accesorios y complementos" />
+                </picture>
+                <span>Herramientas, accesorios<br>
+                    y complementos</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-6">
+            <a href="/1417?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cemaco_cat4_electricos.png" media="(max-width: 762px)">
+                    <img src="/arquivos/2021_cemaco_cat4_electricos.png" alt="Eléctricos e iluminación" />
+                </picture>
+                <span>Eléctricos e<br>
+                    iluminación</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-6">
+            <a href="/1418?map=productClusterIds">
+                <picture>
+                    <img src="/arquivos/2021_cemaco_cat5_ninos.png" alt="juguetes, niños y niñas" />
+                </picture>
+                <span>Niños y niñas</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Termina div de cateogrias -->
+
+
+<!-- Empieza banner intermedio-->
+<!--<div class="row re-central fluid bannerMedioliquidacion">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h1 class="bannerMedioliquidacion__texto">perfección y calidad</h1>
+    </div>
+</div> -->
+<!-- Termina banner intermedio-->
+
+<!--<div class="category-name">
+    <h2>Compra lo mejor de liquidacion</h2>
+</div>
+</div> -->

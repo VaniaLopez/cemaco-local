@@ -1,0 +1,304 @@
+.checkout-container .orderform-template .orderform-template-holder div #shipping-data .shipping-data .accordion-inner #details-pickup-button,
+.pkpmodal,
+.pkpmodal-backdrop{
+    // display: none!important;
+}
+
+.store-locator-element {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4);
+    font-family: $font-title;
+    *{
+        font-family: $font-title;
+    }
+}
+
+.store-locator-element .store-locator-container {
+    position: relative;
+    background-color: #FFF;
+    margin: auto;
+    padding: 0;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .4s;
+    animation-name: animatetop;
+    animation-duration: .4s;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.store-locator-element .store-locator-container .store-locator-info {
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 16px 5px 0 16px
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-title {
+    margin-bottom: 16px
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-title p {
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 2px solid $c-primary;
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-filters {
+    margin-bottom: 24px
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-filters div {
+    font-size: 16px;
+    position: relative
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-filters div input,
+.store-locator-element .store-locator-container .store-locator-info .store-locator-filters div select {
+    position: relative;
+    width: calc(100% - 16px);
+    z-index: 2;
+    border: 1px solid #E8E8E8;
+    font-size: 14px;
+    box-shadow: none;
+    background-image: none;
+    -webkit-appearance: none;
+    outline: 0;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    padding: 2px 8px;
+    height: inherit;
+    line-height: 30px;
+    border-radius: 30px;
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-filters .store-locator-departmento {
+    display: none
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-filters .store-locator-departmento .store-locator-keyword-link,
+.store-locator-element .store-locator-container .store-locator-info .store-locator-filters .store-locator-keyword .store-locator-departmento-link {
+    color: #060606;
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list {
+    height: calc(100vh * .5);
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        background: $c-checkout-border;
+        width: 6px;
+        border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $c-secondary;
+        border-radius: 6px;
+    }
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item {
+    display: inline-block;
+    border: 1px solid $c-checkout-border;
+    width: calc(100% - 8px);
+    margin: 8px 4px;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    &.checked{
+        border-color: $c-secondary;
+    }
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item div {
+    display: inline-block
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item div:first-child {
+    width: 26px;
+    vertical-align: top;
+    margin-top: 4px
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item div:last-child {
+    width: calc(100% - 26px);
+    vertical-align: top
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-radio {
+    // position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    margin-top: 0
+}
+
+.radiomark {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    height: 12px;
+    width: 12px;
+    border: 1px solid $c-checkout-border;
+    background-color: #FFF;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-radio input:checked~.radiomark,
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-radio:hover input~.radiomark {
+    border-color: $c-secondary;
+}
+
+.radiomark:after {
+    content: '';
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-radio input:checked~.radiomark:after {
+    display: block
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-radio .radiomark:after {
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    @extend .bg-icon-dove;
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-iteminfo p:first-child {
+    color: $c-text;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-size: .85rem;
+}
+
+.store-locator-element .store-locator-container .store-locator-info .store-locator-list .store-locator-item .store-locator-iteminfo p:last-child {
+    margin-bottom: 0;
+    font-size: .75rem;
+}
+
+.store-locator-element .store-locator-container .store-locator-map {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+    height: 676px;
+    border-top-right-radius: 4px
+}
+
+.store-locator-element .store-locator-container .store-locator-submit {
+    text-align: center;
+    padding: 16px;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+}
+
+.store-locator-element .store-locator-container .store-locator-submit .store-locator-button {
+    font-size: 16px;
+    display: inline-block;
+    background: $c-primary;
+    color: #FFF;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1)
+}
+
+.store-locator-element .store-locator-container .store-locator-submit .store-locator-button:hover {
+    opacity: .7
+}
+
+.store-locator-element .store-locator-container .store-locator-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg{
+        width: 16px;
+        height: 16px;
+        display: block;
+    }
+}
+
+.store-locator-element .store-locator-container .store-locator-close i {
+    font-size: 20px;
+    font-weight: 400;
+    color: #030303
+}
+
+@media screen and (max-width:1023px) and (min-width:768px) {
+    .store-locator-element .store-locator-container {
+        width: calc(100% - 40px)
+    }
+}
+
+@media screen and (max-width:767px) {
+    .store-locator-element {
+        padding-top: 0
+    }
+    .store-locator-element .store-locator-container {
+        width: 100%;
+        border-radius: 0
+    }
+    .store-locator-element .store-locator-container .store-locator-info {
+        width: 100%;
+        padding: 12px
+    }
+    .store-locator-element .store-locator-container .store-locator-info .store-locator-list {
+        height: calc(100vh * .3)
+    }
+    .store-locator-element .store-locator-container .store-locator-map {
+        height: calc(100vh - (100vh * .35) - 236px)!important;
+        width: 100%;
+        border-top-right-radius: 0
+    }
+    .store-locator-element .store-locator-container .store-locator-submit {
+        padding: 12px
+    }
+    .store-locator-element .store-locator-container .store-locator-submit .store-locator-button {
+        width: 100%;
+        text-align: center
+    }
+    .store-locator-element .store-locator-container .store-locator-info .store-locator-filters {
+        margin-bottom: 12px
+    }
+}

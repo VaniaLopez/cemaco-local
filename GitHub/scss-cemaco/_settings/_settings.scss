@@ -1,0 +1,308 @@
+@charset "UTF-8";
+// Global variables
+$is-resilient:                      false !default;
+$is-checkout:                       false !default;
+$is-plugin:                         false !default;
+$is-debugging:                      false !default;
+
+// Breakpoints - Min
+$screen-bs-min:                     0;
+$screen-xs-min:                     360px;
+$screen-sm-min:                     480px;
+$screen-md-min:                     768px;
+$screen-lg-min:                     1024px;
+$screen-xl-min:                     1280px;
+$screen-xxl-min:                    1440px;
+$screen-hd-min:                     1920px;
+// Breakpoints - Max
+$screen-bs-max:                     $screen-xs-min - 1; // 359px
+$screen-xs-max:                     $screen-sm-min - 1; // 479px
+$screen-sm-max:                     $screen-md-min - 1; // 767px
+$screen-md-max:                     $screen-lg-min - 1; // 1023px
+$screen-lg-max:                     $screen-xl-min - 1; // 1279px
+$screen-xl-max:                     $screen-xxl-min - 1; // 1439px
+$screen-xxl-max:                    $screen-hd-min - 1; // 1919px
+
+// Width to .re-central
+$re-central-width-bs:               100%;
+$re-central-width-xs:               100%;
+$re-central-width-sm:               98%;
+$re-central-width-md:               94%;
+$re-central-width-lg:               ($screen-lg-min * 0.91);
+$re-central-width-xl:               ($screen-xl-min * 0.91);
+$re-central-width-xxl:              ($screen-xxl-min * 0.91);
+$re-central-width-hd:               ($screen-hd-min * 0.75);
+
+// Typography
+$font-title:                        'HelveticaNeueLTW05', sans-serif;
+$font-subtitle:                     'HelveticaNeueLTW05', sans-serif;
+$font-copy:                         'HelveticaNeueLTW05', sans-serif;
+$font-body:                         'HelveticaNeueLTW05', sans-serif;
+$font-number:                       'HelveticaNeueLTW05', sans-serif;
+$font-icons:                        'xCemaco';
+
+// Font Weight
+$font-thin:                         100;
+$font-x-light:                      200;
+$font-light:                        300;
+$font-regular:                      400;
+$font-medium:                       500;
+$font-semibold:                     600;
+$font-bold:                         700;
+$font-x-bold:                       800;
+$font-black:                        900;
+
+// Color Palette
+$c-primary:                         #101E8E;
+$c-secondary:                       #93D500;
+$c-tertiary:                        #2B4AAE;
+$c-orange:                          #FF8300;
+$c-text:                            #000000;
+$c-dark:                            #2c3137;
+$c-accent:                          #f5323e;
+$c-cta:                             #008c5e;
+$c-info:                            #1f74bf;
+$c-success:                         #008000;
+$c-alert:                           #FF8300;
+$c-invalid:                         #cc0000;
+$c-jugueton:                        #00A954;
+$c-jugueton-secondary:              #FFC523;
+$c-bebejugueton:                    #0CB7E1;
+$c-bebejugueton-secondary:          #EF5382;
+$c-boda:                            #906F79;
+// Gray Scale
+$c-dark-gray:                       #333333;
+$c-taupe-gray:                      #4a4a4a;
+$c-dim-gray:                        #666666;
+$c-dusty-gray:                      #acacac;
+$c-pastel-gray:                     #dddddd;
+$c-light-gray:                      #F6F6F6;
+
+// z-index
+$z-cintillo:                        510;
+$z-brand:                           505;
+$z-brand--desktop:                  595;
+$z-header:                          500;
+$z-header--menu-shown:              650;
+$z-header--desktop:                 500;
+$z-header-top-bar:                  515;
+$z-header-middle-bar:               530;
+$z-nav-mobile:                      1010;
+$z-nav-desktop:                     520;
+$z-searcher:                        1020;
+$z-searcher--desktop:               590;
+$z-main:                            auto;
+$z-main--desktop:                   auto;
+$z-sidebar:                         200;
+$z-filters-desktop:                 90;
+$z-footer:                          100;
+$z-offcanvas:                       2000;
+$z-overlay:                         1000;
+$z-modal:                           3000;
+
+// Cintillo - Height
+$cintillo-height--bs:               40px;
+$cintillo-height--md:               40px;
+$cintillo-height--lg:               40px;
+// Cintillo Description - Height
+$cintillo_description-height--bs:   60px;
+$cintillo_description-height--md:   80px;
+$cintillo_description-height--lg:   100px;
+// Top Bar - Height
+$top-bar-height--bs:                30px;
+$top-bar-height--md:                30px;
+$top-bar-height--lg:                30px;
+$store-top-bar-mobile:              30px;
+// Middle Bar - Height
+$middle-bar-height--bs:             50px;
+$middle-bar-height--md:             60px;
+$middle-bar-height--lg:             70px;
+// Nav - Height
+$nav-height:                        30px;
+$nav-height--lg:                    40px;
+$nav_link-height:                   30px;
+$nav_link-height--lg:               40px;
+// Searcher wrapper - Height
+$searcher-height--bs:               40px;
+$searcher-height--md:               40px;
+$searcher-height--lg:               40px;
+
+// Header - Height
+$header-height--bs:                 $top-bar-height--bs + $middle-bar-height--bs + $searcher-height--bs + $nav-height;
+$header-height--md:                 $top-bar-height--md + $middle-bar-height--md + $searcher-height--md + $nav-height;
+$header-height--lg:                 $top-bar-height--lg + $middle-bar-height--lg + $nav-height--lg;
+// Header - Up
+$header-up--bs:                     $cintillo-height--bs + $top-bar-height--bs;
+$header-up--md:                     $cintillo-height--md + $top-bar-height--md;
+$header-up--lg:                     $cintillo-height--lg;
+
+// Gutter
+$re-gutter:                         15px;
+// Animation Time
+$animate-time:                      0.2s;
+// Paths
+$image-path:                        'https://cemacogt.vteximg.com.br/arquivos/';
+
+// Breakpoints - Map
+$breakpoints-min: (
+    bs:                             $screen-bs-min,
+    xs:                             $screen-xs-min,
+    sm:                             $screen-sm-min,
+    md:                             $screen-md-min,
+    lg:                             $screen-lg-min,
+    xl:                             $screen-xl-min,
+    xxl:                            $screen-xxl-min,
+    hd:                             $screen-hd-min
+);
+$breakpoints-max: (
+    bs:                             $screen-bs-max,
+    xs:                             $screen-xs-max,
+    sm:                             $screen-sm-max,
+    md:                             $screen-md-max,
+    lg:                             $screen-lg-max,
+    xl:                             $screen-xl-max,
+    xxl:                            $screen-xxl-max,
+    hd:                             10000px
+);
+$breakpoints: (
+    bs:                             (min: $screen-bs-min, max: $screen-bs-max),
+    xs:                             (min: $screen-xs-min, max: $screen-xs-max),
+    sm:                             (min: $screen-sm-min, max: $screen-sm-max),
+    md:                             (min: $screen-md-min, max: $screen-md-max),
+    lg:                             (min: $screen-lg-min, max: $screen-lg-max),
+    xl:                             (min: $screen-xl-min, max: $screen-xl-max),
+    xxl:                            (min: $screen-xxl-min, max: $screen-xxl-max),
+    hd:                             (min: $screen-hd-min, max: 10000px)
+);
+
+// Color Palette - Map
+$color-palette-map: (
+    'primary':                      (color: $c-primary, font: white),
+    'secondary':                    (color: $c-secondary, font: white),
+    'tertiary':                     (color: $c-invalid, font: white),
+    'accent':                       (color: $c-accent, font: white),
+    'cta':                          (color: $c-cta, font: white),
+    'dark':                         (color: $c-dark, font: white),
+    'white':                        (color: white, font: black),
+    'black':                        (color: black, font: white),
+    'purple':                      (color: #906F79, font: white),
+    'gray':                        (color: $c-dusty-gray, font: black),
+    'bebe-primary':                (color: $c-bebejugueton, font: black),
+    'bebe-secondary':              (color: $c-bebejugueton-secondary, font: white),
+    'jugueton-primary':            (color: $c-jugueton, font: black),
+    'jugueton-secondary':          (color: $c-jugueton-secondary, font: black),
+    'boda-primary':                 (color: $c-boda, font: white)
+);
+
+// Color Palette - List
+$color-palette-list:
+    primary                         $c-primary      darken($c-primary,10),
+    secondary                       $c-secondary    darken($c-secondary,10),
+    white                       white           white,
+    black                       black           black
+;
+
+$color-giftlist-map: (
+    'generico':   (
+        color: $c-primary,
+        contrast: white,
+        color_title_1: $c-primary,
+        color_title_2: $c-primary,
+        color_title_3: $c-primary,
+        color_text: $c-text,
+        btn_bg: $c-secondary,
+        btn_color: white,
+        icon_color: $c-secondary,
+        color_disclaimer: $c-primary,
+        color_radio_active: $c-secondary,
+        color_radio_text1: $c-primary,
+        color_radio_text2: $c-text,
+    ),
+    'boda':       (
+        color: $c-boda,
+        contrast: white,
+        color_title_1: $c-boda,
+        color_title_2: $c-boda,
+        color_title_3: $c-dim-gray,
+        color_text: $c-text,
+        btn_bg: $c-boda,
+        btn_color: white,
+        icon_color: $c-boda,
+        color_disclaimer: $c-dim-gray,
+        color_radio_active: $c-boda,
+        color_radio_text1: $c-text,
+        color_radio_text2: $c-boda,
+    ),
+    'bebe':       (
+        color: $c-bebejugueton,
+        contrast: white,
+        color_title_1: $c-bebejugueton-secondary,
+        color_title_2: $c-bebejugueton-secondary,
+        color_title_3: $c-bebejugueton,
+        color_text: $c-bebejugueton,
+        btn_bg: $c-bebejugueton-secondary,
+        btn_color: white,
+        icon_color: $c-bebejugueton-secondary,
+        color_disclaimer: $c-bebejugueton,
+        color_radio_active: $c-jugueton-secondary,
+        color_radio_text1: $c-bebejugueton,
+        color_radio_text2: $c-bebejugueton,
+    ),
+    'kids':       (
+        color: $c-text,
+        contrast: white,
+        color_title_1: $c-text,
+        color_title_2: $c-text,
+        color_title_3: $c-text,
+        color_text: $c-text,
+        btn_bg: $c-cta,
+        btn_color: white,
+        icon_color: $c-jugueton-secondary,
+        color_disclaimer: $c-text,
+        color_radio_active: $c-jugueton-secondary,
+        color_radio_text1: $c-cta,
+        color_radio_text2: $c-text,
+    ),
+    'privilegio':       (
+        color: $c-primary,
+        contrast: white,
+        color_title_1: $c-secondary,
+        color_title_2: $c-secondary,
+        color_title_3: $c-primary,
+        color_text: $c-primary,
+        btn_bg: $c-secondary,
+        btn_color: white,
+        icon_color: $c-secondary,
+        color_disclaimer: $c-primary,
+        color_radio_active: $c-secondary,
+        color_radio_text1: $c-primary,
+        color_radio_text2: $c-primary,
+    ),
+);
+
+// Font-weight - List
+$font-weight-list: (
+    ('thin', 100),
+    ('x-light', 200),
+    ('light', 300),
+    ('regular', 400),
+    ('medium', 500),
+    ('semibold', 600),
+    ('bold', 700),
+    ('x-bold', 800),
+    ('black', 900)
+);
+
+/*--------------------Product Item--------------------*/
+// Gutter
+$gutter-bs:                     5px;
+$gutter-xl:                     5px;
+$gutter-in:                     15px;
+$sku-color-width:               16px;
+$sku-color-height:              16px;
+$sku-color-margin:              $sku-color-width * 0.2;
+$skus-color__wrapper-width:     $sku-color-width * 3 + $sku-color-margin * 6;
+$skus-wrapper-height:           $sku-color-width * 1.25;
+$background-color:              white;
+
+$pi__image-bgc:                 darken(white,5);

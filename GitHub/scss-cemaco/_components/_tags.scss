@@ -1,0 +1,17 @@
+/*--------------------Tags--------------------*/
+.tag{
+	width: auto;
+	display: inline-block;
+	padding: .5em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	@include font-size(.7);
+	@each $color,$value in $color-palette-map {
+		&.#{$color} {
+			color: map-get($value,font);
+			border-color: map-get($value,color);
+			background-color: map-get($value,color);
+		}
+	}
+}

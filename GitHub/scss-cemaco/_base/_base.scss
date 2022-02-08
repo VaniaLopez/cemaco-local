@@ -1,0 +1,147 @@
+/*--------------------[Re]set │ Iván Luna [Re]--------------------*/
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    marker-offset: 0;
+
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+
+    color: inherit;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main{
+    display: block;
+}
+ul, ol{
+    list-style: none;
+    margin-bottom: 0;
+}
+li{
+    list-style: none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*--------------------General Base--------------------*/
+html{
+    @include propertyBreakpoints(font-size, (bs: 16px, xs: 16px, md: 16px, lg: 16px, xl: 16px, xxl: 16px, hd: 16px));
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-body;
+    @include font-size;
+    font-weight: $font-regular;
+    line-height: 1.3;
+    color: $c-text;
+    background-color: white;
+    transition: padding-top $animate-time;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: $font-title;
+    font-weight: $font-bold;
+    color: inherit;
+    position: relative;
+    @include padding-v(0.5, $unit: 1em);
+    line-height: 1.1;
+    > small{
+        display: block;
+        color: inherit;
+    }
+    strong{
+        font-weight: $font-x-bold;
+        color: inherit;
+    }
+}
+h1{
+    @include font-size(2.1);
+    @media screen and (min-width: $screen-lg-min){
+        @include font-size(2.5);
+    }
+}
+h2{
+    @include font-size(1.9);
+    @media screen and (min-width: $screen-lg-min){
+        @include font-size(2.3);
+    }
+}
+h3{
+    @include font-size(1.7);
+    @media screen and (min-width: $screen-lg-min){
+        @include font-size(2);
+    }
+}
+h4{
+    @include font-size(1.5);
+    @media screen and (min-width: $screen-lg-min){
+        @include font-size(2);
+    }
+}
+h5{
+    @include font-size(1.3);
+    @media screen and (min-width: $screen-lg-min){
+        @include font-size(1.5);
+    }
+}
+h6{
+    @include font-size(1.1);
+    @media screen and (min-width: $screen-lg-min) {
+        @include font-size(1.3);
+    }
+}
+p{
+    margin-bottom: 1em;
+    &:only-child,
+    &:only-of-type,
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+a{
+    text-decoration: none;
+    transition: color .2s ease, background .2s ease;
+    &:hover,
+    &:focus{
+        outline: none;
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+b,
+strong,
+mark{
+    font-weight: $font-bold;
+    color: inherit;
+    background: none;
+}
+i,
+em{
+    font-weight: $font-regular;
+    font-style: normal;
+}
+em{
+    color: inherit;
+}
+blockquote{
+    margin: 0.75em 2em;
+    @include font-size(1.2);
+}
+img{
+    width: 100%;
+    display: block;
+}
+button{
+    border: 0;
+    font-size: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}

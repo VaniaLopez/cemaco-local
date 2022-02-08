@@ -1,0 +1,1140 @@
+/*Empieza estilos para la homepage de bebe jugueton*/
+.landing--bebejugueton .button-simple .arrowblack {
+  color: #000000 !important;
+}
+.landing--bebejugueton .button-simple .arrowwhite {
+  color: #ffffff !important;
+}
+.landing--bebejugueton .button-simple .arrowpink {
+  color: #ef5382 !important;
+}
+.landing--bebejugueton .svg-icon-arrow-left,
+.landing--bebejugueton .svg-icon-arrow-right {
+  color: #ef5382 !important;
+}
+.landing--bebejugueton .product-item__action .js-buy-pdp,
+.landing--bebejugueton .button-flat.secondary {
+  background-color: #ef5382 !important;
+}
+.landing--bebejugueton .product-item__wishlist__trigger.active svg {
+  color: #ef5382 !important;
+}
+.landing--bebejugueton .departaments-board__item span {
+  font-size: 14px;
+  font-weight: bold;
+}
+.landing--bebejugueton .departaments-board__wrapper {
+  margin-bottom: 2%;
+}
+.landing--bebejugueton .principal-footer {
+  background-color: #0cb7e1 !important;
+}
+.landing--bebejugueton .pre-footer .subscribe__form__submit {
+  background: #ffffff !important;
+}
+.landing--bebejugueton .pre-footer .subscribe__form__submit .svg-icon {
+  color: #ef5382 !important;
+}
+.landing--bebejugueton .slick-slide img {
+  width: 100% !important;
+}
+/*Termina estilos para la homepage de bebe jugueton*/
+
+/*Empieza estilos para la homepage de jugueton*/
+.landing--jugueton .slick-slide img {
+  width: 100% !important;
+}
+.landing--jugueton .button-simple .arrowblack {
+  color: #000000 !important;
+}
+.landing--jugueton .button-simple .arrowwhite {
+  color: #ffffff !important;
+}
+.landing--jugueton .button-simple .arrowyellow {
+  color: #ffc523 !important;
+}
+.landing--jugueton .svg-icon-arrow-left,
+.landing--jugueton .svg-icon-arrow-right {
+  color: #ffc523 !important;
+}
+.landing--jugueton .product-item__action .js-buy-pdp,
+.landing--jugueton .button-flat.secondary {
+  background-color: #ffc523 !important;
+}
+.landing--jugueton .product-item__wishlist__trigger.active svg {
+  color: #ffc523 !important;
+}
+.landing--jugueton .departaments-board__item span {
+  font-size: 14px;
+  font-weight: bold;
+}
+.landing--jugueton .departaments-board__wrapper {
+  margin-bottom: 2%;
+}
+.landing--jugueton .principal-footer {
+  background-color: #00a85d !important;
+}
+.landing--jugueton .pre-footer .subscribe__form__submit {
+  background: #ffffff !important;
+}
+.landing--jugueton .pre-footer .subscribe__form__submit .svg-icon {
+  color: #ffc523 !important;
+}
+/*Termina estilos para la homepage de jugueton*/
+
+/*Estilos para el area de marca en el PDP*/
+.product-detail__brand,
+.product-detail .brandName {
+  font-family: inherit !important;
+}
+
+/*Estilos template landing segundo nivel*/
+.segundo-nivel .departaments-board {
+  justify-content: center !important;
+}
+.segundo-nivel .departaments-board img {
+  margin-bottom: 3% !important;
+}
+.segundo-nivel .bannerhead img.desktop {
+  margin-bottom: 1%;
+}
+.segundo-nivel .tag-title--level-2 {
+  margin-bottom: 2%;
+}
+
+.br-no-mobile {
+  display: block;
+}
+
+/*Estilos para la landing de PREVENCION */
+.prevencion .desk img {
+  width: 100%;
+}
+.prevencion .mobile {
+  display: none;
+}
+.prevencion .textobanner {
+  position: absolute;
+  margin: -35rem 0 0 5%;
+  color: #fff;
+}
+.prevencion .textobanner h1 {
+  font-size: 77px;
+}
+.prevencion .textobanner p {
+  font-size: 29px;
+}
+.prevencion .pasosprevencion {
+  margin: 3% 0 0;
+}
+.prevencion .pasosprevencion h2 {
+  text-align: center;
+}
+.prevencion .visitatiendas {
+  margin: 3% auto 0;
+}
+.prevencion .visitatiendas .item {
+  margin: 1% 0;
+}
+.prevencion .visitatiendas .item img {
+  width: 24%;
+  margin: 0 auto;
+}
+.prevencion .visitatiendas .item:nth-child(2) img {
+  width: 16%;
+}
+.prevencion .visitatiendas .item:nth-child(5) img {
+  width: 17%;
+}
+.prevencion .visitatiendas .item h3 {
+  color: #4c4c4c;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  margin: 4% 0 1%;
+}
+.prevencion .visitatiendas .item p {
+  color: #4c4c4c;
+  text-align: center;
+  font-size: 18px;
+}
+.prevencion .visitatiendas article.col-sm-4 p {
+  padding: 0 10%;
+}
+.prevencion .visitatiendas article.col-sm-6 p {
+  padding: 0 16%;
+}
+.prevencion .visitatiendas article.col-sm-4:first-child img {
+  padding: 4% 0 0 0;
+}
+.prevencion .cuadritos {
+  margin: 3% 0;
+}
+.prevencion .cuadritos section {
+  width: 100%;
+  margin: 0;
+}
+.prevencion .cuadritos section article {
+  padding: 0;
+  text-align: center;
+  font-size: 18px;
+}
+.prevencion .cuadritos section:first-child article:nth-child(2) {
+  padding: 14% 2%;
+}
+.prevencion .cuadritos section:nth-child(2) article:first-child {
+  padding: 16% 2%;
+}
+.prevencion .cuadritos section:nth-child(3) article:nth-child(2) {
+  padding: 16% 3.5%;
+}
+.prevencion .cuadritos section:nth-child(4) article:first-child {
+  padding: 15% 2%;
+}
+.prevencion .cuadritos section article p {
+  margin-bottom: 3%;
+  font-size: 19px;
+}
+.prevencion .btn-default {
+  background: #94d529;
+  color: #fff;
+  padding: 2.2% 3%;
+  margin: 2% auto 0;
+  display: block;
+  width: 29%;
+  border-radius: 27px;
+}
+.prevencion .faqs {
+  width: 100%;
+  margin: 0 0 3%;
+}
+.prevencion .faqs section {
+  position: absolute;
+  margin: 3% 2%;
+  width: 22%;
+}
+.prevencion .faqs .btn-default {
+  margin: 2% 0 0;
+  text-align: center;
+  font-size: 18px;
+  width: 34%;
+}
+.prevencion .banner-autoservicio {
+  background: #101e8e;
+  overflow: hidden;
+  padding: 4% 0;
+  margin: 0 0 3%;
+}
+.prevencion .banner-autoservicio aside {
+  display: inline;
+  float: left;
+  width: 49%;
+}
+.prevencion .banner-autoservicio aside:first-child {
+  border-right: 1px solid #fff;
+}
+.prevencion .banner-autoservicio aside img {
+  width: 74%;
+  margin: 0 auto;
+}
+.prevencion .banner-autoservicio aside p {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding: 6% 18% 0;
+}
+
+/*Estilos para la landing de sostenibilidad*/
+.sostenibilidad .desk img {
+  width: 100%;
+}
+.sostenibilidad .desk img {
+  width: 100%;
+}
+.sostenibilidad .mobile {
+  display: none;
+}
+.sostenibilidad .video-mobile {
+  display: none;
+}
+.sostenibilidad .sostmenu {
+  background: #fff;
+}
+.sostenibilidad .sostmenu .grid-content {
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1% 0;
+}
+.sostenibilidad .sostmenu img {
+  width: 19%;
+  margin: 0 auto 5%;
+}
+.sostenibilidad .sostmenu .grid-content .grid-item:first-child img {
+  width: 17.2%;
+}
+.sostenibilidad .sostmenu .grid-content .grid-item:nth-child(2) img {
+  width: 14.3%;
+}
+.sostenibilidad .sostmenu .grid-content .grid-item:nth-child(4) img {
+  width: 21.5%;
+}
+.sostenibilidad .sostmenu .grid-content .grid-item:nth-child(5) img {
+  width: 22%;
+}
+.sostenibilidad .sostmenu .grid-content .grid-item:nth-child(6) img {
+  width: 28%;
+}
+.sostenibilidad .sostmenu .grid-content .grid-item:nth-child(7) img {
+  width: 16%;
+}
+.sostenibilidad .sostmenu span {
+  color: #76787a;
+  text-align: center;
+  display: block;
+}
+.sostenibilidad .sostmenu .grid-item:hover > a {
+  text-decoration: none;
+}
+/* .sostenibilidad .banner .textobanner {
+  position: absolute;
+  margin: -35rem 0 0 5%;
+  color: #fff;
+} */
+.sostenibilidad .banner .textobanner p {
+  font-size: 26px;
+  text-align: left;
+  padding: 0;
+}
+.sostenibilidad .misionvalores {
+  margin: 2% 0;
+  overflow: hidden;
+}
+.sostenibilidad .misionvalores h2 {
+  text-align: center;
+}
+.sostenibilidad .misionvalores p {
+  text-align: center;
+  font-size: 22px;
+  padding: 0 7%;
+}
+.sostenibilidad .valores {
+  margin: 2% 0 0;
+}
+.sostenibilidad .valores .row {
+  margin: 1% 0;
+}
+.sostenibilidad .valores article img {
+  width: 22%;
+  margin: 0 auto 1%;
+  padding: 5% 0 4%;
+}
+.sostenibilidad .valores .row:first-child article:first-child img {
+  width: 25%;
+  padding: 9% 0 4% 0;
+}
+.sostenibilidad .valores .row:first-child article:nth-child(2) img {
+  width: 15%;
+}
+.sostenibilidad .valores .row:nth-child(2) article:first-child img {
+  width: 19%;
+}
+.sostenibilidad .valores .row:nth-child(2) article:nth-child(2) img {
+  width: 29%;
+  padding: 8% 0 10% 0;
+}
+.sostenibilidad .valores .row:nth-child(2) article:nth-child(4) img {
+  width: 23%;
+  padding: 5% 0 6% 0;
+}
+.sostenibilidad .valores article p {
+  font-size: 16px;
+  height: 84px;
+  overflow: hidden;
+}
+.sostenibilidad .empresab {
+  margin: 2%;
+  overflow: hidden;
+}
+.sostenibilidad .empresab p {
+  font-size: 21px;
+  text-align: center;
+  padding: 0 8%;
+}
+.sostenibilidad .descripcion article {
+  padding: 0;
+}
+.sostenibilidad .equipo h3 {
+  text-align: center;
+  font-size: 2.9rem;
+  margin: 2% 0 1%;
+}
+.sostenibilidad .equipo,
+.sostenibilidad .ambiente,
+.sostenibilidad .comunidad,
+.sostenibilidad .centroacopio,
+.sostenibilidad .guatenuestra {
+  margin: 2.5% 0;
+}
+.sostenibilidad :is(h4, h5) {
+  text-align: center;
+}
+.sostenibilidad p {
+  text-align: center;
+  padding: 0 7%;
+  font-size: 21px;
+}
+.sostenibilidad .equipo .descripcion {
+  margin: 2% 0;
+}
+.sostenibilidad .ambiente .inicio,
+.sostenibilidad .comunidad .inicio {
+  margin: 2% 0 0;
+}
+.sostenibilidad .ambiente .fin,
+.sostenibilidad .comunidad .fin {
+  margin: 0 0 2%;
+}
+.sostenibilidad .descripcion h5 {
+  text-align: center;
+  padding: 29% 0 2% 0;
+}
+.sostenibilidad .descripcion p {
+  font-size: 21px;
+  padding: 0 14%;
+}
+.sostenibilidad .descripcion main {
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+}
+.sostenibilidad .bannerfinal aside {
+  position: absolute;
+  color: #fff;
+  width: 35%;
+  padding: 4% 2% 0;
+}
+.sostenibilidad .bannerfinal aside p {
+  text-align: left;
+  padding: 0;
+  font-size: 14px;
+}
+.sostenibilidad .bannerfinal aside span {
+  display: block;
+  background: #94d529;
+  padding: 1.3% 3%;
+  width: 40%;
+  text-align: center;
+  margin: 3% 0 0;
+  border-radius: 23px;
+}
+.sostenibilidad .video-desk,
+.sostenibilidad .video-mobile {
+  cursor: pointer;
+}
+
+/*Estilos para la landing de shewin williams*/
+.sherwin .desk img {
+  width: 100%;
+}
+.sherwin .mobile {
+  display: none;
+}
+.sherwin h3 {
+  text-align: center;
+}
+.sherwin .portadas a,
+.sherwin .tiendas section span a {
+  text-decoration: none;
+}
+.sherwin .portadas .titular {
+  position: absolute;
+  margin: 1% 0 0 1%;
+}
+.sherwin .portadas .titular h2 {
+  color: #fff;
+  font-size: 60px;
+}
+.sherwin .categorias .grid {
+  display: grid;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1% 0;
+}
+.sherwin .categorias .grid-item {
+  margin-bottom: 10%;
+}
+.sherwin .categorias .grid-item img {
+  width: 53%;
+  margin: 0 auto;
+}
+.sherwin .categorias .grid-item a,
+.sherwin .htmpintura a {
+  text-decoration: none;
+}
+.sherwin .categorias .grid-item p {
+  text-align: center;
+  height: 50px;
+  overflow: hidden;
+  margin: 4% 0 0 0;
+}
+.sherwin .htmpintura .col-lg-6 {
+  margin-bottom: 2%;
+}
+.sherwin .htmpintura .col-lg-6 aside.titulo {
+  position: absolute;
+  width: 92%;
+  margin: 2% 0 0 3%;
+}
+.sherwin .htmpintura .col-lg-6 aside.titulo span {
+  text-decoration: underline !important;
+}
+.sherwin .htmpintura .col-lg-6:nth-child(2) aside.titulo h4 {
+  width: 65%;
+}
+.sherwin .htmpintura .col-lg-6:nth-child(3) aside.titulo h4 {
+  width: 51%;
+}
+.sherwin .htmpintura .col-lg-6:nth-child(4) aside.titulo h4,
+.sherwin .htmpintura .col-lg-6:nth-child(5) aside.titulo h4 {
+  width: 38%;
+}
+.sherwin .htmpintura .font-white {
+  color: #fff;
+}
+.sherwin .htmpintura .font-black {
+  color: #000;
+}
+.sherwin .tiendas {
+  background-color: #e7eaf0;
+  margin-bottom: 2%;
+}
+.sherwin .tiendas section {
+  padding: 0;
+}
+.sherwin .tiendas section h5 {
+  width: 71%;
+  padding: 15% 0 2% 13%;
+  line-height: 31px;
+}
+.sherwin .tiendas section span {
+  display: block;
+  background-color: #94d529;
+  padding: 1% 4%;
+  margin: 1% 0 0 13%;
+  width: 25%;
+  text-align: center;
+  color: #fff;
+  border-radius: 21px;
+}
+.sherwinwilliams .bread-crumbs,
+.sherwinwilliams h1.category-name {
+  display: none;
+}
+.sherwin .banner-sherwin {
+  background-image: url("https://sfo2.digitaloceanspaces.com/cemacogt/vtex/2021/img/sherwinwilliams/banner032021.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  padding: 8% 0 0 7%;
+}
+.sherwin .banner-sherwin h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - R E S P O N S I V E - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media (max-width: 1690px) {
+  .prevencion .textobanner {
+    margin: -31rem 0 0 5%;
+  }
+  .prevencion .textobanner h1 {
+    font-size: 56px;
+  }
+  .prevencion .textobanner p {
+    font-size: 26px;
+  }
+  .prevencion .cuadritos section:first-child article:nth-child(2) {
+    padding: 11% 2%;
+  }
+  .prevencion .cuadritos section:nth-child(3) article:nth-child(2) {
+    padding: 14% 3.5%;
+  } 
+  .sostenibilidad .bannerfinal aside {
+    width: 39%;
+  }
+  .sostenibilidad .comunidad .inicio h5 {
+    padding: 21% 0 2% 0;
+  }
+  .sostenibilidad .bannerfinal aside {
+    padding: 3% 2% 0;
+  }
+}
+
+
+@media (min-width: 1630px) {
+  .sostenibilidad .banner .textobanner h1 {
+    font-size: 70px;
+    letter-spacing: -1.68px;
+  }
+
+}
+@media (max-width: 1440px) {
+  .prevencion .textobanner {
+    margin: -26rem 0 0 5%;
+  }
+  .prevencion .textobanner h1 {
+    font-size: 56px;
+  }
+  .prevencion .textobanner p {
+    font-size: 23px;
+  }
+  /*responsivo landing sostenibilidad*/
+  .sostenibilidad .banner .textobanner h1 {
+    font-size: 75px;
+    letter-spacing:-1.5px;
+  }
+  		
+	.sostenibilidad .banner .textobanner {
+    margin: 6rem 4rem;
+	}
+  .sostenibilidad .empresab p {
+    padding: 0 6%;
+  }
+  .sostenibilidad .bannerfinal aside {
+    width: 46%;
+  }
+  .sostenibilidad .misionvalores p {
+    font-size: 20px;
+  }
+  .sostenibilidad .empresab p {
+    font-size: 20px;
+  }
+  .sostenibilidad p {
+    font-size: 20px;
+  }
+  .sherwin .portadas .titular {
+    position: absolute;
+    margin: 1% 0 0 1%;
+  }
+  .sherwin .portadas .titular h2 {
+    color: #fff;
+    font-size: 50px;
+  }
+}
+@media (max-width: 1366px) {
+  .prevencion .cuadritos section:first-child article:nth-child(2) {
+    padding: 9% 2%;
+  }
+  .prevencion .cuadritos section:nth-child(3) article:nth-child(2) {
+    padding: 11% 3.5%;
+  }
+  .prevencion .cuadritos section:nth-child(2) article:first-child {
+    padding: 13% 2%;
+  }
+  .prevencion .faqs .btn-default {
+    width: 47%;
+  }
+  .prevencion .faqs section {
+    width: 26%;
+  }
+  .prevencion .banner-autoservicio .btn-default {
+    width: 35%;
+    text-align: center;
+  }
+  .prevencion .banner-autoservicio aside p {
+    font-size: 18px;
+  }
+  /*responsivo landing sostenibilidad*/
+  .sostenibilidad .banner .textobanner {
+    margin: 4rem 3rem;
+  }
+  .sostenibilidad .misionvalores p {
+    font-size: 19px;
+    padding: 0 4%;
+  }
+  .sostenibilidad .empresab p {
+    padding: 0 3%;
+    font-size: 19px;
+  }
+  .sostenibilidad p {
+    font-size: 19px;
+  }
+  .sostenibilidad .bannerfinal aside {
+    width: 48%;
+  }
+  .sostenibilidad .comunidad .inicio p {
+    padding: 0 9%;
+  }
+  .sostenibilidad .descripcion p {
+    font-size: 19px;
+  }
+  /*responsivo landing de sherwin*/
+  .sherwin .htmpintura .col-lg-6 aside.titulo h4 {
+    font-size: 1.7rem;
+  }
+  .sherwin .tiendas section h5 {
+    width: 86%;
+    padding: 12% 0 2% 13%;
+  }
+}
+@media (max-width: 1220px) {
+  .sherwin .categorias .grid-item p {
+    font-size: 14px;
+  }
+  .sherwin .htmpintura .col-lg-6 aside.titulo h4 {
+    font-size: 1.4rem;
+  }
+  .sherwin .tiendas section span {
+    width: 41%;
+  }
+  .sherwin .tiendas section h5 {
+    line-height: 27px;
+    width: 90%;
+    font-size: 1.3rem;
+    padding: 9% 0 2% 10%;
+  }
+}
+@media (max-width: 1080px) {
+  .prevencion .textobanner {
+    margin: -21rem 0 0 5%;
+  }
+  .prevencion .textobanner h1 {
+    font-size: 49px;
+  }
+  .prevencion .textobanner p {
+    font-size: 20px;
+  }
+  .prevencion .pasosprevencion h2 {
+    font-size: 28px;
+  }
+  .prevencion .visitatiendas .item {
+    margin: 3% 0;
+  }
+  .prevencion .cuadritos section article p {
+    font-size: 17px;
+  }
+  .prevencion .cuadritos section article h4 {
+    font-size: 23px;
+  }
+  .prevencion .cuadritos section:first-child article:nth-child(2) {
+    padding: 5% 2%;
+  }
+  .prevencion .cuadritos section:nth-child(3) article:nth-child(2) {
+    padding: 9% 3.5%;
+  }
+  .prevencion .faqs section {
+    margin: 1% 2%;
+    width: 34%;
+  }
+  .prevencion .banner-autoservicio aside p {
+    font-size: 17px;
+    padding: 6% 7% 0;
+  }
+  .prevencion .banner-autoservicio .btn-default {
+    width: 46%;
+  }
+  /*responsivo landing sostenibilidad*/
+  /* .sostenibilidad .sostmenu span{font-size: 13px; } */
+  .sostenibilidad .banner .textobanner p {
+    font-size: 19px;
+  }
+  .sostenibilidad .banner .textobanner h1 {
+    font-size: 56px;
+    letter-spacing: -1.4px;
+  }
+  .sostenibilidad .banner .textobanner {
+    margin: 2rem 3rem;
+  }
+  .sostenibilidad .misionvalores p {
+    font-size: 17px;
+  }
+  .sostenibilidad .valores article p {
+    font-size: 13px;
+  }
+  .sostenibilidad .empresab p {
+    font-size: 17px;
+  }
+  .sostenibilidad p {
+    font-size: 17px;
+    padding: 0 4%;
+  }
+  .sostenibilidad .descripcion p {
+    font-size: 17px;
+  }
+  .sostenibilidad .bannerfinal aside {
+    width: 51%;
+    padding: 2% 2% 0;
+  }
+  .sostenibilidad .bannerfinal aside span {
+    font-size: 13px;
+  }
+  .sostenibilidad .comunidad .inicio h5 {
+    padding: 7% ​0 2%;
+  }
+  .sostenibilidad .descripcion h5 {
+    padding: 18% 0 2% 0;
+  }
+
+  .sherwin .portadas .titular h2 {
+    color: #fff;
+    font-size: 40px;
+  }
+}
+@media (max-width: 880px) {
+  /*responsivo landing sostenibilidad*/
+  .sostenibilidad .banner .textobanner h1 {
+    font-size: 45px;
+    letter-spacing:-1.125px;
+  }
+  .sostenibilidad .banner .textobanner p {
+    font-size: 15px;
+  }
+  .sostenibilidad .banner .textobanner {
+    text-align: left;
+    margin: 1.5rem 2rem
+  }
+  .sostenibilidad .valores article p {
+    font-size: 10.6px;
+  }
+  .sostenibilidad .misionvalores p {
+    font-size: 15px;
+  }
+  .sostenibilidad .empresab p {
+    font-size: 14px;
+  }
+  .sostenibilidad .equipo h3 {
+    font-size: 2rem;
+  }
+  .sostenibilidad p {
+    font-size: 15px;
+  }
+  .sostenibilidad .descripcion h5 {
+    padding: 6% 0 2% 0;
+  }
+  .sostenibilidad .comunidad .inicio h5 {
+    padding: 6% 0 2% 0;
+  }
+  /*responsivo landing de sherwin*/
+  .sherwin .portadas .titular h2 {
+    font-size: 30px;
+  }
+  .sherwin .categorias .grid-item p {
+    font-size: 13px;
+  }
+  .sherwin .tiendas section h5 {
+    width: 99%;
+    padding: 6% 7% 2%;
+  }
+  .sherwin .tiendas section span {
+    margin: 1% auto 4%;
+    width: 24%;
+  }
+}
+@media (max-width: 600px) {
+  .sherwin .portadas .titular h2 {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 654px){
+  .sostenibilidad .bannerfinal aside span {
+    background:transparent;
+    text-align: left;
+    text-decoration: underline;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .prevencion .mobile {
+    display: initial;
+  }
+  .prevencion .desk {
+    display: none;
+  }
+  .prevencion .textobanner {
+    position: relative;
+    margin: 2% auto;
+    color: #000;
+    text-align: center;
+  }
+  .prevencion .textobanner h1 {
+    font-size: 29px;
+  }
+  .prevencion .textobanner p {
+    font-size: 13px;
+  }
+  .prevencion .pasosprevencion h2 {
+    font-size: 22px;
+    padding: 2% 6%;
+  }
+  .prevencion .visitatiendas .item {
+    margin: 8% 0;
+  }
+  .prevencion .visitatiendas .item p {
+    font-size: 15px;
+  }
+  .prevencion .cuadritos section article p {
+    font-size: 15px;
+  }
+  .prevencion .cuadritos section:first-child article:nth-child(2) {
+    padding: 5% 4%;
+  }
+  .prevencion .cuadritos section:nth-child(2) article:nth-child(3) {
+    padding: 6% 2%;
+    display: block;
+  }
+  .prevencion .cuadritos section:nth-child(4) article:nth-child(3) {
+    padding: 10% 2%;
+    display: block;
+  }
+  .prevencion .btn-default {
+    width: 37%;
+    font-size: 15px;
+  }
+  .prevencion .faqs section {
+    width: 63%;
+    margin: 3% 3%;
+  }
+  .prevencion .faqs h3 {
+    font-size: 19px;
+  }
+  .prevencion .faqs .btn-default {
+    font-size: 16px;
+  }
+  .prevencion .banner-autoservicio {
+    padding: 6% 0 8%;
+  }
+  .prevencion .banner-autoservicio aside {
+    display: block;
+    width: 100%;
+  }
+  .prevencion .banner-autoservicio aside img.mobile {
+    display: block;
+  }
+  .prevencion .banner-autoservicio aside:first-child {
+    border-right: none;
+  }
+  .prevencion .cuadritos section article h4 {
+    font-size: 20px;
+  }
+  .prevencion .banner-autoservicio aside p {
+    font-size: 15px;
+  }
+  /*responsivo landing sostenibilidad*/
+  .sostenibilidad .video-desk {
+    display: none;
+  }
+  .sostenibilidad .video-mobile {
+    display: initial;
+  }
+  .sostenibilidad .mobile {
+    display: initial;
+  }
+  .sostenibilidad .desk {
+    display: none;
+  }
+  .sostenibilidad .sostmenu .grid-content {
+    width: 100%;
+  }
+  /* .sostenibilidad .sostmenu span{display: none; } */
+  /* .sostenibilidad .banner .textobanner {
+    margin: -7rem 0 0 5%;
+    position: relative;
+  } */
+  .sostenibilidad .banner .textobanner p {
+    color: #000;
+    font-size: 13px;
+  }
+  .sostenibilidad .banner .textobanner h1 {
+    font-size: 32px;
+    letter-spacing:-0.8px;
+    margin: 0% 0 8% 0;
+  }
+  .sostenibilidad .valores article p {
+    font-size: 15px;
+  }
+  .sostenibilidad .equipo h3 {
+    font-size: 1.7rem;
+  }
+  .sostenibilidad .bannerfinal aside h6 {
+    font-size: 10px;
+  }
+  .sostenibilidad .bannerfinal aside p {
+    display: none;
+  }
+  .sostenibilidad .bannerfinal aside {
+    width: 100%;
+  }
+  
+  .sostenibilidad .sostmenu img {
+    width: 44%;
+  }
+  .sostenibilidad .sostmenu .grid-content .grid-item:first-child img {
+    width: 43%;
+  }
+  .sostenibilidad .sostmenu .grid-content .grid-item:nth-child(2) img {
+    width: 34%;
+  }
+  .sostenibilidad .sostmenu .grid-content .grid-item:nth-child(4) img {
+    width: 44%;
+  }
+  .sostenibilidad .sostmenu .grid-content .grid-item:nth-child(5) img {
+    width: 49%;
+  }
+  .sostenibilidad .sostmenu .grid-content .grid-item:nth-child(6) img {
+    width: 53%;
+  }
+  .sostenibilidad .sostmenu .grid-content .grid-item:nth-child(7) img {
+    width: 34%;
+  }
+  /*responsivo landing de sherwin*/
+  .sherwin .mobile {
+    display: initial;
+  }
+  .sherwin .desk {
+    display: none;
+  }
+  .sherwin .categorias .grid {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+  .sherwin .tiendas section h5 {
+    width: 87%;
+    padding: 5% 3% 2%;
+    line-height: 26px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .sherwin .htmpintura .col-lg-6 aside.titulo h4 {
+    font-size: 18px;
+  }
+  .sherwin .htmpintura .col-lg-6:nth-child(2) aside.titulo h4,
+  .sherwin .htmpintura .col-lg-6:nth-child(2) aside.titulo span {
+    color: #fff;
+    width: 59%;
+  }
+  .sherwin .htmpintura .col-lg-6:nth-child(3) aside.titulo h4 {
+    width: 54%;
+  }
+  .sherwin .htmpintura .col-lg-6:nth-child(4) aside.titulo h4 {
+    width: 37%;
+  }
+  .sherwin .htmpintura .col-lg-6:nth-child(5) aside.titulo h4 {
+    width: 54%;
+  }
+  .sherwin .categorias .grid-item p {
+    font-size: 13px;
+  }
+  .sherwin .tiendas section span {
+    margin: 1% 0 5% 33%;
+    width: 34%;
+  }
+  .sherwin .portadas .titular h2 {
+    font-size: 33px;
+  }
+  .sherwin .portadas .caruselp .item:nth-child(2) .titular h2 {
+    color: #ffffff;
+  }
+  .sherwin .portadas .caruselp .item:nth-child(2) .titular {
+    margin: 6.7% 0 0 0;
+    width: 14.3%;
+    text-align: center;
+  }
+  .sherwin .portadas .caruselp .item:nth-child(3) .titular {
+    margin: 6.7% 0 0 0%;
+    width: 14.3%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .sherwin .portadas .caruselp .item:nth-child(4) .titular {
+    margin: 6.7% 0 0 0;
+    width: 14.3%;
+    text-align: center;
+  }
+  .sherwin .categorias .grid-item p {
+    font-size: 12px;
+  }
+  .sherwin h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 375px) {
+  .prevencion .pasosprevencion h2 {
+    font-size: 20px;
+  }
+  /*responsivo landing de sherwin*/
+  .sherwin .portadas .caruselp .item:nth-child(2) .titular {
+    margin: 6.4% 0 0 0;
+    width: 14.3%;
+    text-align: center;
+  }
+  
+    .sherwin .portadas .caruselp .item:nth-child(3) .titular {
+      width: 14.3%;
+      display: flex;
+      justify-content: center;
+      margin: 6.4% 0 0 0;
+    }
+
+  .sherwin .portadas .caruselp .item:nth-child(4) .titular {
+      margin: 6.4% 0 0 0;
+      width: 14.3%;
+      text-align: center;
+  }
+}
+@media (max-width: 365px) {
+  .prevencion .textobanner h1 {
+    font-size: 24px;
+  }
+
+  .sostenibilidad .banner .textobanner h1 {
+    font-size: 24px;
+    letter-spacing: -0.6px;
+  }
+
+  .prevencion .textobanner p {
+    font-size: 12px;
+  }
+  
+  .prevencion .banner-autoservicio .btn-default {
+    width: 54%;
+  }
+  
+  
+}
+@media (max-width: 320px) {
+  .prevencion .cuadritos section article h4 {
+    font-size: 17px;
+  }
+  .prevencion .banner-autoservicio aside p {
+    padding: 6% 4% 0;
+    font-size: 14px;
+  }
+  /*responsivo landing de sherwin*/
+  .sherwin .htmpintura .col-lg-6:nth-child(3) aside.titulo h4 {
+    width: 60%;
+  }
+  .sherwin .tiendas section h5 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .sherwin .portadas .caruselp .item:nth-child(2) .titular h2 {
+    font-size: 27px;
+  }
+  .sherwin .portadas .titular h2 {
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .br-no-mobile {
+    display: none;
+  }
+}

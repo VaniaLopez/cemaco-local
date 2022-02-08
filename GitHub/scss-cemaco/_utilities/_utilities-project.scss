@@ -1,0 +1,236 @@
+/*--------------------Site Header - Internal page--------------------*/
+.body--internal-page .site-header{
+    // background-color: $c-secondary;
+}
+
+/*--------------------Page Main to Home page, Internal page--------------------*/
+.page-main--home-page,
+.page-main--internal-page,
+.page-main--product-list{
+    transition: padding-top $animate-time;
+}
+.page-main--internal-page{
+    @media screen and (max-width: $screen-xs-max){
+        .internal-cien{
+            .re-cien.board-wedding,
+            .re-cien.padding-0{
+                padding-left: 0;
+                padding-right: 0;
+                .double-board{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .double-board__item{
+                    // &:last-child{
+                    //     padding-left: 15px;
+                    //     padding-right: 15px;
+                    // }
+                }
+            }
+            .internal-padding{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+/*--------------------Header to Internal page, Product list, Product detail--------------------*/
+.page-header{
+    &--account{
+        @include padding-v();
+    }
+    &--internal{
+        @include padding-v(15);
+        .bread-crumbs{
+            // Here
+        }
+        h1{
+            //
+        }
+    }
+    &--product-list{
+        @include padding-v(0);
+        @media screen and (min-width: $screen-lg-min){
+            @include padding-v(0);
+        }
+        .bread-crumbs{
+            // Here
+        }
+        h1{
+            //
+        }
+    }
+    &--product-detail{
+        @include padding-v(0);
+        @media screen and (min-width: $screen-lg-min){
+            @include padding-v(0);
+        }
+        .bread-crumbs{
+            // Here
+        }
+        h1{
+            //
+        }
+    }
+}
+
+/*--------------------Tag Titles--------------------*/
+.tag-title,
+.tag-title--level-1{
+    @include margin-v(0);
+    @include font-size(1.35);
+    font-weight: $font-bold;
+    text-align: center;
+    @include mediaFrom(xxl){
+        @include margin-v(0,0);
+        @include font-size(2.7);
+    }
+}
+.tag-title--level-2,
+.tag-title--level-3{
+    @include margin-v(0);
+    font-weight: $font-bold;
+    text-align: center;
+    @include mediaFrom(lg){
+        @include margin-v(0);
+    }
+}
+.tag-title--level-2{
+    @include font-size(1.25);
+    @include mediaFrom(xxl){
+        @include font-size(2.2);
+    }
+}
+.tag-title--level-3{
+    @include font-size(1);
+    @include mediaFrom(xxl){
+        @include font-size(1.75);
+    }
+}
+.tag-subtitle{
+    @include font-size(1);
+    @include mediaFrom(xxl){
+        @include font-size(1.5);
+    }
+}
+.tag-legend{
+    display: block;
+    font-family: $font-title;
+    @include font-size(1.75);
+    font-weight: $font-light;
+    line-height: 1.3;
+    @media screen and (min-width: $screen-xxl-min){
+        @include font-size(2.5);
+    }
+}
+.tag-copy{
+    display: block;
+    @include font-size(1);
+    color: $c-secondary;
+    padding-top: 5px;
+    @media screen and (min-width: $screen-md-min){
+        @include font-size(1.5);
+    }
+}
+.tag-other-products{
+    font-size: em(30);
+    @include margin-v(30);
+    font-weight: $font-bold;
+    text-align: center;
+    text-transform: initial;
+    color: $c-dark-gray;
+    @include mediaFrom(lg){
+        @include margin-v(40);
+    }
+    small{
+        display: block;
+        margin-top: 1em;
+        font-family: $font-body;
+        font-weight: $font-bold;
+    }
+}
+.tag-slider-products{
+    font-size: em(20);
+    @include margin-v($top: 25, $bottom: 5);
+    font-weight: $font-bold;
+    text-align: center;
+    text-transform: initial;
+    color: $c-dark-gray;
+    @include mediaFrom(lg){
+        font-size: em(30);
+        @include margin-v(10);
+    }
+    small{
+        display: block;
+        margin-top: 1em;
+        font-family: $font-body;
+        font-weight: $font-bold;
+    }
+}
+.padding-h-30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+body.mdr-message{
+    .site-header + main{
+        padding-top: 10px;
+    }
+}
+#leave-mdr{
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    &:before,
+    &:after{
+        content: '';
+        display: block;
+        width: 26px;
+        height: 1px;
+        background: white;
+        position: absolute;
+        top: 12px;
+        transform: rotate(45deg);
+    }
+    &:after{
+        transform: rotate(-45deg);
+    }
+}
+#mdr-message--wrapper{
+    position: relative;
+    background: $c-boda;
+    width: 100%;
+    // height: 20px;
+    line-height: 20px;
+    left: 0;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    font-size: .85rem;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &:before{
+        content: '';
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        margin: 2px 4px 0 0;
+        background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuNSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9InN2Zy1pY29uLWdpZnQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIKCSB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwLDguMWgtOC40YzIuNy0xLjUsNC4xLTMsNC4xLTQuNGMwLTEuMS0xLTItMi43LTIuNWMtMy41LTEuMS01LjgsMi41LTYuOSw0LjdjLTAuOC0yLjItMi4zLTUuMy00LjUtNS45CgljLTEuMi0wLjMtMi4zLDAuMi0zLjQsMS40QzcsMi44LDYuNiw0LjEsNyw1LjRjMC40LDEuMiwxLjQsMi4xLDIuNSwyLjhIMkMxLDguMSwwLjEsOSwwLjEsMTAuMXY1LjZjMCwxLjEsMC45LDEuOSwxLjksMS45aDEuN3YxMy43CglDMy43LDMxLjcsNCwzMiw0LjUsMzJIMjhjMC40LDAsMC43LTAuMywwLjctMC43VjE3LjZIMzBjMS4xLDAsMS45LTAuOSwxLjktMS45di01LjZDMzEuOSw5LDMxLDguMSwzMCw4LjF6IE0xMi44LDMwLjVINS4yVjE3LjdoNy42CglDMTIuOCwxNy43LDEyLjgsMzAuNSwxMi44LDMwLjV6IE0xMi44LDE2LjFIMmMtMC4yLDAtMC40LTAuMi0wLjQtMC40di01LjZjMC0wLjIsMC4yLTAuNCwwLjQtMC40aDEwLjhWMTYuMXogTTguNCw0LjkKCUM4LjIsNC4yLDguNSwzLjQsOS4zLDIuNWMwLjctMC44LDEuMy0xLjEsMS45LTAuOWMxLjcsMC40LDMuMyw0LjIsNCw2LjZoLTEuOUMxMS45LDcuNyw4LjksNi42LDguNCw0Ljl6IE0xNy4yLDMwLjVoLTIuOFYxNy43aDIuOAoJVjMwLjV6IE0xNy4yLDE2LjFoLTIuOFY5LjZoMi44VjE2LjF6IE0xNi44LDguMWMwLjQtMS4xLDIuNS02LjQsNS43LTUuNWMxLDAuMywxLjYsMC43LDEuNiwxLjFDMjQuMSw0LjMsMjIuOSw2LDE4LDhoLTEuMlY4LjF6CgkgTTI3LjIsMzAuNWgtOC42VjE3LjdoOC42VjMwLjV6IE0zMC40LDE1LjZjMCwwLjItMC4yLDAuNC0wLjQsMC40SDE4LjZWOS42SDMwYzAuMiwwLDAuNCwwLjIsMC40LDAuNFYxNS42eiIvPgo8L3N2Zz4K') center center no-repeat;
+        background-size: 100% 100%;
+    }
+    @include mediaTo(md){
+        .page-scroll-on &{
+        }
+    }
+    @include mediaTo(sm){
+        font-size: .65rem;
+    }
+    @include mediaFrom(md){
+    }
+    @include mediaFrom(lg){
+    }
+}

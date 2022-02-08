@@ -1,0 +1,147 @@
+.orderform-template{
+    display: flex !important;
+    @include mediaTo(lg){
+        flex-wrap: wrap;
+    }
+}
+
+.orderform-template-holder{
+    flex-grow: 1;
+}
+
+#tp__input--wrapper{
+    .error{
+        font-size: .85rem;
+        color: $c-invalid;
+        cursor: pointer;
+    }
+}
+
+.step.step{
+    padding: 15px;
+    border-radius: 0;
+    border: 1px solid $c-checkout-border;
+    border-radius: 8px;
+    input.success{
+        @extend .bg-icon-dove-circle;
+        background-position: 97% 50%;
+        padding-right: 30px!important;
+    }
+    #payment-data &{
+        &.filled{
+            border: 1px solid $c-checkout-border;
+        }
+        &.active{
+            border: 0;
+            padding: 20px 0;
+        }
+    }
+    &.filled{
+        border-color: $c-secondary;
+    }
+    &.shipping-data{
+        body.in-payment.payment &,
+        body.in-shipping &{
+        }
+    }
+    &.client-profile-data,
+    &.shipping-data{
+        @include mediaFrom(lg){
+            min-height: 215px;
+        }
+    }
+    a.link-box-edit{
+        background: none;
+        border: 0;
+        box-shadow: none;
+        &:before{
+            content: 'editar';
+            color: $c-secondary;
+            text-decoration: underline;
+            font-size: .75rem;
+        }
+        i{
+            display: none;
+        }
+    }
+    &.active{
+        border: 1px solid $c-secondary;
+        background-color: white;
+    }
+    body.in-payment:not(.in-profile) &{
+        &.shipping-data{
+            border-color: $c-secondary;
+        }
+    }
+    p.notification{
+        font-size: .75rem;
+    }
+    input[type="text"]:not(.pac-target-input),
+    input[type="email"],
+    input[type="tel"]{
+        height: 34px;
+        padding: 0 10px;
+        border: 1px solid $c-checkout-border;
+        border-radius: 30px;
+        appearance: none;
+        background-color: white;
+    }
+    .text,
+    .select{
+        label{
+            color: $c-dark-gray;
+        }
+    }
+    .accordion-heading{
+    }
+    .accordion-toggle{
+        @include padding-v(0,5);
+        @include padding-h(0);
+        font-family: $font-title;
+        font-size: 1.1rem;
+        font-weight: $font-bold;
+        color: $c-text;
+    }
+    #btn-client-pre-email,
+    #go-to-shipping,
+    #go-to-payment,
+    .btn-go-to-payment{
+        @include button-flat($c-primary);
+        @include padding-h(2,2,1em);
+        border: 0;
+        background-image: none;
+    }
+
+}
+#cart-note{
+    display: none!important;
+}
+#privilegio-card{
+    appearance: none;
+    border-radius: 30px;
+    height: 34px;
+    resize: none;
+    width: 100%;
+    border: 1px solid $c-pastel-gray;
+    padding: 0 10px;
+    line-height: 32px;
+    box-shadow: none!important;
+    margin-top: .5em;
+    &:focus{
+        border-color: $c-secondary;
+    }
+}
+.tp__wrapper{
+    margin: 1em 0;
+}
+
+#shipping-data, #payment-data, #client-profile-data{
+    @include padding-h();
+}
+#shipping-data, #payment-data{
+    @include mediaTo(xl){
+        .body-order-form.in-email &{
+            display: none;
+        }
+    }
+}

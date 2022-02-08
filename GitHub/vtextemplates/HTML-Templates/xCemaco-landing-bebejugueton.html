@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <title>CEMACO - Tienda en Línea</title>
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-styles" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header--landing-bebejugueton" />
+
+    <main role="main" class="page-main--home-page">
+        <!-- Main slider. Begin -->
+        <div id="mainSlider" class="main-slider--control-banner">
+            <vtex:contentPlaceHolder id="MonsterBanner" />
+        </div>
+        <!-- Main slider. End -->
+
+        <div class="re-central">
+            <vtex:contentPlaceHolder id="Content01"/>
+
+            <!-- Productos slider 01. Begin -->
+            <div class="products-slider__wrapper">
+                <div class="products-slider__container has-banner">
+                    <div id="productsSlider01" class="product-list grid-view slider-view is-active" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-01" />
+                    </div>
+                    <vtex:contentPlaceHolder id="banner-slider-01" />
+                </div>
+            </div>
+            <!-- Productos slider 01. End -->
+
+            <vtex:contentPlaceHolder id="Content02"/>
+
+            <!-- Productos slider 04. Begin -->
+            <div class="products-slider__wrapper">
+                <div class="products-slider__container">
+                    <div id="productsSlider02" class="product-list grid-view slider-view is-active" data-height="parent">
+                        <vtex:contentPlaceHolder id="products-slider-02" />
+                    </div>
+                </div>
+            </div>
+            <!-- Productos slider 04. End -->
+
+            <vtex:contentPlaceHolder id="Content03"/>
+        </div>
+    </main>
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-quick-view" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <vtex:template id="xCemaco-scripts" />
+    <!-- <vtex.cmc:xCemacoPopUpHome /> -->
+    <!-- Plugins -->
+    <script src="/arquivos/plugins_slick_slick.min.js"></script>
+    <!-- Scripts Home -->
+    <script src="/arquivos/css-js_landings.js"></script>
+</body>
+</html>

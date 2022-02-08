@@ -1,0 +1,28 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+
+// Settings
+@import "_settings/settings";
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+// Components - Estilos para componentes re-utilizables
+@import "_components/go-to-top";
+@import "_components/maps";
+@import "_components/footer-buttons";
+
+// Modules - Estilos para módulos re-utilizables
+@import "_modules/renovar";
+@import "_modules/newsletter-subscribe";
+@import "_modules/sign-up";
+@import "_modules/cookies-message";
+@import "_modules/product-modal";
+@import "_modules/product-colors";
+
+// Vtex
+@import "_vtex/add-to-cart";
+@import "_vtex/minicart-v2";

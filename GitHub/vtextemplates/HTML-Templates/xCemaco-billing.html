@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+<head>
+    <vtex:contentPlaceHolder id="page-title" />
+    <vtex:metaTags/>
+    <vtex:template id="xCemaco-meta-tags" />
+    <vtex:template id="xCemaco-styles" />
+    <vtex:template id="xCemaco-styles-user" />
+    <vtex:contentPlaceHolder id="page-styles" />
+    <vtex.cmc:xCemacoFallback />
+</head>
+<body>
+    <vtex:template id="xCemaco-header" />
+    <main role="main" class="page-main--internal-page">
+        <div class="page-header--account"></div>
+        <!-- Content. Begin -->
+        <div class="re-central">
+            <div class="row">
+                <div class="col-lg-3">
+                    <vtex:template id="xCemaco-account-nav" />
+                </div>
+                <div class="col-lg-9">
+                    <h1 class="tag-title--account">Facturación</h1>
+
+                    <p class="billing-text">
+                        Toma en cuenta al guardar tu información de facturación demorará hasta un lapso de 15 minutos en poder reflejarse en tu cuenta.
+                    </p>
+
+                    <form action="" class="billing-form">
+                        <div class="control-wrapper">
+                            <input type="text" id="name_factura" name="" placeholder="Nombre en la factura" class="billing-form__input" />
+                        </div>
+                        <div class="control-wrapper">
+                            <input type="text" id="direccion_factura" name="" placeholder="Dirección de factura" class="billing-form__input" />
+                        </div>
+                        <div class="control-wrapper">
+                            <input type="text" id="nit_factura" name="" placeholder="NIT" class="billing-form__input" />
+                            <input type="hidden" value="" class="id_facturacion" id="id_facturacion"/>
+                        </div>
+                        <div class="control-wrapper control-wrapper--send"><input type="submit" value="Guardar" class="button-flat large secondary" /></div>
+                    </form>
+
+                    <div class="billing-info">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content. End -->
+    </main>
+
+    <vtex:template id="xCemaco-footer" />
+    <vtex:template id="xCemaco-scripts" />
+    <vtex:template id="xCemaco-scripts-user" />
+    <vtex:template id="xCemaco-svg-sprite" />
+    <vtex:contentPlaceHolder id="page-scripts" />
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="es-es">
+    <head>
+        <title>CEMACO</title>
+        <vtex:metaTags />
+        <vtex:template id="xCemaco-meta-tags" />
+        <vtex:template id="xCemaco-styles" />
+        <link rel="stylesheet" href="/arquivos/css-js_landing-pages.css" />
+        <link rel="stylesheet" href="/arquivos/css-js_product-list.css" />
+        <vtex:contentPlaceHolder id="page-styles" />
+        <vtex.cmc:xCemacoFallback />
+    </head>
+    <body>
+        <vtex:template id="xCemaco-header" />
+
+        <main role="main" class="page-main--internal-page">
+            <!-- Page Header. Begin -->
+            <div class="re-central page-header--internal">
+                <div class="bread-crumbs">
+                    <div class="bread-crumb">
+                        <vtex:contentPlaceHolder id="BreadCrumbs" />
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header. End -->
+
+            <div class="re-central re-central--product-list">
+                <!-- Navigator. Begin -->
+                <aside class="site-sidebar product-list__aside">
+                    <div id="asideFilters" class="product-list__filters">
+                        <div class="product-list__filters-header">
+                            <h4 class="tag-title--level-3">Filtros</h4>
+                            <button id="filtersApply" class="FiltersTrigger--Apply white">
+                                Aplicar filtros
+                                <svg class="svg-icon">
+                                    <use href="#svg-icon-apply"></use>
+                                </svg>
+                            </button>
+                            <button id="filtersClose" class="FiltersTrigger--Close">
+                                <svg class="svg-icon">
+                                    <use href="#svg-icon-close"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="searchNavigator-wrapper" class="product-list__filters-content">
+                            <div class="search-static-navigator">
+                                <vtex:contentPlaceHolder id="NavPLP" />
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- Navigator. End -->
+
+                <!-- Productos Listado. Begin -->
+                <div class="product-list__wrapper--landing">
+                    <div class="product-list__controls">
+                        <button id="filtersOpen" class="FiltersTrigger--Open">Comprar por categoría</button>
+                    </div>
+
+                    <vtex.cmc:searchTitle />
+
+                    <vtex:contentPlaceHolder id="Content01" />
+                    <vtex:contentPlaceHolder id="Content02" />
+                </div>
+                <!-- Productos Listado. End -->
+            </div>
+        </main>
+
+        <vtex:template id="xCemaco-footer" />
+        <vtex:template id="xCemaco-svg-sprite" />
+        <vtex:template id="xCemaco-scripts" />
+        <!-- Product List -->
+        <script src="/arquivos/css-js_product-list.js"></script>
+        <vtex:contentPlaceHolder id="page-scripts" />
+    </body>
+</html>

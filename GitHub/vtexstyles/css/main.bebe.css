@@ -1,0 +1,12 @@
+.landing--bebe p {
+  font-size: 1.2em;
+}
+.landing--bebe p.clase {
+  font-size: 1em;
+}
+.landing--bebe span {
+  text-decoration: none;
+}
+.landing--bebe span.boton {
+  text-decoration: underline;
+}

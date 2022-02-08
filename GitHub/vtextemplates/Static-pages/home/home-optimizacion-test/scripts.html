@@ -1,0 +1,29 @@
+<!-- Scripts Home -->
+<script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
+<script src="/arquivos/cemaco-swiper-special_test.js?v=20211201-1204"></script>
+<script src="/arquivos/home-optimization.js?v=1655"></script>
+<script src="/arquivos/bootstrap.v5.min.js"></script>
+
+<script>
+    $(".vertodos").on("click", function () {
+        $(this).hide();
+        $(this).nextAll().fadeIn();
+        $(".ofertas1").hide();
+        $(".ofertas2").show();
+    });
+</script>
+<script>
+    var vwImportant = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    if( vwImportant < 768 ){
+        var swiper = new Swiper('.importanteparati', {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    }
+</script>

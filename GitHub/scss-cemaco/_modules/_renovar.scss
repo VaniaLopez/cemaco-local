@@ -1,0 +1,25 @@
+/*--------------------[Re] - New--------------------*/
+.no-boxsizing .re-novar,
+.no-csstransitions .re-novar{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999999999;
+	@include font-size(1.3);
+	text-align: center;
+	color: $c-text;
+	background: $c-light-gray;
+	div{
+		padding: 20% 10% 0 10%;
+	}
+	strong{
+		@include font-size(1.7);
+		color: darken($c-text,10);
+	}
+	a{
+		color: $c-info;
+	}
+}

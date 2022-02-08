@@ -1,0 +1,310 @@
+<div class="re-central">
+  <div class="mainimage">
+    <h1>
+      Aprende a <br class="mobile-bline" />reutilizar <br class="desk-bline" />
+      el <br class="mobile-bline" />empaque de<br class="desk-bline" />
+      <br class="mobile-bline" />cemaco.com
+    </h1>
+    <h3>¡Cuidemos nuestro planeta!</h3>
+  </div>
+  <div class="row icons-recicla">
+    <div class="col-xs-4 col-md-4">
+      <img src="/arquivos/2021_recicla_reduce.png" alt="" />
+      <p>Reduce</p>
+    </div>
+    <div class="col-xs-4 col-md-4">
+      <img src="/arquivos/2021_recicla_reutiliza.png" alt="" />
+      <p>Reutiliza</p>
+    </div>
+    <div class="col-xs-4 col-md-4">
+      <img src="/arquivos/2021_recicla.png" alt="" />
+      <p>Recicla</p>
+    </div>
+  </div>
+  <div class="recicla-content-w-image bolsa">
+    <div class="image">
+      <img
+        src="/arquivos/2021_recicla_bolsa_mobile.jpg"
+        class="mobile"
+        alt=""
+      />
+    </div>
+    <div class="text">
+      <p>
+        Reutiliza tu bolsa de <br class="desk-bline" />cemaco.com como
+        <br class="desk-bline" />envoltorio para
+        <br class="desk-bline" />objetos frágiles
+      </p>
+    </div>
+  </div>
+  <div class="list-numb-recicla">
+    <ol>
+      <li>
+        <p>Corta las bolsas para aprovechar todo el papel</p>
+      </li>
+      <li>
+        <p>Envuelve los productos frágiles con el papel</p>
+      </li>
+      <li>
+        <p>Utiliza cinta adhesiva si es necesario</p>
+      </li>
+      <li>
+        <p>Coloca los productos frágiles dentro de una caja</p>
+      </li>
+      <li>
+        <p>Rellena con papel los huecos que queden en la caja</p>
+      </li>
+      <li>
+        <p>¡Listo! Almacena tu caja en el lugar que desees</p>
+      </li>
+    </ol>
+  </div>
+  <div class="recicla-content-w-image caja">
+    <div class="image">
+      <img src="/arquivos/2021_recicla_caja_mobile.jpg" class="mobile" alt="" />
+    </div>
+    <div class="text">
+      <p>
+        Convierte tu caja de <br class="desk-bline" />cemaco.com en un
+        <br class="desk-bline" />organizador para baño
+      </p>
+    </div>
+  </div>
+  <div class="list-numb-recicla">
+    <ol>
+      <li>
+        <p>Recorta las solapas superiores de tu caja</p>
+      </li>
+      <li>
+        <p>
+          Coloca tela cubriendo la parte interior de la caja y haz un doblez por
+          la parte exterior
+        </p>
+      </li>
+      <li>
+        <p>Sujeta la tela a la orilla y procura que quede bien estirada</p>
+      </li>
+      <li>
+        <p>
+          Pega el lazo desde la parte inferior rodeando la caja hasta cubrir una
+          parte de la tela
+        </p>
+      </li>
+      <li>
+        <p>
+          ¡Listo! Ahora puedes colocar rollos de papel higiénico o los artículos
+          de baño que desees organizar
+        </p>
+      </li>
+    </ol>
+  </div>
+</div>
+<style>
+  .desk-bline {
+    display: none;
+  }
+  .mainimage {
+    background: url(/arquivos/2021_recicla_mainimage_mobile2.png) no-repeat;
+    color: white;
+    background-size: cover;
+    padding: 21% 0 21% 7%;
+  }
+  .mainimage h1 {
+    font-size: 2rem;
+  }
+  .mainimage h3 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .mobile-bline {
+    display: block;
+  }
+  .icons-recicla {
+    margin: 30px 0 20px;
+  }
+  .icons-recicla .col-md-4 {
+    text-align: center;
+  }
+  .icons-recicla p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 8px 0 0;
+  }
+  .icons-recicla img {
+    width: auto;
+    margin: 0 auto;
+  }
+  .list-numb-recicla {
+    counter-reset: item;
+    margin: 15px 0 20px;
+  }
+  .list-numb-recicla li {
+    list-style-type: none;
+    counter-increment: item;
+    display: flex;
+    margin: 0 0 22px;
+  }
+  .list-numb-recicla li::before {
+    display: inline-block;
+    padding-right: 0.5em;
+    font-weight: bold;
+    text-align: right;
+    content: counter(item) ".";
+  }
+  .list-numb-recicla li p {
+    display: inline-block;
+  }
+  .recicla-content-w-image {
+    padding: 0;
+    /*min-height: 300px;*/
+  }
+  .recicla-content-w-image .desktop {
+    display: none;
+  }
+  .recicla-content-w-image .mobile {
+    display: block;
+  }
+  .recicla-content-w-image.caja .text {
+    background: #13513c;
+  }
+  .recicla-content-w-image.bolsa .text {
+    background: #a8c19d;
+  }
+  .recicla-content-w-image .text {
+    color: white;
+    padding: 0 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+  }
+  .recicla-content-w-image .image {
+  }
+
+  @media screen and (min-width: 360px) {
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    .desk-bline {
+      display: block;
+    }
+    .mainimage {
+      background: url(/arquivos/2021_recicla_mainimage.png) no-repeat;
+      background-size: cover;
+    }
+    .mobile-bline {
+      display: none;
+    }
+    .recicla-content-w-image {
+      display: flex;
+    }
+    .recicla-content-w-image .image {
+      background: url(/arquivos/2021_recicla_bolsa.jpg) no-repeat;
+      order: 2;
+      background-size: cover;
+      width: 50%;
+    }
+    .recicla-content-w-image.caja .image {
+      background: url(/arquivos/2021_recicla_caja.jpg) no-repeat;
+      background-size: cover;
+    }
+    .recicla-content-w-image .text {
+      width: 50%;
+      text-align: left;
+      padding: 50px 41px 50px;
+      font-size: 1.3rem;
+      min-height: 210px;
+    }
+    .recicla-content-w-image .desktop {
+      display: block;
+    }
+    .recicla-content-w-image .mobile {
+      display: none;
+    }
+    .list-numb-recicla ol {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .list-numb-recicla ol li {
+      width: 50%;
+    }
+    .list-numb-recicla ol li:nth-child(1) {
+      order: 1;
+    }
+    .list-numb-recicla ol li:nth-child(2) {
+      order: 3;
+    }
+    .list-numb-recicla ol li:nth-child(3) {
+      order: 5;
+    }
+    .list-numb-recicla ol li:nth-child(4) {
+      order: 2;
+    }
+    .list-numb-recicla ol li:nth-child(5) {
+      order: 4;
+    }
+    .list-numb-recicla ol li:nth-child(6) {
+      order: 6;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .mainimage {
+      padding: 11% 0 12% 7%;
+    }
+    .mainimage h1 {
+      font-size: 2.3rem;
+    }
+    .icons-recicla {
+      margin: 30px 0 0;
+    }
+    .icons-recicla p {
+      font-size: 1.7rem;
+    }
+    .recicla-content-w-image {
+      margin: 30px 0 50px;
+    }
+    .recicla-content-w-image .text {
+      min-height: 270px;
+      width: 40%;
+    }
+    .recicla-content-w-image .image {
+      width: 60%;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .mainimage h1 {
+      font-size: 3.4rem;
+    }
+    .mainimage h3 {
+      font-size: 1.5rem;
+    }
+    .recicla-content-w-image .text {
+      font-size: 1.6rem;
+    }
+    .list-numb-recicla li {
+      font-size: 1.3rem;
+    }
+    .list-numb-recicla ol li:nth-child(2) {
+      padding-right: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+
+  @media screen and (min-width: 1920px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+
+  @media screen and (min-width: 1920px) {
+  }
+</style>

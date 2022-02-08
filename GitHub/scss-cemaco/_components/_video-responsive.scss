@@ -1,0 +1,75 @@
+/*--------------------Video - [Re]sponsive--------------------*/
+$video-standar--height: 75%;
+$video-hd--height: 56.25%;
+// Mask
+.video-mask{
+	&-standar,
+	&-hd,
+	&-viewport{
+		width: 100%;
+		display: block;
+		@include absolute-center;
+		overflow: hidden;
+	}
+	&-standar,
+	&-hd{
+		height: 0;
+	}
+	&-standar{
+		padding-bottom: $video-standar--height;
+	}
+	&-hd{
+		padding-bottom: $video-hd--height;
+	}
+	&-viewport{
+		height: 100%;
+	}
+}
+// Link
+.video-link{
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+}
+// Wrapper
+%video-responsive{
+	width: 100%;
+	height: 0;
+	position: relative;
+	iframe,
+	embed,
+	object,
+	video{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.video-responsive{
+	&-standar{
+		@extend %video-responsive;
+		padding-bottom: $video-standar--height;
+	}
+	&-hd{
+		@extend %video-responsive;
+		padding-bottom: $video-hd--height;
+		// 
+		.video-mask-viewport &{
+			width: 100% * 2;
+			top: 50%;
+			left: 50%;
+			padding-bottom: $video-hd--height * 2;
+			transform: translate(-50%,-50%);
+			@media screen and (min-width: $screen-xl-min){
+				width: 100% * 1.25;
+				padding-bottom: $video-hd--height * 1.25;
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+<!-- 49469dff-3204-4fc4-a1c9-85def06045ac -->
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($pName = $product.HtmlEscapedName)
+
+<div class="mdr__shelf-item">
+	<div class="mdr__shelf-item-image">
+		<a href="$uri">$product.GetImageTag(60,60)</a>
+	</div>
+	<div class="mdr__shelf-item-product">
+        <h3 class="mdr__shelf-item-name">$product.SkuName</h3>
+    </div>
+	<div class="mdr__shelf-item-price">
+		#if ($product.IsInStock)
+			<strong>Precio</strong>
+			#if ($product.HasBestPrice)
+				<span class="price-old">$product.ListPrice</span>
+				<span class="price-new promo">$product.BestPrice</span>
+			#else
+				<span class="price-new">$product.BestPrice</span>
+			#end
+		#else
+			<span>Sin stock</span>
+		#end
+    </div>
+    <!-- <div class="mdr__shelf-item-purchased" data-skuid="$idSku"><strong>Cantidad</strong><span>$product.GiftListPurchasedAmount</span></div> -->
+    <div class="mdr__shelf-item-wished" data-skuid="$idSku"><strong>Cantidad:</strong><span>$product.GiftListWishedAmount</span></div>
+    <div class="mdr__shelf-item-action">
+        #if ($product.IsInStock)
+            <a href="$uri" class="mdr__shelf-item-buy" data-id="$id" data-skuid="$idSku"><svg class="svg-icon"><use href="#svg-icon-cart"></use></svg></a>
+        #end
+    </div>
+	<!-- <div class="mdr__shelf-item-wished" data-skuid="$idSku"><strong>Deseados</strong><span>$product.GiftListWishedAmount</span></div>
+	<div class="mdr__shelf-item-needed" data-skuid="$idSku"><strong>Aún se necesitan</strong><span>X</span></div> -->
+	<div style="display: none;" class="mdr__shelf-item-department" id="mdr__shelf-item-department-$idSku" data-skuid="$idSku">$product.DepartmentName</div>
+</div>

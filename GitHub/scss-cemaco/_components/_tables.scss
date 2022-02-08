@@ -1,0 +1,284 @@
+/*--------------------Tables--------------------*/
+// Baseline styles
+table {
+	width: 100%;
+	max-width: 100%;
+	table-layout: auto; // auto | fixed
+	// empty-cells: hide;
+	border-collapse: collapse; //separate | collapse
+	border-spacing: 0; //15px 15px
+	background-color: white;
+	caption {
+		@include padding-v(5);
+		font-family: $font-title;
+		font-size: 1.4em;
+		color: $c-dark;
+		text-align: left;
+	}
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				@include padding-v(5);
+				@include padding-h;
+				// text-align: left;
+			}
+		}
+	}
+	// Bottom align for column headings
+	> thead{
+		> tr{
+			> th{
+				vertical-align: bottom;
+				// font-weight: $font-bold;
+			}
+		}
+    }
+    > tbody{
+        > tr{
+            > th{
+                text-align: left;
+            }
+        }
+    }
+	// Remove top border from thead by default
+	> caption + thead,
+	> colgroup + thead,
+	> thead:first-child {
+		> tr:first-child {
+			> th,
+			> td {
+				// border-top: 0;
+			}
+		}
+	}
+	// Account for multiple tbody instances
+	> tbody + tbody {
+		border-top: 2px solid darken($c-light-gray,10);
+	}
+
+	// Nesting
+	.table {
+		background-color: red;
+	}
+}
+
+// Condensed table w/ half padding
+.table-condensed {
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				padding: $re-gutter*0.5;
+			}
+		}
+	}
+}
+
+// Bordered version
+// Add borders all around the table and between all the columns.
+.table-bordered {
+	border: 1px solid darken($c-light-gray,10);
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				border: 1px solid darken($c-light-gray,10);
+			}
+		}
+	}
+	> thead > tr {
+		> th,
+		> td {
+			border-bottom-width: 2px;
+		}
+	}
+}
+
+// Zebra-striping
+.table-striped {
+	> tbody > tr:nth-of-type(even) {
+		background-color: $c-light-gray;
+	}
+}
+
+// Hover effect
+.table-hover {
+	> tbody > tr:hover {
+		background-color: darken($c-light-gray,5);
+	}
+}
+
+
+// Table cell sizing
+//
+// Reset default table behavior
+table col[class*="col-"] {
+	position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+	float: none;
+	display: table-column;
+}
+table {
+	td,
+	th {
+		&[class*="col-"] {
+			position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+			float: none;
+			display: table-cell;
+		}
+	}
+}
+
+
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+.table-responsive {
+	min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+	overflow-x: auto;
+	// @include border-v(2, dashed, $c-light-gray);
+	@media screen and (max-width: $screen-md-max) {
+		width: 100%;
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		// Tighten up spacing
+		> table {
+			margin-bottom: 0;
+			// Ensure the content doesn't wrap
+			> thead,
+			> tbody,
+			> tfoot {
+				> tr {
+					> th,
+					> td {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+		// Special overrides for the bordered tables
+		> .table-bordered {
+			border: 0;
+
+			// Nuke the appropriate borders so that the parent can handle them
+			> thead,
+			> tbody,
+			> tfoot {
+				> tr {
+					> th:first-child,
+					> td:first-child {
+						border-left: 0;
+					}
+					> th:last-child,
+					> td:last-child {
+						border-right: 0;
+					}
+				}
+			}
+
+			// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+			// chances are there will be only one `tr` in a `thead` and that would
+			// remove the border altogether.
+			> tbody,
+			> tfoot {
+				> tr:last-child {
+					> th,
+					> td {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Tabla Responsive cambiando layout
+.table-with-header,
+.table-without-header{
+	@media screen and (max-width: $screen-sm-max){
+		display: block;
+		tr{
+			display: block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid $c-light-gray;
+			th,
+			td{
+				display: block;
+				line-height: 1;
+				border: none;
+			}
+		}
+	}
+}
+.table-with-header{
+	em{
+		display: none;
+	}
+	@media screen and (max-width: $screen-sm-max){
+		thead,
+		tbody,
+		tfoot{
+			display: block;
+		}
+		thead{
+			@include clearfix;
+			tr{
+				th{
+					@include padding-h(0);
+					@include padding-v(5);
+				}
+			}
+		}
+		tbody{
+			tr{
+				td{
+					@include padding-h(0);
+					@include padding-v(0);
+					margin-bottom: 5px;
+					font-weight: $font-bold;
+					color: lighten($c-text,10);
+					text-align: left !important;
+					&:first-child{
+						font-size: 1.75em;
+						color: $c-dark;
+						@include margin-v(10);
+						em{
+							display: none;
+						}
+					}
+					em{
+						display: inline-block;
+						margin-bottom: 5px;
+						margin-right: 1em;
+						font-weight: $font-bold;
+						color: darken($c-text,10);
+						@media screen and (max-width: $screen-xs-max){
+							// display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.table-without-header{
+	@media screen and (max-width: $screen-xs-max){
+		tr{
+			td{
+				&:first-child{
+					@include font-size(1);
+				}
+			}
+		}
+	}
+}

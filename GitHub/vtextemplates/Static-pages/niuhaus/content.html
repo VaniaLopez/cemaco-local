@@ -1,0 +1,59 @@
+<!-- CEMACO CSS -->
+
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="re-central">
+    
+<!-- Empieza video portada -->  
+    <div class="videoniuhaus">
+            <img src="/arquivos/2021_banner-niuhaus_mob_sep-7.png" class="mobile" alt="Niu Has Banner">
+            <video onloadeddata="this.play();" poster="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/niuhaus/2021_video_niuhaus_desk-sep-7.gif" autoplay playsinline loop muted class="desktop" width="100%"
+                height="auto">
+                <source
+                    src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/niuhaus/2021_video_niuhaus_desk-sep-7.mp4"
+                    type="video/mp4" />
+                <source
+                    src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/niuhaus/2021_video_niuhaus_desk-sep-7.webm"
+                    type="video/webm" />
+                Your browser does not support the video tag or the file format of this video.
+            </video>
+    </div>
+    <!-- Termina video portada -->
+    <div class="bannercat-niuhaus">
+        <img src="/arquivos/2021_bannercat_niuhaus_desk_sep-7.png" class="desktop">
+        <img src="/arquivos/2021_bannercat_niuhaus_mob_sep-7.png" class="mobile">
+    </div>
+</div>
+<script>
+   $(document).ready(function () {
+        function writeTitle(){
+                var title =  document.querySelector(".niuhaus .page-header--product-list .category-name #h1_name");
+                if (title != null) {
+                    title.innerHTML = "Compra lo mejor de <br class='mobile'> Niu Haus";
+                }else {
+                    setTimeout(writeTitle, 2000);   
+                }
+        }
+
+        setTimeout(writeTitle, 2000);   
+    }
+   );
+</script>
+<style>
+    .bannercat-niuhaus{
+        margin: 1.5rem 0;
+    }
+    .niuhaus .bread-crumbs, .niuhaus .product-list__controls{
+        display: none;
+    }
+
+    .niuhaus .re-central--product-list{
+        padding: 10px 20px;
+        background: #F6F6F6;
+    }
+
+</style>

@@ -1,0 +1,246 @@
+<!-- CEMACO CSS -->
+
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30" id="cemacoStylesJ" />
+<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+<style>
+    /* Banner Truper Main */
+    .bannerTruper {
+        background-image: url('/arquivos/2021_cemaco_trupper_Banner_mobile2.png');
+        text-align: center;
+        background-size: cover;
+        padding: 64% 0 0 0;
+    }
+    
+    .bannerTruper__texto-blanco {
+        font-size: 2em;
+        color: #ffffff;
+        padding-bottom: 13%;
+    }
+    
+    /* Banner Medio Truper */
+    .bannerMedioTruper {
+        background-image: url('/arquivos/2021_cemaco_trupper_middleBanner_mobile4.png');
+        background-size: cover;
+        padding: 78% 0 0 0;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    
+    .bannerMedioTruper__texto {
+        font-size: 1.5em;
+        padding-bottom: 15%;
+    }
+
+    
+    /* Categorias Trupper */
+    .truperCategoria__titulo {
+        text-align: center;
+    }
+    
+    .truperCategoria__titulo {
+        padding-bottom: 0;
+    }
+    
+    
+    /* Estilos genericos modificados en landing trupper */
+    .landingtruper .fullcontent-bebe {
+        justify-content: center;
+    }
+
+    .landingtruper .row .fullcontent-bebe {
+        display: block;
+        margin: 0;
+    }
+    
+    .landingtruper .re-central--product-list {
+        background-color: #F6F6F6;
+        padding: 10px;
+    }
+    
+
+
+    @media screen and (min-width: 375px) {
+        .landingtruper .row .fullcontent-bebe {
+            display: flex;
+        }
+
+        .landingtruper .fullcontent-bebe {
+            justify-content: left;
+        }
+    }
+
+
+    @media screen and (min-width: 768px) {
+        .bannerTruper {
+            background-image: url('arquivos/2021_cemaco_trupper_Banner_desk.jpg');
+            background-size: cover;
+            padding: 9em 0 5em 1.5em;
+            text-align: left;
+        }
+
+        .bannerMedioTruper {
+            background-image: url('/arquivos/2021_cemaco_trupper_middleBanner_desk.jpg');
+            background-size: cover;
+            min-height: 205px;
+            padding: 13% 0 7% 4%;
+            text-align: left;
+        }
+
+        .bannerTruper__texto-blanco {
+            font-size: 2.5em;
+            padding-bottom: 0;
+        }
+
+        .bannerMedioTruper__texto {
+            font-size: 1.5em;
+            padding-bottom: 0%
+        }
+
+        .truperCategoria .col-md-2 {
+            width: 20% !important;
+        }
+
+        .truperCategoria__titulo {
+            font-size: 1.813em;
+        }
+
+        .landingtruper .fullcontent-bebe {
+            justify-content: center;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .bannerMedioTruper {
+            padding: 13% 0 7% 5.5%;
+        }
+
+        .bannerMedioTruper__texto {
+            font-size: 1.813em;
+        }
+        
+         .landingtruper .product-list__filters h3 {
+        font-size: 0.7rem;
+    }
+    }
+
+    @media screen and (min-width: 1280px) {
+
+        .bannerTruper {
+            padding: 11em 0 5em 2.5em;
+        }
+
+        .bannerMedioTruper {
+            min-height: 255px;
+            padding: 9.5% 0 0 5%;
+        }
+
+
+    }
+
+    @media screen and (min-width: 1400px) {
+        .bannerTruper {
+            padding: 14em 0 5em 3em;
+        }
+
+        .bannerMedioTruper {
+            min-height: 315px;
+            padding: 10em 0 0 5.5em;
+        }
+
+        .bannerTruper__texto-blanco {
+            font-size: 3.5em;
+        }
+    }
+    
+    /* Se deja este media query para manejar el font size en plp de productos, ya que en electromesticos 
+    la flecha queda sobre el texto, con esto se corrrige*/
+    @media screen and (min-width: 1450px) {
+        .landingtruper .product-list__filters h3 {
+        font-size: 1rem;
+    }
+    }
+</style>
+
+<!-- Banner principal -->
+<div class="row re-central fluid bannerTruper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h1 class="bannerTruper__texto-blanco">Es mucha <br> herramienta</h1>
+    </div>
+</div>
+
+
+
+<!--Div de categoria-->
+<div class=" re-central truperCategoria" style="margin-top: 3%; margin-bottom: 3%;">
+    <h2 class="truperCategoria__titulo">Compra por categoría</h2> <br>
+    <div class="row categories-bebe fullcontent-bebe text-center">
+
+        <div class="col-md-2 text-center col-xs-4">
+            <a href="/1226?map=productClusterIds">
+                <picture>
+                    <img src="/arquivos/2021_cemaco_home_catHerramientas_desk.png" alt="" />
+                </picture>
+                <span>Herramientas</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-4">
+            <a href="/1227?map=productClusterIds">
+                <picture>
+                    <img src="/arquivos/2021_cemaco_home_catPlomeria_desk.png" alt="" />
+                </picture>
+                <span>Plomería</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-4">
+            <a href="/1228?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cemaco_truper_catJardineria.png" media="(max-width: 762px)">
+                    <img src="/arquivos/2021_cemaco_truper_catJardineria.png" alt="" />
+                </picture>
+                <span>Jardinería</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-4">
+            <a href="/1229?map=productClusterIds">
+                <picture>
+                    <source srcset="/arquivos/2021_cemaco_truper_catAutomotriz.png" media="(max-width: 762px)">
+                    <img src="/arquivos/2021_cemaco_truper_catAutomotriz.png" alt="" />
+                </picture>
+                <span>Automotriz</span>
+            </a>
+        </div>
+
+        <div class="col-md-2 text-center col-xs-4">
+            <a href="/1230?map=productClusterIds">
+                <picture>
+                    <img src="/arquivos/2021_cemaco_home_catPinturas_desk2.png" alt="" />
+                </picture>
+                <span>Pinturas</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Termina div de cateogrias -->
+
+
+<!-- Empieza banner intermedio-->
+<div class="row re-central fluid bannerMedioTruper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h1 class="bannerMedioTruper__texto">perfección y calidad</h1>
+    </div>
+</div>
+<!-- Termina banner intermedio-->
+
+<div class="category-name">
+    <h2>Compra lo mejor de Truper</h2>
+</div>
+</div>

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+// Local variables
+$is-resilient: true;
+$is-debugging: false;
+
+// Settings
+@import "_settings/settings";
+
+// Mixins
+@import "_mixins/re-mixins";
+@import "_mixins/mixins-project";
+
+// Modules - Estilos para módulos re-utilizables
+@import "_modules/product-list";
+@import "_modules/product-filters";

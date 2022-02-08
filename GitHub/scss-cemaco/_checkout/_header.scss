@@ -1,0 +1,116 @@
+.checkout-header{
+    &__wrapper{
+        background-color: $c-primary;
+    }
+    &{
+        @include padding-v();
+        @include padding-h();
+        @include flexbox($jc: space-between, $ai: center);
+        color: white;
+    }
+    &__brand{
+        &-svg{
+            width: 10em;
+        }
+    }
+    &__secure{
+        font-weight: $font-bold;
+    }
+    &__steps{
+        display: flex;
+        justify-content: flex-end;
+        @include mediaTo(lg){
+            display: none;
+        }
+    }
+    &__step{
+        display: flex;
+        margin-right: 2rem;
+        padding-right: 2rem;
+        font-size: 1.25rem;
+        font-weight: $font-light;
+        align-items: center;
+        position: relative;
+        &.step4{
+            margin-right: 0;
+            padding-right: 0;
+            &:after{
+                display: none;
+            }
+        }
+        &:after{
+            content: '>';
+            font-weight: $font-light;
+            position: absolute;
+            right: -10px;
+            bottom: -5px;
+            font-size: 2rem;
+            transform: scaleX(.5);
+            color: $c-secondary;
+        }
+        &-num{
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+        &.step1{
+            .checkout-header__step-num{
+                body.in-cart &{
+                    background: $c-secondary;
+                    color: $c-primary;
+                }
+            }
+            .checkout-header__step-txt{
+                body.in-cart &{
+                    font-weight: $font-bold;
+                }
+            }
+        }
+        &.step3{
+            .checkout-header__step-num{
+                body.in-payment:not(.in-profile) &,
+                body.in-shipping &{
+                    background: $c-secondary;
+                    color: $c-primary;
+                }
+            }
+            .checkout-header__step-txt{
+                body.in-payment:not(.in-profile) &,
+                body.in-shipping &{
+                    font-weight: $font-bold;
+                }
+            }
+        }
+        &.step2{
+            .checkout-header__step-num{
+                body.in-profile &,
+                body.in-email &{
+                    background: $c-secondary;
+                    color: $c-primary;
+                }
+            }
+            .checkout-header__step-txt{
+                body.in-profile &,
+                body.in-email &{
+                    font-weight: $font-bold;
+                }
+            }
+        }
+        &.step4{
+            .checkout-header__step-num{
+                body.body-checkout-confirmation &{
+                    background: $c-secondary;
+                    color: $c-primary;
+                }
+            }
+            .checkout-header__step-txt{
+                body.body-checkout-confirmation &{
+                    font-weight: $font-bold;
+                }
+            }
+        }
+    }
+}

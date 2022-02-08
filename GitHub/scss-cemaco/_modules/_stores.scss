@@ -1,0 +1,58 @@
+/*--------------------Stores--------------------*/
+.stores-board{
+	&-wrapper{
+		@include padding-v(75);
+	}
+	&{
+		@media screen and (min-width: $screen-md-min){
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&-title{
+		@include font-size(1.75);
+		color: $c-primary;
+		// margin-bottom: 0;
+	}
+	&-image-wrapper{
+		@media screen and (max-width: $screen-sm-max){
+			display: none;
+		}
+	}
+	&-description-wrapper{
+		flex: 1 auto;
+	}
+	&-description{
+		padding: 30px;
+		border-radius: 15px;
+		text-align: center;
+		color: white;
+		background-color: darken($c-secondary,20);
+	}
+	&-text{
+		margin-bottom: 1em;
+	}
+}
+
+/* sucursales */
+.sucursal-list {
+    height: 245px;
+    margin-top: 20px;
+    overflow: auto;
+    background-color: #fff;
+    border: solid 10px #eeeeee;
+    padding: 15px;
+    margin-bottom: 45px;
+}
+.direccion-sucursal{
+	padding: 15px;
+    margin-bottom: 25px;
+	.sucursal-item-title{
+		font-family: "Open Sans",sans-serif;
+	    font-weight: bold;
+	    color: #000;
+	    font-size: 1.2rem;
+	}
+
+}

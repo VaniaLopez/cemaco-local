@@ -1,0 +1,96 @@
+/*---------------------Sprite Icons Additional--------------------------------*/
+$icons-additional: (
+    playstore:          (width: 40px,   height: 40px,   position-x: 100px,  position-y: 314px),
+    appstore:           (width: 32px,   height: 40px,   position-x: 100px,  position-y: 354px),
+);
+$icons-additional-common: (
+    amex:               (width: 30px,   height: 30px,   position-x: 100px,  position-y: 0px),
+    visa:               (width: 62px,   height: 20px,   position-x: 0px,  position-y: 35px),
+    mastercard:         (width: 39px,   height: 30px,   position-x: 0px,  position-y: 60px),
+    paypal:             (width: 89px,   height: 23px,   position-x: 100px,  position-y: 95px),
+    mercadopago:        (width: 100px,  height: 26px,   position-x: 100px,  position-y: 125px),
+    banamex:            (width: 96px,   height: 21px,   position-x: 100px,  position-y: 155px),
+    bancomer:           (width: 100px,  height: 28px,   position-x: 100px,  position-y: 180px),
+    santander:          (width: 93px,   height: 17px,   position-x: 100px,  position-y: 215px),
+    scotiabank:         (width: 100px,  height: 18px,   position-x: 100px,  position-y: 240px),
+    oxxo:               (width: 50px,   height: 25px,   position-x: 100px,  position-y: 265px),
+    seveneleven:        (width: 29px,   height: 30px,   position-x: 100px,  position-y: 295px),
+    bi:                 (width: 25px,   height: 25px,   position-x: 400px,  position-y: 60px),
+    payment-02:         (width: 26px,   height: 26px,   position-x: 400px,  position-y: 90px),
+    payment-03:         (width: 23px,   height: 23px,   position-x: 400px,  position-y: 120px),
+    payment-04:         (width: 46px,   height: 15px,   position-x: 400px,  position-y: 150px),
+
+    ssl:                (width: 34px,   height: 34px,   position-x: 200px,  position-y: 220px),
+    socioamipci:        (width: 66px,   height: 34px,   position-x: 300px,  position-y: 120px),
+    amvo:               (width: 66px,   height: 20px,   position-x: 300px,  position-y: 160px),
+    firewall:           (width: 66px,   height: 25px,   position-x: 200px,  position-y: 190px),
+    pagoseguro:         (width: 52px,   height: 40px,   position-x: 100px,  position-y: 174),
+    norton:             (width: 76px,   height: 40px,   position-x: 100px,  position-y: 214),
+    amipci:             (width: 60px,   height: 38px,   position-x: 100px,  position-y: 254),
+
+    estafeta:           (width: 100px,  height: 15px,   position-x: 500px,  position-y: 0px),
+    dhl:                (width: 72px,   height: 11px,   position-x: 500px,  position-y: 20px),
+    fedex:              (width: 58px,   height: 16px,   position-x: 500px,  position-y: 37px),
+);
+
+.icons-additional{
+    $sprite-width: 1000px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(#{$image-path}images_icons_icons-additional.png);
+    background-position: center top;
+    background-size: $sprite-width*1 auto;
+    background-repeat: no-repeat;
+    &[class^="icon-"]:hover,
+    &[class*=" icon-"]:hover{
+        transform: scale(1,1);
+    }
+
+    // Additional
+    @each $brand, $value in $icons-additional {
+        @at-root .icon-#{$brand} {
+            width: map-get($value,width)*1;
+            height: map-get($value,height)*1;
+            background-position: (- map-get($value, position-x))*1 (- map-get($value, position-y))*1;
+        }
+    }
+    // Additional [Rësponsive]
+    @at-root %icons-additional-responsive {
+        background-size: $sprite-width*0.6 auto;
+        @media screen and (min-width: $screen-md-min){
+            background-size: $sprite-width*0.7 auto;
+        }
+        @media screen and (min-width: $screen-lg-min){
+            background-size: $sprite-width*0.7 auto;
+        }
+        @media screen and (min-width: $screen-xxl-min){
+            background-size: $sprite-width*0.8 auto;
+        }
+    }
+    // Additional [Payment]
+    @each $brand, $value in $icons-additional-common {
+        @at-root .icon-#{$brand} {
+            @extend %icons-additional-responsive;
+        }
+        @at-root .icon-#{$brand} {
+            width: map-get($value,width)*0.6;
+            height: map-get($value,height)*0.6;
+            background-position: (- map-get($value, position-x))*0.6 (- map-get($value, position-y))*0.6;
+            @media screen and (min-width: $screen-md-min){
+                width: map-get($value,width)*0.7;
+                height: map-get($value,height)*0.7;
+                background-position: (- map-get($value, position-x))*0.7 (- map-get($value, position-y))*0.7;
+            }
+            @media screen and (min-width: $screen-lg-min){
+                width: map-get($value,width)*0.7;
+                height: map-get($value,height)*0.7;
+                background-position: (- map-get($value, position-x))*0.7 (- map-get($value, position-y))*0.7;
+            }
+            @media screen and (min-width: $screen-xxl-min){
+                width: map-get($value,width)*0.8;
+                height: map-get($value,height)*0.8;
+                background-position: (- map-get($value, position-x))*0.8 (- map-get($value, position-y))*0.8;
+            }
+        }
+    }
+}

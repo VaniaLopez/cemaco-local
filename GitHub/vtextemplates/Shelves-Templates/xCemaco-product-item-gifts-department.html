@@ -1,0 +1,7 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($pName = $product.HtmlEscapedName)
+
+<div id="product-department">$product.DepartmentName</div>
+<div id="product-image">$product.GetImageTag(400,400)</div>

@@ -1,0 +1,32 @@
+<div id="celebros-search-box" class="busca">
+    <form id="search_form" action="/buscar">
+        <div class="control searcher__form">
+            <div class="control-wrapper">
+                <input id="search" class="search" name="b" class="fulltext-search-box ui-autocomplete-input input-text" type="text" maxlength="96" placeholder="Buscar" value="" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+            </div>
+            <button id="search_button" type="submit" value="Buscar" class="btn-buscar button searcher__form__submit" type="submit">
+                <svg class="svg-icon nav-ecommerce__icon">
+                    <use href="#svg-icon-search"></use>
+                </svg>
+            </button>
+            <div id="searchSuggestions" class="ng-scope">
+                <div class="ng-scope" ng-view=""></div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="https://celebrosnlp.com/AutoCompleteV6/Clients/CemacoVtex/output/CelScriptsAC.js"></script>
+<script>
+let searchParams = new URLSearchParams(window.location.search);
+if (searchParams.has('b')) {
+	jQuery('#search').val(searchParams.get('b'));
+}
+</script>
+<style>
+form#search_form {
+    overflow: visible;
+}
+#searchSuggestions{
+    display: block !important;
+}
+</style>
