@@ -1,0 +1,1035 @@
+/* Ocultar boton de Yotpo
+*/
+#yotpo_testimonials_btn {
+    display: none;
+  }
+  
+  /*
+  * carrusel.css
+  */
+  .product-list.grid-view .product-item__price {
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 33px;
+  }
+  .product-item__action > .js-buy-plp {
+    bottom: 13px;
+    margin-top: 7px;
+  }
+  
+  /*.product-item__offer {
+    display: none;
+  }
+  
+  .product-item__flags--attributes  {
+    display: none;
+  }*/
+  /*
+  * Ocultar popup de facebook
+  */
+  div.welcome-inner-container,
+  .addthis_bar.addthis_bar_top{
+    display: none!important;
+  }
+  /*
+  * Ocultar recaptcha badge
+  */
+  .grecaptcha-badge {
+    opacity:0;
+  }
+  /*
+  * Ocultar autocomplete de search
+  */
+  #suggestionsContainer{
+    display: none!important;
+  }
+  /*
+  * fix imagen carrusel
+  */
+  .product-list.grid-view .product-item__main-image {
+    /*height: 181px;*/
+    display: flex;
+    align-items: center;
+    background: #fff;
+  }
+  /*
+  * Celebros autocomplete 
+  */
+  #searchSuggestions #topProducts .ac-title {
+    display: none;
+  }
+  body #searchSuggestions #topProducts ul .ac-prod-price {
+    font-family: "HelveticaNeueLTW05", sans-serif;
+    font-size: 0.875em;
+    color: #333333;
+  }
+  /*
+  * Ocultar hotjar
+  */
+  .footer-button.hotjar,
+  .go-to-top {
+    display: none;
+  }
+  /*
+  * Popup bodas 
+  */
+  .submenu__boda-link span {
+    margin: 1%;
+    font-size: 0.7rem;
+  }
+  .submenu__boda-title {
+    margin: 0 0 5% 0;
+  }
+  .submenu__boda-title:nth-child(3) {
+    width: 71%;
+    margin: 9% auto 4%;
+    font-size: 1.3em;
+  }
+  /*
+  * PDP
+  */
+  #tab-characteristics h4.ProductSpecifications-GroupName{
+    font-size: 1em;
+    color: #101e8e;
+  }
+  .produto .product-detail__options-item a:hover,
+  .produto .product-detail__options-item a:hover p,
+  .produto .product-detail__options-item a:focus,
+  .produto .product-detail__options-item a:focus p{
+    text-decoration: none!important;
+  }
+  /*Promesas de valor*/
+  .promesasvalor {
+    margin: 20px 0 0;
+  }
+  .promesasvalor__container {
+    margin: 0 0 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .promesasvalor__text {
+    font-size: 0.75em;
+  }
+  .promesasvalor__icon {
+    margin: 0 15px 0 0;
+  }
+  .promesasvalor__icon svg.svg-icon {
+    width: 35px;
+    height: 35px;
+  }
+  /*
+  * PDP video
+  */
+  body .product-detail__gallery-item.video iframe {
+      pointer-events: auto;
+  }
+  body .product-detail__thumbnail.video360:before{
+    background: rgba(0, 0, 0, 0.4) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30.051' height='30.047' viewBox='0 0 30.051 30.047'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(0 -0.002)'%3E%3Cpath class='a' d='M19.982,14.438,13.742,9.9a.752.752,0,0,0-1.2.607v9.069a.75.75,0,0,0,.411.671.758.758,0,0,0,.342.081.748.748,0,0,0,.442-.146l6.24-4.532a.746.746,0,0,0,0-1.214Z'/%3E%3Cpath class='a' d='M15.026,0A15.023,15.023,0,1,0,30.051,15.028,15.024,15.024,0,0,0,15.026,0Zm0,27.54A12.516,12.516,0,1,1,27.54,15.028,12.514,12.514,0,0,1,15.026,27.542Z'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center;
+    background-size: 50%;
+  }
+  /*
+  * Botones configurables 
+  */
+  .product-detail__sku-selection .topic.Largodemanguera .select.skuList input,
+  .product-detail__sku-selection .topic.Descripciondetalla .select.skuList input,
+  .product-detail__sku-selection .topic.Dimensiones .select.skuList input,
+  .product-detail__sku-selection .topic.Contenido .select.skuList input,
+  .product-detail__sku-selection .topic.Dimensionesdecolchon .select.skuList input,
+  .product-detail__sku-selection .topic.Largo .select.skuList input,
+  .product-detail__sku-selection .topic.Sabor .select.skuList input,
+  .product-detail__sku-selection .topic.Medidadeplumilla .select.skuList input,
+  .product-detail__sku-selection .topic.Descripciondetallapanal .select.skuList input,
+  .product-detail__sku-selection .topic.Tipodeluz .select.skuList input,
+  .product-detail__sku-selection .topic.Ladodeescurridor .select.skuList input,
+  .product-detail__sku-selection .topic.Capacidad .select.skuList input,
+  .product-detail__sku-selection .topic.Corrientenominal .select.skuList input,
+  .product-detail__sku-selection .topic.Diametro .select.skuList input,
+  .product-detail__sku-selection .topic.Capacidaddelvaso .select.skuList input,
+  .product-detail__sku-selection .topic.Descripciondeedad .select.skuList input,
+  .product-detail__sku-selection .topic.Potenciaelectrica .select.skuList input,
+  .product-detail__sku-selection .topic.Cantidad .select.skuList input,
+  .product-detail__sku-selection .topic.Grosor .select.skuList input,
+  .product-detail__sku-selection .topic.Calibre .select.skuList input,
+  .product-detail__sku-selection .topic.Longitud .select.skuList input,
+  .product-detail__sku-selection .topic.Extension .select.skuList input,
+  .product-detail__sku-selection .topic.Tipodeinstalacion .select.skuList input,
+  .product-detail__sku-selection .topic.Medida .select.skuList input,
+  .product-detail__sku-selection .topic.Amperaje .select.skuList input,
+  .product-detail__sku-selection .topic.Dimensionesdecojines-almohadas .select.skuList input,
+  .product-detail__sku-selection .topic.Tamanodelmango .select.skuList input,
+  .product-detail__sku-selection .topic.Peso .select.skuList input,
+  .product-detail__sku-selection .topic.Flujoluminoso .select.skuList input,
+  .product-detail__sku-selection .topic.Colordetinte .select.skuList input{
+      display: none;
+  }
+  .product-detail__sku-selection .topic.Colordetinte .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Colordetinte .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Colordetinte .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Descripciondetalla .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Descripciondetalla .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Descripciondetalla .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Dimensiones .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Dimensiones .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Dimensiones .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Largodemanguera .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Largodemanguera .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Largodemanguera .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Contenido .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Contenido .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Contenido .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Dimensionesdecolchon .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Dimensionesdecolchon .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Dimensionesdecolchon .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Largo .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Largo .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Largo .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Sabor .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Sabor .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Sabor .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Medidadeplumilla .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Medidadeplumilla .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Medidadeplumilla .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Descripciondetallapanal .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Descripciondetallapanal .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Descripciondetallapanal .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Tipodeluz .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Tipodeluz .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Tipodeluz .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Ladodeescurridor .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Ladodeescurridor .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Ladodeescurridor .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Capacidad .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Capacidad .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Capacidad .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Corrientenominal .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Corrientenominal .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Corrientenominal .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Diametro .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Diametro .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Diametro .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Capacidaddelvaso .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Capacidaddelvaso .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Capacidaddelvaso .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Descripciondeedad .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Descripciondeedad .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Descripciondeedad .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Potenciaelectrica .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Potenciaelectrica .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Potenciaelectrica .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Cantidad .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Cantidad .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Cantidad .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Grosor .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Grosor .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Grosor .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Calibre .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Calibre .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Calibre .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Longitud .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Longitud .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Longitud .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Extension .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Extension .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Extension .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Tipodeinstalacion .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Tipodeinstalacion .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Tipodeinstalacion .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Medida .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Medida .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Medida .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Amperaje .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Amperaje .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Amperaje .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Dimensionesdecojines-almohadas .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Dimensionesdecojines-almohadas .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Dimensionesdecojines-almohadas .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Tamanodelmango .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Tamanodelmango .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Tamanodelmango .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Peso .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Peso .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Peso .select.skuList label.item_unavaliable,
+  .product-detail__sku-selection .topic.Flujoluminoso .select.skuList label.disabled, 
+  .product-detail__sku-selection .topic.Flujoluminoso .select.skuList label.item_doesnt_exist, 
+  .product-detail__sku-selection .topic.Flujoluminoso .select.skuList label.item_unavaliable{
+      cursor: default;
+      border-color: #dddddd;
+      background-color: #fefefe;
+      overflow: hidden;
+      position: relative;
+  }
+  
+  .product-detail__sku-selection .topic.Colordetinte .select.skuList label,
+  .product-detail__sku-selection .topic.Descripciondetalla .select.skuList label,
+  .product-detail__sku-selection .topic.Dimensiones .select.skuList label,
+  .product-detail__sku-selection .topic.Largodemanguera .select.skuList label,
+  .product-detail__sku-selection .topic.Contenido .select.skuList label,
+  .product-detail__sku-selection .topic.Dimensionesdecolchon .select.skuList label,
+  .product-detail__sku-selection .topic.Largo .select.skuList label,
+  .product-detail__sku-selection .topic.Sabor .select.skuList label,
+  .product-detail__sku-selection .topic.Medidadeplumilla .select.skuList label,
+  .product-detail__sku-selection .topic.Descripciondetallapanal .select.skuList label,
+  .product-detail__sku-selection .topic.Tipodeluz .select.skuList label,
+  .product-detail__sku-selection .topic.Ladodeescurridor .select.skuList label,
+  .product-detail__sku-selection .topic.Capacidad .select.skuList label,
+  .product-detail__sku-selection .topic.Corrientenominal .select.skuList label,
+  .product-detail__sku-selection .topic.Diametro .select.skuList label,
+  .product-detail__sku-selection .topic.Capacidaddelvaso .select.skuList label,
+  .product-detail__sku-selection .topic.Descripciondeedad .select.skuList label,
+  .product-detail__sku-selection .topic.Potenciaelectrica .select.skuList label,
+  .product-detail__sku-selection .topic.Cantidad .select.skuList label,
+  .product-detail__sku-selection .topic.Grosor .select.skuList label,
+  .product-detail__sku-selection .topic.Calibre .select.skuList label,
+  .product-detail__sku-selection .topic.Longitud .select.skuList label,
+  .product-detail__sku-selection .topic.Extension .select.skuList label,
+  .product-detail__sku-selection .topic.Tipodeinstalacion .select.skuList label,
+  .product-detail__sku-selection .topic.Medida .select.skuList label,
+  .product-detail__sku-selection .topic.Amperaje .select.skuList label,
+  .product-detail__sku-selection .topic.Dimensionesdecojines-almohadas .select.skuList label,
+  .product-detail__sku-selection .topic.Tamanodelmango .select.skuList label,
+  .product-detail__sku-selection .topic.Peso .select.skuList label,
+  .product-detail__sku-selection .topic.Flujoluminoso .select.skuList label{
+      min-width: 2.5em;
+      height: 2.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      border: 1px solid #dddddd;
+      border-radius: 2em;
+      margin-top: 0.5em;
+      margin-right: 5px;
+      font-family: "HelveticaNeueLTW05", sans-serif;
+      font-size: 10.2px;
+      font-size: 0.85rem;
+      line-height: 2.5em;
+      text-align: center;
+      color: black;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+  }
+  
+  .product-detail__sku-selection .topic.Colordetinte .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Colordetinte .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Descripciondetalla .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Descripciondetalla .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Dimensiones .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Dimensiones .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Largodemanguera .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Largodemanguera .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Contenido .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Contenido .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Dimensionesdecolchon .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Dimensionesdecolchon .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Largo .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Largo .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Sabor .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Sabor .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Medidadeplumilla .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Medidadeplumilla .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Descripciondetallapanal .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Descripciondetallapanal .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Tipodeluz .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Tipodeluz .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Ladodeescurridor .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Ladodeescurridor .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Capacidad .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Capacidad .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Corrientenominal .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Corrientenominal .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Diametro .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Diametro .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Capacidaddelvaso .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Capacidaddelvaso .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Descripciondeedad .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Descripciondeedad .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Potenciaelectrica .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Potenciaelectrica .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Cantidad .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Cantidad .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Grosor .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Grosor .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Calibre .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Calibre .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Longitud .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Longitud .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Extension .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Extension .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Tipodeinstalacion .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Tipodeinstalacion .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Medida .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Medida .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Amperaje .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Amperaje .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Dimensionesdecojines-almohadas .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Dimensionesdecojines-almohadas .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Tamanodelmango .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Tamanodelmango .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Peso .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Peso .select.skuList label.checked:not(.item_unavaliable),
+  .product-detail__sku-selection .topic.Flujoluminoso .select.skuList label.active:not(.item_unavaliable), 
+  .product-detail__sku-selection .topic.Flujoluminoso .select.skuList label.checked:not(.item_unavaliable){
+      position: relative;
+      border-color: #101E8E;
+      color: white;
+      background-color: #101E8E;
+  }
+  
+  /*
+  * Texto EN STOCK - Oculto
+  */
+  .skuList .product-detail__last-pieces.is-visible{
+    display: none;
+  }
+  
+  /*
+  * Espaciado para botones configurables
+  */
+  .product-detail__sku-selection .topic li.select.skuList {
+      padding:0 0 15px;
+  }
+  
+  
+  /*
+  * Mostrar todos los botones agregar a la carreta
+  */
+  .page-main--internal-page #celUITDiv .products > li .cuit_item_container .add-to-cart a{
+    opacity: 1;
+  }
+  .product-item__wrapper .product-item__action > .js-buy-plp, .product-item__wrapper .product-item__action > .js-buy-pdp {
+      opacity: 1;
+  }
+  
+  /*
+  * Estilos bÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âºsqueda Celebros
+  */
+  .page-main--internal-page #celUITDiv .products > li .cuit_item_container .add-to-cart .svg-icon {
+      vertical-align: middle;
+  }
+  
+  
+  
+  /*.product-list.grid-view .product-item__main-image {
+    height: 230px !important;
+  }*/
+  
+  #celUITDiv .products > li .cuit_item_container .add-to-cart a {
+    padding: 5px 10px !important;
+  }
+  
+  /* Se oculta la palabra Agregar */
+  .page-main--internal-page #celUITDiv .products > li .cuit_item_container .add-to-cart .button-flat {
+      font-size: 0;
+      border-radius: 20px;
+  }
+  
+  .product-list .vtexsr-emptySearch {
+    margin-left: 5%;
+  }
+  
+  /* Se agrega > */
+  .page-main--internal-page #celUITDiv .products > li .cuit_item_container .add-to-cart .ng-scope::after  {
+    content: " >"
+  }
+  
+  /* Posicionamiento botonen mobile */
+  #celUITDiv .products > li .cuit_item_container .add-to-cart a {
+    float: right;
+  }
+  
+  #celUITDiv .products > li .cuit_item_container .add-to-cart {
+    padding-top: 0px;
+    display: inline
+  }
+  
+  /*EliminaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n de titulos de busquen en las categorias virtuales */
+  
+  .resultado-busca .bread-crumb ul li:nth-child(2){display: none!important;}
+  .resultado-busca h2.titulo-sessao{display: none!important;}
+  
+  /* Mi cuenta, ocultar link factura */
+  .vtex-account .vtex-account__page .vtex-account__order-details .pt1{
+    Display:none;
+  }
+  
+  /*Ocultar parrafo de busqueda de baterias*/
+  #main-content #campaigns span.ng-binding.ng-scope{
+    display: none !important;
+  }
+  
+  ._hj_feedback_container ._hj-1Fv4C__Feedback__container {
+    z-index: 100 !important;
+  }
+  
+  ._hjRemoteVarsFrame ._hj_feedback_container ._hj-1Fv4C__Feedback__container {
+    z-index: 10 !important;
+  }
+  
+  .principal-footer__wrapper .footer-block .footer__logo {
+     margin-left: 0;
+    
+  }
+  /*PosiciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n de flixmedia*/
+  /* Lud: dejÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© a 0 porquÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© estaba afectando mobile, porfavor siempre revisar mobile en todos los desarrollos */
+  .product-detail__image-wrapper{
+    order: 0;
+  }
+  
+  #celUITDiv .products > li .cuit_item_container {
+    padding: 2px !important;
+  }
+  
+  #celUITDiv .products > li .cuit_item_container .product-image {
+    height: 177px !important;
+  }
+  
+  
+  .product-list.grid-view .product-item__name {
+    min-height: 75px !important;
+  }
+  
+  [class*="products-slider__wrapper"] {
+    width: 90%;
+  }
+  
+  .products-slider__wrapper .slick-slide {
+    border: 0;
+  }
+  
+  .tag-slider-products, [class*="products-slider__wrapper"] .prateleira.vitrine > h2 {
+    font-size: 1.55em;
+  }
+  
+  .products-slider__wrapper .slick-dots {
+    display: none !important
+  }
+  
+  .products-slider__wrapper .products-slider__button {
+    display: none !important;
+  }
+  
+  /*.products-slider__wrapper .slick-slide {
+    width: 160px !important
+  }*/
+  
+  .products-slider__banner {
+          display: none !important;
+      }
+      
+      /* .carruselHomeD .product-list.grid-view .product-item__main-image {
+        height: 195px !important
+      }
+      
+     .product-list.grid-view .product-item__main-image {
+        height: 182px !important
+      } */
+  
+  .btn_close_hjar {
+    position: absolute;
+    opacity: 1 !important;
+    top: -5px !important;
+    right: -12px !important;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 21px !important;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #101e8d !important;
+  }
+  
+   .btn_close_hjar_chat {
+    position: absolute;
+    opacity: 1 !important;
+    top: 2px !important;
+    right: 45px !important;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 21px !important;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #101e8d !important;
+  }
+  
+  
+  
+   .product-item__rating {
+    padding-left: 0px;
+    
+  }
+  
+  #accountTriggerWrapper a.nav-ecommerce__link{
+  pointer-events: none;
+  }
+  
+  
+  /*
+  .carruselCiberDiasU .swiper-slide{
+       width:42% !important   
+  }*/
+     
+  .televentas_item:hover {
+    cursor: pointer;
+  }
+  
+  /*
+  * Media queries
+  */
+  @media screen and (min-width: 360px) {
+    /*
+    * Popup bodas 
+    */
+    .submenu__boda-link span {
+      padding: 3% 20%;
+      border: 1px solid #fff;
+      border-radius: 20px;
+      padding: 3% 20%;
+    }
+    .submenu__boda-link--wrapper.newBodas.row .submenu__boda-link span{
+      border: 0;
+      text-decoration: underline;
+      border-radius: 0;
+      padding: 3% 20%;
+      border-bottom: none !important;
+    }
+    .submenu__boda-title:nth-child(3) {
+      width: 100%;
+    }
+    .submenu__boda-admin--wrapper {
+      padding: 5% 5% 1%;
+      width: 100%;
+    }
+    .submenu__boda-search--wrapper {
+      padding: 9% 23px 4%;
+    }
+    ul.re-ul--bodas {
+      width: 88%;
+      left: 6%;
+      padding: 0;
+    }
+    
+    /*.products-slider__wrapper .slick-slide {
+      width: 8.325em !important;
+    }*/
+  }
+  
+  @media screen and (min-width: 480px) {
+     /*.products-slider__wrapper .slick-slide {
+      width: 9.625em !important;
+    }*/
+  }
+  
+  @media screen and (min-width: 768px) {
+    /*.products-slider__wrapper .slick-slide {
+      width: 8.688em !important;
+    }*/
+    
+    .promesasvalor {
+      margin: 50px 0 0;
+    }
+    /*
+    * Popup bodas 
+    */
+    
+    /*.carruselHomeD .product-list.grid-view .product-item__main-image {
+      height: 230px !important;
+    }*/
+    .submenu__boda-search--wrapper {
+      margin: 0 auto;
+    }
+    /*
+    * Quitar hover de los iconos de departamentos, bodas y mas en el header
+    */
+    .nav-item--departamentos a.nav-trigger--open,
+    .nav-item--bodas a.nav-trigger--open,
+    .nav-item--level-0:nth-child(2) a.nav-trigger--open{
+      pointer-events: none;
+    }
+    .nav-item--departamentos,
+    .nav-item--bodas,
+    .nav-item--level-0:nth-child(2),
+    #accountTriggerWrapper{
+      cursor: pointer;
+    }
+    /*
+    * Flechas carrusel
+    */
+    .slick-slider:not(.slick-vertical) .slick-arrow.slick-prev {
+      left: -6%;
+    }
+    .slick-slider:not(.slick-vertical) .slick-arrow.slick-next {
+      right: -6%;
+    }
+    body.landing--jugueton > main[role="main"] {
+      overflow: inherit;
+    }
+    
+   .page-main--internal-page #celUITDiv .products > li .cuit_item_container .add-to-cart .button-flat {
+      padding-left: 17px;
+      font-size: 0.75rem;
+      border-radius: 2em
+  }
+  
+  .page-main--internal-page #celUITDiv .products > li .cuit_item_container .add-to-cart a {
+      padding-left: 17px;
+  }
+  
+  #celUITDiv .products > li .cuit_item_container .product-image {
+    height: 230px !important;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #celUITDiv .to-top{
+    display: none !important;
+  }
+  
+  #celUITDiv .to-top:before {
+    display: none !important;
+  }
+  
+  /* Posicionamiento botonen desk pasa a izquierda */
+  #celUITDiv .products > li .cuit_item_container .add-to-cart a {
+    float: left;
+  }
+  
+  #celUITDiv .products > li .cuit_item_container {
+    padding: 10px !important;
+  }
+  
+  
+  
+  #celUITDiv .products > li .cuit_item_container .product-image {
+    height: 280px !important
+  }
+  
+  .product-list.grid-view .product-item__name {
+    min-height: 54px !important;
+  }
+  
+   /*.product-list.grid-view .product-item__main-image {
+        height: 175px !important
+      } */
+  
+  }
+   .product-item__rating {
+    padding-left: 0px;
+    height: 17px;
+  }
+  
+  .slick-track {
+    /*display: -webkit-inline-box;*/
+  }
+  
+  /*
+  .carruselCiberDiasU .swiper-slide{
+       width:45% !important   
+  }*/
+  
+  @media screen and (min-width: 1024px) {
+      /*PosiciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n de flixmedia*/
+      /* Lud: dejÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© a 0 porquÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© estaba afectando mobile, porfavor siempre revisar mobile en todos los desarrollos */
+    .product-detail__image-wrapper{
+      order: 0;
+    }
+    .product-detail__info--bottom{
+      order: 2;
+    }
+    
+    .product-item__action > .js-buy-plp {
+      margin-top: 10px;
+    }
+    
+     /*.products-slider__wrapper .slick-slide {
+      width: 170px !important;
+    }*/
+    
+    .landing--todoenferreteria .products-slider__wrapper .slick-slide {
+      width: 11em !important;
+    }
+    
+    /*.products-slider__wrapper .slick-slide {
+    width: 203px !important
+  }*/
+    
+    [class*="products-slider__wrapper"] {
+      width: 85%;
+    }
+    
+     /*.carruselHomeD .product-list.grid-view .product-item__price {
+      align-items: center;
+      flex-direction: row;
+      min-height: auto; 
+    } */
+    
+      .product-list.grid-view .product-item__price {
+      flex-direction: row;
+    } 
+    #searchSuggestions #qb-container {
+      display: none;
+    }
+    /*
+    * Popup bodas 
+    */
+    ul.re-ul--bodas {
+      width: 37.5rem;
+      left: unset;
+    }
+    .submenu__boda-admin--wrapper {
+      width: 44%;
+      padding: 3% 5% 1%;
+    }
+    .submenu__boda-link span {
+      /*border: 0;
+      text-decoration: underline;
+      border-radius: 0;
+      padding: 4% 1% 0;*/    
+      border: 1px solid #fff;
+      border-radius: 20px;
+      padding: 3% 20%;
+    }
+    .submenu__boda-link--wrapper.newBodas.row .submenu__boda-link span{
+      border: 0;
+      text-decoration: underline;
+      border-radius: 0;
+      padding: 3% 20%;
+      border-bottom: none !important;
+    }
+  
+    .submenu__boda-title:nth-child(3) {
+      width: 71%;
+      margin: 9% auto 4%;
+      font-size: 1.3em;
+    }
+    /*
+    * Flechas carrusel
+    */
+    .slick-slider:not(.slick-vertical) .slick-arrow.slick-prev {
+      left: -4%;
+    }
+    .slick-slider:not(.slick-vertical) .slick-arrow.slick-next {
+      right: -4%;
+    }
+    /*
+    * Botones configurables
+    */
+    .product-detail__sku-selection .topic.Descripciondetalla .select.skuList label{
+        margin: 10px 10px 0 0;
+    }
+    
+    .flag-list .product-item__wrapper .product-list.grid-view .product-item__wrapper .product-item {
+      padding-top: 25px !important;
+      padding-bottom: 25px !important;
+    }
+    
+    #celUITDiv .col-max-4 > * {
+      width: 276px ;
+    }
+    
+    #celUITDiv #filter-content {
+      min-width: 19.323%;
+    }
+    
+  /* .product-item__main-image img, .product-item__main-image img.img-centrada {
+     height: 250px;
+     
+   } 
+   
+   .product-list.grid-view .product-item__figure {
+     height: 180px !important;
+   }*/
+   
+   .product-list__aside {
+     width: 16.323% !important;
+   }
+   
+    /* .products-slider__wrapper .product-item__main-image img,
+    .product-item__main-image img.img-centrada {
+      height: 120px;
+    } */
+  
+    /* .products-slider__wrapper .product-list.grid-view .product-item__figure {
+      height: auto !important;
+    } */
+  
+    .products-slider__wrapper .product-item__flags--discounts {
+      height: 0 !important;
+    }
+  
+    /* .products-slider__wrapper .product-list.grid-view .product-item__price {
+        padding-top: 25px !important;
+      }
+    
+     /* .carruselHomeJuguetonD .product-list.grid-view .product-item__main-image {
+       height: 190px !important
+     }
+     
+     .carruselHomeJuguetonD .product-list.grid-view .product-item__figure {
+       height: 185px !important
+     }*/
+  
+     .product-list.grid-view .product-item__price {
+         min-height: 13px !important;
+         margin-left: 1%;
+     }
+    
+    /*.product-list.grid-view .product-item__main-image {
+      height: 285px !important;
+    }
+    
+    .product-list.grid-view .product-item__figure {
+      height: 278px !important;
+    } */
+    
+    /*Quitar hover del icono de cuenta*/
+    #accountTriggerWrapper a.nav-ecommerce__link{
+      pointer-events: none;
+    }
+    
+    #celUITDiv .products > li .cuit_item_container .add-to-cart {
+      padding-top: 0px;
+      display: block
+    }
+    
+    /*
+  
+  .carruselCiberDiasU .products-slider__container .swiper {
+    margin-left: 16px;
+  }*/
+  
+  
+  }
+  
+  @media screen and (min-width: 1280px) {
+     .flag-list .product-item__wrapper .product-list.grid-view .product-item {
+      padding-top: 25px !important;
+      padding-bottom: 25px !important;
+    }
+    
+    /*.product-list.grid-view .product-item__figure {
+     height: 225px !important;
+   }*/
+   
+     /*.products-slider__wrapper .slick-slide {
+      width: 217px !important;
+    }*/
+    
+    .landing--todoenferreteria  .products-slider__wrapper .slick-slide {
+      width: 14em !important;
+    }
+    
+  }
+  
+  @media screen and (min-width: 1440px) {
+    [class*="products-slider__wrapper"] {
+      width: 70%;
+    }
+    
+      /*.products-slider__wrapper .product-item__main-image img, 
+    .product-item__main-image img.img-centrada {
+        height: 190px
+    }
+    
+    .products-slider__wrapper 
+    .product-list.grid-view .product-item__figure {
+        height: 200px !important;
+    }*/
+    
+    .products-slider__wrapper 
+      .product-item__flags--discounts {
+          height: 0;
+      }
+  
+      .products-slider__wrapper 
+      .product-list.grid-view .product-item__price {
+          padding-top: 1;
+      }
+      
+    /*.product-list.grid-view .product-item__figure {
+     height: 250px !important;
+     }
+     
+     .carruselCiberDiasU .swiper-slide{
+       width:20% !important   
+     }
+     
+     
+     .carruselHomeJuguetonD .product-list.grid-view .product-item__figure {
+       height: 225px !important;
+     }
+     
+     .product-list.grid-view .product-item__main-image {
+       height: 230px !important;
+     }
+     
+      .carruselHomeJuguetonD .product-list.grid-view .product-item__main-image {
+       height: 230px !important;
+     }*/
+     
+    .landing--todoenferreteria  .products-slider__wrapper .slick-slide {
+      width: 16em !important;
+    }
+     
+     
+   
+  
+      
+  }
+  
+  .product-detail__options-item.active .end .svg-icon {
+    transform: rotate(180deg);
+  }
+  
+  @media screen and (min-width: 1920px) {
+  }
+  
+  @media screen and (min-width: 1440px) {
+  }
+  
+  @media screen and (min-width: 1920px) {
+  }
+  
+  
+  #fc_frame, #fc_frame.fc-widget-small {
+    bottom: 75px;
+    right: 0;
+  }
+  
+  @media(min-width: 768px){
+    #fc_frame, #fc_frame.fc-widget-small {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .nav-item--departamentos a.nav-trigger--open,
+    .nav-item--bodas a.nav-trigger--open,
+    .nav-item--level-0:nth-child(2) a.nav-trigger--open{
+      pointer-events: none;
+    }
+    .nav-item--departamentos,
+    .nav-item--bodas,
+    .nav-item--level-0:nth-child(2),
+    #accountTriggerWrapper{
+      cursor: pointer;
+    }
+  }
+  
+  .select-size .product-detail__sku-selection .topic.Aroma .select.skuList:after, 
+  .select-size .product-detail__sku-selection .topic.Diseno-estilo .select.skuList:after, 
+  .select-size .product-detail__sku-selection .topic.Monto .select.skuList:after, 
+  .select-size .product-detail__sku-selection .topic.Talla .select.skuList:after, 
+  .select-size .product-detail__sku-selection .topic.Tamano .select.skuList:after {
+    content: 'Favor de seleccionar una opciÃ³n';
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+  }

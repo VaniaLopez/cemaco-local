@@ -44,6 +44,10 @@ function load_products_swiper(index){
         freeMode: true,
         loop: false,
         loopFillGroupWithBlank: false,
+        minimumVelocity: 0.02,
+        momentumVelocityRatio: 30,
+        momentumRatio: 1,
+        speed: 3000,
         navigation: {
             nextEl: `#swiper-button-next0${index}`,
             prevEl: `#swiper-button-prev0${index}`,
@@ -77,6 +81,10 @@ function load_products_swiperBrands(index){
         freeMode: true,
         loop: false,
         loopFillGroupWithBlank: false,
+        minimumVelocity: 0.02,
+        momentumVelocityRatio: 30,
+        momentumRatio: 1,
+        speed: 3000,
         navigation: {
             nextEl: `#swiper-brand-button-next0${index}`,
             prevEl: `#swiper-brand-button-prev0${index}`,
@@ -137,6 +145,10 @@ function load_products_swiperLifeStyle(index){
         freeMode: true,
         loop: false,
         loopFillGroupWithBlank: false,
+        minimumVelocity: 0.02,
+        momentumVelocityRatio: 30,
+        momentumRatio: 1,
+        speed: 3000,
         navigation: {
             nextEl: `#swiper-lifeStyle-button-next0${index}`,
             prevEl: `#swiper-lifeStyle-button-prev0${index}`,
@@ -182,7 +194,6 @@ var index_temp = 1;
 $('.products-slider__wrapper').each(function(index, item){
     
     if($(this).find('.prateleira.vitrine ul li').length){
-        console.log(this);
         
         if(!$(this).find('.products-slider__container .product-list  .prateleira.vitrine').hasClass('brandCarrusel')){
             if(!$(this).find('.products-slider__container .product-list').hasClass('lifeStyleCarrusel')){
@@ -212,6 +223,10 @@ $('.products-slider__wrapper').each(function(index, item){
             $(this).find('.products-slider__container .product-list .swiper-button-prev').css('top', '70%');
             $(this).find('.products-slider__container .product-list .swiper-button-next').css('top', '70%');
         }
+        if(typeof $(this).find('.product-item .product-item__flags--discounts')!== 'undefined'){
+            $(this).find('.product-item .product-item__price .price-new').css('padding-bottom', '0');
+        };
+
     }else{
         $(this).remove();
     }
@@ -225,6 +240,9 @@ var banners_swiper_options = {
     freeMode: true,
     loop:false,
     loopFillGroupWithBlank: false,
+    momentumVelocityRatio: 30,
+    momentumRatio: 1,
+    speed: 3000,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

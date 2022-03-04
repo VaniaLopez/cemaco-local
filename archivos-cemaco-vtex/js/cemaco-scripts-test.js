@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    /*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $("#accountTriggerWrapper").on('click', function(){
             if( $("#accountMenu").hasClass("is-active") ){
                 $('#accountMenu').removeClass("is-active");
@@ -10,6 +10,42 @@ $(document).ready(function(){
                 $("#accountMenu").css({"display":"block","opacity":"1"});
             }
         });
+    }*/
+    
+        $(window).scroll(function () {
+        if ($(this).width() < 1024) {
+            initiateCall()
+        }
+    });
+    $(".televentas_item").click(function () {
+        initiateCall()
+
+
+        setTimeout(function () {
+            fcWidget.open()
+        }, 1000);
+    });
+
+    function initFreshChat() {
+        window.fcWidget.init({
+            token: "c726946d-756a-4bab-a909-e686d64770fb",
+            host: "https://wchat.freshchat.com",
+            locale: "es",
+            tags: [
+                "web"
+            ],
+        });
+    }
+
+    function initialize(i, t) {
+        var e;
+        i.getElementById(t) ? initFreshChat() : ((e = i.createElement("script")).id = t, e
+            .async = !0, e.src = "https://wchat.freshchat.com/js/widget.js", e.onload =
+            initFreshChat, i.head.appendChild(e))
+    }
+
+    function initiateCall() {
+        initialize(document, "freshchat-js-sdk")
     }
     
     // Cambio nombre PDP descripci\u00F3n amplia por decripci\u00F3n
@@ -34,19 +70,10 @@ $(document).ready(function(){
         changeTextReview()
         changeHrefBread()
        
-        CheckSession();
+        //console.log("checkSession - before");
+        //CheckSession();
        
     });
-    
-    function changeLabelForm() {
-             if ($('.vtex-address-form__street .vtex-input__label').text() == 'Calle') {
-                    $('.vtex-address-form__street .vtex-input__label').text('Direcci\u00F3n');
-                }else {
-                    clearInterval(setDireccion);
-                }
-    } 
-    
-      
     
     function changeDatePrivi() {
         
@@ -61,10 +88,31 @@ $(document).ready(function(){
         $('.filters-container .selected:eq(1)').text('Im\u00E1genes Y V\u00EDdeos')
         $('.filters-container .filters-dropdown:eq(1) .list-categories .non-selected-item').text('Con Im\u00E1genes Y V\u00EDdeos')
     }
+    /*function centroAyudaCanon()
+    {
+        var canon= document.querySelector("#wrapper-button-canon");
+        var claseCanon= document.querySelector(".brandName");
+        var nombreClase=claseCanon.className;
+        var arregloBrandName=nombreClase.split(' ');
+        arregloBrandName.indexOf('Canon');
+        var busquedaCanon=arregloBrandName.indexOf('Canon');
+        if(busquedaCanon>=1)
+        {
+            var script = document.createElement("script");
+            script.src = "https://atentoapps.atento.com.mx/sites/canon/js/script-canon-chat.js";
+            script.type = "text/javascript";
+            document.getElementsByTagName("head")[0].appendChild(script);
+            canon.hidden = false;
+        }else{
+            canon.hidden = true;
+        }
+    }*/
+    
     
     $(document).ready(function () {
         console.log('Prueba');
-
+      
+        //centroAyudaCanon();
             let estadoX = ''
             let estadoPrevioX = document.cookie;
             console.log(estadoX);
@@ -250,8 +298,8 @@ $(document).ready(function(){
             $('.category-name #h1_name').text('Alcanc\u00EDas');
         }
         if($('.category-name #h1_name').text() == 'Albumes Para Fotos'){
-            document.title = `ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âlbumes Para Fotos | ${slogan}`;
-            $('.category-name #h1_name').text('ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âlbumes Para Fotos');
+            document.title = `\u00C1lbumes Para Fotos | ${slogan}`;
+            $('.category-name #h1_name').text('\u00C1lbumes Para Fotos');
         }
         if($('.category-name #h1_name').text() == 'Quinques'){
             document.title = `Quinqu\u00E9s | ${slogan}`;
@@ -536,7 +584,7 @@ $(document).ready(function(){
             document.title = `Perfiler\u00EDa de Tabicaci\u00F3n | ${slogan}`;
             $('.category-name #h1_name').text('Perfiler\u00EDa de Tabicaci\u00F3n');
         }
-         if($('.category-name #h1_name').text() == 'Accesorios De Tv Y VÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­deo'){
+         if($('.category-name #h1_name').text() == 'Accesorios De Tv Y V\u00EDdeo'){
             document.title = `Accesorios de TV y Video | ${slogan}`;
             $('.category-name #h1_name').text('Accesorios de TV y Video');
         }
@@ -605,8 +653,8 @@ $(document).ready(function(){
             $('.category-name #h1_name').text('Camas El\u00E1sticas Y Trampolines');
         }
         if($('.category-name #h1_name').text() == 'Ninos Bebes Y Vestuario'){
-            document.title = `Ni\u00F1os, BebÃƒÆ’Ã‚Â©s y Vestuario | ${slogan}`;
-            $('.category-name #h1_name').text('Ni\u00F1os, BebÃƒÆ’Ã‚Â©s y Vestuario');
+            document.title = `Ni\u00F1os, Beb\u00E9s y Vestuario | ${slogan}`;
+            $('.category-name #h1_name').text('Ni\u00F1os, Beb\u00E9s y Vestuario');
         }
         if($('.category-name #h1_name').text() == 'Arboles'){
             document.title = `\u00C1rboles | ${slogan}`;
@@ -628,6 +676,10 @@ $(document).ready(function(){
             document.title = `Mu\u00F1ecos Y Figuras De Interior | ${slogan}`;
             $('.category-name #h1_name').text('Mu\u00F1ecos Y Figuras De Interior');
         }
+        if($('.category-name #h1_name').text() == 'Corrales y Moiseses'){
+            document.title = `Corrales y Mois\u00E9s | ${slogan}`;
+            $('.category-name #h1_name').text('Corrales y Mois\u00E9s');
+        }
         if (window.location.href.indexOf("/c-bebes/dormitorio/decoracion-y-accesorios") > -1) {
                 var referencia = $('.titulo-sessao');
                 var elementoRef = referencia[0];
@@ -638,6 +690,22 @@ $(document).ready(function(){
                     span.className = 'h1_name';
                 encabezado.appendChild(span);
                 elementoRef.parentNode.insertBefore(encabezado, elementoRef);
+        }
+        
+        if (true) {
+            console.log('Prueba yott')
+        }
+        
+         if ($('.product-detail__options').length > 0){
+            console.log('Espera set de yotpo')
+            const myTimeout = setTimeout(myGreeting, 1000);
+
+            function myGreeting() {
+                $('.mainyotpo .write-question-review-buttons-container .write-review-button .write-question-review-button-text').text('Escribe una opini\u00F3n')
+                $('.mainyotpo .write-question-review-buttons-container .write-question-button .write-question-review-button-text').text('Haz una pregunta')
+            }
+            }
+
         }
 
             if (window.location.href.indexOf("/test-categorias") > -1) {
@@ -697,7 +765,7 @@ $(document).ready(function(){
               target.parentNode.insertAfter(elemHomeTest, target);
             }
 
-
+            
 
           if($('.category-name #h1_name').text() == 'Canales'){
             document.title = `Canales Y Accesorios | ${slogan}`;
@@ -710,9 +778,24 @@ $(document).ready(function(){
         }
 
 
-         if (window.location.href.indexOf("/_secure/account#") > -1) {
+        if (window.location.href.indexOf("/_secure/account#") > -1) {
             var setDireccion = setInterval(function(){
-            changeLabelForm()
+                if ($('.vtex-address-form__street .vtex-input__label').text() == 'Calle') {
+                    $('.vtex-address-form__street .vtex-input__label').text('Direcci\u00F3n');
+                }else {
+                    clearInterval(setDireccion);
+                }
+            }, 2000);
+        }
+        
+        if(window.location.href.indexOf("/_secure/account#/orders") > -1){
+            console.log('Cambio en mis pedidos')
+            var setTitle = setInterval(function(){
+                if ($('.vtex-account__orders-list .t-heading-3 .c-on-base').text() == '¡Usted todavia no tiene pedidos!') {
+                    $('.vtex-account__orders-list .t-heading-3 .c-on-base').text('¡Bienvenido! Aqu\u00ED podr\u00E1s visualizar y dar seguimiento a todos tus pedidos a partir de ahora.')
+                }else {
+                    clearInterval(setTitle);
+                }
             }, 2000);
         }
 
@@ -1014,6 +1097,10 @@ $(document).ready(function(){
             $('.mdr__search-how-to-buy .secondary').text("Preguntas frecuentes");
         }
         
+       
+        
+
+        
           (async () => {
             while (!window.hasOwnProperty('yotpo')) {
                 await new Promise(resolve => setTimeout(resolve, 4000))
@@ -1058,39 +1145,99 @@ $(document).ready(function(){
             );
             
             })();
+            /*
+            function seekCarruselHomeE(){
+                if($('.home .carruselHomeE .tag-other-products').length){
+                    $('.home .carruselHomeE .tag-other-products').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+ urlTestCarruselE +'"><p class="ms-3 text-decoration-none">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                    $(".home .carruselHomeE .tag-other-products br.mobile").remove()
+                }
+                else {
+                    setTimeout(function(){
+                        seekCarruselHomeE();
+                    },1000);
+                }
+                
+            }
+            
+            */
 
-             /* Cambios en carruseles de HOME */
+            /* Cambios en carruseles de HOME */
+             
             if (window.location.pathname == "/") {
-
-
+            
             /* Cambio en carruseles de prueba Home CEmaco */
             /* Validacion si es layout de prueba o de produccion*/
-            if ( window.location.search == "?lid=2fa95bfd-bf7c-4ea0-826a-d4d345f53b80") {
+            if ( window.location.search == "?lid=88499897-69ec-4470-b266-e9f8f4009d01") {
                  /* Layout de Prueba*/
-                var urlTest1='/superblack';
-                if($('#productsSlider01 .prateleira').length){
-                    $('.home .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal" href="'+urlTest1+'"><p class="ms-3">Ver todo</p></a>');
-                    $('.home .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').after('<a class="text-center d-sm-block d-md-none fw-normal" href="'+urlTest1+'"><p class="mb-2">Ver todo</p></a>');
-                }
+                 var urlTest1='/?lid=7bc011bb-2fe2-4819-b941-ac917ca15005#decoverano';
             
-                //var urlTest2='/superblack';
-                //if($('#productsSlider02 .prateleira').length){
-                    //$('.home .products-slider__wrapper .products-slider__container #productsSlider02 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal" href="'+urlTest2+'"><p class="ms-3">Ver todo</p></a>');
-                    //$('.home .products-slider__wrapper .products-slider__container #productsSlider02 .prateleira > h2').after('<a class="text-center d-sm-block d-md-none fw-normal" href="'+urlTest2+'"><p class="mb-2">Ver todo</p></a>');
-                //}
-                if(typeof load_discount_flags !== 'undefined'){
-                    load_discount_flags();
+                if($('#productsSlider01 .prateleira').length){
+                    
+                    $('.home .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').append('<a class="text-center d-inline-block fw-normal mb-3" href="'+ urlTest1 +'"><p class="ms-3 text-decoration-underline">Ver todo</p></a>');
+                    
                 }
+                
+                var ulrTest3='/propositos';
+                if($('#productsSlider03 .prateleira').length){
+                   $('.home .products-slider__wrapper .products-slider__container #productsSlider03 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+ ulrTest3 +'"><p class="ms-3 text-decoration-none">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                }
+                
+                var urlTestCarruselE='/1465?map=productClusterIds';
+                
+                /*
+                if(!$('.home .carruselHomeE .tag-other-products').length){
+                    seekCarruselHomeE();
+                }else {
+                    $(".home .carruselHomeE .tag-other-products br.mobile").remove()
+                    $('.home .carruselHomeE .tag-other-products').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+ urlTestCarruselE +'"><p class="ms-3 text-decoration-none">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                }
+                
+                */
+
+                 var urlTestSuperCiber1='/magicasofertas';
+                 if($('#productsSpecialSlider01 .prateleira').length){
+                    $('.home .products-slider__wrapper .products-slider__container #productsSpecialSlider01 .prateleira > h2').addClass("d-none d-md-block");
+                     $('.home .products-slider__wrapper .products-slider__container #productsSpecialSlider01 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+urlTestSuperCiber1+'"><p class="ms-3 text-decoration-none text-white">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                     $('.home .products-slider__wrapper .products-slider__container #productsSpecialSlider01 .prateleira > h2').after('<a class="text-center d-flex flex-column justify-content-center d-md-none align-items-center fw-normal" href="'+urlTestSuperCiber1+'"><img class="col-8 mt-2" src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/Magicas%20Ofertas/2021_carrusel_MO-logo_mob.png"><p class="mt-1 mb-3 fw-normal text-decoration-none text-white">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                 }
+             
+                 
+                 if(typeof load_discount_flags !== 'undefined'){
+                     load_discount_flags();
+                 }
             }else {
                   /* Layout de Prod*/
                 // Agregar link de colecciones antes del carrusel en home
                 // Link productsSlider01 Gran Venta
                 // var url1='/seleccion-del-dia?fq=H:1441';
-                var ulrProd1='/superblack';
+                var ulrProd1='/verano#decoverano';
                 if($('#productsSlider01 .prateleira').length){
-                    $('.home .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal" href="'+ulrProd1+'"><p class="ms-3">Ver todo</p></a>');
-                    $('.home .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').after('<a class="text-center d-sm-block d-md-none fw-normal" href="'+ulrProd1+'"><p class="mb-2">Ver todo</p></a>');
+                   $('.home .products-slider__wrapper .products-slider__container #productsSlider01 .prateleira > h2').append('<a class="text-center d-inline-block fw-normal mb-3" href="'+ ulrProd1 +'"><p class="ms-3 text-decoration-underline">Ver todo </p></a>');
                 }
+                
+                var ulrProd3='/propositos';
+                if($('#productsSlider03 .prateleira').length){
+                   $('.home .products-slider__wrapper .products-slider__container #productsSlider03 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+ ulrProd3 +'"><p class="ms-3 text-decoration-none">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                }
+                
+                var urlProdCarruselE='/1465?map=productClusterIds';
+                
+                /*
+                if(!$('.home .carruselHomeE .tag-other-products').length){
+                    seekCarruselHomeE();
+                }else {
+                    $(".home .carruselHomeE .tag-other-products br.mobile").remove()
+                    $('.home .carruselHomeE .tag-other-products').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+ urlProdCarruselE +'"><p class="ms-3 text-decoration-none">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                }
+                
+                */
+
+                var urlTestSuperCiber1='/magicasofertas';
+                if($('#productsSpecialSlider01 .prateleira').length){
+                    $('.home .products-slider__wrapper .products-slider__container #productsSpecialSlider01 .prateleira > h2').addClass("d-none d-md-block");
+                     $('.home .products-slider__wrapper .products-slider__container #productsSpecialSlider01 .prateleira > h2').append('<a class="text-center d-none d-md-inline-block fw-normal mb-3" href="'+urlProdCarruselE+'"><p class="ms-3 text-decoration-none text-white">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                     $('.home .products-slider__wrapper .products-slider__container #productsSpecialSlider01 .prateleira > h2').after('<a class="text-center d-flex flex-column justify-content-center d-md-none align-items-center fw-normal" href="'+urlProdCarruselE+'"><img class="col-8 mt-2" src="https://sfo2.digitaloceanspaces.com/cemacogt/cemaco/2021/Magicas%20Ofertas/2021_carrusel_MO-logo_mob.png"><p class="mt-1 mb-3 fw-normal text-decoration-none text-white">Ver todo <svg class="svg-icon"><use href="#svg-icon-chevron-right"></use></svg></p></a>');
+                 }
             
                 //var ulrProd2='/1563?map=productClusterIds';
                 //if($('#productsSlider02 .prateleira').length){
@@ -1105,7 +1252,7 @@ $(document).ready(function(){
             
         }
 
-            if (window.location.pathname =="/barbie") {
+            if (window.location.pathname =="/m/barbie") {
                 $(".brand .page-main--internal-page").css("background-color", "white");
                 $(".brand .re-central--product-list").css("background-color", "#F6F6F6").css("padding", "12px 20px");
                 $(".brand .pre-footer").css("margin-top", "2rem");
@@ -1122,7 +1269,7 @@ $(document).ready(function(){
                         $(".brand .product-list__controls #filtersOpen").css("margin", "0.4rem 0");
                     }
                     else {
-                        /* Reset for CSS changes ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Still need a better way to do this! */
+                        /* Reset for CSS changes ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬ ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬ ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬ ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ Still need a better way to do this! */
                         $(".brand .product-list__controls #order-by-wrapper").css("display", "none");
                         $(".brand .product-list__controls #filtersOpen").css("display", "none");
                     }
@@ -1136,7 +1283,7 @@ $(document).ready(function(){
             }
 
         if (window.location.href.indexOf("/_secure/account#/orders") > -1) {
-                $('.t-heading-3 .c-on-base').text('Ãƒâ€šÃ‚Â¡Bienvenido! AquÃƒÆ’Ã‚Â­Ãƒâ€šÃ‚Â­ podrÃƒÆ’Ã‚Â¡s visualizar y dar seguimiento a todos tus pedidos a partir de ahora.');
+                $('.t-heading-3 .c-on-base').text('\u00A1Bienvenido! Aqu\u00ED podr\u00E1s visualizar y dar seguimiento a todos tus pedidos a partir de ahora.');
                 $('.br3 .w-50-l').css('width', '80%');
                 $('.t-heading-3').css('font-family', 'HelveticaNeueLTW05');
         }
@@ -1166,8 +1313,6 @@ $(document).ready(function(){
             $('.product-item__price').css('padding-top', '13px')
             console.log('No encontro clase')
         }
-
-    }
 
 
     $('.footer__collapse:first-child').unbind('click').click(function(){
@@ -1213,17 +1358,23 @@ $(document).ready(function(){
     // departamentos
         $('.nav-item--departamentos').off('hover');
         $(".nav-item--departamentos").click(function(){
-        	if( $(".nav-item--departamentos").hasClass("is-active") ){
-        		$('.nav-item--departamentos').removeClass("is-active");
+        	/*if( $(this).hasClass("is-active") ){
+        		$(this).removeClass("is-active");
         	}else{
-        		$(".nav-item--departamentos").addClass("is-active");
-        	}
+        		$(this).addClass("is-active");
+        	}*/ 
+        	
+            //	$( ".nav-item--departamentos" ).toggleClass( ".is-active",   $(".nav-item--departamentos").click() );
+        	
+        	$( this ).toggleClass( ".is-active" )
+        	
+        	
         });
         
         // bodas
         $('.nav-item--bodas').off('hover');
         $(".nav-item--bodas").click(function(){
-        	if( $(".nav-item--bodas").hasClass("is-active") ){
+        	/*if( $(".nav-item--bodas").hasClass("is-active") ){
         	    if ($(".submenu__boda .submenu__boda-search-input").is(":focus")) {
                     $(".nav-item--bodas").addClass('is-active')
                   }
@@ -1234,22 +1385,29 @@ $(document).ready(function(){
         		
         	}else{
         		$(".nav-item--bodas").addClass("is-active");
-        	}
+        	}*/ 
+        	
+        	$( this ).toggleClass( ".is-active" )
+        	
         });
         
         // ver mas
         $('.nav-item--level-0:nth-child(2)').off('hover');
         $(".nav-item--level-0:nth-child(2)").click(function(){
+            
+            /*
         	if( $(".nav-item--level-0:nth-child(2)").hasClass("is-active") ){
         		$('.nav-item--level-0:nth-child(2)').removeClass("is-active");
         	}else{
         		$(".nav-item--level-0:nth-child(2)").addClass("is-active");
-        	}
+        	}*/ 
+        	
+        	$( this ).toggleClass( ".is-active" )
         });
         
         // cuenta
         $('#accountTriggerWrapper').off('hover');
-        $("#accountTriggerWrapper").click(function(){
+        /*$("#accountTriggerWrapper").click(function(){
         	if( $("#accountMenu").hasClass("is-active") ){
         		$('#accountMenu').removeClass("is-active");
         		$("#accountMenu").css({"display":"none","opacity":"0"});
@@ -1257,7 +1415,7 @@ $(document).ready(function(){
         		$("#accountMenu").addClass("is-active");
         		$("#accountMenu").css({"display":"block","opacity":"1"});
         	}
-        });
+        });*/
         
     $(".submenu__boda .submenu__boda-search-input").focus(function(){
          $(".nav-item--bodas").addClass('is-active')
@@ -1278,8 +1436,10 @@ $(document).ready(function(){
     $('#cleanSearch').removeClass('hidden-lg-up');
 
     function CheckSession(){
+        console.log("checkSession - start");
         (async() => {
             while(!window.hasOwnProperty("profile_email")){
+                console.log("checkSession - profile check");
                 await new Promise(resolve => setTimeout(resolve, 1000));
             }
             if(profile_email !== ''){
@@ -1292,5 +1452,58 @@ $(document).ready(function(){
                 $('li.AccountMenu-option__with-log').last().hide();
             }
         })();
+    }
+    
+
+    function CollectionOldPages(){
+        var UrlM = "/m/";
+        var currentUrl = window.location.href;
+        if (currentUrl.indexOf("/truper") > -1 && currentUrl.indexOf(UrlM) <= -1) {
+            $(".row.re-central.fluid.bannerTruper").hide();
+            $('.re-central.truperCategoria').hide();
+            $('.row.re-central.fluid.bannerMedioTruper').hide();
+            $(".category-name").hide();
+        }
+    }
+    CollectionOldPages();
+    var interval = setInterval(ImagenesCarruselesDatatrics, 5000);
+    var contador = 0;
+    ImagenesCarruselesDatatrics();
+    function ImagenesCarruselesDatatrics()
+    {
+        var imgoriginal = document.querySelectorAll(".product-item__figure");
+   
+        if(imgoriginal)
+        {
+        contador ++;
+    
+        imgoriginal.forEach(myimg => {
+            var imgori = myimg.children[0].children[0].src;
+            var array = imgori.split('/');
+                
+            if(array[5] !== undefined){
+                var comprobarMinificada=array[5].split('-');
+                if(comprobarMinificada.length <= 1 ){
+                    var newurl= imgori.replace(array[5], array[5]+ '-255-255');
+                    myimg.children[0].children[0].src = newurl;
+                }
+                if(contador >= 3){
+                    clearInterval(interval);
+                }
+            }
+        
+        });
+        }
+    }
+    
+    if (window.location.href.indexOf("/1299?map=productClusterIds") > -1){
+        window.location = "/ofertasdelasemanajugueton";
+    }
+    
+})
+
+$(document).ready(function(){
+    if(typeof load_discount_flags !== 'undefined'){
+     load_discount_flags();
     }
 })

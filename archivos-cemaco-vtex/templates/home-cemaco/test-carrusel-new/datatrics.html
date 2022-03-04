@@ -21,10 +21,17 @@
                                         </figure>
                                         <div class="product-item__price" data-id="{{parent_id}}">
                                             {{#ifLess price_discount price_original}}
-                                                <span class="price-new price-promo">Q{{#price_format price_discount . ,}}</span>
-                                                <span class="price-old">Q{{#price_format price_original . ,}}</span>
+                                            <div class="price-with-discount">
+                                                <span class="price-newDTS price-promo">Q{{#price_format price_discount . ,}}</span>
+                                                    {{#ifLess price_discount price_original}}
+                                                        <div class="product-item__flag--discount flag-discount checked">
+                                                             ({{#fieldfunction discountPercent discountPrice=price_discount regularPrice=price_original}}%)
+                                                        </div>
+                                                    {{/ifLess}}
+                                            </div>
+                                                <span class="price-oldDTS">Q{{#price_format price_original . ,}}</span>
                                             {{else}}
-                                                <span class="price-new">Q{{#price_format price_discount . ,}}</span>
+                                                <span class="price-newDTS">Q{{#price_format price_discount . ,}}</span>
                                             {{/ifLess}}
                                         </div>
                                         <!--TEASERS-->

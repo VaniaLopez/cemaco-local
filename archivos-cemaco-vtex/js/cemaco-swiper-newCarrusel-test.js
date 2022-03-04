@@ -182,8 +182,6 @@ var index_temp = 1;
 $('.products-slider__wrapper').each(function(index, item){
     
     if($(this).find('.prateleira.vitrine ul li').length){
-        console.log(this);
-        
         if(!$(this).find('.products-slider__container .product-list  .prateleira.vitrine').hasClass('brandCarrusel')){
             if(!$(this).find('.products-slider__container .product-list').hasClass('lifeStyleCarrusel')){
                 
@@ -212,6 +210,11 @@ $('.products-slider__wrapper').each(function(index, item){
             $(this).find('.products-slider__container .product-list .swiper-button-prev').css('top', '70%');
             $(this).find('.products-slider__container .product-list .swiper-button-next').css('top', '70%');
         }
+        $(this).find('.prateleira.vitrine ul li').each(function(){
+            if($(this).find('.product-item .product-item__flags--discounts p').length !== 0){
+                $(this).find('.product-item .product-item__price .price-new').css('padding-bottom', '0');
+            };
+        })
     }else{
         $(this).remove();
     }

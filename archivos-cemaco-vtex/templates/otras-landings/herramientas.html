@@ -1,0 +1,519 @@
+<!--banner herramientas-->
+<!-- CEMACO CSS -->
+<!--<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco.css?2016-12-3:10 13 30" id="cemacoStyles"/>-->
+<!--<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_jeank.css?2016-12-3:10 13 30"
+    id="cemacoStylesJ" />-->
+<!--<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_andre.css" id="cemacoStylesJ" />-->
+<!--<link rel="stylesheet" href="https://vtexstyles.cemaco.com/css/cemaco_kim.css?2016-12-3:10 13 30" id="cemacoStylesK" />-->
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<!--<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />-->
+<!--<link rel="stylesheet" href="https://cemacogt.vteximg.com.br/arquivos/main.min.css?v=20220126-12:07">-->
+
+<!-- Banner head -->
+<div class="re-cien bannerhead" style="padding: 0px;">
+    <picture>
+        <!-- Mobile -->
+        <source srcset="/arquivos/2022_banner_herra_mobile_feb.png" media="(max-width: 762px)" type="image/webp">
+        <!-- wepb -> min.png -->
+        <source srcset="/arquivos/2022_banner_herra_mobile_feb.png" media="(max-width: 762px)" type="image/webp">
+        <!-- Desktop -->
+        <source srcset="/arquivos/2022_banner_herra_desk_feb.png" type="image/webp"> <!-- wepb -> min.png -->
+        <img src="/arquivos/2022_banner_herra_desk_feb.png" alt="herramientas" class="cocina-web">
+    </picture>
+
+    <div class="re-central head-text">
+        <h1>
+            <b class="display-1 font-weight-bold">Herramientas</b></br>
+        </h1>
+        <h2>
+            Aquí encuentras las mejores <br class="mobile">herramientas <br class="desktop"> para que lo <br
+                class="mobile">hagas siempre bien
+        </h2>
+    </div>
+</div>
+<!-- end Banner head  -->
+
+<style>
+    .head-text h2 {
+        font-weight: normal;
+    }
+
+    .carruselDepaHerramientasU{
+        position: relative;
+        margin-left: -50vw;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        padding-top: 0;
+        padding-bottom: 1rem;
+        width: 100vw;
+        left: 50%;
+    }
+
+    @media screen and (min-width: 320px) {
+        .bannerhead h1 {
+            padding-top: 0em;
+            padding-bottom: 0em;
+        }
+        .bannerhead .head-text {
+            color: #ffffff;
+        }
+        .desktop {
+            display: none;
+        }
+
+        .fullcontent-bebe p {
+            font-size: 0.9em;
+        }
+
+        .categories-bebe .col-md-2 {
+            margin: 0 0 5%;
+            padding: 0 2% 1% 2%;
+        }
+
+        .herramientasCategoria .secundario img {
+            width: 100%;
+        }
+
+        img.img-las-mejores-marcas {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .row.fullcontent-bebe {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .head-text {
+            margin-top: -32%;
+            margin-bottom: 58px;
+        }
+
+        .display-1.font-weight-bold {
+            font-size: 0.85em;
+        }
+
+        .bannerhead h2 {
+            font-size: 0.65em;
+        }
+
+        h2.text-center.herramientasCategoria__titulo {
+            padding-bottom: 7%;
+            font-size: 1.3em;
+        }
+
+        .herramientasCategoria img {
+            padding: 0 0 10% 0;
+        }
+
+        .banner-triple.catherramientasnew .content {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 84% 10% 0 0;
+            align-content: center;
+        }
+
+        .spiff-triple h5.banner-item_text {
+            font-size: 1em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 0.75em;
+            line-height: 0;
+            text-decoration: underline;
+        }
+
+        .spiff-triple {
+            margin-top: 10%;
+            margin-bottom: 5%;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .carruseldemarcas .swiper-button-next {
+            display: none;
+        }
+
+        .carruseldemarcas .swiper-button-prev {
+            display: none;
+        }
+
+        .carruseldemarcas {
+            margin-bottom: 10%;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 0.9em;
+        }
+    }
+
+    @media screen and (min-width: 360px) {
+        .display-1.font-weight-bold {
+            font-size: 0.95em;
+        }
+
+        .bannerhead h2 {
+            font-size: 0.7em;
+        }
+
+        h2.text-center.herramientasCategoria__titulo {
+            padding-bottom: 7%;
+            font-size: 1.5em;
+        }
+
+        .banner-triple.catherramientasnew .content {
+            padding: 85% 10% 0 0;
+
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 1.125em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 0.8em;
+        }
+    }
+
+    @media screen and (min-width: 410px) {
+        .head-text {
+            margin-top: -31%;
+
+        }
+
+        .banner-triple.catherramientasnew .content {
+            padding: 86% 8% 0 0;
+        }
+
+        .bannerhead h2 {
+            font-size: 0.8em;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 1.35em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 0.95em;
+        }
+
+        .display-1.font-weight-bold {
+            font-size: 1.1em;
+        }
+    }
+
+
+    @media screen and (min-width: 414px) {
+        h2.text-center.herramientasCategoria__titulo {
+            font-size: 1.7em;
+        }
+    }
+
+    @media screen and (min-width: 480px) {
+        .head-text {
+            margin-top: -30%;
+        }
+
+        .display-1.font-weight-bold {
+            font-size: 1.3em;
+        }
+
+        .bannerhead h2 {
+            font-size: 0.9em;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 1.55em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 1em;
+        }
+    }
+
+
+    @media screen and (min-width: 768px) {
+
+        .categories-bebe img {
+            width: 100%;
+        }
+
+        .fullcontent-bebe p {
+            font-size: 0.6em;
+        }
+
+        .carruseldemarcas .swiper-button-next {
+            right: 0%;
+            left: auto;
+            top: 28%;
+            display: block;
+        }
+
+        .carruseldemarcas .swiper-button-prev {
+            top: 28%;
+            left: 0%;
+            right: auto;
+            display: block;
+        }
+
+        .desktop {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        h2.text-center.herramientasCategoria__titulo {
+            padding-bottom: 3%;
+            font-size: 1.5em;
+        }
+
+        .row.fullcontent-bebe {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 0 30px 0 30px;
+        }
+
+        .bannerhead .head-text {
+            color: #ffffff;
+            margin-top: -21% !important;
+            margin-left: 4% !important;
+            margin-bottom: 4% !important;
+        }
+
+        .bannerhead h1 {
+            font-size: 3.4em;
+            padding-bottom: 0%;
+            padding-top: 0.5em;
+        }
+
+        .bannerhead .display-1.font-weight-bold {
+            font-size: 0.55em;
+        }
+
+        .row.fullcontent-bebe.secundario {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .herramientasCategoria .banner-triple.catherramientasnew {
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .spiff-triple {
+            margin-top: 2%;
+            margin-bottom: 3%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .herramientasCategoria {
+            margin-top: 3%;
+            margin-bottom: 4%;
+        }
+
+        .carruseldemarcas {
+            margin-bottom: 4%;
+        }
+
+        .categories-bebe .col-md-2 {
+            margin: 0 0 2%;
+            padding: 0 1% 1% 1%;
+        }
+
+        .banner-triple.catherramientasnew .content {
+            padding: 81% 13% 0 0;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 0.7em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 0.5em;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .bannerhead .head-text {
+            margin-top: -17% !important;
+            margin-left: 5% !important;
+            margin-bottom: 6% !important;
+        }
+
+        .bannerhead .display-1.font-weight-bold {
+            font-size: 0.75em;
+        }
+
+        .bannerhead h2 {
+            font-size: 1em !important;
+        }
+
+        h2.text-center.herramientasCategoria__titulo {
+            padding-bottom: 3%;
+            font-size: 1.813em;
+        }
+
+        .carruseldemarcas .swiper-button-next {
+            top: 29%;
+            right: 2%;
+        }
+
+        .carruseldemarcas .swiper-button-prev {
+            top: 29%;
+            left: 2%;
+        }
+
+        .fullcontent-bebe p {
+            font-size: 0.65em;
+        }
+
+        .banner-triple.catherramientasnew .content {
+            padding: 84% 10% 0 0;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 1em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 0.6em;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .bannerhead .display-1.font-weight-bold {
+            font-size: 0.92em;
+        }
+
+        .bannerhead h2 {
+            font-size: 1.25em !important;
+        }
+
+        .fullcontent-bebe p {
+            font-size: 0.86em;
+        }
+
+        .carruseldemarcas .swiper-button-next {
+            top: 29%;
+            right: 3%;
+        }
+
+        .carruseldemarcas .swiper-button-prev {
+            top: 29%;
+            left: 3%;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 1.2em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 0.75em;
+        }
+
+        .banner-triple.catherramientasnew .content {
+            padding: 86% 9% 0 0;
+        }
+
+        .bannerhead .head-text {
+            margin-top: -16% !important;
+            margin-bottom: 6% !important;
+        }
+
+        .herramientasCategoria {
+            margin-bottom: 2%;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .bannerhead .head-text {
+            margin-top: -15% !important;
+            margin-bottom: 6% !important;
+        }
+
+        .bannerhead .display-1.font-weight-bold {
+            font-size: 1.06em;
+        }
+
+        .bannerhead h2 {
+            font-size: 1.45em !important;
+        }
+
+        .fullcontent-bebe p {
+            font-size: 0.98em;
+        }
+
+        .banner-triple.catherramientasnew .content {
+            padding: 86% 7% 0 0;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 1.35em;
+        }
+
+        .spiff-triple span.vermas {
+            font-size: 0.9em;
+        }
+    }
+
+    @media screen and (min-width: 1920px) {
+        .head-text {
+            color: #ffffff;
+            margin-top: -15%;
+            margin-left: 5%;
+        }
+
+        .bannerhead h1 {
+            font-size: 3.4em;
+            padding-bottom: 0%;
+        }
+
+        .bannerhead h2 {
+            font-size: 1.95em !important;
+        }
+
+        .bannerhead .display-1.font-weight-bold {
+            font-size: 1.4em;
+        }
+
+        .bannerhead .head-text {
+            margin-top: -15% !important;
+            margin-bottom: 6% !important;
+        }
+
+        h2.text-center.herramientasCategoria__titulo {
+            font-size: 2em;
+        }
+
+        .fullcontent-bebe p {
+            font-size: 1em;
+        }
+
+        .spiff-triple h6.banner-item_text {
+            font-size: 1.55em;
+        }
+
+        .carruseldemarcas .swiper-button-next {
+            top: 32%;
+            right: 10%;
+        }
+
+        .carruseldemarcas .swiper-button-prev {
+            top: 32%;
+            left: 10%;
+        }
+    }
+</style>

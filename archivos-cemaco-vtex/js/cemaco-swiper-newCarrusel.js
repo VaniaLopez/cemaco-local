@@ -4,16 +4,13 @@
 ----------------------------------------------------------------------------------------------------
 */
 
-/*
-$('#productsSlider01 .prateleira > ul').slick('unslick');
-$('#productsSlider02 .prateleira > ul').slick('unslick');
-*/
 
+// Funcion para modificar funciones en Swiper carruseles normales
 function load_products_swiper(index){
     var products_swiper_options = {
         slidesPerView: 2.5,
         slidesPerGroup: 2.5,
-        spaceBetween: 12,
+        spaceBetween: 10,
         freeMode: true,
         loop: false,
         loopFillGroupWithBlank: false,
@@ -25,17 +22,50 @@ function load_products_swiper(index){
             640: {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
-                spaceBetween: 20,
+                spaceBetween: 10,
             },
             768: {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
-                spaceBetween: 20,
+                spaceBetween: 10,
             },
             1024: {
                 freeMode: false,
                 slidesPerView: 5,
                 slidesPerGroup: 5,
+                spaceBetween: 10,
+            },
+        },
+    };
+    products_swiper[index] = new Swiper(`#productsSlider0${index} #swiper-carrusel0${index}`, products_swiper_options);
+}
+function load_products_swiperBrands(index){
+    var products_swiper_options = {
+        slidesPerView: 4.5,
+        slidesPerGroup: 4.5,
+        spaceBetween: 12,
+        freeMode: true,
+        loop: false,
+        loopFillGroupWithBlank: false,
+        navigation: {
+            nextEl: `#swiper-button-next0${index}`,
+            prevEl: `#swiper-button-prev0${index}`,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 4.5,
+                slidesPerGroup: 4.5,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 6.5,
+                slidesPerGroup: 6.5,
+                spaceBetween: 20,
+            },
+            1024: {
+                freeMode: false,
+                slidesPerView: 6.5,
+                slidesPerGroup: 6.5,
                 spaceBetween: 20,
             },
         },
@@ -49,14 +79,20 @@ $('.products-slider__wrapper .prateleira.vitrine > ul').addClass('swiper-wrapper
 $('.products-slider__wrapper .prateleira.vitrine > ul > li').addClass('swiper-slide');
 $('.products-slider__wrapper .prateleira.vitrine').addClass('swiper');
 $('.products-slider__container .product-list').addClass('re-central');
+
 $('.products-slider__wrapper').each(function(index, item){
     var index_temp = index+1;
     if($(this).find('.prateleira.vitrine ul li').length){
         $('.products-slider__wrapper .prateleira.vitrine').attr('id', `swiper-carrusel0${index_temp}`);
-        $(this).find('.products-slider__container .product-list').append(`<div id="swiper-button-prev0${index_temp}" class="swiper-button-prev"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-button-next0${index_temp}" class="swiper-button-next"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);
-        load_products_swiper(index_temp);
-        if(!$(this).find('.price-new.price-promo')){
-            $(this).find('.product-item__caption').css("padding-bottom","1.1em")
+        $(this).find('.products-slider__container .product-list').append(`<div id="swiper-button-prev0${index_temp}" class="swiper-button-prev"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-button-next0${index_temp}" class="swiper-button-next"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);        
+        
+        if(!$(this).find('.products-slider__container .product-list  .prateleira.vitrine').hasClass('brandCarrusel')){
+            load_products_swiper(index_temp);
+        }else{
+            load_products_swiperBrands(index_temp);
+            $(this).find('.products-slider__container').css('background', 'transparent');
+            $(this).find('.products-slider__container .product-list .swiper-button-prev').css('top', '70%');
+            $(this).find('.products-slider__container .product-list .swiper-button-next').css('top', '70%');
         }
     }else{
         $(this).remove();
@@ -135,16 +171,17 @@ $(function(){
 
 
 // Funcion para Cambiar Posicion de Decimales en Precio
-    $(document).ready(function(){
-        const priceOld = document.getElementsByClassName('price-old');
-        const priceNew = document.getElementsByClassName('price-new');
+$(document).ready(function(){
+    const priceOld = document.getElementsByClassName('price-old');
+    const priceNew = document.getElementsByClassName('price-new');
 
-        function chancePrices (prices){
-            for(price of prices)
-                price.innerHTML = `<span class="integer">${price.innerText.split('.')[0]}</span> <span class="decimal">${price.innerText.split('.')[1]}</span>` ;
-        }
+    function chancePrices (prices){
+        for(price of prices)
+            price.innerHTML = `<span class="integer">${price.innerText.split('.')[0]}</span> <span class="decimal">${price.innerText.split('.')[1]}</span>` ;
+    }
 
-        chancePrices(priceOld);
-        chancePrices(priceNew);
+    chancePrices(priceOld);
+    chancePrices(priceNew);
 
-    })
+})
+
