@@ -27,6 +27,7 @@ Github
 usuario: VaniaLopez
 correo: vlopezd@cemaco.com
 contraseña: Burbuja.192vanmar
+token: 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
 
 Bitbucket
 usuario: VaniaLopez

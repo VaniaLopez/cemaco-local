@@ -138,9 +138,6 @@ function nameBranding(item,value,nameClass){
     }else if(item.hasClass('tecnologiaLanding')){
         load_products_swiperBrands(value, nameClass, 4.5, 4.5, 7, 7, 12, 20);
         
-    }else if(item.hasClass('autosLanding')){
-        load_products_swiperBrands(value, nameClass, 3, 3, 6, 6, 12, 20);
-        
     }else{
         load_products_swiperBrands(value, nameClass, 4.5, 4.5, 6.5, 6.5, 12, 20);
     }
@@ -261,14 +258,16 @@ $('.products-slider__wrapper').each(function(index, item){
         }else{
             
             $('.products-slider__wrapper .prateleira.vitrine').attr('id', `swiper-brand-carrusel0${index_temp}`);
-            $(this).find('.products-slider__container .product-list .marcas-container').append(`<div id="swiper-brand-button-prev0${index_temp}" class="swiper-button-prev brand"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-brand-button-next0${index_temp}" class="swiper-button-next brand"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);        
+            $(this).find('.products-slider__container .product-list  .prateleira.vitrine.brandCarrusel').append(`<div id="swiper-brand-button-prev0${index_temp}" class="swiper-button-prev"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-brand-button-next0${index_temp}" class="swiper-button-next"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);        
             
             const classBrand = $('.products-slider__wrapper .prateleira.vitrine');
             nameBranding(classBrand,index_temp,this);
             
             index_temp = index_temp + 1;
             
-            $(this).find('.products-slider__container').css('background', 'transparent');
+            $(this).find('.products-slider__container').css('background', 'transparent');brandCarrusel
+            $(this).find('.products-slider__container .product-list .swiper-button-prev').css('top', '70%');
+            $(this).find('.products-slider__container .product-list .swiper-button-next').css('top', '70%');
         }
         if(typeof $(this).find('.product-item .product-item__flags--discounts')!== 'undefined'){
             $(this).find('.product-item .product-item__price .price-new').css('padding-bottom', '0');
