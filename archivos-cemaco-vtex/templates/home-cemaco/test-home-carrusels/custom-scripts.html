@@ -1,0 +1,106 @@
+<!--empieza  Scripts Home -->
+<script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
+<script src="/arquivos/cemaco-swiper.js?v=20211201-1204"></script>
+<script src="/arquivos/home-optimization.js?v=1655"></script>
+<script src="/arquivos/bootstrap.v5.min.js"></script>
+
+<script>
+    $(".vertodos").on("click", function () {
+        $(this).hide();
+        $(this).nextAll().fadeIn();
+        $(".ofertas1").hide();
+        $(".ofertas2").show();
+    });
+</script>
+<script>
+    var vwImportant = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    if( vwImportant < 767 ){
+        var swiper = new Swiper('.importanteparati', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    }
+</script>
+<!--termina Scripts Home -->
+<script>
+/* Swiper
+**************************************************************/
+var promiseswiper= Swiper;
+var innit = false;
+
+
+
+/* Which media query
+**************************************************************/
+function swiperMode() {
+    let mobile = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
+    let tablet = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
+    let desktop = window.matchMedia('(min-width: 1025px)');
+
+    // Enable (for mobile)
+    if(mobile.matches) {
+        if (!innit) {
+            innit = true;
+            promiseswiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+        	    spaceBetween: 0,
+        	    freeMode: false,
+        	    loop: true,
+        	    pagination: false,
+        	    autoplay: {
+        			delay: 5000,
+        		},
+        		navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+        		breakpoints:{
+        		    320:{
+        		        slidesPerView: 1,
+        		        spaceBetween:0
+        		    },
+        		    480:{
+        		        slidesPerView: 1,
+        		        spaceBetween:0
+        		    },
+        		    640:{
+        		        slidesPerView: 1,
+        		        spaceBetween:0
+        		    },
+        		}
+            });
+        }
+
+    }
+
+    // Disable (for tablet)
+    else if(tablet.matches) {
+        promiseswiper.destroy();
+        innit = false;
+    }
+
+    // Disable (for desktop)
+    else if(desktop.matches) {
+        promiseswiper.destroy();
+        innit = false;
+    }
+}
+
+/* On Load
+**************************************************************/
+window.addEventListener('load', function() {
+    swiperMode();
+});
+
+/* On Resize
+**************************************************************/
+window.addEventListener('resize', function() {
+    swiperMode();
+});
+    
+</script>

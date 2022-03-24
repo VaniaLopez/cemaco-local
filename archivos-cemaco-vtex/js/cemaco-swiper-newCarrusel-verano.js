@@ -4,7 +4,6 @@
 ----------------------------------------------------------------------------------------------------
 */
 
-
  // Initialize Firebase
  (async () => {
     firebase.initializeApp({
@@ -32,11 +31,10 @@ const lifeStyleCollection = db.collection("lifestyle-content");
     return documents;
 }
 var request = await getDocuments(lifeStyleCollection);
-
     
 
-// Funcion para modificar funciones en Swiper carruseles normales
-function load_products_swiper(index){
+// Funcion para modificar funciones en Swiper carruseles normales<--inicio-->
+function load_products_swiper(index, currentElement){
     var products_swiper_options = {
         slidesPerView: 2.5,
         slidesPerGroup: 2.5,
@@ -44,6 +42,10 @@ function load_products_swiper(index){
         freeMode: true,
         loop: false,
         loopFillGroupWithBlank: false,
+        minimumVelocity: 0.02,
+        momentumVelocityRatio: 30,
+        momentumRatio: 1,
+        speed: 3000,
         navigation: {
             nextEl: `#swiper-button-next0${index}`,
             prevEl: `#swiper-button-prev0${index}`,
@@ -67,50 +69,91 @@ function load_products_swiper(index){
             },
         },
     };
-    products_swiper[index] = new Swiper(`#productsSlider0${index} #swiper-carrusel0${index}`, products_swiper_options);
+    products_swiper[index] = new Swiper(`#swiper-carrusel0${index}`, products_swiper_options);
+   
+    // ELiminacion de clase  d-none ya que Swiper se encuentra inicializaco.
+    
+    $(currentElement).removeClass("d-none");
 }
-function load_products_swiperBrands(index){
+// Funcion para modificar funciones en Swiper carruseles normales<--fin-->
+
+
+//Funciones para parámetros de carrusel Marcas <--inicio-->
+function load_products_swiperBrands(
+    index, 
+    currentElement, 
+    viewMobile,
+    groupMobile,
+    viewDesk, 
+    gropuDesk, 
+    spaceMobile, 
+    spaceDesk
+    ){
     var products_swiper_options = {
-        slidesPerView: 4.5,
-        slidesPerGroup: 4.5,
-        spaceBetween: 12,
+        slidesPerView: viewMobile,
+        slidesPerGroup: groupMobile,
+        spaceBetween: spaceMobile,
         freeMode: true,
         loop: false,
         loopFillGroupWithBlank: false,
+        minimumVelocity: 0.02,
+        momentumVelocityRatio: 30,
+        momentumRatio: 1,
+        speed: 1000,
         navigation: {
             nextEl: `#swiper-brand-button-next0${index}`,
             prevEl: `#swiper-brand-button-prev0${index}`,
         },
         breakpoints: {
             640: {
-                slidesPerView: 4.5,
-                slidesPerGroup: 4.5,
-                spaceBetween: 20,
+                slidesPerView: viewMobile,
+                slidesPerGroup: groupMobile,
+                spaceBetween: spaceMobile,
             },
             768: {
-                slidesPerView: 6.5,
-                slidesPerGroup: 6.5,
-                spaceBetween: 20,
+                slidesPerView: viewDesk,
+                slidesPerGroup: gropuDesk,
+                spaceBetween: spaceDesk,
             },
             1024: {
                 freeMode: false,
-                slidesPerView: 6.5,
-                slidesPerGroup: 6.5,
-                spaceBetween: 20,
+                slidesPerView: viewDesk,
+                slidesPerGroup: gropuDesk,
+                spaceBetween: spaceDesk,
             },
         },
     };
     products_swiper[index] = new Swiper(`#productsSlider0${index} #swiper-brand-carrusel0${index}`, products_swiper_options);
+    
+    // ELiminacion de clase  d-none ya que Swiper se encuentra inicializaco.
+    
+    $(currentElement).removeClass("d-none");
 }
 
-// Funcion para modificar funciones en Swiper carruseles normales para LifeStyle
-function load_products_swiperLifeStyle(index){
-    var contentElement = `
+    /*funcion para asignación de propiedades en carruseles swiper para diferenes landings*/
+function nameBranding(item,value,nameClass){
+    if(item.hasClass('pinturasLanding')){
+        load_products_swiperBrands(value, nameClass, 5.5, 5, 9, 9, 0, 0);
+        
+    }else if(item.hasClass('tecnologiaLanding')){
+        load_products_swiperBrands(value, nameClass, 4.5, 4.5, 7, 7, 12, 20);
+        
+    }else{
+        load_products_swiperBrands(value, nameClass, 4.5, 4.5, 6.5, 6.5, 12, 20);
+    }
+}
+//Funciones para parámetros de carrusel Marcas <--fin-->
+
+
+
+// Funcion para modificar funciones en Swiper carruseles normales para LifeStyle<--inicio-->
+function load_products_swiperLifeStyle(index, currentElement){
+   var contentElement = `
     <li class="swiper-slide lifestyle-item">
         <div class="product-item__wrapper" data-height="siblings">
             <div class="product-item justify-content-start align-items-start" style="background-color: ${request[index-1].background}">
                 <figure class="product-item__figure">
-                    <a href="/" class="product-item__main-image contenedor-img dl-product-link" data-id="$id" data-skuid="$idSku">
+                    <a href="${request[index-1].ctaUrl}" class="product-item__main-image contenedor-img " >
                         <img src="${request[index-1].imgUrl}" width="250" height="250" style="visibility: visible; opacity: 1;" alt="${request[index-1].altImg}">
                     </a>
                 </figure>
@@ -122,7 +165,7 @@ function load_products_swiperLifeStyle(index){
         
                 <div class="product-item__caption px-2 text-start">
                     <h2 class="product-item__name fw-normal">
-                        <a href="/">${request[index-1].description}</a>
+                        <a href="${request[index-1].ctaUrl}" style="pointer-events:none;">${request[index-1].description}</a>
                         <p class="cta-lifestyle text-start"><a href="${request[index-1].ctaUrl}">Ver más</a></span>
                     </h2>
                 </div>
@@ -167,7 +210,17 @@ function load_products_swiperLifeStyle(index){
     
     //Inicializacion de Swiper
     products_swiper[index] = new Swiper(`#productsLifeStyleSlider0${index} #swiper-lifeStyle-carrusel0${index}`, products_swiper_options);
+    
+    
+    
+    // ELiminacion de clase  d-none ya que Swiper se encuentra inicializaco.
+    
+    $(currentElement).removeClass("d-none");
+    
 }
+// Funcion para modificar funciones en Swiper carruseles normales para LifeStyle<--fin-->
+
+
 
 var products_swiper = [];
 $('.helperComplement').remove();
@@ -179,51 +232,53 @@ $('.products-slider__container .product-list').addClass('re-central');
 var index_temp_lifestyle = 1;
 var index_temp = 1;
 
+
+
 $('.products-slider__wrapper').each(function(index, item){
     
     if($(this).find('.prateleira.vitrine ul li').length){
+        
         if(!$(this).find('.products-slider__container .product-list  .prateleira.vitrine').hasClass('brandCarrusel')){
             if(!$(this).find('.products-slider__container .product-list').hasClass('lifeStyleCarrusel')){
                 
-                $('.products-slider__wrapper .prateleira.vitrine').attr('id', `swiper-carrusel0${index_temp}`);
+                $('.products-slider__wrapper .products-slider__container .product-list .prateleira.vitrine').attr('id', `swiper-carrusel0${index_temp}`);
                 $(this).find('.products-slider__container .product-list').append(`<div id="swiper-button-prev0${index_temp}" class="swiper-button-prev"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-button-next0${index_temp}" class="swiper-button-next"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);        
                 
-                load_products_swiper(index_temp);
+                load_products_swiper(index_temp, this);
                 index_temp = index_temp+1;
+                
             }else{
                 
                 $('.products-slider__wrapper .prateleira.vitrine').attr('id', `swiper-lifeStyle-carrusel0${index_temp_lifestyle}`);
                 $(this).find('.products-slider__container .product-list').append(`<div id="swiper-lifeStyle-button-prev0${index_temp_lifestyle}" class="swiper-button-prev"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-lifeStyle-button-next0${index_temp_lifestyle}" class="swiper-button-next"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);        
                 
-                load_products_swiperLifeStyle(index_temp_lifestyle);
+                load_products_swiperLifeStyle(index_temp_lifestyle, this);
                 index_temp_lifestyle = index_temp_lifestyle+1;
             }
         }else{
             
             $('.products-slider__wrapper .prateleira.vitrine').attr('id', `swiper-brand-carrusel0${index_temp}`);
-            $(this).find('.products-slider__container .product-list').append(`<div id="swiper-brand-button-prev0${index_temp}" class="swiper-button-prev"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-brand-button-next0${index_temp}" class="swiper-button-next"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);        
+            $(this).find('.products-slider__container .product-list  .prateleira.vitrine.brandCarrusel').append(`<div id="swiper-brand-button-prev0${index_temp}" class="swiper-button-prev"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div><div id="swiper-brand-button-next0${index_temp}" class="swiper-button-next"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>`);        
             
-            load_products_swiperBrands(index_temp);
+            const classBrand = $('.products-slider__wrapper .prateleira.vitrine');
+            nameBranding(classBrand,index_temp,this);
+            
             index_temp = index_temp + 1;
             
-            $(this).find('.products-slider__container').css('background', 'transparent');
+            $(this).find('.products-slider__container').css('background', 'transparent');brandCarrusel
             $(this).find('.products-slider__container .product-list .swiper-button-prev').css('top', '70%');
             $(this).find('.products-slider__container .product-list .swiper-button-next').css('top', '70%');
         }
-        
-        
-        $(this).find('.prateleira.vitrine ul li').each(function(){
-            if($(this).find('.product-item .product-item__flags--discounts p').length !== 0){
-                $(this).find('.product-item .product-item__price .price-new').css('padding-bottom', '0');
-            };
-        })
-        
+        if(typeof $(this).find('.product-item .product-item__flags--discounts')!== 'undefined'){
+            $(this).find('.product-item .product-item__price .price-new').css('padding-bottom', '0');
+        };
+
     }else{
         $(this).remove();
     }
 });
 
-
+//banner <--inicio-->
 var banners_swiper_options = {
     slidesPerView: 2,
     slidesPerGroup: 2,
@@ -231,6 +286,9 @@ var banners_swiper_options = {
     freeMode: true,
     loop:false,
     loopFillGroupWithBlank: false,
+    momentumVelocityRatio: 30,
+    momentumRatio: 1,
+    speed: 3000,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -292,9 +350,9 @@ $(function(){
         enable_disable_swiper();
     }
 });
+//banner <--fin-->
 
-
-// Funcion para Cambiar Posicion de Decimales en Precio
+// Funcion para Cambiar Posicion de Decimales en Precio <--inicio-->
 $(document).ready(function(){
     const priceOld = document.getElementsByClassName('price-old');
     const priceNew = document.getElementsByClassName('price-new');
@@ -308,11 +366,12 @@ $(document).ready(function(){
     chancePrices(priceNew);
 
 })
-
+    
 })();
+// Funcion para Cambiar Posicion de Decimales en Precio <--fin-->
 
 
-// Carrusel Tu Felicidad Garantizada
+// Carrusel Tu Felicidad Garantizada<--inicio-->
  $(document).ready(function(){
         const swiperTeOfrecemos = new Swiper('#teofrecemos', {
             slidesPerView: 1,
@@ -328,3 +387,23 @@ $(document).ready(function(){
             },
         });
     })
+// Carrusel Tu Felicidad Garantizada<--fin-->
+
+
+// Carrusel Importante Para Ti <--inicio-->
+var vwImportant = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+if( vwImportant < 768 ){
+    var swiper = new Swiper('#importanteparati', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        freeMode: false,
+        loop:false,
+        loopFillGroupWithBlank: false,
+        setWrapperSize: true,
+        navigation: {
+            nextEl: ".swiper-button-next.importante",
+            prevEl: ".swiper-button-prev.importante",
+        }
+    });
+}
+// Carrusel Importante Para Ti <--fin-->
