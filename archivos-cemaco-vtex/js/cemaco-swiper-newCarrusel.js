@@ -147,6 +147,9 @@ function nameBranding(item,value,nameClass){
     }else if(item.hasClass('dormitorioLanding')){
         load_products_swiperBrands(value, nameClass, 3.5, 3.5, 7, 7, 12, 20);
         
+    }else if(item.hasClass('iluminacionLanding')){
+        load_products_swiperBrands(value, nameClass, 3.5, 3.5, 6, 6, 12, 20);
+        
     }else{
         load_products_swiperBrands(value, nameClass, 4.5, 4.5, 6.5, 6.5, 12, 20);
     }

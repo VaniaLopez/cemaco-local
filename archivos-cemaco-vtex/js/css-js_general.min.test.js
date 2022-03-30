@@ -34,6 +34,7 @@ function load_discount_flags() {
 		that.html(txt + '%').addClass('checked');
 	});
     $('.product-item__discount-news:not(.checked)').each(function (index, item) {
+		console.log("funciona descuento");
 		var that = $(this),
 		    txt = that.html(),
 		    final_txt = txt.indexOf(',');
