@@ -1,0 +1,91 @@
+
+#datatrics-box-container .datatrics-box{
+    border-radius: 2.5em;
+}
+#datatrics-box-container .datatrics-box-container-inner {
+    width: 600px !important;
+  }
+  #datatrics-box-container .datatrics-box .datatrics-box-grid{
+      flex-flow: column-reverse;
+      padding: 0em 7em 2.5em;
+  }
+  #datatrics-box-container .datatrics-box .datatrics-box-grid.datatrics-box-grid-b3-i3 .datatrics-box-col{
+      width: 100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  #datatrics-box-container .datatrics-box-title{
+      margin: 0;
+  }
+  #datatrics-box-container .datatrics-box-title .next-line{
+      display:none;
+  }
+  #datatrics-box-container .datatrics-box .datatrics-box-grid.datatrics-box-grid-b3-i3 img{
+      padding: 0;
+  }
+  #datatrics-box-container .datatrics-box-title{
+          font-size: 1.4rem;
+          padding-bottom: 0.8em;
+          font-family: HelveticaNeueLTW05,sans-serif;
+          color: #000000;
+          text-align:center;
+  }
+  #datatrics-box-container .datatrics-box .datatrics-box-grid.datatrics-box-grid-b3-i3 .datatrics-box-col{
+      padding: 1.5em 0 0 0;    
+  }
+  
+  #datatrics-box-container .datatrics-box-description{
+      color: #000000;
+      font-family: HelveticaNeueLTW05,sans-serif;
+  }
+  
+  #datatrics-box-container .datatrics-box-button{
+      font-weight: 600;
+      border-radius: 2em;
+      padding: 1.10em 4em;
+      font-size: 80%;
+      font-family: HelveticaNeueLTW05,sans-serif;
+  }
+#datatrics-box-container .datatrics-box-close{
+    height: 20px;
+    width: 20px;
+    padding: 4px;
+    top: 25px;
+    right: 25px;
+}
+#datatrics-box-container .datatrics-box-close svg path {
+    fill: #707070;
+}
+@media (max-width: 767px) {
+    #datatrics-box-container .datatrics-box {
+        margin: 0 2em;
+        border-radius: 2.5em!important;
+    }
+    #datatrics-box-container .datatrics-box .datatrics-box-grid{
+      flex-flow: column-reverse;
+      padding: 0em 3em 2em;
+    }
+
+      #datatrics-box-container .datatrics-box-title .next-line{
+      display:block;
+  }
+  #datatrics-box-container .datatrics-box-button {
+      padding: 1.10em 3em;
+  }
+  #datatrics-box-container .datatrics-box-close{
+        top: 15px;
+        right: 15px;  
+  }
+}
+
+@media (max-width: 479px) {
+    #datatrics-box-container .datatrics-box .datatrics-box-grid {
+        flex-flow: column-reverse;
+        padding: 0em 2em 2em;
+    }
+    #datatrics-box-container .datatrics-box-title {
+        font-size: 1.2rem;
+    }
+}

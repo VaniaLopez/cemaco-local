@@ -1,118 +1,60 @@
-<div class="container re-central"  style="padding-left: 0 !important; padding-right: 0 !important; margin-bottom: 20px;" >
-    <div class="container re-central" style="padding-left: 0 !important; padding-right: 0 !important; margin-bottom: 20px; width: unset;">
-        <h4 class="tag-other-products text-center mb-4">Recomendaciones new-carrusel<br class="mobile"></h4> 
-        <div class="product-list grid-view grid-small" data-height="parent">
-            <div class="main">
-                <div class="products-slider__container vitrine resultItemsWrapper">
-                    <div id="productsSlider11" class="prateleira vitrine">
-                        <div class="prateleira vitrine n12colunas swiper">
-                            <ul id="dt_showcase_homepage_last_seen2" class="dt_showcase_slick swiper-wrapper">
-                                {{#each items}} itemcount='20'
-                                    <li class="@@DEPARTAMENT@@ swiper-slide">
-                                        <div class="product-item__wrapper" data-height="siblings">
-                                            <div class="product-item @@CAT@@" data-index="0">
-                                                <figure class="product-item__figure">
-                                                    <a href="{{url}}" class="product-item__main-image contenedor-img dl-product-link" data-id="{{parent_id}}" data-skuid="{{productid}}" tabindex="0">
-                                                        <img src="{{image}}" width="400" height="400" alt="{{name}}" id="" style="visibility: visible; opacity: 1;" />
-                                                        <div class="product-item__secondary-image contenedor-img"></div>
-                                                        <!--{{#ifLess price_discount price_original}}
-                                                        <div class="product-item__flag--discount flag-discount checked">
-                                                            {{#fieldfunction discountPercent discountPrice=price_discount regularPrice=price_original}}%
-                                                        </div>
-                                                        {{/ifLess}} -->
-                                                    </a>
-                                                </figure>
-                                                <div class="product-item__category">@@CAT@@</div>
-                                                <div class="product-item__department">@@DEPARTAMENT@@</div>
-                                                <em class="product-item__brand-name">{{brand}}</em>
-                                                <div class="product-item__price" data-id="{{parent_id}}">
+<div class="products-slider__wrapper">
+    <div class="products-slider__container vitrine resultItemsWrapper" style="background: #f6f6f6">
+            <div id="productsSlider11" class="prateleira vitrine product-list re-central" data-height="parent">
+                <div id="swiper-carrusel11" class="prateleira vitrine n12colunas swiper">
+                    <h4 class="tag-other-products text-center mb-4">También te puede interesar<br class="mobile"></h4> 
+                    <ul id="dt_showcase_homepage_last_seen2" class="dt_showcase_slick swiper-wrapper">
+                        {{#each items}} itemcount='20'
+                            <li class="@@DEPARTAMENT@@ swiper-slide">
+                                <div class="product-item__wrapper" data-height="siblings">
+                                    <div class="product-item @@CAT@@" data-index="0">
+                                        <figure class="product-item__figure">
+                                            <a href="{{url}}" class="product-item__main-image contenedor-img dl-product-link" data-id="{{parent_id}}" data-skuid="{{productid}}" tabindex="0">
+                                                <img src="{{image}}" width="400" height="400" alt="{{name}}" id="" style="visibility: visible; opacity: 1;" />
+                                                <div class="product-item__secondary-image contenedor-img"></div>
+                                                <!--{{#ifLess price_discount price_original}}
+                                                <div class="product-item__flag--discount flag-discount checked">
+                                                    {{#fieldfunction discountPercent discountPrice=price_discount regularPrice=price_original}}%
+                                                </div>
+                                                {{/ifLess}} -->
+                                            </a>
+                                        </figure>
+                                        <div class="product-item__price" data-id="{{parent_id}}">
+                                            {{#ifLess price_discount price_original}}
+                                            <div class="price-with-discount">
+                                                <span class="price-newDTS price-promo">Q{{#price_format price_discount . ,}}</span>
                                                     {{#ifLess price_discount price_original}}
-                                                        <span class="price-new price-promo">Q{{#price_format price_discount . ,}}</span>
-                                                        <span class="price-old">Q{{#price_format price_original . ,}}</span>
-                                                    {{else}}
-                                                        <span class="price-new">Q{{#price_format price_discount . ,}}</span>
+                                                        <div class="product-item__flag--discount flag-discount checked">
+                                                             ({{#fieldfunction discountPercent discountPrice=price_discount regularPrice=price_original}}%)
+                                                        </div>
                                                     {{/ifLess}}
-                                                </div>
-                                                <!--TEASERS-->
-                                                {{#ifEqual tieneTeasers 2}}
-                                                    <div class="dt_teasers">
-                                                        {{teasers.0}}
-                                                    </div>
-                                                {{/ifEqual}}
-                                                <!--TEASERS-->
-                                                <div class="product-item__caption" style="min-height: 50px;">
-                                                    <h2 class="product-item__name" style="height: 50px;">
-                                                        <a href="{{url}}" tabindex="0">{{name}}</a>
-                                                    </h2>
-                                                </div>
-                                                <div class="product-item__rating">
-                                                    <div class="yotpo bottomLine yotpo-small" data-product-id="{{productid}}" data-yotpo-element-id="1">
-                                                        <span class="yotpo-display-wrapper" style="visibility: hidden;"> <div class="yotpo-clr"></div> </span>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="product-item__flags--discounts" style="height: 0px;"></div>
-                                                <div class="product-item__cta">
-                                                    <!--BOTON DINAMICO-->
-                                                    {{#ifEqual soloTienda 1}}
-                                                        <div class="product-item__skus checked item0" data-id="{{parent_id}}" data-sku="{{productid}}">
-                                                            <div class="product-item__size" id="product-item__size-{{parent_id}}"></div>
-                                                        </div>
-                                                        <div class="product-item__action" style="margin-top:10px !important;">
-                                                            <a href="{{url}}" class="button-flat secondary js-buy-plp" data-id="{{parent_id}}" data-skuid="{{productid}}" tabindex="0" data-index="0">
-                                                                <svg class="svg-icon"><use href="#svg-icon-cart"></use></svg>Agregar
-                                                            </a>
-                                                            <a href="{{url}}" class="js-buy-pdp" tabindex="0">Ver detalles</a>
-                                                        </div>
-                                                    {{else}}
-                                                        <div class="product-item__skus checked item0" data-id="{{parent_id}}" data-sku="{{productid}}">
-                                                            <div class="product-item__size" id="product-item__size-{{parent_id}}"></div>
-                                                        </div>
-                                                        <div class="product-item__action" style="margin-top:10px !important;">
-                                                            <a href="{{url}}" class="button-flat secondary dt_styleanchor" data-id="{{parent_id}}" data-skuid="{{productid}}" tabindex="0" data-index="0">
-                                                                Ver Más
-                                                            </a>
-                                                        </div>
-                                                    {{/ifEqual}}
-                                                    <!--BOTON DINAMICO-->                                                
-                                                </div>
-                                                
-                                                <div class="product-item__flags--collections" style="height: 0px;"></div>
-                                                <div class="product-item__flags--attributes"></div>
-                                                <div class="product-item__wishlist">
-                                                    <button class="product-item__wishlist__trigger" data-id="{{parent_id}}" tabindex="0">
-                                                        <svg class="svg-icon-wishlist">
-                                                            <use xlink:href="#svg-icon-wishlist"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                                <div class="product-item__quick-view">
-                                                    <button class="product-item__quick-view__trigger" data-id="{{parent_id}}" data-sku="{{productid}}" data-toggle="modal" data-target="#productSingleModal" tabindex="0">
-                                                        Vista rápida
-                                                        <svg class="svg-icon">
-                                                            <use xlink:href="#svg-icon-quick-view"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
                                             </div>
+                                                <span class="price-oldDTS">Q{{#price_format price_original . ,}}</span>
+                                            {{else}}
+                                                <span class="price-newDTS">Q{{#price_format price_discount . ,}}</span>
+                                            {{/ifLess}}
                                         </div>
-                                        <div class="hide hidden" style="display: none;">
-                                            <div class="dataLayer-info" id="dataLayer-info-{{parent_id}}" data-id="{{parent_id}}" data-skuid="{{productid}}">
-                                                <div id="dl-name-{{productid}}">{{name}}</div>
-                                                <div id="dl-price-{{productid}}">Q{{#price_format price_discount , .}}</div>
-                                                <div id="dl-brand-{{productid}}"><p class="texto brand {{brand}}">{{brand}}</p></div>
-                                                <div id="dl-cat-{{productid}}">@@CAT@@</div>
-                                                <div id="dl-variant-{{productid}}"></div>
-                                            </div>
+                                        <!--TEASERS-->
+                                        {{#ifEqual tieneTeasers 2}}
+                                        <div class="dt_teasers">
+                                            {{teasers.0}}
                                         </div>
-                                    </li>
-                                {{/each}}
-                            </ul>
-                        </div>
-                        <div class="swiper-button-next"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div>
-                        <div class="swiper-button-prev"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>
-                    </div>
+                                        {{/ifEqual}}
+                                        <!--TEASERS-->
+                                        <div class="product-item__caption" style="min-height: 50px;">
+                                            <h2 class="product-item__name">
+                                                <a href="{{url}}" tabindex="0">{{name}}</a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
                 </div>
+                <div id="swiper-button-prev11" class="swiper-button-next"><svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg></div>
+                <div id="swiper-button-next11" class="swiper-button-prev"><svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg></div>
             </div>
-        </div>
     </div>
+</div>
+

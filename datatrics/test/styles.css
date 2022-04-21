@@ -5,6 +5,7 @@
 .dt_showcase_slick li:hover {
     border: 1px solid #ddd;
 }
+
 @media only screen and (max-width: 768px){
     .slick-list{padding:0 20% 0 0;}
     .button-flat.secondary.js-buy-plp{
