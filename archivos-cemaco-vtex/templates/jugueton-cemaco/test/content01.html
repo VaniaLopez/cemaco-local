@@ -4,36 +4,73 @@
 <!-- <link rel="stylesheet" href="https://cemacogt.vteximg.com.br/arquivos/main.min.css?v=20220216-15:45"> -->
 
 <!--Portada solo con una imagen-->
-<div class="single-board re-central">
-    <div class="bannerprincipal_jugueton">
-        <div class="row contentslide margin-banner-jugueton">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <a href="/1094?map=productClusterIds">
-                    <div class="mainimage-jugueton" title="juguetes">
-                        <picture>
-                            <source srcset="/arquivos/2022mar_banner_verano_mob.png" media="(max-width: 767px)" />
-                            <img src="/arquivos/2022mar_banner_verano_desk.png" alt="Verano" />
-                        </picture>
-                        <div class="boton_banner">
-                            <section class="button-flat secondary">COMPRA AQUÍ</section>
-                        </div>
-                    </div>
-                </a>
+
+<!-- Empieza banner principal  -->
+<div class="row mb-2 mb-lg-3 banner-principal">
+    <div class="homeBannerSlider swiper col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center p-0">
+        <div class="swiper-wrapper">
+            <div id="bannerJugar" class="swiper-slide">
+                <div class="mainimage mobile-fullwidth">
+                    <picture>
+                        <!-- Mobile -->
+                        <source srcset="/arquivos/2022_banner-jugueton_agosto_mobile01.jpg" media="(max-width: 767px)">
+
+                        <!-- Desktop -->
+                        <img src="/arquivos/2022_banner-jugueton_agosto_desktop01.jpg" alt="Prepárate para iniciar el nuevo ciclo">
+                    </picture>
+                    <a href="https://www.cemaco.com/c-juguetes" class="button-banner btn d-md-block m-0">COMPRA AQUÍ</a>
+                </div>
             </div>
+
+            <div id="bannerClases" class="swiper-slide">
+                <div class="mainimage mobile-fullwidth">
+                    <picture>
+                        <!-- Mobile -->
+                        <source srcset="/arquivos/2022_banner-jugueton_agosto_mobile02.jpg" media="(max-width: 767px)">
+
+                        <!-- Desktop -->
+                        <img src="/arquivos/2022_banner-jugueton_agosto_desktop02.jpg" alt="Preescolar">
+                    </picture>
+                    <a href="https://www.cemaco.com/c-aprende-en-casa" class="button-banner clases btn d-md-block m-0">COMPRA AQUÍ</a>
+                </div>
+            </div>
+
+            <div id="bannerFelicidad" class="swiper-slide">
+                <div class="mainimage mobile-fullwidth">
+                    <picture>
+                        <!-- Mobile -->
+                        <source srcset="/arquivos/2022_banner-jugueton_agosto_mobile03.jpg" media="(max-width: 767px)">
+
+                        <!-- Desktop -->
+                        <img src="/arquivos/2022_banner-jugueton_agosto_desktop03.jpg" alt="Tu felicidad, garantizada">
+                    </picture>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Paginacion -->
+        <div id="banner-slider-pagination" class="swiper-pagination d-flex d-md-none"></div>
+
+        <!-- Butones de navegacion -->
+        <div id="banner-slider-prev" class="swiper-button-prev d-none d-md-flex"></div>
+        <div id="banner-slider-next" class="swiper-button-next d-none d-md-flex"></div>
+
     </div>
 </div>
+
 <!--Portada solo con una imagen-->
 
 
+
 <!-- Empiezan Mini spiffs de temporada -->
-<div class="minispiff general-padding-spiffs">
+<div class="minispiff general-padding-spiffs mb-4 mb-lg-5">
     <div class="minispiff-item padding-spiffs-jugueton text-center">
         <div class="border_radius">
             <a href="/s/juguetes#muniecas">
                 <picture>
-                    <source srcset="/arquivos/2022mar_spiff1_verano_mob.png" type="image/webp" media="(max-width: 480px)">
-                    <img src="/arquivos/2022mar_spiff1_verano_desk.png" alt="Muñecas">
+                    <source srcset="/arquivos/2022jun_jugueton_home_bono_17.jpg" media="(max-width: 767px)">
+                    <img src="/arquivos/2022jun_jugueton_home_bono_4.jpg" alt="Muñecas">
                 </picture>
                 <h4>Muñecas</h4>
                 <p class="txt-p-spiff">
@@ -44,10 +81,24 @@
     </div>
     <div class="minispiff-item padding-spiffs-jugueton text-center">
         <div class="border_radius">
+            <a href="/s/juguetes#preescolar">
+                <picture>
+                    <source srcset="/arquivos/2022jun_jugueton_home_bono_16.jpg" media="(max-width: 767px)">
+                    <img src="/arquivos/2022jun_jugueton_home_bono_3.jpg" alt="Preescolar">
+                </picture>
+                <h4>Preescolar</h4>
+                <p class="txt-p-spiff">
+                    <span>Ver más</span>
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="minispiff-item padding-spiffs-jugueton text-center">
+        <div class="border_radius">
             <a href="/s/juguetes#figurasaccion">
                 <picture>
-                    <source srcset="/arquivos/2022mar_spiff2_verano_mob.png" type="image/webp" media="(max-width: 480px)">
-                    <img src="/arquivos/2022mar_spiff2_verano_desk.png" alt="Figuras de acción">
+                    <source srcset="/arquivos/2022jun_jugueton_home_bono_19.jpg" type="image/webp" media="(max-width: 767px)">
+                    <img src="/arquivos/2022jun_jugueton_home_bono_2.jpg" alt="Figuras de acción">
                 </picture>
                 <h4>Figuras de acción</h4>
                 <p class="txt-p-spiff">
@@ -60,24 +111,10 @@
         <div class="border_radius">
             <a href="/s/juguetes#vehiculospistas">
                 <picture>
-                    <source srcset="/arquivos/2022mar_spiff3_verano_mob.png" type="image/webp" media="(max-width: 480px)">
-                    <img src="/arquivos/2022mar_spiff3_verano_desk.png" alt="carros y pistas">
+                    <source srcset="/arquivos/2022jun_jugueton_home_bono_18.jpg" type="image/webp" media="(max-width: 767px)">
+                    <img src="/arquivos/2022jun_jugueton_home_bono_1.jpg" alt="Vehículos">
                 </picture>
                 <h4>Vehículos y pistas</h4>
-                <p class="txt-p-spiff">
-                    <span>Ver más</span>
-                </p>
-            </a>
-        </div>
-    </div>
-    <div class="minispiff-item padding-spiffs-jugueton text-center">
-        <div class="border_radius">
-            <a href="/s/juguetes#preescolar">
-                <picture>
-                    <source srcset="/arquivos/2022mar_spiff4_verano_mob.png" type="image/webp" media="(max-width: 480px)">
-                    <img src="/arquivos/2022mar_spiff4_verano_desk.png" alt="Pre escolar">
-                </picture>
-                <h4>Pre escolar</h4>
                 <p class="txt-p-spiff">
                     <span>Ver más</span>
                 </p>
@@ -87,86 +124,130 @@
 </div>
 <!-- Terminan Mini spiffs de temporada -->
 
-<!-- Empieza compra por edad -->
-<div class="row md-top-st">
-    <h2 class="tag-title--level-1 pd-0-st compra-por-edad-ft pdb-st-title">Compra por edad</h2>
-</div>
-<div class="juguetes-mas compraedad row">
-    
-    <div class="item-cocina">
-        <a href="/1136?map=productClusterIds">
-            <picture>
-                <source srcset="/arquivos/2022_jugueton_button_edad0-24_mobile.png" media="(max-width: 767px)">
-                <img src="/arquivos/2022_jugueton_button_edad0-24_desk.png" alt="0-24 meses" class="img-compra-edad-st">
-            </picture>
-        </a>
-    </div>
-    <div class="item-cocina">
-        <a href="/1137?map=productClusterIds">
-            <picture>
-                <source srcset="/arquivos/2022_jugueton_button_edad2-4_mobile.png" media="(max-width: 767px)">
-                <img src="/arquivos/2022_jugueton_button_edad2-4_desk.png" alt="2-4 años" class="img-compra-edad-st">
-            </picture>
-        </a>
-    </div>
-    <div class="item-cocina">
-        <a href="/1138?map=productClusterIds">
-            <picture>
-                <source srcset="/arquivos/2022_jugueton_button_edad5-7_mobile.png" media="(max-width: 767px)">
-                <img src="/arquivos/2022_jugueton_button_edad5-7_desk.png" alt="5-7 años" class="img-compra-edad-st">
-            </picture>
-        </a>
-    </div>
-    <div class="item-cocina">
-        <a href="/1139?map=productClusterIds">
-            <picture>
-                <source srcset="/arquivos/2022_jugueton_button_edad8-10_mobile.png" media="(max-width: 767px)">
-                <img src="/arquivos/2022_jugueton_button_edad8-10_desk.png" alt="8-10 años" class="img-compra-edad-st">
-            </picture>
-        </a>
-    </div>
-    <div class="item-cocina">
-        <a href="/1140?map=productClusterIds">
-            <picture>
-                <source srcset="/arquivos/2022_jugueton_button_edad11mas_mobile.png" media="(max-width: 767px)">
-                <img src="/arquivos/2022_jugueton_button_edad11mas_desk.png" alt="11 años" class="img-compra-edad-st">
-            </picture>
-        </a>
-    </div>
-</div>
-<!-- Termina compra por edad -->
+<style>
 
-<!-- Empieza banners regreso a clases -->
-<div class="re-central container banners-clases firstdoublespiff padding-double-spiffs">
-    <div class="row">
-        <div class="col-xs-6 col-md-6 banners-clases-item">
-            <div class="border_radius">
-                <a href="/libreria">
-                    <picture>
-                        <source srcset="/arquivos/2022_jugueton_spiff_libreria_01marzo_mobile.png" media="(max-width: 767px)">
-                        <img src="/arquivos/2022_jugueton_spiff_libreria_01marzo_desk.png" alt="Libreria">
-                    </picture>
-                    <div class="cont-titular">
-                        <h3>Librería</h3>
-                        <span>Ver más</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-xs-6 col-md-6 banners-clases-item">
-            <div class="border_radius">
-                <a href="/s/juguetes#juegosmesa">
-                    <picture>
-                        <source srcset="/arquivos/2022_jugueton_spiff_rompecabezas_01marzo_mobile.png" media="(max-width: 767px)">
-                        <img src="/arquivos/2022_jugueton_spiff_rompecabezas_01marzo_desk.png" alt="Rompecabezas">
-                    </picture>
-                    <div class="cont-titular">
-                        <h3>Rompecabezas</h3>
-                        <span>Ver más</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Termina banners regreso a clases -->
+.homeBannerSlider {
+    position: relative;
+    overflow: hidden;
+}
+
+.home .mainimage.mobile-fullwidth {
+    position: relative !important;
+    padding-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+
+.homeBannerSlider #banner-slider-pagination {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 0.9rem;
+}
+
+#banner-slider-next.swiper-button-disabled, #banner-slider-prev.swiper-button-disabled {
+    opacity: 0;
+}
+#banner-slider-next, #banner-slider-prev {
+    fill: #27A85D;
+    transition: .5s;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+}
+#banner-slider-prev {
+    transform: rotateY(180deg);
+    fill: #27A85D;
+    left: 10px;
+}
+#banner-slider-next::after, #banner-slider-prev::after {
+    content: '';
+}
+
+.homeBannerSlider #banner-slider-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: 1;
+}
+.homeBannerSlider #banner-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #27A85D;
+}
+
+.button-banner{
+    background-color: #27A85D!important;
+    color: #fff;
+    padding: 8px 20px 8px!important;
+}
+
+@media (min-width: 380px){
+    .button-banner{
+        bottom: calc(40% - 4.688rem)!important;
+    }
+
+}
+@media (min-width: 500px){
+    .button-banner{
+        bottom: calc(37% - 4.688rem)!important;
+    }
+    .button-banner.clases{
+        bottom: calc(32% - 4.688rem)!important;
+    } 
+}
+@media (min-width: 768px){
+    .banner-principal{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button-banner{
+        bottom: calc(70% - 94px)!important;
+        right: calc(30% - 2.54rem)!important;
+        font-size: .6rem!important;
+    }
+    .button-banner.clases{
+        bottom: calc(62% - 94px)!important;
+        right: calc(23% - 2.54rem)!important;
+    } 
+}
+
+@media (min-width: 990px){
+    .button-banner.clases{
+        bottom: calc(55% - 94px)!important;
+    } 
+}
+@media (min-width: 1280px){
+    .button-banner{
+        bottom: calc(60% - 99px)!important;
+        padding: 10px 20px 10px!important;
+        font-size: .8rem!important;
+    }
+    .button-banner.clases{
+        bottom: calc(48% - 99px)!important;
+        padding: 12px 20px 12px!important;
+    }
+}
+@media (min-width: 1500px){
+    .button-banner{
+        bottom: calc(60% - 108px)!important;
+        padding: 12px 28px 12px!important;
+        font-size: .9rem!important;
+    }
+    .button-banner.clases{
+        bottom: calc(48% - 99px)!important;
+        padding: 12px 20px 12px!important;
+    }
+}
+@media (min-width: 1600px){
+    .button-banner{
+        bottom: calc(57% - 99px)!important;
+    }
+}
+</style>

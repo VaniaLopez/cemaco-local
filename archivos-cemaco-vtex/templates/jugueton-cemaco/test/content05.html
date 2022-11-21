@@ -1,301 +1,3642 @@
-<script>
-    $("#hcgarantiatotal").on("click",function() {
-        $(".contenedor-popups").show();
-        $("#promgarantia").show();
-    });
-    
-    $(".closepopup").on("click",function() {
-        $(".contenedor-popups").hide();
-        $(".cpopup-ofrecemos").hide();
-    });
-    
-    $("#hcmetodospago").on("click",function() {
-        $(".contenedor-popups").show();
-        $("#prommetodopago").show();
-    });
-    
-    $("#hcentregarapida").on("click",function() {
-        $(".contenedor-popups").show();
-        $("#promentregarapida").show();
-    });
-    
-    $("#hcautoservicio").on("click",function() {
-        $(".contenedor-popups").show();
-        $("#promautoservicio").show();
-    });
-    
-    $("#nuestrapromesa").on("click",function() {
-        $(".contenedor-popups").show();
-        $("#promfelicidad").show();
-    });
+<!-- Empieza seccion de popups -->
+<div class="modalhome" style="display:none;"></div>
+<div class="contenedor-popups" style="display:none;">
+    <!-- Popup 1-->
+    <div class="cpopup-ofrecemos" style="display:none;" id="promgarantia">
+        <section class="closepopup">
+            <span>×</span>
+        </section>
+        <section>
+            <h4>Seguridad y garantía total</h4>
+            <p>
+                Contamos con una política de cambio amigable y libre de molestias. Si no estás <br class="desktop">
+                conforme con algún producto en tu tienda Cemaco más cercana te lo cambiamos o <br class="desktop"> te
+                damos una nota de crédito para que
+                puedas utilizar en tu siguiente compra.<br class="desktop"> ¡Así de fácil!
+            </p>
+            <h5>Garantía adicional</h5>
+            <p>
+                En muchas ocasiones aparte de la garantía total de Cemaco, los productos tienen<br class="desktop"> su
+                propia garantía. Si tienes dudas sobre las garantías adicionales, en los detalles del <br
+                    class="desktop"> producto puedes encontrar
+                esta información. La garantía adicional estará incluida <br class="desktop"> dentro de la caja del
+                producto.
+            </p>
+            <p>
+                ¡Recuerda traer tu factura o ticket de regalo! Tráelo en su caja o empaque original <br class="desktop">
+                dentro de los siguientes 30 días a la fecha de compra. Si tienes cualquier duda <br class="desktop">
+                nuestro personal de Servicio
+                al Cliente con gusto te atenderá.
+            </p>
+        </section>
+    </div>
+    <!-- Popup 2 -->
+    <div class="cpopup-ofrecemos" style="display:none;" id="prommetodopago">
+        <section class="closepopup">
+            <span>×</span>
+        </section>
+        <section>
+            <h4>Métodos de pago en Cemaco.com</h4>
+            <article>
+                <h5>Tarjetas de crédito y débito</h5>
+                <p> Aceptamos tarjetas de crédito y débito Visa y MasterCard.</p>
+                <img src="/arquivos/2021_cemaco_popups_tarjetascreditodebito.png" alt="tarjeta de crédito" />
+            </article>
+            <article>
+                <h5>Depósitos bancarios</h5>
+                <p>Depósitos bancarios en agencias Banco G&T Continental, BAM, Banco Industrial, <br class="desktop">
+                    Bantrab y Banrural.</p>
+                <img src="/arquivos/2021_cemaco_popups_depositosbancarios.png" alt="depósito bancario" />
+            </article>
+            <article>
+                <h5>Cuotas</h5>
+                <p>Para tu comodidad de compra contamos con VisaCuotas y MasterCuotas.</p>
+                <img src="/arquivos/2021_cemaco_popups_cuotas.png" alt="pago a cuotas" />
+            </article>
+            <small>Seguimos agregando nuevos métodos de pago todos los días, si tienes alguna sugerencia,
+                <u><a href="https://wa.me/50224999990" target="_blank">contáctanos aquí</a></u></small>
+        </section>
+    </div>
+    <!-- Popup 3 -->
+    <div class="cpopup-ofrecemos" style="display:none;" id="promentregarapida">
+        <section class="closepopup">
+            <span>×</span>
+        </section>
+        <section>
+            <h4>Entrega Rápida</h4>
+            <p>
+                Enviamos tus compras a toda Guatemala. Luego de haber procesado tu orden <br class="desktop"> recibirás
+                tu pedido en un período de 12 a 48 horas en la capital <br class="desktop"> y hasta 72 horas en el
+                interior del país. Puedes visualizar
+                el tiempo <br class="desktop"> de entrega de tu pedido en la carreta de compras.
+            </p>
+            <p>
+                Debes tomar en cuenta que si tu pago fue por depósito bancario, estos tiempos <br class="desktop">
+                corren a partir de la confirmación de recepción del pago. Si tu domicilio se <br class="desktop">
+                encuentra fuera de los límites de cobertura,
+                el tiempo de entrega puede variar.<br class="desktop"> Si tienes dudas puedes contactarnos al 2999-9990
+                o conoce más <u><a href="/areasdenocobertura">aquí</a></u>
+            </p>
+        </section>
+    </div>
+    <!-- Popup 4 -->
+    <div class="cpopup-ofrecemos" style="display:none;" id="promautoservicio">
+        <section class="closepopup">
+            <span>×</span>
+        </section>
+        <section>
+            <h4>Tiendas con retira en tienda y autoservicio</h4>
+            <article class="row">
+                <div class="col-lg-6 col-xs-6">
+                    <img src="/arquivos/2021_cemaco_popups_autoservicio.png" alt="autoservicio" />
+                    <ul>
+                        <li>Peri-Roosevelt</li>
+                        <li>Plaza Cemaco</li>
+                        <li>Pradera Concepción</li>
+                        <li>Xela</li>
+                        <li>San Cristóbal</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-xs-6">
+                    <img src="/arquivos/2021_cemaco_popups_retiraentienda.png" alt="retira en tienda" />
+                    <ul>
+                        <li>SanKris Mall</li>
+                        <li>San Juan</li>
+                        <li>Zona 4</li>
+                        <li>Naranjo</li>
+                        <li>Zona 15</li>
+                        <li>Mazatenango</li>
+                        <li>EcoCentro</li>
+                        <li>Plaza Madero</li>
+                        <li>Portales</li>
+                        <li>Cayalá</li>
+                        <li>El Frutal</li>
+                        <li>San Lucas</li>
+                        <li>Amatitlán</li>
+                        <li>Plaza La Noria</li>
+                        <li>Chimaltenango</li>
+                        <li>Escuintla</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </div>
+    <!-- Popup 5 -->
+    <div class="cpopup-ofrecemos" style="display:none;" id="promfelicidad">
+        <section class="closepopup">
+            <span>×</span>
+        </section>
+        <section>
+            <h4>Tu felicidad, garantizada</h4>
+            <p>
+                <strong>Si no estás 100% satisfecho con tu compra, contáctanos y lo resolvemos:</strong><br
+                    class="desktop"> ¡Contamos con una política de cambio amigable y libre de molestias!
+            </p>
+            <p>
+                <strong>Garantía total:</strong> ¿El producto que recibiste no era lo que pensabas o simplemente <br
+                    class="desktop"> cambiaste de opinión? Tienes 30 días para cambiarlo en tu tienda Cemaco más <br
+                    class="desktop"> cercana. Algunos productos
+                cuentan con garantía de fabricante incluida dentro del <br class="desktop"> empaque. Si tienes dudas, en
+                los detalles del producto puedes encontrar esta <br class="desktop"> información.
+            </p>
+            <p>
+                <strong>Comprar en línea ha sido tan fácil y seguro: </strong> Aceptamos tarjetas de crédito y débito<br
+                    class="desktop"> Visa y MasterCard, depósitos bancarios y contamos con Visa y Mastercuotas. <br
+                    class="desktop"> Seguimos agregando
+                nuevos métodos de pago cada día, si tienes alguna <br class="desktop"> sugerencia, contáctanos.
+            </p>
+            <p>
+                <strong>Recibes tu producto rápido y seguro:</strong> Entregamos tus compras en todo el país <br
+                    class="desktop"> entre 12 y 48 horas en la capital y hasta 72 en el interior después de haber <br
+                    class="desktop"> procesado tu orden.
+            </p>
+            <p>
+                <strong>Compra en línea y retira en tienda o en autoservicio:</strong> Sencillo y conveniente. Haz tu
+                <br class="desktop"> pedido en línea, selecciona la tienda de tu conveniencia.
+            </p>
+        </section>
+    </div>
+</div>
+<!-- termina seccion de popups -->
+<!--empieza  Felicidad garantizada -->
+<div class="modal fade" id="felicidadGarantizada" tabindex="-1" aria-labelledby="felicidadGarantizadaLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="closepopup" data-bs-dismiss="modal" aria-label="Close">×</button>
+                <section class="text-center pb-3">
+                    <h4 class="tag-title--level-3">Tu felicidad, garantizada</h4>
+                    <p>
+                        <strong>Si no estás 100% satisfecho con tu compra, contáctanos y lo resolvemos:</strong><br
+                            class="d-none d-xl-block"> ¡Contamos con una política de cambio amigable y libre de
+                        molestias!<br class="d-none d-xl-block">
+                    </p>
+                    <p>
+                        <strong>Garantía total:</strong> ¿El producto que recibiste no era lo que pensabas o simplemente
+                        <br class="d-none d-xl-block"> cambiaste de opinión? Tienes 30 días para cambiarlo en tu tienda
+                        Cemaco más <br class="d-none d-xl-block"> cercana. Algunos productos
+                        cuentan con garantía de fabricante incluida dentro del <br class="d-none d-xl-block"> empaque.
+                        Si tienes dudas, en los detalles del producto puedes encontrar esta <br
+                            class="d-none d-xl-block"> información.
+                    </p>
+                    <p>
+                        <strong>Comprar en línea es fácil y seguro: </strong> Aceptamos tarjetas de crédito y débito
+                        Visa y MasterCard, depósitos o transferencias bancarias, contamos con Visa y Master cuotas. <br
+                            class="d-none d-xl-block"> Seguimos agregando nuevos métodos
+                        de pago constantemente, si tienes alguna <br class="d-none d-xl-block"> sugerencia, contáctanos.
+                    </p>
+                    <p>
+                        <strong>Recibes tu producto rápido y seguro:</strong> Entregamos tus compras en todo el país <br
+                            class="d-none d-xl-block"> entre 12 y 48 horas en la capital y hasta 72 en el interior
+                        después de haber <br class="d-none d-xl-block"> procesado tu orden.
+                    </p>
+                    <p>
+                        <strong>Compra en línea y retira en tienda o en autoservicio:</strong> Sencillo y conveniente.
+                        Haz tu
+                        <br class="d-none d-xl-block"> pedido en línea, selecciona la tienda de tu conveniencia.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--termina  Felicidad garantizada -->
 
-</script>
+<!--empieza Garantía total -->
+<div class="modal fade" id="garantiaTotal" tabindex="-1" aria-labelledby="garantiaTotalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="closepopup" data-bs-dismiss="modal" aria-label="Close">×</button>
+                <section class="text-center pb-3">
+                    <h4 class="tag-title--level-3">Seguridad y garantía total</h4>
+                    <p>
+                        Contamos con una política de cambio amigable y libre de molestias. Si no estás <br
+                            class="d-none d-md-block"> conforme con algún producto en tu tienda Cemaco más cercana te lo
+                        cambiamos o <br class="d-none d-md-block"> te damos una nota de crédito para que
+                        puedas utilizar en tu siguiente compra.<br class="d-none d-md-block"> ¡Así de fácil!
+                    </p>
+                    <h5>Garantía adicional</h5>
+                    <p>
+                        En muchas ocasiones aparte de la garantía total de Cemaco, los productos tienen<br
+                            class="d-none d-md-block"> su propia garantía. Si tienes dudas sobre las garantías
+                        adicionales, en los detalles del <br class="d-none d-md-block"> producto puedes encontrar
+                        esta información. La garantía adicional estará incluida <br class="d-none d-md-block"> dentro de
+                        la caja del producto.
+                    </p>
+                    <p>
+                        ¡Recuerda traer tu factura o ticket de regalo! Traélo en su caja o empaque original <br
+                            class="d-none d-md-block"> dentro de los siguientes 30 días a la fecha de compra. Si tienes
+                        cualquier duda <br class="d-none d-md-block"> nuestro personal de servicio
+                        al cliente con gusto te atenderá.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--termina Garantía total -->
+
+<!-- Entrega rápida -->
+<div class="modal fade" id="entregaRapida" tabindex="-1" aria-labelledby="entregaRapidaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="closepopup" data-bs-dismiss="modal" aria-label="Close">×</button>
+                <section class="text-center pb-3">
+                    <h4 class="tag-title--level-3">Entrega Rápida</h4>
+                    <p>
+                        Enviamos tus compras a toda Guatemala. Luego de haber procesado tu orden <br
+                            class="d-none d-md-block"> recibirás tu pedido en un período de 12 a 48 horas en la capital
+                        <br class="d-none d-md-block"> y hasta 72 horas en el interior del país. Puedes visualizar
+                        el tiempo <br class="d-none d-md-block"> de entrega de tu pedido en la carreta de compras.
+                    </p>
+                    <p>
+                        Debes tomar en cuenta que si tu pago fue por depósito bancario, estos tiempos <br
+                            class="d-none d-md-block"> corren a partir de la confirmación de recepción del pago. Si tu
+                        domicilio se <br class="d-none d-md-block"> encuentra fuera de los límites de cobertura,
+                        el tiempo de entrega puede variar.<br class="d-none d-md-block"> Si tienes dudas puedes
+                        contactarnos al 2999-9990. o conoce más <u><a href="/areasdenocobertura">aquí</a></u>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--empieza Retira en tienda -->
+<div class="modal fade" id="retiraTienda" tabindex="-1" aria-labelledby="retiraTiendaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="closepopup" data-bs-dismiss="modal" aria-label="Close">×</button>
+                <section class="text-center pb-3">
+                    <h4 class="tag-title--level-3">Tiendas con retira en tienda y autoservicio</h4>
+                    <article class="row px-3">
+                        <div class="col-6">
+                            <img src="/arquivos/2021_cemaco_popups_autoservicio.png">
+                            <ul>
+                                <li>Peri-Roosevelt</li>
+                                <li>Plaza Cemaco</li>
+                                <li>Pradera Concepción</li>
+                                <li>Xela</li>
+                                <li>San Cristóbal</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <img src="/arquivos/2021_cemaco_popups_retiraentienda.png">
+                            <ul>
+                                <li>Portales</li>
+                                <li>El Frutal</li>
+                                <li>SanKris Mall</li>
+                                <li>Plaza La Noria</li>
+                                <li>Cayalá</li>
+                                <li>Zona 4</li>
+                                <li>Naranjo</li>
+                                <li>San Juan</li>
+                                <li>Zona 15</li>
+                                <li>Amatitlán</li>
+                                <li>Mazatenango</li>
+                                <li>San Lucas</li>
+                                <li>EcoCentro</li>
+                                <li>Plaza Madero</li>
+                                <li>Chimaltenango</li>
+                                <li>Escuintla</li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--termina Retira en tienda -->
+
+<!--empieza Métodos de pago -->
+<div class="modal fade" id="metodosPago" tabindex="-1" aria-labelledby="metodosPagoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="closepopup" data-bs-dismiss="modal" aria-label="Close">×</button>
+                <section class="text-center pb-3">
+                    <h4 class="tag-title--level-3">Métodos de pago en Cemaco.com</h4>
+                    <article>
+                        <h5>Tarjetas de crédito y débito</h5>
+                        <p> Aceptamos tarjetas de crédito y débito Visa y MasterCard.</p>
+                        <img src="/arquivos/2021_cemaco_popups_tarjetascreditodebito.png">
+                    </article>
+                    <article>
+                        <h5>Depósitos bancarios</h5>
+                        <p>Depósitos bancarios en agencias Banco G&amp;T Continental, BAM, Banco Industrial, <br
+                                class="d-none d-md-block"> Bantrab y Banrural.</p>
+                        <img src="/arquivos/2021_cemaco_popups_depositosbancarios.png">
+                    </article>
+                    <article>
+                        <h5>Cuotas</h5>
+                        <p>Para tu comodidad de compra contamos con VisaCuotas y MasterCuotas.</p>
+                        <img src="/arquivos/2021_cemaco_popups_cuotas.png">
+                    </article>
+                    <small>Seguimos agregando nuevos métodos de pago todos los días, si tienes alguna sugerencia,
+                        <u><a href="https://wa.me/50224999990" target="_blank">contáctanos aquí</a></u></small>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Termina Métodos de pago -->
 
 <style>
-    /*.modalhome{
-        overflow-x: hidden;
-        overflow-y: auto;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.3);
-        width: 100%;
-        height: -webkit-fill-available;
-        z-index: 99999999;
-        top: 1px;
-    }*/
-    .contenedor-popups{
-        /*position: absolute; */
-        /* width: 100%; */
-        background: rgba(0,0,0,0.4);
-        position: fixed;
-        z-index: 650;
-        width: 100%;
-        height: 100%;
-        margin: auto auto;
+
+.banner-slider_text {
+    text-align: center;
+    position: absolute;
+    font-size: 1.2rem;
+    right: 0;
+    left: 0%;
+    bottom: 5%;
+    margin: 0 auto;
+    color: #FC8224;
+}
+
+    .ofertas-daymom-wrapper p {
+        text-decoration: underline;
+        font-weight: normal;
+        margin-bottom: 5px;
+        font-size: .613em !important;
+    }
+
+    .ofertas-daymom-wrapper .contenedor-m {
+        width: 91%;
+        margin: 0 auto;
+        border-radius: 15px;
         overflow: hidden;
+    }
+
+    .ofertas-daymom-wrapper {
+        background: #EAF8FF;
+    }
+
+    [class*=products-slider__wrapper] #productsSlider04 .prateleira.vitrine>h2 {
+        display: none !important;
+    }
+
+    .products-slider__wrapper:nth-of-type(2) .products-slider__container {
+        background: unset;
+        margin-bottom: 1rem;
+    }
+
+    u.bottom-carrusel {
+        font-size: 0.7rem;
+        font-weight: normal;
+    }
+
+    [class*="products-slider__wrapper"] .prateleira.vitrine>h2 {
+        font-size: 1.55em !important;
+        margin-top: 1%;
+    }
+
+    .compra-por-edad-ft {
+        font-size: 1.875em !important;
+    }
+
+    .pd-0-st {
+        padding-top: 0px;
+    }
+
+    .landing--jugueton .pre-footer__wrapper a.button-simple.secondary.text-decoration-underline {
+        text-decoration: underline;
+    }
+
+    .landing--jugueton .carruselHomeJuguetonE .container.re-central {
+        background-color: #F4F4F4;
+    }
+
+    .landing--jugueton .carruselHomeJuguetonE .dt_showcase_slick li {
+        border: 0;
+    }
+
+    .landing--jugueton .txt-ver-mas {
+        padding: 3% 0 7%;
         display: block;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
+        font-size: 0.875em;
     }
-    .cpopup-ofrecemos{
-        position: fixed;
-        width: 87%;
-        margin: auto;
-        text-align: center;
-        /* top: 88em; */
-        background-color: #fff;
-        z-index: 999999999999;
-        padding: 6% 2% 2%;
-        left: 0;
-        overflow: hidden;
-        right: 0;
-        top: 29%;
-    }
-    .cpopup-ofrecemos .closepopup{
+
+    .item-portada {
         width: 100%;
-        overflow: hidden;
-        position: absolute;
-        left: -2%;
-        top: -1%;
     }
-    .cpopup-ofrecemos .closepopup span{
-        float: right;
-        color: #94D500;
+
+    .landing--jugueton .juguetes-mas {
+        margin: 0% 0 0% 0;
+    }
+
+    .landing--jugueton .juguetes-mas h2 {
+        font-size: 1.875em !important;
+    }
+
+
+    .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+        margin: 18px 0 0 !important;
+        font-size: 0.7rem;
+        padding: 1.25em 3em;
+        text-decoration: none;
+        color: #fff;
         font-weight: bold;
-        font-size: 1.8em;
-        margin: 0 0 -1% 0;
-        cursor: pointer;
+        background-color: #1BA85D;
+        letter-spacing: 1px;
     }
-    .cpopup-ofrecemos section p{
-        line-height: 20px;
-        font-size: 0.870em;
+
+    .landing--jugueton .main-slider--control-banner .slick-dots {
+        display: none;
     }
-    .cpopup-ofrecemos section p:nth-child(2){
-        margin: 0 0 6% 0;
+
+
+    .minispiff .minispiff-item {
+        padding: 0;
     }
-    .cpopup-ofrecemos section h4{
-        margin: 0 0 2% 0;
-        padding: 1% 0 0;
+
+    .minispiff .minispiff-item p.txt-p-spiff {
+        font-size: 0.65em;
+        line-height: 120%;
     }
-    #promautoservicio ul{
-        text-align: left;
-        list-style: disc !important;
-        padding: 0 0 0 11%;
+
+    .minispiff .minispiff-item h4 {
+        font-size: 0.9em;
+        padding-bottom: 0;
     }
-    #promgarantia{
-        top: 13%;
-    }
-    #promautoservicio{
-        top: 23%;
-    }
-    #prommetodopago{
-        top: 12%;
-    }
-    #promautoservicio ul li{
-        list-style: disc;
-        line-height: 21px;
-        font-size: 0.870em;
-    }
-    #prommetodopago section article img{
-        margin: 2% auto 3%;
-    }
-    #prommetodopago section article:nth-child(2) img{
-        width: 15%;
-    }
-    #prommetodopago section article:nth-child(3) img{
-        width: 34%;
-    }
-    #prommetodopago section article:nth-child(4) img{
-        width: 42%;
-    }
-    #prommetodopago section p{
-        margin: 0; 
-    }
-    #prommetodopago section small{
-        font-size:0.6em;
-    }
-    #promautoservicio section img{
-        width: 42%;
+
+    .minispiff .minispiff-item p.txt-p-spiff span {
         display: block;
-        margin: 2% 0 3% 6%;
+        font-weight: normal;
+        text-decoration: underline;
+        font-size: 0.813em;
+        padding: 1% 0 3%;
     }
-    #promautoservicio section article p{
-        margin: 0; 
+
+    .minispiff {
+        margin: 0 0 24px;
     }
-    #promfelicidad{
-        top: 3%;
+
+    .landing--jugueton .minispiff-item a {
+        text-decoration: none;
     }
-    #promfelicidad section p{
-        line-height: 18px;
-        font-size: 0.820em;
+
+    .minispiff-item p {
+        text-align: center;
+        font-size: 0.75em;
+        font-weight: normal;
     }
-    
-     @media only screen and (min-width: 360px){
-        #promgarantia{
-            top: 2rem;
+
+    .minispiff-item p strong {
+        font-size: 1em;
+        height: 10px;
+        display: block;
+    }
+
+    .landing--jugueton a {
+        text-decoration: none;
+    }
+
+    .barbie-mobile {
+        margin-top: 20px;
+    }
+
+    .landing--jugueton .linkcarrusel {
+        font-size: 0.8rem;
+        text-transform: initial;
+        color: #333333;
+        text-align: center;
+        display: block;
+        text-decoration: underline;
+        padding: 0 0 2%;
+    }
+
+    .slick-slider .product-item__caption .linkcarrusel {
+        display: none;
+    }
+
+    .row.bebe-jugueton.fullspiff {
+        height: auto;
+    }
+
+    .nav-item--level-0.hidden-md-down {
+        display: none;
+    }
+
+    .bannerprincipal_jugueton .mainimage-jugueton {
+
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: 0;
+    }
+
+    .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 {
+        background-image: url(/arquivos/2021_jugueton_home27oct_gvmn_portada1_mobileV2.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: 286px;
+    }
+
+    .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+        background-image: url(/arquivos/2021_jugueton_home27oct_gvmn_portada2_mobileV2.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: 286px;
+    }
+
+    .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner .button-flat.secondary,
+    .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner .button-flat.secondary {
+        background-color: #24B6E0 !important;
+    }
+
+    .landing--jugueton .bannerprincipal_jugueton2 .boton_banner2 {
+        width: 96%;
+        margin: 0 0 0 2%;
+        padding: 2% 0 0 0;
+    }
+
+    .landing--jugueton .bannerprincipal_jugueton2 .boton_banner2 h3 {
+        color: #fff;
+    }
+
+    .landing--jugueton .carruselHomeJuguetonE h4 {
+        margin: 0 0 1% 0;
+    }
+
+    .landing--jugueton .main-cat-jugueton {
+        margin: 2% 0 2%;
+    }
+
+    .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+        background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+        min-height: 330px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-bottom: 25px;
+    }
+
+    .mainimage-jugueton2 .button-flat.secondary2 {
+        color: black;
+        font-weight: bold;
+    }
+
+    .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .button-flat.secondary2 {
+        background-color: unset;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .landing--jugueton .importante-parati div.col-xs-12.col-md-4.col-lg-4.col-xl-4 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .landing--jugueton .importante-parati .minispiff-item {
+        margin-left: 0;
+        padding: 0 3%;
+    }
+
+    .landing--jugueton .importante-parati .divisionparati {
+        border: 1px solid #707070;
+        width: 90%;
+        margin: 4% auto 0;
+    }
+
+    .minispiff img {
+        padding-bottom: 2%;
+    }
+
+    .compra-en-linea h4 {
+        font-weight: normal;
+        padding-bottom: 2%;
+    }
+
+    .fullspiff h3 {
+        font-size: 1.625em;
+        padding-bottom: 0.1em;
+        color: #000;
+    }
+
+    .spiff1 h3 {
+        font-size: 1.625em;
+        padding-bottom: 0.1em;
+    }
+
+    .spiff2 h3 {
+        font-size: 1.625em;
+        padding-bottom: 0.1rem;
+    }
+
+    .bebe-jugueton h3 {
+        padding-bottom: 1%;
+    }
+
+    .fullspiff.comparteenfamilia {
+        background-image: url(/arquivos/2021_jugueton_ciberdias_banner_aprendejugando_desk.jpg);
+        margin: 4% 0 0 0;
+        background-position: center center;
+    }
+
+    .fullspiff.comparteenfamilia .button {
+        width: 36%;
+        margin: 17% 0 0 66%;
+    }
+
+    .fullspiff.comparteenfamilia .button span {
+        color: #fff;
+        text-decoration: none;
+        background: #FFAA00;
+        padding: 11px 33px;
+        border-radius: 25px;
+    }
+
+    .fullspiff.bnrtopregalos {
+        background-image: url(/arquivos/2021_jugueton_ciberdias_banner_regalos_deskV2-2.jpg);
+        margin: 2% 0 2% 0;
+        min-height: 325px;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .fullspiff.ofertassemana {
+        background-image: url(/arquivos/2021_sliderJugueton_HSN_nov_desk.jpg);
+        margin: 4% 0 0 0;
+        min-height: 257px;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .fullspiff.ofertassemana span.button-flat.secondary {
+        margin: 19% 0 0 57%;
+        text-decoration: none;
+        background-color: #24B6E0;
+    }
+
+    .fullspiff.bnrtopregalos span.button-flat.secondary {
+        margin: 35% 9% 0 0;
+        text-decoration: none;
+        background-color: #fff;
+        color: #BF1F25;
+        float: right;
+        padding: 0.8em 1.5em;
+    }
+
+    .especialbarbie .especial-barbie img {
+        width: 95%;
+    }
+
+    .landing--jugueton .importante-parati .col-xs-12:nth-child(2) .minispiff-item img {
+        padding: 2% 0 5% 0;
+    }
+
+    .landing--jugueton .importante-parati .col-xs-12:nth-child(3) .minispiff-item img {
+        padding: 6% 0 6% 0;
+    }
+
+    .landing--jugueton .importante-parati .col-xs-12:nth-child(4) .minispiff-item img {
+        padding: 1% 0 5% 0;
+    }
+
+    .landing--jugueton .minispiff-item p span {
+        font-size: 0.8em;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .homejugueton.teofrecemos div.row {
+        background-color: rgba(247, 247, 247, 0.4);
+        padding: 1.4% 0;
+        cursor: pointer;
+        margin: 0px;
+    }
+
+    .homejugueton.teofrecemos .spiffs-item img {
+        width: 48%;
+        margin: 0 auto 5%;
+    }
+
+    .homejugueton.teofrecemos .spiffs-item p {
+        font-size: 1em;
+        height: 2.7rem;
+        font-weight: normal;
+    }
+
+    .homejugueton.teofrecemos .spiffs-item span {
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 0.813em;
+    }
+
+    .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:last-child section.spiffs-item {
+        border-right: none !important;
+    }
+
+    .homejugueton.teofrecemos section.spiffs-item {
+        border-right: 1px solid #D8D8D8;
+    }
+
+    .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:first-child .spiffs-item img {
+        width: 28%;
+    }
+
+    .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(2) .spiffs-item img {
+        padding: 1% 0 0 0;
+        width: 42%;
+    }
+
+    .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(3) .spiffs-item img {
+        width: 34%;
+        margin: 2% auto 5%;
+    }
+
+    .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:last-child .spiffs-item img {
+        width: 35%;
+        padding: 11% 0 0 0;
+    }
+
+    .landing--jugueton .nuestrapromesa .bkgpromesa {
+        background-image: url(/arquivos/2021_banner_promesa_oct_mobile.jpg);
+        background-size: contain;
+        height: 24.8rem;
+        padding: 18rem 0 0;
+        margin: 0;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        background-repeat: no-repeat;
+    }
+
+    .landing--jugueton .nuestrapromesa .bkgpromesa h4 {
+        font-size: 1.25em;
+        padding: 0;
+    }
+
+    .landing--jugueton .nuestrapromesa .bkgpromesa p {
+        font-size: 1em;
+    }
+
+    .landing--jugueton .nuestrapromesa .bkgpromesa span {
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 0.813em;
+    }
+
+    .landing--jugueton .compra-en-linea {
+        display: none;
+    }
+
+
+    .landing--jugueton .ciberdiascarrusel h4,
+    .landing--jugueton .ciberdiascarrusel p a {
+        display: none;
+    }
+
+    .landing--jugueton .ciberdias .re-central {
+        padding: 0;
+    }
+
+    .landing--jugueton .ciberdiascarrusel .titular h3 {
+        text-align: center;
+        color: #fff;
+        padding: 0;
+        font-size: 1.875em;
+    }
+
+    .landing--jugueton .ciberdiascarrusel .titular h3 span {
+        font-weight: normal;
+        font-size: 1rem;
+    }
+
+    .landing--jugueton .re-central .ciberdiascarrusel li.slick-slide {
+        border: none !important;
+    }
+
+    .landing--jugueton .single-board {
+        margin-bottom: 0;
+        padding: 0 1.4% 0 0;
+    }
+
+    .landing-bts-jugueton .row .col-md-6 .spiff1 {
+        background-image: url(https://cemacogt.vteximg.com.br/arquivos/2021_jugueton_spiffarfarma.jpg);
+    }
+
+    .products-slider__space slick-slide {
+        display: none;
+    }
+
+    .banners-clases {
+        width: auto;
+    }
+
+    .banners-clases-item {
+        padding: 0 .4rem;
+    }
+
+    .container {
+        width: auto !important;
+    }
+
+    .banners-clases-item:nth-child(3) .cont-titular {
+        padding: 2% 0 0 0;
+    }
+
+    .banners-clases-item:nth-child(3) .cont-titular span {
+        padding: 0 0 0% 0;
+    }
+
+    .minispiff.row:before,
+    .row:after {
+        height: 0;
+        width: 0;
+    }
+
+    .landing--jugueton .border_radius {
+        background: #EEEEEE;
+        /*border-radius: 11px;*/
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .landing--jugueton .border_radius2 {
+        /*border-radius: 11px;*/
+        overflow: hidden;
+    }
+
+
+    @media (min-width: 320px) {
+        .banner-slider_text {
+    font-size: 0.7rem;
+}
+        .ofertas-daymom-wrapper main {
+            font-size: .7em;
         }
-        .cpopup-ofrecemos section p:nth-child(2){
-            margin: 0 0 2% 0;
+
+        .ofertas-daymom-wrapper h4 {
+            font-size: 0.85em;
         }
-        #promfelicidad section p{
+
+        .content-mom {
+            margin-top: 10%;
+        }
+
+        .desktop-v1 {
+            display: none;
+        }
+
+        .carruselHomeJuguetonE {
+            position: relative;
+            margin-left: -50vw;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-top: 0;
+            padding-bottom: 1rem;
+            width: 100vw;
+            left: 50%;
+        }
+
+        .carruselHomeJuguetonE .products-slider__wrapper #swiper-carrusel11 h4 {
+            margin-right: auto;
+        }
+
+        .re-central.importanteparati.desktop {
+            display: none;
+        }
+
+        br.desktop {
+            display: none;
+        }
+
+        .hidden-lg-up {
+            display: flex !important;
+        }
+
+        .footer--contacto .footer__list--social {
+            /*display: none;*/
+        }
+
+        strong.despiertatitular {
+            font-size: .95em;
+            padding: 2% 0 0;
+            display: block;
+        }
+
+        .landing--jugueton .contentslide {
+            width: unset;
+        }
+
+        .col-xs-4 {
+            max-width: 50%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .parati-text b {
+            font-size: 1.3em;
+        }
+
+        .landing--jugueton .button-vermas {
+            text-decoration: underline;
+            display: block;
+            padding: 0 0 3% 0;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .boton_banner {
+            position: absolute;
+            padding: 52% 0% 0% 0%;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 0.6rem;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 18.6rem;
+            padding: 13rem 0 0;
+        }
+
+        .landing--jugueton .col-xs-12.banners-clases-item.padding-spiff-banner-ft {
+            padding: 4% 1% 0;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 262px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 43% 40% 0 0%;
+        }
+
+        .landing--jugueton .single-board {
+            padding: 0;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .landing--jugueton .carrusel-importanteparati {
+            position: relative;
+            background-color: rgba(247, 247, 247, 0.8);
+        }
+
+        .landing--jugueton .content-sliders .slick-list {
+            padding: 0;
+        }
+
+        .importanteparati img {
+            width: 100%;
+        }
+
+        .minispiff {
+            margin: 0 8px 5px 10px;
+            grid-template-columns: 48% 48%;
+            grid-gap: 12px;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            margin-bottom: 3%;
+            min-height: 146px;
+        }
+
+        .importanteparati p {
+            margin-bottom: 5%;
+        }
+
+        .minispiff-item p strong {
+            font-size: 1em;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(2) .loguitos {
+            padding: 10px 0 2%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(3) .loguitos {
+            padding: 10px 0 4%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(4) .loguitos {
+            padding: 0%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(2) {
+            margin-bottom: 5%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(3) {
+            margin-bottom: 5%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(4) {
+            margin-bottom: 5%;
+        }
+
+        .landing--jugueton .row.fullcontent-jugueton {
+            margin: 0;
+        }
+
+        .compraedad .item-cocina {
+            width: 27.5%;
+            display: inline-block;
+            float: none;
+            margin: 0 2% 0 2%;
+        }
+
+        .marcasfavoritas .item-cocina {
+            width: 30%;
+            display: inline-block;
+            float: none;
+        }
+
+        .juguetes-mas.compraedad {
+            text-align: center;
+        }
+
+        .juguetes-mas.marcasfavoritas {
+            text-align: center;
+        }
+
+        .med-spiff .col-md-3 {
+            margin-top: 0;
+            float: left;
+            width: 50%;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        a.txt-ver-mas.mobile {
+            padding-top: 25%;
+        }
+
+        a.txt-ver-mas {
+            font-size: 0.875em;
+        }
+
+        .celebremos a.txt-ver-mas.mobile {
+            padding-top: 2%;
+        }
+
+        .celebremos p {
+            padding-top: 3%;
+        }
+
+        .celebration p {
+            padding-top: 5%;
+        }
+
+        .bebe-jugueton .logo-bebe {
+            padding-top: 4%;
+            padding-bottom: 0%;
+        }
+
+        .fullspiff span {
+            color: white;
+        }
+
+        .fullspiff h3 {
+            font-size: 1.188em;
+        }
+
+        .bebe-jugueton .logo-bebe img {
+            width: 35%;
+        }
+
+        .categories-jugueton img {
+            width: 90%;
+        }
+
+        .products-slider__container {
+            position: relative;
+
+        }
+
+        .tag-title--level-3,
+        .importante-parati h2,
+        .main-cat-jugueton h2,
+        .med-spiff h4 {
+            font-size: 1.45em !important;
+        }
+
+        .med-spiff h4 {
+            color: #000;
+            display: inline-block;
+        }
+
+        .landing--jugueton .carruselHomeJuguetonE h4 {
+            font-size: 1.45em;
+        }
+
+        .landing--jugueton .juguetes-mas h2 {
+            font-size: 1.45em;
+        }
+
+        .nuestrapromesa h2.text-center {
+            font-size: 1.45em;
+        }
+
+        .homejugueton.teofrecemos .spiffs-item p {
+            font-size: .9em;
+        }
+
+        .largespiff.spiff-disfruta .cont-titular h3 {
+            font-size: 1.375em;
+            padding: 0 0 3%;
+        }
+
+        .largespiff.spiff-disfruta .cont-titular span {
+            font-size: 0.875em;
+            color: #000;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .largespiff.spiff-disfruta .cont-titular {
+            color: #fff;
+            position: absolute;
+            padding: 4% 0 0 3%;
+        }
+
+        .cont-titular h3 {
+            font-size: .8em;
+            padding: 0 0 1%;
+        }
+
+        .cont-titular span {
+            font-size: 0.875em;
+            color: #000;
+            text-decoration: underline;
+            font-weight: normal;
+            padding: 0 0 3% 0;
+            display: block;
+        }
+
+        .firstdoublespiff .cont-titular span {
+            font-weight: normal;
+        }
+
+        .cont-titular {
+            color: #000;
+            position: relative;
+            padding: 2% 0 0 0;
+            text-align: center;
+        }
+
+        .cont-titular.preescolar {
+            color: #000 !important;
+        }
+    }
+
+
+    @media (min-width: 360px) {
+        .minispiff .minispiff-item p.txt-p-spiff span {
+            font-size: 1em;
+        }
+
+        .ofertas-daymom-wrapper p {
+            font-size: .8em !important;
+        }
+
+        .ofertas-daymom-wrapper main {
+            font-size: .8em;
+        }
+
+        .ofertas-daymom-wrapper h4 {
+            font-size: 1em;
+        }
+
+        .content-mom {
+            margin-top: 12%;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 21.3rem;
+            padding: 15rem 0 0;
+        }
+
+        .importanteparati .row {
+            background-color: rgba(247, 247, 247, 0.4);
+            padding: 5% 5%;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 296px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 43% 40% 0 0%;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 0.7rem;
+        }
+
+        a.txt-ver-mas.mobile {
+            padding-top: 24%;
+        }
+
+        .celebremos a.txt-ver-mas.mobile {
+            padding-top: 5%;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 173px;
+        }
+    }
+
+    @media only screen and (min-width: 375px) {
+                .banner-slider_text {
+    font-size: 0.7rem;
+}
+        .ofertas-daymom-wrapper main {
+            font-size: .8em;
+        }
+
+        .ofertas-daymom-wrapper h4 {
+            font-size: 1.1em;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 0.7rem;
+        }
+
+        .minispiff-item p strong {
+            font-size: 1.25em;
+        }
+
+        .minispiff-item p {
+            font-size: 9px;
+            text-align: center;
+            padding-top: 4px;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 22.2rem;
+            padding: 15.4rem 0 0;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 1.2em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-size: 0.875em;
+        }
+
+        .minispiff {
+            margin: 0 7px 5px 10px;
+        }
+
+        .minispiff .minispiff-item p.txt-p-spiff {
+            font-size: 0.78em;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 309px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 43% 42% 0 0%;
+        }
+
+        a.txt-ver-mas.mobile {
+            padding-top: 23%;
+        }
+
+        .celebremos a.txt-ver-mas.mobile {
+            padding-top: 1%;
+        }
+
+        .homejugueton.teofrecemos .spiffs-item p {
+            font-size: 1em;
+        }
+
+        .fullspiff.bnrtopregalos span.button-flat.secondary {
+            margin: 36% 13% 0 0;
+        }
+    }
+
+    @media (min-width: 410px) {
+        strong.despiertatitular {
+            font-size: 1em;
+        }
+
+        .cont-titular h3 {
+            font-size: 1em;
+            padding: 0 0 1%;
+        }
+
+        .landing--jugueton .txt-ver-mas {
+            padding: 1% 0 6%;
+        }
+
+        .ofertas-daymom-wrapper h4 {
+            font-size: 1.2em;
+        }
+
+        .minispiff .minispiff-item h4 {
+            font-size: 1em;
+            padding-bottom: 0;
+        }
+
+        u.bottom-carrusel {
+            font-size: 0.875rem;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 24.5rem;
+            padding: 17.4rem 0 0;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 338px;
+        }
+
+        .minispiff-item p strong {
+            font-size: 1.25em;
+        }
+
+        .minispiff {
+            margin: 0 0 2% 4px;
+        }
+
+        .fullspiff.bnrtopregalos span.button-flat.secondary {
+            margin: 35% 15% 0 0;
+        }
+
+    }
+
+    @media only screen and (min-width: 414px) {
+
+        .tag-title--level-3,
+        .importante-parati h2,
+        .main-cat-jugueton h2,
+        .med-spiff h4 {
+            font-size: 1.675em !important;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.675rem !important;
+        }
+
+        .ofertas-daymom-wrapper main {
+            font-size: .9em;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 0.7rem;
+        }
+
+        .minispiff-item p strong {
+            font-size: 1.2em;
+        }
+
+        .minispiff-item p {
+            text-align: center;
+            font-size: 0.8em;
             line-height: 16px;
         }
-        #promfelicidad{
-            top: 3%;
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 25.5rem;
+            padding: 17rem 0 0;
         }
-        #promautoservicio article.row{
-            width: 100%;
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 1.3em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-size: 1em;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 340px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 44% 42% 0 0%;
+        }
+
+        .minispiff .minispiff-item h4 {
+            font-size: 1em;
+        }
+
+        .minispiff .minispiff-item p.txt-p-spiff {
+            font-size: 0.83em;
+        }
+
+        .celebremos a.txt-ver-mas.mobile {
+            padding-top: 1%;
+        }
+
+    }
+
+    @media only screen and (min-width: 480px) {
+        .content-mom {
+            margin-top: 15%;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 0.8rem;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 29rem;
+            padding: 20rem 0 0;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 1.4em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-size: 1em;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 43% 42% 0% 0%;
+        }
+
+        a.txt-ver-mas.mobile {
+            padding-top: 22%;
+        }
+
+        .celebremos a.txt-ver-mas.mobile {
+            padding-top: 1%;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 220px;
+        }
+
+        .cont-titular h3 {
+            font-size: 1.2em;
+            padding: 0 0 1%;
+        }
+
+        strong.despiertatitular {
+            font-size: 1.25em;
+        }
+
+        .tag-title--level-3,
+        .importante-parati h2,
+        .main-cat-jugueton h2,
+        .med-spiff h4 {
+            font-size: 1.55em !important;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .banner-slider_text {
+    position: absolute;
+    font-size: 0.65rem;
+    right: 0;
+    left: 28%;
+    bottom: 5;
+    margin: 0 auto;
+}
+        .ofertas-daymom-wrapper main {
+            font-size: .65em;
+        }
+
+        .content-mom {
+            margin-top: 0% !important;
+        }
+
+        .ofertas-daymom-wrapper .contenedor-m {
+            width: 96%;
+            margin: 0 auto;
+            padding-top: 0%;
+
+        }
+
+
+        .ofertas-daymom-wrapper h2 {
+            padding: 3% 0 0 0;
+        }
+
+        #productsSlider04 .prateleira.vitrine {
+            padding-top: 2%;
+        }
+
+        u.bottom-carrusel {
+            font-size: 0.813rem;
+        }
+
+        .landing--jugueton .compraedadtwo {
+            margin: 0% 0 5% 0;
+        }
+
+        .landing--jugueton .compraedadtwo {
+            margin: 2% 0 2% 0;
+            display: flex;
+        }
+
+        .compraedadtwo .img-compra-edad-st {
+            width: 100% !important;
             margin: 0;
         }
-        #promautoservicio{
-            top: 4rem;
+
+        .carruselHomeJuguetonE .products-slider__wrapper #swiper-carrusel11 {
+            margin: 0 20px;
+            padding-right: 0;
         }
-        #prommetodopago{
-            top: 2rem;
+
+        .carruselHomeJuguetonE .products-slider__wrapper #swiper-carrusel11 h4 {
+            margin-right: unset;
         }
-     }
-    @media only screen and (min-width: 768px){
-        .cpopup-ofrecemos{
-            width: 78%;
-            padding: 2% 2% 2%;
+
+        .img-compra-edad-st {
+            width: 59% !important;
+            margin: auto;
         }
-        .cpopup-ofrecemos section h4{
-            margin: 4% 0 2% 0;
+
+        h2.tag-title--level-1.pd-0-st.compra-por-edad-ft.pdb-st-title {
+            margin-bottom: 16px !important;
         }
-        #promgarantia{
-            top: 14rem;
+
+        .md-top-st {
+            margin-top: 45px !important;
         }
-        #prommetodopago{
-            top: 14rem;
+
+        .carruselHomeJuguetonE {
+            position: initial;
+            margin-left: 0vw;
+            width: auto;
+            left: 0%;
+            padding-top: 1rem;
+            margin-top: auto;
         }
-        #promfelicidad{
-            top: 12rem;
+
+        .swiper-button-prev {
+            left: -5px;
         }
-        #promfelicidad section p{
-            line-height: 23px;
-            font-size: 0.870em;
+
+        .minispiff .minispiff-item {
+            padding: 0 10px;
         }
-    }
-    @media only screen and (min-width: 1024px){
-        .cpopup-ofrecemos{
-            width: 62%;
+
+        .col-md-3 {
+            width: 25%;
         }
-        .cpopup-ofrecemos section h4{
-            margin: 1% 0 2% 0;
+
+        .banners-clases-item:nth-child(3) .cont-titular {
+            padding: 2% 0 0 0;
+        }
+
+        .preescolar-show {
+            display: none;
+        }
+
+        .banners-clases-item:nth-child(1) {
+            padding: 0 .5rem 0 0;
+        }
+
+        .re-central.importanteparati.desktop {
+            display: block;
+        }
+
+        br.desktop {
+            display: block;
+        }
+
+        .footer--contacto .footer__list--social {
+            display: block;
+        }
+
+        .hidden-lg-up {
+            display: none !important;
+        }
+
+        .categories-jugueton span {
+            font-size: .9em;
+        }
+
+        b,
+        strong,
+        mark {
+            font-size: 0.875em;
+        }
+
+        strong.despiertatitular {
+            font-size: 1em;
+            padding-top: 0;
+        }
+
+        .landing--jugueton .txt-ver-mas {
+            padding: 2% 0 3%;
+        }
+
+        .banners-clases-item:nth-child(3) .cont-titular span {
+            padding: 0 0 2% 0;
+        }
+
+        .banners-clases-item {
+            padding: 0 0 1rem 0.5rem;
+        }
+
+        .firstdoublespiff .cont-titular span {
+            font-weight: normal;
+        }
+
+        .tag-title--level-3,
+        .importante-parati h2,
+        .main-cat-jugueton h2,
+        .med-spiff h4 {
+            font-size: 1.875em !important;
+        }
+
+        .landing--jugueton .carruselHomeJuguetonE h4 {
+            font-size: 1.875em;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        .landing--jugueton .largespiff.re-central {
+            padding-left: 0;
+            margin: 5% 0 0 0;
+        }
+
+        .landing--jugueton .contentslide {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .landing--jugueton .button-vermas {
+            display: inline-block;
+            padding: 0 0 0 1%;
+        }
+
+        .landing--jugueton .teofrecemos.re-central {
             padding: 0;
         }
-        #promfelicidad section p{
-            line-height: 18px;
+
+        .landing--jugueton .col-xs-12.banners-clases-item.padding-spiff-banner-ft {
+            padding: 1% 0 0;
         }
-        #promfelicidad{
-            top: 10rem;
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 {
+            background-image: url(/arquivos/2021_jugueton_home27oct_gvmn_portada1_deskV2.jpg);
+            min-height: 189px;
         }
-        .cpopup-ofrecemos section p{
-            line-height: 21px;
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            background-image: url(/arquivos/2021_jugueton_home27oct_gvmn_portada2_deskV2.jpg);
+            min-height: 189px;
         }
-        .cpopup-ofrecemos section p:nth-child(2){
-            margin: 0 0 2% 0;
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 21.2% 28% 0% 0%;
         }
-        #promgarantia{
-            top: 12rem;
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner .button-flat.secondary,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner .button-flat.secondary {
+            padding: 0.6em 2em;
         }
-        #promautoservicio ul li{
-            line-height: 21px;
+
+        .landing--jugueton .content-sliders {
+            margin-right: 0;
         }
-        #promautoservicio{
-            top: 12rem;
+
+        .fullspiff.ofertassemana {
+            min-height: 194px;
+            margin: 2% 0 0 0;
         }
-        #prommetodopago{
-            top: 8rem;
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 19.5% 0 0 13%;
+            padding: 0.8em 1em;
+        }
+
+
+        .landing--jugueton .main-cat-jugueton {
+            margin: 2% 0 3%;
+        }
+
+        .minispiff-item p strong {
+            font-size: 1.25em;
+            line-height: 5px;
+            height: 12px;
+        }
+
+        .minispiff-item p {
+            font-size: 1em;
+        }
+
+        .minispiff {
+            margin: 0px 0px 0;
+            display: grid;
+            grid-template-columns: 24% 24% 24% 24%;
+
+        }
+
+        .minispiff .minispiff-item {
+            margin: 0% 0 0;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .boton_banner {
+            padding: 11% 0 0 28%;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 0.7rem;
+            padding: 1.5em 3em;
+            font-weight: 400;
+        }
+
+        .homejugueton.teofrecemos .spiffs-item p {
+            font-size: 0.875em;
+        }
+
+        .landing--jugueton .nuestrapromesa {
+            padding: 0 0%;
+            margin: 1% auto 0%;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            background-image: url(/arquivos/2022_banner-bkg_promesa_enero.png);
+            background-size: cover;
+            height: 6rem;
+            color: #fff;
+            padding: 4% 0 0 5%;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa h4 {
+            font-size: 1.25em;
+            padding: 0;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 0.68em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 0.68em;
+        }
+
+        .importanteparati img {
+            width: 82%;
+            margin: 0 auto 2%;
+        }
+
+        .importanteparati .lanoria img {
+            width: 100%;
+            margin: 13% auto 8%;
+        }
+
+        .importanteparati .impciberdias img {
+            width: 95%;
+            margin: 13% auto 5%;
+        }
+
+        .importanteparati .salud img {
+            width: 90%;
+            margin: 8% auto 3%;
+        }
+
+        .importanteparati br.desktop-xl {
+            display: none;
+        }
+
+        .importanteparati p {
+            text-align: center;
+            font-size: 0.77em;
+            margin-bottom: 0%;
+        }
+
+        .importanteparati .row {
+            background-color: rgba(247, 247, 247, 0.4);
+            padding: 3% 2%;
+            margin-left: 0%;
+            margin-right: 1%;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            margin-bottom: 3%;
+            padding-left: 3%;
+            min-height: 199px;
+        }
+
+        .fullspiff.comparteenfamilia .button {
+            margin: 19% 0 0 57%;
+        }
+
+        .fullspiff.comparteenfamilia {
+            min-height: 11.8rem;
+        }
+
+        .landing--jugueton .txt-ver-mas .med-spiff.re-central.mundodiversion {
+            padding: 1% 0 0;
+        }
+
+        .minispiff .minispiff-item p.txt-p-spiff {
+            font-size: 1em;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(2) .loguitos {
+            padding: 7px 0 0%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(3) .loguitos {
+            padding: 0 0 0;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(4) .loguitos {
+            padding: 0px 0 0%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(2) {
+            margin-bottom: 0%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(3) {
+            margin-bottom: 0%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(4) {
+            margin-bottom: 0%;
+        }
+
+        .compraedad .item-cocina {
+            width: 25%;
+            margin: 0 0% 0 0%;
+            padding: 0px;
+        }
+
+        .marcasfavoritas .item-cocina {
+            width: 16.1%;
+            padding: 2px;
+        }
+
+        .med-spiff .col-md-3 {
+            width: 25%;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+
+        .celebremos p {
+            padding-top: 3%;
+            line-height: normal;
+        }
+
+        .bebe-jugueton .logo-bebe {
+            padding-top: 2%;
+            padding-bottom: 0%;
+        }
+
+        .bebe-jugueton h3 {
+            padding-bottom: 2%;
+            padding-top: 1%;
+        }
+
+        .landing-bts-jugueton .spiff-text span {
+            font-size: 0.875em;
+        }
+
+        .fullspiff span {
+            font-size: 0.875em;
+        }
+
+        .fullspiff h3 {
+            font-size: 1.25em;
+            padding-top: 0%;
+        }
+
+        .bebe-jugueton .logo-bebe img {
+            width: auto;
+        }
+
+        .categories-jugueton img {
+            width: 80%;
+        }
+
+        .carrusel-importanteparati .swiper-button-next {
+            right: -5px;
+
+        }
+
+        .carrusel-importanteparati .swiper-button-prev {
+            left: -5px;
+
+        }
+
+        .products-slider__container .swiper:after {
+            display: none;
+        }
+
+        .products-slider__container {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .has-banner .product-list.slider-view .product-item__wrapper {
+            background: white;
+        }
+
+        .products-slider__container .swiper {
+            padding-right: 24px;
+            padding-left: 24px;
+            margin-left: 0;
+            margin-right: -4px;
+        }
+
+
+        .landing--jugueton .juguetes-mas {
+            margin: 0% 0 4% 0;
+        }
+
+        .juguetes-mas.compraedad {
+            margin: 0% 0 4% 0;
+            display: flex;
+            align-content: space-between !important;
+            width: 108.8% !important;
+            margin-left: -4.3% !important;
+        }
+
+        .landing-bts-jugueton.re-central {
+            margin: 2% 0 2% 0;
+            padding-right: 15px;
+            padding-left: 0px;
+        }
+
+        .fullspiff.bnrtopregalos span.button-flat.secondary {
+            margin: 17% 11% 0 0;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 185px;
+        }
+
+        .landing--jugueton .mundodiversion {
+            margin: 0 0 3% 0;
+        }
+
+        .med-spiff.re-central.mundodiversion .col-md-3:nth-child(4) .loguitos img {
+            width: 14%;
+            padding: 2% 0 0 0;
+        }
+
+        .med-spiff.re-central.mundodiversion .col-md-3:nth-child(3) .loguitos img {
+            width: 23%;
+        }
+
+        .mundodiversion.med-spiff.re-central.mundodiversion .col-md-3:nth-child(2) span.txt-ver-mas,
+        .mundodiversion.med-spiff.re-central.mundodiversion .col-md-3:nth-child(3) span.txt-ver-mas,
+        .mundodiversion.med-spiff.re-central.mundodiversion .col-md-3:nth-child(4) span.txt-ver-mas {
+            padding: 2% 0 5%;
+        }
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(2) .spiffs-item img {
+            padding: 2.5% 0 0 0;
         }
     }
-    @media only screen and (min-width: 1366px){
-        .cpopup-ofrecemos{
-            width: 46%;
-        }
-        #promgarantia{
-            top: 6rem;
-        }
-        #promautoservicio{
-            top: 7rem;
-        }
-        #prommetodopago section article img{
-            margin: 1% auto 2%;
-        }
-        #prommetodopago{
-            top: 5rem;
-        }
-        #promfelicidad{
-            top: 5rem;
+
+    @media only screen and (min-width: 785px) {
+        .break-desk {
+            display: block;
         }
     }
-    @media only screen and (min-width: 1440px){
-        .cpopup-ofrecemos{
+
+    @media only screen and (min-width: 972px) {
+        .break-desk {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 1023px) {
+        .break-desk {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .minispiff .minispiff-item p.txt-p-spiff span {
+            padding-bottom: 6%;
+        }
+
+        .ofertas-daymom-wrapper main {
+            font-size: 0.8em !important;
+        }
+
+        .ofertas-daymom-wrapper h4 {
+            font-size: 1.25em !important;
+        }
+
+        .minispiff .minispiff-item h4 {
+            font-size: 1.25em;
+        }
+
+        .content-mom {
+            margin-top: 1% !important;
+        }
+
+        .categories-jugueton span {
+            font-size: 0.85em;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 190px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 238px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 21.2% 29% 0% 0%;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner .button-flat.secondary,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner .button-flat.secondary {
+            padding: 1em 3em;
+        }
+
+
+        .fullspiff.ofertassemana {
+            min-height: 235px;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 18% 0 0 14%;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            padding: 1.2em 3em;
+        }
+
+        .especialbarbie {
+            margin: 8px 0 0;
+        }
+
+        .minispiff-item p strong {
+            height: 20px;
+            line-height: 25px;
+            font-size: 1.3em;
+        }
+
+        .homejugueton.teofrecemos .spiffs-item p {
+            font-size: 0.9em;
+        }
+
+        .main-slider--control-banner .slick-track {
+            padding-bottom: 0em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 0.85em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-size: 0.85em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            padding: 3% 0 0 5%;
+            height: 7rem;
+        }
+
+        .minispiff {
+            margin: 0px 0px 24px -13px;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-gap: 0px;
+        }
+
+        .minispiff-item.primerojugueton {
+            margin-left: 11.5px !important;
+        }
+
+        .fullspiff.comparteenfamilia {
+            min-height: 15rem;
+        }
+
+        .fullspiff.comparteenfamilia .button {
+            margin: 19% 0 0 57%;
+        }
+
+        .importanteparati .impciberdias img {
+            width: 95%;
+            margin: 12% auto 6%;
+        }
+
+        .importanteparati .lanoria img {
+            width: 100%;
+            margin: 13% auto 8%;
+        }
+
+        .importanteparati .salud img {
+            width: 90%;
+            margin: 8% auto 4%;
+        }
+
+        .landing--jugueton .contentslide {
+            margin-left: -15px;
+        }
+
+        .minispiff .minispiff-item p.txt-p-spiff {
+            font-size: 16px;
+        }
+
+        .importanteparati p {
+            font-size: 0.95em;
+        }
+
+        .fullspiff h3 {
+            font-size: 1.5em;
+            padding-top: 0%;
+        }
+
+
+        .fullspiff.bnrtopregalos {
+            min-height: 210px;
+        }
+
+        .fullspiff.bnrtopregalos span.button-flat.secondary {
+            margin: 14.6% 9% 0 0;
+            padding: 1em 3em;
+        }
+    }
+
+    @media only screen and (min-width: 1279px) {
+        .break-desk {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .banner-slider_text {
+    font-size: 0.75rem;
+}
+        .ofertas-daymom-wrapper main {
+            font-size: 1em !important;
+        }
+
+        .ofertas-daymom-wrapper h4 {
+            font-size: 1.5em !important;
+        }
+
+        .content-mom {
+            margin-top: 0% !important;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 252px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 295px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1 .boton_banner,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 .boton_banner {
+            padding: 21.5% 31% 0% 0%;
+        }
+
+        .landing--jugueton .content-sliders {
+            margin-right: -5px;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 0.9em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            padding: 4% 0 0 5%;
+            height: 9rem;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 1em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-size: 1em;
+        }
+
+        .minispiff-item p strong {
+            font-size: 1.5em;
+        }
+
+        .minispiff {
+            margin: 0px -9px 24px -9px;
+
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 19% 0 0 15%;
+            padding: 1em 2em;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 19rem;
+        }
+
+        .fullspiff.comparteenfamilia {
+            min-height: 19rem;
+        }
+
+        .fullspiff.comparteenfamilia .button {
+            margin: 18% 0 0 61%;
+        }
+
+        .importanteparati .lanoria img {
+            width: 94%;
+            margin: 11% auto 6%;
+        }
+
+        .importanteparati .lanoria section {
+            margin: 6% 0 0 0;
+        }
+
+        .importanteparati .salud img {
+            margin: 7% auto 7%;
+            width: 95%;
+        }
+
+        .importanteparati .impciberdias img {
+            margin: 9% auto 5%;
+        }
+
+        .importanteparati .impciberdias section {
+            margin: 4% 0 0 0;
+        }
+
+        strong.despiertatitular {
+            font-size: 1.25em;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 265px;
+        }
+
+        .fullspiff.bnrtopregalos span.button-flat.secondary {
+            margin: 14.9% 13% 0 0;
+        }
+
+        .largespiff.spiff-disfruta .cont-titular h3 {
+            font-size: 1.625em;
+        }
+
+        .cont-titular h3 {
+            font-size: 1.625em;
+        }
+    }
+
+    @media only screen and (min-width: 1366px) {
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 18% 0 0 15%;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 285px;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 298px;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 256px;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+               .banner-slider_text {
+    font-size: 0.85rem;
+}
+        .ofertas-daymom-wrapper main {
+            font-size: 1em !important;
+        }
+
+        .ofertas-daymom-wrapper h4 {
+            font-size: 1.625em;
+        }
+
+        .content-mom {
+            margin-top: 1% !important;
+        }
+
+        .desktop-v1 {
+            display: block;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 10rem;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 1.17em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-size: 1.17em;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            font-size: 1em;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 335px;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 335px;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 19% 0 0 17%;
+        }
+
+        .fullspiff.comparteenfamilia {
+            min-height: 21rem;
+        }
+
+        .fullspiff.comparteenfamilia .button {
+            margin: 18% 0 0 65%;
+        }
+
+        .importanteparati .lanoria img {
+            width: 92%;
+            margin: 1% auto 8%;
+        }
+
+        .importanteparati .salud img {
+            margin: 4% auto 5%;
+            width: 100%;
+        }
+
+        .importanteparati .impciberdias img {
+            margin: 0 auto 6%;
+        }
+
+        .importanteparati .lanoria section {
+            margin: 1% 0 0 0;
+        }
+
+        .importanteparati .impciberdias section {
+            margin: 4% 0 0 0;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 293px;
+        }
+    }
+
+    @media only screen and (min-width: 1600px) {
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 334px;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 336px;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 19% 0 0 17%;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 298px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 284px;
+        }
+
+        .fullspiff.bnrtopregalos span.button-flat.secondary {
+            margin: 15.9% 15% 0 0;
+        }
+    }
+
+    @media only screen and (min-width: 1920px) {
+                      .banner-slider_text {
+    font-size: 1rem;
+}
+        .ofertas-daymom-wrapper main {
+            font-size: 1.125em !important;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 317px;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa {
+            height: 11rem;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa p {
+            font-size: 1.28em;
+        }
+
+        .landing--jugueton .nuestrapromesa .bkgpromesa span {
+            font-size: 1.28em;
+        }
+
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider1,
+        .landing--jugueton .content-sliders .item-portada .mainimage-jugueton-slider2 {
+            min-height: 369px;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 23.5rem;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 19.5% 0 0 18%;
+        }
+
+
+        .minispiff {
+            margin: 10px -2px 24px -12px;
+        }
+
+        .fullspiff.comparteenfamilia .button {
+            margin: 17% 0 0 67%;
+        }
+
+        .importanteparati .lanoria img {
+            width: 90%;
+            margin: 3% auto 4%;
+        }
+
+        .importanteparati br.desktop-xl {
+            display: unset;
+        }
+
+        .importanteparati .impciberdias img {
+            margin: 3% auto 3%;
+        }
+
+        .minispiff .minispiff-item h4 {
+            font-size: 1.25em;
+            padding-bottom: 0;
+        }
+
+        .minispiff .minispiff-item p.txt-p-spiff {
+            font-size: 16px;
+            padding-top: 8px;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(2) .loguitos {
+            padding: 4% 0 0%;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(3) .loguitos {
+            padding: 5px 0 0;
+        }
+
+        .marcasfavoritas .item-cocina {
+            width: 16.4%;
+            padding: 5px;
+        }
+
+        .importanteparati .lanoria section {
+            margin: 0 0 0 0;
+        }
+
+        .importanteparati .impciberdias section {
+            margin: 4% 0 0 0;
+        }
+
+        .fullspiff {
+            min-height: 307px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 310px;
+        }
+
+        .fullspiff.bnrtopregalos span.button-flat.secondary {
+            margin: 14.1% 15% 0 0;
+        }
+    }
+
+    @media (max-width: 1925px) {
+        h2.text-center {
+            margin-top: 3%;
+            font-size: 1.8em;
+        }
+
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 369px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 1850px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 335px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 1640px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 335px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 1490px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 335px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 281px;
+        }
+
+        .fullspiff {
+            min-height: 281px;
+        }
+    }
+
+    @media (max-width: 1399px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 297px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 247px;
+        }
+
+        .fullspiff {
+            min-height: 249px;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 297px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 248px;
+        }
+
+        .fullspiff {
+            min-height: 249px;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.438em;
+        }
+
+        p.parati-text {
+            margin: 0 5px 0 5px;
+            font-size: 0.938em;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .landing--jugueton .compra-en-linea img {
+            width: 95% !important;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 236px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 195px;
+        }
+
+        .fullspiff {
+            min-height: 198px;
+        }
+
+        .h3 {
+            font-size: 1.7rem;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.25em;
+        }
+
+        .compra-en-linea img {
+            width: 90%;
+        }
+
+        .spiff1 h3 {
+            font-size: 1.375em;
+            padding-top: 0%;
+        }
+
+        .spiff2 h3 {
+            font-size: 1.375em;
+            padding-top: 0%;
+        }
+
+        .bebe-jugueton h3 {
+            padding-bottom: 2%;
+        }
+    }
+
+    @media (max-width: 1120px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_desk.jpg);
+            min-height: 236px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 195px;
+        }
+
+        .fullspiff {
+            min-height: 198px;
+        }
+
+        .h3 {
+            font-size: 1.5rem;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.25em;
+        }
+
+        .compra-en-linea img {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        h3 {
+            font-size: 1.625em;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(2) .loguitos {
+            padding: 10px 0 4%;
+        }
+    }
+
+    @media (max-width: 960px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            min-height: 228px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 195px;
+        }
+
+        .fullspiff {
+            min-height: 390px;
+        }
+
+        .h3 {
+            font-size: 1.5rem;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.5rem;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.25em;
+        }
+
+        .compra-en-linea img {
+            width: 85%;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            min-height: 201px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        p.parati-text {
+            font-size: 0.875em;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 177px;
+        }
+
+        .fullspiff {
+            min-height: 170px;
+        }
+
+        .h3 {
+            font-size: 1.5rem;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.5rem;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.125em;
+        }
+
+        .compra-en-linea img {
+            width: 85%;
+        }
+
+        .slick-track,
+        .main-slider--control-banner .single-board,
+        .re-central {
+            width: 100%;
+        }
+
+        #mainSlider .slick-list {
+            padding: 0;
+        }
+
+        .bannerprincipal_jugueton .mainimage-jugueton .boton_banner {
+            padding: 16% 0% 0% 52%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .md-top-st {
+            margin-top: 30px !important;
+        }
+
+        .compra-por-edad-ft {
+            font-size: 1.75em !important;
+        }
+
+        .pdb-st-title {
+            font-size: 1.675em !important;
+        }
+
+    }
+
+    @media (max-width: 750px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            min-height: 185px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 316px;
+            margin-bottom: 25px;
+        }
+
+        .fullspiff {
+            min-height: 344px;
+        }
+
+        .h3 {
+            font-size: 1.5rem;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.5rem;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.438em;
+        }
+
+        .compra-en-linea img {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 690px) {
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            min-height: 169px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 290px;
+            margin-bottom: 25px;
+        }
+
+        .fullspiff {
+            min-height: 315px;
+        }
+
+        .h3 {
+            font-size: 1.5rem;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.5rem;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.438em;
+        }
+
+        .compra-en-linea img {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .landing--jugueton main.page-main--home-page.re-central {
+            padding: 0;
+        }
+
+        .landing--jugueton .videoofertassemana {
+            margin: 9% 0 0 0;
+        }
+
+        .bannerTres .col-xs-12 {
+            margin-bottom: 20px;
+        }
+
+        .landing--jugueton .juguetes-mas {
+            margin: 0 0 5% 1%;
+        }
+
+        .landing--jugueton .juguetes-mas .item-cocina .tag-subtitle {
+            padding-top: 3%;
+        }
+
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_mobile.jpg);
+            min-height: 171px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+
+        .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .boton_banner2 {
+            padding: 4% 0 0 2%;
+        }
+
+        .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .button-flat.secondary2 {
+            margin: 0 0 0 !important;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 189px;
+            margin-bottom: 25px;
+        }
+
+        .fullspiff {
+            min-height: 215px;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.188em;
+        }
+
+        .compra-en-linea img {
+            width: 80%;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.5rem;
+        }
+
+        .landing--jugueton .importante-parati {
+            width: 100%;
+            margin: 3% auto;
+            padding: 1% 2% 8%;
+            background-color: #fff;
+        }
+
+        .med-spiff .row .col-md-3:nth-child(2) .loguitos {
+            padding: 6px 0 0;
+        }
+
+        h2.text-center {
+            margin: 5% 0 0 0;
+        }
+
+        .landing--jugueton .importante-parati img {
+            width: 93%;
+            margin: 0 auto;
+        }
+
+        .landing--jugueton .importanteparati .col-xs-12 {
+            margin: 0 0 6% 0;
+        }
+
+        .landing--jugueton .importanteparati .col-xs-12:nth-child(2) img {
+            padding: 4% 0 5% 0;
+        }
+
+        .landing--jugueton .importanteparati .col-xs-12:nth-child(3) img {
+            padding: 6% 0 5% 0;
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        .landing--jugueton .importanteparati .col-xs-12:nth-child(4) img {
+            padding: 6% 0 2% 0;
+        }
+
+        .landing--jugueton .importanteparati {
+            text-align: center;
+        }
+
+        .fullspiff.comparteenfamilia {
+            background-image: url(/arquivos/2021_jugueton_ciberdias_banner_aprendejugando_mobile.jpg);
+            background-size: contain;
+            min-height: 341px;
+            background-position: center;
+        }
+
+        .fullspiff.comparteenfamilia .button {
+            width: 100%;
+            margin: 29% 0 0 31%;
+        }
+
+        .fullspiff.comparteenfamilia .button span {
+            padding: 7px 29px;
+        }
+
+        .fullspiff.bnrtopregalos {
+            background-image: url(/arquivos/2021_jugueton_ciberdias_banner_regalos_mobileV2-2.jpg);
+            background-size: contain;
+            min-height: 260px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-bottom: 5%;
+        }
+
+        .fullspiff.ofertassemana {
+            background-image: url(/arquivos/2021_jugueton_HSN_nov-v2_mobile.png);
+            background-size: contain;
+            min-height: 246px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-bottom: 1%;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 37% 0 0 10%;
+            padding: 0.8em 1em;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff1 {
+            background-image: url(/arquivos/2021_jugueton_spiffarmayconstruye_mobile.jpg);
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff2 {
+            background-image: url(/arquivos/2021_jugueton_spiffvehiculosypistas_mobile.jpg);
+        }
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(2) section.spiffs-item {
+            border-right: none;
+        }
+
+        .homejugueton.teofrecemos div.row {
+            padding: 3%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(3),
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(4) {
+            border-top: 1px solid #D8D8D8;
+        }
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3 {
+            padding: 5% 0;
+        }
+
+        .homejugueton.teofrecemos .spiffs-item img {
+            margin: 0 auto 10%;
+        }
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:first-child .spiffs-item img {
             width: 42%;
         }
-        .cpopup-ofrecemos section h4{
-            padding: 0;
-            line-height: 20px;
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(2) .spiffs-item img {
+            width: 68%;
         }
-        .contenedor-popups #prommetodopago h4,
-        .contenedor-popups #promautoservicio h4{
-            line-height: 1;
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:nth-child(3) .spiffs-item img {
+            width: 55%;
         }
-        .cpopup-ofrecemos section p:nth-child(2){
-            margin: 0;
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:last-child .spiffs-item img {
+            width: 50%;
+            padding: 14% 0 0 0;
         }
-        #promgarantia{
-            top: 12rem;
+
+        .homejugueton.teofrecemos div.col-sm-12.col-md-3.col-lg-3.col-xl-3.col-xs-6.mx-3:last-child .spiffs-item p {
+            height: unset;
         }
-        #promautoservicio ul li{
-            line-height: 19px;
+
+        .homejugueton .col-sm-12 {
+            width: 48%;
+            display: inline;
+            float: left;
         }
-        #promautoservicio{
-            top: 12rem;
+
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text h3 {
+            font-size: 1.375em;
+            padding-top: 2%;
         }
-        #prommetodopago section article img{
-            margin: 2% auto 0%;
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text span {
+            font-size: 0.875em;
         }
-        #prommetodopago{
-            top: 10rem;
+
+        .fullspiff span {
+            font-size: 0.875em;
         }
-        #promfelicidad section p{
-            line-height: 19px;
-        }
-        #promfelicidad{
-            top: 12rem;
+
+        .carrusel-importanteparati .swiper-button-next,
+        .carrusel-importanteparati .swiper-button-prev {
+            bottom: 13.6%;
         }
     }
-    @media only screen and (min-width: 1600px){
-        .cpopup-ofrecemos{
-            width: 38%;
+
+    @media (max-width: 425px) {
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 36.9% 0 0 8%;
+        }
+
+        .carrusel-importanteparati .swiper-button-next,
+        .carrusel-importanteparati .swiper-button-prev {
+            bottom: 14%;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 164px;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 227px;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 224px;
         }
     }
-    @media only screen and (min-width: 2500px){
-        .cpopup-ofrecemos{
-            width: 28%;
+
+    @media (max-width: 414px) {
+        .bannerTres .col-xs-12 {
+            margin-bottom: 20px;
+        }
+
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_mobile.jpg);
+            min-height: 168px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+
+        .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .button-flat.secondary2 {
+            margin: 0 0 0 !important;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 163px;
+            margin-bottom: 25px;
+        }
+
+        .fullspiff {
+            min-height: 187px;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 189px;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.125em;
+        }
+
+        .compra-en-linea img {
+            width: 70%;
+            margin-bottom: 15px;
+        }
+
+        .bebe-jugueton h3 {
+            padding-bottom: 4%;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 37% 0 0 10%;
+            font-size: .75em;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 220px;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 213px;
+        }
+
+        .carrusel-importanteparati .swiper-button-next,
+        .carrusel-importanteparati .swiper-button-prev {
+            bottom: 14%;
         }
     }
-    
+
+    @media (max-width: 375px) {
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 36% 0 0 9.5%;
+            padding: 0.75em .7em;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 195px;
+        }
+
+
+        .landing--jugueton .txt-ver-mas {
+            padding: 0% 0 5%;
+        }
+
+        .tag-title--level-3,
+        .importante-parati h2,
+        .main-cat-jugueton h2,
+        .med-spiff h4 {
+            font-size: 1.5em !important;
+        }
+
+        .bannerTres .col-xs-12 {
+            margin-bottom: 20px;
+        }
+
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_mobile.jpg);
+            min-height: 160px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+
+        .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .boton_banner2 {
+            padding: 4% 0 0 2%;
+        }
+
+        .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .button-flat.secondary2 {
+            margin: 0 0 0 !important;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 144px;
+            margin-bottom: 25px;
+        }
+
+        .carruselHomeJuguetonE {
+            margin-top: -6%;
+        }
+
+        .fullspiff {
+            min-height: 148px;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1em;
+        }
+
+        .compra-en-linea img {
+            width: 70%;
+            margin-bottom: 15px;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.5rem;
+        }
+
+        .row.bebe-jugueton.fullspiff {
+            margin-top: 2%;
+        }
+
+        .fullspiff h3 {
+            font-size: 1.25em !important;
+            padding-top: 0%;
+        }
+
+        .spiff1 h3 {
+            font-size: 1.25em !important;
+            padding-top: 0%;
+        }
+
+        .spiff2 h3 {
+            font-size: 1.25em !important;
+            padding-top: 0%;
+        }
+
+        .bebe-jugueton h3 {
+            padding-bottom: 4%;
+            font-size: 1.25em;
+        }
+
+        .fullspiff.comparteenfamilia {
+            min-height: 304px;
+        }
+
+        .minispiff .minispiff-item h4 {
+            font-size: 1em;
+        }
+
+        .carrusel-importanteparati .swiper-button-next,
+        .carrusel-importanteparati .swiper-button-prev {
+            bottom: 14%;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .fullspiff.comparteenfamilia {
+            min-height: 293px;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 37% 0 0 8.3%;
+        }
+
+        .carrusel-importanteparati .swiper-button-next,
+        .carrusel-importanteparati .swiper-button-prev {
+            bottom: 12.1%;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 199px;
+        }
+
+        .carrusel-importanteparati .swiper-slide p {
+            font-size: .85em;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .minispiff .minispiff-item p.txt-p-spiff {
+            padding: 1.5% 0 0 0;
+        }
+
+        .minispiff .minispiff-item h4 {
+            padding: 1% 0 0 0;
+        }
+
+        .fullspiff.ofertassemana span.button-flat.secondary {
+            margin: 36% 0 0 8%;
+            padding: 0.8em .5em;
+            font-size: .7em;
+        }
+
+        .bannerTres .col-xs-12 {
+            margin-bottom: 20px;
+        }
+
+        .bannerprincipal_jugueton2 .mainimage-jugueton2 {
+            background-image: url(/arquivos/2021_jugueton_ofertasdediversion_mobile.jpg);
+            min-height: 131px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 25px;
+        }
+
+        .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .boton_banner2 {
+            padding: 4% 0 0 2%;
+        }
+
+        .re-central .bannerprincipal_jugueton2 .mainimage-jugueton2 .button-flat.secondary2 {
+            margin: 0 0 0 !important;
+        }
+
+        .fullspiff.ofertassemana {
+            min-height: 168px;
+        }
+
+        .compra-en-linea h4 {
+            font-size: 1.188em;
+        }
+
+        .compra-en-linea img {
+            width: 90%;
+            margin: 0px 0px 10px 28px;
+        }
+
+        .row .full-content-jugueton {
+            margin: 23px 0 0 40px;
+        }
+
+        .compra-en-linea .col-md-6:first-child {
+            border-right: none;
+        }
+
+        .tag-title--level-3 {
+            font-size: 1.5rem;
+        }
+
+        .fullspiff.comparteenfamilia {
+            min-height: 256px;
+        }
+
+        .landing--jugueton .juguetes-mas {
+            margin: 0% 0 3% 0;
+        }
+
+        .landing-bts-jugueton .row .col-md-6 .spiff-text {
+            min-height: 128px;
+            margin-bottom: 15px;
+        }
+
+        .fullspiff {
+            min-height: 121px;
+        }
+
+        .landing--jugueton .bebe-jugueton {
+            min-height: 153px;
+        }
+
+        .carrusel-importanteparati .swiper-button-next,
+        .carrusel-importanteparati .swiper-button-prev {
+            bottom: 12.1%;
+            margin-bottom: 0rem;
+        }
+
+        .fullspiff.bnrtopregalos {
+            min-height: 175px;
+        }
+    }
+
+    @media (min-width:5px) and (max-width: 767px) {
+        @-moz-document url-prefix() {
+            span.txt-ver-mas.mobile {
+                position: absolute;
+                bottom: -3rem;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    @media(min-width: 5px) and (max-width: 320px) {
+        p.importanteparati-mobile {
+            font-size: 0.6rem !important;
+        }
+
+        strong.link-conocer-mas {
+            font-size: 0.62rem;
+        }
+    }
+
+    @media(min-width: 321px) and (max-width: 374px) {
+        p.importanteparati-mobile {
+            font-size: 0.6rem !important;
+        }
+
+        strong.link-conocer-mas {
+            font-size: 0.62rem;
+        }
+    }
+
+    @media(min-width: 375px) and (max-width: 767px) {
+        p.importanteparati-mobile {
+            font-size: 0.8rem !important;
+        }
+
+        strong.link-conocer-mas {
+            font-size: 0.82rem;
+        }
+    }
+
+    /*
+    @media(min-width:768px){
+        .padding-spiffs-jugueton {
+            padding: 0 0px!important;
+        }
+    }
+    */
+
+    @media(min-width: 768px) and (max-width: 1023px) {
+        .importanteparati p {
+            font-size: 0.5rem;
+        }
+
+        strong.link-conocer-mas {
+            font-size: 0.52rem;
+        }
+
+        .cuidamos-tu-salud-conocer-mas {
+            margin-top: -4%;
+        }
+    }
+
+    @media(min-width: 1024px) and (max-width: 1279px) {
+        .importanteparati p {
+            font-size: 0.66rem;
+        }
+
+        strong.link-conocer-mas {
+            font-size: 0.69rem;
+        }
+
+        .cuidamos-tu-salud-conocer-mas {
+            margin-top: -2.6%;
+        }
+
+        .margin-banner-jugueton {
+            margin-left: -3px !important;
+        }
+
+
+
+        /*celebremos a los chicos*/
+        .padding-spiffs-celebracion {
+            margin-left: -30px !important;
+            margin-right: 0 !important;
+        }
+
+
+        /*tus marcas favoritas*/
+        .margin-marcas-favoritas {
+            width: 101.5% !important;
+            margin-left: -7px !important;
+        }
+
+        .padding-spiff-banner-ft {
+            padding-left: 0px !important;
+        }
+
+        .margin-import-ti {
+            margin-left: -15px !important;
+        }
+
+        .width-promesa {
+            width: 96.8% !important;
+        }
+
+    }
+
+    @media(min-width: 1280px) and (max-width: 1439px) {
+        .importanteparati p {
+            font-size: 0.83rem;
+        }
+
+        strong.link-conocer-mas {
+            font-size: 0.86rem;
+        }
+
+        .cuidamos-tu-salud-conocer-mas {
+            margin-top: -1.8%;
+        }
+
+        .margin-banner-jugueton {
+            margin-left: 0px !important;
+        }
+
+
+
+        /*celebremos a los chicos*/
+        .padding-spiffs-celebracion {
+            margin-left: -30px !important;
+            margin-right: 0 !important;
+        }
+
+
+        /*tus marcas favoritas*/
+        .margin-marcas-favoritas {
+            width: 101.7% !important;
+            margin-left: -10px !important;
+        }
+
+
+        .padding-spiff-banner-ft {
+            padding-left: 0px !important;
+        }
+
+        .margin-import-ti {
+            margin-left: -15px !important;
+        }
+
+        .width-promesa {
+            width: 97.3% !important;
+        }
+
+    }
+
+    @media(min-width: 1440px) {
+        .importanteparati p {
+            font-size: 0.95rem;
+        }
+
+        strong.link-conocer-mas {
+            font-size: 0.98rem;
+        }
+
+        .cuidamos-tu-salud-conocer-mas {
+            margin-top: -0.7%;
+        }
+
+        .margin-banner-jugueton {
+            margin-left: 0px !important;
+        }
+
+        .re-central .bannerprincipal_jugueton .mainimage-jugueton .button-flat.secondary {
+            padding: 1.3em 3em;
+        }
+
+        /*celebremos a los chicos*/
+        .padding-spiffs-celebracion {
+            margin-left: -30px !important;
+            margin-right: 0 !important;
+        }
+
+
+        /*tus marcas favoritas*/
+        .margin-marcas-favoritas {
+            width: 102% !important;
+            margin-left: -14px !important;
+        }
+
+
+        .padding-spiff-banner-ft {
+            padding-left: 0px !important;
+        }
+
+        .margin-import-ti {
+            margin-left: -15px !important;
+        }
+
+        .width-promesa {
+            width: 97.8% !important;
+        }
+
+    }
+
+    /* MOBILE */
+    .mobile-br {
+        display: none;
+    }
+
+    @media(min-width: 5px) and (max-width: 767px) {
+        .mobile-br {
+            display: block !important;
+        }
+
+        .cont-titular {
+            padding: 4% 0 4% 0 !important;
+        }
+
+        .minispiff .minispiff-item p.txt-p-spiff {
+            padding-bottom: 6px !important;
+        }
+    }
+
+    @media (max-width: 762px) {
+        .row.fullcontent-jugueton .col-4 span {
+            font-size: 12px;
+        }
+    }
 </style>

@@ -1,0 +1,123 @@
+<div class="static-layout__content internal-cien sae">
+    <!--portada-->
+    <div class="mb-2 mb-lg-3">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <div class="mainimage mobile-fullwidth">
+                <picture>
+                    <source srcset="/arquivos/2022_portada_servicios_empresas_movil.jpg" media="(max-width: 767px)">
+                    <img src="/arquivos/2022_portada_servicios_empresas_desk.jpg" alt="Servicio a empresas">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <!--botones-->
+    <div class="container button-sae d-flex justify-content-center">
+        <div class="row sub-button-sae d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <button class="col-12 col-md-6 btn btn-cemaco btn-cemaco-primary my-3 my-md-0 me-md-4 px-4 py-2" type="button">COTIZA POR WHATSAPP</button>
+            <button class="col-12 col-md-6 btn btn-cemaco btn-cemaco-secondary mb-md-0 px-4 py-2" type="button">REGISTRA TU EMPRESA</button>
+        </div>
+    </div>
+    <!--iconos-->
+    <div class="container">
+        <div class="row">
+            
+          <div class="col-12 col-md-4 d-flex justify-content-center col-card py-4 px-0">
+            <img class="img-cards" src="/arquivos/2022_sae_descuentos-icon.png"/>
+            <div class="card ps-3">
+                <h5 class="card-title text-center">Descuentos en productos</h5>
+                <hr>
+                <p class="card-text text-center">5% de descuento en todos los productos a precio normal</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex justify-content-center col-card py-4 px-0">
+            <img class="img-cards" src="/arquivos/2022_sae_variedad-icon.png"/>
+            <div class="card ps-3">
+                <h5 class="card-title text-center">Variedad de productos</h5>
+                <hr>
+                <p class="card-text text-center">Acceso a más de 100,000 productos de calidad y marcas reconocidas con el respaldo de nuestra garantía total. Compra en nuestras tiendas o en CEMACO.com.</p>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    
+    <!--comentario-->
+    <div class="re-central board-review">
+        <h3 class="tag-title--level-1">
+            La mayor variedad y productos de la mejor calidad.
+        </h3>
+        <p class="tag-copy">
+            "CEMACO se caracteriza por ser una empresa con productos acorde a la calidad requerida según
+            nuestros estándares, adicional a ello, las personas encargadas de nuestra cuenta siempre están
+            atentas a nuestras necesidades y solicitudes. Su respuesta es rápida y confiable."
+        </p>
+    <small>
+       Marcela Tovar, Procurement Team Lead, Telus International
+    </small>
+    </div>
+    
+    <!--formulario-->
+     <div class="re-central  board-services-e__contact">
+        <div class="text-center">
+            <h3 class="tag-title--level-2">¡Cotiza ahora!</h3>
+        </div>
+         <form id="Cotiza" action class="internal-form">
+            <div class="control-wrapper">
+                <input type="text" id="name" name="name" placeholder="Nombre y apellido" class="">
+            </div>
+            <div class="control-wrapper">
+                <input type="text" id="email" name="Correo electrónico" placeholder="Correo electrónico" class="">
+            </div>
+            <div class="control-wrapper">
+                <input type="text" id="empresa" name="Empresa" placeholder="Empresa" class="">
+            </div>
+            <div class="control-wrapper">
+                <input type="text" id="phone" name="phone" placeholder="Teléfono" class="">
+            </div>
+            <div class="control-wrapper">
+                <select name='city' id='estado'></select>
+            </div>
+            <div class="control-wrapper">
+                <select name='city' id='city'><option value=''>Municipio</option></select>
+            </div>
+            <div class="control-wrapper_large control-message">
+                <textarea id="comentarios" name="comentarios" placeholder="Comentarios"  aria-required="true"></textarea>
+            </div>
+            <div class="control-wrapper_large control-wrapper--send">
+                <input type="submit" value="Enviar" class="button-flat large secondary"></div>
+        </form>
+    </div>
+
+</div>
+
+<style>
+.button-sae .row button{
+    height: 2.6em;
+    width: 20em;
+}
+.sub-button-sae{
+    width:100%;
+}
+.img-cards{
+    width: 6em;
+    height: 6em;
+}
+.card hr{
+    border: solid 2px #94D500;
+    border-radius: 2px;
+    margin: 0 5em;
+}
+.col-card{
+    border: solid 1px #a8a8a8;
+    border-radius: 1em;
+}
+@media only screen and (min-width: 768px) {
+.button-sae .row button{
+    width: fit-content;
+}
+.col-card{
+    flex-direction: column;
+    align-items: center;
+}
+}
+</style>

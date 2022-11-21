@@ -1,3 +1,44 @@
 <!--empieza  Scripts Home -->
 <script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
 <script src="/arquivos/bootstrap.v5.min.js"></script>
+
+<!--empieza  Scripts Home -->
+
+<script>
+    const swiper = new Swiper('.homeBannerSlider', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        // If we need pagination
+        pagination: {
+          el: '#banner-slider-pagination',
+          clickable: true,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '#banner-slider-next',
+          prevEl: '#banner-slider-prev'
+        },
+    });
+    document.querySelector("#banner-slider-prev").innerHTML  = '<svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg>';
+    document.querySelector("#banner-slider-next").innerHTML  = '<svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg>';
+
+    // cambiar color flechas de carrusel banner principal
+    const bannerJugar = document.querySelector("#bannerJugar");
+    const bannerClases = document.querySelector("#bannerClases");
+    const bannerFelicidad = document.querySelector("#bannerFelicidad");
+    const bannerSliderPrev =  document.querySelector("#banner-slider-prev");
+    const bannerSliderNext =  document.querySelector("#banner-slider-next");
+
+    function clickBanner(arrowPrev, arrowNext){
+      if(bannerClases.classList.contains('swiper-slide-active') || bannerFelicidad.classList.contains('swiper-slide-active')){
+        arrowPrev.style.setProperty("fill","#fff");
+        arrowNext.style.setProperty("fill","#fff");
+      }else if(bannerJugar.classList.contains('swiper-slide-active')){
+        arrowPrev.style.setProperty("fill","#27A85D");
+        arrowNext.style.setProperty("fill","#27A85D");
+      }
+    }
+    bannerSliderPrev.addEventListener("click", function(){clickBanner(bannerSliderPrev, bannerSliderNext)})
+    bannerSliderNext.addEventListener("click", function(){clickBanner(bannerSliderPrev, bannerSliderNext)})
+</script>

@@ -4,7 +4,7 @@ contraseña: Burbuja.192
 
 Teams
 usuario: vlopezd@cemaco.com
-contraseña: Octubre$212
+contraseña: ahora-Octubre2022 antes-Octubre$212
 
 AWS
 ID: 930348937554
@@ -27,8 +27,7 @@ Github
 usuario: VaniaLopez
 correo: vlopezd@cemaco.com
 contraseña: Burbuja.192vanmar
-token: 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
-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
+token: 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
 
 Bitbucket
 usuario: VaniaLopez

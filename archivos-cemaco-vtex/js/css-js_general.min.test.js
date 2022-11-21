@@ -13,6 +13,7 @@ $(function () {
 		interval++;
 	}, 300);
 });
+
 function validate_only_in_store() {
 	$('.product-item__wrapper .product-field li:not(.in-store-checked)').each(function (index, item) {
 		var that = $(this);
@@ -20,11 +21,53 @@ function validate_only_in_store() {
 		that.addClass('in-store-checked');
 		if (text.indexOf('tienda') != -1) {
 			that.closest('.product-item__wrapper').addClass('is_only_in_store');
+			console.log("Aqui esta ",that.closest(".product-item__wrapper").find(".product-item .product-item__price .price-with-discount"))
+			that.closest(".product-item__wrapper").find(".product-item .product-item__price .price-with-discount").replaceWith('<p class="no-disponible">Producto no disponible</p>');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__price .price-old").css('display', 'none');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__price").addClass('info-text');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__price-group").css('padding-left', '0px');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__flags--attributes").addClass('hidden');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__cta .product-item__action .js-buy-plp").css('display', 'none');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__cta .product-item__action .js-no-buy-pdp").css('display', 'flex');
 		}
 	});
 }
 
-// Retorna el valor del descuento en los carruseles
+function validate_only_in_store_before() {
+	$('.product-item__wrapper .product-field li:not(.in-store-checked)').each(function (index, item) {
+		var that = $(this);
+		var text = that.html().toLowerCase();
+		that.addClass('in-store-checked');
+		if (text.indexOf('tienda') != -1) {
+			that.closest('.product-item__wrapper').addClass('is_only_in_store');
+			console.log("Aqui esta ",that.closest(".product-item__wrapper").find(".product-item .product-item__price .price-with-discount"))
+			that.closest(".product-item__wrapper").find(".product-item .product-item__price .price-with-discount").replaceWith('<p class="no-disponible">Producto no disponible</p>');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__price .price-old").css('display', 'none');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__price").addClass('info-text');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__flags--attributes").addClass('hidden');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__cta .product-item__action .js-buy-plp").css('display', 'none');
+			that.closest(".product-item__wrapper").find(".product-item .product-item__cta .product-item__action .js-no-buy-pdp").css('display', 'flex');
+		}
+	});
+}
+validate_only_in_store_before()
+
+// Funcion para Cambiar Posicion de Decimales en Precio <--inicio-->
+$(document).ready(function(){
+    const priceOld = document.getElementsByClassName('price-old');
+    const priceNew = document.getElementsByClassName('price-new');
+
+    function chancePrices (prices){
+        for(let price of prices)
+            price.innerHTML = `<span class="integer">${price.innerText.split('.')[0]}</span> <span class="decimal">${price.innerText.split('.')[1]}</span>` ;
+    }
+
+    chancePrices(priceOld);
+    chancePrices(priceNew);
+
+});
+// Funcion para Cambiar Posicion de Decimales en Precio <--fin-->
+
 function load_discount_flags() {
 	$('.product-item__flag--discount:not(.checked)').each(function (index, item) {
 		var that = $(this),
@@ -33,8 +76,7 @@ function load_discount_flags() {
 		txt = txt.substring(0, final_txt);
 		that.html(txt + '%').addClass('checked');
 	});
-    $('.product-item__discount-news:not(.checked)').each(function (index, item) {
-		console.log("funciona descuento");
+	 $('.product-item__discount-news:not(.checked)').each(function (index, item) {
 		var that = $(this),
 		    txt = that.html(),
 		    final_txt = txt.indexOf(',');
@@ -77,6 +119,7 @@ var presetImagesToVtex = function presetImagesToVtex() {
 	});
 };
 document.addEventListener("DOMContentLoaded", function (event) {
+	$('.product-list__wrapper .product-list').removeClass('d-none');
 	presetImagesToVtex();
 });
 
@@ -179,6 +222,7 @@ function load_skus() {
 		gndx++;
 	});
 }
+
 function load_sku_index(id, sku, ndx) {
 	vtexjs.catalog.getProductWithVariations(id).done(function (product) {
 		var color = '',
@@ -188,6 +232,154 @@ function load_sku_index(id, sku, ndx) {
 		    colorsLength = 0,
 		    color_sku,
 		    minorPriceList = [];
+		    
+		if (product.skus.length > 1) {
+			$('.product-item[data-index="' + ndx + '"]').find('.price-text-configurable').addClass('show');
+			$('.product-item[data-index="' + ndx + '"]').find('.js-buy-plp').hide();
+			$('.product-item[data-index="' + ndx + '"]').find('.js-buy-pdp').css('display', 'flex');
+		}
+		$.each(product.skus, function (index, item) {
+			if (typeof item.dimensions['DescripciÃ³n de Color'] !== 'undefined') {
+				var item_sku = item.sku,
+				    item_price = item.bestPriceFormated,
+				    item_listprice = item.listPriceFormated,
+				    item_size = item.dimensions.Talla;
+				color_class = slug(item.dimensions['DescripciÃ³n de Color']);
+				if (color != item.dimensions['DescripciÃ³n de Color']) {
+					color = item.dimensions['DescripciÃ³n de Color'];
+					color_sku = item.sku;
+				}
+				if (item.available) {
+					item_price_color = item_price;
+					item_listprice_color = item_listprice;
+				}
+				var is_available = '';
+				if (item.available == false) var is_available = 'disabled';
+				var is_active = '';
+				var class_active = '';
+				if (item.sku == parseInt(sku)) {
+					class_active = 'active';
+					//var is_active='selected';
+				}
+				if ($('.item' + ndx + ' .product-item__colors .product-item__color.' + color_class).length == 0) {
+					$('.item' + ndx + ' .product-item__colors').append('<div class="product-item__color--wrapper"><div class="product-item__color ' + color_class + '" data-sku="' + color_sku + '" data-id="' + id + '" data-color="' + color_class + '" data-img="' + item.image.replace('292-292', '400-400') + '" title="' + color + '">' + color + '</div></div>');
+				}
+				if ($('.item' + ndx + ' .product-item-size .size-' + color_class).length == 0) {
+					$('.item' + ndx + ' .product-item-size').append('<select class="size size-' + color_class + '" data-color="size-' + color_class + '"><option value="">Talla</option></select>');
+				}
+				if (class_active != '') {
+					$('.item' + ndx + ' .product-item-size .size-' + color_class).addClass(class_active);
+					$('.item' + ndx + ' .product-item__colors .product-item__color.' + color_class).addClass(class_active);
+				}
+				var temp = $('.item' + ndx + ' .product-item__colors .product-item__color.' + color_class).attr('data-price');
+				if (typeof temp === 'undefined' || item.available) {
+					$('.item' + ndx + ' .product-item__colors .product-item__color.' + color_class).attr('data-price', item_price_color).attr('data-listprice', item_listprice_color);
+				}
+				$('.item' + ndx + ' .product-item-size .size-' + color_class).append('<option ' + is_available + ' ' + is_active + ' value="' + item_sku + '" data-listprice="' + item_listprice + '" data-price="' + item_price + '">' + item_size + '</option>');
+				item_price_color = 'Sin stock';
+				item_listprice_color = '';
+				//
+				colorsLength++;
+				// console.log(`P-id ${id}, SKU-id-${item.sku}, SKU-color-${item.dimensions['DescripciÃ³n de Color']}`);
+			} else if (typeof item.dimensions.Talla !== 'undefined') {
+				var item_sku = item.sku,
+				    item_price = item.bestPriceFormated,
+				    item_listprice = item.listPriceFormated,
+				    item_size = item.dimensions.Talla;
+				//
+				color_class = 'na';
+				color_sku = item.sku;
+				if (item.available) {
+					item_price_color = item_price;
+					item_listprice_color = item_listprice;
+				}
+				var is_available = '';
+				if (item.available == false) var is_available = 'disabled';
+				var is_active = '';
+				var class_active = '';
+				if (item.sku == parseInt(sku)) {
+					class_active = 'active';
+				}
+				if ($('.item' + ndx + ' .product-item-color .color.' + color_class).length == 0) {
+					$('.item' + ndx + ' .product-item-color').append('<div class="color ' + color_class + '" data-sku="' + color_sku + '" data-id="' + id + '" data-color="' + color_class + '" data-img="' + item.image.replace('292-292', '500-500') + '" title="' + color + '">' + color + '</div>');
+				}
+				if ($('.item' + ndx + ' .product-item__size .size-' + color_class).length == 0) {
+					if (show_select) {
+						$('.item' + ndx + ' .product-item__size').html('<select class="size size-' + color_class + '" data-color="size-' + color_class + '"><option value="">TALLA</option></select>');
+					} else {
+						$('.item' + ndx + ' .product-item__size').html('<div class="size size-' + color_class + '" data-color="size-' + color_class + '"></div>');
+					}
+				}
+				if (class_active != '') {
+					$('.item' + ndx + ' .product-item__size .size-' + color_class).addClass(class_active);
+					$('.item' + ndx + ' .product-item-color .color.' + color_class).addClass(class_active);
+				}
+				var temp = $('.item' + ndx + ' .product-item-color .color.' + color_class).attr('data-price');
+				if (typeof temp === 'undefined' || item.available) {
+					$('.item' + ndx + ' .product-item-color .color.' + color_class).attr('data-price', item_price_color).attr('data-listprice', item_listprice_color);
+				}
+				if (show_select) {
+					$('.item' + ndx + ' .product-item__size .size-' + color_class).append('<option ' + is_available + ' ' + is_active + ' value="' + item_sku + '" data-listprice="' + item_listprice + '" data-price="' + item_price + '">' + item_size + '</option>');
+				} else {
+					$('.item' + ndx + ' .product-item__size .size-' + color_class).append('<div class="sku-pi ' + is_available + '" ' + is_active + ' value="' + item_sku + '" data-listprice="' + item_listprice + '" data-price="' + item_price + '">' + item_size + '</div>');
+				}
+				item_price_color = 'Sin stock';
+				item_listprice_color = '';
+			}
+			// Obtain Minor Price
+			// minorPriceList.push(item_price);
+			// var minorPrice =  Math.min(minorPriceList);
+		});
+		// Check number of colors
+		if (product.skus.length > 1) {
+			console.log('-------Colors--------', product.skus.length, colorsLength);
+			var skusLength = product.skus.length;
+			if (skusLength === colorsLength) {
+				// console.log(`It's equal skusLength ${skusLength}, colorsLength ${colorsLength}`)
+				$('.item' + ndx).addClass('is-displayed');
+			} else {
+				// console.log(`It's different skusLength ${skusLength}, colorsLength ${colorsLength}`)
+			}
+			if (colorsLength > 5) {
+				$('.item' + ndx + ' .product-item__colors').slick({
+					arrows: true,
+					dots: false,
+					prevArrow: "<button data-role='none' class='slick-arrow slick-prev'><svg class='svg-icon-arrow-left'><use xlink:href='#svg-icon-chevron-left'></use></svg></button>",
+					nextArrow: "<button data-role='none' class='slick-arrow slick-next'><svg class='svg-icon-arrow-right'><use xlink:href='#svg-icon-chevron-right'></use></svg></button>",
+					centerMode: false,
+					infinite: true,
+					slidesToShow: 6,
+					slidesToScroll: 6
+				});
+			}
+		}
+		toggle_load_more();
+	});
+}
+
+function load_skus_before() {
+	$('.product-item .product-item__skus').not('.checked').each(function (index, item) {
+		var that = $(this);
+		that.addClass('checked item' + gndx);
+		that.closest('.product-item').attr('data-index', gndx).find('.js-buy-plp').attr('data-index', gndx);
+		var id = parseInt(that.attr('data-id'));
+		var sku = parseInt(that.attr('data-sku'));
+		load_sku_index_before(id, sku, gndx);
+		gndx++;
+	});
+}
+load_skus_before()
+
+function load_sku_index_before(id, sku, ndx) {
+	vtexjs.catalog.getProductWithVariations(id).done(function (product) {
+		var color = '',
+		    item_price_color = 'Sin stock',
+		    item_listprice_color = '',
+		    color_class = '',
+		    colorsLength = 0,
+		    color_sku,
+		    minorPriceList = [];
+		    
 		if (product.skus.length > 1) {
 			$('.product-item[data-index="' + ndx + '"]').find('.price-text-configurable').addClass('show');
 			$('.product-item[data-index="' + ndx + '"]').find('.js-buy-plp').hide();

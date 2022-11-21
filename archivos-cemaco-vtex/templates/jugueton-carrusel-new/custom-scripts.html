@@ -1,0 +1,91 @@
+<!--empieza  Scripts Home -->
+<script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
+<script src="/arquivos/bootstrap.v5.min.js"></script>
+
+<!-- Carrusel Portada Jugueton -->
+<script async="async" src="/arquivos/jugueton-carrusel-portada-v2.js?v=20220914-1239"></script>
+
+<!--empieza  Scripts Home -->
+
+<script>
+    const swiper = new Swiper('.homeBannerSlider', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        // If we need pagination
+        pagination: {
+          el: '#banner-slider-pagination',
+          clickable: true,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '#banner-slider-next',
+          prevEl: '#banner-slider-prev'
+        },
+    });
+    document.querySelector("#banner-slider-prev").innerHTML  = '<svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg>';
+    document.querySelector("#banner-slider-next").innerHTML  = '<svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg>';
+
+    // cambiar color flechas de carrusel banner principal
+    const bannerJugar = document.querySelector("#bannerJugar");
+    const bannerClases = document.querySelector("#bannerClases");
+    const bannerFelicidad = document.querySelector("#bannerFelicidad");
+    const bannerSliderPrev =  document.querySelector("#banner-slider-prev");
+    const bannerSliderNext =  document.querySelector("#banner-slider-next");
+
+    function clickBanner(arrowPrev, arrowNext){
+      if(bannerClases.classList.contains('swiper-slide-active') || bannerFelicidad.classList.contains('swiper-slide-active')){
+        arrowPrev.style.setProperty("fill","#fff");
+        arrowNext.style.setProperty("fill","#fff");
+      }else if(bannerJugar.classList.contains('swiper-slide-active')){
+        arrowPrev.style.setProperty("fill","#27A85D");
+        arrowNext.style.setProperty("fill","#27A85D");
+      }
+    }
+    bannerSliderPrev.addEventListener("click", function(){clickBanner(bannerSliderPrev, bannerSliderNext)})
+    bannerSliderNext.addEventListener("click", function(){clickBanner(bannerSliderPrev, bannerSliderNext)})
+    
+    
+    // Carrusel de personajes
+     const swiper02 = new Swiper("#swiper-personaje-carrusel", {
+        slidesPerView: 3.5,
+        slidesPerGroup: 1,
+        spaceBetween: 5,
+        freeMode: true,
+        loop: false,
+        loopFillGroupWithBlank: false,
+        minimumVelocity: 0.02,
+        momentumVelocityRatio: 20,
+        momentumRatio: 1,
+        speed: 1000,
+        navigation: {
+            nextEl: `#swiper-personaje-button-next01`,
+            prevEl: `#swiper-personaje-button-prev01`,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 5,
+                slidesPerGroup: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 10,
+            },
+        },
+    });
+    document.querySelector("#swiper-personaje-button-next01").innerHTML  = '<svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg>';
+    document.querySelector("#swiper-personaje-button-prev01").innerHTML  = '<svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg>';
+    
+    // Carrusel de personajes
+</script>
+
+<script>
+    /*cambiar nombre carruseles vtex*/
+    $(document).ready(function () {
+        /* $('.landing--jugueton #productsSlider01 .vitrine').prepend("<h2 class='text-bottom'>Sorprende a mamá <a href='/1833?map=productClusterIds'><u>Ver más<u></a></h2>");*/
+        // $('.landing--jugueton #productsSlider01 .vitrine > h2').append("<a href='/1298?map=productClusterIds'><u class='px-2 pt-1 d-flex justify-content-center d-md-inline  align-middle bottom-carrusel'>Ver todo<u></a>");
+    })
+    /*termina cambiar nombre carruseles vtex*/
+</script>

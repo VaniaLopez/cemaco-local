@@ -1,0 +1,74 @@
+<!--empieza  Scripts Home -->
+
+<script>
+    const swiper = new Swiper('.homeBannerSlider', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        // If we need pagination
+        pagination: {
+          el: '#banner-slider-pagination',
+          clickable: true,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '#banner-slider-next',
+          prevEl: '#banner-slider-prev'
+        },
+    });
+    document.querySelector("#banner-slider-prev").innerHTML  = '<svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg>';
+    document.querySelector("#banner-slider-next").innerHTML  = '<svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg>';
+
+</script>
+
+
+<script type="text/javascript" src="/arquivos/swiper-bundle.min.js"></script>
+<script src="/arquivos/bootstrap.v5.min.js"></script>
+
+<script>
+    $(".vertodos").on("click", function () {
+        $(this).hide();
+        $(this).nextAll().fadeIn();
+        $(".ofertas1").hide();
+        $(".ofertas2").show();
+    });
+</script>
+
+<!-- Cambio de HREF a link de carrusel -->
+
+<script async>
+  async function checkCtaProductsSlider01() {
+        (async function(){
+            while(!document.querySelector("#productsSlider01 h2 a.d-inline-block")){
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+            $("#productsSlider01 h2 a.d-inline-block").attr("href", "/c-banos")
+        })();
+    }
+
+    checkCtaProductsSlider01()
+</script>
+
+
+<script>
+    var swiperdos = new Swiper(".swipernavidad", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+            280: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+        navigation: {
+          nextEl: '#banner-slider-next1',
+          prevEl: '#banner-slider-prev1'
+        },
+    });
+    document.querySelector("#banner-slider-prev1").innerHTML  = '<svg class="arrowCarrusel-left"><use href="#arrowCarrusel"></use></svg>';
+    document.querySelector("#banner-slider-next1").innerHTML  = '<svg class="arrowCarrusel-right"><use href="#arrowCarrusel"></use></svg>';
+</script>   

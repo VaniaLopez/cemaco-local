@@ -81,87 +81,152 @@ function load_products_swiper(index, currentElement){
 //Funciones para parámetros de carrusel Marcas <--inicio-->
 /*funcion para asignación de propiedades en carruseles swiper para diferenes landings*/
 function nameBranding(classBrand,value,nameContainerClass){
-        function load_products_swiperBrands(viewMobile, groupMobile, viewDesk, gropuDesk, spaceMobile, spaceDesk){
-            let products_swiper_options = {
-                slidesPerView: viewMobile,
-                slidesPerGroup: groupMobile,
-                spaceBetween: spaceMobile,
-                freeMode: true,
-                loop: false,
-                loopFillGroupWithBlank: false,
-                minimumVelocity: 0.02,
-                momentumVelocityRatio: 20,
-                momentumRatio: 1,
-                speed: 1000,
-                navigation: {
-                    nextEl: `#swiper-brand-button-next0${value}`,
-                    prevEl: `#swiper-brand-button-prev0${value}`,
+    function load_products_swiperBrands(viewMobile, groupMobile, viewDesk, gropuDesk, spaceMobile, spaceDesk){
+        let products_swiper_options = {
+            slidesPerView: viewMobile,
+            slidesPerGroup: groupMobile,
+            spaceBetween: spaceMobile,
+            freeMode: true,
+            loop: false,
+            loopFillGroupWithBlank: false,
+            minimumVelocity: 0.02,
+            momentumVelocityRatio: 20,
+            momentumRatio: 1,
+            speed: 1000,
+            navigation: {
+                nextEl: `#swiper-brand-button-next0${value}`,
+                prevEl: `#swiper-brand-button-prev0${value}`,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: viewMobile,
+                    slidesPerGroup: groupMobile,
+                    spaceBetween: spaceMobile,
                 },
-                breakpoints: {
-                    640: {
-                        slidesPerView: viewMobile,
-                        slidesPerGroup: groupMobile,
-                        spaceBetween: spaceMobile,
-                    },
-                    768: {
-                        slidesPerView: viewDesk,
-                        slidesPerGroup: gropuDesk,
-                        spaceBetween: spaceDesk,
-                    },
-                    1024: {
-                        freeMode: false,
-                        slidesPerView: viewDesk,
-                        slidesPerGroup: gropuDesk,
-                        spaceBetween: spaceDesk,
-                    },
+                768: {
+                    slidesPerView: viewDesk,
+                    slidesPerGroup: gropuDesk,
+                    spaceBetween: spaceDesk,
                 },
-            };
-            products_swiper[value] = new Swiper(`#swiper-brand-carrusel0${value}`, products_swiper_options);
-            
-            // ELiminacion de clase  d-none ya que Swiper se encuentra inicializaco.
-            
-            $(nameContainerClass).removeClass("d-none");
-        }
-
-        /*Asignación de propiedades en carruseles swiper para diferenes landings*/
-    switch(true){
-        case classBrand.hasClass('pinturasLanding'):
-            load_products_swiperBrands(5.5, 5, 9, 9, 0, 0);
-            break;
-        case classBrand.hasClass('tecnologiaLanding'):
-            load_products_swiperBrands(4.5, 4.5, 7, 7, 12, 20);
-            break;
-        case classBrand.hasClass('autosLanding'):
-            load_products_swiperBrands(3, 3, 6, 6, 12, 20);
-            break;
-        case classBrand.hasClass('electricosLanding'):
-            load_products_swiperBrands(3.5, 3.5, 6, 6, 12, 20);
-            break;
-        case classBrand.hasClass('dormitorioLanding'):
-            load_products_swiperBrands(3.5, 3.5, 7, 7, 12, 20);
-            break;
-        case classBrand.hasClass('iluminacionLanding'):
-            load_products_swiperBrands(3.5, 3.5, 6, 6, 12, 20);
-            break;
-        case classBrand.hasClass('banosLanding'):
-            load_products_swiperBrands(5.5, 5.5, 6, 6, 0, 20);
-            break;   
-        default:
-            load_products_swiperBrands(4.5, 4.5, 6.5, 6.5, 12, 20);
+                1024: {
+                    freeMode: false,
+                    slidesPerView: viewDesk,
+                    slidesPerGroup: gropuDesk,
+                    spaceBetween: spaceDesk,
+                },
+            },
+        };
+        products_swiper[value] = new Swiper(`#swiper-brand-carrusel0${value}`, products_swiper_options);
+        
+        // ELiminacion de clase  d-none ya que Swiper se encuentra inicializaco.
+        
+        $(nameContainerClass).removeClass("d-none");
     }
+
+    /*Asignación de propiedades en carruseles swiper para diferenes landings*/
+switch(true){
+    case classBrand.hasClass('pinturasLanding'):
+        load_products_swiperBrands(5.5, 5, 9, 9, 0, 0);
+        break;
+    case classBrand.hasClass('tecnologiaLanding'):
+        load_products_swiperBrands(4.5, 4.5, 7, 7, 12, 20);
+        break;
+    case classBrand.hasClass('autosLanding'):
+        load_products_swiperBrands(3, 3, 6, 6, 12, 20);
+        break;
+    case classBrand.hasClass('electricosLanding'):
+        load_products_swiperBrands(3.5, 3.5, 6, 6, 12, 20);
+        break;
+    case classBrand.hasClass('dormitorioLanding'):
+        load_products_swiperBrands(3.5, 3.5, 7, 7, 12, 20);
+        break;
+    case classBrand.hasClass('iluminacionLanding'):
+        load_products_swiperBrands(3.5, 3.5, 6, 6, 12, 20);
+        break;
+    case classBrand.hasClass('banosLanding'):
+        load_products_swiperBrands(5.5, 5.5, 6, 6, 0, 0);
+        break;   
+    case classBrand.hasClass('expococinaLanding'):
+        load_products_swiperBrands(5, 5, 8, 8, 0, 0);
+        break;
+    case classBrand.hasClass('cuidadoPersonalLanding'):
+        load_products_swiperBrands(3.5, 3.5, 6, 6, 0, 0);
+        break;   
+    case classBrand.hasClass('organizacionLanding'):
+        load_products_swiperBrands(2.5, 2.5, 6, 6, 0, 0);
+        break;   
+    case classBrand.hasClass('ferreteriaLanding'):
+        load_products_swiperBrands(3.5, 3.5, 7, 7, 0, 0);
+        break;   
+    case classBrand.hasClass('todoEnFerreteriaLanding'):
+        load_products_swiperBrands(3.5, 3.5, 7, 7, 20, 30);
+        break;   
+    case classBrand.hasClass('plomeriaLanding'):
+        load_products_swiperBrands(3.5, 3.5, 6, 6, 20, 30);
+        break;
+        case classBrand.hasClass('diaDelPadreLanding'):
+            load_products_swiperBrands(5.5, 5.5, 7, 7, 0, 0);
+            break;      
+    default:
+        load_products_swiperBrands(4.5, 4.5, 6.5, 6.5, 12, 20);
+}
 }
 //Funciones para parámetros de carrusel Marcas <--fin-->
+
+//Funciones para parámetros de carrusel banners con imagenes <--fin-->
+function bannersComponent(classBanner,value,nameContainerClass){
+    function load_products_swiperBanners(viewMobile, groupMobile, spaceMobile){
+        let products_swiper_options = {
+            slidesPerView: viewMobile,
+            slidesPerGroup: groupMobile,
+            spaceBetween: spaceMobile,
+            freeMode: true,
+            loop: false,
+            loopFillGroupWithBlank: false,
+            minimumVelocity: 0.02,
+            momentumVelocityRatio: 20,
+            momentumRatio: 1,
+            speed: 1000,
+            navigation: {
+                nextEl: `#swiper-brand-button-next0${value}`,
+                prevEl: `#swiper-brand-button-prev0${value}`,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: viewMobile,
+                    slidesPerGroup: groupMobile,
+                    spaceBetween: spaceMobile,
+                },
+            },
+        };
+        products_swiper[value] = new Swiper(`#bannerComponent`, products_swiper_options);
+        
+        // ELiminacion de clase  d-none ya que Swiper se encuentra inicializaco.
+        
+        $(nameContainerClass).removeClass("d-none");
+    }
+
+    /*Asignación de propiedades en carruseles swiper para diferenes landings*/
+switch(true){
+    case classBanner.hasClass('todoFerreLanding'):
+        load_products_swiperBanners(2.5, 2.5, 12);
+        break;
+    default:
+        load_products_swiperBanners(2.5, 2.5, 6.5, 12);
+}
+}
+//Funciones para parámetros de carrusel banners <--fin-->
 
 
 
 // Funcion para modificar funciones en Swiper carruseles normales para LifeStyle<--inicio-->
 function load_products_swiperLifeStyle(index, currentElement){
-   var contentElement = `
+    var contentElementV1 = `
     <li class="swiper-slide lifestyle-item">
         <div class="product-item__wrapper" data-height="siblings">
             <div class="product-item justify-content-start align-items-start" style="background-color: ${request[index-1].background}">
                 <figure class="product-item__figure">
-                    <a href="${request[index-1].ctaUrl}" class="product-item__main-image contenedor-img " >
+                    <a href="${request[index-1].ctaUrl}" class="product-item__main-image contenedor-img">
                         <img src="${request[index-1].imgUrl}" width="250" height="250" style="visibility: visible; opacity: 1;" alt="${request[index-1].altImg}">
                     </a>
                 </figure>
@@ -173,10 +238,37 @@ function load_products_swiperLifeStyle(index, currentElement){
         
                 <div class="product-item__caption px-2 text-start">
                     <h2 class="product-item__name fw-normal">
-                        <a href="${request[index-1].ctaUrl}" style="pointer-events:none;">${request[index-1].description}</a>
+                        <a href="${request[index-1].ctaUrl}" style="pointer-events: none;">${request[index-1].description}</a>
                         <p class="cta-lifestyle text-start"><a href="${request[index-1].ctaUrl}">Ver más</a></span>
                     </h2>
                 </div>
+            </div>
+        </div>
+    </li>`;  
+    
+   var contentElementV2 = `
+    <li class="swiper-slide lifestyle-item">
+        <div class="product-item__wrapper" data-height="siblings">
+            <div class="product-item justify-content-between align-items-start" style="background-color: ${request[index-1].background}">
+                <div class="pt-3 w-100">
+                    <div class="product-item__price px-2 text-start" data-id="103417487" style="min-height: 35px;">
+                        <span class="lifeStyle-title text-start pb-1">
+                            <p class="">${request[index-1].title}</p>                           
+                        </span>
+                    </div>
+            
+                    <div class="product-item__caption px-2 text-start">
+                        <h2 class="product-item__name fw-normal">
+                            <a href="${request[index-1].ctaUrl}" style="pointer-events: none;">${request[index-1].description}</a>
+                            <p class="cta-lifestyle text-start"><a href="${request[index-1].ctaUrl}">Ver más</a></span>
+                        </h2>
+                    </div>
+                </div>
+                <figure class="product-item__figure">
+                    <a href="${request[index-1].ctaUrl}" class="product-item__main-image contenedor-img">
+                        <img src="${request[index-1].imgUrl}" width="250" height="250" style="visibility: visible; opacity: 1;" alt="${request[index-1].altImg}">
+                    </a>
+                </figure>
             </div>
         </div>
     </li>`;
@@ -217,7 +309,7 @@ function load_products_swiperLifeStyle(index, currentElement){
     };
     
     // Estructura lifestyle insertada al inicio del carrusel.
-    $(`#productsLifeStyleSlider0${index} #swiper-lifeStyle-carrusel0${index} ul.swiper-wrapper`).prepend(contentElement);
+    $(`#productsLifeStyleSlider0${index} #swiper-lifeStyle-carrusel0${index} ul.swiper-wrapper`).prepend(contentElementV2);
     
     
     //Inicializacion de Swiper
@@ -282,6 +374,8 @@ function importantForYou(currentElement){
 // Carrusel Importante Para Ti <--fin-->
 
 
+
+//Lógica carruseles en general
 var products_swiper = [];
 $('.helperComplement').remove();
 $('.products-slider__wrapper .prateleira.vitrine > ul').addClass('swiper-wrapper');
@@ -336,15 +430,14 @@ $('.products-slider__wrapper').each(function(index, item){
             }
         })
         
-        //Función para no-full-width en carruseles
-        if($(this).find('.prateleira.vitrine ul li .product-item__wrapper').hasClass('noFullWidth')){
-            $(this).find('.products-slider__container').addClass('noFullWidth');
-            $(this).find('.prateleira.vitrine ul li').each(function(){
-                $(this).find('.product-item__wrapper').removeClass('noFullWidth')
-            })
-        
-        }
-        
+            //Función para no-full-width en carruseles
+            if($(this).find('.prateleira.vitrine ul li .product-item__wrapper').hasClass('noFullWidth')){
+                $(this).find('.products-slider__container').addClass('noFullWidth');
+                $(this).find('.prateleira.vitrine ul li').each(function(){
+                    $(this).find('.product-item__wrapper').removeClass('noFullWidth')
+                })
+                    
+            }
     }else if($(this).find('.importante-para-ti').length){
         
         importantForYou(this)
@@ -382,6 +475,33 @@ $('.products-slider__wrapper').each(function(index, item){
         })
         
         $(this).find(".products-slider__container .product-list").css({
+            "padding": "0",
+            "width": "100%"
+       })
+        
+    }else if($(this).find('.carrusel-banners').length){
+         
+         const classBrand = $(this).find('#bannerComponent');
+            console.log("Aqui esta ",classBrand)
+            bannersComponent(classBrand,index_temp,this);
+            
+            index_temp = index_temp + 1;
+
+        
+        $(this).css({
+            "width": "auto",
+            "margin": "0"
+        })
+        
+        $(this).find(".products-slider__container").css({
+            "margin": "0",
+            "left": "auto",
+            "width": "auto",
+            "background": "none",
+            "padding-bottom": "0",
+        })
+        
+       $(this).find(".products-slider__container .product-list").css({
             "padding": "0",
             "width": "100%"
        })

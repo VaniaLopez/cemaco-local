@@ -1,0 +1,151 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<style>
+  .Cintillo-trigger__hide .svg-icon {
+    width:  0.7em;
+    height:  0.7em;
+  }
+  .Cintillo-title {
+    font-size: 0.7rem;
+    line-height:0.9rem;
+  }
+  .Cintillo-title_desk{
+    display: none;
+  }
+  .Cintillo-wrapper{
+    height: 4rem;
+    flex-direction: column;
+  }
+  .Cintillo.swiper-slide{
+      width: 100%!important;
+      max-width: none;
+  }
+  .swiper-pagination-cintillo{
+    margin-top: -0.2em;
+    width: 100%!important;
+    transform: translateX(0%)!important;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    padding-bottom: 0.5em;
+    
+  }
+
+  .swiper-pagination-cintillo span{
+    margin-right: 0.25rem;
+  }
+  .swiper-pagination-cintillo span:nth-child(1){
+    margin-left: 0.25rem;
+  }
+  .swiper-pagination-cintillo span:nth-last-child(1){
+    margin-right: 0;
+  }
+  .Cintillo-trigger__hide{
+    right: 0.5em;
+    width: 2em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  .swiper-pagination-bullet-active{
+    background: #101e8e!important;
+  }
+  @media screen and (min-width: 1280px) {
+    .Cintillo-title {
+      font-size: 1.1rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .Cintillo-title_mobile{
+      display: none;
+    }
+      .Cintillo-title_desk{
+      display: block;
+    }
+    .Cintillo-wrapper{
+      height: 2.8rem!important;
+    }
+    .swiper-pagination-cintillo{
+      margin-top: -0.5em;
+    }
+    .Cintillo-trigger__hide{
+      height: 3.5em;
+    }
+  }
+
+  @media screen and (min-width: 360px) {
+    .Cintillo-title {
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
+<!-- Cintillo Promo. Begin t -->
+<div id="cintillo" class="Cintillo-wrapper cintillo-carrusel flex-column" style="background-color:#f7f7f7f7;">
+  <div class="re-central swiper-wrapper">
+    <div class="Cintillo swiper-slide ps-0">
+      <div class="cintillo-item">
+          <span class="Cintillo-title Cintillo-title_desk" style="color: black; font-weight: normal;">
+            <b> Mira las últimas novedades en cemaco.com </b><u><a href="https://www.cemaco.com/novedades">ver aqui</a>.</u>
+          </span>
+          <span class="Cintillo-title Cintillo-title_mobile" style="color: black; font-weight: normal;">
+            <b> Mira las últimas novedades en cemaco.com<br/> </b><u><a href="https://www.cemaco.com/novedades">ver aqui</a>.</u>
+          </span>
+      </div>
+    </div>
+    <div class="Cintillo swiper-slide ps-0">
+      <div class="cintillo-item">
+        <span class="Cintillo-title Cintillo-title_desk" style="color: black; font-weight: normal;">
+          <b>Envío gratis a todo el país en compras mayores a Q350.00.</b> Aplican restricciones, conoce más <u><a href="https://www.cemaco.com/preguntas-frecuentes#enviogratis">aquí</a>.</u>
+        </span>
+        <span class="Cintillo-title Cintillo-title_mobile" style="color: black; font-weight: normal;">
+          <b>Envío gratis a todo el país en compras mayores<br/> a Q350.00.</b><u><a href="https://www.cemaco.com/preguntas-frecuentes#enviogratis">Aplican restricciones</a>.</u>
+        </span>
+      </div>
+    </div>
+    <!-- <div class="Cintillo swiper-slide ps-0">
+      <div class="cintillo-item">
+          <span class="Cintillo-title Cintillo-title_desk" style="color: black; font-weight: normal;">
+           <b>Envío gratis a todo el país en compras mayores a Q350.00.</b> Aplican restricciones, conoce más <u><a href="https://www.cemaco.com/preguntas-frecuentes#enviogratis">aquí</a>.</u>
+          </span>
+          <span class="Cintillo-title Cintillo-title_mobile" style="color: black; font-weight: normal;">
+            <b>Envío gratis a todo el país en compras mayores <br/> a Q350.00.</b><u><a href="https://www.cemaco.com/preguntas-frecuentes#enviogratis">Aplican restricciones</a>.</u>
+          </span>
+      </div>
+    </div> -->
+  </div>
+  <button id="cintilloHide" class="Cintillo-trigger__hide">
+    <svg class="svg-icon" id="svg-cintillo">
+      <use href="#svg-icon-close" style="color: black;"></use>
+    </svg>
+  </button>
+
+  <div class="swiper-pagination-cintillo"></div>
+</div>
+<!-- Cintillo Promo. End -->
+
+<!--empieza  Scripts Home -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+   $(document).ready(function(){
+       const swiperCintillo = new Swiper('.cintillo-carrusel', {
+           // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+           // If we need pagination
+          speed: 1000,
+          pagination: {
+              el: '.swiper-pagination-cintillo',
+              dynamicBullets: true,
+              clickable: true,
+          },
+          autoplay: {
+              delay: 5000,
+              disableOnInteraction: false
+          },
+       });
+   })
+
+
+</script>
